@@ -1,0 +1,17 @@
+{{- with .entry.author -}}
+  <span class="authors">
+    {{- partial "bib/names.html" (dict "names" . "mode" "citation" "params" $.params) -}}
+  </span>
+{{- else -}}
+  {{- with .entry.editor -}}
+    <span class="editors">
+      {{- partial "bib/names.html" (dict "names" . "mode" "citation" "params" $.params) -}}
+    </span>
+    {{- ", " }}{{ if gt (len .) 1 }}{{ "Eds." }}{{ else }}{{ "Ed." }}{{ end -}}
+  {{- else -}}
+    <span class="title">
+      {{- .entry.title | truncate $.params.citetitlecutoff "…" -}}
+    </span>
+  {{- end -}}
+{{- end -}}
+{{- with .entry.year }}{{ ", " }}<span class="year">{{ . }}</span>{{ end -}}

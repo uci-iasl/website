@@ -1,0 +1,20 @@
+<li class="update">
+  <section class="update">
+    <header>
+      <h1 class="title">
+        {{- if .Truncated -}}
+          <a href="{{ .Permalink }}">{{ .Title }}</a>
+        {{- else -}}
+          {{- .Title -}}
+        {{- end -}}
+      </h1>
+      <h2 class="meta">{{ .Date.Format .Site.Params.datedayfmt }}</h2>
+    </header>
+    <section class="summary">
+      {{ .Summary }}
+      {{- if .Truncated }}
+      <!--<div class="more"><a href="{{ .Permalink }}">Details</a></div>-->
+      {{- end }}
+    </section>
+  </section>
+</li>

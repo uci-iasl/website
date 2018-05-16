@@ -1,0 +1,13 @@
+{{ partial "header.html" . }}
+<main class="wrap">
+  <article class="publications">
+    <header>
+      <h1 class="page-title">Publications</h1>
+    </header>
+    <section class="content">
+      {{ .Content }}
+      {{ partial "bib/section.html" (dict "items" .Params.bibliography "Site" .Site) }}
+    </section>
+  </article>
+</main>
+{{ partial "footer.html" . }}

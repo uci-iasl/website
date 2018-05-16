@@ -1,0 +1,314 @@
+<li class="{{ .entry.type | htmlEscape }}">{{ "" -}}
+<section id="{{ .entry.id | urlize }}" class="bibentry {{ .entry.type | htmlEscape }}">
+{{- if false -}}
+
+{{- else if eq .entry.type "book" -}}
+  {{- $hasauthor := index .entry "author" | default slice -}}
+  {{- $haseditor := index .entry "editor" | default slice -}}
+  {{- if $hasauthor -}}
+    <span class="authors">
+      {{- partial "bib/names.html" (dict "names" .entry.author "params" $.params) -}}
+    </span>{{ ", " -}}
+  {{- else if $haseditor -}}
+    <span class="editors">
+      {{- partial "bib/names.html" (dict "names" .entry.editor "params" $.params) -}}
+    </span>{{ ", " -}}
+    {{- if gt (len .entry.editor) 1 }}{{ "Eds" }}{{ else }}{{ "Ed" }}{{ end }}{{ "., " -}}
+  {{- end -}}
+  {{- with .entry.title }}<span class="title">{{ . }}</span>{{ end -}}
+  {{- with .entry.edition }}{{ ", " }}<span class="edition">{{ humanize . }}&nbsp;ed.</span>{{ end -}}
+  {{- with .entry.series }}{{ ", " }}<span class="series">ser.&nbsp;{{ . }}</span>{{ end -}}
+  {{- if and $hasauthor $haseditor -}}
+    {{ ", " }}<span class="editors">
+      {{- partial "bib/names.html" (dict "names" .entry.editor "params" $.params) -}}
+    </span>{{ ", " -}}
+    {{- if gt (len .entry.editor) 1 }}{{ "Eds" }}{{ else }}{{ "Ed" }}{{ end -}}
+  {{- end -}}
+  {{- ". " -}}
+  {{- with .entry.address }}<span class="address">{{ . }}</span>{{ ": " }}{{ end -}}
+  {{- with .entry.publisher }}<span class="publisher">{{ . }}</span>{{ end -}}
+  {{- if index .entry "year" -}}
+    {{- ", " }}<span class="date">
+      {{- with .entry.month }}{{ . | replaceRE "(\\w\\w\\w)\\w+" "$1." }}{{ " " }}{{ end -}}
+      {{- .entry.year -}}
+    </span>
+  {{- end -}}
+  {{- with .entry.volume }}{{ ", " }}<span class="volume">vol.&nbsp;{{ . }}</span>{{ end -}}
+  {{- with .entry.number }}{{ ", " }}<span class="number">no.&nbsp;{{ . }}</span>{{ end -}}
+
+{{- else if eq .entry.type "inbook" -}}
+  {{- $hasauthor := index .entry "author" | default slice -}}
+  {{- $haseditor := index .entry "editor" | default slice -}}
+  {{- if $hasauthor -}}
+    <span class="authors">
+      {{- partial "bib/names.html" (dict "names" .entry.author "params" $.params) -}}
+    </span>{{ ", " -}}
+  {{- else if $haseditor -}}
+    <span class="editors">
+      {{- partial "bib/names.html" (dict "names" .entry.editor "params" $.params) -}}
+    </span>{{ ", " -}}
+    {{- if gt (len .entry.editor) 1 }}{{ "Eds" }}{{ else }}{{ "Ed" }}{{ end }}{{ "., " -}}
+  {{- end -}}
+  {{- with .entry.title }}<span class="title">{{ . }}</span>{{ end -}}
+  {{- with .entry.edition }}{{ ", " }}<span class="edition">{{ humanize . }}&nbsp;ed.</span>{{ end -}}
+  {{- with .entry.series }}{{ ", " }}<span class="series">ser.&nbsp;{{ . }}</span>{{ end -}}
+  {{- ". " -}}
+  {{- with .entry.address }}<span class="address">{{ . }}</span>{{ ": " }}{{ end -}}
+  {{- with .entry.publisher }}<span class="publisher">{{ . }}</span>{{ end -}}
+  {{- if index .entry "year" -}}
+    {{- ", " }}<span class="date">
+      {{- with .entry.month }}{{ . | replaceRE "(\\w\\w\\w)\\w+" "$1." }}{{ " " }}{{ end -}}
+      {{- .entry.year -}}
+    </span>
+  {{- end -}}
+  {{- with .entry.volume }}{{ ", " }}<span class="volume">vol.&nbsp;{{ . }}</span>{{ end -}}
+  {{- with .entry.number }}{{ ", " }}<span class="number">no.&nbsp;{{ . }}</span>{{ end -}}
+  {{- with .entry.chapter }}{{ ", " }}<span class="chapter">ch.&nbsp;{{ . }}</span>{{ end -}}
+  {{- with .entry.pages }}
+    {{- ", " }}<span class="pages">
+      {{- if or (in . "-") (in . "–") (in . "—") }}p{{ end }}p.&nbsp;
+      {{- replaceRE "\\s*(-+|–|—)\\s*" "–" . -}}
+    </span>
+  {{- end -}}
+
+{{- else if eq .entry.type "incollection" -}}
+  {{- with .entry.author -}}
+    <span class="authors">
+      {{- partial "bib/names.html" (dict "names" . "params" $.params) -}}
+    </span>{{ ", " -}}
+  {{- end -}}
+  {{- with .entry.title }}<span class="title">{{ . }}</span>{{ end -}}
+  {{- with .entry.booktitle }}{{ ", in "}}<span class="booktitle">{{ . }}</span>{{ end -}}
+  {{- with .entry.edition }}{{ ", " }}<span class="edition">{{ humanize . }}&nbsp;ed.</span>{{ end -}}
+  {{- with .entry.series }}{{ ", " }}<span class="series">ser.&nbsp;{{ . }}</span>{{ end -}}
+  {{- with .entry.editor -}}
+    {{ ", " }}<span class="editors">
+      {{- partial "bib/names.html" (dict "names" . "params" $.params) -}}
+    </span>{{ ", " -}}
+    {{- if gt (len .) 1 }}{{ "Eds" }}{{ else }}{{ "Ed" }}{{ end -}}
+  {{- end -}}
+  {{- ". " -}}
+  {{- with .entry.address }}<span class="address">{{ . }}</span>{{ ": " }}{{ end -}}
+  {{- with .entry.publisher }}<span class="publisher">{{ . }}</span>{{ end -}}
+  {{- if index .entry "year" -}}
+    {{- ", " }}<span class="date">
+      {{- with .entry.month }}{{ . | replaceRE "(\\w\\w\\w)\\w+" "$1." }}{{ " " }}{{ end -}}
+      {{- .entry.year -}}
+    </span>
+  {{- end -}}
+  {{- with .entry.volume }}{{ ", " }}<span class="volume">vol.&nbsp;{{ . }}</span>{{ end -}}
+  {{- with .entry.number }}{{ ", " }}<span class="number">no.&nbsp;{{ . }}</span>{{ end -}}
+  {{- with .entry.chapter }}{{ ", " }}<span class="chapter">ch.&nbsp;{{ . }}</span>{{ end -}}
+  {{- with .entry.pages }}
+    {{- ", " }}<span class="pages">
+      {{- if or (in . "-") (in . "–") (in . "—") }}p{{ end }}p.&nbsp;
+      {{- replaceRE "\\s*(-+|–|—)\\s*" "–" . -}}
+    </span>
+  {{- end -}}
+
+{{- else if eq .entry.type "article" -}}
+  {{- with .entry.author -}}
+    <span class="authors">
+      {{- partial "bib/names.html" (dict "names" . "params" $.params) -}}
+    </span>{{ ", " -}}
+  {{- end -}}
+  {{- with .entry.title }}<span class="title">{{ . }}</span>{{ end -}}
+  {{- with .entry.journal }}{{ ", " }}<span class="journal">{{ . }}</span>{{ end -}}
+  {{- with .entry.volume }}{{ ", " }}<span class="volume">vol.&nbsp;{{ . }}</span>{{ end -}}
+  {{- with .entry.number }}{{ ", " }}<span class="number">no.&nbsp;{{ . }}</span>{{ end -}}
+  {{- with .entry.pages }}
+    {{- ", " }}<span class="pages">
+      {{- if or (in . "-") (in . "–") (in . "—") }}p{{ end }}p.&nbsp;
+      {{- replaceRE "\\s*(-+|–|—)\\s*" "–" . -}}
+    </span>
+  {{- end -}}
+  {{- if index .entry "year" -}}
+    {{- ", " }}<span class="date">
+      {{- with .entry.month }}{{ . | replaceRE "(\\w\\w\\w)\\w+" "$1." }}{{ " " }}{{ end -}}
+      {{- .entry.year -}}
+    </span>
+  {{- end -}}
+
+{{- else if or (eq .entry.type "inproceedings") (eq .entry.type "conference") -}}
+  {{- with .entry.author -}}
+    <span class="authors">
+      {{- partial "bib/names.html" (dict "names" . "params" $.params) -}}
+    </span>{{ ", " -}}
+  {{- end -}}
+  {{- with .entry.title }}<span class="title">{{ . }}</span>{{ end -}}
+  {{- with .entry.booktitle -}}
+    {{- ", "}}{{- with index $.entry "intype" | default "in" }}{{ . }}{{ " " }}{{ end -}}
+    <span class="booktitle">{{ . }}</span>
+  {{- end -}}
+  {{- with .entry.series }}{{ ", " }}<span class="series">ser.&nbsp;{{ . }}</span>{{ end -}}
+  {{- with .entry.editor -}}
+    {{- ", " }}<span class="editors">
+      {{- partial "bib/names.html" (dict "names" . "params" $.params) -}}
+    </span>{{ ", " -}}
+    {{- if gt (len .) 1 }}{{ "Eds." }}{{ else }}{{ "Ed." }}{{ end -}}
+  {{- end -}}
+  {{- with .entry.volume }}{{ ", " }}<span class="volume">vol.&nbsp;{{ . }}</span>{{ end -}}
+  {{- with .entry.number }}{{ ", " }}<span class="number">no.&nbsp;{{ . }}</span>{{ end -}}
+  {{- with .entry.organization }}{{ ", " }}<span class="organization">{{ . }}</span>{{ end -}}
+  {{- if index .entry "publisher" -}}
+    {{- ". " }}
+    {{- with .entry.address }}<span class="address">{{ . }}</span>{{ ": " }}{{ end -}}
+    <span class="publisher">{{- .entry.publisher -}}</span>
+    {{- with $.entry.address }}{{ ": " }}{{ end -}}
+  {{- else -}}
+    {{- with .entry.address }}{{ ", " }}<span class="address">{{ . }}</span>{{ end -}}
+  {{- end -}}
+  {{- if index .entry "year" -}}
+    {{- ", " }}<span class="date">
+      {{- with .entry.month -}}
+        {{- . | replaceRE "(\\w\\w\\w)\\w+" "$1." | replaceRE "\\s*(-+|–|—)\\s*" "–" -}}
+        {{- " " -}}
+      {{- end -}}
+      {{- .entry.year -}}
+    </span>
+  {{- end -}}
+  {{- with .entry.paper }}{{ ", " }}<span class="paper">paper {{ . }}</span>{{ end -}}
+  {{- with .entry.pages }}
+    {{- ", " }}<span class="pages">
+      {{- if or (in . "-") (in . "–") (in . "—") }}p{{ end }}p.&nbsp;
+      {{- replaceRE "\\s*(-+|–|—)\\s*" "–" . -}}
+    </span>
+  {{- end -}}
+
+{{- else if eq .entry.type "proceedings" -}}
+  {{- with .entry.editor -}}
+    {{- ", " }}<span class="editors">
+      {{- partial "bib/names.html" (dict "names" . "params" $.params) -}}
+    </span>{{ ", " -}}
+    {{- if gt (len .) 1 }}{{ "Eds." }}{{ else }}{{ "Ed." }}{{ end -}}
+  {{- end -}}
+  {{- with .entry.title }}<span class="title">{{ . }}</span>{{ end -}}
+  {{- with .entry.series }}{{ ", " }}<span class="series">ser.&nbsp;{{ . }}</span>{{ end -}}
+  {{- with .entry.volume }}{{ ", " }}<span class="volume">vol.&nbsp;{{ . }}</span>{{ end -}}
+  {{- with .entry.number }}{{ ", " }}<span class="number">no.&nbsp;{{ . }}</span>{{ end -}}
+  {{- with .entry.organization }}{{ ", " }}<span class="organization">{{ . }}</span>{{ end -}}
+  {{- if index .entry "publisher" -}}
+    {{- ". " }}
+    {{- with .entry.address }}<span class="address">{{ . }}</span>{{ ": " }}{{ end -}}
+    <span class="publisher">{{- .entry.publisher -}}</span>
+    {{- with $.entry.address }}{{ ": " }}{{ end -}}
+  {{- else -}}
+    {{- with .entry.address }}{{ ", " }}<span class="address">{{ . }}</span>{{ end -}}
+  {{- end -}}
+  {{- if index .entry "year" -}}
+    {{- ", " }}<span class="date">
+      {{- with .entry.month -}}
+        {{- . | replaceRE "(\\w\\w\\w)\\w+" "$1." | replaceRE "\\s*(-+|–|—)\\s*" "–" -}}
+        {{- " " -}}
+      {{- end -}}
+      {{- .entry.year -}}
+    </span>
+  {{- end -}}
+
+{{- else if eq .entry.type "techreport" -}}
+  {{- with .entry.author -}}
+    <span class="authors">
+      {{- partial "bib/names.html" (dict "names" . "params" $.params) -}}
+    </span>{{ ", " -}}
+  {{- end -}}
+  {{- with .entry.title }}<span class="title">{{ . }}</span>{{ end -}}
+  {{- with .entry.howpublished }}{{ ", " }}<span class="howpublished">{{ . }}</span>{{ end -}}
+  {{- with .entry.institution }}{{ ", " }}<span class="institution">{{ . }}</span>{{ end -}}
+  {{- with .entry.address }}{{ ", " }}<span class="address">{{ . }}</span>{{ end -}}
+  {{- with .entry.number }}{{ ", " }}<span class="number">Tech. Rep. {{ . }}</span>{{ end -}}
+  {{- if index .entry "year" -}}
+    {{- ", " }}<span class="date">
+      {{- with .entry.month -}}
+        {{- . | replaceRE "(\\w\\w\\w)\\w+" "$1." | replaceRE "\\s*(-+|–|—)\\s*" "–" -}}
+        {{- " " -}}
+      {{- end -}}
+      {{- .entry.year -}}
+    </span>
+  {{- end -}}
+
+{{- else if or (eq .entry.type "mastersthesis") (eq .entry.type "phdthesis") -}}
+  {{- $isphd := eq .entry.type "phdthesis" -}}
+  {{- with .entry.author -}}
+    <span class="authors">
+      {{- partial "bib/names.html" (dict "names" . "params" $.params) -}}
+    </span>{{ ", " -}}
+  {{- end -}}
+  {{- with .entry.title }}<span class="title">{{ . }}</span>{{ end -}}
+  {{- ", " }}{{- if $isphd }}Ph.D. dissertation{{ else }}Master’s thesis{{ end -}}
+  {{- with .entry.school }}{{ ", " }}<span class="school">{{ . }}</span>{{ end -}}
+  {{- with .entry.address }}{{ ", " }}<span class="address">{{ . }}</span>{{ end -}}
+  {{- if index .entry "year" -}}
+    {{- ", " }}<span class="date">
+      {{- with .entry.month -}}
+        {{- . | replaceRE "(\\w\\w\\w)\\w+" "$1." | replaceRE "\\s*(-+|–|—)\\s*" "–" -}}
+        {{- " " -}}
+      {{- end -}}
+      {{- .entry.year -}}
+    </span>
+  {{- end -}}
+
+{{- else if in (slice "misc" "manual" "booklet") .entry.type -}}
+  {{- with .entry.author -}}
+    <span class="authors">
+      {{- partial "bib/names.html" (dict "names" . "params" $.params) -}}
+    </span>{{ ", " -}}
+  {{- end -}}
+  {{- if eq .entry.type "manual" -}}
+    {{- with .entry.title }}<span class="title">{{ . }}</span>{{ end -}}
+    {{- with .entry.edition }}{{ ", " }}<span class="edition">{{ humanize . }}&nbsp;ed.</span>{{ end -}}
+  {{- else -}}
+    {{- with .entry.title }}<span class="title">{{ . }}</span>{{ end -}}
+  {{- end -}}
+  {{- with .entry.howpublished }}{{ ", " }}<span class="howpublished">{{ . }}</span>{{ end -}}
+  {{- with .entry.organization }}{{ ", " }}<span class="organization">{{ . }}</span>{{ end -}}
+  {{- with .entry.address }}{{ ", " }}<span class="address">{{ . }}</span>{{ end -}}
+  {{- if eq .entry.type "misc" -}}
+    {{- with .entry.pages }}
+      {{- ", " }}<span class="pages">
+        {{- if or (in . "-") (in . "–") (in . "—") }}p{{ end }}p.&nbsp;
+        {{- replaceRE "\\s*(-+|–|—)\\s*" "–" . -}}
+      </span>
+    {{- end -}}
+  {{- end -}}
+  {{- if index .entry "year" -}}
+    {{- ", " }}<span class="date">
+      {{- with .entry.month -}}
+        {{- . | replaceRE "(\\w\\w\\w)\\w+" "$1." | replaceRE "\\s*(-+|–|—)\\s*" "–" -}}
+        {{- " " -}}
+      {{- end -}}
+      {{- .entry.year -}}
+    </span>
+  {{- end -}}
+
+{{- else if eq .entry.type "unpublished" -}}
+  {{- with .entry.author -}}
+    <span class="authors">
+      {{- partial "bib/names.html" (dict "names" . "params" $.params) -}}
+    </span>{{ ", " -}}
+  {{- end -}}
+  {{- with .entry.title }}<span class="title">{{ . }}</span>{{ end -}}
+  {{- if index .entry "year" -}}
+    {{- ", " }}<span class="date">
+      {{- with .entry.month -}}
+        {{- . | replaceRE "(\\w\\w\\w)\\w+" "$1." | replaceRE "\\s*(-+|–|—)\\s*" "–" -}}
+        {{- " " -}}
+      {{- end -}}
+      {{- .entry.year -}}
+    </span>
+  {{- end -}}
+
+{{- end -}}
+
+{{- with .entry.note -}}
+  {{- ", " }}<span class="note">{{ . }}</span>
+{{- else -}}
+  {{- if eq .entry.type "unpublished" -}}
+    {{- ", " }}<span class="note">unpublished</span>
+  {{- end -}}
+{{- end -}}
+{{- with .entry.url -}}
+  {{- ". [Online]. Available: " -}}
+  <span class="url"><a href="{{ . }}" target="_blank">{{ . }}</a></span>
+{{- end -}}
+{{- "." -}}
+</section></li>

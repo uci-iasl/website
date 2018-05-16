@@ -1,0 +1,27 @@
+<li class="person">
+  <section id="{{ .File.BaseFileName | urlize }}" class="vcard">
+    {{- if or (isset .Params "badge") (isset .Params "portrait") }}
+    <div class="portrait">
+      <a class="no-decor" href="{{ .Permalink }}">
+        <img src="img/people/{{ .Params.badge | default .Params.portrait }}">
+      </a>
+    </div>
+    {{- end }}
+    <div class="record">
+      <div class="name">
+        <a class="no-visited" href="{{ .Permalink }}">{{ .Params.name }}</a>
+      </div>
+      <div class="status">{{ .Params.status }}</div>
+      {{- if isset .Params "yearjoined" }}
+      <div class="years">
+        {{- .Params.yearjoined }}&#8202;–&#8202;{{ "" -}}
+        {{ if isset .Params "yeargraduated" -}}
+          {{- .Params.yeargraduated -}}
+        {{- else }}now{{ end -}}
+      </div>
+      {{- end }}
+      {{- if isset .Params "bibliography" }}
+      {{- end }}
+    </div>
+  </section>
+</li>

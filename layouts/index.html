@@ -1,0 +1,20 @@
+{{ partial "header.html" . }}
+<main class="wrap">
+  <article class="home">
+    <section id="about">
+      {{ .Content }}
+    </section>
+
+    {{ if where .Data.Pages.ByDate "Section" "updates" -}}
+    <section id="updates">
+      <h1 class="page-title">Recent Activity</h1>
+      <ul class="updates">
+        {{- range first 10 (where .Data.Pages.ByDate "Section" "updates") }}
+        {{ .Render "li" }}
+        {{- end }}
+      </ul>
+    </section>
+    {{- end }}
+  </article>
+</main>
+{{ partial "footer.html" . }}

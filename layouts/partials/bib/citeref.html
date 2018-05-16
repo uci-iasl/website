@@ -1,0 +1,14 @@
+{{- $.Scratch.Set "bibitemlocal" false -}}
+{{- range $group := $.Page.Params.bibliography -}}
+  {{- if not ($.Scratch.Get "bibitemlocal") -}}
+    {{- if in $group.items $.id -}}
+      {{- $.Scratch.Set "bibitemlocal" true -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- if $.Scratch.Get "bibitemlocal" -}}
+  {{- $.Page.Permalink -}}
+{{- else -}}
+  {{- $.Site.BaseURL }}publications/
+{{- end -}}
+#{{ .id | urlize -}}

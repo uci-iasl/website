@@ -1,0 +1,27 @@
+{{ partial "header.html" . }}
+<main class="wrap">
+  <article class="update">
+    <header>
+      <h1 class="page-title">{{ .Title }}</h1>
+      <h2 class="meta">{{ .Date.Format .Site.Params.datedayfmt }}</h2>
+    </header>
+
+    <section class="content">
+      {{ .Content }}
+    </section>
+
+    <footer>
+      {{- if isset .Params "project" }}
+      {{- $pages := where $.Site.Pages "Section" "updates" }}
+      {{- $pages := where $pages "Params.project" "==" .Params.project }}
+      {{- if $pages := where $pages "Permalink" "!=" .Permalink }}
+      <h1>Previously in the project</h1>
+      <ul class="updates">
+        {{ range $pages }} {{- .Render "li" -}} {{ end }}
+      </ul>
+      {{- end }}
+      {{- end }}
+    </footer>
+  </article>
+</main>
+{{ partial "footer.html" . }}

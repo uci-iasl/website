@@ -1,0 +1,37 @@
+{{- $citemode := eq .mode "citation" -}}
+{{- $len := len .names -}}
+{{- $lastidx := sub $len 1 -}}
+{{- range $idx, $author := .names -}}
+  {{- if or (le $len $.params.etalcutoff) (lt $idx $.params.etalkeep) -}}
+    {{- if gt $idx 0 -}}
+      {{- if eq $idx $lastidx -}}
+        {{- if gt $lastidx 1 -}}{{ "," }}{{ end -}}{{ " and" -}}
+      {{- else -}}
+        {{- "," -}}
+      {{- end -}}
+      {{- " " -}}
+    {{- end -}}
+    {{- if and (index $author "first") (or (not $citemode) $.params.citefirstnames) -}}
+      {{- if $.params.fullnames -}}
+        {{- $author.first -}}
+        {{- with $author.middle -}}
+          {{- range split . " " -}}
+            &nbsp;{{ . }}{{ if eq (countrunes .) 1 }}{{ "." }}{{ end -}}
+          {{- end -}}
+        {{- end -}}
+        {{- " " -}}
+      {{- else -}}
+        {{- substr $author.first 0 1 }}{{ "." -}}
+        {{- with $author.middle -}}
+          {{- range split . " " -}}
+            &nbsp;{{ substr . 0 1 }}{{ "." -}}
+          {{- end -}}
+        {{- end -}}
+        &nbsp;
+      {{- end -}}
+    {{- end -}}
+    {{- $author.last -}}
+    {{- with $author.lineage }}{{ ", " }}{{ . }}{{ end -}}
+  {{- end -}}
+{{- end -}}
+{{- if gt $len .params.etalcutoff }}{{ ", et al." }}{{ end -}}

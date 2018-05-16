@@ -1,0 +1,84 @@
+{{ partial "header.html" . }}
+<main class="wrap">
+  <article class="person">
+    <section class="profile">
+      {{- if isset .Params "portrait" }}
+      <div class="portrait">
+        <img src="/img/people/{{ .Params.portrait }}" />
+      </div>
+      {{- end }}
+      <div class="resume">
+        <div class="name">
+          <h1 class="page-title">{{ .Params.name }}</h1>
+        </div>
+        <section class="status">
+          {{- .Params.status -}}
+          {{- if isset .Params "yearjoined" -}}
+            <span class="years">
+              {{- .Params.yearjoined }}&#8202;–&#8202;
+              {{- if isset .Params "yeargraduated" -}}
+                {{- .Params.yeargraduated -}}
+              {{- else }}now{{ end -}}
+            </span>
+          {{- end -}}
+        </section>
+
+        {{- if isset .Params "interests" }}
+        <section class="interests">
+          <span class="label">Research Interests:</span>
+          <ul class="interests">
+            {{ range .Params.interests }}<li>{{ . }}</li>{{ end }}
+          </ul>
+        </section>
+        {{- end }}
+
+        {{- if isset .Params "education" }}
+        <section class="education">
+          <span class="label">Education:</span>
+          <ul class="education">
+          {{- range .Params.education }}
+            <li>
+              <div class="year">{{ .year }}</div>
+              <div class="record">
+                <div class="degree">{{ .degree }}</div>
+                <div class="institution">{{ .institution }}</div>
+              </div>
+            </li>
+          {{- end }}
+          </ul>
+        </section>
+        {{- end }}
+
+        {{- if or (isset .Params "email") (isset .Params "website") }}
+        <section class="contacts">
+          {{- if isset .Params "email" }}
+          <div class="email">
+            <span class="label">Email:</span>
+            <a class="email" href="mailto:{{ .Params.name }} <{{ .Params.email }}>">
+              {{ .Params.email }}
+            </a>
+          </div>
+          {{- end }}
+          {{- if isset .Params "website" }}
+          <div class="website">
+            <span class="label">Website:</span>
+            <a href="{{ .Params.website }}" target="_blank">
+              {{- .Params.website | replaceRE "^https?://" "" -}}
+            </a>
+          </div>
+          {{- end }}
+        </section>
+        {{- end }}
+      </div>
+    </section>
+
+    <section class="content">
+      {{ .Content }}
+    </section>
+
+    {{- if isset .Params "bibliography" }}
+    {{ partial "bib/section.html" (dict "title" "Publications" "items" .Params.bibliography "Site" .Site) }}
+    {{- end }}
+  </article>
+</main>
+{{ partial "footer.html" . }}

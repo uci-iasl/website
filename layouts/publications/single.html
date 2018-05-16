@@ -1,0 +1,14 @@
+{{ partial "header.html" . }}
+<main class="wrap">
+  <article class="publication">
+    <header>
+      <h1 class="page-title">{{ .Title }}</h1>
+      <h2 class="meta">{{ .Date.Format .Site.Params.datedayfmt }}</h2>
+    </header>
+
+    <section class="content">
+      {{ .Content }}
+    </section>
+  </article>
+</main>
+{{ partial "footer.html" . }}

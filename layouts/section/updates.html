@@ -1,0 +1,10 @@
+{{ partial "header.html" . }}
+<main class="wrap">
+  <article class="updates">
+    <h1 class="page-title">Updates</h1>
+    <ul class="updates">
+      {{ range .Data.Pages.ByDate }} {{- .Render "li" -}} {{ end }}
+    </ul>
+  </article>
+</main>
+{{ partial "footer.html" . }}

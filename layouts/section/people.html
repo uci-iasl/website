@@ -1,0 +1,22 @@
+{{ partial "header.html" . }}
+<main class="wrap">
+  <article class="people">
+    <header>
+      <h1 class="page-title">People</h1>
+    </header>
+    <section class="content">
+      {{- range $role := .Site.Params.people.roles }}
+        {{- $pages := where $.Pages "Params.role" $role.id }}
+        {{- if $pages }}
+        <h1>{{ $role.plural }}</h1>
+        <ul class="people">
+        {{- range $pages }}
+        {{ .Render "li" }}
+        {{- end }}
+        </ul>
+        {{- end }}
+      {{- end }}
+    </section>
+  </article>
+</main>
+{{ partial "footer.html" . }}

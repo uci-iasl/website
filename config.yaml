@@ -1,0 +1,47 @@
+baseURL: 'http://iasl.ics.uci.edu'
+title: 'Intelligent and Autonomous Systems Lab'
+languageCode: 'en-US'
+pluralizeListTitles: false
+
+params:
+  copyright: 'IASL'
+  description: 'Latest updates, results, and publications by the Intelligent and Autonomous Systems Lab at University of California, Irvine'
+  datedayfmt: 'Jan 2, 2006'
+  datedaytimefmt: 'Jan 2, 2006, 15:04 MST'
+  contact:
+    name: 'Marco Levorato'
+    email: 'levorato+www@uci.edu'
+
+  bibliography:
+    fullnames: false
+    etalcutoff: 5
+    etalkeep: 2
+    citefirstnames: false
+    citetitlecutoff: 30
+
+  people:
+    roles:
+      - id: 'faculty'
+        plural: 'Faculty'
+      - id: 'student-phd'
+        plural: 'Ph.D. Students'
+      - id: 'student-masters'
+        plural: 'Master’s Students'
+      - id: 'alumnus-phd'
+        plural: 'Ph.D. Alumni'
+      - id: 'alumnus-masters'
+        plural: 'Master’s Alumni'
+      - id: 'visitor'
+        plural: 'Visitors'
+
+menu:
+  main:
+    - name: 'People'
+      url: '/people/'
+      weight: 3
+    - name: 'Projects'
+      url: '/projects/'
+      weight: 1
+    - name: 'Publications'
+      url: '/publications/'
+      weight: 2

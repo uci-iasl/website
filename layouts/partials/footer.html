@@ -1,0 +1,19 @@
+<footer class="wrap">
+  <div class="copyright">
+    &copy;&nbsp;2014&#8202;–&#8202;{{ "" -}}
+    <span title="{{ now | dateFormat .Site.Params.datedaytimefmt }}">
+      {{- now | dateFormat "2006" -}}
+    </span>
+    <a href="/people/">{{ with .Site.Params.copyright }}{{ . }}{{ end }}</a>
+  </div>
+  <div class="logo">
+    <a href="http://ics.uci.edu" target="_blank"><img src="img/logo/anteater.svg"></a>
+  </div>
+  <div class="contact">
+    {{- with .Site.Params.contact -}}
+    Contact: <a class="email" href="mailto:{{ .name }} <{{ .email }}>">{{ .name }}</a>
+    {{- end -}}
+  </div>
+</footer>
+</body>
+</html>

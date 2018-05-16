@@ -1,0 +1,16 @@
+{{ partial "header.html" . }}
+<main class="wrap">
+  <article class="projects">
+    <header>
+      <h1 class="page-title">Projects</h1>
+    </header>
+    <section class="content">
+      <ul class="projects">
+        {{- range .Data.Pages }}
+          {{ .Render "li" }}
+        {{- end }}
+      </ul>
+    </section>
+  </article>
+</main>
+{{ partial "footer.html" . }}
