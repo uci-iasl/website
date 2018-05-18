@@ -1,0 +1,11 @@
+#!/bin/bash
+
+outdir='data/bib'
+
+[[ $# -gt 0 ]] || { echo "usage: $(basename "$0") bib-file"; exit 2; }
+[[ -d "$outdir" ]] || { echo "no $outdir directory in $PWD"; exit 2; }
+
+bibfile="$1"
+bibfilebase="$(basename "${bibfile%%.bib}")"
+
+pybtex-convert "$bibfile" "$outdir/$bibfilebase.yaml"
