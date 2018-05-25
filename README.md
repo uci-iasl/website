@@ -111,3 +111,15 @@ once (also from the root directory), and keep the page
 `http://localhost:1313/` page open in browser.
 In that case, whenever any of the files is changed, the website is
 automatically rebuilt and updated in that browser window.
+
+To make the automatically generated bibliographies work, install
+the Python `pybtex` package:
+
+    pip install pybtex
+
+and then run the command
+
+    scripts/mkbib
+
+from the root directory after you add or update BibTeX files in the
+`bib` subdirectory.
