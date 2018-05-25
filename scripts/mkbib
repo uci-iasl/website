@@ -1,11 +1,29 @@
 #!/bin/bash
+#
+#	mkbib [bib-file ...]
+#
+# Converts the BibTeX bibliography files given in the arguments into
+# YAML configuration files in the data/bib/ directory. If no arguments
+# are present, looks for *.bib files in the bib/ directory.
+#
+# Must be run from the root directory of the source tree.
 
+bibdir='bib'
 outdir='data/bib'
 
-[[ $# -gt 0 ]] || { echo "usage: $(basename "$0") bib-file"; exit 2; }
-[[ -d "$outdir" ]] || { echo "no $outdir directory in $PWD"; exit 2; }
+[[ -d "$outdir" ]] || { echo "no $outdir directory in $PWD" >&2; exit 2; }
 
-bibfile="$1"
-bibfilebase="$(basename "${bibfile%%.bib}")"
+bibfiles=("$@")
+if [[ $# -eq 0 ]]; then
+	i=0
+	while IFS= read -r -d $'\0' file; do
+		bibfiles[i++]="$file"
+	done < <(find "$bibdir" -type f -name '*.bib' -print0)
+	[[ ${#bibfiles[@]} -gt 0 ]] || { echo "no *.bib files in $PWD/$bibdir" >&2; exit 2; }
+fi
 
-pybtex-convert "$bibfile" "$outdir/$bibfilebase.yaml"
+for bib in "${bibfiles[@]}"; do
+	[[ -f "$bib" ]] || { echo "$bib: file does not exist" >&2; continue; }
+	bibbase="$(basename "${bib%%.bib}")"
+	pybtex-convert "$bib" "$outdir/$bibbase.yaml"
+done
