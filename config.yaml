@@ -1,4 +1,4 @@
-baseURL: 'http://iasl.ics.uci.edu'
+baseURL: 'http://iasl.ics.uci.edu/'
 title: 'Intelligent and Autonomous Systems Lab'
 languageCode: 'en-US'
 pluralizeListTitles: false
