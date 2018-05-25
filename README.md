@@ -52,8 +52,7 @@ The main kinds of pages maintained within the website are:
 
 #### Personal Pages
 
-To populate personal pages and the joint bibliography,
-we need to receive the following content from you.
+The content of a personal page is populated from the following files.
 
 1. A Markdown file `content/people/‹id›.md` formatted after the
 [`example/people.md`][personal-template] template, containing a solid
@@ -82,13 +81,34 @@ lab-wide bibliography.
 In the above filenames, replace `‹id›` with your UCI email address
 without the `@uci.edu` domain part.
 
+[personal-template]: https://raw.githubusercontent.com/uci-iasl/website/master/example/people.md
+
 #### Project Pages
 
-Each project should be described in a separate Markdown file located
-in the `content/projects` directory, and formatted after the
-[`example/projects.md`][project-template] template.
+The content of a project page is populated from the following files.
 
-[personal-template]: https://raw.githubusercontent.com/uci-iasl/website/master/example/people.md
+1. A Markdown file `content/projects/‹project-id›.md` formatted
+after the [`example/projects.md`][project-template] template.
+
+2. A cover image `static/img/projects/‹project-id›/‹image-name›.png`
+that represents the project idea the best and captures the attention.
+The name of this image (`‹image-name›.png`) should be specified
+in the front-matter metadata of the project’s Markdown page
+(see [`example/projects.md`][project-template]).
+
+3. Image files for any other illustrations included in the body of the
+project page.
+All of them should also be put into the
+`static/img/projects/‹project-id›` directory.
+The preferred image formats are JPEG, PNG, and SVG, which are to be
+used for photos, raster images that are not photos, and vector
+graphics, respectively.
+
+In the above paths, `‹project-id›` stands for the URL-style name of
+the project that is preferably short and consists of lowercase
+letters, digits, and hyphens, e.g., `autonomous-uav-iot` or
+`edge-sensing-ehealth`.
+
 [project-template]: https://raw.githubusercontent.com/uci-iasl/website/master/example/projects.md
 
 ### Preview While Editing
@@ -97,7 +117,7 @@ If you have [Hugo][hugo] installed, you can preview the pages you
 are editing in browser.
 For that, you can periodically run
 
-    hugo
+    $ hugo
 
 in the command line from the root directory of the repository for the
 your changes to be reflected in the built website, which you can view
@@ -105,7 +125,7 @@ by opening the `public/index.html` file in browser.
 
 Alternatively, you can run the command
 
-    hugo server
+    $ hugo server
 
 once (also from the root directory), and keep the page
 `http://localhost:1313/` page open in browser.
@@ -115,11 +135,11 @@ automatically rebuilt and updated in that browser window.
 To make the automatically generated bibliographies work, install
 the Python `pybtex` package:
 
-    pip install pybtex
+    $ pip install pybtex
 
 and then run the command
 
-    scripts/mkbib
+    $ scripts/mkbib
 
 from the root directory after you add or update BibTeX files in the
 `bib` subdirectory.
