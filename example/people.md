@@ -1,13 +1,14 @@
 ---
 # Page front matter
 #
-# The text between the '---' lines at the top of this file defines the
-# metadata, which is used to provide a unified profile at the top of
-# this personal page and in the people directory page.
+# The text between the '---' lines at the start of this file defines
+# the metadata, which is used to provide a unified profile at the top
+# of the generated personal page and in the people directory page.
 #
-# The metadata are formatted in YAML, with a small subset of its
-# syntax used. Format your information the same way it is done
-# for the exemplary data below.
+# The metadata consist of a number YAML-formatted fields, usually
+# taking values of strings or string arrays. You do not need to know
+# the complete YAML syntax; just format your information the same way
+# it is done for the exemplary data below.
 #
 # Do not copy the lines starting with '#' (like this one) into your
 # file; those are just comments.
@@ -24,17 +25,19 @@ role: student-phd
 status: Ph.D. Candidate
 # Year when joined the group.
 yearjoined: 2016
+# Year of graduation. Omit if not graduated yet.
+yeargraduated: 2018
 # Filename of an optional portrait photo to be featured on the page.
 # The file should be put in the ../static/img/people/ directory.
-portrait: jsmith.jpg
+portrait: panteater.jpg
 # Filename of an optional avatar photo to be shown in the people
 # directory page. Should be square. If missing, the portrait photo is
 # used instead. The file should be put in the same directory as the
 # portrait photo.
-badge: jsmith-badge.jpg
+badge: panteater-badge.jpg
 # A list of free-form topics constituting your main research
-# interests. Keep each short and to the point; do not put a period
-# at the end.
+# interests. Keep each short and to the point; capitalize only
+# the first word, and do not put a period at the end.
 interests:
   - Adaptive machine learning in wireless systems
   - Adversarial machine learning
@@ -50,9 +53,9 @@ education:
     institution: University of Oregon, U.S.
     year: 2014
 # Optional email address.
-email: jsmith@uci.edu
+email: panteater@uci.edu
 # Optional URL of your personal website (outside of the lab website).
-# Do not forget to include the protocol part, e.g., 'http://' or 'https://'.
+# Must include the protocol part, e.g., 'http://' or 'https://'.
 website: http://example.org
 # Optional bibliography to feature at the bottom of the page.
 bibliography:
@@ -60,7 +63,7 @@ bibliography:
     - bibtexkey1
     - bibtexkey2
     - bibtexkey3
-# Each of the listed identifiers should match a BibTeX key of
+# Each of the listed identifiers must match a BibTeX key of
 # a publication from your BibTeX file. The corresponding publications
 # appear on the page in the same order they are listed here.
 #
