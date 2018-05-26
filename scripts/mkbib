@@ -26,4 +26,5 @@ for bib in "${bibfiles[@]}"; do
 	[[ -f "$bib" ]] || { echo "$bib: file does not exist" >&2; continue; }
 	bibbase="$(basename "${bib%%.bib}")"
 	pybtex-convert "$bib" "$outdir/$bibbase.yaml"
+	sed -i '' -E 's/^    ([^ ]+):$/-   id: \1/;s/^    ((    )+)/\1/;s/[{}]//g' "$outdir/$bibbase.yaml"
 done
