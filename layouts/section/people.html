@@ -10,7 +10,7 @@
         {{- if $pages }}
         <h1>{{ $role.plural }}</h1>
         <ul class="people">
-        {{- range $pages }}
+        {{- range sort (sort $pages "Params.name") "Params.yearjoined" }}
         {{ .Render "li" }}
         {{- end }}
         </ul>
