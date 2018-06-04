@@ -59,12 +59,21 @@
             </a>
           </div>
           {{- end }}
-          {{- if isset .Params "website" }}
-          <div class="website">
-            <span class="label">Website:</span>
-            <a href="{{ .Params.website }}" target="_blank">
-              {{- .Params.website | replaceRE "^https?://" "" -}}
-            </a>
+          {{- if isset .Params "websites" }}
+          <div class="websites">
+            <span class="label">
+              Website{{ if gt (len .Params.websites) 1 }}s{{ end }}:
+            </span>
+            {{- range $idx, $website := .Params.websites }}
+              {{- if gt $idx 0 }}<span class="sep"></span>{{ end -}}
+              <a href="{{ $website.url }}" target="_blank">
+                {{- if isset $website "title" }}
+                  {{- $website.title }}
+                {{- else }}
+                  {{- $website.url | replaceRE "^https?://" "" }}
+                {{- end -}}
+              </a>
+            {{- end }}
           </div>
           {{- end }}
         </section>
