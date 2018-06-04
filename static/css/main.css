@@ -33,6 +33,9 @@
   --footer-link-hover-fg-color: black;
   --footer-link-hover-ul-color: rgba(0,0,0,0.2);
 
+  --body-wrap-width: 720px;
+  --body-wrap-padding: 10px;
+
   --vcard-portrait-size: 100px;
   --profile-portrait-size: 300px;
   --project-cover-image-size: 320px;
@@ -46,9 +49,9 @@ body {
 }
 
 body .wrap {
-  width: 720px;
+  width: var(--body-wrap-width);
   margin: 0 auto;
-  padding: 0 10px;
+  padding: 0 var(--body-wrap-padding);
 }
 
 body>header {
@@ -60,6 +63,7 @@ body>header {
   line-height: 18px;
   padding: 8px 0 10px 0;
   border-bottom: 1px solid var(--header-border-color);
+  min-width: calc(var(--body-wrap-width) + 2*var(--body-wrap-padding));
 }
 body>header .logo { float: left; }
 body>header .logo img { height: 30px; }
