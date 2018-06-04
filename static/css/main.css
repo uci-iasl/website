@@ -113,7 +113,7 @@ body>footer .logo {
 }
 body>footer .logo img {
   height: 17px;
-  opacity: 0.25;
+  opacity: 0.3;
   transition-property: opacity;
   transition-duration: 0.33s;
   transition-timing-function: ease-out;
