@@ -3,6 +3,9 @@ title: 'Intelligent and Autonomous Systems Lab'
 languageCode: 'en-US'
 pluralizeListTitles: false
 
+blackfriday:
+  hreftargetblank: true
+
 params:
   copyright: 'IASL'
   description: 'Latest updates, results, and publications by the Intelligent and Autonomous Systems Lab at University of California, Irvine'
