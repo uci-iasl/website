@@ -328,6 +328,10 @@ a.subtle, a.subtle:visited {
   color: var(--fg-color);
   border-bottom-color: var(--link-subtle-ul-color);
 }
+a.subtle:hover, a.subtle:visited:hover {
+  color: var(--link-hover-fg-color);
+  border-bottom-color: var(--link-hover-ul-color);
+}
 a.no-decor, a.no-decor:visited,
 a.no-decor:hover, a.no-decor:visited:hover,
 figure>a {
