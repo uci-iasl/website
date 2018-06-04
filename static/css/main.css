@@ -41,8 +41,30 @@
   --project-cover-image-size: 320px;
 }
 
+@font-face {
+  font-family: charter-iasl;
+  font-weight: normal;
+  src: url(/font/charter-regular.woff) format("woff");
+}
+@font-face {
+  font-family: charter-iasl;
+  font-style: italic;
+  src: url(/font/charter-italic.woff) format("woff");
+}
+@font-face {
+  font-family: charter-iasl;
+  font-weight: bold;
+  src: url(/font/charter-bold.woff) format("woff");
+}
+@font-face {
+  font-family: charter-iasl;
+  font-weight: bold;
+  font-style: italic;
+  src: url(/font/charter-bold-italic.woff) format("woff");
+}
+
 body {
-  font: 17px/23px Charter, Georgia, serif;
+  font: 17px/23px charter-iasl, Charter, Georgia, serif;
   color: var(--fg-color);
   background-color: var(--bg-color);
   margin: 0 auto;
