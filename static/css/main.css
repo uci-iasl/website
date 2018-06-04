@@ -382,6 +382,23 @@ blockquote p {
   display: inline;
 }
 
+figure.fullwidth {
+  width: 100vw;
+  min-width: calc(100% + 2*var(--body-wrap-padding));
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+figure.fullwidth img { width: 100%; }
+figure.textwidth {
+  width: 100%;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+figure.textwidth img { width: 100%; }
+figure.notopmargin { margin-top: 0; }
+figure.nobottommargin { margin-bottom: 0; }
+figure.rounded img { border-radius: 6px; }
+
 img[src$='#centering'] {
   display: block;
   padding: 5px;
