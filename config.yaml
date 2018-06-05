@@ -5,6 +5,7 @@ pluralizeListTitles: false
 
 blackfriday:
   hreftargetblank: true
+  fractions: false
 
 params:
   copyright: 'IASL'
