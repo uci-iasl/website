@@ -54,9 +54,18 @@ education:
     year: 2014
 # Optional email address.
 email: panteater@uci.edu
-# Optional URL of your personal website (outside of the lab website).
-# Must include the protocol part, e.g., 'http://' or 'https://'.
-website: http://example.org
+# Optional links to your personal website (outside of the lab website)
+# and other relevant places of your presence on the web. Each link
+# requires a URL and allows for an optional title to be used as the
+# link text. Omit the title if the URL is short and you want the
+# domain name to stand out (e.g., if it is your personal domain);
+# otherwise (e.g., if it is a page in a social network), please
+# include a short and representative title. URLs must include the
+# protocol part, e.g., 'http://' or 'https://'.
+websites:
+  - url: http://example.org
+  - title: LinkedIn
+    url: https://www.linkedin.com/in/example/
 # Optional bibliography to feature at the bottom of the page.
 bibliography:
   - items:

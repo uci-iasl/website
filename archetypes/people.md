@@ -17,7 +17,10 @@ education:
     institution: University of California, Irvine.
     year: {{ dateFormat "2006" (now.AddDate -2 0 0) }}
 email: {{ .TranslationBaseName }}@uci.edu
-website: http://example.org
+websites:
+  - url: http://example.org
+  - title: LinkedIn
+    url: https://www.linkedin.com/in/example/
 bibliography:
   - title: {{ dateFormat "2006" .Date }}
     items:
