@@ -51,20 +51,21 @@ In 2016, he received the UC Hellman Foundation Award for his research on Smart C
 
 # Service
 
-0. **1st Workshop on Communications, Data Processing and Control for Unmanned Autonomous Systems (CPC-UAV) — Part of IEEE Secon 2018:** Chair.
-0. **IEEE International Conference on Smart Computing (SMARTCOMP) 2018:** Publicity chair (America).
-0. **IEEE International Conference on Acoustic, Speech, and Signal Processing (ICASSP) 2018:** Co-organizer of the special session on Cybersecurity and Privacy.
-0. **IEEE International Conference on Computing, Networking and Communications (IEEE ICNC) 2018:** Chair of the Cognitive Computing and Networking symposium.
-0. **Asilomar Conference on Signals, Systems, and Computers 2017:** Organizer of the invited Cognitive Networks session.
-0. **IEEE International Conference on Sensing, Communication and Networking (IEEE SECON) 2017**: TPC Vice Chair for Submissions.
-0. **IEEE International Conference on Smart Grid Communications (IEEE SmartGridComm) 2017:** Chair of the Smart metering, Demand Response and Dynamic Pricing symposium.
-0. **IEEE Wireless Communications and Networking Conference (IEEE WCNC) 2017:** Chair of the Machine-to-Machine Communications and the Internet of Things workshop.
-0. **2017 IEEE International Conference on Computing, Networking and Communications (IEEE ICNC):** Chair of the Cognitive Computing and Networking symposium.
-0. **ACM International Conference on Mobile Computing and Networking (ACM Mobicom) 2015:** Workshop co-chair
-0. **ACM International Conference on Mobile Systems, Applications, and Services (ACM Mobisys) 2015:** Publication chair.
-0. **ACM International Conference on Mobile Computing and Networking (ACM Mobicom)2014:** Co-chair local arrangements.
-0. **IEEE International Conference on Computing, Networking and Communications (IEEE ICNC) 2014:** Co-chair Communication QoS and System Modeling symposium.
-0. **Technical program committee member:**
+- **1st Workshop on Communications, Data Processing and Control for Unmanned Autonomous Systems (CPC-UAV) — Part of IEEE Secon 2018:** Chair.
+- **IEEE International Conference on Smart Computing (SMARTCOMP) 2018:** Publicity chair (America).
+- **IEEE International Conference on Acoustic, Speech, and Signal Processing (ICASSP) 2018:** Co-organizer of the special session on Cybersecurity and Privacy.
+- **IEEE International Conference on Computing, Networking and Communications (IEEE ICNC) 2018:** Chair of the Cognitive Computing and Networking symposium.
+- **Asilomar Conference on Signals, Systems, and Computers 2017:** Organizer of the invited Cognitive Networks session.
+- **IEEE International Conference on Sensing, Communication and Networking (IEEE SECON) 2017**: TPC Vice Chair for Submissions.
+- **IEEE International Conference on Smart Grid Communications (IEEE SmartGridComm) 2017:** Chair of the Smart metering, Demand Response and Dynamic Pricing symposium.
+- **IEEE Wireless Communications and Networking Conference (IEEE WCNC) 2017:** Chair of the Machine-to-Machine Communications and the Internet of Things workshop.
+- **2017 IEEE International Conference on Computing, Networking and Communications (IEEE ICNC):** Chair of the Cognitive Computing and Networking symposium.
+- **ACM International Conference on Mobile Computing and Networking (ACM Mobicom) 2015:** Workshop co-chair
+- **ACM International Conference on Mobile Systems, Applications, and Services (ACM Mobisys) 2015:** Publication chair.
+- **ACM International Conference on Mobile Computing and Networking (ACM Mobicom)2014:** Co-chair local arrangements.
+- **IEEE International Conference on Computing, Networking and Communications (IEEE ICNC) 2014:** Co-chair Communication QoS and System Modeling symposium.
+
+### Technical program committee member:
   - Fog World Congress 2017
   - IEEE Infocom 2016–2018 — Main conference
   - IEEE Infocom 2016 — Workshop on Smart Cities
@@ -83,7 +84,8 @@ In 2016, he received the UC Hellman Foundation Award for his research on Smart C
   - Networking and Communication (ICNC) 2012
   - IEEE International Conference on Communications in China 2012
   - European Wireless 2009
-0. **Reviewer:**
+
+### Reviewer:
   - IEEE Transactions on Smart Grid
   - IEEE Transactions on Information Theory
   - IEEE/ACM Transactions on Networking
