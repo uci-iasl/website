@@ -49,6 +49,14 @@ He obtained the B.S. and M.S. in Electrical Engineering summa cum laude at the U
 
 In 2016, he received the UC Hellman Foundation Award for his research on Smart City IoT infrastructures.
 
+
+# Funded projects
+
+- **University of California:** UC-Lab Center for Electricity Distribution Cybersecurity, Co-PI (UC-wide faculty and national labs team), USD 3.75M (300K personal), 03/01/2018–02/28/2021
+- **NSF-SAS:** Cognitive and Reflective Monitoring Systems for Urban Environments, PI: Marco Levorato, Co-PI: Solmaz Kia, USD 500K, 01/01/2018–31/12/2021
+- **NSF-WiFiUS:** IoCT-CARE: Internet of Cognitive Things for Personalized Healthcare, PI: Nikil Dutt, Co-PI: Marco Levorato, USD 300K, 04/01/17–03/31/19
+- **NSF-EPCN:** Multi-Scale Analysis and Control of Smart Energy Systems, PI: Marco Levorato, Co-PI: Mohammad al Faruque, USD 260K - 09/01/16–08/31/2018
+- **University of California Hellman Fellowship** — The Path Towards Smart Interconnected Communities, PI: Marco Levorato USD 50K, 2016
 # Service
 
 - **1st Workshop on Communications, Data Processing and Control for Unmanned Autonomous Systems (CPC-UAV) — Part of IEEE Secon 2018:** Chair.
