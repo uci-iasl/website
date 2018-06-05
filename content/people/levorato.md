@@ -86,6 +86,19 @@ In 2016, he received the UC Hellman Foundation Award for his research on Smart C
   Adrien Lagrange (*Undergraduate, ENSTA ParisTech, France*),
   Robin Maillot (*Undergraduate, ENSTA ParisTech, France*),
   Yunsheng Yang (*Undergraduate, Tsinghua University, China*)
+
+
+# Awards
+
+- 2016: *University of California Hellman Fellowship Award*.
+- 2015/2016: *Academic Senate Council on Research, Computing and Libraries (CORCL) Award*.
+- 2014: Awarded the *Multi Investigator Research grant* from the Council on Research, Computing, and Libraries — UCI Division.
+- 2012: *Best paper award* at IEEE Global Communications Conference (Globecom) 2012, Signal processing symposium.
+- 2013: Winner of the *ACCESS Post Doctoral research fellowship* at the ACCESS Linnaeus Center, Royal Institute of Technology (KTH), Sweden.
+- 2010: Nominated for the *Best Young Researcher Award*, Dept. of Information Engineering, University of Padova, Italy.
+- 2009: Nominated for the *Best Young Researcher Award*, Dept. of Information Engineering, University of Padova, Italy.
+
+
 # Service
 
 - **1st Workshop on Communications, Data Processing and Control for Unmanned Autonomous Systems (CPC-UAV) — Part of IEEE Secon 2018:** Chair.
