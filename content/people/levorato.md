@@ -100,13 +100,13 @@ In 2016, he received the UC Hellman Foundation Award for his research on Smart C
 
 # Awards
 
-- 2016: *University of California Hellman Fellowship Award*.
-- 2015/2016: *Academic Senate Council on Research, Computing and Libraries (CORCL) Award*.
-- 2014: Awarded the *Multi Investigator Research grant* from the Council on Research, Computing, and Libraries — UCI Division.
-- 2012: *Best paper award* at IEEE Global Communications Conference (Globecom) 2012, Signal processing symposium.
-- 2013: Winner of the *ACCESS Post Doctoral research fellowship* at the ACCESS Linnaeus Center, Royal Institute of Technology (KTH), Sweden.
-- 2010: Nominated for the *Best Young Researcher Award*, Dept. of Information Engineering, University of Padova, Italy.
-- 2009: Nominated for the *Best Young Researcher Award*, Dept. of Information Engineering, University of Padova, Italy.
+- **2016:** *University of California Hellman Fellowship Award*.
+- **2015/2016:** *Academic Senate Council on Research, Computing, and Libraries (CORCL) Award*.
+- **2014:** Awarded the *Multi Investigator Research Grant* from the UCI Division of the Council on Research, Computing, and Libraries.
+- **2012:** *Best paper award* at IEEE Global Communications Conference (GLOBECOM), Signal processing symposium.
+- **2013:** Winner of the *ACCESS Post Doctoral Research Fellowship* at the ACCESS Linnaeus Center, Royal Institute of Technology (KTH), Sweden.
+- **2010:** Nominated for the *Best Young Researcher Award*, Deptartment of Information Engineering, University of Padova, Italy.
+- **2009:** Nominated for the *Best Young Researcher Award*, Deptartment of Information Engineering, University of Padova, Italy.
 
 
 # Service
