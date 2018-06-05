@@ -71,7 +71,7 @@ In 2016, he received the UC Hellman Foundation Award for his research on Smart C
 
 # Media and Press
 
-- **PC Magazine, 2017:** Sophia Stuart, [Inside the DARPA's Hackfest at the NASA Research Par](https://www.pcmag.com/news/357685/inside-darpas-hackfest-at-nasa-research-park)
+- **PC Magazine:** S.C. Stuart, [Inside the DARPA's Hackfest at the NASA Research Par](https://www.pcmag.com/news/357685/inside-darpas-hackfest-at-nasa-research-park). December 2017.
 
 
 # Students and Visitors
