@@ -57,6 +57,11 @@ In 2016, he received the UC Hellman Foundation Award for his research on Smart C
 - **NSF-WiFiUS:** IoCT-CARE: Internet of Cognitive Things for Personalized Healthcare, PI: Nikil Dutt, Co-PI: Marco Levorato, USD 300K, 04/01/17–03/31/19
 - **NSF-EPCN:** Multi-Scale Analysis and Control of Smart Energy Systems, PI: Marco Levorato, Co-PI: Mohammad al Faruque, USD 260K - 09/01/16–08/31/2018
 - **University of California Hellman Fellowship** — The Path Towards Smart Interconnected Communities, PI: Marco Levorato USD 50K, 2016
+
+
+# Media and Press
+
+- **PC Magazine, 2017:** Sophia Stuart, [Inside the DARPA's Hackfest at the NASA Research Par](https://www.pcmag.com/news/357685/inside-darpas-hackfest-at-nasa-research-park)
 # Service
 
 - **1st Workshop on Communications, Data Processing and Control for Unmanned Autonomous Systems (CPC-UAV) — Part of IEEE Secon 2018:** Chair.
