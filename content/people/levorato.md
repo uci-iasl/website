@@ -62,6 +62,30 @@ In 2016, he received the UC Hellman Foundation Award for his research on Smart C
 # Media and Press
 
 - **PC Magazine, 2017:** Sophia Stuart, [Inside the DARPA's Hackfest at the NASA Research Par](https://www.pcmag.com/news/357685/inside-darpas-hackfest-at-nasa-research-park)
+
+
+# Students and Visitors
+
+- **Current students:**
+  Igor Burago,
+  Sabur Hassan Baidya,
+  Davide Callegaro,
+  Delaram Amiri,
+  Peyman Tehrani,
+  Russel Geschrey (*protected veteran*)
+- **Alumni:**
+  Nadia Ahmed (2017)
+- **Current Visitors:**
+  Luca Bedogni (*Post-doc, University of Bologna, Italy*),
+  Anna Valeria Guglielmi (*Ph.D. Student, University of Padova, Italy*),
+  Marie Pied (*Undergraduate, ENSTA ParisTech, France*),
+  Sanaz Moosavi (*Ph.D. Student, University of Turku, Finland*),
+  Hyun-Ho Choi (*Associate professor, Hankyong National University, South Korea*)
+- **Past Visitors:**
+  Roberto Valentini (*Ph.D. Student, University of L’Aquila Italy*),
+  Adrien Lagrange (*Undergraduate, ENSTA ParisTech, France*),
+  Robin Maillot (*Undergraduate, ENSTA ParisTech, France*),
+  Yunsheng Yang (*Undergraduate, Tsinghua University, China*)
 # Service
 
 - **1st Workshop on Communications, Data Processing and Control for Unmanned Autonomous Systems (CPC-UAV) — Part of IEEE Secon 2018:** Chair.
