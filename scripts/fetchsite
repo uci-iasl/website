@@ -1,0 +1,61 @@
+#!/bin/bash
+#
+#	fetchsite [-b branch] [-g hugo-bin] [-l lock-file] [-o output-dir] [-r repo-url] [-u base-url] [repo-dir]
+#
+# Fetches the latest version of the website source from the GitHub
+# remote (or the Git URL given in the -r option) to the directory
+# given in the first argument, checks out the master branch (or the
+# branch given by the -b option), builds the site with the localhost
+# base URL (or the URL given by the -u option), using the first Hugo
+# executable found in path (or the executable given by the -g option),
+# and saving the resulting files into the /var/www/iasl directory (or
+# the directory given by the -o option). The -l option specifies the
+# path to use for the lock file.
+
+. usagelib.sh
+usage='[-b branch] [-g hugo-bin] [-l lock-file] [-o output-dir] [-r repo-url] [-u base-url] [repo-dir]'
+
+branch=master
+repourl='git://github.com/uci-iasl/website.git'
+wwwdir='/var/www/iasl'
+baseurl='http://localhost/'
+lockfile=
+hugobin=hugo
+
+while getopts ':b:g:l:o:r:u:' opt; do
+	case $opt in
+	b)	branch="$OPTARG";;
+	g)	hugobin="$OPTARG";;
+	l)	lockfile="$OPTARG";;
+	o)	wwwdir="$OPTARG";;
+	r)	repourl="$OPTARG";;
+	u)	baseurl="$OPTARG";;
+	*)	usagebadopt "$opt";;
+	esac
+done
+shift $((OPTIND-1)); [[ $1 == -- ]] && shift
+
+repodir="${1:-website}"
+
+lockfile=
+cleanup() { [[ -n $lockfile ]] && rm "$lockfile"; }
+trap cleanup EXIT
+
+[[ -n $lockfile ]] || lockfile="$HOME/.$argv0.lock"
+[[ -f $lockfile ]] && panic "$lockfile: lock file exists; another fetching process must be in progress"
+echo $$ >"$lockfile" || panic "$lockfile: writing to lock file failed"
+
+if [[ -d $repodir ]]; then
+	gitc() { git -C "$repodir" "$@"; }
+	gitc checkout "$branch" &&
+	gitc fetch origin "$branch" &&
+	local="$(gitc rev-parse @)" &&
+	remote="$(gitc rev-parse @{u})" &&
+	[[ "$local" != "$remote" ]] &&
+	gitc pull origin "$branch"
+else
+	git clone -b "$branch" --single-branch "$repourl" "$repodir"
+fi &&
+configfile="$(ls "$repodir"/config.{yaml,toml,json} 2>/dev/null | sed 1q)" &&
+"$hugobin" --config="$configfile" -c "$repodir/content" -l "$repodir/layouts" \
+	-d "$wwwdir" --cleanDestinationDir -b "$baseurl"
