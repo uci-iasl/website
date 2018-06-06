@@ -1,7 +1,7 @@
 ---
 name: Marco Levorato
 role: faculty
-status: Assistant Professor
+status: Associate Professor
 yearjoined: 2013
 portrait: levorato.jpg
 badge: levorato-badge.jpg
