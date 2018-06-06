@@ -25,7 +25,7 @@ role: student-phd
 status: Ph.D. Candidate
 # Year when joined the group.
 yearjoined: 2016
-# Year of graduation. Omit if not graduated yet.
+# Year of graduation. Omit (the whole line) if not graduated yet.
 yeargraduated: 2018
 # Filename of an optional portrait photo to be featured on the page.
 # The file should be put in the ../static/img/people/ directory.
