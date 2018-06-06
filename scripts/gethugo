@@ -1,0 +1,39 @@
+#!/bin/bash
+#
+#	gethugo version [install-path]
+#
+# Downloads the Hugo binary of the version given in the first argument
+# and extracts it into the directory given in the second argument (or
+# the current directory, if missing).
+
+. usagelib.sh
+usage='version [install-path]'
+
+[[ $# -gt 0 ]] || usage 'no version to download given'
+version="$1"
+binpath="${2:-.}"
+[[ -d $binpath ]] || usage "$binpath: directory does not exist"
+
+case $OSTYPE in
+linux*)	ossuffix=Linux;;
+darwin*)	ossuffix=macOS;;
+*)	panic "$OSTYPE: unsupported platform"
+esac
+
+arch="$(uname -m)"
+case $arch in
+x86_64)	archsuffix=64bit;;
+x86)	archsuffix=32bit;;
+*)	panic "$arch: unsupported machine hardware name"
+esac
+
+build="hugo_${version}_${ossuffix}-${archsuffix}"
+dlurl="https://github.com/gohugoio/hugo/releases/download/v$version/$build.tar.gz"
+
+archive=
+cleanup() { [[ -n $archive ]] && rm "$archive"; }
+trap cleanup EXIT
+archive="$(mktemp)" || exit
+
+curl -o "$archive" -L "$dlurl" &&
+tar -xzf "$archive" -C "$binpath" hugo
