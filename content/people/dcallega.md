@@ -6,16 +6,16 @@ yearjoined: 2016
 portrait: dcallega.jpg
 badge: dcallega-badge.jpg
 interests:
-  - distributed machine learning in heterogeneous computer networks
-  - reinforcement learning and semantic maps
-  - unmanned aerial vehicles
-  - edge computing
+  - Distributed machine learning in heterogeneous computer networks
+  - Reinforcement learning and semantic maps
+  - Unmanned aerial vehicles
+  - Edge computing
 education:
   - degree: M.S. in Computer Engineering
-    institution: University of Padova
+    institution: University of Padova, Italy
     year: 2016
   - degree: B.S. in Information Engineering
-    institution: University of Padova
+    institution: University of Padova, Italy
     year: 2013
 email: dcallega@uci.edu
 websites:
