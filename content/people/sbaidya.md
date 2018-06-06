@@ -2,7 +2,7 @@
 name: Sabur Baidya
 role: student-phd
 status: Ph.D. Candidate 
-yearjoined:  2014
+yearjoined: 2014
 portrait: sbaidya.jpg
 badge: sbaidya-badge.jpg
 interests:
@@ -13,14 +13,13 @@ interests:
   - Unmanned autonomous systems
   - Adaptive video streaming
 education:
-  - degree: Ph.D. in Computer Science
-    institution: University of California, Irvine, USA
-    year: 2019 (expected)
   - degree: M.S. in Computer Science
     institution: University of Texas Dallas, USA
     year: 2013
 email: sbaidya@uci.edu
-website: http://www.ics.uci.edu/~sbaidya/
+websites:
+  - title: Personal webpage
+    url: http://www.ics.uci.edu/~sbaidya/
 bibliography:
   - items:
     - sbaidya2018tccn
