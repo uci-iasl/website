@@ -20,7 +20,9 @@ education:
     institution: University of Texas Dallas, USA
     year: 2013
 email: sbaidya@uci.edu
-website: http://www.ics.uci.edu/~sbaidya/
+websites: 
+    -title: Personal webpage
+    url: http://www.ics.uci.edu/~sbaidya/
 bibliography:
   - items:
     - sbaidya2018tccn
