@@ -14,7 +14,7 @@ interests:
   - Adaptive video streaming
 education:
   - degree: M.S. in Computer Science
-    institution: University of Texas Dallas, USA
+    institution: University of Texas, U.S.
     year: 2013
 email: sbaidya@uci.edu
 websites: 
