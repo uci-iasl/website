@@ -14,7 +14,7 @@ interests:
   - Adaptive video streaming
 education:
   - degree: M.S. in Computer Science
-    institution: University of Texas Dallas, USA
+    institution: University of Texas, U.S.
     year: 2013
 email: sbaidya@uci.edu
 websites: 
@@ -34,7 +34,7 @@ bibliography:
 ---
 
 I am a PhD candidate in the Computer Science department at **UC Irvine**, where I am supervised 
-by [__*Dr. Marco Levorato*__](https://www.ics.uci.edu/~mlevorat/). My research focuses on the real-world problems in wireless communication and networks, especially in the urban Internet-of-Things (IoT) paradigm. My work addresses the challenges for the graceful coexistence of heterogeneous wireless technologies sharing a frequency spectrum and also the coexistence of competing applications with different quality of service requirement. To this aim, we have been developing optimal resource allocation strategies by incorporating content and computation aware communications involving software defined network (SDN) and edge computing. Recently, I have been exploring challenges in the communication, computation and controls of Unmanned Autonomous Systems (UAS). I was a member of the team "DeepEdge" to paricipate in the [DARPA Hackfest](https://darpahackfest.com/) on Unmanned Aerial Vehicles (UAV) at the NASA Ames Research Center, Mountain View, CA [[UCI news on DeepEdge](https://www.ics.uci.edu/community/news/view_news?id=1263)] [[DoD News](http://science.dodlive.mil/2017/11/22/darpa-puts-techies-to-the-test-at-bay-area-hackfest/), [PC Magazine] (https://www.pcmag.com/news/357685/inside-darpas-hackfest-at-nasa-research-park)]. 
+by [__*Dr. Marco Levorato*__]({{< relref "people/levorato" >}}). My research focuses on the real-world problems in wireless communication and networks, especially in the urban Internet-of-Things (IoT) paradigm. My work addresses the challenges for the graceful coexistence of heterogeneous wireless technologies sharing a frequency spectrum and also the coexistence of competing applications with different quality of service requirement. To this aim, we have been developing optimal resource allocation strategies by incorporating content and computation aware communications involving software defined network (SDN) and edge computing. Recently, I have been exploring challenges in the communication, computation and controls of Unmanned Autonomous Systems (UAS). I was a member of the team "DeepEdge" to paricipate in the [DARPA Hackfest](https://darpahackfest.com/) on Unmanned Aerial Vehicles (UAV) at the NASA Ames Research Center, Mountain View, CA [[UCI news on DeepEdge](https://www.ics.uci.edu/community/news/view_news?id=1263)] [[DoD News](http://science.dodlive.mil/2017/11/22/darpa-puts-techies-to-the-test-at-bay-area-hackfest/), [PC Magazine] (https://www.pcmag.com/news/357685/inside-darpas-hackfest-at-nasa-research-park)]. 
 
 During the course of my PhD, I got opportunities for research internships in two eminent research labs. In Summer 2016, I worked at the **Huawei Research Lab**, CA, on express data-path, based on Berkeley Packet Filters for network function virtualization. In Summer 2017, I worked as a research intern at the **Nokia Bell Labs**, Murray Hill, NJ on 360 degree video delivery from Unmanned Aerial Vehicles (UAV).
 
