@@ -18,8 +18,8 @@ education:
     year: 2013
 email: sbaidya@uci.edu
 websites: 
-    -title: Personal webpage
-     url: http://www.ics.uci.edu/~sbaidya/
+    - title: Personal webpage
+      url: http://www.ics.uci.edu/~sbaidya/
 bibliography:
   - items:
     - sbaidya2018tccn
