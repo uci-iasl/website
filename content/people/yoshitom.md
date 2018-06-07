@@ -18,8 +18,8 @@ education:
     year: 2014
 email: yoshitom@uci.edu
 websites:
-  -title: Personal webpage
-   url: http://labusers.net/~ymatsubara
+  - title: Personal webpage
+    url: http://labusers.net/~ymatsubara
 bibliography:
   - items:
     - yoshitom-icmla2016
