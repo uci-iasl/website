@@ -13,10 +13,10 @@ interests:
   - IoT key management
 education:
   - degree: M.S. in Information Technology, Networked Systems Security
-    institution: University of Turku, Finland.
+    institution: University of Turku, Finland
     year: 2013
   - degree: B.S. in Computer Software Engineering
-    institution: International University of Imam Reza, Iran.
+    institution: Imam Reza International University, Iran
     year: 2006
 email: rahimims@uci.edu
 websites:
