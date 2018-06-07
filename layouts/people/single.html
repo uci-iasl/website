@@ -46,6 +46,9 @@
             </li>
           {{- end }}
           </ul>
+          {{- if isset .Params "resume" }}
+          <a class="resume" href="/dl/people/{{ .File.BaseFileName }}/{{ .Params.resume }}" target="_blank">Full Resume</a>
+          {{- end }}
         </section>
         {{- end }}
 
