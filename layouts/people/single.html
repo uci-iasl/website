@@ -76,6 +76,12 @@
             {{- end }}
           </div>
           {{- end }}
+          {{- if isset .Params "address" }}
+          <div class="address">
+            <span class="label">Mailing Address:</span>
+            <div class="value">{{ .Params.address | markdownify }}</div>
+          </div>
+          {{- end }}
         </section>
         {{- end }}
       </div>
