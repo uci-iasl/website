@@ -241,7 +241,11 @@ section.profile .contacts .websites>.sep:before {
   content: "·";
   padding: 0 0.75ex;
 }
-section.profile .contacts .address>.value { padding-left: 6px; }
+section.profile .contacts .address>.value {
+  font-size: 95%;
+  line-height: 115%;
+  padding-left: 6px;
+}
 
 ul.bibliography {
   list-style: none;
