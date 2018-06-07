@@ -3,8 +3,8 @@ name: Sanaz Rahimi Moosavi
 role: student-phd
 status: Ph.D. Candidate
 yearjoined: 2016
-portrait: sanaz.jpg
-badge: sanaz-badge.jpg
+portrait: rahimims.jpg
+badge: rahimims-badge.jpg
 interests:
   - Lightweight cryptographic techniques
   - Information/Data security
@@ -13,10 +13,10 @@ interests:
   - IoT key management
 education:
   - degree: M.S. in Information Technology, Networked Systems Security
-    institution: University of Turku, Finland.
+    institution: University of Turku, Finland
     year: 2013
   - degree: B.S. in Computer Software Engineering
-    institution: International University of Imam Reza, Iran.
+    institution: Imam Reza International University, Iran
     year: 2006
 email: rahimims@uci.edu
 websites:
