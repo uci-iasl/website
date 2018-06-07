@@ -37,7 +37,9 @@
   --body-wrap-padding: 10px;
 
   --vcard-portrait-size: 100px;
-  --profile-portrait-size: 300px;
+  --profile-portrait-size: 270px;
+  --profile-portrait-margin-left: 20px;
+  --profile-portrait-margin-bottom: 30px;
   --project-cover-image-size: 320px;
 }
 
@@ -200,14 +202,11 @@ section.profile .portrait {
   display: inline-block;
   float: right;
   line-height: 0px;
-  margin-left: 30px;
-  margin-bottom: 30px;
+  margin-left: var(--profile-portrait-margin-left);
+  margin-bottom: var(--profile-portrait-margin-bottom);
 }
 section.profile .portrait img {
-  width: auto;
-  height: auto;
-  max-width: var(--profile-portrait-size);
-  max-height: var(--profile-portrait-size);
+  width: var(--profile-portrait-size);
   border-radius: 6px;
 }
 section.profile .label { font-weight: bold; }
@@ -236,6 +235,14 @@ section.profile ul.education .record {
   display: inline-block;
   margin-left: 1ex;
   line-height: 125%;
+}
+section.profile ul.education .record>.degree,
+section.profile ul.education .record>.institution {
+  max-width: calc(
+    var(--body-wrap-width)
+    - var(--profile-portrait-size)
+    - var(--profile-portrait-margin-left)
+    - 4em);
 }
 section.profile a.resume { font-weight: bold; }
 section.profile .contacts .websites>.sep:before {
