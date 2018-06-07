@@ -20,7 +20,7 @@ education:
     year: 2006
 email: rahimims@uci.edu
 websites:
-   -title: Personal
+   -title: Personal webpage
     url: https://users.utu.fi/saramo/
    -title: LinkedIn
     url: https://www.linkedin.com/in/saramo0/
@@ -31,6 +31,18 @@ bibliography:
     - Sanaz3
     - Sanaz4
     - Sanaz5
+   -title: Conference Proceedings
+    items:
+    - Sanaz2
+    - Sanaz6
+    - Sanaz7
+    - Sanaz8
+    - Sanaz9
+    - Sanaz10
+    - Sanaz11
+    - Sanaz12
+    - Sanaz13
+
 ---
 
 I receieved my M.Sc. (Tech.) degree is in Information Technology, from the Department of Information Technology and Communication Systems, University of Turku, Finland in 2013. My major was on “Networked Systems Security” and minor was on “Cryptography”.
