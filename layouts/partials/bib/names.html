@@ -21,7 +21,10 @@
         {{- end -}}
         {{- " " -}}
       {{- else -}}
-        {{- substr $author.first 0 1 }}{{ "." -}}
+        {{- range $i, $name := split $author.first "-" -}}
+          {{- if gt $i 0 }}{{ "-" }}{{ end -}}
+          {{- substr $name 0 1 }}{{ "." -}}
+        {{- end -}}
         {{- with $author.middle -}}
           {{- range split . " " -}}
             &nbsp;{{ substr . 0 1 }}{{ "." -}}
