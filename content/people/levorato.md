@@ -21,6 +21,7 @@ education:
   - degree: B.S. in Electrical Engineering
     institution: University of Ferrara, Italy
     year: 2003
+resume: levorato-cv.pdf
 email: levorato@uci.edu
 websites:
   - url: https://www.ics.uci.edu/~mlevorat
