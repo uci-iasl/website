@@ -1,6 +1,6 @@
 ---
 name: Anas Alsoliman
-role: student-PhD
+role: student-phd
 status: Ph.D. Candidate
 yearjoined: 2017
 portrait: aalsolim.jpg
@@ -11,7 +11,7 @@ interests:
   - Infrastructure support of smart cities and Intelligent Transportation Systems (ITS)
 education:
   - degree: M.S. in Network Engineering and Security
-    institution: DePaul University.
+    institution: DePaul University, Illinois, U.S.
     year: 2014
   - degree: B.S. in Information Systems
     institution: King Saud University, Saudi Arabia.
