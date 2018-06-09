@@ -10,8 +10,8 @@ interests:
   - Recommender systems
   - Representation learning
 education:
-  - degree: Master of Applied Informatics
     institution: University of California, Irvine
+  - degree: M.S. in Informatics
     year: 2016
   - degree: B.Eng. in Computer and Information Science
     institution: National Institute of Technology, Akashi College
