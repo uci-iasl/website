@@ -13,7 +13,7 @@
     </section>
 
     {{- if isset .Params "bibliography" }}
-    {{ partial "bib/section.html" (dict "title" "Relevant Publications" "items" .Params.bibliography "Site" .Site) }}
+    {{ partial "bib/section.html" (dict "title" "Relevant Publications" "items" .Params.bibliography "Page" .Page "Site" .Site) }}
     {{- end }}
   </article>
 </main>

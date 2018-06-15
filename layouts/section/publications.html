@@ -6,7 +6,7 @@
     </header>
     <section class="content">
       {{ .Content }}
-      {{ partial "bib/section.html" (dict "items" .Params.bibliography "Site" .Site) }}
+      {{ partial "bib/section.html" (dict "items" .Params.bibliography "Page" .Page "Site" .Site) }}
     </section>
   </article>
 </main>

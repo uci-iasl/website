@@ -2,6 +2,6 @@
   {{ with .title }}<h1>{{ . }}</h1>{{ end }}
   {{- range $group := .items }}
     {{- with $group.title }}<h2>{{ . }}</h2>{{ end }}
-    {{- partial "bib/list.html" (dict "items" $group.items "Site" $.Site) }}
+    {{- partial "bib/list.html" (dict "items" $group.items "Page" $.Page "Site" $.Site) }}
   {{- end }}
 </section>
