@@ -3,7 +3,7 @@
   {{- $.Scratch.Set "bibitemfound" false }}
   {{- range $bib := $.Site.Data.bib }}
     {{- if not ($.Scratch.Get "bibitemfound") }}
-      {{- range $entry := where $bib.entries "id" "==" $id }}
+      {{- range $entry := where $bib.references "id" "==" $id }}
         {{- if not ($.Scratch.Get "bibitemfound") }}
           {{- $.Scratch.Set "bibitemfound" true }}
           {{ partial "bib/entry.html" (dict "entry" $entry "params" $.Site.Params.bibliography) }}
