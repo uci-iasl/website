@@ -27,12 +27,7 @@
   {{- ". " -}}
   {{- with .entry.address }}<span class="address">{{ . }}</span>{{ ": " }}{{ end -}}
   {{- with .entry.publisher }}<span class="publisher">{{ . }}</span>{{ end -}}
-  {{- if index .entry "year" -}}
-    {{- ", " }}<span class="date">
-      {{- with .entry.month }}{{ . | replaceRE "(\\w\\w\\w)\\w+" "$1." }}{{ " " }}{{ end -}}
-      {{- .entry.year -}}
-    </span>
-  {{- end -}}
+  {{- if index .entry "year" }}{{ ", " }}{{ partial "bib/date.html" .entry }}{{ end -}}
   {{- with .entry.volume }}{{ ", " }}<span class="volume">vol.&nbsp;{{ . }}</span>{{ end -}}
   {{- with .entry.number }}{{ ", " }}<span class="number">no.&nbsp;{{ . }}</span>{{ end -}}
 
@@ -55,12 +50,7 @@
   {{- ". " -}}
   {{- with .entry.address }}<span class="address">{{ . }}</span>{{ ": " }}{{ end -}}
   {{- with .entry.publisher }}<span class="publisher">{{ . }}</span>{{ end -}}
-  {{- if index .entry "year" -}}
-    {{- ", " }}<span class="date">
-      {{- with .entry.month }}{{ . | replaceRE "(\\w\\w\\w)\\w+" "$1." }}{{ " " }}{{ end -}}
-      {{- .entry.year -}}
-    </span>
-  {{- end -}}
+  {{- if index .entry "year" }}{{ ", " }}{{ partial "bib/date.html" .entry }}{{ end -}}
   {{- with .entry.volume }}{{ ", " }}<span class="volume">vol.&nbsp;{{ . }}</span>{{ end -}}
   {{- with .entry.number }}{{ ", " }}<span class="number">no.&nbsp;{{ . }}</span>{{ end -}}
   {{- with .entry.chapter }}{{ ", " }}<span class="chapter">ch.&nbsp;{{ . }}</span>{{ end -}}
@@ -85,12 +75,7 @@
   {{- ". " -}}
   {{- with .entry.address }}<span class="address">{{ . }}</span>{{ ": " }}{{ end -}}
   {{- with .entry.publisher }}<span class="publisher">{{ . }}</span>{{ end -}}
-  {{- if index .entry "year" -}}
-    {{- ", " }}<span class="date">
-      {{- with .entry.month }}{{ . | replaceRE "(\\w\\w\\w)\\w+" "$1." }}{{ " " }}{{ end -}}
-      {{- .entry.year -}}
-    </span>
-  {{- end -}}
+  {{- if index .entry "year" }}{{ ", " }}{{ partial "bib/date.html" .entry }}{{ end -}}
   {{- with .entry.volume }}{{ ", " }}<span class="volume">vol.&nbsp;{{ . }}</span>{{ end -}}
   {{- with .entry.number }}{{ ", " }}<span class="number">no.&nbsp;{{ . }}</span>{{ end -}}
   {{- with .entry.chapter }}{{ ", " }}<span class="chapter">ch.&nbsp;{{ . }}</span>{{ end -}}
@@ -106,13 +91,8 @@
   {{- with .entry.journal }}{{ ", " }}<span class="journal">{{ . }}</span>{{ end -}}
   {{- with .entry.volume }}{{ ", " }}<span class="volume">vol.&nbsp;{{ . }}</span>{{ end -}}
   {{- with .entry.number }}{{ ", " }}<span class="number">no.&nbsp;{{ . }}</span>{{ end -}}
-  {{- if index .entry "year" -}}
-    {{- ", " }}<span class="date">
-      {{- with .entry.month }}{{ . | replaceRE "(\\w\\w\\w)\\w+" "$1." }}{{ " " }}{{ end -}}
-      {{- .entry.year -}}
-    </span>
-  {{- end -}}
   {{- with .entry.pages }}{{ ", " }}{{ partial "bib/pages.html" . }}{{ end -}}
+  {{- if index .entry "year" }}{{ ", " }}{{ partial "bib/date.html" .entry }}{{ end -}}
 
 {{- else if or (eq .entry.kind "inproceedings") (eq .entry.kind "conference") -}}
   {{- with .entry.author -}}
@@ -143,15 +123,7 @@
   {{- else -}}
     {{- with .entry.address }}{{ ", " }}<span class="address">{{ . }}</span>{{ end -}}
   {{- end -}}
-  {{- if index .entry "year" -}}
-    {{- ", " }}<span class="date">
-      {{- with .entry.month -}}
-        {{- . | replaceRE "(\\w\\w\\w)\\w+" "$1." | replaceRE "\\s*(-+|–|—)\\s*" "–" -}}
-        {{- " " -}}
-      {{- end -}}
-      {{- .entry.year -}}
-    </span>
-  {{- end -}}
+  {{- if index .entry "year" }}{{ ", " }}{{ partial "bib/date.html" .entry }}{{ end -}}
   {{- with .entry.paper }}{{ ", " }}<span class="paper">paper {{ . }}</span>{{ end -}}
   {{- with .entry.pages }}{{ ", " }}{{ partial "bib/pages.html" . }}{{ end -}}
 
@@ -175,15 +147,7 @@
   {{- else -}}
     {{- with .entry.address }}{{ ", " }}<span class="address">{{ . }}</span>{{ end -}}
   {{- end -}}
-  {{- if index .entry "year" -}}
-    {{- ", " }}<span class="date">
-      {{- with .entry.month -}}
-        {{- . | replaceRE "(\\w\\w\\w)\\w+" "$1." | replaceRE "\\s*(-+|–|—)\\s*" "–" -}}
-        {{- " " -}}
-      {{- end -}}
-      {{- .entry.year -}}
-    </span>
-  {{- end -}}
+  {{- if index .entry "year" }}{{ ", " }}{{ partial "bib/date.html" .entry }}{{ end -}}
 
 {{- else if eq .entry.kind "techreport" -}}
   {{- with .entry.author -}}
@@ -196,15 +160,7 @@
   {{- with .entry.institution }}{{ ", " }}<span class="institution">{{ . }}</span>{{ end -}}
   {{- with .entry.address }}{{ ", " }}<span class="address">{{ . }}</span>{{ end -}}
   {{- with .entry.number }}{{ ", " }}<span class="number">Tech. Rep. {{ . }}</span>{{ end -}}
-  {{- if index .entry "year" -}}
-    {{- ", " }}<span class="date">
-      {{- with .entry.month -}}
-        {{- . | replaceRE "(\\w\\w\\w)\\w+" "$1." | replaceRE "\\s*(-+|–|—)\\s*" "–" -}}
-        {{- " " -}}
-      {{- end -}}
-      {{- .entry.year -}}
-    </span>
-  {{- end -}}
+  {{- if index .entry "year" }}{{ ", " }}{{ partial "bib/date.html" .entry }}{{ end -}}
 
 {{- else if or (eq .entry.kind "mastersthesis") (eq .entry.kind "phdthesis") -}}
   {{- $isphd := eq .entry.kind "phdthesis" -}}
@@ -217,15 +173,7 @@
   {{- ", " }}{{- if $isphd }}Ph.D. dissertation{{ else }}Master’s thesis{{ end -}}
   {{- with .entry.school }}{{ ", " }}<span class="school">{{ . }}</span>{{ end -}}
   {{- with .entry.address }}{{ ", " }}<span class="address">{{ . }}</span>{{ end -}}
-  {{- if index .entry "year" -}}
-    {{- ", " }}<span class="date">
-      {{- with .entry.month -}}
-        {{- . | replaceRE "(\\w\\w\\w)\\w+" "$1." | replaceRE "\\s*(-+|–|—)\\s*" "–" -}}
-        {{- " " -}}
-      {{- end -}}
-      {{- .entry.year -}}
-    </span>
-  {{- end -}}
+  {{- if index .entry "year" }}{{ ", " }}{{ partial "bib/date.html" .entry }}{{ end -}}
 
 {{- else if in (slice "misc" "manual" "booklet") .entry.kind -}}
   {{- with .entry.author -}}
@@ -243,16 +191,9 @@
   {{- with .entry.organization }}{{ ", " }}<span class="organization">{{ . }}</span>{{ end -}}
   {{- with .entry.address }}{{ ", " }}<span class="address">{{ . }}</span>{{ end -}}
   {{- if eq .entry.kind "misc" -}}
-  {{- if index .entry "year" -}}
-    {{- ", " }}<span class="date">
-      {{- with .entry.month -}}
-        {{- . | replaceRE "(\\w\\w\\w)\\w+" "$1." | replaceRE "\\s*(-+|–|—)\\s*" "–" -}}
-        {{- " " -}}
-      {{- end -}}
-      {{- .entry.year -}}
-    </span>
     {{- with .entry.pages }}{{ ", " }}{{ partial "bib/pages.html" . }}{{ end -}}
   {{- end -}}
+  {{- if index .entry "year" }}{{ ", " }}{{ partial "bib/date.html" .entry }}{{ end -}}
 
 {{- else if eq .entry.kind "unpublished" -}}
   {{- with .entry.author -}}
@@ -261,15 +202,7 @@
     </span>{{ ", " -}}
   {{- end -}}
   {{- with .entry.title }}<span class="title">{{ . }}</span>{{ end -}}
-  {{- if index .entry "year" -}}
-    {{- ", " }}<span class="date">
-      {{- with .entry.month -}}
-        {{- . | replaceRE "(\\w\\w\\w)\\w+" "$1." | replaceRE "\\s*(-+|–|—)\\s*" "–" -}}
-        {{- " " -}}
-      {{- end -}}
-      {{- .entry.year -}}
-    </span>
-  {{- end -}}
+  {{- if index .entry "year" }}{{ ", " }}{{ partial "bib/date.html" .entry }}{{ end -}}
 
 {{- end -}}
 

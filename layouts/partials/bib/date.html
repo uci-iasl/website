@@ -1,0 +1,7 @@
+<span class="date">
+  {{- if isset . "month" -}}
+    {{- .month | replaceRE "(\\w\\w\\w)\\w+" "$1." | replaceRE "\\s*(-+|–|—)\\s*" "–" -}}
+    {{- if isset . "day" }}&nbsp;{{ .day }}{{ "," }}{{ end }}{{ " " -}}
+  {{- end -}}
+  {{- .year -}}
+</span>{{ "" -}}
