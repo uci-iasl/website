@@ -1,0 +1,4 @@
+<span class="pages">
+  {{- if or (in . "-") (in . "–") (in . "—") }}p{{ end }}p.&nbsp;
+  {{- replaceRE "\\s*(-+|–|—)\\s*" "–" . -}}
+</span>{{ "" -}}
