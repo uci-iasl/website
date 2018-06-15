@@ -1,8 +1,8 @@
-<li class="{{ .entry.type | htmlEscape }}">{{ "" -}}
-<section id="{{ .entry.id | urlize }}" class="bibentry {{ .entry.type | htmlEscape }}">
+<li class="{{ .entry.kind | htmlEscape }}">{{ "" -}}
+<section id="{{ .entry.id | urlize }}" class="bibentry {{ .entry.kind | htmlEscape }}">
 {{- if false -}}
 
-{{- else if eq .entry.type "book" -}}
+{{- else if eq .entry.kind "book" -}}
   {{- $hasauthor := index .entry "author" | default slice -}}
   {{- $haseditor := index .entry "editor" | default slice -}}
   {{- if $hasauthor -}}
@@ -36,7 +36,7 @@
   {{- with .entry.volume }}{{ ", " }}<span class="volume">vol.&nbsp;{{ . }}</span>{{ end -}}
   {{- with .entry.number }}{{ ", " }}<span class="number">no.&nbsp;{{ . }}</span>{{ end -}}
 
-{{- else if eq .entry.type "inbook" -}}
+{{- else if eq .entry.kind "inbook" -}}
   {{- $hasauthor := index .entry "author" | default slice -}}
   {{- $haseditor := index .entry "editor" | default slice -}}
   {{- if $hasauthor -}}
@@ -71,7 +71,7 @@
     </span>
   {{- end -}}
 
-{{- else if eq .entry.type "incollection" -}}
+{{- else if eq .entry.kind "incollection" -}}
   {{- with .entry.author -}}
     <span class="authors">
       {{- partial "bib/names.html" (dict "names" . "params" $.params) -}}
@@ -106,7 +106,7 @@
     </span>
   {{- end -}}
 
-{{- else if eq .entry.type "article" -}}
+{{- else if eq .entry.kind "article" -}}
   {{- with .entry.author -}}
     <span class="authors">
       {{- partial "bib/names.html" (dict "names" . "params" $.params) -}}
@@ -129,7 +129,7 @@
     </span>
   {{- end -}}
 
-{{- else if or (eq .entry.type "inproceedings") (eq .entry.type "conference") -}}
+{{- else if or (eq .entry.kind "inproceedings") (eq .entry.kind "conference") -}}
   {{- with .entry.author -}}
     <span class="authors">
       {{- partial "bib/names.html" (dict "names" . "params" $.params) -}}
@@ -175,7 +175,7 @@
     </span>
   {{- end -}}
 
-{{- else if eq .entry.type "proceedings" -}}
+{{- else if eq .entry.kind "proceedings" -}}
   {{- with .entry.editor -}}
     {{- ", " }}<span class="editors">
       {{- partial "bib/names.html" (dict "names" . "params" $.params) -}}
@@ -205,7 +205,7 @@
     </span>
   {{- end -}}
 
-{{- else if eq .entry.type "techreport" -}}
+{{- else if eq .entry.kind "techreport" -}}
   {{- with .entry.author -}}
     <span class="authors">
       {{- partial "bib/names.html" (dict "names" . "params" $.params) -}}
@@ -226,8 +226,8 @@
     </span>
   {{- end -}}
 
-{{- else if or (eq .entry.type "mastersthesis") (eq .entry.type "phdthesis") -}}
-  {{- $isphd := eq .entry.type "phdthesis" -}}
+{{- else if or (eq .entry.kind "mastersthesis") (eq .entry.kind "phdthesis") -}}
+  {{- $isphd := eq .entry.kind "phdthesis" -}}
   {{- with .entry.author -}}
     <span class="authors">
       {{- partial "bib/names.html" (dict "names" . "params" $.params) -}}
@@ -247,13 +247,13 @@
     </span>
   {{- end -}}
 
-{{- else if in (slice "misc" "manual" "booklet") .entry.type -}}
+{{- else if in (slice "misc" "manual" "booklet") .entry.kind -}}
   {{- with .entry.author -}}
     <span class="authors">
       {{- partial "bib/names.html" (dict "names" . "params" $.params) -}}
     </span>{{ ", " -}}
   {{- end -}}
-  {{- if eq .entry.type "manual" -}}
+  {{- if eq .entry.kind "manual" -}}
     {{- with .entry.title }}<span class="title">{{ . }}</span>{{ end -}}
     {{- with .entry.edition }}{{ ", " }}<span class="edition">{{ humanize . }}&nbsp;ed.</span>{{ end -}}
   {{- else -}}
@@ -262,7 +262,7 @@
   {{- with .entry.howpublished }}{{ ", " }}<span class="howpublished">{{ . }}</span>{{ end -}}
   {{- with .entry.organization }}{{ ", " }}<span class="organization">{{ . }}</span>{{ end -}}
   {{- with .entry.address }}{{ ", " }}<span class="address">{{ . }}</span>{{ end -}}
-  {{- if eq .entry.type "misc" -}}
+  {{- if eq .entry.kind "misc" -}}
     {{- with .entry.pages }}
       {{- ", " }}<span class="pages">
         {{- if or (in . "-") (in . "–") (in . "—") }}p{{ end }}p.&nbsp;
@@ -280,7 +280,7 @@
     </span>
   {{- end -}}
 
-{{- else if eq .entry.type "unpublished" -}}
+{{- else if eq .entry.kind "unpublished" -}}
   {{- with .entry.author -}}
     <span class="authors">
       {{- partial "bib/names.html" (dict "names" . "params" $.params) -}}
@@ -302,7 +302,7 @@
 {{- with .entry.note -}}
   {{- ", " }}<span class="note">{{ . }}</span>
 {{- else -}}
-  {{- if eq .entry.type "unpublished" -}}
+  {{- if eq .entry.kind "unpublished" -}}
     {{- ", " }}<span class="note">unpublished</span>
   {{- end -}}
 {{- end -}}
