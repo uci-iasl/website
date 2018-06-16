@@ -32,7 +32,7 @@ bibliography:
     items: 
     - delaram6 
     - delaram7
-  - title: M.S. Dissertation
+  - title: M.S. Thesis
     items: 
     - delaram5
 ---
