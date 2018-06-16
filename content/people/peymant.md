@@ -23,7 +23,7 @@ websites:
     - title: LinkedIn
       url: https://www.linkedin.com/in/peyman-tehrani-939195a3/
     - title: Google Scholar
-      url: https://scholar.google.com/citations?user 1hbKmhYAAAAJ&hl=en
+      url: https://scholar.google.com/citations?user=1hbKmhYAAAAJ&hl=en
 bibliography:
   - items:
     - tehrani2016resource
