@@ -1,7 +1,7 @@
 ---
 name: Anas Alsoliman
 role: student-phd
-status: Ph.D. Candidate
+status: Ph.D. Student
 yearjoined: 2017
 portrait: aalsolim.jpg
 badge: aalsolim-badge.jpg
