@@ -12,10 +12,10 @@ interests:
   - Internet of things and edge computing
   - Unmanned aerial vehicles
 education:
-  - degree: M.Sc. in Electerical Engineering-Communication Systems
+  - degree: M.S. in Electerical Engineering-Communication Systems
     institution: University of Tehran, Iran
     year: 2016
-  - degree: B.Sc. in Electrical Engineering
+  - degree: B.S. in Electrical Engineering
     institution: University of Tehran, Iran
     year: 2013
 email: peymant@uci.edu
