@@ -12,7 +12,7 @@ interests:
     - Edge Computing
 education:
     - degree: M.S. in Electrical Engineering, Communications
-      institution: Indiana University - Purdue University Indianapolis, U.S.
+      institution: Indiana University-Purdue University Indianapolis, U.S.
       year: 2015
     - degree: B.S. in Electrical Engineering, Communications
       institution: Shiraz University, Iran
