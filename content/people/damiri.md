@@ -2,7 +2,7 @@
 name: Delaram Amiri
 role: student-phd
 status: Ph.D. Candidate
-year joined: 2015
+yearjoined: 2015
 portrait: damiri.jpg
 badge: damiri-badge.jpg
 interests:
@@ -12,7 +12,7 @@ interests:
     - Edge Computing
 education:
     - degree: M.S. in Electrical Engineering, Communications
-      institution: Indiana University-Purdue University Indianapolis, U.S.
+      institution: Indiana University–Purdue University Indianapolis, U.S.
       year: 2015
     - degree: B.S. in Electrical Engineering, Communications
       institution: Shiraz University, Iran
