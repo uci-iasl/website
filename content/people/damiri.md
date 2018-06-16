@@ -20,7 +20,7 @@ education:
 email: damiri@uci.edu
 websites:
     - title: LinkedIn
-      url: www.linkedin.com/in/delaramamiri
+      url: https://www.linkedin.com/in/delaramamiri
 bibliography:
   - title: Journal Articles 
     items: 
