@@ -15,3 +15,12 @@ usagebadopt() {
 	\?)	usage "unknown option -$OPTARG";;
 	esac
 }
+
+abspath() {
+	local dir="$1" file
+	if [[ ! -d $dir ]]; then
+		file="$(basename "$dir")"
+		dir="$(dirname "$dir")"
+	fi
+	printf %s "$(cd "$dir"; pwd)/$file"
+}

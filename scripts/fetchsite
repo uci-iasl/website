@@ -46,6 +46,9 @@ trap cleanup EXIT
 [[ -f $lockfile ]] && panic "$lockfile: lock file exists; another fetching process must be in progress"
 echo $$ >"$lockfile" || panic "$lockfile: writing to lock file failed"
 
+hugobin="$(abspath "$hugobin")"
+wwwdir="$(abspath "$wwwdir")"
+
 if [[ -d $repodir ]]; then
 	gitc() { git -C "$repodir" "$@"; }
 	gitc checkout "$branch" &&
@@ -57,6 +60,4 @@ if [[ -d $repodir ]]; then
 else
 	git clone -b "$branch" --single-branch "$repourl" "$repodir"
 fi &&
-configfile="$(ls "$repodir"/config.{yaml,toml,json} 2>/dev/null | sed 1q)" &&
-"$hugobin" --config="$configfile" -c "$repodir/content" -l "$repodir/layouts" \
-	-d "$wwwdir" --cleanDestinationDir -b "$baseurl"
+(cd "$repodir" && "$hugobin" -d "$wwwdir" --cleanDestinationDir -b "$baseurl")
