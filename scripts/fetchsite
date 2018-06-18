@@ -12,7 +12,7 @@
 # the directory given by the -o option). The -l option specifies the
 # path to use for the lock file.
 
-. usagelib.sh
+. "$(dirname "$0")"/usagelib.sh
 usage='[-b branch] [-g hugo-bin] [-l lock-file] [-o output-dir] [-r repo-url] [-u base-url] repo-dir'
 
 branch=master
