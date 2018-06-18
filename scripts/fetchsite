@@ -6,11 +6,11 @@
 # remote (or the Git URL given in the -r option) to the directory
 # given in the first argument, checks out the master branch (or the
 # branch given by the -b option), builds the site with the localhost
-# base URL (or the URL given by the -u option), using the first Hugo
-# executable found in path (or the executable given by the -g option),
-# and saving the resulting files into the /var/www/iasl directory (or
-# the directory given by the -o option). The -l option specifies the
-# path to use for the lock file.
+# base URL (or the URL given by the -u option), using the Hugo
+# executable at /usr/bin/hugo (or the executable given by the -g
+# option), and saving the resulting files into the /var/www/iasl
+# directory (or the directory given by the -o option). The -l option
+# specifies the path to use for the lock file.
 
 . "$(dirname "$0")"/usagelib.sh
 usage='[-b branch] [-g hugo-bin] [-l lock-file] [-o output-dir] [-r repo-url] [-u base-url] repo-dir'
@@ -20,7 +20,7 @@ repourl='git://github.com/uci-iasl/website.git'
 wwwdir='/var/www/iasl'
 baseurl='http://localhost/'
 lockfile=
-hugobin=hugo
+hugobin=/usr/bin/hugo
 
 while getopts ':b:g:l:o:r:u:' opt; do
 	case $opt in
