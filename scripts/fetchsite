@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-#	fetchsite [-b branch] [-g hugo-bin] [-l lock-file] [-o output-dir] [-r repo-url] [-u base-url] [repo-dir]
+#	fetchsite [-b branch] [-g hugo-bin] [-l lock-file] [-o output-dir] [-r repo-url] [-u base-url] repo-dir
 #
 # Fetches the latest version of the website source from the GitHub
 # remote (or the Git URL given in the -r option) to the directory
@@ -13,7 +13,7 @@
 # path to use for the lock file.
 
 . usagelib.sh
-usage='[-b branch] [-g hugo-bin] [-l lock-file] [-o output-dir] [-r repo-url] [-u base-url] [repo-dir]'
+usage='[-b branch] [-g hugo-bin] [-l lock-file] [-o output-dir] [-r repo-url] [-u base-url] repo-dir'
 
 branch=master
 repourl='git://github.com/uci-iasl/website.git'
@@ -35,7 +35,8 @@ while getopts ':b:g:l:o:r:u:' opt; do
 done
 shift $((OPTIND-1)); [[ $1 == -- ]] && shift
 
-repodir="${1:-website}"
+[[ $# -gt 0 ]] || usage 'no repository directory given'
+repodir="$1"
 
 lockfile=
 cleanup() { [[ -n $lockfile ]] && rm "$lockfile"; }
