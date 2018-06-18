@@ -115,22 +115,14 @@ letters, digits, and hyphens, e.g., `autonomous-uav-iot` or
 
 If you have [Hugo][hugo] installed, you can preview the pages you
 are editing in browser.
-For that, you can periodically run
-
-    $ hugo
-
-in the command line from the root directory of the repository for the
-your changes to be reflected in the built website, which you can view
-by opening the `public/index.html` file in browser.
-
-Alternatively, you can run the command
+For that, you can run
 
     $ hugo server
 
-once (also from the root directory), and keep the page
-`http://localhost:1313/` page open in browser.
-In that case, whenever any of the files is changed, the website is
-automatically rebuilt and updated in that browser window.
+in the command line from the root directory of the repository, and
+keep the page `http://localhost:1313/` page open in browser.
+Whenever any of the files is changed, the website is automatically
+rebuilt and updated in that browser window.
 
 To make the automatically generated bibliographies work, install
 the Python `pybtex` package:
