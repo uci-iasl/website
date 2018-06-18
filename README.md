@@ -133,13 +133,13 @@ In that case, whenever any of the files is changed, the website is
 automatically rebuilt and updated in that browser window.
 
 To make the automatically generated bibliographies work, install
-the Python `pybtex` package:
+the following Python packages:
 
-    $ pip install pybtex
+    $ for p in bibtexparser latexcodec titlecase pyyaml; do pip install $p; done
 
 and then run the command
 
-    $ scripts/mkbib
+    $ scripts/mkbibdata
 
 from the root directory after you add or update BibTeX files in the
 `bib` subdirectory.
