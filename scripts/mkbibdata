@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-#	mkbib [bib-file ...]
+#	mkbibdata [bib-file ...]
 #
 # Converts the BibTeX bibliography files given in the arguments into
 # YAML configuration files in the data/bib/ directory. If no arguments
@@ -10,6 +10,7 @@
 
 bibdir='bib'
 outdir='data/bib'
+bibtex2yaml="$(dirname "$0")/bibtex2yaml"
 
 [[ -d "$outdir" ]] || { echo "no $outdir directory in $PWD" >&2; exit 2; }
 
@@ -25,6 +26,5 @@ fi
 for bib in "${bibfiles[@]}"; do
 	[[ -f "$bib" ]] || { echo "$bib: file does not exist" >&2; continue; }
 	bibbase="$(basename "${bib%%.bib}")"
-	pybtex-convert "$bib" "$outdir/$bibbase.yaml"
-	sed -i '' -E 's/^    ([^ ]+):$/-   id: \1/;s/^    ((    )+)/\1/;s/[{}]//g' "$outdir/$bibbase.yaml"
+	"$bibtex2yaml" "$bib" >"$outdir/$bibbase.yaml"
 done
