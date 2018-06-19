@@ -1,1 +1,1542 @@
-references: []
+references:
+- author:
+  - first: K.
+    last: Lee
+  - first: J.-P.
+    last: Hong
+  - first: H.
+    last: Choi
+  - first: Marco
+    last: Levorato
+  id: lee-hong-2018-iotj
+  journal: IEEE Internet of Things Journal
+  kind: article
+  title: Adaptive Wireless-Powered Relaying Protocols With Cooperative Jamming for
+    Two-Hop Secure Communication
+  year: '2018'
+- author:
+  - first: Sanaz
+    last: Moosavi
+    middle: Rahimi
+  - first: Ethiopia
+    last: Nigussie
+  - first: Marco
+    last: Levorato
+  - first: Seppo
+    last: Virtanen
+  - first: Jouni
+    last: Isoaho
+  id: moosavi-nigussie-2017-access
+  journal: IEEE Access
+  kind: article
+  pages: 428–442
+  title: Low-Latency Approach for Secure ECG Feature Based Cryptographic Key Generation
+  volume: '6'
+  year: '2018'
+- author:
+  - first: Korosh
+    last: Vatanparvar
+  - first: Sina
+    last: Faezi
+  - first: Igor
+    last: Burago
+  - first: Marco
+    last: Levorato
+  - first: Mohammad
+    last: Faruque
+    middle: Al
+  id: vatanparvar-faezi-2018-tsg
+  journal: IEEE Transactions on Smart Grid
+  kind: article
+  number: '8'
+  title: Extended Range Electric Vehicle with Driving Behavior Estimation in Energy
+    Management
+  volume: '14'
+  year: '2018'
+- author:
+  - first: Aakanksha
+    last: Chowdhery
+  - first: Marco
+    last: Levorato
+  - first: Igor
+    last: Burago
+  - first: Sabur
+    last: Baidya
+  booktitle: Fog Computing in the Internet of Things
+  chapter: '6'
+  editor:
+  - first: Amir
+    last: Rahmani
+    middle: M.
+  - first: Pasi
+    last: Liljeberg
+  - first: Jürgo-Sören
+    last: Preden
+  - first: Axel
+    last: Jantsch
+  id: chowdhery-levorato-2018-fogiot
+  kind: incollection
+  pages: 101–120
+  publisher: Springer
+  title: Urban IoT Edge Analytics
+  year: '2018'
+- address: Pacific Groove, California
+  author:
+  - first: Igor
+    last: Burago
+  - first: Davide
+    last: Callegaro
+  - first: Marco
+    last: Levorato
+  - first: Sameer
+    last: Singh
+  booktitle: Proceedings of the Asilomar Conference on Signals, Systems, and Computers
+    (ACSSC)
+  id: burago-callegaro-2017-acssc
+  kind: inproceedings
+  month: October
+  title: Intelligent Data Filtering in Constrained IoT Systems
+  year: '2017'
+- address: Seoul, Republic of Korea
+  author:
+  - first: Korosh
+    last: Vatanparvar
+  - first: Sina
+    last: Faezi
+  - first: Igor
+    last: Burago
+  - first: Marco
+    last: Levorato
+  - first: Mohammad
+    last: Faruque
+    middle: Al
+  booktitle: Proceedings of the IEEE/ACM/IFIP International Conference on Hardware/Software
+    Codesign and System Synthesis Companion (CODES)
+  id: vatanparvar-faezi-2017-codes
+  kind: inproceedings
+  month: October
+  title: 'Driving Behavior Modeling and Estimation for Battery Optimization in Electric
+    Vehicles: Work-in-progress'
+  year: '2017'
+- articleno: '174'
+  author:
+  - first: Iman
+    last: Azimi
+  - first: Arman
+    last: Anzanpour
+  - first: Amir
+    last: Rahmani
+    middle: M.
+  - first: Tapio
+    last: Pahikkala
+  - first: Marco
+    last: Levorato
+  - first: Pasi
+    last: Liljeberg
+  - first: Nikil
+    last: Dutt
+  id: azimi-anzanpour-2017-tecs
+  journal: ACM Transactions on Embedded Computing Systems
+  kind: article
+  month: September
+  number: 5s
+  pages: 174:1--174:20
+  title: 'HiCH: Hierarchical Fog-Assisted Computing Architecture for Healthcare IoT'
+  volume: '16'
+  year: '2017'
+- address: San Diego, California
+  author:
+  - first: Igor
+    last: Burago
+  - first: Marco
+    last: Levorato
+  - first: Aakanksha
+    last: Chowdhery
+  booktitle: Proceedings of the IEEE International Conference on Sensing, Communication
+    and Networking (SECON)
+  id: burago-levorato-2017-secon
+  kind: inproceedings
+  month: June
+  title: Bandwidth-Aware Data Filtering in Edge-Assisted Wireless Sensor Systems
+  year: '2017'
+- address: Aachen, Germany
+  author:
+  - first: Nicolò
+    last: Michelusi
+  - first: Marco
+    last: Levorato
+  booktitle: Proceedings of the IEEE International Symposium on Information Theory
+    (ISIT)
+  id: michelusi-levorato-2017-isit
+  kind: inproceedings
+  month: June
+  title: Energy-Based Adaptive Multiple Access in LPWAN IoT Systems With Energy Harvesting
+  year: '2017'
+- address: Atlanta, Georgia
+  author:
+  - first: Sabur
+    last: Baidya
+  - first: Marco
+    last: Levorato
+  booktitle: Proceedings of the IEEE International Conference on Computer Communications
+    (INFOCOM) Workshops
+  id: baidya-levorato-2017-infocom
+  kind: inproceedings
+  month: May
+  title: Edge-Assisted Content and Computation Driven Dynamic Network Selection for
+    Real-Time Services in Urban IoT
+  year: '2017'
+- address: San Francisco, California
+  author:
+  - first: Marco
+    last: Levorato
+  booktitle: Proceedings of the IEEE Wireless Communications and Networking Conference
+    (WCNC)
+  id: levorato-2017-wcnc
+  kind: inproceedings
+  month: March
+  title: Cognitive Networking with Dynamic Traffic Classification and QoS Constraints
+  year: '2017'
+- address: San Diego, California
+  author:
+  - first: Igor
+    last: Burago
+  - first: Marco
+    last: Levorato
+  - first: Sameer
+    last: Singh
+  booktitle: Proceedings of the Information Theory and Applications Workshop (ITA)
+  id: burago-levorato-2017-ita
+  kind: inproceedings
+  month: February
+  title: Semantic Compression for Edge-Assisted Systems
+  year: '2017'
+- address: Silicon Valley, California
+  author:
+  - first: Sabur
+    last: Baidya
+  - first: Marco
+    last: Levorato
+  booktitle: Proceedings of the IEEE International Conference on Computing, Networking
+    and Communications (ICNC)
+  id: baidya-levorato-2017-icnc
+  kind: inproceedings
+  month: January
+  title: Content-Based Interference Management for Video Transmission in D2D Communications
+    Underlaying LTE
+  year: '2017'
+- author:
+  - first: Nadia
+    last: Ahmed
+  - first: Marco
+    last: Levorato
+  - first: Guann-Pyng
+    last: Li
+  id: ahmed-levorato-2017-tsg
+  journal: IEEE Transactions on Smart Grid
+  kind: article
+  title: Residential Consumer-Centric Demand Side Management
+  year: '2017'
+- address: Washington, DC
+  author:
+  - first: Sabur
+    last: Baidya
+  - first: Marco
+    last: Levorato
+  booktitle: Proceedings of the IEEE Global Communications Conference (GLOBECOM)
+  id: baidya-levorato-2016-globecom
+  kind: inproceedings
+  month: December
+  title: Content-Based Cognitive Interference Control for City Monitoring Applications
+    in the Urban IoT
+  year: '2016'
+- author:
+  - first: Marco
+    last: Levorato
+  - first: Pradeep
+    last: Weeraddana
+    middle: Chathuranga
+  - first: Carlo
+    last: Fischione
+  id: levorato-weeraddana-2016-tcom
+  journal: IEEE Transactions on Communications
+  kind: article
+  month: October
+  number: '10'
+  pages: 4121–4133
+  title: Distributed Optimization of Channel Access Strategies in Reactive Cognitive
+    Networks
+  volume: '64'
+  year: '2016'
+- address: Barcelona, Spain
+  author:
+  - first: Roberto
+    last: Valentini
+  - first: Marco
+    last: Levorato
+  booktitle: Proceedings of the IEEE International Symposium on Information Theory
+    (ISIT)
+  id: valentini-levorato-2016-isit
+  kind: inproceedings
+  month: July
+  title: Optimal Aging-Aware Channel Access Control for Wireless Networks with Energy
+    Harvesting
+  year: '2016'
+- author:
+  - first: Roberto
+    last: Valentini
+  - first: Marco
+    last: Levorato
+  - first: Fortunato
+    last: Santucci
+  id: valentini-levorato-2016-wcl
+  journal: IEEE Wireless Communications Letters
+  kind: article
+  month: April
+  number: '2'
+  pages: 176–179
+  title: Aging Aware Random Channel Access for Battery-Powered Wireless Networks
+  volume: '5'
+  year: '2016'
+- address: Austin, Texas
+  author:
+  - first: Nga
+    last: Dang
+  - first: Roberto
+    last: Valentini
+  - first: Eli
+    last: Bozorgzadeh
+  - first: Marco
+    last: Levorato
+  - first: Nalini
+    last: Venkatasubramanian
+  booktitle: Proceedings of the IEEE/ACM International Conference on Computer-Aided
+    Design (ICCAD)
+  id: dang-valentini-2015-iccad
+  kind: inproceedings
+  month: November
+  title: A Unified Stochastic Model for Energy Management in Solar-Powered Embedded
+    Systems
+  year: '2015'
+- address: Miami, Florida
+  author:
+  - first: Roberto
+    last: Valentini
+  - first: Nga
+    last: Dang
+  - first: Marco
+    last: Levorato
+  - first: Eli
+    last: Bozorgzadeh
+  booktitle: Proceedings of the IEEE International Conference on Smart Grid Communications
+    (SmartGridComm)
+  id: valentini-dang-2015-smartgridcomm
+  kind: inproceedings
+  month: November
+  title: Modeling and Control Battery Aging in Energy Harvesting Systems
+  year: '2015'
+- author:
+  - first: Igor
+    last: Burago
+  - first: Marco
+    last: Levorato
+  id: burago-levorato-2015-tccn
+  journal: IEEE Transactions on Cognitive Communications and Networking
+  kind: article
+  month: June
+  number: '2'
+  pages: 244–256
+  title: Network Estimation in Cognition-Empowered Wireless Networks
+  volume: '1'
+  year: '2015'
+- address: Baltimore, Maryland
+  author:
+  - first: Roberto
+    last: Valentini
+  - first: Marco
+    last: Levorato
+  - first: Carlo
+    last: Fischione
+  booktitle: Proceedings of the Conference on Information Sciences and Systems (CISS)
+  id: valentini-levorato-2015-ciss
+  kind: inproceedings
+  month: March
+  title: Performance Analysis of IEEE 802.15.3c-Based mmW Wireless Networks
+  year: '2015'
+- address: San Diego, California
+  author:
+  - first: Marco
+    last: Levorato
+  - first: Nalini
+    last: Venkatasubramanian
+  - first: Nikil
+    last: Dutt
+  booktitle: Proceedings of the Information Theory and Applications Workshop (ITA)
+  id: levorato-venkatasubramanian-2015-ita
+  kind: inproceedings
+  month: February
+  title: Heat-Aware Transmission Strategies
+  year: '2015'
+- author:
+  - first: Daphney-Stavroula
+    last: Zois
+  - first: Marco
+    last: Levorato
+  - first: Urbashi
+    last: Mitra
+  id: zois-levorato-2014-tsp
+  journal: IEEE Transactions on Signal Processing
+  kind: article
+  month: December
+  number: '23'
+  pages: 6209–6224
+  title: 'Active Classification for POMDPs: A Kalman-Like State Estimator'
+  volume: '62'
+  year: '2014'
+- address: Austin, Texas
+  author:
+  - first: Marco
+    last: Levorato
+  - first: Pradeep
+    last: Weeraddana
+    middle: Chathuranga
+  - first: Carlo
+    last: Fischione
+  booktitle: Proceedings of the IEEE Global Communications Conference (GLOBECOM)
+  id: levorato-weeraddana-2014-globecom
+  kind: inproceedings
+  month: December
+  title: Distributed Optimization of Transmission Strategies in Reactive Cognitive
+    Networks
+  year: '2014'
+- address: Venice, Italy
+  author:
+  - first: Marco
+    last: Levorato
+  - first: Nadia
+    last: Ahmed
+  - first: Yang
+    last: Zhang
+    middle: Arthur
+  booktitle: Proceedings of the IEEE International Conference on Smart Grid Communications
+    (SmartGridComm)
+  id: levorato-ahmed-2014-smartgridcomm
+  kind: inproceedings
+  month: November
+  title: 'Consumer In-The-Loop: Consumers as Part of Residential Smart Energy Systems'
+  year: '2014'
+- address: Austin, Texas
+  author:
+  - first: Marco
+    last: Levorato
+  - first: Sunil
+    last: Narang
+  - first: Urbashi
+    last: Mitra
+  - first: Antonio
+    last: Ortega
+  booktitle: Proceedings of the IEEE Global Conference on Signal and Information Processing
+    (GlobalSIP)
+  id: levorato-narang-2013-globalsip
+  kind: inproceedings
+  month: December
+  note: invited paper
+  title: Optimization of Wireless Networks via Graph Interpolation
+  year: '2013'
+- author:
+  - first: Nicolò
+    last: Michelusi
+  - first: Petar
+    last: Popovski
+  - first: Osvaldo
+    last: Simeone
+  - first: Marco
+    last: Levorato
+  - first: Michele
+    last: Zorzi
+  id: michelusi-popovski-2013-jsac
+  journal: IEEE Journal on Selected Areas in Communications
+  kind: article
+  month: November
+  number: '11'
+  pages: 2374–2386
+  title: Cognitive Access Policies Under a Primary ARQ Process via Forward-Backward
+    Interference Cancellation
+  volume: '31'
+  year: '2013'
+- address: San Diego, California
+  author:
+  - first: Marco
+    last: Levorato
+  - first: Urbashi
+    last: Mitra
+  booktitle: Proceedings of the Military Communications Conference (MILCOM)
+  id: levorato-mitra-2013-milcom
+  kind: inproceedings
+  month: November
+  title: Cognitive Networks With Dynamic User Classification for Tactical Communications
+  year: '2013'
+- address: Istanbul, Turkey
+  author:
+  - first: Daphney-Stavroula
+    last: Zois
+  - first: Marco
+    last: Levorato
+  - first: Urbashi
+    last: Mitra
+  booktitle: Proceedings of the IEEE International Symposium on Information Theory
+    (ISIT)
+  id: zois-levorato-2013-isit
+  kind: inproceedings
+  month: July
+  title: Non-Linear Smoothers for Discrete-Time, Finite-State Markov Chains
+  year: '2013'
+- address: Vancouver, Canada
+  author:
+  - first: Daphney-Stavroula
+    last: Zois
+  - first: Marco
+    last: Levorato
+  - first: Urbashi
+    last: Mitra
+  booktitle: Proceedings of the IEEE International Conference on Acoustics, Speech
+    and Signal Processing (ICASSP)
+  id: zois-levorato-2013-icassp
+  kind: inproceedings
+  month: May
+  title: Kalman-Like State Tracking and Control in POMDPs With Applications to Body
+    Sensing Networks
+  year: '2013'
+- author:
+  - first: Daphney-Stavroula
+    last: Zois
+  - first: Marco
+    last: Levorato
+  - first: Urbashi
+    last: Mitra
+  id: zois-levorato-2013-tsp
+  journal: IEEE Transactions on Signal Processing
+  kind: article
+  month: April
+  number: '7'
+  pages: 1581–1594
+  title: Energy-Efficient, Heterogeneous Sensor Selection for Physical Activity Detection
+    in Wireless Body Area Networks
+  volume: '61'
+  year: '2013'
+- articleno: '278'
+  author:
+  - first: Marco
+    last: Levorato
+  - first: Urbashi
+    last: Mitra
+  - first: Andrea
+    last: Goldsmith
+  id: levorato-mitra-2012-jwcn
+  journal: EURASIP Journal on Wireless Communications and Networking
+  kind: article
+  month: December
+  number: '1'
+  publisher: Springer
+  title: Structure-Based Learning in Wireless Networks via Sparse Approximation
+  volume: '2012'
+  year: '2012'
+- address: Hollywood, California
+  author:
+  - first: Marco
+    last: Levorato
+  - first: Urbashi
+    last: Mitra
+  booktitle: Proceedings of the APSIPA Annual Summit Conference
+  id: levorato-mitra-2012-apsipa
+  kind: inproceedings
+  month: December
+  title: Scale Invariance and Long-Range Dependence in Smart Energy Grids
+  year: '2012'
+- address: Anaheim, California
+  author:
+  - first: Marco
+    last: Levorato
+  - first: Sunil
+    last: Narang
+  - first: Urbashi
+    last: Mitra
+  - first: Antonio
+    last: Ortega
+  booktitle: Proceedings of the IEEE Global Communications Conference (GLOBECOM)
+  id: levorato-narang-2012-globecom
+  kind: inproceedings
+  month: December
+  note: best paper award
+  title: Reduced Dimension Policy Iteration for Wireless Network Control via Multiscale
+    Analysis
+  year: '2012'
+- author:
+  - first: Federico
+    last: Librino
+  - first: Marco
+    last: Levorato
+  - first: Michele
+    last: Zorzi
+  id: librino-levorato-2012-wcmc
+  journal: Wireless Communications and Mobile Computing
+  kind: article
+  month: October
+  number: '18'
+  pages: 1672–1690
+  publisher: Wiley
+  title: An Algorithmic Solution for Computing Circle Intersection Areas and Its Applications
+    to Wireless Communications
+  volume: '14'
+  year: '2012'
+- author:
+  - first: Andrea
+    last: Munari
+  - first: Marco
+    last: Levorato
+  - first: Michele
+    last: Zorzi
+  id: munari-levorato-2012-tcom
+  journal: IEEE Transactions on Communications
+  kind: article
+  month: October
+  number: '10'
+  pages: 3032–3046
+  title: On the Impact of Carrier Sense Based Medium Access Control on Cooperative
+    Schemes in Wireless Ad Hoc Networks
+  volume: '60'
+  year: '2012'
+- address: Monticello, Illinois
+  author:
+  - first: Apostol
+    last: Gjika
+    middle: T.
+  - first: Marco
+    last: Levorato
+  - first: Antonio
+    last: Ortega
+  - first: Urbashi
+    last: Mitra
+  booktitle: Proceedings of the Allerton Conference on Communication, Control and
+    Computing
+  id: gjika-levorato-2012-allerton
+  kind: inproceedings
+  month: October
+  note: invited paper
+  title: Online Learning in Wireless Networks via Directed Graph Lifting Transform
+  year: '2012'
+- author:
+  - first: Marco
+    last: Levorato
+  - first: Sina
+    last: Firouzabadi
+  - first: Andrea
+    last: Goldsmith
+  id: levorato-firouzabadi-2012-twc
+  journal: IEEE Transactions on Wireless Communications
+  kind: article
+  month: September
+  number: '9'
+  pages: 3101–3111
+  title: A Learning Framework for Cognitive Interference Networks with Partial and
+    Noisy Observations
+  volume: '11'
+  year: '2012'
+- address: Stevens Institute of Technology, Hoboken, New Jersey
+  author:
+  - first: Marco
+    last: Levorato
+  - first: Urbashi
+    last: Mitra
+  booktitle: Proceedings of the IEEE Sensor Array and Multichannel Signal Processing
+    Workshop (SAM)
+  id: levorato-mitra-2012-sam
+  kind: inproceedings
+  month: June
+  note: invited paper
+  title: Fast Anomaly Detection in Smart Grids via Sparse Approximation Theory
+  year: '2012'
+- address: Ottawa, Canada
+  author:
+  - first: Daphney-Stavroula
+    last: Zois
+  - first: Marco
+    last: Levorato
+  - first: Urbashi
+    last: Mitra
+  booktitle: Proceedings of the IEEE International Conference on Communications (ICC)
+  id: zois-levorato-2012-icc
+  kind: inproceedings
+  month: June
+  title: Heterogeneous Time-Resource Allocation in Wireless Body Area Networks for
+    Maximum Likelihood Activity Detection
+  year: '2012'
+- author:
+  - first: Marco
+    last: Levorato
+  - first: Urbashi
+    last: Mitra
+  - first: Michele
+    last: Zorzi
+  id: levorato-mitra-2012-tit
+  journal: IEEE Transactions on Information Theory
+  kind: article
+  month: May
+  number: '5'
+  pages: 3023–3046
+  title: Cognitive Interference Management in Retransmission-Based Wireless Networks
+  volume: '58'
+  year: '2012'
+- author:
+  - first: Urbashi
+    last: Mitra
+  - first: B.
+    last: Emken
+    middle: Adar
+  - first: Sangwon
+    last: Lee
+  - first: Ming
+    last: Li
+  - first: Viktor
+    last: Rozgic
+  - first: Gautam
+    last: Thatte
+  - first: Harshvardhan
+    last: Vathsangam
+  - first: Daphney-Stavroula
+    last: Zois
+  - first: Murali
+    last: Annavaram
+  - first: Shrikanth
+    last: Narayanan
+  - first: Marco
+    last: Levorato
+  - first: Donna
+    last: Spruijt-Metz
+  - first: Gaurav
+    last: Sukhatme
+  id: mitra-emken-2012-commag
+  journal: IEEE Communications Magazine
+  kind: article
+  month: May
+  number: '5'
+  pages: 116–125
+  title: 'KNOWME: A Case Study in Wireless Body Area Sensor Network Design'
+  volume: '50'
+  year: '2012'
+- address: Orlando, Florida
+  author:
+  - first: Daphney-Stavroula
+    last: Zois
+  - first: Marco
+    last: Levorato
+  - first: Urbashi
+    last: Mitra
+  booktitle: Proceedings of the IEEE International Conference on Computer Communications
+    (INFOCOM)
+  id: zois-levorato-2012-infocom
+  kind: inproceedings
+  month: March
+  title: A POMDP Framework for Heterogeneous Sensor Selection in Wireless Body Area
+    Networks
+  year: '2012'
+- address: Houston, Texas
+  author:
+  - first: Marco
+    last: Levorato
+  - first: Sina
+    last: Firouzabadi
+  - first: Andrea
+    last: Goldsmith
+  booktitle: Proceedings of the IEEE Global Communications Conference (GLOBECOM)
+  id: levorato-firouzabadi-2011-globecom
+  kind: inproceedings
+  month: December
+  title: 'Cognitive Interference Networks With Partial and Noisy Observations: A Learning
+    Framework'
+  year: '2011'
+- address: Brussels, Belgium
+  author:
+  - first: Marco
+    last: Levorato
+  - first: Urbashi
+    last: Mitra
+  booktitle: Proceedings of the IEEE International Conference on Smart Grid Communications
+    (SmartGridComm)
+  id: levorato-mitra-2011-smartgridcomm
+  kind: inproceedings
+  month: October
+  title: Optimal Allocation of Heterogeneous Smart Grid Traffic to Heterogeneous Networks
+  year: '2011'
+- address: Monticello, Illinois
+  author:
+  - first: Marco
+    last: Levorato
+  - first: Sina
+    last: Firouzabadi
+  - first: Andrea
+    last: Goldsmith
+  booktitle: Proceedings of the Allerton Conference on Communication, Control and
+    Computing
+  id: levorato-firouzabadi-2011-allerton
+  kind: inproceedings
+  month: September
+  title: A Learning Framework for Cognitive Interference Networks with Partial and
+    Noisy Observations
+  year: '2011'
+- address: Monticello, Illinois
+  author:
+  - first: Nicolò
+    last: Michelusi
+  - first: Osvaldo
+    last: Simeone
+  - first: Marco
+    last: Levorato
+  - first: Petar
+    last: Popovski
+  - first: Michele
+    last: Zorzi
+  booktitle: Proceedings of the Allerton Conference on Communication, Control and
+    Computing
+  id: michelusi-simeone-2011-allerton
+  kind: inproceedings
+  month: September
+  title: Cognitive Transmissions Under a Primary ARQ Process via Backward Interference
+    Cancellation
+  year: '2011'
+- author:
+  - first: Marco
+    last: Levorato
+  - first: Federico
+    last: Librino
+  - first: Michele
+    last: Zorzi
+  id: levorato-librino-2011-tcom
+  journal: IEEE Transactions on Communications
+  kind: article
+  month: August
+  number: '8'
+  pages: 2215–2227
+  title: Integrated Cooperative Opportunistic Packet Forwarding and Distributed Error
+    Control in MIMO Ad Hoc Networks
+  volume: '59'
+  year: '2011'
+- address: Kyoto, Japan
+  author:
+  - first: Marco
+    last: Levorato
+  - first: Daniel
+    last: O'Neill
+  - first: Andrea
+    last: Goldsmith
+  - first: Urbashi
+    last: Mitra
+  booktitle: Proceedings of the IEEE International Conference on Communications (ICC)
+  id: levorato-oneill-2011-icc
+  kind: inproceedings
+  month: June
+  title: Optimization of ARQ Processes in Interference Networks with QoS Constraints
+  year: '2011'
+- author:
+  - first: Jalil
+    last: Harsini
+    middle: Seifali
+  - first: Farshad
+    last: Lahouti
+  - first: Marco
+    last: Levorato
+  - first: Michele
+    last: Zorzi
+  id: harsini-lahouti-2011-twc
+  journal: IEEE Transactions on Wireless Communications
+  kind: article
+  month: March
+  number: '3'
+  pages: 877–889
+  title: Analysis of Non-Cooperative and Cooperative Type II Hybrid ARQ Protocols
+    With AMC Over Correlated Fading
+  volume: '10'
+  year: '2011'
+- address: San Diego, CA
+  author:
+  - first: Nicolò
+    last: Michelusi
+  - first: Osvaldo
+    last: Simeone
+  - first: Marco
+    last: Levorato
+  - first: Petar
+    last: Popovski
+  - first: Michele
+    last: Zorzi
+  booktitle: Proceedings of the Information Theory and Applications Workshop (ITA)
+  id: michelusi-simeone-2011-ita
+  kind: inproceedings
+  month: February
+  title: Optimal Cognitive Transmission Exploiting Redundancy in the Primary ARQ Process
+  year: '2011'
+- address: Miami, Florida
+  author:
+  - first: Sina
+    last: Firouzabadi
+  - first: Marco
+    last: Levorato
+  - first: Daniel
+    last: O'Neill
+  - first: Andrea
+    last: Goldsmith
+  booktitle: Proceedings of the IEEE Global Communications Conference (GLOBECOM)
+  id: firouzabadi-levorato-2011-globecom
+  kind: inproceedings
+  month: December
+  title: Learning Interference Strategies in Cognitive ARQ Networks
+  year: '2010'
+- address: San Francisco, California
+  author:
+  - first: Marco
+    last: Levorato
+  - first: Leonardo
+    last: Badia
+  - first: Urbashi
+    last: Mitra
+  - first: Michele
+    last: Zorzi
+  booktitle: Proceedings of the IEEE International Conference on Mobile Ad Hoc and
+    Sensor Systems (MASS)
+  id: levorato-badia-2010-mass
+  kind: inproceedings
+  month: November
+  title: An Analysis of Cognitive Networks for Unslotted Time and Reactive Users
+  year: '2010'
+- address: Gaithersburg, Maryland
+  author:
+  - first: Daniel
+    last: O'Neill
+  - first: Marco
+    last: Levorato
+  - first: Andrea
+    last: Goldsmith
+  - first: Urbashi
+    last: Mitra
+  booktitle: Proceedings of the IEEE International Conference on Smart Grid Communications
+    (SmartGridComm)
+  id: oneill-levorato-2010-smartgridcomm
+  kind: inproceedings
+  month: October
+  title: Residential Demand Response Using Reinforcement Learning
+  year: '2010'
+- address: Cape Town, South Africa
+  author:
+  - first: Jalil
+    last: Harsini
+    middle: Seifali
+  - first: Farshad
+    last: Lahouti
+  - first: Michele
+    last: Zorzi
+  - first: Marco
+    last: Levorato
+  booktitle: Proceedings of the IEEE International Conference on Communications (ICC)
+  id: harsini-lahouti-2010-icc
+  kind: inproceedings
+  month: May
+  title: 'A Type II Hybrid ARQ Protocol with Adaptive Modulation and Coding for Time-Correlated
+    Fading Channels: Analysis and Design'
+  year: '2010'
+- author:
+  - first: Leonardo
+    last: Badia
+  - first: Nicola
+    last: Baldo
+  - first: Marco
+    last: Levorato
+  - first: Michele
+    last: Zorzi
+  id: badia-baldo-2010-jsac
+  journal: IEEE Journal on Selected Areas in Communications
+  kind: article
+  month: April
+  number: '3'
+  pages: 488–500
+  title: A Markov Framework for Error Control Techniques Based on Selective Retransmission
+    in Video Transmission Over Wireless
+  volume: '28'
+  year: '2010'
+- author:
+  - first: Leonardo
+    last: Badia
+  - first: Marco
+    last: Levorato
+  - first: Federico
+    last: Librino
+  - first: Michele
+    last: Zorzi
+  id: badia-levorato-2010-wirelessmag
+  journal: IEEE Wireless Communications Magazine
+  kind: article
+  month: April
+  number: '2'
+  pages: 89–96
+  title: Cooperation Techniques for Wireless Systems from a Network-Wide Perspective
+  volume: '17'
+  year: '2010'
+- address: Taormina, Italy
+  author:
+  - first: Marco
+    last: Levorato
+  - first: Leonardo
+    last: Badia
+  - first: Michele
+    last: Zorzi
+  booktitle: Proceedings of the IEEE Information Theory Workshop (ITW)
+  id: levorato-badia-2009-itw
+  kind: inproceedings
+  month: October
+  title: On the Channel Statistics in Hybrid ARQ Systems for Correlated Channels
+  year: '2009'
+- address: Taormina, Italy
+  author:
+  - first: Marco
+    last: Levorato
+  - first: Osvaldo
+    last: Simeone
+  - first: Urbashi
+    last: Mitra
+  - first: Michele
+    last: Zorzi
+  booktitle: Proceedings of the IEEE Information Theory Workshop (ITW)
+  id: levorato-simeone-2009-itw
+  kind: inproceedings
+  month: October
+  title: Cooperation and Coordination in Cognitive Networks with Packet Retransmission
+  year: '2009'
+- address: Beijing, China
+  author:
+  - first: Marco
+    last: Levorato
+  - first: Osvaldo
+    last: Simeone
+  - first: Urbashi
+    last: Mitra
+  booktitle: Proceedings of the ACM International Conference on Mobile Computing and
+    Networking (MobiCom)
+  id: levorato-simeone-2009-mobicom
+  kind: inproceedings
+  month: September
+  title: Interference Management via Rate Splitting and HARQ Over Time-Varying Fading
+    Channels
+  year: '2009'
+- address: Monticello, Illinois
+  author:
+  - first: Marco
+    last: Levorato
+  - first: Urbashi
+    last: Mitra
+  - first: Michele
+    last: Zorzi
+  booktitle: Proceedings of the Allerton Conference on Communication, Control and
+    Computing
+  id: levorato-mitra-2009-allerton
+  kind: inproceedings
+  month: September–October
+  title: Cognitive Interference Management in Retransmission-Based Wireless Networks
+  year: '2009'
+- author:
+  - first: Stefano
+    last: Tomasin
+  - first: Marco
+    last: Levorato
+  - first: Michele
+    last: Zorzi
+  id: tomasin-levorato-2009-tcom
+  journal: IEEE Transactions on Communications
+  kind: article
+  month: August
+  number: '8'
+  pages: 2391–2401
+  title: Steady State Analysis of Coded Cooperative Networks with HARQ Protocols
+  volume: '57'
+  year: '2009'
+- author:
+  - first: Leonardo
+    last: Badia
+  - first: Marco
+    last: Levorato
+  - first: Michele
+    last: Zorzi
+  id: badia-levorato-2009-tcom
+  journal: IEEE Transactions on Communications
+  kind: article
+  month: July
+  number: '7'
+  pages: 1959–1971
+  title: A Channel Representation Method for the Study of Hybrid Retransmission-Based
+    Error Control
+  volume: '57'
+  year: '2009'
+- author:
+  - first: Marco
+    last: Levorato
+  - first: Michele
+    last: Zorzi
+  id: levorato-zorzi-2009-twc
+  journal: IEEE Transactions on Wireless Communications
+  kind: article
+  month: June
+  number: '6'
+  pages: 2938–2949
+  title: On the Performance of Ad Hoc Networks with Multiuser Detection, Rate Control
+    and Hybrid ARQ
+  volume: '8'
+  year: '2009'
+- address: Dresden, Germany
+  author:
+  - first: Leonardo
+    last: Badia
+  - first: Marco
+    last: Levorato
+  - first: Michele
+    last: Zorzi
+  booktitle: Proceedings of the IEEE International Conference on Communications (ICC)
+  id: badia-levorato-2009-icc
+  kind: inproceedings
+  month: June
+  title: Analysis of Selective Retransmission Techniques for Differentially Encoded
+    Data
+  year: '2009'
+- address: Rome, Italy
+  author:
+  - first: Marco
+    last: Levorato
+  - first: Andrea
+    last: Munari
+  - first: Michele
+    last: Zorzi
+  booktitle: Proceedings of the IEEE Communications Society Conference on Sensor,
+    Mesh and Ad Hoc Communications and Networks (SECON)
+  id: levorato-munari-2009-secon
+  kind: inproceedings
+  month: June
+  title: On the Effectiveness of Cooperation in Carrier Sense-Based Ad Hoc Networks
+  year: '2009'
+- address: Seoul, Korea
+  author:
+  - first: Federico
+    last: Librino
+  - first: Marco
+    last: Levorato
+  - first: Michele
+    last: Zorzi
+  booktitle: Proceedings of the IEEE International Symposium on Modeling and Optimization
+    in Mobile, Ad Hoc and Wireless Networks (WiOpt)
+  id: librino-levorato-2009-wiopt
+  kind: inproceedings
+  month: June
+  title: An Algorithmic Solution for Computing Circle Intersection Areas and its Applications
+    to Wireless Communications
+  year: '2009'
+- address: Bradford, UK
+  author:
+  - first: Leonardo
+    last: Badia
+  - first: Paolo
+    last: Casari
+  - first: Marco
+    last: Levorato
+  - first: Michele
+    last: Zorzi
+  booktitle: Proceedings of the IEEE International Workshop on Underwater Networks
+    (WUnderNET)
+  id: badia-casari-2009-wundernet
+  kind: inproceedings
+  month: May
+  title: Analysis of an Automatic Repeat Request Addressing Long Delay Channels
+  year: '2009'
+- address: Rio de Janeiro, Brazil
+  author:
+  - first: Marco
+    last: Levorato
+  - first: Urbashi
+    last: Mitra
+  - first: Michele
+    last: Zorzi
+  booktitle: Proceedings of the IEEE International Conference on Computer Communications
+    (INFOCOM)
+  id: levorato-mitra-2009-infocom
+  kind: inproceedings
+  month: April
+  title: On Optimal Control of Wireless Networks with Multiuser Detection, Hybrid
+    ARQ and Distortion Constraints
+  year: '2009'
+- author:
+  - first: Paolo
+    last: Casari
+  - first: Marco
+    last: Levorato
+  - first: Michele
+    last: Zorzi
+  id: casari-levorato-2008-twc
+  journal: IEEE Transactions on Wireless Communications
+  kind: article
+  month: November
+  number: '11'
+  pages: 4596–4607
+  title: MAC/PHY Cross-Layer Design of MIMO Ad Hoc Networks with Layered Multiuser
+    Detection
+  volume: '7'
+  year: '2008'
+- author:
+  - first: Leonardo
+    last: Badia
+  - first: Marco
+    last: Levorato
+  - first: Michele
+    last: Zorzi
+  id: badia-levorato-2008-tcom
+  journal: IEEE Transactions on Communications
+  kind: article
+  month: September
+  number: '9'
+  pages: 1434–1441
+  title: Markov Analysis of Selective Repeat Type II Hybrid ARQ using Block Codes
+  volume: '56'
+  year: '2008'
+- author:
+  - first: Marco
+    last: Levorato
+  - first: Stefano
+    last: Tomasin
+  - first: Michele
+    last: Zorzi
+  id: levorato-tomasin-2008-tcom
+  journal: IEEE Transactions on Communications
+  kind: article
+  month: September
+  number: '9'
+  pages: 1545–1555
+  title: 'Cooperative Spatial Multiplexing for Ad Hoc Networks With Hybrid ARQ: Design
+    and Performance Analysis'
+  volume: '56'
+  year: '2008'
+- address: Cannes, France
+  author:
+  - first: Michele
+    last: Zorzi
+  - first: Federico
+    last: Librino
+  - first: Marco
+    last: Levorato
+  booktitle: Proceedings of the IEEE International Symposium on Personal, Indoor and
+    Mobile Radio Communications (PIMRC)
+  id: zorzi-librino-2008-pimrc
+  kind: inproceedings
+  month: September
+  note: invited paper
+  title: 'Cooperation in UMTS Cellular Networks: a Practical Perspective'
+  year: '2008'
+- address: Creta, Greece
+  author:
+  - first: Paolo
+    last: Casari
+  - first: Marco
+    last: Levorato
+  - first: Daniele
+    last: Mazzi
+  - first: Michele
+    last: Zorzi
+  booktitle: Proceedings of the International Wireless Communications and Mobile Computing
+    Conference (IWCMC)
+  id: casari-levorato-2008-iwcmc
+  kind: inproceedings
+  month: August
+  title: On the Design of Routing Protocols in MIMO Ad Hoc Networks Under Uniform
+    and Correlated Traffic
+  year: '2008'
+- address: Berlin, Germany
+  author:
+  - first: Marco
+    last: Levorato
+  - first: Leonardo
+    last: Badia
+  - first: Michele
+    last: Zorzi
+  booktitle: Proceedings of the IEEE Workshop on Resource Allocation in Wireless Networks
+    (RAWNET)
+  id: levorato-badia-2008-rawnet
+  kind: inproceedings
+  month: March
+  title: Efficient Quantization for Feedback Controlled Networks with Type II HARQ
+  year: '2008'
+- address: Princeton, New Jersey
+  author:
+  - first: Marco
+    last: Levorato
+  - first: Michele
+    last: Zorzi
+  booktitle: Proceedings of the Conference on Information Sciences and Systems (CISS)
+  id: levorato-zorzi-2008-ciss
+  kind: inproceedings
+  month: March
+  title: On Error Control Schemes for Ad Hoc Networks With Multiuser Detection and
+    Rate Control
+  year: '2008'
+- address: St. Julians, Malta
+  author:
+  - first: Marco
+    last: Levorato
+  - first: Michele
+    last: Zorzi
+  booktitle: Proceedings of the International Symposium on Communications, Control,
+    and Signal Processing (ISCCSP)
+  id: levorato-zorzi-2008-isccsp
+  kind: inproceedings
+  month: March
+  title: Performance Analysis of Type II Hybrid ARQ With Low-Density Parity-Check
+    Codes
+  year: '2008'
+- address: San Diego, California
+  author:
+  - first: Marco
+    last: Levorato
+  - first: Michele
+    last: Zorzi
+  booktitle: Proceedings of the Information Theory and Applications Workshop (ITA)
+  id: levorato-zorzi-2008-ita
+  kind: inproceedings
+  month: January–February
+  title: Recursive Analysis of Ad Hoc Networks With Packet Queueing, Channel Contention
+    and Hybrid ARQ
+  year: '2008'
+- author:
+  - first: Marco
+    last: Levorato
+  - first: Paolo
+    last: Casari
+  - first: Stefano
+    last: Tomasin
+  - first: Michele
+    last: Zorzi
+  id: levorato-casari-2007-twc
+  journal: IEEE Transactions on Wireless Communications
+  kind: article
+  month: December
+  number: '12'
+  pages: 4390–4400
+  title: Physical Layer Approximations for Cross-Layer Performance Analysis in MIMO-BLAST
+    Ad Hoc Networks
+  volume: '6'
+  year: '2007'
+- address: Washington, DC
+  author:
+  - first: Federico
+    last: Librino
+  - first: Marco
+    last: Levorato
+  - first: Michele
+    last: Zorzi
+  booktitle: Proceedings of the IEEE Global Communications Conference (GLOBECOM)
+  id: librino-levorato-2007-globecom
+  kind: inproceedings
+  month: November
+  title: Distributed Cooperative Routing and Hybrid ARQ in MIMO-BLAST Ad Hoc Networks
+  year: '2007'
+- address: Monticello, Illinois
+  author:
+  - first: Leonardo
+    last: Badia
+  - first: Marco
+    last: Levorato
+  - first: Michele
+    last: Zorzi
+  booktitle: Proceedings of the Allerton Conference on Communication, Control and
+    Computing
+  id: badia-levorato-2007-allerton
+  kind: inproceedings
+  month: September
+  title: An Improved Channel Quantization Method for Performance Evaluation of Incremental
+    Redundancy HARQ Based on Reliable Channel Regions
+  year: '2007'
+- address: Glasgow, UK
+  author:
+  - first: Stefano
+    last: Tomasin
+  - first: Marco
+    last: Levorato
+  - first: Michele
+    last: Zorzi
+  booktitle: Proceedings of the IEEE International Conference on Communications (ICC)
+  id: tomasin-levorato-2007-icc
+  kind: inproceedings
+  month: June
+  title: Coded Cooperation for Ad Hoc Networks with Spatial Multiplexing
+  year: '2007'
+- address: Nice, France
+  author:
+  - first: Stefano
+    last: Tomasin
+  - first: Marco
+    last: Levorato
+  - first: Michele
+    last: Zorzi
+  booktitle: Proceedings of the IEEE International Symposium on Information Theory
+    (ISIT)
+  id: tomasin-levorato-2007-isit
+  kind: inproceedings
+  month: June
+  title: Analysis of Outage Probability for Cooperative Networks with HARQ
+  year: '2007'
+- address: Limassol, Cyprus
+  author:
+  - first: Marco
+    last: Levorato
+  - first: Stefano
+    last: Tomasin
+  - first: Michele
+    last: Zorzi
+  booktitle: Proceedings of the IEEE International Symposium on Modeling and Optimization
+    in Mobile, Ad Hoc and Wireless Networks (WiOpt)
+  id: levorato-tomasin-2007-wiopt
+  kind: inproceedings
+  month: April
+  title: Strategies and Tradeoffs for Coded Cooperation in Wireless Networks
+  year: '2007'
+- address: San Francisco, California
+  author:
+  - first: Leonardo
+    last: Badia
+  - first: Marco
+    last: Levorato
+  - first: Michele
+    last: Zorzi
+  booktitle: Proceedings of the IEEE Global Communications Conference (GLOBECOM)
+  id: badia-levorato-2006-globecom
+  kind: inproceedings
+  month: November–December
+  title: Analytical Investigation With Markov Models of Selective Repeat Truncated
+    Type II Hybrid ARQ
+  year: '2006'
+- address: San Francisco, California
+  author:
+  - first: Marco
+    last: Levorato
+  - first: Paolo
+    last: Casari
+  - first: Michele
+    last: Zorzi
+  booktitle: Proceedings of the IEEE Global Communications Conference (GLOBECOM)
+  id: levorato-casari-2006-globecom
+  kind: inproceedings
+  month: November–December
+  title: On the Performance of Access Strategies for MIMO Ad Hoc Networks
+  year: '2006'
+- address: Montreal, Canada
+  author:
+  - first: Marco
+    last: Levorato
+  - first: Stefano
+    last: Tomasin
+  - first: Michele
+    last: Zorzi
+  booktitle: Proceedings of the IEEE Vehicular Technology Conference (VTC)
+  id: levorato-tomasin-2006-vtc
+  kind: inproceedings
+  month: September
+  title: Analysis of Cooperative Spatial Multiplexing for Ad Hoc Networks With Adaptive
+    Hybrid ARQ
+  year: '2006'
+- address: Vancouver, Canada
+  author:
+  - first: Paolo
+    last: Casari
+  - first: Marco
+    last: Levorato
+  - first: Michele
+    last: Zorzi
+  booktitle: Proceedings of the International Wireless Communications and Mobile Computing
+    Conference (IWCMC)
+  id: casari-levorato-2006-iwcmc
+  kind: inproceedings
+  month: July
+  title: 'DSMA: An Access Method for MIMO Ad Hoc Networks Based on Distributed Scheduling'
+  year: '2006'
+- address: Istanbul, Turkey
+  author:
+  - first: Marco
+    last: Levorato
+  - first: Paolo
+    last: Casari
+  - first: Stefano
+    last: Tomasin
+  - first: Michele
+    last: Zorzi
+  booktitle: Proceedings of the IEEE International Conference on Communications (ICC)
+  id: levorato-casari-2006-icc-2
+  kind: inproceedings
+  month: June
+  title: An Approximate Approach for Layered Space-Time Multiuser Detection Performance
+    and Its Application to MIMO Ad Hoc Networks
+  year: '2006'
+- address: Istanbul, Turkey
+  author:
+  - first: Marco
+    last: Levorato
+  - first: Paolo
+    last: Casari
+  - first: Stefano
+    last: Tomasin
+  - first: Michele
+    last: Zorzi
+  booktitle: Proceedings of the IEEE International Conference on Communications (ICC)
+  id: levorato-casari-2006-icc-1
+  kind: inproceedings
+  month: June
+  title: Analysis of Spatial Multiplexing for Cross-Layer Design of MIMO Ad Hoc Networks
+  year: '2006'
+- address: Berlin, Germany
+  author:
+  - first: Paolo
+    last: Casari
+  - first: Marco
+    last: Levorato
+  - first: Michele
+    last: Zorzi
+  booktitle: Proceedings of the IEEE International Symposium on Personal, Indoor and
+    Mobile Radio Communications (PIMRC)
+  id: casari-levorato-2005-pimrc
+  kind: inproceedings
+  month: September
+  title: On the Implications of Layered Space-Time Multiuser Detection on the Design
+    of MAC Protocols for Ad Hoc Networks
+  year: '2005'
+- address: Aalborg, Denmark
+  author:
+  - first: Paolo
+    last: Casari
+  - first: Marco
+    last: Levorato
+  - first: Michele
+    last: Zorzi
+  booktitle: Proceedings of the Wireless Personal Multimedia Conference (WPMC)
+  id: casari-levorato-2005-wpmc
+  kind: inproceedings
+  month: September
+  title: Some Issues Concerning MAC Design in Ad Hoc Networks With MIMO Communications
+  year: '2005'
+- address: New Orleans, Louisiana
+  author:
+  - first: Michele
+    last: Rossi
+  - first: Paolo
+    last: Casari
+  - first: Marco
+    last: Levorato
+  - first: Michele
+    last: Zorzi
+  booktitle: Proceedings of the IEEE Wireless Communications and Networking Conference
+    (WCNC)
+  id: rossi-casari-2005-wcnc
+  kind: inproceedings
+  month: March
+  title: 'Multicast Streaming Over 3G Cellular Networks Through Multi-Channel Transmissions:
+    Proposals and Performance Evaluation'
+  year: '2005'
