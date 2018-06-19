@@ -91,6 +91,7 @@
   {{- with .entry.journal }}{{ ", " }}<span class="journal">{{ . }}</span>{{ end -}}
   {{- with .entry.volume }}{{ ", " }}<span class="volume">vol.&nbsp;{{ . }}</span>{{ end -}}
   {{- with .entry.number }}{{ ", " }}<span class="number">no.&nbsp;{{ . }}</span>{{ end -}}
+  {{- with .entry.articleno }}{{ ", " }}<span class="articleno">article no.&nbsp;{{ . }}</span>{{ end -}}
   {{- with .entry.pages }}{{ ", " }}{{ partial "bib/pages.html" . }}{{ end -}}
   {{- if index .entry "year" }}{{ ", " }}{{ partial "bib/date.html" (dict "entry" .entry "params" $.params) }}{{ end -}}
 
@@ -114,6 +115,7 @@
   {{- end -}}
   {{- with .entry.volume }}{{ ", " }}<span class="volume">vol.&nbsp;{{ . }}</span>{{ end -}}
   {{- with .entry.number }}{{ ", " }}<span class="number">no.&nbsp;{{ . }}</span>{{ end -}}
+  {{- with .entry.articleno }}{{ ", " }}<span class="articleno">article no.&nbsp;{{ . }}</span>{{ end -}}
   {{- with .entry.organization }}{{ ", " }}<span class="organization">{{ . }}</span>{{ end -}}
   {{- if index .entry "publisher" -}}
     {{- ". " }}
