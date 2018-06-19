@@ -20,6 +20,7 @@ params:
     fullnames: false
     etalcutoff: 5
     etalkeep: 2
+    abbrevmonths: true
     citefirstnames: false
     citetitlecutoff: 30
 
