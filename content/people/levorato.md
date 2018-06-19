@@ -92,8 +92,8 @@ bibliography:
     - firouzabadi2011learning
     - levorato2011cognitive
     - levorato2011optimal
-    - levorato2011learning2
-    - levorato2011learning1
+    - levorato2012learning
+    - levorato2011learning
     - michelusi2011cognitive
     - levorato2011integrated
     - levorato2011optimization
