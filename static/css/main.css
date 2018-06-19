@@ -279,6 +279,8 @@ ul.bibliography>li:before {
 .bibliography>li .bibentry.inbook .title,
 .bibliography>li .bibentry.incollection .booktitle,
 .bibliography>li .bibentry.article .journal,
+.bibliography>li .bibentry.inproceedings .booktitle,
+.bibliography>li .bibentry.conference .booktitle,
 .bibliography>li .bibentry.proceedings .title,
 .bibliography>li .bibentry.manual .title {
   font-style: italic;
