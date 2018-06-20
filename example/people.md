@@ -39,19 +39,19 @@ badge: panteater-badge.jpg
 # interests. Keep each short and to the point; capitalize only
 # the first word, and do not put a period at the end.
 interests:
-  - Adaptive machine learning in wireless systems
-  - Adversarial machine learning
-  - Automatic problem generation
+- Adaptive machine learning in wireless systems
+- Adversarial machine learning
+- Automatic problem generation
 # A list of acquired degrees, in reversed chronological order,
 # each described by three fields: official degree title, name of
 # the university, and year of graduation.
 education:
-  - degree: M.S. in Computer Science
-    institution: University of California, Irvine.
-    year: 2016
-  - degree: B.S. in Computer and Information Science
-    institution: University of Oregon, U.S.
-    year: 2014
+- degree: M.S. in Computer Science
+  institution: University of California, Irvine.
+  year: 2016
+- degree: B.S. in Computer and Information Science
+  institution: University of Oregon, U.S.
+  year: 2014
 # Optional email address.
 email: panteater@uci.edu
 # Optional links to your personal website (outside of the lab website)
@@ -63,15 +63,15 @@ email: panteater@uci.edu
 # include a short and representative title. URLs must include the
 # protocol part, e.g., 'http://' or 'https://'.
 websites:
-  - url: http://example.org
-  - title: LinkedIn
-    url: https://www.linkedin.com/in/example/
+- url: http://example.org
+- title: LinkedIn
+  url: https://www.linkedin.com/in/example/
 # Optional bibliography to feature at the bottom of the page.
 bibliography:
-  - items:
-    - bibtexkey1
-    - bibtexkey2
-    - bibtexkey3
+- items:
+  - bibtexkey1
+  - bibtexkey2
+  - bibtexkey3
 # Each of the listed identifiers must match a BibTeX key of
 # a publication from your BibTeX file. The corresponding publications
 # appear on the page in the same order they are listed here.
@@ -79,26 +79,26 @@ bibliography:
 # Publications can be grouped into arbitrary sections to your liking.
 # For instance, by year:
 bibliography:
-  - title: 2017
-    items:
-    - bibtexkey1
-    - bibtexkey2
-  - title: 2016
-    items:
-    - bibtexkey3
-    - bibtexkey4
+- title: 2017
+  items:
+  - bibtexkey1
+  - bibtexkey2
+- title: 2016
+  items:
+  - bibtexkey3
+  - bibtexkey4
 # or by kind:
 bibliography:
-  - title: Featured
-    - bibtexkey1
-    - bibtexkey2
-  - title: Journal Articles
-    items:
-    - bibtexkey3
-  - title: Conference Proceedings
-    items:
-    - bibtexkey4
-    - bibtexkey5
+- title: Featured
+  - bibtexkey1
+  - bibtexkey2
+- title: Journal Articles
+  items:
+  - bibtexkey3
+- title: Conference Proceedings
+  items:
+  - bibtexkey4
+  - bibtexkey5
 # or in any other way. If unsure how to categorize, use a single list
 # format, as shown above; you can always revisit this decision later.
 ---

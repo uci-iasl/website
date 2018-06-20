@@ -14,10 +14,10 @@ cover: 'figure1.png'
 # Follows the same formatting and rules as described in the
 # people.md example file.
 bibliography:
-  - items:
-    - bibtexkey1
-    - bibtexkey2
-    - bibtexkey3
+- items:
+  - bibtexkey1
+  - bibtexkey2
+  - bibtexkey3
 ---
 
 The rest of the file is treated as a UTF-8 Markdown document.
