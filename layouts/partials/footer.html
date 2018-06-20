@@ -4,7 +4,12 @@
     <span title="{{ now | dateFormat .Site.Params.datedaytimefmt }}">
       {{- now | dateFormat "2006" -}}
     </span>
-    <a href="/people/">{{ with .Site.Params.copyright }}{{ . }}{{ end }}</a>
+    {{- with .Site.Params.copyright -}}
+      {{- " " -}}
+      {{- with .url }}<a href="{{ . }}">{{ end -}}
+      {{- .title -}}
+      {{- with .url }}</a>{{ end -}}
+    {{- end -}}
   </div>
   <div class="logo">
     <a href="https://www.ics.uci.edu" target="_blank">

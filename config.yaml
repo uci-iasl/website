@@ -8,7 +8,9 @@ blackfriday:
   fractions: false
 
 params:
-  copyright: 'IASL'
+  copyright:
+    title: 'IASL'
+    url: '/people/'
   description: 'Latest updates, results, and publications by the Intelligent and Autonomous Systems Lab at University of California, Irvine'
   datedayfmt: 'Jan 2, 2006'
   datedaytimefmt: 'Jan 2, 2006, 15:04 MST'
