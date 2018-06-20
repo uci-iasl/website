@@ -1,5 +1,28 @@
 references:
 - author:
+  - first: Sanaz
+    last: Moosavi
+    middle: Rahimi
+  - first: Ethiopia
+    last: Nigussie
+  - first: Marco
+    last: Levorato
+  - first: Seppo
+    last: Virtanen
+  - first: Jouni
+    last: Isoaho
+  id: moosavi-nigussie-2018-ant
+  journal: Procedia Computer Science
+  kind: article
+  month: May
+  note: Proceedings of the International Conference on Ambient Systems, Networks and
+    Technologies (ANT)
+  pages: 432–439
+  publisher: Elsevier
+  title: Performance Analysis of End-To-End Security Schemes in Healthcare IoT
+  volume: '130'
+  year: '2018'
+- author:
   - first: Igor
     last: Burago
   - first: Marco
@@ -25,25 +48,6 @@ references:
   kind: article
   title: Adaptive Wireless-Powered Relaying Protocols With Cooperative Jamming for
     Two-Hop Secure Communication
-  year: '2018'
-- author:
-  - first: Sanaz
-    last: Moosavi
-    middle: Rahimi
-  - first: Ethiopia
-    last: Nigussie
-  - first: Marco
-    last: Levorato
-  - first: Seppo
-    last: Virtanen
-  - first: Jouni
-    last: Isoaho
-  id: moosavi-nigussie-2017-access
-  journal: IEEE Access
-  kind: article
-  pages: 428–442
-  title: Low-Latency Approach for Secure ECG Feature Based Cryptographic Key Generation
-  volume: '6'
   year: '2018'
 - author:
   - first: Korosh
@@ -129,6 +133,26 @@ references:
   month: October
   title: 'Driving Behavior Modeling and Estimation for Battery Optimization in Electric
     Vehicles: Work-in-progress'
+  year: '2017'
+- author:
+  - first: Sanaz
+    last: Moosavi
+    middle: Rahimi
+  - first: Ethiopia
+    last: Nigussie
+  - first: Marco
+    last: Levorato
+  - first: Seppo
+    last: Virtanen
+  - first: Jouni
+    last: Isoaho
+  id: moosavi-nigussie-2017-access
+  journal: IEEE Access
+  kind: article
+  month: October
+  pages: 428–442
+  title: Low-Latency Approach for Secure ECG Feature Based Cryptographic Key Generation
+  volume: '6'
   year: '2017'
 - articleno: '174'
   author:

@@ -2,8 +2,8 @@
 bibliography:
 - title: 2018
   items:
+  - moosavi-nigussie-2018-ant
   - lee-hong-2018-iotj
-  - moosavi-nigussie-2017-access
   - vatanparvar-faezi-2018-tsg
   - chowdhery-levorato-2018-fogiot
   - burago-levorato-2018-ita
@@ -11,6 +11,7 @@ bibliography:
   items:
   - burago-callegaro-2017-acssc
   - vatanparvar-faezi-2017-codes
+  - moosavi-nigussie-2017-access
   - azimi-anzanpour-2017-tecs
   - burago-levorato-2017-secon
   - michelusi-levorato-2017-isit
