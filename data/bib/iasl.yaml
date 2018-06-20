@@ -1,5 +1,17 @@
 references:
 - author:
+  - first: Igor
+    last: Burago
+  - first: Marco
+    last: Levorato
+  booktitle: Proceedings of the Information Theory and Applications Workshop (ITA)
+  id: burago-levorato-2018-ita
+  kind: inproceedings
+  location: San Diego, California
+  month: February
+  title: Edge-Assisted On-Sensor Information Selection for Bandwidth-Constrained Systems
+  year: '2018'
+- author:
   - first: K.
     last: Lee
   - first: J.-P.

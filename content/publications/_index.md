@@ -6,6 +6,7 @@ bibliography:
   - moosavi-nigussie-2017-access
   - vatanparvar-faezi-2018-tsg
   - chowdhery-levorato-2018-fogiot
+  - burago-levorato-2018-ita
 - title: 2017
   items:
   - burago-callegaro-2017-acssc

@@ -20,23 +20,23 @@ email: iburago@uci.edu
 bibliography:
   - title: Book Chapter
     items:
-    - chowdhery2018urban
+    - chowdhery-levorato-2018-fogiot
   - title: Journal Articles
     items:
-    - vatanparvar2018extended
-    - burago2015network
+    - vatanparvar-faezi-2018-tsg
+    - burago-levorato-2015-tccn
   - title: Conference Proceedings
     items:
-    - vatanparvar2017driving
-    - burago2017bandwidth
-    - burago2015automated
-    - burago2010automatic
+    - vatanparvar-faezi-2017-codes
+    - burago-levorato-2017-secon
+    - burago-lowd-2015-aisec
+    - burago-shevchenko-2010-rpc
   - title: Selected Presentations
     items:
-    - burago2018edge
-    - burago2017intelligent
-    - burago2017semantic
-    - burago2016parametric
-    - burago2012federating
-    - burago2009automatic
+    - burago-levorato-2018-ita
+    - burago-callegaro-2017-acssc
+    - burago-levorato-2017-ita
+    - burago-levorato-2016-ita
+    - burago-moiseenko-2012-eccwo
+    - burago-shevchenko-2009-zolotov
 ---
