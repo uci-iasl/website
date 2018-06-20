@@ -23,7 +23,7 @@ websites:
     url: https://www.linkedin.com/in/davide-callegaro/
 bibliography:
   - items:
-    - Burago2017IntelligentDF
+    - burago-callegaro-2017-acssc
 ---
 
 I obtained my Bachelor and Master degree in University of Padova, Italy, in Computer Engineering.
