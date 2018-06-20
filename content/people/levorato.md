@@ -200,6 +200,7 @@ In 2016, he received the UC Hellman Foundation Award for his research on Smart C
 # Media and Press
 
 - **PC Magazine:** S.C. Stuart, [Inside the DARPA's Hackfest at the NASA Research Par](https://www.pcmag.com/news/357685/inside-darpas-hackfest-at-nasa-research-park). December 2017.
+- **Armed with Science:** Yolanda R. Arrington, [DARPA Puts Techies to the Test at Bay Area Hackfest](http://science.dodlive.mil/2017/11/22/darpa-puts-techies-to-the-test-at-bay-area-hackfest/). *The Official US Defense Department Science Blog*. November 2017.
 
 
 # Students and Visitors
