@@ -66,20 +66,30 @@ The former will be featured on your personal page itself, the latter
 (if present) will be used instead of the former on the People page.
 (See also [`example/people.md`][personal-template].)
 
-3. A BibTeX file `bib/‹id›.bib` listing all the publications you have
-(co)authored within the lab and under Prof. Levorato’s supervision.
-The items in this file will be used to populate the lab-wide
-bibliography shown in the Publications page.
+3. BibTeX files in the `static/bib` listing the publications available
+for referencing in bibliographies across the website.
+Publications you have (co)authored within the lab and under Prof.
+Levorato’s supervision must go to the `static/bib/iasl.bib` file, and
+should be included into the lab-wide bibliography on the Publications
+page, which is defined by the `content/publications/_index.md` file.
+Publications you have done in the past or since joining the lab but
+outside of it and not under Prof. Levorato’s supervision, must to to
+the `static/bib/‹id›.bib` file, and should be included into
+bibliographies on your personal page or relevant project pages.
 
-4. A BibTeX file named `bib/‹id›-other.bib` listing the publications you
-have done in the past or since joining the lab but outside of it and
-not under Prof. Levorato’s supervision.
-Only the items you want to show off on your personal page or cite from
-relevant project pages, are necessary; these will not go to the
-lab-wide bibliography.
-
-In the above filenames, replace `‹id›` with your UCI email address
-without the `@uci.edu` domain part.
+In the above filenames, `‹id›` stands for your personal page id.
+The id is used as a part of the URL of your personal page on the
+website, e.g., `https://iasl.ics.uci.edu/people/panteater/`.
+A good default for the id is your UCI email address without the
+`@uci.edu` domain part, but, if you do not like that to be your id,
+you can use a different one of your liking.
+For the sake of consistency, please prefer an id in the form of
+`flast`, `fmlast`, `last`, `firstlast`, or `firstmlast`, where `first`
+and `last` stand for your first and last names, respectively, and `f`
+and `m` stand for the first letters of your first and middle names,
+respectively, all in lowercase.
+If none of that works for you, something else is fine, too, but please
+keep it more or less formal and do not make it too short or too long.
 
 [personal-template]: https://raw.githubusercontent.com/uci-iasl/website/master/example/people.md
 
@@ -124,8 +134,8 @@ keep the page `http://localhost:1313/` page open in browser.
 Whenever any of the files is changed, the website is automatically
 rebuilt and updated in that browser window.
 
-To make the automatically generated bibliographies work, install
-the following Python packages:
+To see the changes in bibliography information reflected on the
+generated pages, first install the following Python packages:
 
     $ for p in bibtexparser latexcodec titlecase pyyaml; do pip install $p; done
 
@@ -133,5 +143,5 @@ and then run the command
 
     $ scripts/mkbibdata
 
-from the root directory after you add or update BibTeX files in the
-`bib` subdirectory.
+from the root directory whenever BibTeX files in the `static/bib`
+directory are modified.
