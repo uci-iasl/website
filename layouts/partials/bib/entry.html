@@ -15,7 +15,7 @@
     </span>{{ ", " -}}
     {{- if gt (len .entry.editor) 1 }}{{ "Eds" }}{{ else }}{{ "Ed" }}{{ end }}{{ "., " -}}
   {{- end -}}
-  {{- with .entry.title }}<span class="title">{{ . }}</span>{{ end -}}
+  {{- with .entry.title }}{{ partial "bib/title.html" $.entry }}{{ end -}}
   {{- with .entry.edition }}{{ ", " }}<span class="edition">{{ humanize . }}&nbsp;ed.</span>{{ end -}}
   {{- with .entry.series }}{{ ", " }}<span class="series">ser.&nbsp;{{ . }}</span>{{ end -}}
   {{- if and $hasauthor $haseditor -}}
@@ -44,7 +44,7 @@
     </span>{{ ", " -}}
     {{- if gt (len .entry.editor) 1 }}{{ "Eds" }}{{ else }}{{ "Ed" }}{{ end }}{{ "., " -}}
   {{- end -}}
-  {{- with .entry.title }}<span class="title">{{ . }}</span>{{ end -}}
+  {{- with .entry.title }}{{ partial "bib/title.html" $.entry }}{{ end -}}
   {{- with .entry.edition }}{{ ", " }}<span class="edition">{{ humanize . }}&nbsp;ed.</span>{{ end -}}
   {{- with .entry.series }}{{ ", " }}<span class="series">ser.&nbsp;{{ . }}</span>{{ end -}}
   {{- ". " -}}
@@ -62,7 +62,7 @@
       {{- partial "bib/names.html" (dict "names" . "params" $.params) -}}
     </span>{{ ", " -}}
   {{- end -}}
-  {{- with .entry.title }}<span class="title">{{ . }}</span>{{ end -}}
+  {{- with .entry.title }}{{ partial "bib/title.html" $.entry }}{{ end -}}
   {{- with .entry.booktitle }}{{ ", in "}}<span class="booktitle">{{ . }}</span>{{ end -}}
   {{- with .entry.edition }}{{ ", " }}<span class="edition">{{ humanize . }}&nbsp;ed.</span>{{ end -}}
   {{- with .entry.series }}{{ ", " }}<span class="series">ser.&nbsp;{{ . }}</span>{{ end -}}
@@ -87,7 +87,7 @@
       {{- partial "bib/names.html" (dict "names" . "params" $.params) -}}
     </span>{{ ", " -}}
   {{- end -}}
-  {{- with .entry.title }}<span class="title">{{ . }}</span>{{ end -}}
+  {{- with .entry.title }}{{ partial "bib/title.html" $.entry }}{{ end -}}
   {{- with .entry.journal }}{{ ", " }}<span class="journal">{{ . }}</span>{{ end -}}
   {{- with .entry.volume }}{{ ", " }}<span class="volume">vol.&nbsp;{{ . }}</span>{{ end -}}
   {{- with .entry.number }}{{ ", " }}<span class="number">no.&nbsp;{{ . }}</span>{{ end -}}
@@ -101,7 +101,7 @@
       {{- partial "bib/names.html" (dict "names" . "params" $.params) -}}
     </span>{{ ", " -}}
   {{- end -}}
-  {{- with .entry.title }}<span class="title">{{ . }}</span>{{ end -}}
+  {{- with .entry.title }}{{ partial "bib/title.html" $.entry }}{{ end -}}
   {{- with .entry.booktitle -}}
     {{- ", "}}{{- with index $.entry "intype" | default "in" }}{{ . }}{{ " " }}{{ end -}}
     <span class="booktitle">{{ . }}</span>
@@ -136,7 +136,7 @@
     </span>{{ ", " -}}
     {{- if gt (len .) 1 }}{{ "Eds." }}{{ else }}{{ "Ed." }}{{ end -}}
   {{- end -}}
-  {{- with .entry.title }}<span class="title">{{ . }}</span>{{ end -}}
+  {{- with .entry.title }}{{ partial "bib/title.html" $.entry }}{{ end -}}
   {{- with .entry.series }}{{ ", " }}<span class="series">ser.&nbsp;{{ . }}</span>{{ end -}}
   {{- with .entry.volume }}{{ ", " }}<span class="volume">vol.&nbsp;{{ . }}</span>{{ end -}}
   {{- with .entry.number }}{{ ", " }}<span class="number">no.&nbsp;{{ . }}</span>{{ end -}}
@@ -157,7 +157,7 @@
       {{- partial "bib/names.html" (dict "names" . "params" $.params) -}}
     </span>{{ ", " -}}
   {{- end -}}
-  {{- with .entry.title }}<span class="title">{{ . }}</span>{{ end -}}
+  {{- with .entry.title }}{{ partial "bib/title.html" $.entry }}{{ end -}}
   {{- with .entry.howpublished }}{{ ", " }}<span class="howpublished">{{ . }}</span>{{ end -}}
   {{- with .entry.institution }}{{ ", " }}<span class="institution">{{ . }}</span>{{ end -}}
   {{- with .entry.address }}{{ ", " }}<span class="address">{{ . }}</span>{{ end -}}
@@ -171,7 +171,7 @@
       {{- partial "bib/names.html" (dict "names" . "params" $.params) -}}
     </span>{{ ", " -}}
   {{- end -}}
-  {{- with .entry.title }}<span class="title">{{ . }}</span>{{ end -}}
+  {{- with .entry.title }}{{ partial "bib/title.html" $.entry }}{{ end -}}
   {{- ", " }}{{- if $isphd }}Ph.D. dissertation{{ else }}Master’s thesis{{ end -}}
   {{- with .entry.school }}{{ ", " }}<span class="school">{{ . }}</span>{{ end -}}
   {{- with .entry.address }}{{ ", " }}<span class="address">{{ . }}</span>{{ end -}}
@@ -183,11 +183,9 @@
       {{- partial "bib/names.html" (dict "names" . "params" $.params) -}}
     </span>{{ ", " -}}
   {{- end -}}
+  {{- with .entry.title }}{{ partial "bib/title.html" $.entry }}{{ end -}}
   {{- if eq .entry.kind "manual" -}}
-    {{- with .entry.title }}<span class="title">{{ . }}</span>{{ end -}}
     {{- with .entry.edition }}{{ ", " }}<span class="edition">{{ humanize . }}&nbsp;ed.</span>{{ end -}}
-  {{- else -}}
-    {{- with .entry.title }}<span class="title">{{ . }}</span>{{ end -}}
   {{- end -}}
   {{- with .entry.howpublished }}{{ ", " }}<span class="howpublished">{{ . }}</span>{{ end -}}
   {{- with .entry.organization }}{{ ", " }}<span class="organization">{{ . }}</span>{{ end -}}
@@ -203,7 +201,7 @@
       {{- partial "bib/names.html" (dict "names" . "params" $.params) -}}
     </span>{{ ", " -}}
   {{- end -}}
-  {{- with .entry.title }}<span class="title">{{ . }}</span>{{ end -}}
+  {{- with .entry.title }}{{ partial "bib/title.html" $.entry }}{{ end -}}
   {{- if index .entry "year" }}{{ ", " }}{{ partial "bib/date.html" (dict "entry" .entry "params" $.params) }}{{ end -}}
 
 {{- end -}}
@@ -215,9 +213,6 @@
     {{- ", " }}<span class="note">unpublished</span>
   {{- end -}}
 {{- end -}}
-{{- with .entry.url -}}
-  {{- ". [Online]. Available: " -}}
-  <span class="url"><a href="{{ . }}" target="_blank">{{ . }}</a></span>
-{{- end -}}
+
 {{- "." -}}
 </section></li>
