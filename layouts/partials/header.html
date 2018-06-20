@@ -9,7 +9,9 @@
   {{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
   <title>
     {{- if not .IsHome -}}
-      {{- if and (eq .Section "people") (eq .Kind "page") -}}
+      {{- if eq .Kind "section" -}}
+        {{- .Section | humanize | title -}}
+      {{- else if and (eq .Kind "page") (eq .Section "people") -}}
         {{- .Params.name -}}
       {{- else -}}
         {{- .Title -}}
