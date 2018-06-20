@@ -5,7 +5,6 @@ bibliography:
   - shaikh-baidya-2018-cpcuav
   - moosavi-nigussie-2018-ant
   - baidya-chen-2018-infocom
-  - burago-levorato-2018-ita
   - lee-hong-2018-iotj
   - baidya-levorato-2018-tccn
   - vatanparvar-faezi-2018-tsg
