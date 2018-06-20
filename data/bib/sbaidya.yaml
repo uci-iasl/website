@@ -1,0 +1,33 @@
+references:
+- address: Sydney, Australia
+  author:
+  - first: Sabur
+    last: Baidya
+  - first: Ravi
+    last: Prakash
+  booktitle: Proceedings of the IEEE International Conference on Communications (ICC)
+  id: baidya-prakash-2014-icc
+  kind: inproceedings
+  month: June
+  pages: 3222–3227
+  title: Improving the Performance of Multipath TCP Over Heterogeneous Paths Using
+    Slow Path Adaptation
+  year: '2014'
+- address: Richardson, Texas
+  author:
+  - first: Sabur
+    last: Baidya
+  - first: Pramod
+    last: Shirol
+  - first: Abhishek
+    last: Basu
+  - first: Ravi
+    last: Prakash
+  id: baidya-shirol-2013-utdallas
+  institution: Department of Computer Science, University of Texas at Dallas
+  kind: techreport
+  month: September
+  number: UTDCS-16-13
+  title: Employing WiFi Direct to Build a Wireless Network Over Both 2.4 GHz and 5.8
+    GHz Bands
+  year: '2013'
