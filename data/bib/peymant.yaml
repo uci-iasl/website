@@ -1,0 +1,34 @@
+references:
+- author:
+  - first: Mohammad
+    last: Mili
+    middle: Robat
+  - first: Peyman
+    last: Tehrani
+  - first: Mehdi
+    last: Bennis
+  id: mili-tehrani-2016-wcl
+  journal: IEEE Wireless Communications Letters
+  kind: article
+  month: December
+  number: '6'
+  pages: 668–671
+  title: Energy-Efficient Power Allocation in OFDMA D2D Communication by Multiobjective
+    Optimization
+  volume: '5'
+  year: '2016'
+- address: Kuala Lumpur, Malaysia
+  author:
+  - first: Peyman
+    last: Tehrani
+  - first: Farshad
+    last: Lahouti
+  - first: Michele
+    last: Zorzi
+  booktitle: Proceedings of the IEEE International Conference on Communications (ICC)
+  id: tehrani-lahouti-2016-icc
+  kind: inproceedings
+  month: May
+  title: Resource Allocation in OFDMA Networks With Half-Duplex and Imperfect Full-Duplex
+    Users
+  year: '2016'
