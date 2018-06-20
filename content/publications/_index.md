@@ -127,3 +127,5 @@ bibliography:
   - casari-levorato-2005-wpmc
   - rossi-casari-2005-wcnc
 ---
+
+<a href="/bib/iasl.bib" download="iasl-{{< dateiso >}}.bib">All references in BibTeX</a>
