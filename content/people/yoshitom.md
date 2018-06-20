@@ -22,8 +22,8 @@ websites:
     url: http://labusers.net/~ymatsubara
 bibliography:
   - items:
-    - yoshitom-icmla2016
-    - yoshitom-ists2012
+    - matsubara-nishimura-2016-icmla
+    - matsubara-samura-2012-ists
 ---
 
 He is a Ph.D. student in Computer Science at University of California, Irvine (UCI), working on Machine Learning and its application with Profs. Sameer Singh and Marco Levorato. Before UCI, he obtained his Master and Bachelor degrees in University of Hyogo and National Institute of Technology, Akashi College, respectively. His Master and Bachelor thesis topics were on behavioral biometrics such as keystroke dynamics and flick authentication. He also interened and worked as a data scientist at leading IT companies in Japan, and his proposed machine learnng models are used for their products of image recommender systems and online advertisement since the models outperformed their existing ones at that time.

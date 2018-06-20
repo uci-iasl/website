@@ -1,0 +1,39 @@
+references:
+- address: Anaheim, California
+  author:
+  - first: Yoshitomo
+    last: Matsubara
+  - first: Haruhiko
+    last: Nishimura
+  - first: Toshiharu
+    last: Samura
+  - first: Hiroyuki
+    last: Yoshimoto
+  - first: Ryohei
+    last: Tanimoto
+  booktitle: Proceedings of the IEEE International Conference on Machine Learning
+    and Applications (ICMLA)
+  id: matsubara-nishimura-2016-icmla
+  kind: inproceedings
+  month: December
+  pages: 752–757
+  title: Screen Unlocking by Spontaneous Flick Reactions With One-Class Classification
+    Approaches
+  year: '2016'
+- address: Bangkok, Thailand
+  author:
+  - first: Yoshitomo
+    last: Matsubara
+  - first: Toshiharu
+    last: Samura
+  - first: Haruhiko
+    last: Nishimura
+  booktitle: Proceedings of the International Symposium on Technology for Sustainability
+    (ISTS)
+  id: matsubara-samura-2012-ists
+  kind: inproceedings
+  month: November
+  pages: 103–106
+  title: Robustness of Keystroke Dynamics Against Changing in Input and Recognition
+    Conditions for Japanese Atypical Text
+  year: '2012'

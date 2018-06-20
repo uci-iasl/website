@@ -1,11 +1,11 @@
 <ul class="bibliography">
 {{- range $id := $.items }}
-  {{- $.Scratch.Set "bibitemfound" false }}
+  {{- $.Page.Scratch.Set "bibitemfound" false }}
   {{- range $bib := $.Site.Data.bib }}
-    {{- if not ($.Scratch.Get "bibitemfound") }}
-      {{- range $entry := where $bib.entries "id" "==" $id }}
-        {{- if not ($.Scratch.Get "bibitemfound") }}
-          {{- $.Scratch.Set "bibitemfound" true }}
+    {{- if not ($.Page.Scratch.Get "bibitemfound") }}
+      {{- range $entry := where $bib.references "id" "==" $id }}
+        {{- if not ($.Page.Scratch.Get "bibitemfound") }}
+          {{- $.Page.Scratch.Set "bibitemfound" true }}
           {{ partial "bib/entry.html" (dict "entry" $entry "params" $.Site.Params.bibliography) }}
         {{- end }}
       {{- end }}

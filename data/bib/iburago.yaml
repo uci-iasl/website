@@ -1,0 +1,92 @@
+references:
+- author:
+  - first: Igor
+    last: Burago
+  - first: Marco
+    last: Levorato
+  booktitle: Information Theory and Applications Workshop (ITA)
+  id: burago-levorato-2016-ita
+  intype: presented at the
+  kind: inproceedings
+  location: San Diego, California
+  month: February
+  title: Parametric Identification via Likelihood Maximization in Wireless Networks
+  year: '2016'
+- author:
+  - first: Igor
+    last: Burago
+  - first: Daniel
+    last: Lowd
+  booktitle: Proceedings of the ACM Workshop on Artificial Intelligence and Security
+    (AISec)
+  id: burago-lowd-2015-aisec
+  kind: inproceedings
+  month: October
+  pages: 69–80
+  title: Automated Attacks on Compression-Based Classifiers
+  year: '2015'
+- address: Yeosu, Korea
+  author:
+  - first: Igor
+    last: Burago
+  - first: Georgy
+    last: Moiseenko
+  - first: Olga
+    last: Vasik
+  - first: Igor
+    last: Shevchenko
+  booktitle: Proceedings of the Second International Symposium “Effects of Climate
+    Change on the Worlds Oceans”
+  id: burago-moiseenko-2012-eccwo
+  kind: inproceedings
+  month: May
+  title: Federating Metadata Collections on Monitoring of the North Pacific
+  year: '2012'
+- address: Portland, Oregon
+  author:
+  - first: Igor
+    last: Burago
+  - first: Bernard
+    last: Megrey
+    middle: A.
+  - first: Georgy
+    last: Moiseenko
+  - first: Olga
+    last: Vasik
+  - first: Tatiana
+    last: Semenova
+  - first: Igor
+    last: Shevchenko
+  booktitle: Proceedings of the PICES Annual Meeting “North Pacific Ecosystems Today,
+    and Challenges in Understanding and Forecasting Change”
+  id: burago-megrey-2010-pices
+  kind: inproceedings
+  month: October
+  title: Using the PICES Rented Server
+  year: '2010'
+- author:
+  - first: Igor
+    last: Burago
+  - first: Igor
+    last: Shevchenko
+  booktitle: Proceedings of the First Russia and Pacific Conference on Computer Technology
+    and Applications
+  id: burago-shevchenko-2010-rpc
+  kind: inproceedings
+  month: September
+  title: Automatic Generation of Enumeration Problems
+  year: '2010'
+- address: Khabarovsk, Russia
+  author:
+  - first: Igor
+    last: Burago
+  - first: Igor
+    last: Shevchenko
+  booktitle: Proceedings of the Academician E. V. Zolotov Far Eastern Mathematical
+    School-Seminar “Fundamental Problems of Mathematics and Information Sciences”
+  id: burago-shevchenko-2009-zolotov
+  kind: inproceedings
+  month: June
+  note: in Russian
+  title: Automatic Generation of Problems Using the Method of Constraint Propagation
+  year: '2009'

@@ -27,21 +27,21 @@ websites:
 bibliography:
   - title: Journal Articles
     items:
-    - Sanaz1
-    - Sanaz3
-    - Sanaz4
-    - Sanaz5
+    - moosavi-nigussie-2017-access
+    - ambrosin-anzanpour-2016-micro
+    - moosavi-gia-2016-fgcs
+    - moosavi-hakkala-2014-ijcte
   - title: Conference Proceedings
     items:
-    - Sanaz2
-    - Sanaz6
-    - Sanaz7
-    - Sanaz8
-    - Sanaz9
-    - Sanaz10
-    - Sanaz11
-    - Sanaz12
-    - Sanaz13
+    - moosavi-nigussie-2018-ant
+    - moosavi-nigussie-2017-ccnc
+    - vikstrom-moosavi-2016-wis
+    - moosavi-gia-2015-cit
+    - moosavi-gia-2015-ant
+    - moosavi-rahmani-2014-mobihealth
+    - moosavi-nigussie-2014-ant
+    - moosavi-rahmani-2013-euromicro
+    - moosavi-chang-2012-isocc
 ---
 
 I receieved my M.Sc. (Tech.) degree is in Information Technology, from the Department of Information Technology and Communication Systems, University of Turku, Finland in 2013. My major was on “Networked Systems Security” and minor was on “Cryptography”.

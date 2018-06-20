@@ -1,0 +1,102 @@
+references:
+- author:
+  - first: Delaram
+    last: Amiri
+  - first: Mohamed
+    last: El-Sharkawy
+  - first: Brian
+    last: King
+  booktitle: Proceedings of the International Conference on Advances in Computing,
+    Electronics and Electrical Technology (CEET)
+  id: amiri-elsharkawy-2016-ceet
+  kind: inproceedings
+  month: November
+  pages: 88–91
+  title: Fast Bilateral Filter Technique for 3D-HEVC Standard
+  year: '2016'
+- author:
+  - first: Delaram
+    last: Amiri
+  - first: Mohamed
+    last: El-Sharkawy
+  - first: Brian
+    last: King
+  booktitle: Proceedings of the International Conference on Computational Science
+    and Computational Intelligence (CSCI)
+  id: amiri-elsharkawy-2015-csci
+  kind: inproceedings
+  month: December
+  pages: 531–534
+  title: Adaptive Loop Filter Technique for 3D-HEVC Standard
+  year: '2015'
+- address: Indianapolis, Indiana
+  author:
+  - first: Delaram
+    last: Amiri
+  id: amiri-2015-iupui
+  kind: mastersthesis
+  month: December
+  school: Indiana University–Purdue University Indianapolis
+  title: Bilateral and Adaptive Loop Filter Implementations in 3D-High Efficiency
+    Video Coding Standard
+  year: '2015'
+- author:
+  - first: Mahmoud
+    last: Keshavarzi
+  - first: Delaram
+    last: Amiri
+  - first: Amir
+    last: Pezeshk
+    middle: Mansour
+  - first: Forouhar
+    last: Farzaneh
+  id: keshavarzi-amiri-2014-tfeccs
+  journal: IEICE Transactions on Fundamentals of Electronics, Communications and Computer
+    Sciences
+  kind: article
+  month: May
+  number: '5'
+  pages: 1136–1139
+  title: A Novel Method of Deinterleaving Pulse Repetition Interval Modulated Sparse
+    Sequences in Noisy Environments
+  volume: '97'
+  year: '2014'
+- author:
+  - first: Mahmoud
+    last: Keshavarzi
+  - first: Amir
+    last: Pezeshk
+    middle: Mansour
+  - first: Forouhar
+    last: Farzaneh
+  - first: Delaram
+    last: Amiri
+  id: keshavarzi-pezeshk-2013-tfeccs
+  journal: IEICE Transactions on Fundamentals of Electronics, Communications and Computer
+    Sciences
+  kind: article
+  month: November
+  number: '11'
+  pages: 2306–2310
+  title: A Robust Method for Recognition of Complicated Pulse Repetition Interval
+    Modulations
+  volume: '96'
+  year: '2013'
+- author:
+  - first: Delaram
+    last: Amiri
+  - first: Mahmoud
+    last: Keshavarzi
+  - first: Kourosh
+    last: Amiri
+  id: amiri-keshavarzi-2013-asl
+  journal: Advanced Science Letters
+  kind: article
+  month: August
+  number: '8'
+  pages: 2262–2265
+  publisher: American Scientific Publishers
+  title: A Simple Method for Pulse Repetition Interval Estimation and Tracking Radar
+    Pulse Trains With Complex Pulse Repetition Interval Modulations
+  volume: '19'
+  year: '2013'

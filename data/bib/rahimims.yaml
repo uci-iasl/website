@@ -1,0 +1,285 @@
+references:
+- address: Las Vegas, Nevada
+  author:
+  - first: Sanaz
+    last: Moosavi
+    middle: Rahimi
+  - first: Ethiopia
+    last: Nigussie
+  - first: Seppo
+    last: Virtanen
+  - first: Jouni
+    last: Isoaho
+  booktitle: Proceedings of the IEEE Annual Consumer Communications Networking Conference
+    (CCNC)
+  id: moosavi-nigussie-2017-ccnc
+  kind: inproceedings
+  month: January
+  pages: 1024–1031
+  title: Cryptographic Key Generation Using ECG Signal
+  year: '2017'
+- author:
+  - first: Moreno
+    last: Ambrosin
+  - first: Arman
+    last: Anzanpour
+  - first: Mauro
+    last: Conti
+  - first: Tooska
+    last: Dargahi
+  - first: Sanaz
+    last: Moosavi
+    middle: Rahimi
+  - first: Amir
+    last: Rahmani
+    middle: M.
+  - first: Pasi
+    last: Liljeberg
+  id: ambrosin-anzanpour-2016-micro
+  journal: IEEE Micro
+  kind: article
+  month: November
+  number: '6'
+  pages: 25–35
+  title: On the Feasibility of Attribute-Based Encryption on Internet of Things Devices
+  volume: '36'
+  year: '2016'
+- author:
+  - first: Sanaz
+    last: Moosavi
+    middle: Rahimi
+  - first: Tuan
+    last: Gia
+    middle: Nguyen
+  - first: Ethiopia
+    last: Nigussie
+  - first: Amir
+    last: Rahmani
+    middle: M.
+  - first: Seppo
+    last: Virtanen
+  - first: Hannu
+    last: Tenhunen
+  - first: Jouni
+    last: Isoaho
+  id: moosavi-gia-2016-fgcs
+  journal: Future Generation Computer Systems
+  kind: article
+  month: November
+  pages: 108–124
+  publisher: Elsevier
+  title: End-To-End Security Scheme for Mobility Enabled Healthcare Internet of Things
+  volume: '64'
+  year: '2016'
+- author:
+  - first: Antti
+    last: Vikström
+  - first: Sanaz
+    last: Moosavi
+    middle: Rahimi
+  - first: Hans
+    last: Moen
+  - first: Tapio
+    last: Salakoski
+  - first: Sanna
+    last: Salanterä
+  booktitle: Building Sustainable Health Ecosystems
+  editor:
+  - first: Hongxiu
+    last: Li
+  - first: Pirkko
+    last: Nykänen
+  - first: Reima
+    last: Suomi
+  - first: Nilmini
+    last: Wickramasinghe
+  - first: Gunilla
+    last: Widén
+  - first: Ming
+    last: Zhan
+  id: vikstrom-moosavi-2016-wis
+  kind: inproceedings
+  note: Proceedings of the International Conference on Well-Being in the Information
+    Society (WIS)
+  pages: 47–56
+  publisher: Springer
+  series: Communications in Computer and Information Science
+  title: Factors Affecting the Availability of Electronic Patient Records for Secondary
+    Purposes – A Case Study
+  volume: '636'
+  year: '2016'
+- address: Liverpool, U.K.
+  author:
+  - first: Sanaz
+    last: Moosavi
+    middle: Rahimi
+  - first: Tuan
+    last: Gia
+    middle: Nguyen
+  - first: Ethiopia
+    last: Nigussie
+  - first: Amir
+    last: Rahmani
+    middle: M.
+  - first: Seppo
+    last: Virtanen
+  - first: Hannu
+    last: Tenhunen
+  - first: Jouni
+    last: Isoaho
+  booktitle: Proceedings of the IEEE International Conference on Computer and Information
+    Technology (CIT)
+  id: moosavi-gia-2015-cit
+  kind: inproceedings
+  month: October
+  pages: 581–588
+  title: Session Resumption-Based End-to-End Security for Healthcare Internet-of-Things
+  year: '2015'
+- author:
+  - first: Sanaz
+    last: Moosavi
+    middle: Rahimi
+  - first: Tuan
+    last: Gia
+    middle: Nguyen
+  - first: Amir
+    last: Rahmani
+    middle: M.
+  - first: Ethiopia
+    last: Nigussie
+  - first: Seppo
+    last: Virtanen
+  - first: Jouni
+    last: Isoaho
+  - first: Hannu
+    last: Tenhunen
+  id: moosavi-gia-2015-ant
+  journal: Procedia Computer Science
+  kind: article
+  month: June
+  note: Proceedings of the International Conference on Ambient Systems, Networks and
+    Technologies (ANT)
+  pages: 452–459
+  publisher: Elsevier
+  title: 'SEA: A Secure and Efficient Authentication and Authorization Architecture
+    for IoT-Based Healthcare Using Smart Gateways'
+  volume: '52'
+  year: '2015'
+- address: Athens, Greece
+  author:
+  - last: Anurag
+  - first: Sanaz
+    last: Moosavi
+    middle: Rahimi
+  - first: Amir
+    last: Rahmani
+    middle: M.
+  - first: Tomi
+    last: Westerlund
+  - first: Geng
+    last: Yang
+  - first: Pasi
+    last: Liljeberg
+  - first: Hannu
+    last: Tenhunen
+  booktitle: Proceedings of the International Conference on Wireless Mobile Communication
+    and Healthcare (MOBIHEALTH)
+  id: moosavi-rahmani-2014-mobihealth
+  kind: inproceedings
+  month: November
+  pages: 275–278
+  title: 'Pervasive Health Monitoring Based on Internet of Things: Two Case Studies'
+  year: '2014'
+- author:
+  - first: Sanaz
+    last: Moosavi
+    middle: Rahimi
+  - first: Ethiopia
+    last: Nigussie
+  - first: Seppo
+    last: Virtanen
+  - first: Jouni
+    last: Isoaho
+  id: moosavi-nigussie-2014-ant
+  journal: Procedia Computer Science
+  kind: article
+  month: June
+  note: Proceedings of the International Conference on Ambient Systems, Networks and
+    Technologies (ANT)
+  pages: 198–206
+  publisher: Elsevier
+  title: An Elliptic Curve-Based Mutual Authentication Scheme for RFID Implant Systems
+  volume: '32'
+  year: '2014'
+- author:
+  - first: Sanaz
+    last: Moosavi
+    middle: Rahimi
+  - first: Antti
+    last: Hakkala
+  - first: Jouni
+    last: Isoaho
+  - first: Seppo
+    last: Virtanen
+  - first: Jouni
+    last: Isoaho
+  id: moosavi-hakkala-2014-ijcte
+  journal: International Journal of Computer Theory and Engineering (IJCTE)
+  kind: article
+  month: April
+  number: '2'
+  pages: 177–188
+  title: Specification Analysis for Secure RFID Implant Systems
+  volume: '6'
+  year: '2014'
+- address: Belfast, U.K.
+  author:
+  - first: Sanaz
+    last: Moosavi
+    middle: Rahimi
+  - first: Amir
+    last: Rahmani
+    middle: M.
+  - first: Pasi
+    last: Liljeberg
+  - first: Juha
+    last: Plosila
+  - first: Hannu
+    last: Tenhunen
+  booktitle: Proceedings of the Euromicro International Conference on Parallel, Distributed,
+    and Network-Based Processing
+  id: moosavi-rahmani-2013-euromicro
+  kind: inproceedings
+  month: February
+  pages: 294–301
+  title: Enhancing Performance of 3D Interconnection Networks Using Efficient Multicast
+    Communication Protocol
+  year: '2013'
+- address: Jeju Island, South Korea
+  author:
+  - first: Sanaz
+    last: Moosavi
+    middle: Rahimi
+  - first: Chia-Yuan
+    last: Chang
+  - first: Amir
+    last: Rahmani
+    middle: M.
+  - first: Juha
+    last: Plosila
+  - first: Ka
+    last: Man
+    middle: Lok
+  - first: Taikyeong
+    last: Jeong
+    middle: T.
+  - first: Eng
+    last: Lim
+    middle: Gee
+  booktitle: International SoC Design Conference (ISOCC)
+  id: moosavi-chang-2012-isocc
+  kind: inproceedings
+  month: November
+  pages: 277–280
+  title: An Efficient History-Based Routing Algorithm for Interconnection Networks
+  year: '2012'
