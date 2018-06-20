@@ -274,7 +274,8 @@ ul.bibliography>li:before {
 }
 .bibliography>li .bibentry:target { background-color: var(--highlighted-bg-color); }
 
-.bibliography>li .bibentry .title { font-weight: bold; }
+.bibliography>li .bibentry .title {}
+
 .bibliography>li .bibentry.book .title,
 .bibliography>li .bibentry.inbook .title,
 .bibliography>li .bibentry.incollection .booktitle,
