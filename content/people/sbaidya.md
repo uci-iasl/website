@@ -6,31 +6,31 @@ yearjoined: 2014
 portrait: sbaidya.jpg
 badge: sbaidya-badge.jpg
 interests:
-  - Coexistence of heterogeneous wireless networks
-  - Internet of things, smart cities
-  - Software defined networking, network function virtualization
-  - Edge/fog computing
-  - Unmanned autonomous systems
-  - Adaptive video streaming
+- Coexistence of heterogeneous wireless networks
+- Internet of things, smart cities
+- Software defined networking, network function virtualization
+- Edge/fog computing
+- Unmanned autonomous systems
+- Adaptive video streaming
 education:
-  - degree: M.S. in Computer Science
-    institution: University of Texas, U.S.
-    year: 2013
+- degree: M.S. in Computer Science
+  institution: University of Texas, U.S.
+  year: 2013
 email: sbaidya@uci.edu
 websites:
-  - title: Personal webpage
-    url: http://www.ics.uci.edu/~sbaidya/
+- title: Personal webpage
+  url: http://www.ics.uci.edu/~sbaidya/
 bibliography:
-  - items:
-    - baidya-levorato-2018-tccn
-    - shaikh-baidya-2018-cpcuav
-    - baidya-chen-2018-infocom
-    - chowdhery-levorato-2018-fogiot
-    - baidya-levorato-2017-infocom
-    - baidya-levorato-2017-icnc
-    - baidya-levorato-2016-globecom
-    - baidya-prakash-2014-icc
-    - baidya-shirol-2013-utdallas
+- items:
+  - baidya-levorato-2018-tccn
+  - shaikh-baidya-2018-cpcuav
+  - baidya-chen-2018-infocom
+  - chowdhery-levorato-2018-fogiot
+  - baidya-levorato-2017-infocom
+  - baidya-levorato-2017-icnc
+  - baidya-levorato-2016-globecom
+  - baidya-prakash-2014-icc
+  - baidya-shirol-2013-utdallas
 ---
 
 I am a PhD candidate in the Computer Science department at **UC Irvine**, where I am supervised

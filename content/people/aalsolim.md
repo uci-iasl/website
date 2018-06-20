@@ -6,16 +6,16 @@ yearjoined: 2017
 portrait: aalsolim.jpg
 badge: aalsolim-badge.jpg
 interests:
-  - Vehicular Networks
-  - Connected-Cars/Autonomous Vehicles networking applications
-  - Infrastructure support of smart cities and Intelligent Transportation Systems (ITS)
+- Vehicular Networks
+- Connected-Cars/Autonomous Vehicles networking applications
+- Infrastructure support of smart cities and Intelligent Transportation Systems (ITS)
 education:
-  - degree: M.S. in Network Engineering and Security
-    institution: DePaul University, Illinois, U.S.
-    year: 2014
-  - degree: B.S. in Information Systems
-    institution: King Saud University, Saudi Arabia.
-    year: 2012
+- degree: M.S. in Network Engineering and Security
+  institution: DePaul University, Illinois, U.S.
+  year: 2014
+- degree: B.S. in Information Systems
+  institution: King Saud University, Saudi Arabia.
+  year: 2012
 email: aalsolim@uci.edu
 ---
 

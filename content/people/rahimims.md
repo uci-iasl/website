@@ -6,42 +6,42 @@ yearjoined: 2016
 portrait: rahimims.jpg
 badge: rahimims-badge.jpg
 interests:
-  - Lightweight cryptographic techniques
-  - Information/Data security
-  - Healthcare IoT
-  - Security and privacy issues in healthcare IoT
-  - IoT key management
+- Lightweight cryptographic techniques
+- Information/Data security
+- Healthcare IoT
+- Security and privacy issues in healthcare IoT
+- IoT key management
 education:
-  - degree: M.S. in Information Technology, Networked Systems Security
-    institution: University of Turku, Finland
-    year: 2013
-  - degree: B.S. in Computer Software Engineering
-    institution: Imam Reza International University, Iran
-    year: 2006
+- degree: M.S. in Information Technology, Networked Systems Security
+  institution: University of Turku, Finland
+  year: 2013
+- degree: B.S. in Computer Software Engineering
+  institution: Imam Reza International University, Iran
+  year: 2006
 email: rahimims@uci.edu
 websites:
-  - title: Personal
-    url: https://users.utu.fi/saramo/
-  - title: LinkedIn
-    url: https://www.linkedin.com/in/saramo0/
+- title: Personal
+  url: https://users.utu.fi/saramo/
+- title: LinkedIn
+  url: https://www.linkedin.com/in/saramo0/
 bibliography:
-  - title: Journal Articles
-    items:
-    - moosavi-nigussie-2017-access
-    - ambrosin-anzanpour-2016-micro
-    - moosavi-gia-2016-fgcs
-    - moosavi-hakkala-2014-ijcte
-  - title: Conference Proceedings
-    items:
-    - moosavi-nigussie-2018-ant
-    - moosavi-nigussie-2017-ccnc
-    - vikstrom-moosavi-2016-wis
-    - moosavi-gia-2015-cit
-    - moosavi-gia-2015-ant
-    - moosavi-rahmani-2014-mobihealth
-    - moosavi-nigussie-2014-ant
-    - moosavi-rahmani-2013-euromicro
-    - moosavi-chang-2012-isocc
+- title: Journal Articles
+  items:
+  - moosavi-nigussie-2017-access
+  - ambrosin-anzanpour-2016-micro
+  - moosavi-gia-2016-fgcs
+  - moosavi-hakkala-2014-ijcte
+- title: Conference Proceedings
+  items:
+  - moosavi-nigussie-2018-ant
+  - moosavi-nigussie-2017-ccnc
+  - vikstrom-moosavi-2016-wis
+  - moosavi-gia-2015-cit
+  - moosavi-gia-2015-ant
+  - moosavi-rahmani-2014-mobihealth
+  - moosavi-nigussie-2014-ant
+  - moosavi-rahmani-2013-euromicro
+  - moosavi-chang-2012-isocc
 ---
 
 I receieved my M.Sc. (Tech.) degree is in Information Technology, from the Department of Information Technology and Communication Systems, University of Turku, Finland in 2013. My major was on “Networked Systems Security” and minor was on “Cryptography”.
