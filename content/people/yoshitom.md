@@ -13,7 +13,7 @@ education:
 - degree: M.S. in Informatics
   institution: University of California, Irvine, U.S.
   year: 2016
-- degree: B.Eng. in Computer and Information Science
+- degree: B.E. in Computer and Information Science
   institution: National Institute of Technology, Akashi College, Japan
   year: 2014
 email: yoshitom@uci.edu
