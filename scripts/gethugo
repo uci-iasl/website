@@ -6,7 +6,7 @@
 # and extracts it into the directory given in the second argument (or
 # the current directory, if missing).
 
-. usagelib.sh
+. "$(dirname "$0")"/usagelib.sh
 usage='version [install-path]'
 
 [[ $# -gt 0 ]] || usage 'no version to download given'
