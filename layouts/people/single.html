@@ -47,7 +47,11 @@
           {{- end }}
           </ul>
           {{- if isset .Params "resume" }}
-          <a class="resume" href="/dl/people/{{ .File.TranslationBaseName }}/{{ .Params.resume }}" target="_blank">Full Resume</a>
+            {{- if findRE "^\\w+://" .Params.resume 1 }}
+              <a class="resume" href="{{ .Params.resume }}" target="_blank">Full Resume</a>
+            {{- else if fileExists (printf "static/dl/people/%s/%s" .File.TranslationBaseName .Params.resume) }}
+              <a class="resume" href="/dl/people/{{ .File.TranslationBaseName }}/{{ .Params.resume }}" target="_blank">Full Resume</a>
+            {{- end }}
           {{- end }}
         </section>
         {{- end }}
