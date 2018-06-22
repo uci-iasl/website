@@ -5,6 +5,7 @@
       <h1 class="page-title">Projects</h1>
     </header>
     <section class="content">
+      {{ .Content }}
       <ul class="projects">
         {{- range .Data.Pages }}
           {{ .Render "li" }}
