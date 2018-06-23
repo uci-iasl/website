@@ -28,14 +28,14 @@ bibliography:
 - title: Conference Proceedings
   items:
   - vatanparvar-faezi-2017-codes
+  - burago-callegaro-2017-acssc
   - burago-levorato-2017-secon
+  - burago-levorato-2017-ita
   - burago-lowd-2015-aisec
   - burago-shevchenko-2010-rpc
 - title: Selected Presentations
   items:
   - burago-levorato-2018-ita
-  - burago-callegaro-2017-acssc
-  - burago-levorato-2017-ita
   - burago-levorato-2016-ita
   - burago-moiseenko-2012-eccwo
   - burago-shevchenko-2009-zolotov
