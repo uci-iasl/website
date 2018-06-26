@@ -213,6 +213,13 @@
     {{- ", " }}<span class="note">unpublished</span>
   {{- end -}}
 {{- end -}}
-
 {{- "." -}}
+
+<span class="links">
+  {{- with .entry.doi -}}
+    <span class="sep"></span>{{ "" -}}
+    <a href="https://doi.org/{{ . }}">Web</a>
+  {{- end -}}
+</span>
+
 </section></li>
