@@ -40,3 +40,23 @@ bibliography:
   - burago-moiseenko-2012-eccwo
   - burago-shevchenko-2009-zolotov
 ---
+
+# Experience
+
+**2017**
+: Software engineering summer intern at Google, Mountain View, California.
+Developed a prototype of an experimental semi-supervised entropy-based
+filter of spam videos and suspicious activity using YouTube session
+data.
+
+**2015–2016**
+: Teaching assistant for the Intermediate Programming (in Python) and
+Data Structure Implementation and Analysis (in C++) courses at the
+Department of Computer Science, University of California, Irvine.
+Rated 7.9–8.8/9.0 over 5 quarters.
+
+**2012–2014**
+: Network and telecom services engineering graduate research fellow
+at the Information Services Department, University of Oregon.
+Participated in prototyping of network systems built on
+the principles of software-defined networking.
