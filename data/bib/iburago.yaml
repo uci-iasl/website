@@ -38,6 +38,17 @@ references:
   pages: 69–80
   title: Automated Attacks on Compression-Based Classifiers
   year: '2015'
+- address: Eugene, Oregon
+  author:
+  - first: Igor
+    last: Burago
+  id: burago-2014-uo
+  kind: mastersthesis
+  month: June
+  school: University of Oregon
+  title: Automated Attacks on Compression-Based Classifiers
+  url: https://scholarsbank.uoregon.edu/xmlui/bitstream/handle/1794/18439/Burago_oregon_0171N_11060.pdf
+  year: '2014'
 - address: Yeosu, Korea
   author:
   - first: Igor
@@ -55,6 +66,17 @@ references:
   month: May
   title: Federating Metadata Collections on Monitoring of the North Pacific
   year: '2012'
+- address: Vladivostok, Russia
+  author:
+  - first: Igor
+    last: Burago
+  id: burago-2011-fefu
+  kind: mastersthesis
+  month: June
+  note: in Russian
+  school: Far Eastern Federal University
+  title: Automatic Domain-Structure Modeling Based on Testing Statistics
+  year: '2011'
 - address: Portland, Oregon
   author:
   - first: Igor

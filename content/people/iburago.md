@@ -39,6 +39,10 @@ bibliography:
   - burago-levorato-2016-ita
   - burago-moiseenko-2012-eccwo
   - burago-shevchenko-2009-zolotov
+- title: Theses
+  items:
+  - burago-2014-uo
+  - burago-2011-fefu
 ---
 
 # Experience
