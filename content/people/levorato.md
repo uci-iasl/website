@@ -122,7 +122,7 @@ bibliography:
   - badia-levorato-2009-icc
   - levorato-munari-2009-secon
   - librino-levorato-2009-wiopt
-  - badia-casari-2009-wundernet
+  - badia-casari-2009-aina
   - levorato-mitra-2009-infocom
 - title: 2008
   items:
@@ -149,8 +149,8 @@ bibliography:
   - levorato-casari-2006-globecom
   - levorato-tomasin-2006-vtc
   - casari-levorato-2006-iwcmc
-  - levorato-casari-2006-icc-2
-  - levorato-casari-2006-icc-1
+  - levorato-casari-2006-icc
+  - levorato-casari-2006-vtc
 - title: 2005
   items:
   - casari-levorato-2005-pimrc
