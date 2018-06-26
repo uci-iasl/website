@@ -35,7 +35,7 @@ references:
     Technologies (ANT)
   pages: 432–439
   publisher: Elsevier
-  title: Performance Analysis of End-To-End Security Schemes in Healthcare IoT
+  title: Performance Analysis of End-to-End Security Schemes in Healthcare IoT
   volume: '130'
   year: '2018'
 - address: Honolulu, Hawaii
@@ -96,7 +96,7 @@ references:
   journal: IEEE Transactions on Smart Grid
   kind: article
   number: '8'
-  title: Extended Range Electric Vehicle with Driving Behavior Estimation in Energy
+  title: Extended Range Electric Vehicle With Driving Behavior Estimation in Energy
     Management
   volume: '14'
   year: '2018'
@@ -163,7 +163,7 @@ references:
   kind: inproceedings
   month: October
   title: 'Driving Behavior Modeling and Estimation for Battery Optimization in Electric
-    Vehicles: Work-in-progress'
+    Vehicles: Work-in-Progress'
   year: '2017'
 - author:
   - first: Sanaz
@@ -262,7 +262,7 @@ references:
   id: levorato-2017-wcnc
   kind: inproceedings
   month: March
-  title: Cognitive Networking with Dynamic Traffic Classification and QoS Constraints
+  title: Cognitive Networking With Dynamic Traffic Classification and QoS Constraints
   year: '2017'
 - address: San Diego, California
   author:
@@ -347,7 +347,7 @@ references:
   id: valentini-levorato-2016-isit
   kind: inproceedings
   month: July
-  title: Optimal Aging-Aware Channel Access Control for Wireless Networks with Energy
+  title: Optimal Aging-Aware Channel Access Control for Wireless Networks With Energy
     Harvesting
   year: '2016'
 - author:
@@ -706,7 +706,7 @@ references:
   month: September
   number: '9'
   pages: 3101–3111
-  title: A Learning Framework for Cognitive Interference Networks with Partial and
+  title: A Learning Framework for Cognitive Interference Networks With Partial and
     Noisy Observations
   volume: '11'
   year: '2012'
@@ -849,7 +849,7 @@ references:
   id: levorato-firouzabadi-2011-allerton
   kind: inproceedings
   month: September
-  title: A Learning Framework for Cognitive Interference Networks with Partial and
+  title: A Learning Framework for Cognitive Interference Networks With Partial and
     Noisy Observations
   year: '2011'
 - address: Monticello, Illinois
@@ -1008,7 +1008,7 @@ references:
   id: harsini-lahouti-2010-icc
   kind: inproceedings
   month: May
-  title: 'A Type II Hybrid ARQ Protocol with Adaptive Modulation and Coding for Time-Correlated
+  title: 'A Type II Hybrid ARQ Protocol With Adaptive Modulation and Coding for Time-Correlated
     Fading Channels: Analysis and Design'
   year: '2010'
 - author:
@@ -1076,7 +1076,7 @@ references:
   id: levorato-simeone-2009-itw
   kind: inproceedings
   month: October
-  title: Cooperation and Coordination in Cognitive Networks with Packet Retransmission
+  title: Cooperation and Coordination in Cognitive Networks With Packet Retransmission
   year: '2009'
 - address: Beijing, China
   author:
@@ -1122,7 +1122,7 @@ references:
   month: August
   number: '8'
   pages: 2391–2401
-  title: Steady State Analysis of Coded Cooperative Networks with HARQ Protocols
+  title: Steady State Analysis of Coded Cooperative Networks With HARQ Protocols
   volume: '57'
   year: '2009'
 - author:
@@ -1153,7 +1153,7 @@ references:
   month: June
   number: '6'
   pages: 2938–2949
-  title: On the Performance of Ad Hoc Networks with Multiuser Detection, Rate Control
+  title: On the Performance of Ad Hoc Networks With Multiuser Detection, Rate Control
     and Hybrid ARQ
   volume: '8'
   year: '2009'
@@ -1200,7 +1200,7 @@ references:
   id: librino-levorato-2009-wiopt
   kind: inproceedings
   month: June
-  title: An Algorithmic Solution for Computing Circle Intersection Areas and its Applications
+  title: An Algorithmic Solution for Computing Circle Intersection Areas and Its Applications
     to Wireless Communications
   year: '2009'
 - address: Bradford, UK
@@ -1233,7 +1233,7 @@ references:
   id: levorato-mitra-2009-infocom
   kind: inproceedings
   month: April
-  title: On Optimal Control of Wireless Networks with Multiuser Detection, Hybrid
+  title: On Optimal Control of Wireless Networks With Multiuser Detection, Hybrid
     ARQ and Distortion Constraints
   year: '2009'
 - author:
@@ -1249,7 +1249,7 @@ references:
   month: November
   number: '11'
   pages: 4596–4607
-  title: MAC/PHY Cross-Layer Design of MIMO Ad Hoc Networks with Layered Multiuser
+  title: MAC/PHY Cross-Layer Design of MIMO Ad Hoc Networks With Layered Multiuser
     Detection
   volume: '7'
   year: '2008'
@@ -1266,7 +1266,7 @@ references:
   month: September
   number: '9'
   pages: 1434–1441
-  title: Markov Analysis of Selective Repeat Type II Hybrid ARQ using Block Codes
+  title: Markov Analysis of Selective Repeat Type II Hybrid ARQ Using Block Codes
   volume: '56'
   year: '2008'
 - author:
@@ -1300,7 +1300,7 @@ references:
   kind: inproceedings
   month: September
   note: invited paper
-  title: 'Cooperation in UMTS Cellular Networks: a Practical Perspective'
+  title: 'Cooperation in UMTS Cellular Networks: A Practical Perspective'
   year: '2008'
 - address: Creta, Greece
   author:
@@ -1436,7 +1436,7 @@ references:
   id: tomasin-levorato-2007-icc
   kind: inproceedings
   month: June
-  title: Coded Cooperation for Ad Hoc Networks with Spatial Multiplexing
+  title: Coded Cooperation for Ad Hoc Networks With Spatial Multiplexing
   year: '2007'
 - address: Nice, France
   author:
@@ -1451,7 +1451,7 @@ references:
   id: tomasin-levorato-2007-isit
   kind: inproceedings
   month: June
-  title: Analysis of Outage Probability for Cooperative Networks with HARQ
+  title: Analysis of Outage Probability for Cooperative Networks With HARQ
   year: '2007'
 - address: Limassol, Cyprus
   author:
