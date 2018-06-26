@@ -55,17 +55,18 @@ references:
     Computing
   year: '2018'
 - author:
-  - first: K.
+  - first: Kisong
     last: Lee
-  - first: J.-P.
+  - first: Jun-Pyo
     last: Hong
-  - first: H.
+  - first: Hyun-Ho
     last: Choi
   - first: Marco
     last: Levorato
   id: lee-hong-2018-iotj
   journal: IEEE Internet of Things Journal
   kind: article
+  month: April
   title: Adaptive Wireless-Powered Relaying Protocols With Cooperative Jamming for
     Two-Hop Secure Communication
   year: '2018'
