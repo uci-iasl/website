@@ -7,6 +7,7 @@ references:
     last: Tehrani
   - first: Mehdi
     last: Bennis
+  doi: 10.1109/lwc.2016.2614507
   id: mili-tehrani-2016-wcl
   journal: IEEE Wireless Communications Letters
   kind: article
@@ -26,6 +27,7 @@ references:
   - first: Michele
     last: Zorzi
   booktitle: Proceedings of the IEEE International Conference on Communications (ICC)
+  doi: 10.1109/icc.2016.7510917
   id: tehrani-lahouti-2016-icc
   kind: inproceedings
   month: May

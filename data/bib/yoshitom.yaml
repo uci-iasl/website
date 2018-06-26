@@ -13,6 +13,7 @@ references:
     last: Tanimoto
   booktitle: Proceedings of the IEEE International Conference on Machine Learning
     and Applications (ICMLA)
+  doi: 10.1109/icmla.2016.0134
   id: matsubara-nishimura-2016-icmla
   kind: inproceedings
   month: December

@@ -31,6 +31,7 @@ references:
     last: Lowd
   booktitle: Proceedings of the ACM Workshop on Artificial Intelligence and Security
     (AISec)
+  doi: 10.1145/2808769.2808778
   id: burago-lowd-2015-aisec
   kind: inproceedings
   month: October

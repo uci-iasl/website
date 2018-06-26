@@ -27,6 +27,7 @@ references:
     last: Virtanen
   - first: Jouni
     last: Isoaho
+  doi: 10.1016/j.procs.2018.04.064
   id: moosavi-nigussie-2018-ant
   journal: Procedia Computer Science
   kind: article
@@ -63,6 +64,7 @@ references:
     last: Choi
   - first: Marco
     last: Levorato
+  doi: 10.1109/jiot.2018.2830880
   id: lee-hong-2018-iotj
   journal: IEEE Internet of Things Journal
   kind: article
@@ -75,7 +77,7 @@ references:
     last: Baidya
   - first: Marco
     last: Levorato
-  doi: 10.1109/TCCN.2018.2815604
+  doi: 10.1109/tccn.2018.2815604
   id: baidya-levorato-2018-tccn
   journal: IEEE Transactions on Cognitive Communications and Networking
   kind: article
@@ -93,6 +95,7 @@ references:
   - first: Mohammad
     last: Faruque
     middle: Al
+  doi: 10.1109/tsg.2018.2815689
   id: vatanparvar-faezi-2018-tsg
   journal: IEEE Transactions on Smart Grid
   kind: article
@@ -112,6 +115,7 @@ references:
     last: Baidya
   booktitle: Fog Computing in the Internet of Things
   chapter: '6'
+  doi: 10.1007/978-3-319-57639-8_6
   editor:
   - first: Amir
     last: Rahmani
@@ -140,6 +144,7 @@ references:
     last: Singh
   booktitle: Proceedings of the Asilomar Conference on Signals, Systems, and Computers
     (ACSSC)
+  doi: 10.1109/acssc.2017.8335485
   id: burago-callegaro-2017-acssc
   kind: inproceedings
   month: October–November
@@ -160,6 +165,7 @@ references:
     middle: Al
   booktitle: Proceedings of the IEEE/ACM/IFIP International Conference on Hardware/Software
     Codesign and System Synthesis Companion (CODES)
+  doi: 10.1145/3125502.3125542
   id: vatanparvar-faezi-2017-codes
   kind: inproceedings
   month: October
@@ -178,6 +184,7 @@ references:
     last: Virtanen
   - first: Jouni
     last: Isoaho
+  doi: 10.1109/access.2017.2766523
   id: moosavi-nigussie-2017-access
   journal: IEEE Access
   kind: article
@@ -203,6 +210,7 @@ references:
     last: Liljeberg
   - first: Nikil
     last: Dutt
+  doi: 10.1145/3126501
   id: azimi-anzanpour-2017-tecs
   journal: ACM Transactions on Embedded Computing Systems
   kind: article
@@ -222,6 +230,7 @@ references:
     last: Chowdhery
   booktitle: Proceedings of the IEEE International Conference on Sensing, Communication
     and Networking (SECON)
+  doi: 10.1109/sahcn.2017.7964938
   id: burago-levorato-2017-secon
   kind: inproceedings
   month: June
@@ -235,6 +244,7 @@ references:
     last: Levorato
   booktitle: Proceedings of the IEEE International Symposium on Information Theory
     (ISIT)
+  doi: 10.1109/isit.2017.8006701
   id: michelusi-levorato-2017-isit
   kind: inproceedings
   month: June
@@ -248,6 +258,7 @@ references:
     last: Levorato
   booktitle: Proceedings of the IEEE International Conference on Computer Communications
     (INFOCOM) Workshops
+  doi: 10.1109/infcomw.2017.8116478
   id: baidya-levorato-2017-infocom
   kind: inproceedings
   month: May
@@ -260,6 +271,7 @@ references:
     last: Levorato
   booktitle: Proceedings of the IEEE Wireless Communications and Networking Conference
     (WCNC)
+  doi: 10.1109/wcnc.2017.7925717
   id: levorato-2017-wcnc
   kind: inproceedings
   month: March
@@ -274,6 +286,7 @@ references:
   - first: Sameer
     last: Singh
   booktitle: Proceedings of the Information Theory and Applications Workshop (ITA)
+  doi: 10.1109/ita.2017.8023457
   id: burago-levorato-2017-ita
   kind: inproceedings
   month: February
@@ -287,6 +300,7 @@ references:
     last: Levorato
   booktitle: Proceedings of the IEEE International Conference on Computing, Networking
     and Communications (ICNC)
+  doi: 10.1109/iccnc.2017.7876117
   id: baidya-levorato-2017-icnc
   kind: inproceedings
   month: January
@@ -301,6 +315,7 @@ references:
     last: Levorato
   - first: Guann-Pyng
     last: Li
+  doi: 10.1109/tsg.2017.2661991
   id: ahmed-levorato-2017-tsg
   journal: IEEE Transactions on Smart Grid
   kind: article
@@ -313,6 +328,7 @@ references:
   - first: Marco
     last: Levorato
   booktitle: Proceedings of the IEEE Global Communications Conference (GLOBECOM)
+  doi: 10.1109/glocom.2016.7841693
   id: baidya-levorato-2016-globecom
   kind: inproceedings
   month: December
@@ -327,6 +343,7 @@ references:
     middle: Chathuranga
   - first: Carlo
     last: Fischione
+  doi: 10.1109/tcomm.2016.2602207
   id: levorato-weeraddana-2016-tcom
   journal: IEEE Transactions on Communications
   kind: article
@@ -345,6 +362,7 @@ references:
     last: Levorato
   booktitle: Proceedings of the IEEE International Symposium on Information Theory
     (ISIT)
+  doi: 10.1109/isit.2016.7541800
   id: valentini-levorato-2016-isit
   kind: inproceedings
   month: July
@@ -358,6 +376,7 @@ references:
     last: Levorato
   - first: Fortunato
     last: Santucci
+  doi: 10.1109/lwc.2016.2515079
   id: valentini-levorato-2016-wcl
   journal: IEEE Wireless Communications Letters
   kind: article
@@ -381,6 +400,7 @@ references:
     last: Venkatasubramanian
   booktitle: Proceedings of the IEEE/ACM International Conference on Computer-Aided
     Design (ICCAD)
+  doi: 10.1109/iccad.2015.7372627
   id: dang-valentini-2015-iccad
   kind: inproceedings
   month: November
@@ -399,6 +419,7 @@ references:
     last: Bozorgzadeh
   booktitle: Proceedings of the IEEE International Conference on Smart Grid Communications
     (SmartGridComm)
+  doi: 10.1109/smartgridcomm.2015.7436352
   id: valentini-dang-2015-smartgridcomm
   kind: inproceedings
   month: November
@@ -409,6 +430,7 @@ references:
     last: Burago
   - first: Marco
     last: Levorato
+  doi: 10.1109/tccn.2016.2517013
   id: burago-levorato-2015-tccn
   journal: IEEE Transactions on Cognitive Communications and Networking
   kind: article
@@ -427,6 +449,7 @@ references:
   - first: Carlo
     last: Fischione
   booktitle: Proceedings of the Conference on Information Sciences and Systems (CISS)
+  doi: 10.1109/ciss.2015.7086886
   id: valentini-levorato-2015-ciss
   kind: inproceedings
   month: March
@@ -441,6 +464,7 @@ references:
   - first: Nikil
     last: Dutt
   booktitle: Proceedings of the Information Theory and Applications Workshop (ITA)
+  doi: 10.1109/ita.2015.7308981
   id: levorato-venkatasubramanian-2015-ita
   kind: inproceedings
   month: February
@@ -453,6 +477,7 @@ references:
     last: Levorato
   - first: Urbashi
     last: Mitra
+  doi: 10.1109/tsp.2014.2362098
   id: zois-levorato-2014-tsp
   journal: IEEE Transactions on Signal Processing
   kind: article
@@ -472,6 +497,7 @@ references:
   - first: Carlo
     last: Fischione
   booktitle: Proceedings of the IEEE Global Communications Conference (GLOBECOM)
+  doi: 10.1109/glocom.2014.7036924
   id: levorato-weeraddana-2014-globecom
   kind: inproceedings
   month: December
@@ -489,6 +515,7 @@ references:
     middle: Arthur
   booktitle: Proceedings of the IEEE International Conference on Smart Grid Communications
     (SmartGridComm)
+  doi: 10.1109/smartgridcomm.2014.7007739
   id: levorato-ahmed-2014-smartgridcomm
   kind: inproceedings
   month: November
@@ -506,6 +533,7 @@ references:
     last: Ortega
   booktitle: Proceedings of the IEEE Global Conference on Signal and Information Processing
     (GlobalSIP)
+  doi: 10.1109/globalsip.2013.6736920
   id: levorato-narang-2013-globalsip
   kind: inproceedings
   month: December
@@ -523,6 +551,7 @@ references:
     last: Levorato
   - first: Michele
     last: Zorzi
+  doi: 10.1109/jsac.2013.131112
   id: michelusi-popovski-2013-jsac
   journal: IEEE Journal on Selected Areas in Communications
   kind: article
@@ -540,6 +569,7 @@ references:
   - first: Urbashi
     last: Mitra
   booktitle: Proceedings of the Military Communications Conference (MILCOM)
+  doi: 10.1109/milcom.2013.284
   id: levorato-mitra-2013-milcom
   kind: inproceedings
   month: November
@@ -555,6 +585,7 @@ references:
     last: Mitra
   booktitle: Proceedings of the IEEE International Symposium on Information Theory
     (ISIT)
+  doi: 10.1109/isit.2013.6620596
   id: zois-levorato-2013-isit
   kind: inproceedings
   month: July
@@ -570,6 +601,7 @@ references:
     last: Mitra
   booktitle: Proceedings of the IEEE International Conference on Acoustics, Speech
     and Signal Processing (ICASSP)
+  doi: 10.1109/icassp.2013.6638759
   id: zois-levorato-2013-icassp
   kind: inproceedings
   month: May
@@ -583,6 +615,7 @@ references:
     last: Levorato
   - first: Urbashi
     last: Mitra
+  doi: 10.1109/tsp.2012.2236320
   id: zois-levorato-2013-tsp
   journal: IEEE Transactions on Signal Processing
   kind: article
@@ -601,6 +634,7 @@ references:
     last: Mitra
   - first: Andrea
     last: Goldsmith
+  doi: 10.1186/1687-1499-2012-278
   id: levorato-mitra-2012-jwcn
   journal: EURASIP Journal on Wireless Communications and Networking
   kind: article
@@ -622,6 +656,7 @@ references:
   kind: inproceedings
   month: December
   title: Scale Invariance and Long-Range Dependence in Smart Energy Grids
+  url: https://ieeexplore.ieee.org/abstract/document/6411979/
   year: '2012'
 - address: Anaheim, California
   author:
@@ -634,6 +669,7 @@ references:
   - first: Antonio
     last: Ortega
   booktitle: Proceedings of the IEEE Global Communications Conference (GLOBECOM)
+  doi: 10.1109/glocom.2012.6503723
   id: levorato-narang-2012-globecom
   kind: inproceedings
   month: December
@@ -648,6 +684,7 @@ references:
     last: Levorato
   - first: Michele
     last: Zorzi
+  doi: 10.1002/wcm.2305
   id: librino-levorato-2012-wcmc
   journal: Wireless Communications and Mobile Computing
   kind: article
@@ -666,6 +703,7 @@ references:
     last: Levorato
   - first: Michele
     last: Zorzi
+  doi: 10.1109/tcomm.2012.080312.100657
   id: munari-levorato-2012-tcom
   journal: IEEE Transactions on Communications
   kind: article
@@ -689,6 +727,7 @@ references:
     last: Mitra
   booktitle: Proceedings of the Allerton Conference on Communication, Control and
     Computing
+  doi: 10.1109/allerton.2012.6483328
   id: gjika-levorato-2012-allerton
   kind: inproceedings
   month: October
@@ -702,6 +741,7 @@ references:
     last: Firouzabadi
   - first: Andrea
     last: Goldsmith
+  doi: 10.1109/twc.2012.062012.111342
   id: levorato-firouzabadi-2012-twc
   journal: IEEE Transactions on Wireless Communications
   kind: article
@@ -720,6 +760,7 @@ references:
     last: Mitra
   booktitle: Proceedings of the IEEE Sensor Array and Multichannel Signal Processing
     Workshop (SAM)
+  doi: 10.1109/sam.2012.6250561
   id: levorato-mitra-2012-sam
   kind: inproceedings
   month: June
@@ -735,6 +776,7 @@ references:
   - first: Urbashi
     last: Mitra
   booktitle: Proceedings of the IEEE International Conference on Communications (ICC)
+  doi: 10.1109/icc.2012.6364460
   id: zois-levorato-2012-icc
   kind: inproceedings
   month: June
@@ -748,6 +790,7 @@ references:
     last: Mitra
   - first: Michele
     last: Zorzi
+  doi: 10.1109/tit.2012.2184691
   id: levorato-mitra-2012-tit
   journal: IEEE Transactions on Information Theory
   kind: article
@@ -785,6 +828,7 @@ references:
     last: Spruijt-Metz
   - first: Gaurav
     last: Sukhatme
+  doi: 10.1109/mcom.2012.6194391
   id: mitra-emken-2012-commag
   journal: IEEE Communications Magazine
   kind: article
@@ -804,6 +848,7 @@ references:
     last: Mitra
   booktitle: Proceedings of the IEEE International Conference on Computer Communications
     (INFOCOM)
+  doi: 10.1109/infcom.2012.6195663
   id: zois-levorato-2012-infocom
   kind: inproceedings
   month: March
@@ -819,6 +864,7 @@ references:
   - first: Andrea
     last: Goldsmith
   booktitle: Proceedings of the IEEE Global Communications Conference (GLOBECOM)
+  doi: 10.1109/glocom.2011.6134467
   id: levorato-firouzabadi-2011-globecom
   kind: inproceedings
   month: December
@@ -833,6 +879,7 @@ references:
     last: Mitra
   booktitle: Proceedings of the IEEE International Conference on Smart Grid Communications
     (SmartGridComm)
+  doi: 10.1109/smartgridcomm.2011.6102304
   id: levorato-mitra-2011-smartgridcomm
   kind: inproceedings
   month: October
@@ -848,6 +895,7 @@ references:
     last: Goldsmith
   booktitle: Proceedings of the Allerton Conference on Communication, Control and
     Computing
+  doi: 10.1109/twc.2012.062012.111342
   id: levorato-firouzabadi-2011-allerton
   kind: inproceedings
   month: September
@@ -868,6 +916,7 @@ references:
     last: Zorzi
   booktitle: Proceedings of the Allerton Conference on Communication, Control and
     Computing
+  doi: 10.1109/allerton.2011.6120240
   id: michelusi-simeone-2011-allerton
   kind: inproceedings
   month: September
@@ -881,6 +930,7 @@ references:
     last: Librino
   - first: Michele
     last: Zorzi
+  doi: 10.1109/tcomm.2011.061311.090705
   id: levorato-librino-2011-tcom
   journal: IEEE Transactions on Communications
   kind: article
@@ -902,6 +952,7 @@ references:
   - first: Urbashi
     last: Mitra
   booktitle: Proceedings of the IEEE International Conference on Communications (ICC)
+  doi: 10.1109/icc.2011.5963420
   id: levorato-oneill-2011-icc
   kind: inproceedings
   month: June
@@ -917,6 +968,7 @@ references:
     last: Levorato
   - first: Michele
     last: Zorzi
+  doi: 10.1109/twc.2011.010411.100328
   id: harsini-lahouti-2011-twc
   journal: IEEE Transactions on Wireless Communications
   kind: article
@@ -940,6 +992,7 @@ references:
   - first: Michele
     last: Zorzi
   booktitle: Proceedings of the Information Theory and Applications Workshop (ITA)
+  doi: 10.1109/ita.2011.5743628
   id: michelusi-simeone-2011-ita
   kind: inproceedings
   month: February
@@ -956,6 +1009,7 @@ references:
   - first: Andrea
     last: Goldsmith
   booktitle: Proceedings of the IEEE Global Communications Conference (GLOBECOM)
+  doi: 10.1109/glocom.2010.5683502
   id: firouzabadi-levorato-2011-globecom
   kind: inproceedings
   month: December
@@ -973,6 +1027,7 @@ references:
     last: Zorzi
   booktitle: Proceedings of the IEEE International Conference on Mobile Ad Hoc and
     Sensor Systems (MASS)
+  doi: 10.1109/mass.2010.5664008
   id: levorato-badia-2010-mass
   kind: inproceedings
   month: November
@@ -990,6 +1045,7 @@ references:
     last: Mitra
   booktitle: Proceedings of the IEEE International Conference on Smart Grid Communications
     (SmartGridComm)
+  doi: 10.1109/smartgrid.2010.5622078
   id: oneill-levorato-2010-smartgridcomm
   kind: inproceedings
   month: October
@@ -1007,6 +1063,7 @@ references:
   - first: Marco
     last: Levorato
   booktitle: Proceedings of the IEEE International Conference on Communications (ICC)
+  doi: 10.1109/icc.2010.5501889
   id: harsini-lahouti-2010-icc
   kind: inproceedings
   month: May
@@ -1022,6 +1079,7 @@ references:
     last: Levorato
   - first: Michele
     last: Zorzi
+  doi: 10.1109/jsac.2010.100419
   id: badia-baldo-2010-jsac
   journal: IEEE Journal on Selected Areas in Communications
   kind: article
@@ -1041,6 +1099,7 @@ references:
     last: Librino
   - first: Michele
     last: Zorzi
+  doi: 10.1109/mwc.2010.5450665
   id: badia-levorato-2010-wirelessmag
   journal: IEEE Wireless Communications Magazine
   kind: article
@@ -1059,6 +1118,7 @@ references:
   - first: Michele
     last: Zorzi
   booktitle: Proceedings of the IEEE Information Theory Workshop (ITW)
+  doi: 10.1109/itw.2009.5351471
   id: levorato-badia-2009-itw
   kind: inproceedings
   month: October
@@ -1075,6 +1135,7 @@ references:
   - first: Michele
     last: Zorzi
   booktitle: Proceedings of the IEEE Information Theory Workshop (ITW)
+  doi: 10.1109/itw.2009.5351412
   id: levorato-simeone-2009-itw
   kind: inproceedings
   month: October
@@ -1090,6 +1151,7 @@ references:
     last: Mitra
   booktitle: Proceedings of the ACM International Conference on Mobile Computing and
     Networking (MobiCom)
+  doi: 10.1145/1614235.1614242
   id: levorato-simeone-2009-mobicom
   kind: inproceedings
   month: September
@@ -1106,6 +1168,7 @@ references:
     last: Zorzi
   booktitle: Proceedings of the Allerton Conference on Communication, Control and
     Computing
+  doi: 10.1109/allerton.2009.5394850
   id: levorato-mitra-2009-allerton
   kind: inproceedings
   month: September–October
@@ -1118,6 +1181,7 @@ references:
     last: Levorato
   - first: Michele
     last: Zorzi
+  doi: 10.1109/tcomm.2008.08.070478
   id: tomasin-levorato-2009-tcom
   journal: IEEE Transactions on Communications
   kind: article
@@ -1134,6 +1198,7 @@ references:
     last: Levorato
   - first: Michele
     last: Zorzi
+  doi: 10.1109/tcomm.2009.07.070587
   id: badia-levorato-2009-tcom
   journal: IEEE Transactions on Communications
   kind: article
@@ -1149,6 +1214,7 @@ references:
     last: Levorato
   - first: Michele
     last: Zorzi
+  doi: 10.1109/twc.2009.080036
   id: levorato-zorzi-2009-twc
   journal: IEEE Transactions on Wireless Communications
   kind: article
@@ -1168,6 +1234,7 @@ references:
   - first: Michele
     last: Zorzi
   booktitle: Proceedings of the IEEE International Conference on Communications (ICC)
+  doi: 10.1109/icc.2009.5198746
   id: badia-levorato-2009-icc
   kind: inproceedings
   month: June
@@ -1184,6 +1251,7 @@ references:
     last: Zorzi
   booktitle: Proceedings of the IEEE Communications Society Conference on Sensor,
     Mesh and Ad Hoc Communications and Networks (SECON)
+  doi: 10.1109/sahcn.2009.5168953
   id: levorato-munari-2009-secon
   kind: inproceedings
   month: June
@@ -1199,6 +1267,7 @@ references:
     last: Zorzi
   booktitle: Proceedings of the IEEE International Symposium on Modeling and Optimization
     in Mobile, Ad Hoc and Wireless Networks (WiOpt)
+  doi: 10.1109/wiopt.2009.5291627
   id: librino-levorato-2009-wiopt
   kind: inproceedings
   month: June
@@ -1233,6 +1302,7 @@ references:
     last: Zorzi
   booktitle: Proceedings of the IEEE International Conference on Computer Communications
     (INFOCOM)
+  doi: 10.1109/infcom.2009.5062114
   id: levorato-mitra-2009-infocom
   kind: inproceedings
   month: April
@@ -1246,6 +1316,7 @@ references:
     last: Levorato
   - first: Michele
     last: Zorzi
+  doi: 10.1109/t-wc.2008.070600
   id: casari-levorato-2008-twc
   journal: IEEE Transactions on Wireless Communications
   kind: article
@@ -1263,6 +1334,7 @@ references:
     last: Levorato
   - first: Michele
     last: Zorzi
+  doi: 10.1109/tcomm.2008.060374
   id: badia-levorato-2008-tcom
   journal: IEEE Transactions on Communications
   kind: article
@@ -1279,6 +1351,7 @@ references:
     last: Tomasin
   - first: Michele
     last: Zorzi
+  doi: 10.1109/tcomm.2008.060447
   id: levorato-tomasin-2008-tcom
   journal: IEEE Transactions on Communications
   kind: article
@@ -1299,6 +1372,7 @@ references:
     last: Levorato
   booktitle: Proceedings of the IEEE International Symposium on Personal, Indoor and
     Mobile Radio Communications (PIMRC)
+  doi: 10.1109/pimrc.2008.4699937
   id: zorzi-librino-2008-pimrc
   kind: inproceedings
   month: September
@@ -1317,6 +1391,7 @@ references:
     last: Zorzi
   booktitle: Proceedings of the International Wireless Communications and Mobile Computing
     Conference (IWCMC)
+  doi: 10.1109/iwcmc.2008.48
   id: casari-levorato-2008-iwcmc
   kind: inproceedings
   month: August
@@ -1333,6 +1408,7 @@ references:
     last: Zorzi
   booktitle: Proceedings of the IEEE Workshop on Resource Allocation in Wireless Networks
     (RAWNET)
+  doi: 10.1109/wiopt.2008.4586038
   id: levorato-badia-2008-rawnet
   kind: inproceedings
   month: April
@@ -1346,6 +1422,7 @@ references:
   - first: Michele
     last: Zorzi
   booktitle: Proceedings of the Conference on Information Sciences and Systems (CISS)
+  doi: 10.1109/ciss.2008.4558606
   id: levorato-zorzi-2008-ciss
   kind: inproceedings
   month: March
@@ -1360,6 +1437,7 @@ references:
     last: Zorzi
   booktitle: Proceedings of the International Symposium on Communications, Control,
     and Signal Processing (ISCCSP)
+  doi: 10.1109/isccsp.2008.4537333
   id: levorato-zorzi-2008-isccsp
   kind: inproceedings
   month: March
@@ -1373,6 +1451,7 @@ references:
   - first: Michele
     last: Zorzi
   booktitle: Proceedings of the Information Theory and Applications Workshop (ITA)
+  doi: 10.1109/ita.2008.4601098
   id: levorato-zorzi-2008-ita
   kind: inproceedings
   month: January–February
@@ -1388,6 +1467,7 @@ references:
     last: Tomasin
   - first: Michele
     last: Zorzi
+  doi: 10.1109/twc.2007.060211
   id: levorato-casari-2007-twc
   journal: IEEE Transactions on Wireless Communications
   kind: article
@@ -1407,6 +1487,7 @@ references:
   - first: Michele
     last: Zorzi
   booktitle: Proceedings of the IEEE Global Communications Conference (GLOBECOM)
+  doi: 10.1109/glocom.2007.128
   id: librino-levorato-2007-globecom
   kind: inproceedings
   month: November
@@ -1437,6 +1518,7 @@ references:
   - first: Michele
     last: Zorzi
   booktitle: Proceedings of the IEEE International Conference on Communications (ICC)
+  doi: 10.1109/icc.2007.784
   id: tomasin-levorato-2007-icc
   kind: inproceedings
   month: June
@@ -1452,6 +1534,7 @@ references:
     last: Zorzi
   booktitle: Proceedings of the IEEE International Symposium on Information Theory
     (ISIT)
+  doi: 10.1109/isit.2007.4557629
   id: tomasin-levorato-2007-isit
   kind: inproceedings
   month: June
@@ -1467,6 +1550,7 @@ references:
     last: Zorzi
   booktitle: Proceedings of the IEEE International Symposium on Modeling and Optimization
     in Mobile, Ad Hoc and Wireless Networks (WiOpt)
+  doi: 10.1109/wiopt.2007.4480100
   id: levorato-tomasin-2007-wiopt
   kind: inproceedings
   month: April
@@ -1481,6 +1565,7 @@ references:
   - first: Michele
     last: Zorzi
   booktitle: Proceedings of the IEEE Global Communications Conference (GLOBECOM)
+  doi: 10.1109/glocom.2006.914
   id: badia-levorato-2006-globecom
   kind: inproceedings
   month: November–December
@@ -1496,6 +1581,7 @@ references:
   - first: Michele
     last: Zorzi
   booktitle: Proceedings of the IEEE Global Communications Conference (GLOBECOM)
+  doi: 10.1109/glocom.2006.934
   id: levorato-casari-2006-globecom
   kind: inproceedings
   month: November–December
@@ -1510,6 +1596,7 @@ references:
   - first: Michele
     last: Zorzi
   booktitle: Proceedings of the IEEE Vehicular Technology Conference (VTC)
+  doi: 10.1109/vtcf.2006.452
   id: levorato-tomasin-2006-vtc
   kind: inproceedings
   month: September
@@ -1526,6 +1613,7 @@ references:
     last: Zorzi
   booktitle: Proceedings of the International Wireless Communications and Mobile Computing
     Conference (IWCMC)
+  doi: 10.1145/1143549.1143637
   id: casari-levorato-2006-iwcmc
   kind: inproceedings
   month: July
@@ -1576,6 +1664,7 @@ references:
     last: Zorzi
   booktitle: Proceedings of the IEEE International Symposium on Personal, Indoor and
     Mobile Radio Communications (PIMRC)
+  doi: 10.1109/pimrc.2005.1651661
   id: casari-levorato-2005-pimrc
   kind: inproceedings
   month: September
@@ -1608,6 +1697,7 @@ references:
     last: Zorzi
   booktitle: Proceedings of the IEEE Wireless Communications and Networking Conference
     (WCNC)
+  doi: 10.1109/wcnc.2005.1424779
   id: rossi-casari-2005-wcnc
   kind: inproceedings
   month: March

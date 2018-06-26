@@ -8,6 +8,7 @@ references:
     last: King
   booktitle: Proceedings of the International Conference on Advances in Computing,
     Electronics and Electrical Technology (CEET)
+  doi: 10.15224/978-1-63248-109-2-12
   id: amiri-elsharkawy-2016-ceet
   kind: inproceedings
   month: November
@@ -23,6 +24,7 @@ references:
     last: King
   booktitle: Proceedings of the International Conference on Computational Science
     and Computational Intelligence (CSCI)
+  doi: 10.1109/csci.2015.19
   id: amiri-elsharkawy-2015-csci
   kind: inproceedings
   month: December
@@ -50,6 +52,7 @@ references:
     middle: Mansour
   - first: Forouhar
     last: Farzaneh
+  doi: 10.1587/transfun.e97.a.1136
   id: keshavarzi-amiri-2014-tfeccs
   journal: IEICE Transactions on Fundamentals of Electronics, Communications and Computer
     Sciences
@@ -71,6 +74,7 @@ references:
     last: Farzaneh
   - first: Delaram
     last: Amiri
+  doi: 10.1587/transfun.e96.a.2306
   id: keshavarzi-pezeshk-2013-tfeccs
   journal: IEICE Transactions on Fundamentals of Electronics, Communications and Computer
     Sciences
@@ -89,6 +93,7 @@ references:
     last: Keshavarzi
   - first: Kourosh
     last: Amiri
+  doi: 10.1166/asl.2013.4954
   id: amiri-keshavarzi-2013-asl
   journal: Advanced Science Letters
   kind: article

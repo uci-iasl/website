@@ -6,6 +6,7 @@ references:
   - first: Ravi
     last: Prakash
   booktitle: Proceedings of the IEEE International Conference on Communications (ICC)
+  doi: 10.1109/icc.2014.6883817
   id: baidya-prakash-2014-icc
   kind: inproceedings
   month: June
