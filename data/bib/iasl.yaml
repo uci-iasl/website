@@ -69,8 +69,8 @@ references:
   journal: IEEE Internet of Things Journal
   kind: article
   month: April
-  title: Adaptive Wireless-Powered Relaying Protocols With Cooperative Jamming for
-    Two-Hop Secure Communication
+  title: Adaptive Wireless-Powered Relaying Schemes With Cooperative Jamming for Two-Hop
+    Secure Communication
   year: '2018'
 - author:
   - first: Sabur
@@ -504,6 +504,25 @@ references:
   title: Distributed Optimization of Transmission Strategies in Reactive Cognitive
     Networks
   year: '2014'
+- author:
+  - first: Federico
+    last: Librino
+  - first: Marco
+    last: Levorato
+  - first: Michele
+    last: Zorzi
+  doi: 10.1002/wcm.2305
+  id: librino-levorato-2014-wcmc
+  journal: Wireless Communications and Mobile Computing
+  kind: article
+  month: December
+  number: '18'
+  pages: 1672–1690
+  publisher: Wiley
+  title: An Algorithmic Solution for Computing Circle Intersection Areas and Its Applications
+    to Wireless Communications
+  volume: '14'
+  year: '2014'
 - address: Venice, Italy
   author:
   - first: Marco
@@ -678,25 +697,6 @@ references:
     Analysis
   year: '2012'
 - author:
-  - first: Federico
-    last: Librino
-  - first: Marco
-    last: Levorato
-  - first: Michele
-    last: Zorzi
-  doi: 10.1002/wcm.2305
-  id: librino-levorato-2012-wcmc
-  journal: Wireless Communications and Mobile Computing
-  kind: article
-  month: October
-  number: '18'
-  pages: 1672–1690
-  publisher: Wiley
-  title: An Algorithmic Solution for Computing Circle Intersection Areas and Its Applications
-    to Wireless Communications
-  volume: '14'
-  year: '2012'
-- author:
   - first: Andrea
     last: Munari
   - first: Marco
@@ -781,7 +781,7 @@ references:
   kind: inproceedings
   month: June
   title: Heterogeneous Time-Resource Allocation in Wireless Body Area Networks for
-    Maximum Likelihood Activity Detection
+    Green, Maximum Likelihood Activity Detection
   year: '2012'
 - author:
   - first: Marco
@@ -1188,7 +1188,7 @@ references:
   month: August
   number: '8'
   pages: 2391–2401
-  title: Steady State Analysis of Coded Cooperative Networks With HARQ Protocols
+  title: Steady State Analysis of Coded Cooperative Networks With HARQ Protocol
   volume: '57'
   year: '2009'
 - author:

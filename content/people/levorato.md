@@ -69,6 +69,7 @@ bibliography:
   items:
   - zois-levorato-2014-tsp
   - levorato-weeraddana-2014-globecom
+  - librino-levorato-2014-wcmc
   - levorato-ahmed-2014-smartgridcomm
 - title: 2013
   items:
@@ -83,7 +84,6 @@ bibliography:
   - levorato-mitra-2012-jwcn
   - levorato-mitra-2012-apsipa
   - levorato-narang-2012-globecom
-  - librino-levorato-2012-wcmc
   - munari-levorato-2012-tcom
   - gjika-levorato-2012-allerton
   - levorato-firouzabadi-2012-twc
