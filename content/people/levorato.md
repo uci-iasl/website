@@ -184,30 +184,6 @@ In 2016, he received the UC Hellman Foundation Award for his research on Smart C
 - **Armed with Science:** Yolanda R. Arrington, [DARPA Puts Techies to the Test at Bay Area Hackfest](http://science.dodlive.mil/2017/11/22/darpa-puts-techies-to-the-test-at-bay-area-hackfest/). *The Official US Defense Department Science Blog*. November 2017.
 
 
-# Students and Visitors
-
-- **Current students:**
-  - Igor Burago
-  - Sabur Hassan Baidya
-  - Davide Callegaro
-  - Delaram Amiri
-  - Peyman Tehrani
-  - Russel Geschrey (*protected veteran*)
-- **Alumni:**
-  - Nadia Ahmed (2017)
-- **Current Visitors:**
-  - Luca Bedogni (*Postdoc, University of Bologna, Italy*)
-  - Anna Valeria Guglielmi (*Ph.D. Student, University of Padova, Italy*)
-  - Marie Pied (*Undergraduate, ENSTA ParisTech, France*)
-  - Sanaz Moosavi (*Ph.D. Student, University of Turku, Finland*)
-  - Hyun-Ho Choi (*Associate professor, Hankyong National University, South Korea*)
-- **Past Visitors:**
-  - Roberto Valentini (*Ph.D. Student, University of L’Aquila Italy*)
-  - Adrien Lagrange (*Undergraduate, ENSTA ParisTech, France*)
-  - Robin Maillot (*Undergraduate, ENSTA ParisTech, France*)
-  - Yunsheng Yang (*Undergraduate, Tsinghua University, China*)
-
-
 # Awards
 
 - **2016:** *University of California Hellman Fellowship Award*.
