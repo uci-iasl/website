@@ -10,7 +10,9 @@ import sys
 import titlecase
 import yaml
 
-BIBTEX_STANDARD_TAGS = {
+from bibtexparser.bibdatabase import as_text as bib_expr_as_text
+
+BIBTEX_STANDARD_TAGS = (
 	'author',
 	'title',
 	'editor',
@@ -33,7 +35,7 @@ BIBTEX_STANDARD_TAGS = {
 	'day',
 	'month',
 	'year',
-}
+)
 BIBTEX_NAMELIST_TAGS = {'author', 'editor'}
 BIBTEX_TITLECASE_TAGS = {
 	'title',
@@ -117,14 +119,25 @@ def break_names(names_str, case_change):
 		records.append(record)
 	return records
 
-def make_record(bib_entry, case_change):
+def format_bibtex(bib_entry):
+	db = bibtexparser.bibdatabase.BibDatabase()
+	db.entries = [bib_entry]
+	w = bibtexparser.bwriter.BibTexWriter()
+	w.contents = ['entries']
+	w.display_order = BIBTEX_STANDARD_TAGS
+	w.indent = '  '
+	return bibtexparser.dumps(db, w).strip()
+
+def make_record(bib_entry, include_bibtex, case_change):
 	record = {
 		'id': bib_entry['ID'],
 		'kind': bib_entry['ENTRYTYPE'],
 	}
+	if include_bibtex:
+		record['bibtex'] = format_bibtex(bib_entry)
 	for tag in bib_entry:
 		if tag in BIBTEX_STANDARD_TAGS:
-			record[tag] = detexify(bib_entry[tag])
+			record[tag] = detexify(bib_expr_as_text(bib_entry[tag]))
 			if tag in BIBTEX_NAMELIST_TAGS:
 				record[tag] = break_names(record[tag], case_change)
 			elif tag in BIBTEX_TITLECASE_TAGS:
@@ -132,7 +145,7 @@ def make_record(bib_entry, case_change):
 			else:
 				record[tag] = debrace(record[tag])
 		elif tag not in ('ID', 'ENTRYTYPE'):
-			record[tag] = bib_entry[tag]
+			record[tag] = bib_expr_as_text(bib_entry[tag])
 	return record
 
 def record_date_str(record):
@@ -157,6 +170,7 @@ def load_bibtex(file):
 		common_strings=True,
 		homogenize_fields=True,
 		ignore_nonstandard_types=False,
+		interpolate_strings=False,
 	).parse_file(file, partial=True)
 
 def save_yaml(records, file):
@@ -165,9 +179,9 @@ def save_yaml(records, file):
 		allow_unicode=True,
 		encoding='utf-8')
 
-def main(bib_file, yaml_file, case_change=None):
+def main(bib_file, yaml_file, include_bibtex=False, case_change=None):
 	bib = load_bibtex(bib_file)
-	records = [make_record(e, case_change) for e in bib.entries]
+	records = [make_record(e, include_bibtex, case_change) for e in bib.entries]
 	records.sort(key=record_date_str, reverse=True)
 	save_yaml(records, yaml_file)
 
@@ -182,6 +196,10 @@ def parse_args():
 		type=argparse.FileType('w'),
 		default=sys.stdout,
 		help='output YAML file to write')
+	parser.add_argument('-b', '--include-bibtex',
+		action='store_true',
+		default=False,
+		help='include BibTeX source as a field in output records')
 	parser.add_argument('-c', '--change-case',
 		type=CaseChange,
 		choices=list(CaseChange),
@@ -190,4 +208,6 @@ def parse_args():
 
 if __name__ == '__main__':
 	args = parse_args()
-	main(args.bib_file, args.yaml_file, case_change=args.change_case)
+	main(args.bib_file, args.yaml_file,
+		include_bibtex=args.include_bibtex,
+		case_change=args.change_case)
