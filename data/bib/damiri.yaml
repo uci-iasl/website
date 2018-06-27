@@ -6,6 +6,12 @@ references:
     last: El-Sharkawy
   - first: Brian
     last: King
+  bibtex: "@inproceedings{amiri-elsharkawy-2016-ceet,\n  author = {Delaram Amiri and\
+    \ Mohamed El-Sharkawy and Brian King},\n  title = {Fast Bilateral Filter Technique\
+    \ for {3D}-{HEVC} Standard},\n  booktitle = {Proceedings of the International\
+    \ Conference on Advances in Computing, Electronics and Electrical Technology (CEET)},\n\
+    \  pages = {88--91},\n  month = nov,\n  year = {2016},\n  doi = {10.15224/978-1-63248-109-2-12}\n\
+    }"
   booktitle: Proceedings of the International Conference on Advances in Computing,
     Electronics and Electrical Technology (CEET)
   doi: 10.15224/978-1-63248-109-2-12
@@ -22,6 +28,12 @@ references:
     last: El-Sharkawy
   - first: Brian
     last: King
+  bibtex: "@inproceedings{amiri-elsharkawy-2015-csci,\n  author = {Delaram Amiri and\
+    \ Mohamed El-Sharkawy and Brian King},\n  title = {Adaptive Loop Filter Technique\
+    \ for {3D}-{HEVC} Standard},\n  booktitle = {Proceedings of the International\
+    \ Conference on Computational Science and Computational Intelligence (CSCI)},\n\
+    \  pages = {531--534},\n  month = dec,\n  year = {2015},\n  doi = {10.1109/csci.2015.19}\n\
+    }"
   booktitle: Proceedings of the International Conference on Computational Science
     and Computational Intelligence (CSCI)
   doi: 10.1109/csci.2015.19
@@ -35,6 +47,10 @@ references:
   author:
   - first: Delaram
     last: Amiri
+  bibtex: "@mastersthesis{amiri-2015-iupui,\n  author = {Delaram Amiri},\n  title\
+    \ = {Bilateral and Adaptive Loop Filter Implementations in {3D}-High Efficiency\
+    \ Video Coding Standard},\n  school = {Indiana University–Purdue University Indianapolis},\n\
+    \  address = {Indianapolis, Indiana},\n  month = dec,\n  year = {2015}\n}"
   id: amiri-2015-iupui
   kind: mastersthesis
   month: December
@@ -52,6 +68,13 @@ references:
     middle: Mansour
   - first: Forouhar
     last: Farzaneh
+  bibtex: "@article{keshavarzi-amiri-2014-tfeccs,\n  author = {Mahmoud Keshavarzi\
+    \ and Delaram Amiri and Amir Mansour Pezeshk and Forouhar Farzaneh},\n  title\
+    \ = {A Novel Method of Deinterleaving Pulse Repetition Interval Modulated Sparse\
+    \ Sequences in Noisy Environments},\n  journal = {IEICE Transactions on Fundamentals\
+    \ of Electronics, Communications and Computer Sciences},\n  volume = {97},\n \
+    \ number = {5},\n  pages = {1136--1139},\n  month = may,\n  year = {2014},\n \
+    \ doi = {10.1587/transfun.e97.a.1136}\n}"
   doi: 10.1587/transfun.e97.a.1136
   id: keshavarzi-amiri-2014-tfeccs
   journal: IEICE Transactions on Fundamentals of Electronics, Communications and Computer
@@ -74,6 +97,13 @@ references:
     last: Farzaneh
   - first: Delaram
     last: Amiri
+  bibtex: "@article{keshavarzi-pezeshk-2013-tfeccs,\n  author = {Mahmoud Keshavarzi\
+    \ and Amir Mansour Pezeshk and Forouhar Farzaneh and Delaram Amiri},\n  title\
+    \ = {A Robust Method for Recognition of Complicated Pulse Repetition Interval\
+    \ Modulations},\n  journal = {IEICE Transactions on Fundamentals of Electronics,\
+    \ Communications and Computer Sciences},\n  volume = {96},\n  number = {11},\n\
+    \  pages = {2306--2310},\n  month = nov,\n  year = {2013},\n  doi = {10.1587/transfun.e96.a.2306}\n\
+    }"
   doi: 10.1587/transfun.e96.a.2306
   id: keshavarzi-pezeshk-2013-tfeccs
   journal: IEICE Transactions on Fundamentals of Electronics, Communications and Computer
@@ -93,6 +123,13 @@ references:
     last: Keshavarzi
   - first: Kourosh
     last: Amiri
+  bibtex: "@article{amiri-keshavarzi-2013-asl,\n  author = {Delaram Amiri and Mahmoud\
+    \ Keshavarzi and Kourosh Amiri},\n  title = {A Simple Method for Pulse Repetition\
+    \ Interval Estimation and Tracking Radar Pulse Trains With Complex Pulse Repetition\
+    \ Interval Modulations},\n  journal = {Advanced Science Letters},\n  volume =\
+    \ {19},\n  number = {8},\n  pages = {2262--2265},\n  publisher = {American Scientific\
+    \ Publishers},\n  month = aug,\n  year = {2013},\n  doi = {10.1166/asl.2013.4954}\n\
+    }"
   doi: 10.1166/asl.2013.4954
   id: amiri-keshavarzi-2013-asl
   journal: Advanced Science Letters

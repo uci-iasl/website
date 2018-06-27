@@ -5,6 +5,12 @@ references:
     last: Baidya
   - first: Ravi
     last: Prakash
+  bibtex: "@inproceedings{baidya-prakash-2014-icc,\n  author = {Sabur Baidya and Ravi\
+    \ Prakash},\n  title = {Improving the Performance of Multipath {TCP} Over Heterogeneous\
+    \ Paths Using Slow Path Adaptation},\n  booktitle = {Proceedings of the IEEE International\
+    \ Conference on Communications (ICC)},\n  pages = {3222--3227},\n  address = {Sydney,\
+    \ Australia},\n  month = jun,\n  year = {2014},\n  doi = {10.1109/icc.2014.6883817}\n\
+    }"
   booktitle: Proceedings of the IEEE International Conference on Communications (ICC)
   doi: 10.1109/icc.2014.6883817
   id: baidya-prakash-2014-icc
@@ -24,6 +30,12 @@ references:
     last: Basu
   - first: Ravi
     last: Prakash
+  bibtex: "@techreport{baidya-shirol-2013-utdallas,\n  author = {Sabur Baidya and\
+    \ Pramod Shirol and Abhishek Basu and Ravi Prakash},\n  title = {Employing {WiFi}\
+    \ Direct to Build a Wireless Network Over Both 2.4 {GHz} and 5.8 {GHz} Bands},\n\
+    \  number = {UTDCS-16-13},\n  institution = {Department of Computer Science, University\
+    \ of Texas at Dallas},\n  address = {Richardson, Texas},\n  month = sep,\n  year\
+    \ = {2013}\n}"
   id: baidya-shirol-2013-utdallas
   institution: Department of Computer Science, University of Texas at Dallas
   kind: techreport
