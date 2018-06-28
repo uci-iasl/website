@@ -71,7 +71,7 @@ body>header {
 body>header .logo { float: left; }
 body>header .logo img { height: 30px; }
 body>header nav { float: right; }
-body>header nav .sep:before {
+body>header nav .sep::before {
   content: "·";
   color: var(--header-accent-fg-color);
   padding: 0px 4px;
@@ -213,14 +213,14 @@ section.profile .portrait img {
 section.profile .label { font-weight: bold; }
 section.profile .name { margin-bottom: 16px; }
 section.profile .status .years { font-size: 90%; margin-left: 1ex; }
-section.profile .status .years:before { content: "·"; margin-right: 1ex; }
+section.profile .status .years::before { content: "·"; margin-right: 1ex; }
 section.profile .resume>section { margin-top: 6px; }
 section.profile ul.interests, section.profile ul.education {
   list-style: none;
   margin: 0;
   padding-left: 6px;
 }
-section.profile ul.interests li:before { content: "–"; margin-right: 6px; }
+section.profile ul.interests li::before { content: "–"; margin-right: 6px; }
 section.profile ul.education li { margin-top: 4px; }
 section.profile ul.education li:first-of-type { margin-top: 2px; }
 section.profile ul.education .year {
@@ -228,7 +228,7 @@ section.profile ul.education .year {
   float: left;
   font-size: 90%;
 }
-section.profile ul.education .year:after {
+section.profile ul.education .year::after {
   content: "·";
   margin-left: 1ex;
 }
@@ -246,7 +246,7 @@ section.profile ul.education .record>.institution {
     - 4em);
 }
 section.profile a.resume { font-weight: bold; }
-section.profile .contacts .websites>.sep:before {
+section.profile .contacts .websites>.sep::before {
   content: "·";
   padding: 0 0.75ex;
 }
@@ -261,7 +261,7 @@ ul.bibliography {
   padding-left: 0;
   margin: 0.5em 0 1em 1em;
 }
-ul.bibliography>li:before {
+ul.bibliography>li::before {
   content: "–";
   margin-left: -1.75ex;
   margin-right: 0.2ex;
@@ -287,32 +287,32 @@ ul.bibliography>li:before {
 .bibliography>li .bibentry.manual .title {
   font-style: italic;
 }
-.bibliography>li .bibentry.incollection .title:before,
-.bibliography>li .bibentry.article .title:before,
-.bibliography>li .bibentry.inproceedings .title:before,
-.bibliography>li .bibentry.conference .title:before,
-.bibliography>li .bibentry.techreport .title:before,
-.bibliography>li .bibentry.mastersthesis .title:before,
-.bibliography>li .bibentry.phdthesis .title:before,
-.bibliography>li .bibentry.booklet .title:before,
-.bibliography>li .bibentry.misc .title:before,
-.bibliography>li .bibentry.unpublished .title:before,
-a.citation .title:before {
+.bibliography>li .bibentry.incollection .title::before,
+.bibliography>li .bibentry.article .title::before,
+.bibliography>li .bibentry.inproceedings .title::before,
+.bibliography>li .bibentry.conference .title::before,
+.bibliography>li .bibentry.techreport .title::before,
+.bibliography>li .bibentry.mastersthesis .title::before,
+.bibliography>li .bibentry.phdthesis .title::before,
+.bibliography>li .bibentry.booklet .title::before,
+.bibliography>li .bibentry.misc .title::before,
+.bibliography>li .bibentry.unpublished .title::before,
+a.citation .title::before {
   font-weight: normal;
   content: "“";
   margin-right: 0.4pt;
 }
-.bibliography>li .bibentry.incollection .title:after,
-.bibliography>li .bibentry.article .title:after,
-.bibliography>li .bibentry.inproceedings .title:after,
-.bibliography>li .bibentry.conference .title:after,
-.bibliography>li .bibentry.techreport .title:after,
-.bibliography>li .bibentry.mastersthesis .title:after,
-.bibliography>li .bibentry.phdthesis .title:after,
-.bibliography>li .bibentry.booklet .title:after,
-.bibliography>li .bibentry.misc .title:after,
-.bibliography>li .bibentry.unpublished .title:after,
-a.citation .title:after {
+.bibliography>li .bibentry.incollection .title::after,
+.bibliography>li .bibentry.article .title::after,
+.bibliography>li .bibentry.inproceedings .title::after,
+.bibliography>li .bibentry.conference .title::after,
+.bibliography>li .bibentry.techreport .title::after,
+.bibliography>li .bibentry.mastersthesis .title::after,
+.bibliography>li .bibentry.phdthesis .title::after,
+.bibliography>li .bibentry.booklet .title::after,
+.bibliography>li .bibentry.misc .title::after,
+.bibliography>li .bibentry.unpublished .title::after,
+a.citation .title::after {
   font-weight: normal;
   content: "”";
   margin-left: 0.4pt;
@@ -321,12 +321,12 @@ a.citation .title:after {
 .bibliography>li .bibentry .extras {
   font-size: 70%;
 }
-.bibliography>li .bibentry .extras .item:not(:first-of-type):before {
+.bibliography>li .bibentry .extras .item:not(:first-of-type)::before {
   content: "·";
   font-weight: bold;
   padding: 0 0.5ex;
 }
-.bibliography>li .bibentry .extras .item.bibtex:not(:first-of-type):before {
+.bibliography>li .bibentry .extras .item.bibtex:not(:first-of-type)::before {
   padding-right: 0.4ex;
 }
 .bibliography>li .bibentry .extras a {
@@ -439,7 +439,7 @@ blockquote {
   padding: 0.5em 10px;
 }
 
-blockquote:before {
+blockquote::before {
   line-height: 0.1em;
   margin-right: 0.25em;
   vertical-align: -0.4em;
