@@ -1,6 +1,7 @@
 :root {
   --bg-color: #fbfbfb;
   --fg-color: black;
+  --lighter-fg-color: #2e2e2e;
   --highlighted-bg-color: #dedede;
 
   --headings-fg-color: black;
@@ -276,19 +277,6 @@ ul.bibliography>li:before {
 
 .bibliography>li .bibentry .title {}
 
-.bibliography>li .bibentry .links {
-  padding-left: 1ex;
-  font-size: 70%;
-}
-.bibliography>li .bibentry .links .sep:not(:first-of-type):before {
-  content: "·";
-  padding: 0 0.5ex;
-}
-.bibliography>li .bibentry .links a {
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
 .bibliography>li .bibentry.book .title,
 .bibliography>li .bibentry.inbook .title,
 .bibliography>li .bibentry.incollection .booktitle,
@@ -330,6 +318,39 @@ a.citation .title:after {
   margin-left: 0.4pt;
 }
 
+.bibliography>li .bibentry .extras {
+  font-size: 70%;
+}
+.bibliography>li .bibentry .extras .item:not(:first-of-type):before {
+  content: "·";
+  font-weight: bold;
+  padding: 0 0.5ex;
+}
+.bibliography>li .bibentry .extras .item.bibtex:not(:first-of-type):before {
+  padding-right: 0.4ex;
+}
+.bibliography>li .bibentry .extras a {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.bibliography>li .bibentry .extras a[role=button] {
+  color: var(--lighter-fg-color);
+}
+.bibliography>li .bibentry .extras a[role=button]:hover {
+  color: var(--link-hover-fg-color);
+}
+.bibliography>li .bibentry pre.bibtex {
+  display: none;
+  white-space: pre-wrap;
+  margin: 0.6ex 0 0 0;
+  padding: 0 1.5em;
+}
+.bibliography>li .bibentry pre.bibtex>code {
+  display: block;
+  font-size: 85%;
+  line-height: 120%;
+}
+
 a {
   color: var(--link-fg-color);
   border-bottom: 1px solid var(--link-ul-color);
@@ -337,6 +358,11 @@ a {
   transition-duration: 0.33s;
   transition-timing-function: ease-out;
   text-decoration: none;
+}
+a[role=button] {
+  color: var(--fg-color);
+  border-bottom: 1px solid var(--link-subtle-ul-color);
+  cursor: pointer;
 }
 a:visited {
   color: var(--link-visited-fg-color);

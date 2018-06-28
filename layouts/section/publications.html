@@ -5,8 +5,8 @@
       <h1 class="page-title">Publications</h1>
     </header>
     <section class="content">
-      {{ .Content }}
       {{ partial "bib/section.html" (dict "items" .Params.bibliography "Page" .Page "Site" .Site) }}
+      {{ .Content }}
     </section>
   </article>
 </main>

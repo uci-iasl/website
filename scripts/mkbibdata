@@ -26,5 +26,5 @@ fi
 for bib in "${bibfiles[@]}"; do
 	[[ -f "$bib" ]] || { echo "$bib: file does not exist" >&2; continue; }
 	bibbase="$(basename "${bib%%.bib}")"
-	"$bibtex2yaml" "$bib" >"$outdir/$bibbase.yaml"
+	"$bibtex2yaml" --include-bibtex "$bib" >"$outdir/$bibbase.yaml"
 done

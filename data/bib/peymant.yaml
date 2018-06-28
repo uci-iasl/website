@@ -7,6 +7,12 @@ references:
     last: Tehrani
   - first: Mehdi
     last: Bennis
+  bibtex: "@article{mili-tehrani-2016-wcl,\n  author = {Mohammad Robat Mili and Peyman\
+    \ Tehrani and Mehdi Bennis},\n  title = {Energy-Efficient Power Allocation in\
+    \ {OFDMA} {D2D} Communication by Multiobjective Optimization},\n  journal = {IEEE\
+    \ Wireless Communications Letters},\n  volume = {5},\n  number = {6},\n  pages\
+    \ = {668--671},\n  month = dec,\n  year = {2016},\n  doi = {10.1109/lwc.2016.2614507}\n\
+    }"
   doi: 10.1109/lwc.2016.2614507
   id: mili-tehrani-2016-wcl
   journal: IEEE Wireless Communications Letters
@@ -26,6 +32,12 @@ references:
     last: Lahouti
   - first: Michele
     last: Zorzi
+  bibtex: "@inproceedings{tehrani-lahouti-2016-icc,\n  author = {Peyman Tehrani and\
+    \ Farshad Lahouti and Michele Zorzi},\n  title = {Resource Allocation in {OFDMA}\
+    \ Networks With Half-Duplex and Imperfect Full-Duplex Users},\n  booktitle = {Proceedings\
+    \ of the IEEE International Conference on Communications (ICC)},\n  address =\
+    \ {Kuala Lumpur, Malaysia},\n  month = may,\n  year = {2016},\n  doi = {10.1109/icc.2016.7510917}\n\
+    }"
   booktitle: Proceedings of the IEEE International Conference on Communications (ICC)
   doi: 10.1109/icc.2016.7510917
   id: tehrani-lahouti-2016-icc
