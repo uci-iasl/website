@@ -213,13 +213,19 @@
     {{- ", " }}<span class="note">unpublished</span>
   {{- end -}}
 {{- end -}}
-{{- "." -}}
+{{- ". " -}}
 
-<span class="links">
+<span class="extras">
   {{- with .entry.doi -}}
-    <span class="sep"></span>{{ "" -}}
-    <a href="https://doi.org/{{ . }}">Web</a>
+    <span class="item publink"><a href="https://doi.org/{{ . }}">Web</a></span>
+  {{- end -}}
+  {{- if index .entry "bibtex" -}}
+    <span class="item bibtex">{{ "" -}}
+      <a role="button" onclick="bib.toggleBibtexDisplay(this)">▸BibTeX</a>{{ "" -}}
+    </span>
   {{- end -}}
 </span>
+
+{{- with .entry.bibtex }}<pre class="bibtex"><code>{{ . }}</code></pre>{{ end -}}
 
 </section></li>
