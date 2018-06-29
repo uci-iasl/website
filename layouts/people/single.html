@@ -15,10 +15,8 @@
           {{- .Params.status -}}
           {{- if isset .Params "yearjoined" -}}
             <span class="years">
-              {{- if isset .Params "yeargraduated" -}}
-                {{- .Params.yeargraduated -}}
-              {{- else }}now{{ end -}}
               {{- .Params.yearjoined }}&hairsp;–&hairsp;
+              {{- with .Params.yeargraduated }}{{ . }}{{ else }}now{{ end -}}
             </span>
           {{- end -}}
         </section>
@@ -46,12 +44,15 @@
             </li>
           {{- end }}
           </ul>
-          {{- if isset .Params "resume" }}
-            {{- if findRE "^\\w+://" .Params.resume 1 }}
+          {{ if isset .Params "resume" -}}
+            {{- if findRE "^\\w+://" .Params.resume 1 -}}
               <a class="resume" href="{{ .Params.resume }}" target="_blank">Full Resume</a>
-            {{- else if fileExists (printf "static/dl/people/%s/%s" .File.TranslationBaseName .Params.resume) }}
-              <a class="resume" href="/dl/people/{{ .File.TranslationBaseName }}/{{ .Params.resume }}" target="_blank">Full Resume</a>
-            {{- end }}
+            {{- else -}}
+              {{- $path := printf "/dl/people/%s/%s" .File.TranslationBaseName .Params.resume -}}
+              {{- if fileExists (printf "static/%s" $path) -}}
+                <a class="resume" href="{{ $path }}">Full Resume</a>
+              {{- end -}}
+            {{- end -}}
           {{- end }}
         </section>
         {{- end }}
@@ -62,7 +63,7 @@
           <div class="email">
             <span class="label">Email:</span>
             <a class="email" href="mailto:{{ .Params.name }} <{{ .Params.email }}>">
-              {{ .Params.email }}
+              {{- .Params.email -}}
             </a>
           </div>
           {{- end }}
@@ -71,14 +72,10 @@
             <span class="label">
               Website{{ if gt (len .Params.websites) 1 }}s{{ end }}:
             </span>
-            {{- range $idx, $website := .Params.websites }}
-              {{- if gt $idx 0 }}<span class="sep"></span>{{ end -}}
-              <a href="{{ $website.url }}" target="_blank">
-                {{- if isset $website "title" }}
-                  {{- $website.title }}
-                {{- else }}
-                  {{- $website.url | replaceRE "^https?://" "" }}
-                {{- end -}}
+            {{ range $idx, $site := .Params.websites -}}
+              {{- if gt $idx 0 }}<span class="sep"></span>{{ end }}
+              <a href="{{ $site.url }}" target="_blank">
+                {{- $site.title | default ($site.url | replaceRE "^https?://" "") -}}
               </a>
             {{- end }}
           </div>
