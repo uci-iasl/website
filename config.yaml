@@ -1,28 +1,32 @@
-baseURL: 'http://iasl.ics.uci.edu/'
-title: 'Intelligent and Autonomous Systems Lab'
-languageCode: 'en-US'
-pluralizeListTitles: false
+title: &title 'Intelligent and Autonomous Systems Lab'
+baseurl: 'http://iasl.ics.uci.edu/'
+languagecode: 'en-US'
+pluralizelisttitles: false
 
 blackfriday:
-  hreftargetblank: true
   fractions: false
+  hreftargetblank: true
 
 params:
-  copyright:
-    title: 'IASL'
-    url: '/people/'
-  description: 'Latest updates, results, and publications by the Intelligent and Autonomous Systems Lab at University of California, Irvine'
-  datedayfmt: 'Jan 2, 2006'
-  datedaytimefmt: 'Jan 2, 2006, 15:04 MST'
+  author: *title
+  description: >-
+    Latest updates, results, and publications
+    by the Intelligent and Autonomous Systems Lab
+    at University of California, Irvine
   contact:
     name: 'Marco Levorato'
     email: 'levorato+www@uci.edu'
+  copyright:
+    title: 'IASL'
+    url: '/people/'
+  datedayfmt: 'Jan 2, 2006'
+  datedaytimefmt: 'Jan 2, 2006, 15:04 MST'
 
   bibliography:
+    abbrevmonths: true
     fullnames: false
     etalcutoff: 5
     etalkeep: 2
-    abbrevmonths: true
     citefirstnames: false
     citetitlecutoff: 30
 
