@@ -30,6 +30,8 @@ params:
     roles:
     - id: 'faculty'
       plural: 'Faculty'
+    - id: 'postdoc'
+      plural: 'Postdocs'
     - id: 'student-phd'
       plural: 'Ph.D. Students'
     - id: 'student-masters'
