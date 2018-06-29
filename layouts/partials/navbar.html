@@ -1,15 +1,12 @@
 <header>
   <div class="wrap">
     <div class="logo">
-      <a class="site-title" href="{{ .Site.BaseURL }}">
-        <!-- img class="logo" src="/img/logo/logo.svg" -->
-        {{ .Site.Title }}
-      </a>
+      <a class="site-title" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
     </div>
     <nav>
-      {{- range $idx, $item := .Site.Menus.main }}
-      {{ if gt $idx 0 }}<span class="sep"></span>{{ end }}
-      <a href="{{ $item.URL }}">{{ $item.Name }}</a>
+      {{- range $i, $item := .Site.Menus.main }}
+      {{ if gt $i 0 }}<span class="sep"></span>{{ end }}
+      {{ $item.Pre }}<a href="{{ $item.URL }}">{{ $item.Name }}</a>{{ $item.Post }}
       {{- end }}
     </nav>
   </div>
