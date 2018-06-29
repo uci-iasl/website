@@ -15,10 +15,10 @@
           {{- .Params.status -}}
           {{- if isset .Params "yearjoined" -}}
             <span class="years">
-              {{- .Params.yearjoined }}&#8202;–&#8202;
               {{- if isset .Params "yeargraduated" -}}
                 {{- .Params.yeargraduated -}}
               {{- else }}now{{ end -}}
+              {{- .Params.yearjoined }}&hairsp;–&hairsp;
             </span>
           {{- end -}}
         </section>

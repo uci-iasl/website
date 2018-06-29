@@ -14,10 +14,10 @@
       <div class="status">{{ .Params.status }}</div>
       {{- if isset .Params "yearjoined" }}
       <div class="years">
-        {{- .Params.yearjoined }}&#8202;–&#8202;{{ "" -}}
         {{ if isset .Params "yeargraduated" -}}
           {{- .Params.yeargraduated -}}
         {{- else }}now{{ end -}}
+        {{- .Params.yearjoined }}&hairsp;–&hairsp;
       </div>
       {{- end }}
       {{- if isset .Params "bibliography" }}
