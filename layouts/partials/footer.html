@@ -6,9 +6,11 @@
     </span>
     {{- with .Site.Params.copyright -}}
       {{- " " -}}
-      {{- with .url }}<a href="{{ . }}">{{ end -}}
-      {{- .title -}}
-      {{- with .url }}</a>{{ end -}}
+      {{- if isset . "url" -}}
+        <a href="{{ .url }}">{{ .title }}</a>
+      {{- else -}}
+        {{- .title -}}
+      {{- end -}}
     {{- end -}}
   </div>
   <div class="logo">
@@ -16,11 +18,13 @@
       <img src="/img/logo/anteater.png" alt="UCI ICS">
     </a>
   </div>
+  {{- with .Site.Params.contact }}
   <div class="contact">
-    {{- with .Site.Params.contact -}}
-    Contact: <a class="email" href="mailto:{{ .name }} <{{ .email }}>">{{ .name }}</a>
-    {{- end -}}
+    Contact: <a class="email" href="mailto:{{ .name }} <{{ .email }}>">
+      {{- .name | default .email -}}
+    </a>
   </div>
+  {{- end }}
 </footer>
 </body>
 </html>
