@@ -53,7 +53,7 @@ if [[ -d $repodir ]]; then
 	gitc() { git --git-dir="$repodir"/.git --work-tree="$repodir" "$@"; }
 	gitc checkout "$branch" &&
 	gitc fetch origin "$branch" &&
-	local="$(gitc rev-parse HEAD)" &&
+	local="$(gitc rev-parse @)" &&
 	remote="$(gitc rev-parse @{u})" &&
 	[[ "$local" != "$remote" ]] &&
 	gitc pull origin "$branch"
