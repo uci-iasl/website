@@ -199,7 +199,10 @@ section.vcard .record>.name {
 }
 section.vcard .record>.years {
   font-size: calc(0.9 * var(--font-size));
-  margin-bottom: 5px;
+}
+section.vcard .record>.website {
+  font-size: calc(0.95 * var(--font-size));
+  font-weight: bold;
 }
 
 section.profile {
