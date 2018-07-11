@@ -26,9 +26,9 @@ email: levorato@uci.edu
 websites:
 - url: https://www.ics.uci.edu/~mlevorat
 address: |
-  3206 Donald Bren Hall\
   University of California, Irvine\
-  Irvine, CA, 92697-2800
+  3206 Donald Bren Hall\
+  Irvine, CA 92697-3435
 bibliography:
 - title: 2018
   items:
