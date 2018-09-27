@@ -18,6 +18,12 @@
         {{- with .Params.yeargraduated }}{{ . }}{{ else }}now{{ end -}}
       </div>
       {{- end }}
+      {{- if and (hasPrefix .Params.role "alumnus") (isset .Params "websites") }}
+      <div class="website">
+        {{- $site := index .Params.websites 0 }}
+        <a href="{{ $site.url }}" target="_blank">Website</a>
+      </div>
+      {{- end }}
     </div>
   </section>
 </li>

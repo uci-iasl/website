@@ -1,7 +1,7 @@
 ---
 name: Davide Callegaro
 role: student-phd
-status: Ph.D. Student
+status: Ph.D. Candidate
 yearjoined: 2016
 portrait: dcallega.jpg
 badge: dcallega-badge.jpg

@@ -26,9 +26,9 @@ email: levorato@uci.edu
 websites:
 - url: https://www.ics.uci.edu/~mlevorat
 address: |
-  3206 Donald Bren Hall\
   University of California, Irvine\
-  Irvine, CA, 92697-2800
+  3206 Donald Bren Hall\
+  Irvine, CA 92697-3435
 bibliography:
 - title: 2018
   items:
@@ -188,11 +188,11 @@ In 2016, he received the UC Hellman Foundation Award for his research on Smart C
 # Awards
 
 - **2016:** *University of California Hellman Fellowship Award*.
-- **2015/2016:** *UCI Academic Senate Council on Research, Computing, and Libraries (CORCL) Award*.
+- **2015–2016:** *UCI Academic Senate Council on Research, Computing, and Libraries (CORCL) Award*.
 - **2014:** *Multi Investigator Research Grant* from the UCI Division of the Council on Research, Computing, and Libraries.
 - **2012:** *Best paper award* at IEEE Global Communications Conference (GLOBECOM), Signal processing symposium.
 - **2013:** *ACCESS Post Doctoral Research Fellowship* at the ACCESS Linnaeus Center, Royal Institute of Technology (KTH), Sweden.
-- **2009–2010:** Nomination for the *Best Young Researcher Award*, Deptartment of Information Engineering, University of Padova, Italy.
+- **2009, 2010:** Nominations for the *Best Young Researcher Award*, Deptartment of Information Engineering, University of Padova, Italy.
 
 
 # Service
