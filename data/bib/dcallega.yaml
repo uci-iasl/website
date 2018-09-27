@@ -10,8 +10,8 @@ references:
     \ Selected Areas in Communications: Tactile Internet (Globecom2018 SAC TI)},\n\
     \ month = dec,\n  year = {2018},\n\
     }"
-  booktitle: 2018 IEEE Global Communications Conference:\
-    \ Selected Areas in Communications: Tactile Internet (Globecom2018 SAC TI)
+  booktitle: 2018 IEEE Global Communications Conference,
+    Selected Areas in Communications, Tactile Internet (Globecom2018 SAC TI)
   id: callegaro-levorato-2018-globecom
   kind: inproceedings
   month: December
