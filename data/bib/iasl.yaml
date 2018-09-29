@@ -8,16 +8,12 @@ references:
   bibtex: "@inproceedings{callegaro-levorato-2018-globecom,\n  author = {Davide Callegaro\
     \ and Marco Levorato},\n  title = {Optimal Computation Offloading in {Edge-Assisted}\
     \ {UAV} Systems},\n  booktitle = {2018 IEEE Global Communications Conference:\
-    \ Selected Areas in\nCommunications: Tactile Internet (Globecom2018 SAC TI)},\n\
-    \  address = {Abu Dhabi, United Arab Emirates},\n  month = dec,\n  year = {2018},\n\
-    \  days = {8},\n  keyword = {Edge Computing; Urban Internet of Things; Unmanned\
-    \ Aerial Vehicles; Autonomous Systems}\n}"
+    \ Selected Areas in Communications: Tactile Internet (Globecom2018 SAC TI)},\n\
+    \  address = {Abu Dhabi, United Arab Emirates},\n  month = dec,\n  year = {2018}\n\
+    }"
   booktitle: '2018 IEEE Global Communications Conference: Selected Areas in Communications:
     Tactile Internet (Globecom2018 SAC TI)'
-  days: '8'
   id: callegaro-levorato-2018-globecom
-  keyword: Edge Computing; Urban Internet of Things; Unmanned Aerial Vehicles; Autonomous
-    Systems
   kind: inproceedings
   month: December
   title: Optimal Computation Offloading in Edge-Assisted UAV Systems
