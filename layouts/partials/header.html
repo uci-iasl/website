@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode | default "en-US" }}">
 <head>
-  <meta  charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
   <meta name="referrer" content="no-referrer">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   {{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
   {{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
@@ -23,16 +23,16 @@
 
   <base href="{{ .Site.BaseURL }}">
   <link rel="canonical" href="{{ .Permalink }}">
-  <link rel="stylesheet" href="{{ .Site.BaseURL }}css/fonts.css">
-  <link rel="stylesheet" href="{{ .Site.BaseURL }}css/main.css">
+  <link rel="stylesheet" href="/css/fonts.css">
+  <link rel="stylesheet" href="/css/main.css">
 
   {{ if index .Params "bibliography" -}}
-  <script type="text/javascript" src="{{ .Site.BaseURL }}js/bibliography.js"></script>
+  <script type="text/javascript" src="/js/bibliography.js"></script>
   {{- end }}
 
-  <link rel="shortcut icon" href="{{ .Site.BaseURL }}img/logo/favicon.ico">
-  <link rel="apple-touch-icon" sizes="152x152" href="{{ .Site.BaseURL }}img/logo/apple-touch-icon-152x152.png">
-  <meta name="theme-color" content="#fbfbfb">
+  <meta name="theme-color" content="#404040">
+  <link rel="shortcut icon" href="/img/logo/favicon.ico">
+  <link rel="apple-touch-icon" href="/img/logo/apple-touch-icon.png">
 </head>
 <body>
 {{ partial "navbar.html" . }}
