@@ -216,8 +216,20 @@
 {{- ". " -}}
 
 <span class="extras">
+  {{- with .entry.id | urlize -}}
+    {{/* Add a link to the PDF file, unless the title already links to it (see the title.html partial). */}}
+    {{- if and (. | printf "content/publications/%s.md" | fileExists) (. | printf "static/pub/%s.pdf" | fileExists) -}}
+      <span class="item paper"><a href="/pub/{{ . }}.pdf">PDF</a></span>
+    {{- end -}}
+    {{- if . | printf "static/pub/%s-poster.pdf" | fileExists -}}
+      <span class="item poster"><a href="/pub/{{ . }}-poster.pdf">Poster</a></span>
+    {{- end -}}
+    {{- if . | printf "static/pub/%s-slidedeck.pdf" | fileExists -}}
+      <span class="item slidedeck"><a href="/pub/{{ . }}-slidedeck.pdf">Slide&nbsp;Deck</a></span>
+    {{- end -}}
+  {{- end -}}
   {{- with .entry.doi -}}
-    <span class="item publink"><a href="https://doi.org/{{ . }}">Web</a></span>
+    <span class="item pubref"><a href="https://doi.org/{{ . }}">Web</a></span>
   {{- end -}}
   {{- if index .entry "bibtex" -}}
     <span class="item bibtex">{{ "" -}}
