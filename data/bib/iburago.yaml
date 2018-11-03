@@ -7,11 +7,12 @@ references:
     last: Levorato
   bibtex: "@inproceedings{burago-levorato-2018-ita,\n  author = {Igor Burago and Marco\
     \ Levorato},\n  title = {Edge-Assisted On-Sensor Information Selection for Bandwidth-Constrained\
-    \ Systems},\n  booktitle = {Proceedings of the Information Theory and Applications\
-    \ Workshop (ITA)},\n  address = {San Diego, California},\n  month = feb,\n  year\
-    \ = {2018}\n}"
-  booktitle: Proceedings of the Information Theory and Applications Workshop (ITA)
+    \ Systems},\n  booktitle = {Information Theory and Applications Workshop (ITA)},\n\
+    \  address = {San Diego, California},\n  month = feb,\n  year = {2018},\n  intype\
+    \ = {presented at the}\n}"
+  booktitle: Information Theory and Applications Workshop (ITA)
   id: burago-levorato-2018-ita
+  intype: presented at the
   kind: inproceedings
   month: February
   title: Edge-Assisted On-Sensor Information Selection for Bandwidth-Constrained Systems
