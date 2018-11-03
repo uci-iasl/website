@@ -14,10 +14,7 @@
         <section class="status">
           {{- .Params.status -}}
           {{- if isset .Params "yearjoined" -}}
-            <span class="years">
-              {{- .Params.yearjoined }}&hairsp;–&hairsp;
-              {{- with .Params.yeargraduated }}{{ . }}{{ else }}now{{ end -}}
-            </span>
+            <span class="years">{{ partial "people/yearrange.html" .Params }}</span>
           {{- end -}}
         </section>
 

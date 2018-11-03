@@ -13,16 +13,14 @@
       </div>
       <div class="status">{{ .Params.status }}</div>
       {{- if isset .Params "yearjoined" }}
-      <div class="years">
-        {{- .Params.yearjoined }}&hairsp;–&hairsp;
-        {{- with .Params.yeargraduated }}{{ . }}{{ else }}now{{ end -}}
-      </div>
+        <div class="years">{{ partial "people/yearrange.html" .Params }}</div>
       {{- end }}
       {{- if and (hasPrefix .Params.role "alumnus") (isset .Params "websites") }}
-      <div class="website">
-        {{- $site := index .Params.websites 0 }}
-        <a href="{{ $site.url }}" target="_blank">Website</a>
-      </div>
+        {{- with index .Params.websites 0 }}
+          <div class="website">
+            <a href="{{ .url }}" target="_blank">Website</a>
+          </div>
+        {{- end }}
       {{- end }}
     </div>
   </section>
