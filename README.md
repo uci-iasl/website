@@ -1,6 +1,6 @@
 # UCI Intelligent and Autonomous Systems Lab Website
 
-The master repository for the source code behind the website at
+This is the repository for the source code behind the website at
 [iasl.ics.uci.edu][iasl].
 Built using the [Hugo][hugo] static website generator.
 
@@ -22,23 +22,24 @@ below, so you can be made a member.
 ### Workflow
 
 The `master` branch is reserved to always represent the current state
-of the website as deployed at the [lab address][iasl].
+of the website as [publicly hosted][iasl].
 Committing or pushing directly to `master` is prohibited.
 
 When working on a change, create a separate branch based on the
-`draft` branch (also the default one), make one or more commits
-constituting the change and then create a pull request for merging
-your branch back into `draft`.
+`draft` branch, make one or more commits constituting the change and
+then create a pull request for merging your branch back into `draft`.
 You can also use another branch based on `draft` as a starting point
 (useful when collaborating on different chunks of a single big
-change).
+change, e.g., a new project page).
 Each pull request should roughly correspond to a single logical
-change.
+change, regardless of the amount of code it affects.
 
-The maintainers make sure that the proposed changes look good
-technically and do not break the build, then merge them into `draft`,
-where they are subject to review, discussion, and proposals of further
-edits.
+The maintainers make sure that the proposed changes do not break
+the build, look good technically, and follow the website guidelines,
+before merging them into `draft`, where they are subject to discussion
+and proposals of further edits.
+The code in `draft` should always compile to a working website without
+errors.
 From there, whenever ready, the changes are merged into `master`
 for deployment.
 
@@ -46,17 +47,19 @@ for deployment.
 
 The main kinds of pages maintained within the website are:
 
-- Personal pages,
-- Project pages,
-- Publications page.
+- personal pages,
+- project pages,
+- the Publications page.
 
 #### Personal Pages
 
 The content of a personal page is populated from the following files.
 
 1. A Markdown file `content/people/‹id›.md` formatted after the
-[`example/people.md`][personal-template] template, containing a solid
-draft of your personal page.
+[`example/people.md`][personal-template] template, containing personal
+profile, such as education, research interests, publications, as well
+as any other information in a free form that is to constitute the
+personal page.
 
 2. A portrait photo `static/img/people/‹id›.jpg` that is *taller than
 wider*, preferably of 400px wide or more.
@@ -64,7 +67,9 @@ Optionally, you can also provide a *square* photo
 `static/img/people/‹id›-badge.jpg`, preferably of 200px wide or more.
 The former will be featured on your personal page itself, the latter
 (if present) will be used instead of the former on the People page.
-(See also [`example/people.md`][personal-template].)
+See [`example/people.md`][personal-template] on how to bind
+those image files to the personal profile via the front-matter
+metadata of the personal page.
 
 3. BibTeX files in the `static/bib` listing the publications available
 for referencing in bibliographies across the website.
@@ -73,7 +78,7 @@ Levorato’s supervision must go to the `static/bib/iasl.bib` file, and
 should be included into the lab-wide bibliography on the Publications
 page, which is defined by the `content/publications/_index.md` file.
 Publications you have done in the past or since joining the lab but
-outside of it and not under Prof. Levorato’s supervision, must to to
+outside of it and not under Prof. Levorato’s supervision, must go to
 the `static/bib/‹id›.bib` file, and should be included into
 bibliographies on your personal page or relevant project pages.
 
@@ -83,11 +88,11 @@ website, e.g., `https://iasl.ics.uci.edu/people/panteater/`.
 A good default for the id is your UCI email address without the
 `@uci.edu` domain part, but, if you do not like that to be your id,
 you can use a different one of your liking.
-For the sake of consistency, please prefer an id in the form of
-`flast`, `fmlast`, `last`, `firstlast`, or `firstmlast`, where `first`
-and `last` stand for your first and last names, respectively, and `f`
-and `m` stand for the first letters of your first and middle names,
-respectively, all in lowercase.
+For the sake of consistency, please prefer an all-lowercase id in
+the form of `flast`, `fmlast`, `last`, `firstlast`, or `firstmlast`, where
+`first` and `last` stand for your first and last names, respectively,
+and `f` and `m` stand for the first letters of your first and middle
+names, respectively.
 If none of that works for you, something else is fine, too, but please
 keep it more or less formal and do not make it too short or too long.
 
@@ -130,8 +135,8 @@ For that, you can run
     $ hugo server
 
 in the command line from the root directory of the repository, and
-keep the page `http://localhost:1313/` page open in browser.
-Whenever any of the files is changed, the website is automatically
+keep the `http://localhost:1313/` page open in browser.
+Whenever any of the files are changed, the website is automatically
 rebuilt and updated in that browser window.
 
 To see the changes in bibliography information reflected on the
