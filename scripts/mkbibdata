@@ -28,3 +28,8 @@ for bib in "${bibfiles[@]}"; do
 	bibbase="$(basename "${bib%%.bib}")"
 	"$bibtex2yaml" --include-bibtex "$bib" >"$outdir/$bibbase.yaml"
 done
+
+while IFS= read -r -d $'\0' yaml; do
+	bib="$bibdir/$(basename "${yaml%%.yaml}").bib"
+	[[ -f "$bib" ]] || echo "no $bib counterpart for $yaml" >&2
+done < <(find "$outdir" -type f -name '*.yaml' -print0)
