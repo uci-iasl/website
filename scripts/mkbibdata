@@ -9,10 +9,10 @@
 # Must be run from the root directory of the source tree.
 
 bibdir='static/bib'
-outdir='data/bib'
+yamldir='data/bib'
 bibtex2yaml="$(dirname "$0")/bibtex2yaml"
 
-[[ -d "$outdir" ]] || { echo "no $outdir directory in $PWD" >&2; exit 2; }
+[[ -d "$yamldir" ]] || { echo "no $yamldir directory in $PWD" >&2; exit 2; }
 
 bibfiles=("$@")
 if [[ $# -eq 0 ]]; then
@@ -25,11 +25,11 @@ fi
 
 for bib in "${bibfiles[@]}"; do
 	[[ -f "$bib" ]] || { echo "$bib: file does not exist" >&2; continue; }
-	bibbase="$(basename "${bib%%.bib}")"
-	"$bibtex2yaml" --include-bibtex "$bib" >"$outdir/$bibbase.yaml"
+	yaml="$yamldir/$(basename "${bib%%.bib}").yaml"
+	"$bibtex2yaml" --include-bibtex "$bib" >"$yaml"
 done
 
 while IFS= read -r -d $'\0' yaml; do
 	bib="$bibdir/$(basename "${yaml%%.yaml}").bib"
 	[[ -f "$bib" ]] || echo "no $bib counterpart for $yaml" >&2
-done < <(find "$outdir" -type f -name '*.yaml' -print0)
+done < <(find "$yamldir" -type f -name '*.yaml' -print0)
