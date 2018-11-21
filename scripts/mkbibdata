@@ -2,9 +2,9 @@
 #
 #	mkbibdata [bib-file ...]
 #
-# Converts the BibTeX bibliography files given in the arguments into
-# YAML configuration files in the data/bib/ directory. If no arguments
-# are present, looks for *.bib files in the bib/ directory.
+# Converts the BibTeX bibliography files given in the arguments
+# into YAML data files in the data/bib directory. If no arguments
+# are present, looks for *.bib files in the static/bib directory.
 #
 # Must be run from the root directory of the source tree.
 
