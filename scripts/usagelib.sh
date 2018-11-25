@@ -11,8 +11,8 @@ usage() {
 }
 usagebadopt() {
 	case $1 in
-	:)	usage "missing argument for option -$OPTARG";;
-	\?)	usage "unknown option -$OPTARG";;
+	(:)	usage "missing argument for option -$OPTARG";;
+	(\?)	usage "unknown option -$OPTARG";;
 	esac
 }
 

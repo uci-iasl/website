@@ -15,16 +15,16 @@ binpath="${2:-.}"
 [[ -d $binpath ]] || usage "$binpath: directory does not exist"
 
 case $OSTYPE in
-linux*)	ossuffix=Linux;;
-darwin*)	ossuffix=macOS;;
-*)	panic "$OSTYPE: unsupported platform"
+(linux*)	ossuffix=Linux;;
+(darwin*)	ossuffix=macOS;;
+(*)	panic "$OSTYPE: unsupported platform"
 esac
 
 arch="$(uname -m)"
 case $arch in
-x86_64)	archsuffix=64bit;;
-x86)	archsuffix=32bit;;
-*)	panic "$arch: unsupported machine hardware name"
+(x86_64)	archsuffix=64bit;;
+(x86)	archsuffix=32bit;;
+(*)	panic "$arch: unsupported machine hardware name"
 esac
 
 build="hugo_${version}_${ossuffix}-${archsuffix}"
