@@ -47,6 +47,27 @@ references:
   month: December
   title: Optimal Computation Offloading in Edge-Assisted UAV Systems
   year: '2018'
+- address: Pacific Groove, California
+  author:
+  - first: Igor
+    last: Burago
+  - first: Marco
+    last: Levorato
+  bibtex: "@inproceedings{burago-levorato-2018-acssc,\n  author = {Igor Burago and\
+    \ Marco Levorato},\n  title = {Randomized Edge-Assisted On-Sensor Information\
+    \ Selection for Bandwidth-Constrained Systems},\n  booktitle = {Proceedings of\
+    \ the Asilomar Conference on Signals, Systems, and Computers (ACSSC)},\n  address\
+    \ = {Pacific Groove, California},\n  month = oct,\n  year = {2018},\n  doi = {10.1109/acssc.2018.8645182}\n\
+    }"
+  booktitle: Proceedings of the Asilomar Conference on Signals, Systems, and Computers
+    (ACSSC)
+  doi: 10.1109/acssc.2018.8645182
+  id: burago-levorato-2018-acssc
+  kind: inproceedings
+  month: October
+  title: Randomized Edge-Assisted On-Sensor Information Selection for Bandwidth-Constrained
+    Systems
+  year: '2018'
 - address: Hong Kong
   author:
   - first: Zoheb

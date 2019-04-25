@@ -35,6 +35,7 @@ bibliography:
   - vatanparvar-faezi-2019-tsg
 - title: 2018
   items:
+  - burago-levorato-2018-acssc
   - callegaro-levorato-2018-globecom
   - shaikh-baidya-2018-cpcuav
   - moosavi-nigussie-2018-ant
