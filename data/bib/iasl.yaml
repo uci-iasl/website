@@ -27,6 +27,25 @@ references:
     Management
   volume: '10'
   year: '2019'
+- address: Paris, France
+  author:
+  - first: Igor
+    last: Burago
+  - first: Marco
+    last: Levorato
+  bibtex: "@inproceedings{burago-levorato-2019-isit,\n  author = {Igor Burago and\
+    \ Marco Levorato},\n  title = {Cloud-Assisted On-Sensor Observation Classification\
+    \ in Latency-Impeded {IoT} Systems},\n  booktitle = {Proceedings of the IEEE International\
+    \ Symposium on Information Theory (ISIT)},\n  address = {Paris, France},\n  month\
+    \ = apr # {--} # may,\n  year = {2019}\n}"
+  booktitle: Proceedings of the IEEE International Symposium on Information Theory
+    (ISIT)
+  id: burago-levorato-2019-isit
+  kind: inproceedings
+  month: April–May
+  title: Cloud-Assisted On-Sensor Observation Classification in Latency-Impeded IoT
+    Systems
+  year: '2019'
 - address: Abu Dhabi, United Arab Emirates
   author:
   - first: Davide

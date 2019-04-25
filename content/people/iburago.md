@@ -27,6 +27,7 @@ bibliography:
   - burago-levorato-2015-tccn
 - title: Conference Proceedings
   items:
+  - burago-levorato-2019-isit
   - burago-levorato-2018-acssc
   - vatanparvar-faezi-2017-codes
   - burago-callegaro-2017-acssc
