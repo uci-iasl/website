@@ -37,10 +37,11 @@ references:
     \ and Marco Levorato},\n  title = {Optimal Computation Offloading in {Edge-Assisted}\
     \ {UAV} Systems},\n  booktitle = {2018 IEEE Global Communications Conference:\
     \ Selected Areas in Communications: Tactile Internet (Globecom2018 SAC TI)},\n\
-    \  address = {Abu Dhabi, United Arab Emirates},\n  month = dec,\n  year = {2018}\n\
-    }"
+    \  address = {Abu Dhabi, United Arab Emirates},\n  month = dec,\n  year = {2018},\n\
+    \  doi = {10.1109/glocom.2018.8648099}\n}"
   booktitle: '2018 IEEE Global Communications Conference: Selected Areas in Communications:
     Tactile Internet (Globecom2018 SAC TI)'
+  doi: 10.1109/glocom.2018.8648099
   id: callegaro-levorato-2018-globecom
   kind: inproceedings
   month: December
@@ -59,8 +60,10 @@ references:
     \ for {UAVs} in the {Urban} {IoT}},\n  booktitle = {Proceedings of the Workshop\
     \ on Unmanned Autonomous Systems (CPC-UAV)},\n  note = {in conjunction with IEEE\
     \ International Conference on Sensing, Communication and Networking (SECON)},\n\
-    \  address = {Hong Kong},\n  month = jun,\n  year = {2018}\n}"
+    \  address = {Hong Kong},\n  month = jun,\n  year = {2018},\n  doi = {10.1109/seconw.2018.8396356}\n\
+    }"
   booktitle: Proceedings of the Workshop on Unmanned Autonomous Systems (CPC-UAV)
+  doi: 10.1109/seconw.2018.8396356
   id: shaikh-baidya-2018-cpcuav
   kind: inproceedings
   month: June
@@ -111,9 +114,11 @@ references:
     \ Yan Chen and Marco Levorato},\n  title = {{eBPF}-Based Content and Computation-Aware\
     \ Communication for Real-Time Edge Computing},\n  booktitle = {Proceedings of\
     \ the IEEE International Conference on Computer Communications (INFOCOM) Workshops},\n\
-    \  address = {Honolulu, Hawaii},\n  month = apr,\n  year = {2018}\n}"
+    \  address = {Honolulu, Hawaii},\n  month = apr,\n  year = {2018},\n  doi = {10.1109/infcomw.2018.8407006}\n\
+    }"
   booktitle: Proceedings of the IEEE International Conference on Computer Communications
     (INFOCOM) Workshops
+  doi: 10.1109/infcomw.2018.8407006
   id: baidya-chen-2018-infocom
   kind: inproceedings
   month: April
