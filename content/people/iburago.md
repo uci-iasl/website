@@ -23,7 +23,7 @@ bibliography:
   - chowdhery-levorato-2018-fogiot
 - title: Journal Articles
   items:
-  - vatanparvar-faezi-2018-tsg
+  - vatanparvar-faezi-2019-tsg
   - burago-levorato-2015-tccn
 - title: Conference Proceedings
   items:

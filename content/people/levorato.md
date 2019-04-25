@@ -30,6 +30,9 @@ address: |
   3206 Donald Bren Hall\
   Irvine, CA 92697-3435
 bibliography:
+- title: 2019
+  items:
+  - vatanparvar-faezi-2019-tsg
 - title: 2018
   items:
   - callegaro-levorato-2018-globecom
@@ -38,7 +41,6 @@ bibliography:
   - baidya-chen-2018-infocom
   - lee-hong-2018-iotj
   - baidya-levorato-2018-tccn
-  - vatanparvar-faezi-2018-tsg
   - chowdhery-levorato-2018-fogiot
 - title: 2017
   items:

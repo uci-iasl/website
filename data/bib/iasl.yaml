@@ -1,4 +1,32 @@
 references:
+- author:
+  - first: Korosh
+    last: Vatanparvar
+  - first: Sina
+    last: Faezi
+  - first: Igor
+    last: Burago
+  - first: Marco
+    last: Levorato
+  - first: Mohammad
+    last: Faruque
+    middle: Al
+  bibtex: "@article{vatanparvar-faezi-2019-tsg,\n  author = {Korosh Vatanparvar and\
+    \ Sina Faezi and Igor Burago and Marco Levorato and Mohammad Al Faruque},\n  title\
+    \ = {Extended Range Electric Vehicle With Driving Behavior Estimation in Energy\
+    \ Management},\n  journal = {IEEE Transactions on Smart Grid},\n  volume = {10},\n\
+    \  number = {3},\n  month = may,\n  year = {2019},\n  doi = {10.1109/tsg.2018.2815689}\n\
+    }"
+  doi: 10.1109/tsg.2018.2815689
+  id: vatanparvar-faezi-2019-tsg
+  journal: IEEE Transactions on Smart Grid
+  kind: article
+  month: May
+  number: '3'
+  title: Extended Range Electric Vehicle With Driving Behavior Estimation in Energy
+    Management
+  volume: '10'
+  year: '2019'
 - address: Abu Dhabi, United Arab Emirates
   author:
   - first: Davide
@@ -128,32 +156,6 @@ references:
   journal: IEEE Transactions on Cognitive Communications and Networking
   kind: article
   title: Content-Aware Cognitive Interference Control for Urban IoT Systems
-  year: '2018'
-- author:
-  - first: Korosh
-    last: Vatanparvar
-  - first: Sina
-    last: Faezi
-  - first: Igor
-    last: Burago
-  - first: Marco
-    last: Levorato
-  - first: Mohammad
-    last: Faruque
-    middle: Al
-  bibtex: "@article{vatanparvar-faezi-2018-tsg,\n  author = {Korosh Vatanparvar and\
-    \ Sina Faezi and Igor Burago and Marco Levorato and Mohammad Al Faruque},\n  title\
-    \ = {Extended Range Electric Vehicle With Driving Behavior Estimation in Energy\
-    \ Management},\n  journal = {IEEE Transactions on Smart Grid},\n  volume = {14},\n\
-    \  number = {8},\n  year = {2018},\n  doi = {10.1109/tsg.2018.2815689}\n}"
-  doi: 10.1109/tsg.2018.2815689
-  id: vatanparvar-faezi-2018-tsg
-  journal: IEEE Transactions on Smart Grid
-  kind: article
-  number: '8'
-  title: Extended Range Electric Vehicle With Driving Behavior Estimation in Energy
-    Management
-  volume: '14'
   year: '2018'
 - author:
   - first: Aakanksha
