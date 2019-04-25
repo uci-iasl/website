@@ -35,7 +35,8 @@ references:
   month: February
   title: Parametric Identification via Likelihood Maximization in Wireless Networks
   year: '2016'
-- author:
+- address: Denver, Colorado
+  author:
   - first: Igor
     last: Burago
   - first: Daniel
@@ -43,8 +44,8 @@ references:
   bibtex: "@inproceedings{burago-lowd-2015-aisec,\n  author = {Igor Burago and Daniel\
     \ Lowd},\n  title = {Automated Attacks on Compression-Based Classifiers},\n  booktitle\
     \ = {Proceedings of the ACM Workshop on Artificial Intelligence and Security (AISec)},\n\
-    \  pages = {69--80},\n  month = oct,\n  year = {2015},\n  doi = {10.1145/2808769.2808778}\n\
-    }"
+    \  pages = {69--80},\n  address = {Denver, Colorado},\n  month = oct,\n  year\
+    \ = {2015},\n  doi = {10.1145/2808769.2808778}\n}"
   booktitle: Proceedings of the ACM Workshop on Artificial Intelligence and Security
     (AISec)
   doi: 10.1145/2808769.2808778
@@ -135,7 +136,8 @@ references:
   month: October
   title: Using the PICES Rented Server
   year: '2010'
-- author:
+- address: Vladivostok, Russia
+  author:
   - first: Igor
     last: Burago
   - first: Igor
@@ -143,7 +145,8 @@ references:
   bibtex: "@inproceedings{burago-shevchenko-2010-rpc,\n  author = {Igor Burago and\
     \ Igor Shevchenko},\n  title = {Automatic Generation of Enumeration Problems},\n\
     \  booktitle = {Proceedings of the First Russia and Pacific Conference on Computer\
-    \ Technology and Applications},\n  month = sep,\n  year = {2010}\n}"
+    \ Technology and Applications},\n  address = {Vladivostok, Russia},\n  month =\
+    \ sep,\n  year = {2010}\n}"
   booktitle: Proceedings of the First Russia and Pacific Conference on Computer Technology
     and Applications
   id: burago-shevchenko-2010-rpc
