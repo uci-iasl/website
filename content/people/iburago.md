@@ -51,7 +51,7 @@ bibliography:
   - burago-2011-fefu
 ---
 
-# Experience
+# Selected Experience
 
 **2017**
 : Software engineering summer intern at Google, Mountain View, California.
