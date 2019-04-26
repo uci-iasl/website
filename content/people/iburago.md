@@ -18,6 +18,10 @@ education:
   year: 2011
 email: iburago@uci.edu
 bibliography:
+- title: Featured
+  items:
+  - burago-levorato-2019-isit
+  - burago-levorato-2018-acssc
 - title: Book Chapter
   items:
   - chowdhery-levorato-2018-fogiot
