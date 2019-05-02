@@ -117,6 +117,32 @@ references:
   title: Randomized Edge-Assisted On-Sensor Information Selection for Bandwidth-Constrained
     Systems
   year: '2018'
+- author:
+  - first: Kisong
+    last: Lee
+  - first: Jun-Pyo
+    last: Hong
+  - first: Hyun-Ho
+    last: Choi
+  - first: Marco
+    last: Levorato
+  bibtex: "@article{lee-hong-2018-iotj,\n  author = {Kisong Lee and Jun-Pyo Hong and\
+    \ Hyun-Ho Choi and Marco Levorato},\n  title = {Adaptive Wireless-Powered Relaying\
+    \ Schemes With Cooperative Jamming for Two-Hop Secure Communication},\n  journal\
+    \ = {IEEE Internet of Things Journal},\n  volume = {5},\n  pages = {2793--2803},\n\
+    \  month = aug,\n  year = {2018},\n  doi = {10.1109/jiot.2018.2830880},\n  issue\
+    \ = {4}\n}"
+  doi: 10.1109/jiot.2018.2830880
+  id: lee-hong-2018-iotj
+  issue: '4'
+  journal: IEEE Internet of Things Journal
+  kind: article
+  month: August
+  pages: 2793–2803
+  title: Adaptive Wireless-Powered Relaying Schemes With Cooperative Jamming for Two-Hop
+    Secure Communication
+  volume: '5'
+  year: '2018'
 - address: Hong Kong
   author:
   - first: Zoheb
@@ -194,28 +220,6 @@ references:
   month: April
   title: eBPF-Based Content and Computation-Aware Communication for Real-Time Edge
     Computing
-  year: '2018'
-- author:
-  - first: Kisong
-    last: Lee
-  - first: Jun-Pyo
-    last: Hong
-  - first: Hyun-Ho
-    last: Choi
-  - first: Marco
-    last: Levorato
-  bibtex: "@article{lee-hong-2018-iotj,\n  author = {Kisong Lee and Jun-Pyo Hong and\
-    \ Hyun-Ho Choi and Marco Levorato},\n  title = {Adaptive Wireless-Powered Relaying\
-    \ Schemes With Cooperative Jamming for Two-Hop Secure Communication},\n  journal\
-    \ = {IEEE Internet of Things Journal},\n  month = apr,\n  year = {2018},\n  doi\
-    \ = {10.1109/jiot.2018.2830880}\n}"
-  doi: 10.1109/jiot.2018.2830880
-  id: lee-hong-2018-iotj
-  journal: IEEE Internet of Things Journal
-  kind: article
-  month: April
-  title: Adaptive Wireless-Powered Relaying Schemes With Cooperative Jamming for Two-Hop
-    Secure Communication
   year: '2018'
 - author:
   - first: Sabur
