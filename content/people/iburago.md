@@ -33,8 +33,8 @@ bibliography:
   items:
   - burago-levorato-2019-isit
   - burago-levorato-2018-acssc
-  - vatanparvar-faezi-2017-codes
   - burago-callegaro-2017-acssc
+  - vatanparvar-faezi-2017-codes
   - burago-levorato-2017-secon
   - burago-levorato-2017-ita
   - burago-lowd-2015-aisec

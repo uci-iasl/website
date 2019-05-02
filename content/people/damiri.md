@@ -29,6 +29,7 @@ bibliography:
   - amiri-keshavarzi-2013-asl
 - title: Conference Proceedings
   items:
+  - amiri-anzanpour-2018-globecom
   - amiri-elsharkawy-2016-ceet
   - amiri-elsharkawy-2015-csci
 - title: M.S. Thesis

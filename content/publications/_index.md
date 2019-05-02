@@ -6,13 +6,14 @@ bibliography:
   - vatanparvar-faezi-2019-tsg
 - title: 2018
   items:
-  - burago-levorato-2018-acssc
+  - amiri-anzanpour-2018-globecom
   - callegaro-levorato-2018-globecom
+  - burago-levorato-2018-acssc
+  - baidya-levorato-2018-tccn
+  - lee-hong-2018-iotj
   - shaikh-baidya-2018-cpcuav
   - moosavi-nigussie-2018-ant
   - baidya-chen-2018-infocom
-  - lee-hong-2018-iotj
-  - baidya-levorato-2018-tccn
   - chowdhery-levorato-2018-fogiot
 - title: 2017
   items:
@@ -20,13 +21,13 @@ bibliography:
   - vatanparvar-faezi-2017-codes
   - moosavi-nigussie-2017-access
   - azimi-anzanpour-2017-tecs
+  - ahmed-levorato-2017-tsg
   - burago-levorato-2017-secon
   - michelusi-levorato-2017-isit
   - baidya-levorato-2017-infocom
   - levorato-2017-wcnc
   - burago-levorato-2017-ita
   - baidya-levorato-2017-icnc
-  - ahmed-levorato-2017-tsg
 - title: 2016
   items:
   - baidya-levorato-2016-globecom
