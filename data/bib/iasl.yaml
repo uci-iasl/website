@@ -388,6 +388,28 @@ references:
   title: 'HiCH: Hierarchical Fog-Assisted Computing Architecture for Healthcare IoT'
   volume: '16'
   year: '2017'
+- author:
+  - first: Nadia
+    last: Ahmed
+  - first: Marco
+    last: Levorato
+  - first: Guann-Pyng
+    last: Li
+  bibtex: "@article{ahmed-levorato-2017-tsg,\n  author = {Nadia Ahmed and Marco Levorato\
+    \ and Guann-Pyng Li},\n  title = {Residential Consumer-Centric Demand Side Management},\n\
+    \  journal = {IEEE Transactions on Smart Grid},\n  volume = {9},\n  pages = {4513--4524},\n\
+    \  month = sep,\n  year = {2017},\n  doi = {10.1109/tsg.2017.2661991},\n  issue\
+    \ = {5}\n}"
+  doi: 10.1109/tsg.2017.2661991
+  id: ahmed-levorato-2017-tsg
+  issue: '5'
+  journal: IEEE Transactions on Smart Grid
+  kind: article
+  month: September
+  pages: 4513–4524
+  title: Residential Consumer-Centric Demand Side Management
+  volume: '9'
+  year: '2017'
 - address: San Diego, California
   author:
   - first: Igor
@@ -509,23 +531,6 @@ references:
   pages: 144–149
   title: Content-Based Interference Management for Video Transmission in D2D Communications
     Underlaying LTE
-  year: '2017'
-- author:
-  - first: Nadia
-    last: Ahmed
-  - first: Marco
-    last: Levorato
-  - first: Guann-Pyng
-    last: Li
-  bibtex: "@article{ahmed-levorato-2017-tsg,\n  author = {Nadia Ahmed and Marco Levorato\
-    \ and Guann-Pyng Li},\n  title = {Residential Consumer-Centric Demand Side Management},\n\
-    \  journal = {IEEE Transactions on Smart Grid},\n  year = {2017},\n  doi = {10.1109/tsg.2017.2661991}\n\
-    }"
-  doi: 10.1109/tsg.2017.2661991
-  id: ahmed-levorato-2017-tsg
-  journal: IEEE Transactions on Smart Grid
-  kind: article
-  title: Residential Consumer-Centric Demand Side Management
   year: '2017'
 - address: Washington, DC
   author:
