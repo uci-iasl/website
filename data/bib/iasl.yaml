@@ -118,6 +118,26 @@ references:
     Systems
   year: '2018'
 - author:
+  - first: Sabur
+    last: Baidya
+  - first: Marco
+    last: Levorato
+  bibtex: "@article{baidya-levorato-2018-tccn,\n  author = {Sabur Baidya and Marco\
+    \ Levorato},\n  title = {Content-Aware Cognitive Interference Control for Urban\
+    \ {IoT} Systems},\n  journal = {IEEE Transactions on Cognitive Communications\
+    \ and Networking},\n  volume = {4},\n  number = {3},\n  pages = {500--512},\n\
+    \  month = sep,\n  year = {2018},\n  doi = {10.1109/tccn.2018.2815604}\n}"
+  doi: 10.1109/tccn.2018.2815604
+  id: baidya-levorato-2018-tccn
+  journal: IEEE Transactions on Cognitive Communications and Networking
+  kind: article
+  month: September
+  number: '3'
+  pages: 500–512
+  title: Content-Aware Cognitive Interference Control for Urban IoT Systems
+  volume: '4'
+  year: '2018'
+- author:
   - first: Kisong
     last: Lee
   - first: Jun-Pyo
@@ -220,21 +240,6 @@ references:
   month: April
   title: eBPF-Based Content and Computation-Aware Communication for Real-Time Edge
     Computing
-  year: '2018'
-- author:
-  - first: Sabur
-    last: Baidya
-  - first: Marco
-    last: Levorato
-  bibtex: "@article{baidya-levorato-2018-tccn,\n  author = {Sabur Baidya and Marco\
-    \ Levorato},\n  title = {Content-Aware Cognitive Interference Control for Urban\
-    \ IoT Systems},\n  journal = {IEEE Transactions on Cognitive Communications and\
-    \ Networking},\n  year = {2018},\n  doi = {10.1109/tccn.2018.2815604}\n}"
-  doi: 10.1109/tccn.2018.2815604
-  id: baidya-levorato-2018-tccn
-  journal: IEEE Transactions on Cognitive Communications and Networking
-  kind: article
-  title: Content-Aware Cognitive Interference Control for Urban IoT Systems
   year: '2018'
 - author:
   - first: Aakanksha
