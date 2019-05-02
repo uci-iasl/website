@@ -50,18 +50,46 @@ references:
   year: '2019'
 - address: Abu Dhabi, United Arab Emirates
   author:
+  - first: Delaram
+    last: Amiri
+  - first: Arman
+    last: Anzanpour
+  - first: Iman
+    last: Azimi
+  - first: Marco
+    last: Levorato
+  - first: Amir
+    last: Rahmani
+    middle: M.
+  - first: Pasi
+    last: Liljeberg
+  - first: Nikil
+    last: Dutt
+  bibtex: "@inproceedings{amiri-anzanpour-2018-globecom,\n  author = {Delaram Amiri\
+    \ and Arman Anzanpour and Iman Azimi and Marco Levorato and Amir M. Rahmani and\
+    \ Pasi Liljeberg and Nikil Dutt},\n  title = {Edge-Assisted Sensor Control in\
+    \ Healthcare {IoT}},\n  booktitle = {Proceedings of the IEEE Global Communications\
+    \ Conference (GLOBECOM)},\n  address = {Abu Dhabi, United Arab Emirates},\n  month\
+    \ = dec,\n  year = {2018},\n  doi = {10.1109/glocom.2018.8647457}\n}"
+  booktitle: Proceedings of the IEEE Global Communications Conference (GLOBECOM)
+  doi: 10.1109/glocom.2018.8647457
+  id: amiri-anzanpour-2018-globecom
+  kind: inproceedings
+  month: December
+  title: Edge-Assisted Sensor Control in Healthcare IoT
+  year: '2018'
+- address: Abu Dhabi, United Arab Emirates
+  author:
   - first: Davide
     last: Callegaro
   - first: Marco
     last: Levorato
   bibtex: "@inproceedings{callegaro-levorato-2018-globecom,\n  author = {Davide Callegaro\
-    \ and Marco Levorato},\n  title = {Optimal Computation Offloading in {Edge-Assisted}\
-    \ {UAV} Systems},\n  booktitle = {2018 IEEE Global Communications Conference:\
-    \ Selected Areas in Communications: Tactile Internet (Globecom2018 SAC TI)},\n\
-    \  address = {Abu Dhabi, United Arab Emirates},\n  month = dec,\n  year = {2018},\n\
-    \  doi = {10.1109/glocom.2018.8648099}\n}"
-  booktitle: '2018 IEEE Global Communications Conference: Selected Areas in Communications:
-    Tactile Internet (Globecom2018 SAC TI)'
+    \ and Marco Levorato},\n  title = {Optimal Computation Offloading in Edge-Assisted\
+    \ {UAV} Systems},\n  booktitle = {Proceedings of the IEEE Global Communications\
+    \ Conference (GLOBECOM)},\n  address = {Abu Dhabi, United Arab Emirates},\n  month\
+    \ = dec,\n  year = {2018},\n  doi = {10.1109/glocom.2018.8648099}\n}"
+  booktitle: Proceedings of the IEEE Global Communications Conference (GLOBECOM)
   doi: 10.1109/glocom.2018.8648099
   id: callegaro-levorato-2018-globecom
   kind: inproceedings
