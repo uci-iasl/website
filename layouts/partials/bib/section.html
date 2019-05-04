@@ -1,7 +1,12 @@
 <section class="bibliography">
   {{ with .title }}<h1>{{ . }}</h1>{{ end }}
   {{- range $group := .items }}
-    {{- with $group.title }}<h2>{{ . }}</h2>{{ end }}
-    {{- partial "bib/list.html" (dict "items" $group.items "Page" $.Page "Site" $.Site) }}
+    <div class="group">
+      {{ with $group.title }}<h2>{{ . }}</h2>{{ end }}
+      {{ with $group.foreword -}}
+        <div class="foreword">{{ markdownify . }}</div>
+      {{- end }}
+      {{ partial "bib/list.html" (dict "items" $group.items "Page" $.Page "Site" $.Site) }}
+    </div>
   {{- end }}
 </section>
