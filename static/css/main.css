@@ -279,6 +279,10 @@ ul.bibliography>li::before {
   margin-left: -1.75ex;
   margin-right: 0.2ex;
 }
+ul.bibliography>li.starred::before {
+  content: "* –";
+  margin-left: -3.2ex;
+}
 .bibliography>li { margin-bottom: 0.8ex; }
 .bibliography>li .bibentry {
   display: inline-block;

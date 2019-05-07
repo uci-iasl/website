@@ -1,4 +1,4 @@
-<li class="{{ .entry.kind | htmlEscape }}">{{ "" -}}
+<li class="{{ .entry.kind | htmlEscape }}{{ with .mark }} {{ . }}{{ end }}">{{ "" -}}
 <section id="{{ .entry.id | urlize }}" class="bibentry {{ .entry.kind | htmlEscape }}">
 {{- if false -}}
 
