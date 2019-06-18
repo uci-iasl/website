@@ -1,8 +1,9 @@
 ---
 ---
 
-{{< figure class="fullwidth notopmargin" src="/img/people/group-2017.jpg"
-alt="Intelligent and Autonomous Systems Lab Group Photo" >}}
+{{< figure class="fullwidth notopmargin"
+  src="/img/people/group-2019.jpg"
+  alt="Intelligent and Autonomous Systems Lab Group Photo" >}}
 
 # Intelligent and Autonomous Systems Lab
 
