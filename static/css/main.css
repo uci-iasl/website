@@ -79,7 +79,7 @@ body>header .logo { float: left; }
 body>header .logo img { height: 30px; }
 body>header nav { float: right; }
 body>header nav .sep::before {
-  content: "·";
+  content: '·';
   color: var(--header-accent-fg-color);
   padding: 0px 4px;
 }
@@ -226,14 +226,14 @@ section.profile .status .years {
   font-size: calc(0.9 * var(--font-size));
   margin-left: 1ex;
 }
-section.profile .status .years::before { content: "·"; margin-right: 1ex; }
+section.profile .status .years::before { content: '·'; margin-right: 1ex; }
 section.profile .resume>section { margin-top: 6px; }
 section.profile ul.interests, section.profile ul.education {
   list-style: none;
   margin: 0;
   padding-left: 6px;
 }
-section.profile ul.interests li::before { content: "–"; margin-right: 6px; }
+section.profile ul.interests li::before { content: '–'; margin-right: 6px; }
 section.profile ul.education li { margin-top: 4px; }
 section.profile ul.education li:first-of-type { margin-top: 2px; }
 section.profile ul.education .year {
@@ -242,7 +242,7 @@ section.profile ul.education .year {
   font-size: calc(0.9 * var(--font-size));
 }
 section.profile ul.education .year::after {
-  content: "·";
+  content: '·';
   margin-left: 1ex;
 }
 section.profile ul.education .record {
@@ -260,7 +260,7 @@ section.profile ul.education .record>.institution {
 }
 section.profile a.resume { font-weight: bold; }
 section.profile .contacts .websites>.sep::before {
-  content: "·";
+  content: '·';
   padding: 0 0.75ex;
 }
 section.profile .contacts .address>.value {
@@ -275,12 +275,12 @@ ul.bibliography {
   margin: 0.5em 0 1em 1em;
 }
 ul.bibliography>li::before {
-  content: "–";
+  content: '–';
   margin-left: -1.75ex;
   margin-right: 0.2ex;
 }
 ul.bibliography>li.starred::before {
-  content: "* –";
+  content: '* –';
   margin-left: -3.2ex;
 }
 .bibliography>li { margin-bottom: 0.8ex; }
@@ -316,7 +316,7 @@ ul.bibliography>li.starred::before {
 .bibliography>li .bibentry.unpublished .title::before,
 a.citation .title::before {
   font-weight: normal;
-  content: "“";
+  content: '“';
   margin-right: 0.4pt;
 }
 .bibliography>li .bibentry.incollection .title::after,
@@ -331,7 +331,7 @@ a.citation .title::before {
 .bibliography>li .bibentry.unpublished .title::after,
 a.citation .title::after {
   font-weight: normal;
-  content: "”";
+  content: '”';
   margin-left: 0.4pt;
 }
 
@@ -339,7 +339,7 @@ a.citation .title::after {
   font-size: calc(0.7 * var(--font-size));
 }
 .bibliography>li .bibentry .extras .item:not(:first-of-type)::before {
-  content: "·";
+  content: '·';
   font-weight: bold;
   padding: 0 0.5ex;
 }
