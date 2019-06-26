@@ -39,6 +39,7 @@ bibliography:
   items:
   - amiri-anzanpour-2018-globecom
   - callegaro-levorato-2018-globecom
+  - baidya-shaikh-2018-mswim
   - burago-levorato-2018-acssc
   - baidya-levorato-2018-tccn
   - lee-hong-2018-iotj
