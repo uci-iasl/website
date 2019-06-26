@@ -444,7 +444,9 @@ header>h5.meta, header>h6.meta {
 p { margin: 0.8ex 0 0.8ex 0; }
 
 pre, code {
-  font: 13px/18px Menlo, Consolas, monospace;
+  font-family: Menlo, Consolas, monospace;
+  font-size: calc(0.77 * var(--font-size));
+  line-height: calc(0.77 * var(--line-height));
 }
 pre {
   padding: 0 2em 0 2em;
