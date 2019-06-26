@@ -1,4 +1,28 @@
 references:
+- address: Beijing, China
+  author:
+  - first: Davide
+    last: Callegaro
+  - first: Sabur
+    last: Baidya
+  - first: Marco
+    last: Levorato
+  bibtex: "@inproceedings{callegaro-sbaidya-2019-magesys,\n  author = {Davide Callegaro\
+    \ and Sabur Baidya and Marco Levorato},\n  title = {A Measurement Study on Edge\
+    \ Computing for Autonomous {UAVs}},\n  booktitle = {Proceedings of the Workshop\
+    \ on Mobile Air-Ground Edge Computing, Systems, Networks, and Applications (MAGESys)},\n\
+    \  note = {in conjunction with the ACM Special Interest Group on Data Communication\
+    \ (SIGCOMM) Conference; accepted, publication pending},\n  address = {Beijing,\
+    \ China},\n  month = aug,\n  year = {2019}\n}"
+  booktitle: Proceedings of the Workshop on Mobile Air-Ground Edge Computing, Systems,
+    Networks, and Applications (MAGESys)
+  id: callegaro-sbaidya-2019-magesys
+  kind: inproceedings
+  month: August
+  note: in conjunction with the ACM Special Interest Group on Data Communication (SIGCOMM)
+    Conference; accepted, publication pending
+  title: A Measurement Study on Edge Computing for Autonomous UAVs
+  year: '2019'
 - address: Paris, France
   author:
   - first: Igor
