@@ -96,6 +96,29 @@ references:
   month: December
   title: Optimal Computation Offloading in Edge-Assisted UAV Systems
   year: '2018'
+- address: Montreal, Canada
+  author:
+  - first: Sabur
+    last: Baidya
+  - first: Zoheb
+    last: Shaikh
+  - first: Marco
+    last: Levorato
+  bibtex: "@inproceedings{baidya-shaikh-2018-mswim,\n  author = {Sabur Baidya and\
+    \ Zoheb Shaikh and Marco Levorato},\n  title = {{FlyNetSim}: An Open Source Synchronized\
+    \ {UAV} Network Simulator Based on {ns-3} and {Ardupilot}},\n  booktitle = {Proceedings\
+    \ of the ACM International Conference on Modeling, Analysis and Simulation of\
+    \ Wireless and Mobile Systems (MSWiM)},\n  address = {Montreal, Canada},\n  month\
+    \ = oct # {--} # nov,\n  year = {2018},\n  doi = {10.1145/3242102.3242118}\n}"
+  booktitle: Proceedings of the ACM International Conference on Modeling, Analysis
+    and Simulation of Wireless and Mobile Systems (MSWiM)
+  doi: 10.1145/3242102.3242118
+  id: baidya-shaikh-2018-mswim
+  kind: inproceedings
+  month: October–November
+  title: 'FlyNetSim: An Open Source Synchronized UAV Network Simulator Based on ns-3
+    and Ardupilot'
+  year: '2018'
 - address: Pacific Groove, California
   author:
   - first: Igor
