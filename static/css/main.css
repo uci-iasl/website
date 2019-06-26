@@ -20,6 +20,7 @@
   --header-accent-fg-color: white;
   --header-site-title-fg-color: var(--header-fg-color);
   --header-bg-color: #404040;
+  --header-bg-shade-color: #202020;
   --header-border-color: var(--header-bg-color);
   --header-link-fg-color: var(--header-fg-color);
   --header-link-ul-color: rgba(255,255,255,0.25);
@@ -464,6 +465,19 @@ blockquote::before {
 
 blockquote p {
   display: inline;
+}
+
+figure#groupphoto {
+  display: block;
+  overflow: hidden;
+  background-color: var(--header-bg-shade-color);
+  height: calc(0.33*var(--body-wrap-width));
+}
+figure#groupphoto>img {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: calc(1.75*var(--body-wrap-width));
 }
 
 figure.fullwidth {

@@ -1,9 +1,10 @@
 ---
 ---
 
-{{< figure class="fullwidth notopmargin"
-  src="/img/people/group-2019.jpg"
-  alt="Intelligent and Autonomous Systems Lab Group Photo" >}}
+<figure id="groupphoto" class="fullwidth notopmargin">
+  <img src="/img/people/group-2019-wide.jpg"
+    alt="Intelligent and Autonomous Systems Lab Group Photo">
+</figure>
 
 # Intelligent and Autonomous Systems Lab
 
