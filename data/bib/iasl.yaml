@@ -542,7 +542,7 @@ references:
   - first: Marco
     last: Levorato
   bibtex: "@inproceedings{baidya-levorato-2017-infocom,\n  author = {Sabur Baidya\
-    \ and Marco Levorato},\n  title = {Edge-Assisted Content and Computation Driven\
+    \ and Marco Levorato},\n  title = {Edge-Assisted Content and Computation-Driven\
     \ Dynamic Network Selection for Real-Time Services in Urban {IoT}},\n  booktitle\
     \ = {Proceedings of the IEEE International Conference on Computer Communications\
     \ (INFOCOM) Workshops},\n  address = {Atlanta, Georgia},\n  month = may,\n  year\
@@ -553,7 +553,7 @@ references:
   id: baidya-levorato-2017-infocom
   kind: inproceedings
   month: May
-  title: Edge-Assisted Content and Computation Driven Dynamic Network Selection for
+  title: Edge-Assisted Content and Computation-Driven Dynamic Network Selection for
     Real-Time Services in Urban IoT
   year: '2017'
 - address: San Francisco, California
