@@ -9,6 +9,7 @@ bibliography:
   items:
   - amiri-anzanpour-2018-globecom
   - callegaro-levorato-2018-globecom
+  - lima-oliveira-2018-nca
   - baidya-shaikh-2018-mswim
   - burago-levorato-2018-acssc
   - baidya-levorato-2018-tccn

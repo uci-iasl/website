@@ -120,6 +120,42 @@ references:
   month: December
   title: Optimal Computation Offloading in Edge-Assisted UAV Systems
   year: '2018'
+- address: Cambridge, MA
+  author:
+  - first: Max
+    last: Soares Lima
+    middle: Willian
+  - first: Horacio
+    last: Fernandes de Oliveira
+    middle: A. B.
+  - first: Eulanda
+    last: dos Santos
+    middle: Miranda
+  - first: Edleno
+    last: de Moura
+    middle: Silva
+  - first: Rafael
+    last: Costa
+    middle: Kohler
+  - first: Marco
+    last: Levorato
+  bibtex: "@inproceedings{lima-oliveira-2018-nca,\n  author = {Max Willian {Soares\
+    \ Lima} and Horacio A. B. {Fernandes de Oliveira} and Eulanda Miranda {dos Santos}\
+    \ and Edleno Silva {de Moura} and Rafael Kohler {Costa} and Marco Levorato},\n\
+    \  title = {Efficient and Robust {WiFi} Indoor Positioning Using Hierarchical\
+    \ Navigable Small World Graphs},\n  booktitle = {Proceedings of the IEEE International\
+    \ Symposium on Network Computing and Applications (NCA)},\n  address = {Cambridge,\
+    \ MA},\n  month = nov,\n  year = {2018},\n  doi = {10.1109/nca.2018.8548076}\n\
+    }"
+  booktitle: Proceedings of the IEEE International Symposium on Network Computing
+    and Applications (NCA)
+  doi: 10.1109/nca.2018.8548076
+  id: lima-oliveira-2018-nca
+  kind: inproceedings
+  month: November
+  title: Efficient and Robust WiFi Indoor Positioning Using Hierarchical Navigable
+    Small World Graphs
+  year: '2018'
 - address: Montreal, Canada
   author:
   - first: Sabur
