@@ -22,6 +22,7 @@ websites:
   url: http://www.ics.uci.edu/~sbaidya/
 bibliography:
 - items:
+  - callegaro-sbaidya-2019-magesys
   - baidya-shaikh-2018-mswim
   - baidya-levorato-2018-tccn
   - shaikh-baidya-2018-cpcuav

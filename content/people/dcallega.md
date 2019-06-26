@@ -23,6 +23,7 @@ websites:
   url: https://www.linkedin.com/in/davide-callegaro/
 bibliography:
 - items:
+  - callegaro-sbaidya-2019-magesys
   - callegaro-levorato-2018-globecom
   - burago-callegaro-2017-acssc
 ---
