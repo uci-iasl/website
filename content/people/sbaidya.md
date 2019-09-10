@@ -1,6 +1,6 @@
 ---
 name: Sabur Baidya
-role: student-phd
+role: alumnus-phd
 status: Ph.D. Candidate
 yearjoined: 2014
 portrait: sbaidya.jpg
@@ -22,6 +22,8 @@ websites:
   url: http://www.ics.uci.edu/~sbaidya/
 bibliography:
 - items:
+  - yoshitomo-baidya-2019-hotedgevideo
+  - callegaro-baidya-2019-milcom
   - callegaro-sbaidya-2019-magesys
   - baidya-shaikh-2018-mswim
   - baidya-levorato-2018-tccn
