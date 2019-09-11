@@ -1,4 +1,33 @@
 references:
+- address: Norfolk, VA
+  author:
+  - first: Davide
+    last: Callegaro
+  - first: Sabur
+    last: Baidya
+  - first: Gowri
+    last: Ramachandran
+  - first: Bhaskar
+    last: Krishnamachari
+  - first: Marco
+    last: Levorato
+  bibtex: "@inproceedings{callegaro-baidya-2019-milcom,\n  author = {Davide Callegaro\
+    \ and Sabur Baidya and Gowri Ramachandran and Bhaskar Krishnamachari and Marco\
+    \ Levorato},\n  title = {Information Autonomy: Self-Adaptive Information Management\
+    \ for Edge-Assisted Autonomous {UAV} Systems},\n  booktitle = {Proceedings of\
+    \ the IEEE Military Communication Conference (MILCOM)},\n  note = {Systems Perspective;\
+    \ accepted, publication pending},\n  address = {Norfolk, VA},\n  month = nov,\n\
+    \  year = {2019},\n  keyword = {Edge computing, Object detection, Unmanned Aerial\
+    \ Vehicles, Wireless networks}\n}"
+  booktitle: Proceedings of the IEEE Military Communication Conference (MILCOM)
+  id: callegaro-baidya-2019-milcom
+  keyword: Edge computing, Object detection, Unmanned Aerial Vehicles, Wireless networks
+  kind: inproceedings
+  month: November
+  note: Systems Perspective; accepted, publication pending
+  title: 'Information Autonomy: Self-Adaptive Information Management for Edge-Assisted
+    Autonomous UAV Systems'
+  year: '2019'
 - address: Beijing, China
   author:
   - first: Davide

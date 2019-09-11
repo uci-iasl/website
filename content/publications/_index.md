@@ -2,6 +2,7 @@
 bibliography:
 - title: 2019
   items:
+  - callegaro-baidya-2019-milcom
   - callegaro-sbaidya-2019-magesys
   - burago-levorato-2019-isit
   - vatanparvar-faezi-2019-tsg
