@@ -1,7 +1,7 @@
 ---
 name: Sabur Baidya
-role: student-phd
-status: Ph.D. Candidate
+role: alumnus-phd
+status: Ph.D.
 yearjoined: 2014
 portrait: sbaidya.jpg
 badge: sbaidya-badge.jpg
