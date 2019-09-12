@@ -3,6 +3,7 @@ name: Sabur Baidya
 role: alumnus-phd
 status: Ph.D.
 yearjoined: 2014
+yeargraduated: 2018
 portrait: sbaidya.jpg
 badge: sbaidya-badge.jpg
 interests:
@@ -13,6 +14,9 @@ interests:
 - Unmanned autonomous systems
 - Adaptive video streaming
 education:
+- degree: Ph.D. in Computer Science
+  institution: University of California, Irvine
+  year: 2018
 - degree: M.S. in Computer Science
   institution: University of Texas, U.S.
   year: 2013
