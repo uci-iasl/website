@@ -4,6 +4,8 @@ role: alumnus-phd
 status: Ph.D.
 yearjoined: 2013
 yeargraduated: 2017
+portrait: ahmedn.jpg
+badge: ahmedn-badge.jpg
 interests:
 - Consumer behavior prediction
 - Smart energy systems
