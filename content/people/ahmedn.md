@@ -21,6 +21,9 @@ education:
   institution: University of California, Irvine, U.S.
   year: 2005
 email: ahmedn@uci.edu
+websites:
+- title: LinkedIn
+  url: https://www.linkedin.com/in/nadia-ahmed-62585829
 bibliography:
 - items:
   - ahmed-levorato-2017-tsg
