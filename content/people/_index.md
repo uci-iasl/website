@@ -1,7 +1,3 @@
-# Alumni
-
-- Nadia Ahmed  ·  2017  ·  *Ph.D.*
-
 # Past Visitors
 
 **Postdoctoral Researchers:**
