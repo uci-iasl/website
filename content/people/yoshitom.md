@@ -22,6 +22,7 @@ websites:
   url: http://labusers.net/~ymatsubara
 bibliography:
 - items:
+  - matsubara-baidya-2019-mobicom
   - matsubara-nishimura-2016-icmla
   - matsubara-samura-2012-ists
 ---
