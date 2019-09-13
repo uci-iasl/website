@@ -15,7 +15,7 @@ interests:
 - Adaptive video streaming
 education:
 - degree: Ph.D. in Computer Science
-  institution: University of California, Irvine
+  institution: University of California, Irvine, U.S.
   year: 2018
 - degree: M.S. in Computer Science
   institution: University of Texas, U.S.
