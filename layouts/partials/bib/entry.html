@@ -236,6 +236,7 @@
       <a role="button" onclick="bib.toggleBibtexDisplay(this)">▸BibTeX</a>{{ "" -}}
     </span>
   {{- end -}}
+  <span class="item linkhere"><a href="{{ .Page.Permalink }}#{{ .entry.id | urlize }}">¶</a></span>
 </span>
 
 {{- with .entry.bibtex }}<pre class="bibtex"><code>{{ . }}</code></pre>{{ end -}}

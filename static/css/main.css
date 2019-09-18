@@ -368,6 +368,12 @@ a.citation .title::after {
   font-size: calc(0.65 * var(--font-size));
   line-height: calc(0.6 * var(--line-height));
 }
+.bibliography>li .bibentry .extras .linkhere {
+  visibility: hidden;
+}
+.bibliography>li .bibentry:hover .extras .linkhere {
+  visibility: visible;
+}
 
 a {
   color: var(--link-fg-color);
