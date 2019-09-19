@@ -40,6 +40,8 @@
   --footer-font-size: 14px;
   --line-height: 23px;
 
+  --heading-top-margin: 2ex;
+
   --body-wrap-width: 720px;
   --body-wrap-padding: 10px;
 
@@ -270,6 +272,26 @@ section.profile .contacts .address>.value {
   padding-left: 6px;
 }
 
+section.bibliography>header {
+  display: flex;
+  justify-content: space-between;
+}
+section.bibliography>header>.controls-anchor {
+  position: relative;
+}
+section.bibliography>header>.controls-anchor>.controls {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+section.bibliography>header .controls.heading-margin-shift {
+  padding-bottom: var(--heading-top-margin);
+}
+section.bibliography>header .controls input.filter {
+  font-size: var(--font-size);
+  width: 200px;
+}
+
 ul.bibliography {
   list-style: none;
   padding-left: 0;
@@ -427,7 +449,7 @@ figure>a {
 
 h1, h2, h3, h4, h5, h6 {
   color: var(--headings-fg-color);
-  margin: 2ex 0 0 0;
+  margin: var(--heading-top-margin) 0 0 0;
 }
 h1 { font-size: 140%; }
 h2 { font-size: 120%; }

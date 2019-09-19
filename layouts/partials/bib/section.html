@@ -1,5 +1,12 @@
 <section class="bibliography">
-  {{ with .title }}<h1>{{ . }}</h1>{{ end }}
+  <header>
+    {{ with .title }}<h1>{{ . }}</h1>{{ else }}<div></div>{{ end }}
+    <div class="controls-anchor">
+      <div class="controls {{ if .shiftcontrolsup }}heading-margin-shift{{ end }}">
+        <input class="filter" type="search" placeholder="Filter…" />
+      </div>
+    </div>
+  </header>
   {{- range $group := .items }}
     <div class="group">
       {{ with $group.title }}<h2>{{ . }}</h2>{{ end }}

@@ -5,7 +5,7 @@
       <h1 class="page-title">Publications</h1>
     </header>
     <section class="content">
-      {{ partial "bib/section.html" (dict "items" .Params.bibliography "Page" .Page "Site" .Site) }}
+      {{ partial "bib/section.html" (dict "shiftcontrolsup" true "items" .Params.bibliography "Page" .Page "Site" .Site) }}
       {{ .Content }}
     </section>
   </article>
