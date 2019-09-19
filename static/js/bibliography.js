@@ -11,7 +11,21 @@ var bib = {
 		".publisher", ".address", ".date",
 		".note",
 	].join(","),
-	filterInputSelector: "input.filter",
+	sectionFilterInputSelector: "input.filter",
+	sectionFilterSelectSelector: "select.selection",
+
+	entryKindAttrName: "data-bib-kind",
+	entryKindSelectionMap: {
+		book: "books",
+		inbook: "books",
+		incollection: "books",
+		proceedings: "conferences",
+		inproceedings: "conferences",
+		conference: "conferences",
+		article: "journals",
+	},
+	entrySelectionTagAll: "all",
+	entrySelectionTagOther: "other",
 
 	initEntryTextFilter: function() {
 		var sectionElem = document.querySelector(bib.sectionSelector);
@@ -27,6 +41,7 @@ var bib = {
 					values.push(fieldElem.innerText.toLowerCase());
 				entries.push({
 					element: entryElem,
+					kind: entryElem.getAttribute(bib.entryKindAttrName),
 					values: values,
 				});
 			}
@@ -37,15 +52,25 @@ var bib = {
 		}
 		bib.entryGroups = groups;
 
-		bib.filterInputElem = sectionElem.querySelector(bib.filterInputSelector)
-		bib.filterInputElem.oninput = bib.filterEntries
+		bib.filterInputElem = sectionElem.querySelector(bib.sectionFilterInputSelector);
+		bib.filterSelectElem = sectionElem.querySelector(bib.sectionFilterSelectSelector);
+		bib.filterInputElem.oninput = bib.filterEntries;
+		bib.filterSelectElem.oninput = bib.filterEntries;
 	},
 
-	doStringsMatch: function(strings, queryWords) {
-		for (var qw of queryWords) {
+	entryMatchesQuery: function(entry, query) {
+		if (query.selection != bib.entrySelectionTagAll) {
+			var entrySel = bib.entrySelectionTagOther;
+			if (entry.kind in bib.entryKindSelectionMap)
+				entrySel = bib.entryKindSelectionMap[entry.kind];
+			if (entrySel != query.selection)
+				return false;
+		}
+
+		for (var word of query.words) {
 			var found = false;
-			for (var str of strings) {
-				if (str.indexOf(qw) != -1) {
+			for (var value of entry.values) {
+				if (value.indexOf(word) != -1) {
 					found = true;
 					break;
 				}
@@ -57,12 +82,15 @@ var bib = {
 	},
 
 	filterEntries: function() {
-		var queryWords = bib.filterInputElem.value.toLowerCase().split(/\s+/);
+		var query = {
+			words: bib.filterInputElem.value.toLowerCase().split(/\s+/),
+			selection: bib.filterSelectElem.value,
+		};
 		for (var group of bib.entryGroups) {
-			var numVisible = group.entries.length
-			for (var item of group.entries) {
-				var matched = bib.doStringsMatch(item.values, queryWords);
-				item.element.style.display = (matched ? "list-item" : "none");
+			var numVisible = group.entries.length;
+			for (var entry of group.entries) {
+				var matched = bib.entryMatchesQuery(entry, query);
+				entry.element.style.display = (matched ? "list-item" : "none");
 				numVisible -= !matched;
 			}
 			group.element.style.display = (numVisible > 0 ? "block" : "none");

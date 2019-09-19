@@ -1,5 +1,6 @@
-<li class="{{ .entry.kind | htmlEscape }}{{ with .mark }} {{ . }}{{ end }}">{{ "" -}}
-<section id="{{ .entry.id | urlize }}" class="bibentry {{ .entry.kind | htmlEscape }}">
+{{- $entrykindattr := .entry.kind | htmlEscape -}}
+<li class="{{ $entrykindattr }}{{ with .mark }} {{ . }}{{ end }}" data-bib-kind="{{ $entrykindattr }}">{{ "" -}}
+<section id="{{ .entry.id | urlize }}" class="bibentry {{ $entrykindattr }}">
 {{- if false -}}
 
 {{- else if eq .entry.kind "book" -}}

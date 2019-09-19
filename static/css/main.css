@@ -277,6 +277,7 @@ section.bibliography>header {
   justify-content: space-between;
 }
 section.bibliography>header>.controls-anchor {
+  width: 310px;
   position: relative;
 }
 section.bibliography>header>.controls-anchor>.controls {
@@ -287,9 +288,12 @@ section.bibliography>header>.controls-anchor>.controls {
 section.bibliography>header .controls.heading-margin-shift {
   padding-bottom: var(--heading-top-margin);
 }
-section.bibliography>header .controls input.filter {
+section.bibliography>header .controls input,
+section.bibliography>header .controls select {
   font-size: var(--font-size);
-  width: 200px;
+}
+section.bibliography>header .controls input.filter {
+  width: 170px;
 }
 
 ul.bibliography {
