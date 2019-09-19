@@ -27,6 +27,11 @@ var bib = {
 	entrySelectionTagAll: "all",
 	entrySelectionTagOther: "other",
 
+	entryContentClass: "bibentry",
+	entryBibtexClass: "bibtex",
+	entryBibtexCollapsedSign: "▸",
+	entryBibtexExpandedSign: "▾",
+
 	initEntryTextFilter: function() {
 		var sectionElem = document.querySelector(bib.sectionSelector);
 		var groupElems = sectionElem.querySelectorAll(bib.sectionGroupsSelector);
@@ -99,18 +104,25 @@ var bib = {
 
 	toggleBibtexDisplay: function(button) {
 		var entry = button;
-		while (entry && (!entry.classList.contains("bibentry") || !entry.id))
+		while (entry && (!entry.classList.contains(bib.entryContentClass) || !entry.id))
 			entry = entry.parentNode;
 		if (!entry) return;
 
-		var query = entry.tagName + ".bibentry#" + entry.id + ">.bibtex";
-		var bibtex = document.querySelector(query);
+		var selector = entry.tagName + "." + bib.entryContentClass +
+			"#" + entry.id + ">." + bib.entryBibtexClass;
+		var bibtex = document.querySelector(selector);
 		if (!bibtex) return;
 		if (!bibtex.style.display || bibtex.style.display == "none") {
-			button.textContent = button.textContent.replace(/^▸/, "▾");
+			button.textContent = button.textContent.replace(
+				bib.entryBibtexCollapsedSign,
+				bib.entryBibtexExpandedSign
+			);
 			bibtex.style.display = "block";
 		} else {
-			button.textContent = button.textContent.replace(/^▾/, "▸");
+			button.textContent = button.textContent.replace(
+				bib.entryBibtexExpandedSign,
+				bib.entryBibtexCollapsedSign
+			);
 			bibtex.style.display = "none";
 		}
 	},
