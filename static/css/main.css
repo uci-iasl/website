@@ -321,6 +321,7 @@ ul.bibliography>li.starred::before {
 
 .bibliography>li .bibentry .authors-index { display: none; }
 .bibliography>li .bibentry .editors-index { display: none; }
+.bibliography>li .bibentry .keywords-index { display: none; }
 
 .bibliography>li .bibentry .title {}
 

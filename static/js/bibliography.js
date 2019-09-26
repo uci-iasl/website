@@ -9,7 +9,7 @@ var bib = {
 		".title", ".journal", ".booktitle", ".series",
 		".organization", ".institution", ".school",
 		".publisher", ".address", ".date",
-		".note",
+		".note", ".keywords-index",
 	].join(","),
 	sectionFilterInputSelector: "input.filter",
 	sectionFilterSelectSelector: "select.selection",
