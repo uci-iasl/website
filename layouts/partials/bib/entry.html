@@ -1,6 +1,17 @@
 {{- $entrykindattr := .entry.kind | htmlEscape -}}
 <li class="{{ $entrykindattr }}{{ with .mark }} {{ . }}{{ end }}" data-bib-kind="{{ $entrykindattr }}">{{ "" -}}
 <section id="{{ .entry.id | urlize }}" class="bibentry {{ $entrykindattr }}">
+
+{{- range $namesfield := (slice "author" "editor") -}}
+  <span class="{{ $namesfield }}s-index">
+    {{- range $person := index $.entry $namesfield | default slice -}}
+      {{- range slice "first" "middle" "last" "lineage" -}}
+        {{- . | index $person | default "" }}{{ " " -}}
+      {{- end -}}
+    {{- end -}}
+  </span>
+{{- end -}}
+
 {{- if false -}}
 
 {{- else if eq .entry.kind "book" -}}

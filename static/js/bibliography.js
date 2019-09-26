@@ -5,7 +5,7 @@ var bib = {
 	sectionGroupsSelector: ".group",
 	groupEntriesSelector: "ul.bibliography>li",
 	entryFieldsSelector: [
-		".authors", ".editors",
+		".authors-index", ".editors-index",
 		".title", ".journal", ".booktitle", ".series",
 		".organization", ".institution", ".school",
 		".publisher", ".address", ".date",

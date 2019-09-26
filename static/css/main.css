@@ -319,6 +319,9 @@ ul.bibliography>li.starred::before {
 }
 .bibliography>li .bibentry:target { background-color: var(--highlighted-bg-color); }
 
+.bibliography>li .bibentry .authors-index { display: none; }
+.bibliography>li .bibentry .editors-index { display: none; }
+
 .bibliography>li .bibentry .title {}
 
 .bibliography>li .bibentry.book .title,
