@@ -1,8 +1,12 @@
 {{- $citemode := eq .mode "citation" -}}
 {{- $len := len .names -}}
 {{- $lastidx := sub $len 1 -}}
+{{- $hasetal := gt $len .params.etalcutoff -}}
+{{- $etallabel := "et&nbsp;al." | safeHTML -}}
+
 {{- range $idx, $author := .names -}}
-  {{- if or (le $len $.params.etalcutoff) (lt $idx $.params.etalkeep) -}}
+  {{- $insideetal := and $hasetal (ge $idx $.params.etalkeep) -}}
+  {{- if or (not $insideetal) (and $insideetal (not $citemode)) -}}
     {{- if gt $idx 0 -}}
       {{- if eq $idx $lastidx -}}
         {{- if gt $lastidx 1 -}}{{ "," }}{{ end -}}{{ " and" -}}
@@ -10,6 +14,11 @@
         {{- "," -}}
       {{- end -}}
       {{- " " -}}
+    {{- end -}}
+    {{- if and (not $citemode) $hasetal (eq $idx $.params.etalkeep) -}}
+      <span class="etal">{{ "" -}}
+        <a role="button" onclick="bib.displayEtAlNames(this)">{{ $etallabel }}</a>{{ "" -}}
+        <span class="container">{{ " " -}}
     {{- end -}}
 
     {{- $fullname := partial "bib/getfullname.html" $author -}}
@@ -61,4 +70,12 @@
     </span>
   {{- end -}}
 {{- end -}}
-{{- if gt $len .params.etalcutoff }}{{ ", et al." }}{{ end -}}
+
+{{- if $hasetal -}}
+  {{- if $citemode -}}
+    {{- ", " }}<span class="etal name">{{ $etallabel }}</span>
+  {{- else -}}
+      </span>{{- /* class="container" */ -}}
+    </span>{{- /* class="etal" */ -}}
+  {{- end -}}
+{{- end -}}
