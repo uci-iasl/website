@@ -11,6 +11,15 @@
       {{- end -}}
       {{- " " -}}
     {{- end -}}
+
+    {{- $hasauthorlink := false -}}
+    {{- if and (not $citemode) $.peoplepages -}}
+      {{- with partial "bib/getfullname.html" $author | index $.peoplepages -}}
+        {{- $hasauthorlink = true -}}
+        <a href="{{ .Permalink }}" class="subtle">
+      {{- end -}}
+    {{- end -}}
+
     {{- if and (index $author "first") (or (not $citemode) $.params.citefirstnames) -}}
       {{- if $.params.fullnames -}}
         {{- $author.first -}}
@@ -35,6 +44,8 @@
     {{- end -}}
     {{- $author.last -}}
     {{- with $author.lineage }}{{ ", " }}{{ . }}{{ end -}}
+
+    {{- if $hasauthorlink }}</a>{{ end -}}
   {{- end -}}
 {{- end -}}
 {{- if gt $len .params.etalcutoff }}{{ ", et al." }}{{ end -}}

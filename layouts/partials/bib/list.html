@@ -8,7 +8,7 @@
       {{- range $entry := where $bib.references "id" "==" $id }}
         {{- if not ($.Page.Scratch.Get "bibitemfound") }}
           {{- $.Page.Scratch.Set "bibitemfound" true }}
-          {{ partial "bib/entry.html" (dict "entry" $entry "params" $.Site.Params.bibliography "mark" (cond $starred "starred" "") "Page" $.Page) }}
+          {{ partial "bib/entry.html" (dict "entry" $entry "params" $.Site.Params.bibliography "mark" (cond $starred "starred" "") "peoplepages" $.peoplepages "Page" $.Page) }}
         {{- end }}
       {{- end }}
     {{- end }}

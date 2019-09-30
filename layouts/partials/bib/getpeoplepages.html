@@ -1,0 +1,6 @@
+{{- $pagesbyname := dict -}}
+{{- range where .Site.RegularPages "Section" "people" -}}
+  {{- $name := trim (replaceRE "\\p{Zs}+" " " .Params.name) " " -}}
+  {{- $pagesbyname = merge $pagesbyname (dict $name .) -}}
+{{- end -}}
+{{- return $pagesbyname -}}
