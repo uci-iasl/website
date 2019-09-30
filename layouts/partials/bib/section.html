@@ -3,8 +3,8 @@
     {{ with .title }}<h1>{{ . }}</h1>{{ else }}<div></div>{{ end }}
     <div class="controls-anchor">
       <div class="controls {{ if .shiftcontrolsup }}heading-margin-shift{{ end }}">
-        <input class="filter" type="search" placeholder="Filter…" />
-        <select class="selection">
+        <input id="ctl-bib-filter-input" class="filter" type="search" placeholder="Filter…" />
+        <select id="ctl-bib-filter-selection" class="inactive">
           <option value="all" selected>everything</option>
           <option value="conferences">conferences</option>
           <option value="journals">journals</option>

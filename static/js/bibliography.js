@@ -12,8 +12,8 @@ var bib = {
 		".publisher", ".address", ".date",
 		".note", ".keywords-index",
 	].join(","),
-	sectionFilterInputSelector: "input.filter",
-	sectionFilterSelectSelector: "select.selection",
+	sectionFilterInputSelector: "#ctl-bib-filter-input",
+	sectionFilterSelectSelector: "#ctl-bib-filter-selection",
 
 	entryKindAttrName: "data-bib-kind",
 	entryKindSelectionMap: {
