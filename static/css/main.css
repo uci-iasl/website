@@ -63,6 +63,9 @@
   --profile-portrait-margin-left: 20px;
   --profile-portrait-margin-bottom: 30px;
   --project-cover-image-size: 320px;
+
+  --icon-search-inactive: url('data:image/svg+xml,<svg width="40" height="40pt" viewBox="0 0 30 40" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><g id="b"><defs><path id="a" d="M13 12a7 7 0 110 14 7 7 0 010-14z"/></defs><use xlink:href="%23a" fill="none" stroke="%23cecece" stroke-miterlimit="10" stroke-width="2"/></g></defs><use xlink:href="%23b"/><defs><g id="d"><defs><path id="c" d="M18.478 24.478L24 30"/></defs><use xlink:href="%23c" fill="none" stroke="%23cecece" stroke-linecap="round" stroke-miterlimit="10" stroke-width="3"/></g></defs><use xlink:href="%23d"/></svg>');
+  --icon-dropdown-inactive: url('data:image/svg+xml,<svg width="25pt" height="40pt" viewBox="0 0 25 40" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><g id="b"><defs><path id="a" d="M8 18.5l4.5-4.5 4.5 4.5"/></defs><use xlink:href="%23a" fill="none" stroke="%23cecece" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2.5"/></g></defs><use xlink:href="%23b"/><defs><g id="d"><defs><path id="c" d="M17 25.5L12.5 30 8 25.5"/></defs><use xlink:href="%23c" fill="none" stroke="%23cecece" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2.5"/></g></defs><use xlink:href="%23d"/></svg>');
 }
 
 body {
@@ -343,7 +346,18 @@ section.bibliography>header .controls select:focus {
 }
 section.bibliography>header .controls input.filter {
   width: 180px;
+  padding-left: 2.8ex;
   padding-right: 0;
+  background: var(--icon-search-inactive) left/contain no-repeat scroll;
+  background-color: transparent;
+}
+section.bibliography>header .controls input.filter:hover,
+section.bibliography>header .controls input.filter:focus {
+  background-color: var(--controls-active-bg-color);
+}
+section.bibliography>header .controls select {
+  background: var(--icon-dropdown-inactive) right/contain no-repeat scroll;
+  padding-right: 2.25ex;
 }
 section.bibliography>#ctl-bib-group-no-match {
   display: none;
