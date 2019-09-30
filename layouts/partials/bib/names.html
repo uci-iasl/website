@@ -12,11 +12,22 @@
       {{- " " -}}
     {{- end -}}
 
-    {{- $hasauthorlink := false -}}
-    {{- if and (not $citemode) $.peoplepages -}}
-      {{- with partial "bib/getfullname.html" $author | index $.peoplepages -}}
-        {{- $hasauthorlink = true -}}
-        <a href="{{ .Permalink }}" class="subtle">
+    {{- $authorurl := "" -}}
+    {{- if not $citemode -}}
+      {{- $isourown := true -}}
+      {{- $fullname := partial "bib/getfullname.html" $author -}}
+      {{- with index $.peoplepages $fullname -}}
+        {{- $authorurl = .Permalink -}}
+      {{- else -}}
+        {{- with $.params.collaborators -}}
+          {{- with where . "name" $fullname -}}
+            {{- $authorurl = (index . 0).url -}}
+            {{- $isourown = false -}}
+          {{- end -}}
+        {{- end -}}
+      {{- end -}}
+      {{- with $authorurl -}}
+        <a href="{{ . }}" class="subtle"{{ if not $isourown}} target="_blank"{{ end }}>
       {{- end -}}
     {{- end -}}
 
@@ -45,7 +56,7 @@
     {{- $author.last -}}
     {{- with $author.lineage }}{{ ", " }}{{ . }}{{ end -}}
 
-    {{- if $hasauthorlink }}</a>{{ end -}}
+    {{- if $authorurl }}</a>{{ end -}}
   {{- end -}}
 {{- end -}}
 {{- if gt $len .params.etalcutoff }}{{ ", et al." }}{{ end -}}
