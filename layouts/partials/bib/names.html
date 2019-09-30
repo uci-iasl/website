@@ -12,51 +12,53 @@
       {{- " " -}}
     {{- end -}}
 
-    {{- $authorurl := "" -}}
-    {{- if not $citemode -}}
-      {{- $isourown := true -}}
-      {{- $fullname := partial "bib/getfullname.html" $author -}}
-      {{- with index $.peoplepages $fullname -}}
-        {{- $authorurl = .Permalink -}}
-      {{- else -}}
-        {{- with $.params.collaborators -}}
-          {{- with where . "name" $fullname -}}
-            {{- $authorurl = (index . 0).url -}}
-            {{- $isourown = false -}}
+    {{- $fullname := partial "bib/getfullname.html" $author -}}
+    <span class="name"{{ if and (not $citemode) (not $.params.fullnames) }} title="{{ $fullname }}"{{ end }}>
+      {{- $authorurl := "" -}}
+      {{- if not $citemode -}}
+        {{- $isourown := true -}}
+        {{- with index $.peoplepages $fullname -}}
+          {{- $authorurl = .Permalink -}}
+        {{- else -}}
+          {{- with $.params.collaborators -}}
+            {{- with where . "name" $fullname -}}
+              {{- $authorurl = (index . 0).url -}}
+              {{- $isourown = false -}}
+            {{- end -}}
           {{- end -}}
         {{- end -}}
+        {{- with $authorurl -}}
+          <a href="{{ . }}" class="subtle"{{ if not $isourown}} target="_blank"{{ end }}>
+        {{- end -}}
       {{- end -}}
-      {{- with $authorurl -}}
-        <a href="{{ . }}" class="subtle"{{ if not $isourown}} target="_blank"{{ end }}>
-      {{- end -}}
-    {{- end -}}
 
-    {{- if and (index $author "first") (or (not $citemode) $.params.citefirstnames) -}}
-      {{- if $.params.fullnames -}}
-        {{- $author.first -}}
-        {{- with $author.middle -}}
-          {{- range split . " " -}}
-            &nbsp;{{ . }}{{ if eq (countrunes .) 1 }}{{ "." }}{{ end -}}
+      {{- if and (index $author "first") (or (not $citemode) $.params.citefirstnames) -}}
+        {{- if $.params.fullnames -}}
+          {{- $author.first -}}
+          {{- with $author.middle -}}
+            {{- range split . " " -}}
+              &nbsp;{{ . }}{{ if eq (countrunes .) 1 }}{{ "." }}{{ end -}}
+            {{- end -}}
           {{- end -}}
-        {{- end -}}
-        {{- " " -}}
-      {{- else -}}
-        {{- range $i, $name := split $author.first "-" -}}
-          {{- if gt $i 0 }}{{ "-" }}{{ end -}}
-          {{- substr $name 0 1 }}{{ "." -}}
-        {{- end -}}
-        {{- with $author.middle -}}
-          {{- range split . " " -}}
-            &nbsp;{{ substr . 0 1 }}{{ "." -}}
+          {{- " " -}}
+        {{- else -}}
+          {{- range $i, $name := split $author.first "-" -}}
+            {{- if gt $i 0 }}{{ "-" }}{{ end -}}
+            {{- substr $name 0 1 }}{{ "." -}}
           {{- end -}}
+          {{- with $author.middle -}}
+            {{- range split . " " -}}
+              &nbsp;{{ substr . 0 1 }}{{ "." -}}
+            {{- end -}}
+          {{- end -}}
+          &nbsp;
         {{- end -}}
-        &nbsp;
       {{- end -}}
-    {{- end -}}
-    {{- $author.last -}}
-    {{- with $author.lineage }}{{ ", " }}{{ . }}{{ end -}}
+      {{- $author.last -}}
+      {{- with $author.lineage }}{{ ", " }}{{ . }}{{ end -}}
 
-    {{- if $authorurl }}</a>{{ end -}}
+      {{- if $authorurl }}</a>{{ end -}}
+    </span>
   {{- end -}}
 {{- end -}}
 {{- if gt $len .params.etalcutoff }}{{ ", et al." }}{{ end -}}
