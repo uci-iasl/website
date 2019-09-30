@@ -14,6 +14,7 @@ var bib = {
 	].join(","),
 	sectionFilterInputSelector: "#ctl-bib-filter-input",
 	sectionFilterSelectSelector: "#ctl-bib-filter-selection",
+	filterSelectInactiveClass: "inactive",
 
 	entryKindAttrName: "data-bib-kind",
 	entryKindSelectionMap: {
@@ -93,6 +94,11 @@ var bib = {
 			words: bib.filterInputElem.value.toLowerCase().split(/\s+/),
 			selection: bib.filterSelectElem.value,
 		};
+		if (query.selection == bib.entrySelectionTagAll) {
+			bib.filterSelectElem.classList.add(bib.filterSelectInactiveClass);
+		} else {
+			bib.filterSelectElem.classList.remove(bib.filterSelectInactiveClass);
+		}
 		var totalVisible = 0;
 		for (var group of bib.entryGroups) {
 			var groupVisible = 0;
