@@ -295,6 +295,10 @@ section.bibliography>header .controls select {
 section.bibliography>header .controls input.filter {
   width: 170px;
 }
+section.bibliography>#ctl-bib-group-no-match {
+  display: none;
+  margin-bottom: var(--heading-top-margin);
+}
 
 ul.bibliography {
   list-style: none;

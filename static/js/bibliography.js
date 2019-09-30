@@ -3,6 +3,7 @@
 var bib = {
 	sectionSelector: "section.bibliography",
 	sectionGroupsSelector: ".group",
+	sectionNoMatchGroupSelector: "#ctl-bib-group-no-match",
 	groupEntriesSelector: "ul.bibliography>li",
 	entryFieldsSelector: [
 		".authors-index", ".editors-index",
@@ -56,6 +57,7 @@ var bib = {
 			});
 		}
 		bib.entryGroups = groups;
+		bib.noMatchGroup = sectionElem.querySelector(bib.sectionNoMatchGroupSelector);
 
 		bib.filterInputElem = sectionElem.querySelector(bib.sectionFilterInputSelector);
 		bib.filterSelectElem = sectionElem.querySelector(bib.sectionFilterSelectSelector);
@@ -91,15 +93,18 @@ var bib = {
 			words: bib.filterInputElem.value.toLowerCase().split(/\s+/),
 			selection: bib.filterSelectElem.value,
 		};
+		var totalVisible = 0;
 		for (var group of bib.entryGroups) {
-			var numVisible = group.entries.length;
+			var groupVisible = 0;
 			for (var entry of group.entries) {
 				var matched = bib.entryMatchesQuery(entry, query);
 				entry.element.style.display = (matched ? "list-item" : "none");
-				numVisible -= !matched;
+				groupVisible += matched;
 			}
-			group.element.style.display = (numVisible > 0 ? "block" : "none");
+			group.element.style.display = (groupVisible > 0 ? "block" : "none");
+			totalVisible += groupVisible;
 		}
+		bib.noMatchGroup.style.display = (totalVisible > 0 ? "none" : "block");
 	},
 
 	toggleBibtexDisplay: function(button) {
