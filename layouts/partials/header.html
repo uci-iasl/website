@@ -2,8 +2,14 @@
 <html lang="{{ .Site.LanguageCode | default "en-US" }}">
 <head>
   <meta charset="UTF-8">
-  <meta name="referrer" content="no-referrer">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
+  <meta name="referrer" content="no-referrer">
+
+  <meta name="theme-color" content="#404040">
+  <link rel="icon" sizes="192x192" href="/img/logo/icon-192.png">
+  <link rel="apple-touch-icon" href="/img/logo/icon-192.png">
 
   {{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
   {{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
@@ -22,19 +28,16 @@
   </title>
 
   <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+  <meta name="googlebot" content="index,follow">
 
   <base href="{{ .Site.BaseURL }}">
   <link rel="canonical" href="{{ .Permalink }}">
-  <link rel="stylesheet" href="/css/fonts.css">
   <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/fonts.css">
 
   {{ if index .Params "bibliography" -}}
   <script type="text/javascript" src="/js/bibliography.js"></script>
   {{- end }}
-
-  <meta name="theme-color" content="#404040">
-  <link rel="icon" sizes="192x192" href="/img/logo/icon-192.png">
-  <link rel="apple-touch-icon" href="/img/logo/icon-192.png">
 </head>
 <body>
 {{ partial "navbar.html" . }}
