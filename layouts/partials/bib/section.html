@@ -1,3 +1,4 @@
+{{- $peoplepages := partial "bib/getpeoplepages.html" . -}}
 <section class="bibliography">
   {{ with .title }}<h1>{{ . }}</h1>{{ end }}
   {{- range $group := .items }}
@@ -6,7 +7,7 @@
       {{ with $group.foreword -}}
         <div class="foreword">{{ markdownify . }}</div>
       {{- end }}
-      {{ partial "bib/list.html" (dict "items" $group.items "Page" $.Page "Site" $.Site) }}
+      {{ partial "bib/list.html" (dict "items" $group.items "peoplepages" $peoplepages "Page" $.Page "Site" $.Site) }}
     </div>
   {{- end }}
 </section>
