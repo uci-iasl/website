@@ -437,6 +437,10 @@ a.citation .title::after {
   margin-left: 0.4pt;
 }
 
+.bibliography>li .bibentry .etal>.container {
+  display: none;
+}
+
 .bibliography>li .bibentry .extras {
   font-size: calc(0.7 * var(--font-size));
 }
