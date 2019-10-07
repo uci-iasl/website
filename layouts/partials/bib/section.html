@@ -18,8 +18,8 @@
   <div id="ctl-bib-group-no-match" class="group">
     <h2>No matches</h2>
   </div>
-  {{- range $group := .items }}
-    <div class="group">
+  {{- range $idx, $group := .items }}
+    <div class="group" id="bib-{{ with $group.title }}{{ anchorize . }}{{ else }}section-{{ add $idx 1 }}{{ end }}">
       {{ with $group.title }}<h2>{{ . }}</h2>{{ end }}
       {{ with $group.foreword -}}
         <div class="foreword">{{ markdownify . }}</div>

@@ -367,6 +367,14 @@ section.bibliography>#ctl-bib-group-no-match h2 {
   color: var(--controls-fg-color);
 }
 
+section.bibliography .group {
+  border-radius: 0.5ex;
+}
+section.bibliography .group:target {
+  padding: 0 0.4ex;
+  background-color: var(--highlighted-bg-color);
+}
+
 ul.bibliography {
   list-style: none;
   padding-left: 0;
@@ -386,9 +394,12 @@ ul.bibliography>li.starred::before {
   display: inline-block;
   vertical-align: top;
   border-radius: 0.5ex;
-  padding: 0 0.5ex 0.1ex 0.4ex;
+  padding: 0 0.4ex 0.1ex 0.4ex;
 }
-.bibliography>li .bibentry:target { background-color: var(--highlighted-bg-color); }
+.bibliography>li .bibentry:target {
+  background-color: var(--highlighted-bg-color);
+  padding-bottom: 0.1ex;
+}
 
 .bibliography>li .bibentry .authors-index { display: none; }
 .bibliography>li .bibentry .editors-index { display: none; }
