@@ -437,7 +437,7 @@ a.citation .title::after {
   margin-left: 0.4pt;
 }
 
-.bibliography>li .bibentry .etal>.container {
+.bibliography>li .bibentry .etal>.content {
   display: none;
 }
 

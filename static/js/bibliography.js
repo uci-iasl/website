@@ -34,6 +34,9 @@ var bib = {
 	entryBibtexCollapsedSign: "▸",
 	entryBibtexExpandedSign: "▾",
 
+	entryEtAlContainerClass: "etal",
+	entryEtAlContentSelector: ".content",
+
 	initEntryTextFilter: function() {
 		var sectionElem = document.querySelector(bib.sectionSelector);
 		var groupElems = sectionElem.querySelectorAll(bib.sectionGroupsSelector);
@@ -135,12 +138,13 @@ var bib = {
 			bibtex.style.display = "none";
 		}
 	},
+
 	displayEtAlNames: function(button) {
-		var etalElem = button.parentNode;
-		if (!etalElem || !etalElem.classList.contains("etal")) return;
-		var etalContainer = etalElem.querySelector(".container");
-		if (!etalContainer) return;
-		etalContainer.style.display = "inline";
+		var etal = button.parentNode;
+		if (!etal || !etal.classList.contains(bib.entryEtAlContainerClass)) return;
+		var etalContent = etal.querySelector(bib.entryEtAlContentSelector);
+		if (!etalContent) return;
+		etalContent.style.display = "inline";
 		button.style.display = "none";
 	},
 }
