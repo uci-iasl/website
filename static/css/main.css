@@ -2,7 +2,14 @@
   --bg-color: #fbfbfb;
   --fg-color: black;
   --lighter-fg-color: #2e2e2e;
+  --lighter-bg-color: white;
   --highlighted-bg-color: #dee6ee;
+
+  --controls-fg-color: #aaaaaa;
+  --controls-border-color: #e0e0e0;
+  --controls-active-fg-color: var(--fg-color);
+  --controls-active-bg-color: var(--lighter-bg-color);
+  --controls-active-border-color: var(--fg-color);
 
   --headings-fg-color: black;
   --headings-meta-fg-color: #787878;
@@ -40,6 +47,14 @@
   --footer-font-size: 14px;
   --line-height: 23px;
 
+  --heading-top-margin: 18px;
+
+  --controls-font-size: 0.9em;
+  --controls-height: 1.8em;
+  --controls-underline-size: 2px;
+  --controls-active-underline-size: 1px;
+  --controls-vertical-padding: 1px;
+
   --body-wrap-width: 720px;
   --body-wrap-padding: 10px;
 
@@ -48,6 +63,9 @@
   --profile-portrait-margin-left: 20px;
   --profile-portrait-margin-bottom: 30px;
   --project-cover-image-size: 320px;
+
+  --icon-search-inactive: url('data:image/svg+xml,<svg width="40" height="40pt" viewBox="0 0 30 40" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><g id="b"><defs><path id="a" d="M13 12a7 7 0 110 14 7 7 0 010-14z"/></defs><use xlink:href="%23a" fill="none" stroke="%23cecece" stroke-miterlimit="10" stroke-width="2"/></g></defs><use xlink:href="%23b"/><defs><g id="d"><defs><path id="c" d="M18.478 24.478L24 30"/></defs><use xlink:href="%23c" fill="none" stroke="%23cecece" stroke-linecap="round" stroke-miterlimit="10" stroke-width="3"/></g></defs><use xlink:href="%23d"/></svg>');
+  --icon-dropdown-inactive: url('data:image/svg+xml,<svg width="25pt" height="40pt" viewBox="0 0 25 40" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><g id="b"><defs><path id="a" d="M8 18.5l4.5-4.5 4.5 4.5"/></defs><use xlink:href="%23a" fill="none" stroke="%23cecece" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2.5"/></g></defs><use xlink:href="%23b"/><defs><g id="d"><defs><path id="c" d="M17 25.5L12.5 30 8 25.5"/></defs><use xlink:href="%23c" fill="none" stroke="%23cecece" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2.5"/></g></defs><use xlink:href="%23d"/></svg>');
 }
 
 body {
@@ -270,6 +288,85 @@ section.profile .contacts .address>.value {
   padding-left: 6px;
 }
 
+section.bibliography>header {
+  display: flex;
+  justify-content: space-between;
+}
+section.bibliography>header>.controls-anchor {
+  width: 300px;
+  position: relative;
+}
+section.bibliography>header>.controls-anchor>.controls {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+section.bibliography>header .controls.heading-margin-shift {
+  padding-bottom: calc(var(--heading-top-margin) - var(--controls-underline-size) - var(--controls-vertical-padding));
+}
+
+section.bibliography>header .controls .inactive {
+  color: var(--controls-fg-color);
+}
+section.bibliography>header .controls input,
+section.bibliography>header .controls select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  font: inherit;
+  font-size: var(--controls-font-size);
+  height: var(--controls-height);
+  outline: none;
+  border: none;
+  border-radius: 0;
+  border-bottom: var(--controls-underline-size) solid var(--controls-border-color);
+  padding: var(--controls-vertical-padding) 0.5ex;
+  margin: 0;
+  color: var(--controls-active-fg-color);
+  background-color: transparent;
+}
+section.bibliography>header .controls input::-webkit-search-decoration {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+section.bibliography>header .controls input::placeholder {
+  color: var(--controls-fg-color);
+  opacity: 1;
+}
+section.bibliography>header .controls input:hover,
+section.bibliography>header .controls input:focus,
+section.bibliography>header .controls select:hover,
+section.bibliography>header .controls select:focus {
+  background-color: var(--controls-active-bg-color);
+  border-bottom: var(--controls-active-underline-size) solid var(--controls-active-border-color);
+  height: calc(var(--controls-height) - var(--controls-active-underline-size));
+  margin-bottom: var(--controls-active-underline-size);
+}
+section.bibliography>header .controls select:focus {
+  border-bottom-style: dotted;
+}
+section.bibliography>header .controls input.filter {
+  width: 180px;
+  padding-left: 2.8ex;
+  padding-right: 0;
+  background: var(--icon-search-inactive) left/contain no-repeat scroll;
+  background-color: transparent;
+}
+section.bibliography>header .controls input.filter:hover,
+section.bibliography>header .controls input.filter:focus {
+  background-color: var(--controls-active-bg-color);
+}
+section.bibliography>header .controls select {
+  background: var(--icon-dropdown-inactive) right/contain no-repeat scroll;
+  padding-right: 2.25ex;
+}
+section.bibliography>#ctl-bib-group-no-match {
+  display: none;
+  margin-bottom: var(--heading-top-margin);
+}
+section.bibliography>#ctl-bib-group-no-match h2 {
+  color: var(--controls-fg-color);
+}
+
 ul.bibliography {
   list-style: none;
   padding-left: 0;
@@ -292,6 +389,10 @@ ul.bibliography>li.starred::before {
   padding: 0 0.5ex 0.1ex 0.4ex;
 }
 .bibliography>li .bibentry:target { background-color: var(--highlighted-bg-color); }
+
+.bibliography>li .bibentry .authors-index { display: none; }
+.bibliography>li .bibentry .editors-index { display: none; }
+.bibliography>li .bibentry .keywords-index { display: none; }
 
 .bibliography>li .bibentry .title {}
 
@@ -431,7 +532,7 @@ figure>a {
 
 h1, h2, h3, h4, h5, h6 {
   color: var(--headings-fg-color);
-  margin: 2ex 0 0 0;
+  margin: var(--heading-top-margin) 0 0 0;
 }
 h1 { font-size: 140%; }
 h2 { font-size: 120%; }
@@ -441,7 +542,7 @@ h5 { font-size: 100%; }
 h6 { font-size: 100%; }
 h1.page-title {
   font-size: 180%;
-  margin: 1.4ex 0 1ex 0;
+  margin: calc(1.2 * var(--heading-top-margin)) 0 var(--heading-top-margin) 0;
 }
 header>h2.meta, header>h3.meta, header>h4.meta,
 header>h5.meta, header>h6.meta {

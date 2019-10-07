@@ -1,6 +1,23 @@
 {{- $peoplepages := partial "bib/getpeoplepages.html" . -}}
 <section class="bibliography">
-  {{ with .title }}<h1>{{ . }}</h1>{{ end }}
+  <header>
+    {{ with .title }}<h1>{{ . }}</h1>{{ else }}<div></div>{{ end }}
+    <div class="controls-anchor">
+      <div class="controls{{ if .shiftcontrolsup }} heading-margin-shift{{ end }}">
+        <input id="ctl-bib-filter-input" class="filter" type="search" placeholder="Filter…" />
+        <select id="ctl-bib-filter-selection" class="inactive">
+          <option value="all" selected>everything</option>
+          <option value="conferences">conferences</option>
+          <option value="journals">journals</option>
+          <option value="books">books</option>
+          <option value="other">other</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <div id="ctl-bib-group-no-match" class="group">
+    <h2>No matches</h2>
+  </div>
   {{- range $group := .items }}
     <div class="group">
       {{ with $group.title }}<h2>{{ . }}</h2>{{ end }}
