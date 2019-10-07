@@ -111,15 +111,7 @@ var bib = {
 			totalVisible += groupVisible;
 		}
 		bib.noMatchGroup.style.display = (totalVisible > 0 ? "none" : "block");
-	displayEtAlNames: function(button) {
-		var etalElem = button.parentNode;
-		if (!etalElem || !etalElem.classList.contains("etal")) return;
-		var etalContainer = etalElem.querySelector(".container");
-		if (!etalContainer) return;
-		etalContainer.style.display = "inline";
-		button.style.display = "none";
 	},
-
 	toggleBibtexDisplay: function(button) {
 		var entry = button;
 		while (entry && (!entry.classList.contains(bib.entryContentClass) || !entry.id))
@@ -143,6 +135,14 @@ var bib = {
 			);
 			bibtex.style.display = "none";
 		}
+	},
+	displayEtAlNames: function(button) {
+		var etalElem = button.parentNode;
+		if (!etalElem || !etalElem.classList.contains("etal")) return;
+		var etalContainer = etalElem.querySelector(".container");
+		if (!etalContainer) return;
+		etalContainer.style.display = "inline";
+		button.style.display = "none";
 	},
 }
 
