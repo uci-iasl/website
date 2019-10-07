@@ -30,7 +30,7 @@ var bib = {
 	entrySelectionTagOther: "other",
 
 	entryContentClass: "bibentry",
-	entryBibtexClass: "bibtex",
+	entryBibtexSelector: "pre.bibtex",
 	entryBibtexCollapsedSign: "▸",
 	entryBibtexExpandedSign: "▾",
 
@@ -112,16 +112,15 @@ var bib = {
 		}
 		bib.noMatchGroup.style.display = (totalVisible > 0 ? "none" : "block");
 	},
+
 	toggleBibtexDisplay: function(button) {
 		var entry = button;
 		while (entry && (!entry.classList.contains(bib.entryContentClass) || !entry.id))
 			entry = entry.parentNode;
 		if (!entry) return;
-
-		var selector = entry.tagName + "." + bib.entryContentClass +
-			"#" + entry.id + ">." + bib.entryBibtexClass;
-		var bibtex = document.querySelector(selector);
+		var bibtex = entry.querySelector(bib.entryBibtexSelector);
 		if (!bibtex) return;
+
 		if (!bibtex.style.display || bibtex.style.display == "none") {
 			button.textContent = button.textContent.replace(
 				bib.entryBibtexCollapsedSign,
