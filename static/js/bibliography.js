@@ -17,7 +17,7 @@ var bib = {
 	filterSelectInactiveClass: "inactive",
 
 	entryKindAttrName: "data-bib-kind",
-	entryKindSelectionMap: {
+	entryKindCategoryMap: {
 		book: "books",
 		inbook: "books",
 		incollection: "books",
@@ -26,8 +26,8 @@ var bib = {
 		conference: "conferences",
 		article: "journals",
 	},
-	entrySelectionTagAll: "all",
-	entrySelectionTagOther: "other",
+	entryCategoryAll: "all",
+	entryCategoryOther: "other",
 
 	entryContentClass: "bibentry",
 	entryBibtexSelector: "pre.bibtex",
@@ -49,9 +49,15 @@ var bib = {
 				var values = [];
 				for (var fieldElem of fieldElems)
 					values.push(fieldElem.innerText.toLowerCase());
+
+				var kind = entryElem.getAttribute(bib.entryKindAttrName);
+				var category = bib.entryCategoryOther;
+				if (kind in bib.entryKindCategoryMap)
+					category = bib.entryKindCategoryMap[kind];
+
 				entries.push({
 					element: entryElem,
-					kind: entryElem.getAttribute(bib.entryKindAttrName),
+					category: category,
 					values: values,
 				});
 			}
@@ -70,14 +76,8 @@ var bib = {
 	},
 
 	entryMatchesQuery: function(entry, query) {
-		if (query.selection != bib.entrySelectionTagAll) {
-			var entrySel = bib.entrySelectionTagOther;
-			if (entry.kind in bib.entryKindSelectionMap)
-				entrySel = bib.entryKindSelectionMap[entry.kind];
-			if (entrySel != query.selection)
-				return false;
-		}
-
+		var hasCatSel = (query.category != bib.entryCategoryAll);
+		if (hasCatSel && entry.category != query.category) return false;
 		for (var word of query.words) {
 			var found = false;
 			for (var value of entry.values) {
@@ -86,8 +86,7 @@ var bib = {
 					break;
 				}
 			}
-			if (!found)
-				return false;
+			if (!found) return false;
 		}
 		return true;
 	},
@@ -95,9 +94,9 @@ var bib = {
 	filterEntries: function() {
 		var query = {
 			words: bib.filterInputElem.value.toLowerCase().split(/\s+/),
-			selection: bib.filterSelectElem.value,
+			category: bib.filterSelectElem.value,
 		};
-		if (query.selection == bib.entrySelectionTagAll) {
+		if (query.category == bib.entryCategoryAll) {
 			bib.filterSelectElem.classList.add(bib.filterSelectInactiveClass);
 		} else {
 			bib.filterSelectElem.classList.remove(bib.filterSelectInactiveClass);
