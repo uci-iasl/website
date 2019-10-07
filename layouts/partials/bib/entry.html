@@ -4,10 +4,8 @@
 
 {{- range $namesfield := (slice "author" "editor") -}}
   <span class="{{ $namesfield }}s-index">
-    {{- range $person := index $.entry $namesfield | default slice -}}
-      {{- range slice "first" "middle" "last" "lineage" -}}
-        {{- . | index $person | default "" }}{{ " " -}}
-      {{- end -}}
+    {{- range index $.entry $namesfield -}}
+      {{- partial "bib/getfullname.html" . }}{{ " " -}}
     {{- end -}}
   </span>
 {{- end -}}
