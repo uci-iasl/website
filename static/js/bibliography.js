@@ -3,7 +3,7 @@
 var bib = {
 	sectionSelector: "section.bibliography",
 	sectionGroupsSelector: ".group",
-	sectionNoMatchGroupSelector: "#ctl-bib-group-no-match",
+	sectionNoMatchGroupSelector: "#ctl-bib-section-no-match",
 	groupEntriesSelector: "ul.bibliography>li",
 	entryFieldsSelector: [
 		".authors-index", ".editors-index",

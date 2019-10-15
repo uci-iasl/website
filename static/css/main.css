@@ -359,11 +359,11 @@ section.bibliography>header .controls select {
   background: var(--icon-dropdown-inactive) right/contain no-repeat scroll;
   padding-right: 2.25ex;
 }
-section.bibliography>#ctl-bib-group-no-match {
+section.bibliography>#ctl-bib-section-no-match {
   display: none;
   margin-bottom: var(--heading-top-margin);
 }
-section.bibliography>#ctl-bib-group-no-match h2 {
+section.bibliography>#ctl-bib-section-no-match h2 {
   color: var(--controls-fg-color);
 }
 
