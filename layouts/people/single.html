@@ -42,7 +42,7 @@
           {{- end }}
           </ul>
           {{ if isset .Params "resume" -}}
-            {{- if findRE "^\\w+://" .Params.resume 1 -}}
+            {{- if findRE `^\w+://` .Params.resume 1 -}}
               <a class="resume" href="{{ .Params.resume }}" target="_blank">Full Resume</a>
             {{- else -}}
               {{- $path := printf "/dl/people/%s/%s" .File.TranslationBaseName .Params.resume -}}
