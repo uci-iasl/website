@@ -17,7 +17,8 @@ references:
   month: February
   title: Edge-Assisted On-Sensor Information Selection for Bandwidth-Constrained Systems
   year: '2018'
-- author:
+- address: San Diego, California
+  author:
   - first: Igor
     last: Burago
   - first: Marco
@@ -25,13 +26,12 @@ references:
   bibtex: "@inproceedings{burago-levorato-2016-ita,\n  author = {Igor Burago and Marco\
     \ Levorato},\n  title = {Parametric Identification via Likelihood Maximization\
     \ in Wireless Networks},\n  booktitle = {Information Theory and Applications Workshop\
-    \ (ITA)},\n  month = feb,\n  year = {2016},\n  intype = {presented at the},\n\
-    \  location = {San Diego, California}\n}"
+    \ (ITA)},\n  address = {San Diego, California},\n  month = feb,\n  year = {2016},\n\
+    \  intype = {presented at the}\n}"
   booktitle: Information Theory and Applications Workshop (ITA)
   id: burago-levorato-2016-ita
   intype: presented at the
   kind: inproceedings
-  location: San Diego, California
   month: February
   title: Parametric Identification via Likelihood Maximization in Wireless Networks
   year: '2016'
