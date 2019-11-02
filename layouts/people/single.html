@@ -3,9 +3,9 @@
   <article class="person">
     <section class="profile">
       {{- if isset .Params "portrait" }}
-      <div class="portrait">
-        <img src="/img/people/{{ .Params.portrait }}" />
-      </div>
+        <div class="portrait">
+          <img src="/img/people/{{ .Params.portrait }}" />
+        </div>
       {{- end }}
       <div class="resume">
         <div class="name">
@@ -19,71 +19,71 @@
         </section>
 
         {{- if isset .Params "interests" }}
-        <section class="interests">
-          <span class="label">Research Interests:</span>
-          <ul class="interests">
-            {{ range .Params.interests }}<li>{{ . }}</li>{{ end }}
-          </ul>
-        </section>
+          <section class="interests">
+            <span class="label">Research Interests:</span>
+            <ul class="interests">
+              {{ range .Params.interests }}<li>{{ . }}</li>{{ end }}
+            </ul>
+          </section>
         {{- end }}
 
         {{- if isset .Params "education" }}
-        <section class="education">
-          <span class="label">Education:</span>
-          <ul class="education">
-          {{- range .Params.education }}
-            <li>
-              <div class="year">{{ .year }}</div>
-              <div class="record">
-                <div class="degree">{{ .degree }}</div>
-                <div class="institution">{{ .institution }}</div>
-              </div>
-            </li>
-          {{- end }}
-          </ul>
-          {{ if isset .Params "resume" -}}
-            {{- if findRE `^\w+://` .Params.resume 1 -}}
-              <a class="resume" href="{{ .Params.resume }}" target="_blank">Full Resume</a>
-            {{- else -}}
-              {{- $path := printf "/dl/people/%s/%s" .File.TranslationBaseName .Params.resume -}}
-              {{- if fileExists (printf "static/%s" $path) -}}
-                <a class="resume" href="{{ $path }}">Full Resume</a>
+          <section class="education">
+            <span class="label">Education:</span>
+            <ul class="education">
+              {{- range .Params.education }}
+                <li>
+                  <div class="year">{{ .year }}</div>
+                  <div class="record">
+                    <div class="degree">{{ .degree }}</div>
+                    <div class="institution">{{ .institution }}</div>
+                  </div>
+                </li>
+              {{- end }}
+            </ul>
+            {{ if isset .Params "resume" -}}
+              {{- if findRE `^\w+://` .Params.resume 1 -}}
+                <a class="resume" href="{{ .Params.resume }}" target="_blank">Full Resume</a>
+              {{- else -}}
+                {{- $path := printf "/dl/people/%s/%s" .File.TranslationBaseName .Params.resume -}}
+                {{- if fileExists (printf "static/%s" $path) -}}
+                  <a class="resume" href="{{ $path }}">Full Resume</a>
+                {{- end -}}
               {{- end -}}
-            {{- end -}}
-          {{- end }}
-        </section>
+            {{- end }}
+          </section>
         {{- end }}
 
         {{- if or (isset .Params "email") (isset .Params "website") }}
-        <section class="contacts">
-          {{- if isset .Params "email" }}
-          <div class="email">
-            <span class="label">Email:</span>
-            <a class="email" href="mailto:{{ .Params.name }} <{{ .Params.email }}>">
-              {{- .Params.email -}}
-            </a>
-          </div>
-          {{- end }}
-          {{- if isset .Params "websites" }}
-          <div class="websites">
-            <span class="label">
-              Website{{ if gt (len .Params.websites) 1 }}s{{ end }}:
-            </span>
-            {{ range $idx, $site := .Params.websites -}}
-              {{- if gt $idx 0 }}<span class="sep"></span>{{ end }}
-              <a href="{{ $site.url }}" target="_blank">
-                {{- $site.title | default ($site.url | replaceRE "^https?://" "") -}}
-              </a>
+          <section class="contacts">
+            {{- if isset .Params "email" }}
+              <div class="email">
+                <span class="label">Email:</span>
+                <a class="email" href="mailto:{{ .Params.name }} <{{ .Params.email }}>">
+                  {{- .Params.email -}}
+                </a>
+              </div>
             {{- end }}
-          </div>
-          {{- end }}
-          {{- if isset .Params "address" }}
-          <div class="address">
-            <span class="label">Mailing Address:</span>
-            <div class="value">{{ .Params.address | markdownify }}</div>
-          </div>
-          {{- end }}
-        </section>
+            {{- if isset .Params "websites" }}
+              <div class="websites">
+                <span class="label">
+                  Website{{ if gt (len .Params.websites) 1 }}s{{ end }}:
+                </span>
+                {{- range $idx, $site := .Params.websites }}
+                  {{- if gt $idx 0 }}<span class="sep"></span>{{ end }}
+                  <a href="{{ $site.url }}" target="_blank">
+                    {{- $site.title | default ($site.url | replaceRE "^https?://" "") -}}
+                  </a>
+                {{- end }}
+              </div>
+            {{- end }}
+            {{- if isset .Params "address" }}
+              <div class="address">
+                <span class="label">Mailing Address:</span>
+                <div class="value">{{ .Params.address | markdownify }}</div>
+              </div>
+            {{- end }}
+          </section>
         {{- end }}
       </div>
     </section>
@@ -93,7 +93,7 @@
     </section>
 
     {{- if isset .Params "bibliography" }}
-    {{ partial "bib/section.html" (dict "title" "Publications" "items" .Params.bibliography "Page" .Page "Site" .Site) }}
+      {{ partial "bib/section.html" (dict "title" "Publications" "items" .Params.bibliography "Page" .Page "Site" .Site) }}
     {{- end }}
   </article>
 </main>

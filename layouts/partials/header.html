@@ -26,7 +26,7 @@
     {{- .Site.Title -}}
   </title>
 
-  <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+  <META NAME="ROBOTS" CONTENT="INDEX,FOLLOW">
   <meta name="googlebot" content="index,follow">
 
   <base href="{{ .Site.BaseURL }}">
@@ -35,8 +35,9 @@
   <link rel="stylesheet" href="/css/fonts.css">
 
   {{ if index .Params "bibliography" -}}
-  <script type="text/javascript" src="/js/bibliography.js"></script>
+    <script type="text/javascript" src="/js/bibliography.js"></script>
   {{- end }}
 </head>
+
 <body>
 {{ partial "navbar.html" . }}

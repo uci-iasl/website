@@ -5,15 +5,16 @@
       {{ .Content }}
     </section>
 
-    {{ if where .Data.Pages.ByDate "Section" "updates" -}}
-    <section id="updates">
-      <h1 class="page-title">Recent Activity</h1>
-      <ul class="updates">
-        {{- range first 10 (where .Data.Pages.ByDate "Section" "updates") }}
-        {{ .Render "li" }}
-        {{- end }}
-      </ul>
-    </section>
+    {{- $updates := where .Data.Pages.ByDate "Section" "updates" }}
+    {{- if $updates }}
+      <section id="updates">
+        <h1 class="page-title">Recent Activity</h1>
+        <ul class="updates">
+          {{- range first 10 $updates }}
+            {{ .Render "li" }}
+          {{- end }}
+        </ul>
+      </section>
     {{- end }}
   </article>
 </main>

@@ -5,8 +5,8 @@
     </div>
     <nav>
       {{- range $i, $item := .Site.Menus.main }}
-      {{ if gt $i 0 }}<span class="sep"></span>{{ end }}
-      {{ $item.Pre }}<a href="{{ $item.URL }}">{{ $item.Name }}</a>{{ $item.Post }}
+        {{ if gt $i 0 }}<span class="sep"></span>{{ end }}
+        {{ $item.Pre }}<a href="{{ $item.URL }}">{{ $item.Name }}</a>{{ $item.Post }}
       {{- end }}
     </nav>
   </div>

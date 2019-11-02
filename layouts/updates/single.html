@@ -12,14 +12,16 @@
 
     <footer>
       {{- if isset .Params "project" }}
-      {{- $pages := where $.Site.Pages "Section" "updates" }}
-      {{- $pages := where $pages "Params.project" "==" .Params.project }}
-      {{- if $pages := where $pages "Permalink" "!=" .Permalink }}
-      <h1>Previously in the project</h1>
-      <ul class="updates">
-        {{ range $pages }} {{- .Render "li" -}} {{ end }}
-      </ul>
-      {{- end }}
+        {{- $pages := where $.Site.Pages "Section" "updates" }}
+        {{- $pages := where $pages "Params.project" "==" .Params.project }}
+        {{- if $pages := where $pages "Permalink" "!=" .Permalink }}
+          <h1>Previously in the project</h1>
+          <ul class="updates">
+            {{- range $pages }}
+              {{ .Render "li" }}
+            {{- end }}
+          </ul>
+        {{- end }}
       {{- end }}
     </footer>
   </article>

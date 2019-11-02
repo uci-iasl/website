@@ -3,7 +3,9 @@
   <article class="updates">
     <h1 class="page-title">Updates</h1>
     <ul class="updates">
-      {{ range .Data.Pages.ByDate }} {{- .Render "li" -}} {{ end }}
+      {{- range .Data.Pages.ByDate }}
+        {{ .Render "li" }}
+      {{- end }}
     </ul>
   </article>
 </main>

@@ -1,11 +1,11 @@
 <li class="person">
   <section id="{{ .File.TranslationBaseName | urlize }}" class="vcard">
     {{- if or (isset .Params "badge") (isset .Params "portrait") }}
-    <div class="portrait">
-      <a class="no-decor" href="{{ .Permalink }}">
-        <img src="img/people/{{ .Params.badge | default .Params.portrait }}">
-      </a>
-    </div>
+      <div class="portrait">
+        <a class="no-decor" href="{{ .Permalink }}">
+          <img src="img/people/{{ .Params.badge | default .Params.portrait }}">
+        </a>
+      </div>
     {{- end }}
     <div class="record">
       <div class="name">

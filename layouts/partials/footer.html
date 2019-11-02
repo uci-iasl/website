@@ -19,12 +19,14 @@
     </a>
   </div>
   {{- with .Site.Params.contact }}
-  <div class="contact">
-    Contact: <a class="email" href="mailto:{{ .name }} <{{ .email }}>">
-      {{- .name | default .email -}}
-    </a>
-  </div>
+    <div class="contact">
+      Contact:
+      <a class="email" href="mailto:{{ .name }} <{{ .email }}>">
+        {{- .name | default .email -}}
+      </a>
+    </div>
   {{- end }}
 </footer>
+
 </body>
 </html>

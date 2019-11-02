@@ -10,14 +10,14 @@
         {{- if $pages }}
           <h1>{{ $role.plural }}</h1>
           <ul class="people">
-          {{- $pages = sort $pages "Params.name" }}
-          {{- $pages = sort $pages "Params.yearjoined" }}
-          {{- if hasPrefix $role.id "alumnus" }}
-            {{- $pages = sort $pages "Params.yeargraduated" "desc" }}
-          {{- end }}
-          {{- range $pages }}
-            {{ .Render "li" }}
-          {{- end }}
+            {{- $pages = sort $pages "Params.name" }}
+            {{- $pages = sort $pages "Params.yearjoined" }}
+            {{- if hasPrefix $role.id "alumnus" }}
+              {{- $pages = sort $pages "Params.yeargraduated" "desc" }}
+            {{- end }}
+            {{- range $pages }}
+              {{ .Render "li" }}
+            {{- end }}
           </ul>
         {{- end }}
       {{- end }}
