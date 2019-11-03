@@ -3,7 +3,7 @@
     {{- if or (isset .Params "badge") (isset .Params "portrait") }}
       <div class="portrait">
         <a class="no-decor" href="{{ .Permalink }}">
-          <img src="img/people/{{ .Params.badge | default .Params.portrait }}">
+          <img src="/img/people/{{ .Params.badge | default .Params.portrait }}">
         </a>
       </div>
     {{- end }}
