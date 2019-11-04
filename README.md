@@ -142,7 +142,7 @@ rebuilt and updated in that browser window.
 To see the changes in bibliography information reflected on the
 generated pages, first install the following Python packages:
 
-    $ pip install bibtexparser latexcodec titlecase pyyaml
+    $ pip3 install bibtexparser latexcodec titlecase pyyaml
 
 and then run the command
 
