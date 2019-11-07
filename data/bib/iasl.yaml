@@ -292,15 +292,15 @@ references:
   bibtex: "@article{lee-hong-2018-iotj,\n  author = {Kisong Lee and Jun-Pyo Hong and\
     \ Hyun-Ho Choi and Marco Levorato},\n  title = {Adaptive Wireless-Powered Relaying\
     \ Schemes With Cooperative Jamming for Two-Hop Secure Communication},\n  journal\
-    \ = {IEEE Internet of Things Journal},\n  volume = {5},\n  pages = {2793--2803},\n\
-    \  month = aug,\n  year = {2018},\n  doi = {10.1109/jiot.2018.2830880},\n  issue\
-    \ = {4}\n}"
+    \ = {IEEE Internet of Things Journal},\n  volume = {5},\n  number = {4},\n  pages\
+    \ = {2793--2803},\n  month = aug,\n  year = {2018},\n  doi = {10.1109/jiot.2018.2830880}\n\
+    }"
   doi: 10.1109/jiot.2018.2830880
   id: lee-hong-2018-iotj
-  issue: '4'
   journal: IEEE Internet of Things Journal
   kind: article
   month: August
+  number: '4'
   pages: 2793–2803
   title: Adaptive Wireless-Powered Relaying Schemes With Cooperative Jamming for Two-Hop
     Secure Communication
@@ -540,15 +540,15 @@ references:
     last: Li
   bibtex: "@article{ahmed-levorato-2017-tsg,\n  author = {Nadia Ahmed and Marco Levorato\
     \ and Guann-Pyng Li},\n  title = {Residential Consumer-Centric Demand Side Management},\n\
-    \  journal = {IEEE Transactions on Smart Grid},\n  volume = {9},\n  pages = {4513--4524},\n\
-    \  month = sep,\n  year = {2017},\n  doi = {10.1109/tsg.2017.2661991},\n  issue\
-    \ = {5}\n}"
+    \  journal = {IEEE Transactions on Smart Grid},\n  volume = {9},\n  number = {5},\n\
+    \  pages = {4513--4524},\n  month = sep,\n  year = {2017},\n  doi = {10.1109/tsg.2017.2661991}\n\
+    }"
   doi: 10.1109/tsg.2017.2661991
   id: ahmed-levorato-2017-tsg
-  issue: '5'
   journal: IEEE Transactions on Smart Grid
   kind: article
   month: September
+  number: '5'
   pages: 4513–4524
   title: Residential Consumer-Centric Demand Side Management
   volume: '9'
