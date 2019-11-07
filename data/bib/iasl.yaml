@@ -92,14 +92,14 @@ references:
   bibtex: "@inproceedings{burago-levorato-2019-isit,\n  author = {Igor Burago and\
     \ Marco Levorato},\n  title = {Cloud-Assisted On-Sensor Observation Classification\
     \ in Latency-Impeded {IoT} Systems},\n  booktitle = {Proceedings of the IEEE International\
-    \ Symposium on Information Theory (ISIT)},\n  note = {accepted, publication pending},\n\
-    \  address = {Paris, France},\n  month = jul,\n  year = {2019}\n}"
+    \ Symposium on Information Theory (ISIT)},\n  address = {Paris, France},\n  month\
+    \ = jul,\n  year = {2019},\n  doi = {10.1109/isit.2019.8849760}\n}"
   booktitle: Proceedings of the IEEE International Symposium on Information Theory
     (ISIT)
+  doi: 10.1109/isit.2019.8849760
   id: burago-levorato-2019-isit
   kind: inproceedings
   month: July
-  note: accepted, publication pending
   title: Cloud-Assisted On-Sensor Observation Classification in Latency-Impeded IoT
     Systems
   year: '2019'
