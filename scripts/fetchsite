@@ -61,5 +61,5 @@ else
 	git clone -b "$branch" --single-branch "$repourl" "$repodir"
 fi && (
 	cd "$repodir" &&
-	"$hugobin" -d "$wwwdir" --cleanDestinationDir -b "$baseurl"
+	"$hugobin" -d "$wwwdir" --cleanDestinationDir -b "$baseurl" --minify
 )
