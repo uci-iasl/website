@@ -8,11 +8,17 @@
 #
 # Must be run from the root directory of the source tree.
 
+argv0dir="$(dirname "$0")"
+
+. "$argv0dir"/libusage.bash
+usage='[bib-file ...]'
+
 bibdir='static/bib'
 yamldir='data/bib'
-bibtex2yaml="$(dirname "$0")/bibtex2yaml"
+[[ -d $yamldir ]] || panic "$yamldir: directory does not exist"
 
-[[ -d "$yamldir" ]] || { echo "no $yamldir directory in $PWD" >&2; exit 2; }
+bibtex2yaml="$argv0dir/bibtex2yaml"
+[[ -x $bibtex2yaml ]] || panic "$bibtex2yaml: not an executable file"
 
 bibfiles=("$@")
 if [[ $# -eq 0 ]]; then
@@ -20,16 +26,24 @@ if [[ $# -eq 0 ]]; then
 	while IFS= read -r -d $'\0' file; do
 		bibfiles[i++]="$file"
 	done < <(find "$bibdir" -type f -name '*.bib' -print0)
-	[[ ${#bibfiles[@]} -gt 0 ]] || { echo "no *.bib files in $PWD/$bibdir" >&2; exit 2; }
+	[[ ${#bibfiles[@]} -gt 0 ]] || panic "$bibdir: directory has no *.bib files"
 fi
 
+rc=0
+logerr() { log "$@"; rc=1; }
+
 for bib in "${bibfiles[@]}"; do
-	[[ -f "$bib" ]] || { echo "$bib: file does not exist" >&2; continue; }
+	[[ -r $bib ]] || { logerr "$bib: not a readable file"; continue; }
 	yaml="$yamldir/$(basename "${bib%%.bib}").yaml"
-	"$bibtex2yaml" --include-bibtex "$bib" >"$yaml"
+	"$bibtex2yaml" --include-bibtex "$bib" >"$yaml" || {
+		logerr "$bibtex2yaml: exit $?"
+		logerr "$bib: conversion has failed"
+	}
 done
 
 while IFS= read -r -d $'\0' yaml; do
 	bib="$bibdir/$(basename "${yaml%%.yaml}").bib"
-	[[ -f "$bib" ]] || echo "no $bib counterpart for $yaml" >&2
+	[[ -f $bib ]] || logerr "$bib: missing source file for $yaml"
 done < <(find "$yamldir" -type f -name '*.yaml' -print0)
+
+exit "$rc"

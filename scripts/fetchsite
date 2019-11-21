@@ -37,6 +37,7 @@ shift $((OPTIND-1)); [[ $1 == -- ]] && shift
 
 [[ $# -gt 0 ]] || usage 'no repository directory given'
 repodir="$1"
+[[ ! -e $repodir || -d $repodir ]] || panic "$repodir: file exists and is not a directory"
 
 lockfile=
 cleanup() { [[ -n $lockfile ]] && rm "$lockfile"; }

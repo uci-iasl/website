@@ -12,7 +12,7 @@ usage='version [install-path]'
 [[ $# -gt 0 ]] || usage 'no version to download given'
 version="$1"
 binpath="${2:-.}"
-[[ -d $binpath ]] || usage "$binpath: directory does not exist"
+[[ -d $binpath ]] || panic "$binpath: directory does not exist"
 
 case $OSTYPE in
 (linux*)	ossuffix=Linux;;
