@@ -35,7 +35,7 @@ logerr() { log "$@"; rc=1; }
 for bib in "${bibfiles[@]}"; do
 	[[ -r $bib ]] || { logerr "$bib: not a readable file"; continue; }
 	yaml="$yamldir/$(basename "${bib%%.bib}").yaml"
-	"$bibtex2yaml" --include-bibtex "$bib" >"$yaml" || {
+	"$bibtex2yaml" --include-bibtex --reformat-source "$bib" >"$yaml" || {
 		logerr "$bibtex2yaml: exit $?"
 		logerr "$bib: conversion has failed"
 	}
