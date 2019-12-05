@@ -100,7 +100,7 @@ body>header nav { float: right; }
 body>header nav .sep::before {
   content: '·';
   color: var(--header-accent-fg-color);
-  padding: 0px 4px;
+  padding: 0px 0.75ex;
 }
 body>header a, body>header a:visited {
   color: var(--header-link-fg-color);
