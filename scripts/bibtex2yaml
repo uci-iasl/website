@@ -12,6 +12,10 @@ import yaml
 
 from bibtexparser.bibdatabase import as_text as bib_expr_as_text
 
+# The BibTeX fields recognized by the commonly used bibliography
+# styles. The values of these fields are treated as LaTeX expressions.
+# When the BibTeX source is formatted, these fields are put in front
+# in the same order as below. (Hence the tuple instead of a set.)
 BIBTEX_STANDARD_TAGS = (
 	'author',
 	'title',
@@ -36,7 +40,17 @@ BIBTEX_STANDARD_TAGS = (
 	'month',
 	'year',
 )
-BIBTEX_NAMELIST_TAGS = {'author', 'editor'}
+
+# The BibTeX fields parsed as lists of names separated by the word
+# 'and' (when it is not inside of an expression protected by braces).
+BIBTEX_NAMELIST_TAGS = {
+	'author',
+	'editor',
+}
+
+# The BibTeX fields whose values are rewritten in title case when
+# converted into text (if so requested at invocation). Fragments
+# enclosed in braces are protected from case transformation.
 BIBTEX_TITLECASE_TAGS = {
 	'title',
 	'journal',
@@ -48,10 +62,21 @@ BIBTEX_TITLECASE_TAGS = {
 	'organization',
 	'publisher',
 }
-BIBTEX_SENTENCECASE_TAGS = {'title'}
+# A subset of the fields in BIBTEX_TITLECASE_TAGS whose values are
+# rewritten in sentence case when converted into text (if so requested
+# at invocation). Values of all other fields in BIBTEX_TITLECASE_TAGS
+# are rewritten in title case, still.
+BIBTEX_SENTENCECASE_TAGS = {
+	'title',
+}
+
+# When generating a BibTeX snippet for a separate entry, expand
+# expressions using @string{} variables in the values of all fields
+# except for the following ones.
 BIBTEX_SNIPPET_KEEP_VARS_TAGS = {
 	'month',
 }
+
 MONTH_SHORT_NAMES = (
 	None,
 	'jan', 'feb', 'mar', 'apr',
