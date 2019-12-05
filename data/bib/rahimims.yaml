@@ -14,7 +14,7 @@ references:
     \ and Ethiopia Nigussie and Seppo Virtanen and Jouni Isoaho},\n  title = {Cryptographic\
     \ Key Generation Using {ECG} Signal},\n  booktitle = {Proceedings of the IEEE\
     \ Annual Consumer Communications Networking Conference (CCNC)},\n  pages = {1024--1031},\n\
-    \  address = {Las Vegas, Nevada},\n  month = jan,\n  year = {2017},\n  doi = {10.1109/ccnc.2017.7983280}\n\
+    \  address = {Las Vegas, Nevada},\n  month = jan,\n  year = {2017},\n  doi = {10.1109/ccnc.2017.7983280},\n\
     }"
   booktitle: Proceedings of the IEEE Annual Consumer Communications Networking Conference
     (CCNC)
@@ -47,7 +47,7 @@ references:
     \ and Amir M. Rahmani and Pasi Liljeberg},\n  title = {On the Feasibility of Attribute-Based\
     \ Encryption on {Internet} of {Things} Devices},\n  journal = {IEEE Micro},\n\
     \  volume = {36},\n  number = {6},\n  pages = {25--35},\n  month = nov,\n  year\
-    \ = {2016},\n  doi = {10.1109/mm.2016.101}\n}"
+    \ = {2016},\n  doi = {10.1109/mm.2016.101},\n}"
   doi: 10.1109/mm.2016.101
   id: ambrosin-anzanpour-2016-micro
   journal: IEEE Micro
@@ -81,7 +81,7 @@ references:
     \ Hannu Tenhunen and Jouni Isoaho},\n  title = {End-to-End Security Scheme for\
     \ Mobility Enabled Healthcare {Internet} of {Things}},\n  journal = {Future Generation\
     \ Computer Systems},\n  volume = {64},\n  pages = {108--124},\n  publisher = {Elsevier},\n\
-    \  month = nov,\n  year = {2016},\n  doi = {10.1016/j.future.2016.02.020}\n}"
+    \  month = nov,\n  year = {2016},\n  doi = {10.1016/j.future.2016.02.020},\n}"
   doi: 10.1016/j.future.2016.02.020
   id: moosavi-gia-2016-fgcs
   journal: Future Generation Computer Systems
@@ -113,7 +113,7 @@ references:
     \  volume = {636},\n  series = {Communications in Computer and Information Science},\n\
     \  pages = {47--56},\n  note = {Proceedings of the International Conference on\
     \ Well-Being in the Information Society (WIS)},\n  publisher = {Springer},\n \
-    \ year = {2016},\n  doi = {10.1007/978-3-319-44672-1_5}\n}"
+    \ year = {2016},\n  doi = {10.1007/978-3-319-44672-1_5},\n}"
   booktitle: Building Sustainable Health Ecosystems
   doi: 10.1007/978-3-319-44672-1_5
   editor:
@@ -165,7 +165,7 @@ references:
     \ Security for Healthcare {Internet}-of-{Things}},\n  booktitle = {Proceedings\
     \ of the IEEE International Conference on Computer and Information Technology\
     \ (CIT)},\n  pages = {581--588},\n  address = {Liverpool, U.K.},\n  month = oct,\n\
-    \  year = {2015},\n  doi = {10.1109/cit/iucc/dasc/picom.2015.83}\n}"
+    \  year = {2015},\n  doi = {10.1109/cit/iucc/dasc/picom.2015.83},\n}"
   booktitle: Proceedings of the IEEE International Conference on Computer and Information
     Technology (CIT)
   doi: 10.1109/cit/iucc/dasc/picom.2015.83
@@ -200,7 +200,7 @@ references:
     \ Smart Gateways},\n  journal = {Procedia Computer Science},\n  volume = {52},\n\
     \  pages = {452--459},\n  note = {Proceedings of the International Conference\
     \ on Ambient Systems, Networks and Technologies (ANT)},\n  publisher = {Elsevier},\n\
-    \  month = jun,\n  year = {2015},\n  doi = {10.1016/j.procs.2015.05.013}\n}"
+    \  month = jun,\n  year = {2015},\n  doi = {10.1016/j.procs.2015.05.013},\n}"
   doi: 10.1016/j.procs.2015.05.013
   id: moosavi-gia-2015-ant
   journal: Procedia Computer Science
@@ -237,7 +237,7 @@ references:
     \ Based on {Internet} of {Things}: Two Case Studies},\n  booktitle = {Proceedings\
     \ of the International Conference on Wireless Mobile Communication and Healthcare\
     \ (MOBIHEALTH)},\n  pages = {275--278},\n  address = {Athens, Greece},\n  month\
-    \ = nov,\n  year = {2014},\n  doi = {10.1109/mobihealth.2014.7015964}\n}"
+    \ = nov,\n  year = {2014},\n  doi = {10.1109/mobihealth.2014.7015964},\n}"
   booktitle: Proceedings of the International Conference on Wireless Mobile Communication
     and Healthcare (MOBIHEALTH)
   doi: 10.1109/mobihealth.2014.7015964
@@ -263,7 +263,7 @@ references:
     \ = {Procedia Computer Science},\n  volume = {32},\n  pages = {198--206},\n  note\
     \ = {Proceedings of the International Conference on Ambient Systems, Networks\
     \ and Technologies (ANT)},\n  publisher = {Elsevier},\n  month = jun,\n  year\
-    \ = {2014},\n  doi = {10.1016/j.procs.2014.05.415}\n}"
+    \ = {2014},\n  doi = {10.1016/j.procs.2014.05.415},\n}"
   doi: 10.1016/j.procs.2014.05.415
   id: moosavi-nigussie-2014-ant
   journal: Procedia Computer Science
@@ -293,7 +293,7 @@ references:
     \ title = {Specification Analysis for Secure {RFID} Implant Systems},\n  journal\
     \ = {International Journal of Computer Theory and Engineering (IJCTE)},\n  volume\
     \ = {6},\n  number = {2},\n  pages = {177--188},\n  month = apr,\n  year = {2014},\n\
-    \  doi = {10.7763/ijcte.2014.v6.858}\n}"
+    \  doi = {10.7763/ijcte.2014.v6.858},\n}"
   doi: 10.7763/ijcte.2014.v6.858
   id: moosavi-hakkala-2014-ijcte
   journal: International Journal of Computer Theory and Engineering (IJCTE)
@@ -324,7 +324,7 @@ references:
     \ Multicast Communication Protocol},\n  booktitle = {Proceedings of the Euromicro\
     \ International Conference on Parallel, Distributed, and Network-Based Processing},\n\
     \  pages = {294--301},\n  address = {Belfast, U.K.},\n  month = feb,\n  year =\
-    \ {2013},\n  doi = {10.1109/pdp.2013.50}\n}"
+    \ {2013},\n  doi = {10.1109/pdp.2013.50},\n}"
   booktitle: Proceedings of the Euromicro International Conference on Parallel, Distributed,
     and Network-Based Processing
   doi: 10.1109/pdp.2013.50
@@ -361,7 +361,7 @@ references:
     \ Taikyeong T. Jeong and Eng Gee Lim},\n  title = {An Efficient History-Based\
     \ Routing Algorithm for Interconnection Networks},\n  booktitle = {International\
     \ SoC Design Conference (ISOCC)},\n  pages = {277--280},\n  address = {Jeju Island,\
-    \ South Korea},\n  month = nov,\n  year = {2012},\n  doi = {10.1109/isocc.2012.6407094}\n\
+    \ South Korea},\n  month = nov,\n  year = {2012},\n  doi = {10.1109/isocc.2012.6407094},\n\
     }"
   booktitle: International SoC Design Conference (ISOCC)
   doi: 10.1109/isocc.2012.6407094
