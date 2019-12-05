@@ -49,6 +49,9 @@ BIBTEX_TITLECASE_TAGS = {
 	'publisher',
 }
 BIBTEX_SENTENCECASE_TAGS = {'title'}
+BIBTEX_SNIPPET_KEEP_VARS_TAGS = {
+	'month',
+}
 MONTH_SHORT_NAMES = (
 	None,
 	'jan', 'feb', 'mar', 'apr',
@@ -59,6 +62,7 @@ MONTH_SHORT_NAMES = (
 assert BIBTEX_NAMELIST_TAGS.issubset(BIBTEX_STANDARD_TAGS)
 assert BIBTEX_TITLECASE_TAGS.issubset(BIBTEX_STANDARD_TAGS)
 assert BIBTEX_SENTENCECASE_TAGS.issubset(BIBTEX_TITLECASE_TAGS)
+assert BIBTEX_SNIPPET_KEEP_VARS_TAGS.issubset(BIBTEX_STANDARD_TAGS)
 
 class CaseChange(enum.Enum):
 	title = 'title'
@@ -105,7 +109,10 @@ def format_title(tag, text, case_change):
 
 def format_bibtex(bib_entry):
 	db = bibtexparser.bibdatabase.BibDatabase()
-	db.entries = [bib_entry]
+	db.entries = [{
+		tag: val if tag in BIBTEX_SNIPPET_KEEP_VARS_TAGS else bib_expr_as_text(val)
+		for tag, val in bib_entry.items()
+	}]
 	return bibtex_writer().write(db).rstrip('\n')
 
 def break_names(names_str, case_change):
