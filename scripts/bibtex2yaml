@@ -103,6 +103,11 @@ def format_title(tag, text, case_change):
 		return title_text(text, tag not in BIBTEX_SENTENCECASE_TAGS)
 	return debrace(text)
 
+def format_bibtex(bib_entry):
+	db = bibtexparser.bibdatabase.BibDatabase()
+	db.entries = [bib_entry]
+	return bibtex_writer().write(db).rstrip('\n')
+
 def break_names(names_str, case_change):
 	records = []
 	for name in names_str.split(' and '):
@@ -118,15 +123,6 @@ def break_names(names_str, case_change):
 			record['last'] = format_title('title', record['last'], case_change)
 		records.append(record)
 	return records
-
-def format_bibtex(bib_entry):
-	db = bibtexparser.bibdatabase.BibDatabase()
-	db.entries = [bib_entry]
-	w = bibtexparser.bwriter.BibTexWriter()
-	w.contents = ['entries']
-	w.display_order = BIBTEX_STANDARD_TAGS
-	w.indent = '  '
-	return bibtexparser.dumps(db, w).strip()
 
 def make_record(bib_entry, include_bibtex, case_change):
 	record = {
@@ -174,40 +170,88 @@ def load_bibtex(file):
 	).parse_file(file, partial=True)
 
 def save_yaml(records, file):
-	yaml.dump({'references': records}, file,
-		default_flow_style=False,
+	yaml.dump(
+		{'references': records},
+		file,
+		encoding='utf-8',
 		allow_unicode=True,
-		encoding='utf-8')
+		default_flow_style=False,
+	)
 
-def main(bib_file, yaml_file, include_bibtex=False, case_change=None):
-	bib = load_bibtex(bib_file)
-	records = [make_record(e, include_bibtex, case_change) for e in bib.entries]
+def bibtex_writer():
+	w = bibtexparser.bwriter.BibTexWriter()
+	w.indent = '  '
+	w.add_trailing_comma = True
+	w.display_order = BIBTEX_STANDARD_TAGS
+	w.order_entries_by = None
+	return w
+
+def save_bibtex(bib_db, file, id_sort_map=None, overwrite=False):
+	if id_sort_map:
+		bib_db.entries.sort(key=lambda e: id_sort_map.get(e['ID']))
+	text = bibtex_writer().write(bib_db).rstrip('\n')
+	if overwrite:
+		file.seek(0)
+		file.truncate()
+	file.write(text)
+	file.write('\n')
+
+def convert_bibtex_file(bib_file, yaml_file, include_bibtex=False, case_change=None, reformat_source=True):
+	bib_db = load_bibtex(bib_file)
+	records = [make_record(e, include_bibtex, case_change) for e in bib_db.entries]
 	records.sort(key=record_date_str, reverse=True)
 	save_yaml(records, yaml_file)
+	if reformat_source and bib_file.writable():
+		id_ord = {r['id']: i for i, r in enumerate(records)}
+		save_bibtex(bib_db, bib_file, id_sort_map=id_ord, overwrite=True)
 
 def parse_args():
 	parser = argparse.ArgumentParser()
-	parser.add_argument('bib_file', metavar='bib-file',
-		type=argparse.FileType('r'),
+	parser.add_argument(
+		'bib_file',
+		metavar='bib-file',
+		type=argparse.FileType('r+'),
 		default=sys.stdin,
-		help='input BibTeX file to parse')
-	parser.add_argument('yaml_file', metavar='yaml-file',
+		help='input BibTeX file to parse',
+	)
+	parser.add_argument(
+		'yaml_file',
+		metavar='yaml-file',
 		nargs='?',
 		type=argparse.FileType('w'),
 		default=sys.stdout,
-		help='output YAML file to write')
-	parser.add_argument('-b', '--include-bibtex',
+		help='output YAML file to write',
+	)
+	parser.add_argument(
+		'-b',
+		'--include-bibtex',
 		action='store_true',
 		default=False,
-		help='include BibTeX source as a field in output records')
-	parser.add_argument('-c', '--change-case',
+		help='save BibTeX source snippets in the output records',
+	)
+	parser.add_argument(
+		'-c',
+		'--change-case',
 		type=CaseChange,
 		choices=list(CaseChange),
-		help='normalize word capitalization in title-like tags')
+		help='normalize word capitalization in title-like fields',
+	)
+	parser.add_argument(
+		'-f',
+		'--reformat-source',
+		action='store_true',
+		default=False,
+		help='rewrite the input BibTeX file in canonical formatting',
+	)
 	return parser.parse_args()
 
 if __name__ == '__main__':
 	args = parse_args()
-	main(args.bib_file, args.yaml_file,
-		include_bibtex=args.include_bibtex,
-		case_change=args.change_case)
+	with args.bib_file, args.yaml_file:
+		convert_bibtex_file(
+			args.bib_file,
+			args.yaml_file,
+			include_bibtex=args.include_bibtex,
+			case_change=args.change_case,
+			reformat_source=args.reformat_source,
+		)
