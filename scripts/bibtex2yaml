@@ -155,7 +155,11 @@ def break_names(tag, tex_str, case_change):
 			names[-1] += node.latex_verbatim()
 
 	profiles = []
+	has_others_kw = False
 	for name in names:
+		if clean_ws(name).lower() == break_names.OTHERS_KEYWORD:
+			has_others_kw = True
+			continue
 		parts = bibtexparser.customization.splitname(name, strict_mode=False)
 		if not any(parts.get(k) for k in ('first', 'von', 'jr')):
 			corp_title = ' '.join(parts.get('last', ()))
@@ -169,9 +173,12 @@ def break_names(tag, tex_str, case_change):
 			}
 			profile = {k: detexify(' '.join(v)) for k, v in profile.items() if v}
 		profiles.append(profile)
+	if has_others_kw:
+		profiles.append({'last': break_names.OTHERS_KEYWORD})
 	return profiles
 
 break_names.NAME_SEP_RE = re.compile(r'\sand\s', re.I)
+break_names.OTHERS_KEYWORD = 'others'
 
 def make_record(bib_entry, include_bibtex, case_change):
 	record = {
