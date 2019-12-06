@@ -2,9 +2,8 @@
 
 import argparse
 import bibtexparser
-import codecs
 import enum
-import latexcodec
+from pylatexenc import latex2text, latexwalker
 import re
 import sys
 import titlecase
@@ -90,47 +89,59 @@ assert BIBTEX_SENTENCECASE_TAGS.issubset(BIBTEX_TITLECASE_TAGS)
 assert BIBTEX_SNIPPET_KEEP_VARS_TAGS.issubset(BIBTEX_STANDARD_TAGS)
 
 class CaseChange(enum.Enum):
-	title = 'title'
-	sentence = 'sentence'
+	TITLE = 'title'
+	SENTENCE = 'sentence'
 
 	def __str__(self):
 		return self.value
 
-def detexify(s):
-	s = codecs.decode(s, 'ulatex')
-	s = s.replace('\n', ' ')
-	s = re.sub(r'\s+', ' ', s)
-	return s.strip()
+def clean_ws(str):
+	return clean_ws.WSPACE_RE.sub(' ', str).strip()
 
-def debrace(s):
-	s = re.sub(r'(?<!\\)([{}])', '', s)
-	s = re.sub(r'\\([{}])', r'\1', s)
-	return s
+clean_ws.WSPACE_RE = re.compile(r'\s+')
 
-def title_text(s, title_case=True):
-	def ignore_braced(word, **kwargs):
-		starts_with_brace = word[0] == '{'
-		word = debrace(word)
-		# Empty string is treated by titlecase() the same way as None,
-		# so if the word consists of braces only, return a space.
-		if not word: return ' '
-		return word if starts_with_brace else None
-	if title_case:
-		s = titlecase.titlecase(s, callback=ignore_braced)
-	else:
-		s = ' '.join(ignore_braced(w) or
-				(w.capitalize() if i == 0 else w[:1].lower() + w[1:])
-			for i, w in enumerate(s.split()))
-	s = debrace(s)
-	s = re.sub(r'\s+', ' ', s)
-	return s.strip()
+def parse_tex(str):
+	return latexwalker.LatexWalker(str).get_latex_nodes()[0]
 
-def format_title(tag, text, case_change):
-	if case_change == CaseChange.title:
-		return title_text(text, True)
-	if case_change == CaseChange.sentence:
-		return title_text(text, tag not in BIBTEX_SENTENCECASE_TAGS)
-	return debrace(text)
+def render_tex(tex_nodes):
+	return latex2text.LatexNodes2Text(
+		strict_latex_spaces=True,
+	).nodelist_to_text(tex_nodes)
+
+def detexify(str):
+	return clean_ws(render_tex(parse_tex(str)))
+
+def title_cased(str):
+	return titlecase.titlecase(str)
+
+def sentence_cased(str):
+	return titlecase.SUBPHRASE.sub(lambda m: m[1] + m[2].capitalize(), str.capitalize())
+
+def title_text(tex_str, title_case=True):
+	# Reserve places for the protected chunks, change the case in the
+	# unprotected chunks conjointly, and then replace the placeholders
+	# with the contents of the protected chunks via str.format().
+	fmt_str = ''
+	groups = []
+	for node in parse_tex(tex_str):
+		node_text = render_tex([node])
+		if node_text and isinstance(node, latexwalker.LatexGroupNode):
+			groups.append(node_text)
+			fmt_str += '{}'
+		else:
+			fmt_str += node_text.replace('{', '{{').replace('}', '}}')
+
+	case_transform = title_cased if title_case else sentence_cased
+	# The clean_ws() call before case transformation is due to leading
+	# whitespace affecting capitalization in titlecase.titlecase().
+	return clean_ws(case_transform(clean_ws(fmt_str)).format(*groups))
+
+def format_title(tag, tex_str, case_change):
+	if case_change == CaseChange.TITLE:
+		return title_text(tex_str, True)
+	if case_change == CaseChange.SENTENCE:
+		return title_text(tex_str, tag not in BIBTEX_SENTENCECASE_TAGS)
+	return detexify(tex_str)
 
 def format_bibtex(bib_entry):
 	db = bibtexparser.bibdatabase.BibDatabase()
@@ -140,9 +151,9 @@ def format_bibtex(bib_entry):
 	}]
 	return bibtex_writer().write(db).rstrip('\n')
 
-def break_names(names_str, case_change):
+def break_names(tex_str, case_change):
 	records = []
-	for name in names_str.split(' and '):
+	for name in tex_str.split(' and '):
 		parts = bibtexparser.customization.splitname(name, strict_mode=False)
 		record = {
 			'first': parts['first'][:1],
@@ -150,7 +161,7 @@ def break_names(names_str, case_change):
 			'last': parts['von'] + parts['last'],
 			'suffix': parts['jr'],
 		}
-		record = {k: debrace(' '.join(v)) for k, v in record.items() if v}
+		record = {k: detexify(' '.join(v)) for k, v in record.items() if v}
 		if all(k not in record for k in ('first', 'middle', 'suffix')):
 			record['last'] = format_title('title', record['last'], case_change)
 		records.append(record)
@@ -164,16 +175,16 @@ def make_record(bib_entry, include_bibtex, case_change):
 	if include_bibtex:
 		record['bibtex'] = format_bibtex(bib_entry)
 	for tag in bib_entry:
+		value = bib_expr_as_text(bib_entry[tag])
 		if tag in BIBTEX_STANDARD_TAGS:
-			record[tag] = detexify(bib_expr_as_text(bib_entry[tag]))
 			if tag in BIBTEX_NAMELIST_TAGS:
-				record[tag] = break_names(record[tag], case_change)
+				record[tag] = break_names(value, case_change)
 			elif tag in BIBTEX_TITLECASE_TAGS:
-				record[tag] = format_title(tag, record[tag], case_change)
+				record[tag] = format_title(tag, value, case_change)
 			else:
-				record[tag] = debrace(record[tag])
+				record[tag] = detexify(value)
 		elif tag not in ('ID', 'ENTRYTYPE'):
-			record[tag] = bib_expr_as_text(bib_entry[tag])
+			record[tag] = value
 	return record
 
 def record_date_str(record):
