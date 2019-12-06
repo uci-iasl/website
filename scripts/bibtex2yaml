@@ -76,13 +76,6 @@ BIBTEX_SNIPPET_KEEP_VARS_TAGS = {
 	'month',
 }
 
-MONTH_SHORT_NAMES = (
-	None,
-	'jan', 'feb', 'mar', 'apr',
-	'may', 'jun', 'jul', 'aug',
-	'sep', 'oct', 'nov', 'dec',
-)
-
 assert BIBTEX_NAMELIST_TAGS.issubset(BIBTEX_STANDARD_TAGS)
 assert BIBTEX_TITLECASE_TAGS.issubset(BIBTEX_STANDARD_TAGS)
 assert BIBTEX_SENTENCECASE_TAGS.issubset(BIBTEX_TITLECASE_TAGS)
@@ -188,21 +181,36 @@ def make_record(bib_entry, include_bibtex, case_change):
 	return record
 
 def record_date_str(record):
-	if 'year' not in record: return ''
-	date = record['year']
-	if 'month' not in record: return date
+	# The BibLaTeX date field is already in ISO 8601 format.
+	date_str = record.get('date', '')
+	if date_str:
+		return date_str
 
-	month_match = re.search(r'[A-Za-z]{3}', record['month'])
-	month_short = month_match.group().lower() if month_match else ''
-	try: month_num = MONTH_SHORT_NAMES.index(month_short)
-	except: return date
-	date += '-{:02d}'.format(month_num)
-	if 'day' not in record: return date
+	try:
+		date_str += '{:04d}'.format(int(record['year']))
 
-	try: day_num = int(record['day'])
-	except: return date
-	date += '-{:02d}'.format(day_num)
-	return date
+		match = record_date_str.MONTH_PREFIX_RE.search(record['month'])
+		month_prefix = match.group().lower()
+		month_num = record_date_str.MONTH_PREFIXES.index(month_prefix)
+		date_str += '-{:02d}'.format(month_num)
+
+		date_str += '-{:02d}'.format(int(record['day']))
+	except:
+		pass  # Use whatever portion has been built so far.
+	return date_str
+
+record_date_str.MONTH_PREFIXES = (
+	None,
+	'jan', 'feb', 'mar', 'apr',
+	'may', 'jun', 'jul', 'aug',
+	'sep', 'oct', 'nov', 'dec',
+)
+record_date_str.MONTH_PREFIX_RE = re.compile(
+	r'\b({})'.format(
+		'|'.join(re.escape(p) for p in record_date_str.MONTH_PREFIXES if p),
+	),
+	re.I,
+)
 
 def load_bibtex(file):
 	return bibtexparser.bparser.BibTexParser(
