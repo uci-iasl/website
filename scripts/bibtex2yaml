@@ -165,7 +165,7 @@ def break_names(tag, tex_str, case_change):
 				'first': parts['first'][:1],
 				'middle': parts['first'][1:],
 				'last': parts['von'] + parts['last'],
-				'suffix': parts['jr'],
+				'lineage': parts['jr'],
 			}
 			profile = {k: detexify(' '.join(v)) for k, v in profile.items() if v}
 		profiles.append(profile)
