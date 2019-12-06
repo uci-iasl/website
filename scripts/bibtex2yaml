@@ -144,21 +144,34 @@ def format_bibtex(bib_entry):
 	}]
 	return bibtex_writer().write(db).rstrip('\n')
 
-def break_names(tex_str, case_change):
-	records = []
-	for name in tex_str.split(' and '):
+def break_names(tag, tex_str, case_change):
+	names = ['']
+	for node in parse_tex(tex_str):
+		if isinstance(node, latexwalker.LatexCharsNode):
+			first, *rest = break_names.NAME_SEP_RE.split(node.chars)
+			names[-1] += first
+			names.extend(rest)
+		else:
+			names[-1] += node.latex_verbatim()
+
+	profiles = []
+	for name in names:
 		parts = bibtexparser.customization.splitname(name, strict_mode=False)
-		record = {
-			'first': parts['first'][:1],
-			'middle': parts['first'][1:],
-			'last': parts['von'] + parts['last'],
-			'suffix': parts['jr'],
-		}
-		record = {k: detexify(' '.join(v)) for k, v in record.items() if v}
-		if all(k not in record for k in ('first', 'middle', 'suffix')):
-			record['last'] = format_title('title', record['last'], case_change)
-		records.append(record)
-	return records
+		if not any(parts.get(k) for k in ('first', 'von', 'jr')):
+			corp_title = ' '.join(parts.get('last', ()))
+			profile = {'last': format_title(tag, corp_title, case_change)}
+		else:
+			profile = {
+				'first': parts['first'][:1],
+				'middle': parts['first'][1:],
+				'last': parts['von'] + parts['last'],
+				'suffix': parts['jr'],
+			}
+			profile = {k: detexify(' '.join(v)) for k, v in profile.items() if v}
+		profiles.append(profile)
+	return profiles
+
+break_names.NAME_SEP_RE = re.compile(r'\sand\s', re.I)
 
 def make_record(bib_entry, include_bibtex, case_change):
 	record = {
@@ -171,7 +184,7 @@ def make_record(bib_entry, include_bibtex, case_change):
 		value = bib_expr_as_text(bib_entry[tag])
 		if tag in BIBTEX_STANDARD_TAGS:
 			if tag in BIBTEX_NAMELIST_TAGS:
-				record[tag] = break_names(value, case_change)
+				record[tag] = break_names(tag, value, case_change)
 			elif tag in BIBTEX_TITLECASE_TAGS:
 				record[tag] = format_title(tag, value, case_change)
 			else:
