@@ -1,11 +1,16 @@
-{{- $name := .first -}}
+{{- $name := slice -}}
+{{- with .first -}}
+  {{- $name = $name | append . -}}
+{{- end -}}
 {{- with .middle -}}
   {{- range split . " " -}}
-    {{- $name = print $name " " . (cond (eq (countrunes .) 1) "." "")  -}}
+    {{- $name = $name | append (print . (cond (eq (countrunes .) 1) "." "")) -}}
   {{- end -}}
 {{- end -}}
-{{- $name = print $name " " .last -}}
-{{- with .lineage -}}
-  {{- $name = print $name " " . -}}
+{{- with .last -}}
+  {{- $name = $name | append . -}}
 {{- end -}}
-{{- return $name -}}
+{{- with .lineage -}}
+  {{- $name = $name | append . -}}
+{{- end -}}
+{{- return (delimit $name " " | string) -}}

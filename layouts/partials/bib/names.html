@@ -5,11 +5,15 @@
 {{- $etallabel := "et&nbsp;al." | safeHTML -}}
 
 {{- range $idx, $author := .names -}}
+  {{- $fullname := partial "bib/getfullname.html" $author -}}
+  {{- $isothers := and (eq $author.last $fullname) (eq $fullname "others") -}}
   {{- $insideetal := and $hasetal (ge $idx $.params.etalkeep) -}}
+
   {{- if or (not $insideetal) (and $insideetal (not $citemode)) -}}
     {{- if gt $idx 0 -}}
       {{- if eq $idx $lastidx -}}
-        {{- if gt $lastidx 1 -}}{{ "," }}{{ end -}}{{ " and" -}}
+        {{- if gt $lastidx 1 }}{{ "," }}{{ end -}}
+        {{- if not $isothers }}{{ " and" }}{{ end -}}
       {{- else -}}
         {{- "," -}}
       {{- end -}}
@@ -21,10 +25,9 @@
         <span class="content">{{ " " -}}
     {{- end -}}
 
-    {{- $fullname := partial "bib/getfullname.html" $author -}}
     <span class="name"{{ if and (not $citemode) (not $.params.fullnames) }} title="{{ $fullname }}"{{ end }}>
       {{- $authorurl := "" -}}
-      {{- if not $citemode -}}
+      {{- if and (not $citemode) (not $isothers) -}}
         {{- $isourown := true -}}
         {{- with index $.peoplepages $fullname -}}
           {{- $authorurl = .Permalink -}}
@@ -43,7 +46,7 @@
 
       {{- if and (index $author "first") (or (not $citemode) $.params.citefirstnames) -}}
         {{- if $.params.fullnames -}}
-          {{- $author.first -}}
+          {{- with $author.first }}{{ . }}{{ end -}}
           {{- with $author.middle -}}
             {{- range split . " " -}}
               &nbsp;{{ . }}{{ if eq (countrunes .) 1 }}{{ "." }}{{ end -}}
@@ -63,8 +66,12 @@
           &nbsp;
         {{- end -}}
       {{- end -}}
-      {{- $author.last -}}
-      {{- with $author.lineage }}{{ ", " }}{{ . }}{{ end -}}
+      {{- if $isothers -}}
+        {{- $etallabel -}}
+      {{- else -}}
+        {{- with $author.last }}{{ . }}{{ end -}}
+        {{- with $author.lineage }}{{ ", " }}{{ . }}{{ end -}}
+      {{- end -}}
 
       {{- if $authorurl }}</a>{{ end -}}
     </span>
