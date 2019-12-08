@@ -3,9 +3,10 @@ baseurl: 'http://iasl.ics.uci.edu/'
 languagecode: 'en-US'
 pluralizelisttitles: false
 
-blackfriday:
-  fractions: false
-  hreftargetblank: true
+markup:
+  goldmark:
+    renderer:
+      unsafe: true  # For embedded HTML in content/_index.md.
 
 params:
   author: *title
