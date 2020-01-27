@@ -9,7 +9,7 @@ references:
     \ Levorato},\n  title = {Edge-Assisted On-Sensor Information Selection for Bandwidth-Constrained\
     \ Systems},\n  booktitle = {Information Theory and Applications Workshop (ITA)},\n\
     \  address = {San Diego, California},\n  month = feb,\n  year = {2018},\n  intype\
-    \ = {presented at the}\n}"
+    \ = {presented at the},\n}"
   booktitle: Information Theory and Applications Workshop (ITA)
   id: burago-levorato-2018-ita
   intype: presented at the
@@ -27,7 +27,7 @@ references:
     \ Levorato},\n  title = {Parametric Identification via Likelihood Maximization\
     \ in Wireless Networks},\n  booktitle = {Information Theory and Applications Workshop\
     \ (ITA)},\n  address = {San Diego, California},\n  month = feb,\n  year = {2016},\n\
-    \  intype = {presented at the}\n}"
+    \  intype = {presented at the},\n}"
   booktitle: Information Theory and Applications Workshop (ITA)
   id: burago-levorato-2016-ita
   intype: presented at the
@@ -45,7 +45,7 @@ references:
     \ Lowd},\n  title = {Automated Attacks on Compression-Based Classifiers},\n  booktitle\
     \ = {Proceedings of the ACM Workshop on Artificial Intelligence and Security (AISec)},\n\
     \  pages = {69--80},\n  address = {Denver, Colorado},\n  month = oct,\n  year\
-    \ = {2015},\n  doi = {10.1145/2808769.2808778}\n}"
+    \ = {2015},\n  doi = {10.1145/2808769.2808778},\n}"
   booktitle: Proceedings of the ACM Workshop on Artificial Intelligence and Security
     (AISec)
   doi: 10.1145/2808769.2808778
@@ -61,7 +61,7 @@ references:
     last: Burago
   bibtex: "@mastersthesis{burago-2014-uo,\n  author = {Igor Burago},\n  title = {Automated\
     \ Attacks on Compression-Based Classifiers},\n  school = {University of Oregon},\n\
-    \  address = {Eugene, Oregon},\n  month = jun,\n  year = {2014},\n  url = {https://scholarsbank.uoregon.edu/xmlui/handle/1794/18439}\n\
+    \  address = {Eugene, Oregon},\n  month = jun,\n  year = {2014},\n  url = {https://scholarsbank.uoregon.edu/xmlui/handle/1794/18439},\n\
     }"
   id: burago-2014-uo
   kind: mastersthesis
@@ -85,7 +85,7 @@ references:
     \ Metadata Collections on Monitoring of the {North} {Pacific}},\n  booktitle =\
     \ {Proceedings of the Second International Symposium ``Effects of Climate Change\
     \ on the Worlds Oceans''},\n  address = {Yeosu, Korea},\n  month = may,\n  year\
-    \ = {2012}\n}"
+    \ = {2012},\n}"
   booktitle: Proceedings of the Second International Symposium “Effects of Climate
     Change on the Worlds Oceans”
   id: burago-moiseenko-2012-eccwo
@@ -100,7 +100,7 @@ references:
   bibtex: "@mastersthesis{burago-2011-fefu,\n  author = {Igor Burago},\n  title =\
     \ {Automatic Domain-Structure Modeling Based on Testing Statistics},\n  note =\
     \ {in Russian},\n  school = {Far Eastern Federal University},\n  address = {Vladivostok,\
-    \ Russia},\n  month = jun,\n  year = {2011}\n}"
+    \ Russia},\n  month = jun,\n  year = {2011},\n}"
   id: burago-2011-fefu
   kind: mastersthesis
   month: June
@@ -128,7 +128,7 @@ references:
     \ Shevchenko},\n  title = {Using the {PICES} Rented Server},\n  booktitle = {Proceedings\
     \ of the PICES Annual Meeting ``North Pacific Ecosystems Today, and Challenges\
     \ in Understanding and Forecasting Change''},\n  address = {Portland, Oregon},\n\
-    \  month = oct,\n  year = {2010}\n}"
+    \  month = oct,\n  year = {2010},\n}"
   booktitle: Proceedings of the PICES Annual Meeting “North Pacific Ecosystems Today,
     and Challenges in Understanding and Forecasting Change”
   id: burago-megrey-2010-pices
@@ -146,7 +146,7 @@ references:
     \ Igor Shevchenko},\n  title = {Automatic Generation of Enumeration Problems},\n\
     \  booktitle = {Proceedings of the First Russia and Pacific Conference on Computer\
     \ Technology and Applications},\n  address = {Vladivostok, Russia},\n  month =\
-    \ sep,\n  year = {2010}\n}"
+    \ sep,\n  year = {2010},\n}"
   booktitle: Proceedings of the First Russia and Pacific Conference on Computer Technology
     and Applications
   id: burago-shevchenko-2010-rpc
@@ -165,7 +165,7 @@ references:
     \ Method of Constraint Propagation},\n  booktitle = {Proceedings of the Academician\
     \ E. V. Zolotov Far Eastern Mathematical School-Seminar ``Fundamental Problems\
     \ of Mathematics and Information Sciences''},\n  note = {in Russian},\n  address\
-    \ = {Khabarovsk, Russia},\n  month = jun,\n  year = {2009}\n}"
+    \ = {Khabarovsk, Russia},\n  month = jun,\n  year = {2009},\n}"
   booktitle: Proceedings of the Academician E. V. Zolotov Far Eastern Mathematical
     School-Seminar “Fundamental Problems of Mathematics and Information Sciences”
   id: burago-shevchenko-2009-zolotov

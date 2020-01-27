@@ -17,7 +17,7 @@ references:
     \ One-Class Classification Approaches},\n  booktitle = {Proceedings of the IEEE\
     \ International Conference on Machine Learning and Applications (ICMLA)},\n  pages\
     \ = {752--757},\n  address = {Anaheim, California},\n  month = dec,\n  year =\
-    \ {2016},\n  doi = {10.1109/icmla.2016.0134}\n}"
+    \ {2016},\n  doi = {10.1109/icmla.2016.0134},\n}"
   booktitle: Proceedings of the IEEE International Conference on Machine Learning
     and Applications (ICMLA)
   doi: 10.1109/icmla.2016.0134
@@ -41,7 +41,7 @@ references:
     \ Dynamics Against Changing in Input and Recognition Conditions for Japanese Atypical\
     \ Text},\n  booktitle = {Proceedings of the International Symposium on Technology\
     \ for Sustainability (ISTS)},\n  pages = {103--106},\n  address = {Bangkok, Thailand},\n\
-    \  month = nov,\n  year = {2012}\n}"
+    \  month = nov,\n  year = {2012},\n}"
   booktitle: Proceedings of the International Symposium on Technology for Sustainability
     (ISTS)
   id: matsubara-samura-2012-ists

@@ -12,6 +12,10 @@ import yaml
 
 from bibtexparser.bibdatabase import as_text as bib_expr_as_text
 
+# The BibTeX fields recognized by the commonly used bibliography
+# styles. The values of these fields are treated as LaTeX expressions.
+# When the BibTeX source is formatted, these fields are put in front
+# in the same order as below. (Hence the tuple instead of a set.)
 BIBTEX_STANDARD_TAGS = (
 	'author',
 	'title',
@@ -36,7 +40,17 @@ BIBTEX_STANDARD_TAGS = (
 	'month',
 	'year',
 )
-BIBTEX_NAMELIST_TAGS = {'author', 'editor'}
+
+# The BibTeX fields parsed as lists of names separated by the word
+# 'and' (when it is not inside of an expression protected by braces).
+BIBTEX_NAMELIST_TAGS = {
+	'author',
+	'editor',
+}
+
+# The BibTeX fields whose values are rewritten in title case when
+# converted into text (if so requested at invocation). Fragments
+# enclosed in braces are protected from case transformation.
 BIBTEX_TITLECASE_TAGS = {
 	'title',
 	'journal',
@@ -48,7 +62,21 @@ BIBTEX_TITLECASE_TAGS = {
 	'organization',
 	'publisher',
 }
-BIBTEX_SENTENCECASE_TAGS = {'title'}
+# A subset of the fields in BIBTEX_TITLECASE_TAGS whose values are
+# rewritten in sentence case when converted into text (if so requested
+# at invocation). Values of all other fields in BIBTEX_TITLECASE_TAGS
+# are rewritten in title case, still.
+BIBTEX_SENTENCECASE_TAGS = {
+	'title',
+}
+
+# When generating a BibTeX snippet for a separate entry, expand
+# expressions using @string{} variables in the values of all fields
+# except for the following ones.
+BIBTEX_SNIPPET_KEEP_VARS_TAGS = {
+	'month',
+}
+
 MONTH_SHORT_NAMES = (
 	None,
 	'jan', 'feb', 'mar', 'apr',
@@ -59,6 +87,7 @@ MONTH_SHORT_NAMES = (
 assert BIBTEX_NAMELIST_TAGS.issubset(BIBTEX_STANDARD_TAGS)
 assert BIBTEX_TITLECASE_TAGS.issubset(BIBTEX_STANDARD_TAGS)
 assert BIBTEX_SENTENCECASE_TAGS.issubset(BIBTEX_TITLECASE_TAGS)
+assert BIBTEX_SNIPPET_KEEP_VARS_TAGS.issubset(BIBTEX_STANDARD_TAGS)
 
 class CaseChange(enum.Enum):
 	title = 'title'
@@ -103,6 +132,14 @@ def format_title(tag, text, case_change):
 		return title_text(text, tag not in BIBTEX_SENTENCECASE_TAGS)
 	return debrace(text)
 
+def format_bibtex(bib_entry):
+	db = bibtexparser.bibdatabase.BibDatabase()
+	db.entries = [{
+		tag: val if tag in BIBTEX_SNIPPET_KEEP_VARS_TAGS else bib_expr_as_text(val)
+		for tag, val in bib_entry.items()
+	}]
+	return bibtex_writer().write(db).rstrip('\n')
+
 def break_names(names_str, case_change):
 	records = []
 	for name in names_str.split(' and '):
@@ -118,15 +155,6 @@ def break_names(names_str, case_change):
 			record['last'] = format_title('title', record['last'], case_change)
 		records.append(record)
 	return records
-
-def format_bibtex(bib_entry):
-	db = bibtexparser.bibdatabase.BibDatabase()
-	db.entries = [bib_entry]
-	w = bibtexparser.bwriter.BibTexWriter()
-	w.contents = ['entries']
-	w.display_order = BIBTEX_STANDARD_TAGS
-	w.indent = '  '
-	return bibtexparser.dumps(db, w).strip()
 
 def make_record(bib_entry, include_bibtex, case_change):
 	record = {
@@ -174,40 +202,88 @@ def load_bibtex(file):
 	).parse_file(file, partial=True)
 
 def save_yaml(records, file):
-	yaml.dump({'references': records}, file,
-		default_flow_style=False,
+	yaml.dump(
+		{'references': records},
+		file,
+		encoding='utf-8',
 		allow_unicode=True,
-		encoding='utf-8')
+		default_flow_style=False,
+	)
 
-def main(bib_file, yaml_file, include_bibtex=False, case_change=None):
-	bib = load_bibtex(bib_file)
-	records = [make_record(e, include_bibtex, case_change) for e in bib.entries]
+def bibtex_writer():
+	w = bibtexparser.bwriter.BibTexWriter()
+	w.indent = '  '
+	w.add_trailing_comma = True
+	w.display_order = BIBTEX_STANDARD_TAGS
+	w.order_entries_by = None
+	return w
+
+def save_bibtex(bib_db, file, id_sort_map=None, overwrite=False):
+	if id_sort_map:
+		bib_db.entries.sort(key=lambda e: id_sort_map.get(e['ID']))
+	text = bibtex_writer().write(bib_db).rstrip('\n')
+	if overwrite:
+		file.seek(0)
+		file.truncate()
+	file.write(text)
+	file.write('\n')
+
+def convert_bibtex_file(bib_file, yaml_file, include_bibtex=False, case_change=None, reformat_source=True):
+	bib_db = load_bibtex(bib_file)
+	records = [make_record(e, include_bibtex, case_change) for e in bib_db.entries]
 	records.sort(key=record_date_str, reverse=True)
 	save_yaml(records, yaml_file)
+	if reformat_source and bib_file.writable():
+		id_ord = {r['id']: i for i, r in enumerate(records)}
+		save_bibtex(bib_db, bib_file, id_sort_map=id_ord, overwrite=True)
 
 def parse_args():
 	parser = argparse.ArgumentParser()
-	parser.add_argument('bib_file', metavar='bib-file',
-		type=argparse.FileType('r'),
+	parser.add_argument(
+		'bib_file',
+		metavar='bib-file',
+		type=argparse.FileType('r+'),
 		default=sys.stdin,
-		help='input BibTeX file to parse')
-	parser.add_argument('yaml_file', metavar='yaml-file',
+		help='input BibTeX file to parse',
+	)
+	parser.add_argument(
+		'yaml_file',
+		metavar='yaml-file',
 		nargs='?',
 		type=argparse.FileType('w'),
 		default=sys.stdout,
-		help='output YAML file to write')
-	parser.add_argument('-b', '--include-bibtex',
+		help='output YAML file to write',
+	)
+	parser.add_argument(
+		'-b',
+		'--include-bibtex',
 		action='store_true',
 		default=False,
-		help='include BibTeX source as a field in output records')
-	parser.add_argument('-c', '--change-case',
+		help='save BibTeX source snippets in the output records',
+	)
+	parser.add_argument(
+		'-c',
+		'--change-case',
 		type=CaseChange,
 		choices=list(CaseChange),
-		help='normalize word capitalization in title-like tags')
+		help='normalize word capitalization in title-like fields',
+	)
+	parser.add_argument(
+		'-f',
+		'--reformat-source',
+		action='store_true',
+		default=False,
+		help='rewrite the input BibTeX file in canonical formatting',
+	)
 	return parser.parse_args()
 
 if __name__ == '__main__':
 	args = parse_args()
-	main(args.bib_file, args.yaml_file,
-		include_bibtex=args.include_bibtex,
-		case_change=args.change_case)
+	with args.bib_file, args.yaml_file:
+		convert_bibtex_file(
+			args.bib_file,
+			args.yaml_file,
+			include_bibtex=args.include_bibtex,
+			case_change=args.change_case,
+			reformat_source=args.reformat_source,
+		)

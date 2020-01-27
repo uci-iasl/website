@@ -18,7 +18,7 @@ references:
     \ the IEEE Military Communication Conference (MILCOM)},\n  note = {Systems Perspective;\
     \ accepted, publication pending},\n  address = {Norfolk, VA},\n  month = nov,\n\
     \  year = {2019},\n  keyword = {Edge computing, Object detection, Unmanned Aerial\
-    \ Vehicles, Wireless networks}\n}"
+    \ Vehicles, Wireless networks},\n}"
   booktitle: Proceedings of the IEEE Military Communication Conference (MILCOM)
   id: callegaro-baidya-2019-milcom
   keyword: Edge computing, Object detection, Unmanned Aerial Vehicles, Wireless networks
@@ -47,7 +47,7 @@ references:
     \ and Networking (MobiCom)},\n  note = {the Workshop on Hot Topics in Video Analytics\
     \ and Intelligent Edges; accepted, publication pending},\n  address = {Los Cabos,\
     \ Mexico},\n  month = oct,\n  year = {2019},\n  keyword = {Information Systems,\
-    \ Mobile Information Processing Systems, Multimedia Streaming}\n}"
+    \ Mobile Information Processing Systems, Multimedia Streaming},\n}"
   booktitle: Proceedings of the ACM International Conference on Mobile Computing and
     Networking (MobiCom)
   id: matsubara-baidya-2019-mobicom
@@ -73,7 +73,7 @@ references:
     \ on Mobile Air-Ground Edge Computing, Systems, Networks, and Applications (MAGESys)},\n\
     \  note = {in conjunction with the ACM Special Interest Group on Data Communication\
     \ (SIGCOMM) Conference; accepted, publication pending},\n  address = {Beijing,\
-    \ China},\n  month = aug,\n  year = {2019}\n}"
+    \ China},\n  month = aug,\n  year = {2019},\n}"
   booktitle: Proceedings of the Workshop on Mobile Air-Ground Edge Computing, Systems,
     Networks, and Applications (MAGESys)
   id: callegaro-sbaidya-2019-magesys
@@ -93,7 +93,7 @@ references:
     \ Marco Levorato},\n  title = {Cloud-Assisted On-Sensor Observation Classification\
     \ in Latency-Impeded {IoT} Systems},\n  booktitle = {Proceedings of the IEEE International\
     \ Symposium on Information Theory (ISIT)},\n  address = {Paris, France},\n  month\
-    \ = jul,\n  year = {2019},\n  doi = {10.1109/isit.2019.8849760}\n}"
+    \ = jul,\n  year = {2019},\n  doi = {10.1109/isit.2019.8849760},\n}"
   booktitle: Proceedings of the IEEE International Symposium on Information Theory
     (ISIT)
   doi: 10.1109/isit.2019.8849760
@@ -120,7 +120,7 @@ references:
     \ = {Extended Range Electric Vehicle With Driving Behavior Estimation in Energy\
     \ Management},\n  journal = {IEEE Transactions on Smart Grid},\n  volume = {10},\n\
     \  number = {3},\n  pages = {2959--2968},\n  month = may,\n  year = {2019},\n\
-    \  doi = {10.1109/tsg.2018.2815689}\n}"
+    \  doi = {10.1109/tsg.2018.2815689},\n}"
   doi: 10.1109/tsg.2018.2815689
   id: vatanparvar-faezi-2019-tsg
   journal: IEEE Transactions on Smart Grid
@@ -154,7 +154,7 @@ references:
     \ Pasi Liljeberg and Nikil Dutt},\n  title = {Edge-Assisted Sensor Control in\
     \ Healthcare {IoT}},\n  booktitle = {Proceedings of the IEEE Global Communications\
     \ Conference (GLOBECOM)},\n  address = {Abu Dhabi, United Arab Emirates},\n  month\
-    \ = dec,\n  year = {2018},\n  doi = {10.1109/glocom.2018.8647457}\n}"
+    \ = dec,\n  year = {2018},\n  doi = {10.1109/glocom.2018.8647457},\n}"
   booktitle: Proceedings of the IEEE Global Communications Conference (GLOBECOM)
   doi: 10.1109/glocom.2018.8647457
   id: amiri-anzanpour-2018-globecom
@@ -172,7 +172,7 @@ references:
     \ and Marco Levorato},\n  title = {Optimal Computation Offloading in Edge-Assisted\
     \ {UAV} Systems},\n  booktitle = {Proceedings of the IEEE Global Communications\
     \ Conference (GLOBECOM)},\n  address = {Abu Dhabi, United Arab Emirates},\n  month\
-    \ = dec,\n  year = {2018},\n  doi = {10.1109/glocom.2018.8648099}\n}"
+    \ = dec,\n  year = {2018},\n  doi = {10.1109/glocom.2018.8648099},\n}"
   booktitle: Proceedings of the IEEE Global Communications Conference (GLOBECOM)
   doi: 10.1109/glocom.2018.8648099
   id: callegaro-levorato-2018-globecom
@@ -205,7 +205,7 @@ references:
     \  title = {Efficient and Robust {WiFi} Indoor Positioning Using Hierarchical\
     \ Navigable Small World Graphs},\n  booktitle = {Proceedings of the IEEE International\
     \ Symposium on Network Computing and Applications (NCA)},\n  address = {Cambridge,\
-    \ MA},\n  month = nov,\n  year = {2018},\n  doi = {10.1109/nca.2018.8548076}\n\
+    \ MA},\n  month = nov,\n  year = {2018},\n  doi = {10.1109/nca.2018.8548076},\n\
     }"
   booktitle: Proceedings of the IEEE International Symposium on Network Computing
     and Applications (NCA)
@@ -229,7 +229,7 @@ references:
     \ {UAV} Network Simulator Based on {ns-3} and {Ardupilot}},\n  booktitle = {Proceedings\
     \ of the ACM International Conference on Modeling, Analysis and Simulation of\
     \ Wireless and Mobile Systems (MSWiM)},\n  address = {Montreal, Canada},\n  month\
-    \ = oct # {--} # nov,\n  year = {2018},\n  doi = {10.1145/3242102.3242118}\n}"
+    \ = oct # {--} # nov,\n  year = {2018},\n  doi = {10.1145/3242102.3242118},\n}"
   booktitle: Proceedings of the ACM International Conference on Modeling, Analysis
     and Simulation of Wireless and Mobile Systems (MSWiM)
   doi: 10.1145/3242102.3242118
@@ -249,7 +249,7 @@ references:
     \ Marco Levorato},\n  title = {Randomized Edge-Assisted On-Sensor Information\
     \ Selection for Bandwidth-Constrained Systems},\n  booktitle = {Proceedings of\
     \ the Asilomar Conference on Signals, Systems, and Computers (ACSSC)},\n  address\
-    \ = {Pacific Groove, California},\n  month = oct,\n  year = {2018},\n  doi = {10.1109/acssc.2018.8645182}\n\
+    \ = {Pacific Groove, California},\n  month = oct,\n  year = {2018},\n  doi = {10.1109/acssc.2018.8645182},\n\
     }"
   booktitle: Proceedings of the Asilomar Conference on Signals, Systems, and Computers
     (ACSSC)
@@ -269,7 +269,7 @@ references:
     \ Levorato},\n  title = {Content-Aware Cognitive Interference Control for Urban\
     \ {IoT} Systems},\n  journal = {IEEE Transactions on Cognitive Communications\
     \ and Networking},\n  volume = {4},\n  number = {3},\n  pages = {500--512},\n\
-    \  month = sep,\n  year = {2018},\n  doi = {10.1109/tccn.2018.2815604}\n}"
+    \  month = sep,\n  year = {2018},\n  doi = {10.1109/tccn.2018.2815604},\n}"
   doi: 10.1109/tccn.2018.2815604
   id: baidya-levorato-2018-tccn
   journal: IEEE Transactions on Cognitive Communications and Networking
@@ -293,7 +293,7 @@ references:
     \ Hyun-Ho Choi and Marco Levorato},\n  title = {Adaptive Wireless-Powered Relaying\
     \ Schemes With Cooperative Jamming for Two-Hop Secure Communication},\n  journal\
     \ = {IEEE Internet of Things Journal},\n  volume = {5},\n  number = {4},\n  pages\
-    \ = {2793--2803},\n  month = aug,\n  year = {2018},\n  doi = {10.1109/jiot.2018.2830880}\n\
+    \ = {2793--2803},\n  month = aug,\n  year = {2018},\n  doi = {10.1109/jiot.2018.2830880},\n\
     }"
   doi: 10.1109/jiot.2018.2830880
   id: lee-hong-2018-iotj
@@ -319,7 +319,7 @@ references:
     \ for {UAVs} in the {Urban} {IoT}},\n  booktitle = {Proceedings of the Workshop\
     \ on Unmanned Autonomous Systems (CPC-UAV)},\n  note = {in conjunction with IEEE\
     \ International Conference on Sensing, Communication and Networking (SECON)},\n\
-    \  address = {Hong Kong},\n  month = jun,\n  year = {2018},\n  doi = {10.1109/seconw.2018.8396356}\n\
+    \  address = {Hong Kong},\n  month = jun,\n  year = {2018},\n  doi = {10.1109/seconw.2018.8396356},\n\
     }"
   booktitle: Proceedings of the Workshop on Unmanned Autonomous Systems (CPC-UAV)
   doi: 10.1109/seconw.2018.8396356
@@ -348,7 +348,7 @@ references:
     \ {IoT}},\n  journal = {Procedia Computer Science},\n  volume = {130},\n  pages\
     \ = {432--439},\n  note = {Proceedings of the International Conference on Ambient\
     \ Systems, Networks and Technologies (ANT)},\n  publisher = {Elsevier},\n  month\
-    \ = may,\n  year = {2018},\n  doi = {10.1016/j.procs.2018.04.064}\n}"
+    \ = may,\n  year = {2018},\n  doi = {10.1016/j.procs.2018.04.064},\n}"
   doi: 10.1016/j.procs.2018.04.064
   id: moosavi-nigussie-2018-ant
   journal: Procedia Computer Science
@@ -373,7 +373,7 @@ references:
     \ Yan Chen and Marco Levorato},\n  title = {{eBPF}-Based Content and Computation-Aware\
     \ Communication for Real-Time Edge Computing},\n  booktitle = {Proceedings of\
     \ the IEEE International Conference on Computer Communications (INFOCOM) Workshops},\n\
-    \  address = {Honolulu, Hawaii},\n  month = apr,\n  year = {2018},\n  doi = {10.1109/infcomw.2018.8407006}\n\
+    \  address = {Honolulu, Hawaii},\n  month = apr,\n  year = {2018},\n  doi = {10.1109/infcomw.2018.8407006},\n\
     }"
   booktitle: Proceedings of the IEEE International Conference on Computer Communications
     (INFOCOM) Workshops
@@ -398,7 +398,7 @@ references:
     \ Edge Analytics},\n  editor = {Amir M. Rahmani and Pasi Liljeberg and J{\\\"\
     u}rgo-S{\\\"o}ren Preden and Axel Jantsch},\n  booktitle = {Fog Computing in the\
     \ Internet of Things},\n  chapter = {6},\n  pages = {101--120},\n  publisher =\
-    \ {Springer},\n  year = {2018},\n  doi = {10.1007/978-3-319-57639-8_6}\n}"
+    \ {Springer},\n  year = {2018},\n  doi = {10.1007/978-3-319-57639-8_6},\n}"
   booktitle: Fog Computing in the Internet of Things
   chapter: '6'
   doi: 10.1007/978-3-319-57639-8_6
@@ -433,7 +433,7 @@ references:
     \ Data Filtering in Constrained {IoT} Systems},\n  booktitle = {Proceedings of\
     \ the Asilomar Conference on Signals, Systems, and Computers (ACSSC)},\n  address\
     \ = {Pacific Groove, California},\n  month = oct # {--} # nov,\n  year = {2017},\n\
-    \  doi = {10.1109/acssc.2017.8335485}\n}"
+    \  doi = {10.1109/acssc.2017.8335485},\n}"
   booktitle: Proceedings of the Asilomar Conference on Signals, Systems, and Computers
     (ACSSC)
   doi: 10.1109/acssc.2017.8335485
@@ -461,7 +461,7 @@ references:
     \ in Electric Vehicles: Work-in-Progress},\n  booktitle = {Proceedings of the\
     \ IEEE/ACM/IFIP International Conference on Hardware/Software Codesign and System\
     \ Synthesis Companion (CODES)},\n  address = {Seoul, Republic of Korea},\n  month\
-    \ = oct,\n  year = {2017},\n  doi = {10.1145/3125502.3125542}\n}"
+    \ = oct,\n  year = {2017},\n  doi = {10.1145/3125502.3125542},\n}"
   booktitle: Proceedings of the IEEE/ACM/IFIP International Conference on Hardware/Software
     Codesign and System Synthesis Companion (CODES)
   doi: 10.1145/3125502.3125542
@@ -487,7 +487,7 @@ references:
     \ and Ethiopia Nigussie and Marco Levorato and Seppo Virtanen and Jouni Isoaho},\n\
     \  title = {Low-Latency Approach for Secure {ECG} Feature Based Cryptographic\
     \ Key Generation},\n  journal = {IEEE Access},\n  volume = {6},\n  pages = {428--442},\n\
-    \  month = oct,\n  year = {2017},\n  doi = {10.1109/access.2017.2766523}\n}"
+    \  month = oct,\n  year = {2017},\n  doi = {10.1109/access.2017.2766523},\n}"
   doi: 10.1109/access.2017.2766523
   id: moosavi-nigussie-2017-access
   journal: IEEE Access
@@ -519,7 +519,7 @@ references:
     \ and Nikil Dutt},\n  title = {{HiCH}: Hierarchical Fog-Assisted Computing Architecture\
     \ for Healthcare {IoT}},\n  journal = {ACM Transactions on Embedded Computing\
     \ Systems},\n  volume = {16},\n  number = {5s},\n  pages = {174:1--174:20},\n\
-    \  month = sep,\n  year = {2017},\n  articleno = {174},\n  doi = {10.1145/3126501}\n\
+    \  month = sep,\n  year = {2017},\n  articleno = {174},\n  doi = {10.1145/3126501},\n\
     }"
   doi: 10.1145/3126501
   id: azimi-anzanpour-2017-tecs
@@ -541,7 +541,7 @@ references:
   bibtex: "@article{ahmed-levorato-2017-tsg,\n  author = {Nadia Ahmed and Marco Levorato\
     \ and Guann-Pyng Li},\n  title = {Residential Consumer-Centric Demand Side Management},\n\
     \  journal = {IEEE Transactions on Smart Grid},\n  volume = {9},\n  number = {5},\n\
-    \  pages = {4513--4524},\n  month = sep,\n  year = {2017},\n  doi = {10.1109/tsg.2017.2661991}\n\
+    \  pages = {4513--4524},\n  month = sep,\n  year = {2017},\n  doi = {10.1109/tsg.2017.2661991},\n\
     }"
   doi: 10.1109/tsg.2017.2661991
   id: ahmed-levorato-2017-tsg
@@ -566,7 +566,7 @@ references:
     \ in Edge-Assisted Wireless Sensor Systems},\n  booktitle = {Proceedings of the\
     \ IEEE International Conference on Sensing, Communication and Networking (SECON)},\n\
     \  address = {San Diego, California},\n  month = jun,\n  year = {2017},\n  doi\
-    \ = {10.1109/sahcn.2017.7964938}\n}"
+    \ = {10.1109/sahcn.2017.7964938},\n}"
   booktitle: Proceedings of the IEEE International Conference on Sensing, Communication
     and Networking (SECON)
   doi: 10.1109/sahcn.2017.7964938
@@ -585,7 +585,7 @@ references:
     \ and Marco Levorato},\n  title = {Energy-Based Adaptive Multiple Access in {LPWAN}\
     \ {IoT} Systems With Energy Harvesting},\n  booktitle = {Proceedings of the IEEE\
     \ International Symposium on Information Theory (ISIT)},\n  address = {Aachen,\
-    \ Germany},\n  month = jun,\n  year = {2017},\n  doi = {10.1109/isit.2017.8006701}\n\
+    \ Germany},\n  month = jun,\n  year = {2017},\n  doi = {10.1109/isit.2017.8006701},\n\
     }"
   booktitle: Proceedings of the IEEE International Symposium on Information Theory
     (ISIT)
@@ -606,7 +606,7 @@ references:
     \ Dynamic Network Selection for Real-Time Services in Urban {IoT}},\n  booktitle\
     \ = {Proceedings of the IEEE International Conference on Computer Communications\
     \ (INFOCOM) Workshops},\n  address = {Atlanta, Georgia},\n  month = may,\n  year\
-    \ = {2017},\n  doi = {10.1109/infcomw.2017.8116478}\n}"
+    \ = {2017},\n  doi = {10.1109/infcomw.2017.8116478},\n}"
   booktitle: Proceedings of the IEEE International Conference on Computer Communications
     (INFOCOM) Workshops
   doi: 10.1109/infcomw.2017.8116478
@@ -624,7 +624,7 @@ references:
     \ = {Cognitive Networking With Dynamic Traffic Classification and {QoS} Constraints},\n\
     \  booktitle = {Proceedings of the IEEE Wireless Communications and Networking\
     \ Conference (WCNC)},\n  address = {San Francisco, California},\n  month = mar,\n\
-    \  year = {2017},\n  doi = {10.1109/wcnc.2017.7925717}\n}"
+    \  year = {2017},\n  doi = {10.1109/wcnc.2017.7925717},\n}"
   booktitle: Proceedings of the IEEE Wireless Communications and Networking Conference
     (WCNC)
   doi: 10.1109/wcnc.2017.7925717
@@ -645,7 +645,7 @@ references:
     \ Levorato and Sameer Singh},\n  title = {Semantic Compression for Edge-Assisted\
     \ Systems},\n  booktitle = {Proceedings of the Information Theory and Applications\
     \ Workshop (ITA)},\n  address = {San Diego, California},\n  month = feb,\n  year\
-    \ = {2017},\n  doi = {10.1109/ita.2017.8023457}\n}"
+    \ = {2017},\n  doi = {10.1109/ita.2017.8023457},\n}"
   booktitle: Proceedings of the Information Theory and Applications Workshop (ITA)
   doi: 10.1109/ita.2017.8023457
   id: burago-levorato-2017-ita
@@ -664,7 +664,7 @@ references:
     \ Transmission in {D2D} Communications Underlaying {LTE}},\n  booktitle = {Proceedings\
     \ of the IEEE International Conference on Computing, Networking and Communications\
     \ (ICNC)},\n  pages = {144--149},\n  address = {Silicon Valley, California},\n\
-    \  month = jan,\n  year = {2017},\n  doi = {10.1109/iccnc.2017.7876117}\n}"
+    \  month = jan,\n  year = {2017},\n  doi = {10.1109/iccnc.2017.7876117},\n}"
   booktitle: Proceedings of the IEEE International Conference on Computing, Networking
     and Communications (ICNC)
   doi: 10.1109/iccnc.2017.7876117
@@ -685,7 +685,7 @@ references:
     \ and Marco Levorato},\n  title = {Content-Based Cognitive Interference Control\
     \ for City Monitoring Applications in the Urban {IoT}},\n  booktitle = {Proceedings\
     \ of the IEEE Global Communications Conference (GLOBECOM)},\n  address = {Washington,\
-    \ DC},\n  month = dec,\n  year = {2016},\n  doi = {10.1109/glocom.2016.7841693}\n\
+    \ DC},\n  month = dec,\n  year = {2016},\n  doi = {10.1109/glocom.2016.7841693},\n\
     }"
   booktitle: Proceedings of the IEEE Global Communications Conference (GLOBECOM)
   doi: 10.1109/glocom.2016.7841693
@@ -708,7 +708,7 @@ references:
     \ Optimization of Channel Access Strategies in Reactive Cognitive Networks},\n\
     \  journal = {IEEE Transactions on Communications},\n  volume = {64},\n  number\
     \ = {10},\n  pages = {4121--4133},\n  month = oct,\n  year = {2016},\n  doi =\
-    \ {10.1109/tcomm.2016.2602207}\n}"
+    \ {10.1109/tcomm.2016.2602207},\n}"
   doi: 10.1109/tcomm.2016.2602207
   id: levorato-weeraddana-2016-tcom
   journal: IEEE Transactions on Communications
@@ -730,7 +730,7 @@ references:
     \ and Marco Levorato},\n  title = {Optimal Aging-Aware Channel Access Control\
     \ for Wireless Networks With Energy Harvesting},\n  booktitle = {Proceedings of\
     \ the IEEE International Symposium on Information Theory (ISIT)},\n  address =\
-    \ {Barcelona, Spain},\n  month = jul,\n  year = {2016},\n  doi = {10.1109/isit.2016.7541800}\n\
+    \ {Barcelona, Spain},\n  month = jul,\n  year = {2016},\n  doi = {10.1109/isit.2016.7541800},\n\
     }"
   booktitle: Proceedings of the IEEE International Symposium on Information Theory
     (ISIT)
@@ -752,7 +752,7 @@ references:
     \ Marco Levorato and Fortunato Santucci},\n  title = {Aging Aware Random Channel\
     \ Access for Battery-Powered Wireless Networks},\n  journal = {IEEE Wireless Communications\
     \ Letters},\n  volume = {5},\n  number = {2},\n  pages = {176--179},\n  month\
-    \ = apr,\n  year = {2016},\n  doi = {10.1109/lwc.2016.2515079}\n}"
+    \ = apr,\n  year = {2016},\n  doi = {10.1109/lwc.2016.2515079},\n}"
   doi: 10.1109/lwc.2016.2515079
   id: valentini-levorato-2016-wcl
   journal: IEEE Wireless Communications Letters
@@ -780,7 +780,7 @@ references:
     \  title = {A Unified Stochastic Model for Energy Management in Solar-Powered\
     \ Embedded Systems},\n  booktitle = {Proceedings of the IEEE/ACM International\
     \ Conference on Computer-Aided Design (ICCAD)},\n  address = {Austin, Texas},\n\
-    \  month = nov,\n  year = {2015},\n  doi = {10.1109/iccad.2015.7372627}\n}"
+    \  month = nov,\n  year = {2015},\n  doi = {10.1109/iccad.2015.7372627},\n}"
   booktitle: Proceedings of the IEEE/ACM International Conference on Computer-Aided
     Design (ICCAD)
   doi: 10.1109/iccad.2015.7372627
@@ -804,7 +804,7 @@ references:
     \ Valentini and Nga Dang and Marco Levorato and Eli Bozorgzadeh},\n  title = {Modeling\
     \ and Control Battery Aging in Energy Harvesting Systems},\n  booktitle = {Proceedings\
     \ of the IEEE International Conference on Smart Grid Communications (SmartGridComm)},\n\
-    \  address = {Miami, Florida},\n  month = nov,\n  year = {2015},\n  doi = {10.1109/smartgridcomm.2015.7436352}\n\
+    \  address = {Miami, Florida},\n  month = nov,\n  year = {2015},\n  doi = {10.1109/smartgridcomm.2015.7436352},\n\
     }"
   booktitle: Proceedings of the IEEE International Conference on Smart Grid Communications
     (SmartGridComm)
@@ -823,7 +823,7 @@ references:
     \ Levorato},\n  title = {Network Estimation in Cognition-Empowered Wireless Networks},\n\
     \  journal = {IEEE Transactions on Cognitive Communications and Networking},\n\
     \  volume = {1},\n  number = {2},\n  pages = {244--256},\n  month = jun,\n  year\
-    \ = {2015},\n  doi = {10.1109/tccn.2016.2517013}\n}"
+    \ = {2015},\n  doi = {10.1109/tccn.2016.2517013},\n}"
   doi: 10.1109/tccn.2016.2517013
   id: burago-levorato-2015-tccn
   journal: IEEE Transactions on Cognitive Communications and Networking
@@ -846,7 +846,7 @@ references:
     \ and Marco Levorato and Carlo Fischione},\n  title = {Performance Analysis of\
     \ {IEEE} {802.15.3c}-Based {mmW} Wireless Networks},\n  booktitle = {Proceedings\
     \ of the Conference on Information Sciences and Systems (CISS)},\n  address =\
-    \ {Baltimore, Maryland},\n  month = mar,\n  year = {2015},\n  doi = {10.1109/ciss.2015.7086886}\n\
+    \ {Baltimore, Maryland},\n  month = mar,\n  year = {2015},\n  doi = {10.1109/ciss.2015.7086886},\n\
     }"
   booktitle: Proceedings of the Conference on Information Sciences and Systems (CISS)
   doi: 10.1109/ciss.2015.7086886
@@ -867,7 +867,7 @@ references:
     \ Levorato and Nalini Venkatasubramanian and Nikil Dutt},\n  title = {Heat-Aware\
     \ Transmission Strategies},\n  booktitle = {Proceedings of the Information Theory\
     \ and Applications Workshop (ITA)},\n  address = {San Diego, California},\n  month\
-    \ = feb,\n  year = {2015},\n  doi = {10.1109/ita.2015.7308981}\n}"
+    \ = feb,\n  year = {2015},\n  doi = {10.1109/ita.2015.7308981},\n}"
   booktitle: Proceedings of the Information Theory and Applications Workshop (ITA)
   doi: 10.1109/ita.2015.7308981
   id: levorato-venkatasubramanian-2015-ita
@@ -886,7 +886,7 @@ references:
     \ Marco Levorato and Urbashi Mitra},\n  title = {Active Classification for {POMDPs}:\
     \ A Kalman-Like State Estimator},\n  journal = {IEEE Transactions on Signal Processing},\n\
     \  volume = {62},\n  number = {23},\n  pages = {6209--6224},\n  month = dec,\n\
-    \  year = {2014},\n  doi = {10.1109/tsp.2014.2362098}\n}"
+    \  year = {2014},\n  doi = {10.1109/tsp.2014.2362098},\n}"
   doi: 10.1109/tsp.2014.2362098
   id: zois-levorato-2014-tsp
   journal: IEEE Transactions on Signal Processing
@@ -910,7 +910,7 @@ references:
     \ and Pradeep Chathuranga Weeraddana and Carlo Fischione},\n  title = {Distributed\
     \ Optimization of Transmission Strategies in Reactive Cognitive Networks},\n \
     \ booktitle = {Proceedings of the IEEE Global Communications Conference (GLOBECOM)},\n\
-    \  address = {Austin, Texas},\n  month = dec,\n  year = {2014},\n  doi = {10.1109/glocom.2014.7036924}\n\
+    \  address = {Austin, Texas},\n  month = dec,\n  year = {2014},\n  doi = {10.1109/glocom.2014.7036924},\n\
     }"
   booktitle: Proceedings of the IEEE Global Communications Conference (GLOBECOM)
   doi: 10.1109/glocom.2014.7036924
@@ -932,7 +932,7 @@ references:
     \ Circle Intersection Areas and Its Applications to Wireless Communications},\n\
     \  journal = {Wireless Communications and Mobile Computing},\n  volume = {14},\n\
     \  number = {18},\n  pages = {1672--1690},\n  publisher = {Wiley},\n  month =\
-    \ dec,\n  year = {2014},\n  doi = {10.1002/wcm.2305}\n}"
+    \ dec,\n  year = {2014},\n  doi = {10.1002/wcm.2305},\n}"
   doi: 10.1002/wcm.2305
   id: librino-levorato-2014-wcmc
   journal: Wireless Communications and Mobile Computing
@@ -958,7 +958,7 @@ references:
     \ and Nadia Ahmed and Yang Arthur Zhang},\n  title = {Consumer In-The-Loop: Consumers\
     \ as Part of Residential Smart Energy Systems},\n  booktitle = {Proceedings of\
     \ the IEEE International Conference on Smart Grid Communications (SmartGridComm)},\n\
-    \  address = {Venice, Italy},\n  month = nov,\n  year = {2014},\n  doi = {10.1109/smartgridcomm.2014.7007739}\n\
+    \  address = {Venice, Italy},\n  month = nov,\n  year = {2014},\n  doi = {10.1109/smartgridcomm.2014.7007739},\n\
     }"
   booktitle: Proceedings of the IEEE International Conference on Smart Grid Communications
     (SmartGridComm)
@@ -983,7 +983,7 @@ references:
     \ of Wireless Networks via Graph Interpolation},\n  booktitle = {Proceedings of\
     \ the IEEE Global Conference on Signal and Information Processing (GlobalSIP)},\n\
     \  note = {invited paper},\n  address = {Austin, Texas},\n  month = dec,\n  year\
-    \ = {2013},\n  doi = {10.1109/globalsip.2013.6736920}\n}"
+    \ = {2013},\n  doi = {10.1109/globalsip.2013.6736920},\n}"
   booktitle: Proceedings of the IEEE Global Conference on Signal and Information Processing
     (GlobalSIP)
   doi: 10.1109/globalsip.2013.6736920
@@ -1009,7 +1009,7 @@ references:
     \  title = {Cognitive Access Policies Under a Primary {ARQ} Process via Forward-Backward\
     \ Interference Cancellation},\n  journal = {IEEE Journal on Selected Areas in\
     \ Communications},\n  volume = {31},\n  number = {11},\n  pages = {2374--2386},\n\
-    \  month = nov,\n  year = {2013},\n  doi = {10.1109/jsac.2013.131112}\n}"
+    \  month = nov,\n  year = {2013},\n  doi = {10.1109/jsac.2013.131112},\n}"
   doi: 10.1109/jsac.2013.131112
   id: michelusi-popovski-2013-jsac
   journal: IEEE Journal on Selected Areas in Communications
@@ -1031,7 +1031,7 @@ references:
     \ and Urbashi Mitra},\n  title = {Cognitive Networks With Dynamic User Classification\
     \ for Tactical Communications},\n  booktitle = {Proceedings of the Military Communications\
     \ Conference (MILCOM)},\n  address = {San Diego, California},\n  month = nov,\n\
-    \  year = {2013},\n  doi = {10.1109/milcom.2013.284}\n}"
+    \  year = {2013},\n  doi = {10.1109/milcom.2013.284},\n}"
   booktitle: Proceedings of the Military Communications Conference (MILCOM)
   doi: 10.1109/milcom.2013.284
   id: levorato-mitra-2013-milcom
@@ -1051,7 +1051,7 @@ references:
     \ Zois and Marco Levorato and Urbashi Mitra},\n  title = {Non-Linear Smoothers\
     \ for Discrete-Time, Finite-State Markov Chains},\n  booktitle = {Proceedings\
     \ of the IEEE International Symposium on Information Theory (ISIT)},\n  address\
-    \ = {Istanbul, Turkey},\n  month = jul,\n  year = {2013},\n  doi = {10.1109/isit.2013.6620596}\n\
+    \ = {Istanbul, Turkey},\n  month = jul,\n  year = {2013},\n  doi = {10.1109/isit.2013.6620596},\n\
     }"
   booktitle: Proceedings of the IEEE International Symposium on Information Theory
     (ISIT)
@@ -1074,7 +1074,7 @@ references:
     \ and Control in {POMDPs} With Applications to Body Sensing Networks},\n  booktitle\
     \ = {Proceedings of the IEEE International Conference on Acoustics, Speech and\
     \ Signal Processing (ICASSP)},\n  address = {Vancouver, Canada},\n  month = may,\n\
-    \  year = {2013},\n  doi = {10.1109/icassp.2013.6638759}\n}"
+    \  year = {2013},\n  doi = {10.1109/icassp.2013.6638759},\n}"
   booktitle: Proceedings of the IEEE International Conference on Acoustics, Speech
     and Signal Processing (ICASSP)
   doi: 10.1109/icassp.2013.6638759
@@ -1095,7 +1095,7 @@ references:
     \ Marco Levorato and Urbashi Mitra},\n  title = {Energy-Efficient, Heterogeneous\
     \ Sensor Selection for Physical Activity Detection in Wireless Body Area Networks},\n\
     \  journal = {IEEE Transactions on Signal Processing},\n  volume = {61},\n  number\
-    \ = {7},\n  pages = {1581--1594},\n  month = apr,\n  year = {2013},\n  doi = {10.1109/tsp.2012.2236320}\n\
+    \ = {7},\n  pages = {1581--1594},\n  month = apr,\n  year = {2013},\n  doi = {10.1109/tsp.2012.2236320},\n\
     }"
   doi: 10.1109/tsp.2012.2236320
   id: zois-levorato-2013-tsp
@@ -1121,7 +1121,7 @@ references:
     \ Networks via Sparse Approximation},\n  journal = {EURASIP Journal on Wireless\
     \ Communications and Networking},\n  volume = {2012},\n  number = {1},\n  publisher\
     \ = {Springer},\n  month = dec,\n  year = {2012},\n  articleno = {278},\n  doi\
-    \ = {10.1186/1687-1499-2012-278}\n}"
+    \ = {10.1186/1687-1499-2012-278},\n}"
   doi: 10.1186/1687-1499-2012-278
   id: levorato-mitra-2012-jwcn
   journal: EURASIP Journal on Wireless Communications and Networking
@@ -1143,7 +1143,7 @@ references:
     \ Smart Energy Grids},\n  booktitle = {Proceedings of the Asia Pacific Signal\
     \ and Information Processing Association Annual Summit and Conference (APSIPA\
     \ ASC)},\n  address = {Hollywood, California},\n  month = dec,\n  year = {2012},\n\
-    \  url = {https://ieeexplore.ieee.org/abstract/document/6411979/}\n}"
+    \  url = {https://ieeexplore.ieee.org/abstract/document/6411979/},\n}"
   booktitle: Proceedings of the Asia Pacific Signal and Information Processing Association
     Annual Summit and Conference (APSIPA ASC)
   id: levorato-mitra-2012-apsipa
@@ -1167,7 +1167,7 @@ references:
     \ Dimension Policy Iteration for Wireless Network Control via Multiscale Analysis},\n\
     \  booktitle = {Proceedings of the IEEE Global Communications Conference (GLOBECOM)},\n\
     \  note = {best paper award},\n  address = {Anaheim, California},\n  month = dec,\n\
-    \  year = {2012},\n  doi = {10.1109/glocom.2012.6503723}\n}"
+    \  year = {2012},\n  doi = {10.1109/glocom.2012.6503723},\n}"
   booktitle: Proceedings of the IEEE Global Communications Conference (GLOBECOM)
   doi: 10.1109/glocom.2012.6503723
   id: levorato-narang-2012-globecom
@@ -1189,7 +1189,7 @@ references:
     \ Medium Access Control on Cooperative Schemes in Wireless Ad Hoc Networks},\n\
     \  journal = {IEEE Transactions on Communications},\n  volume = {60},\n  number\
     \ = {10},\n  pages = {3032--3046},\n  month = oct,\n  year = {2012},\n  doi =\
-    \ {10.1109/tcomm.2012.080312.100657}\n}"
+    \ {10.1109/tcomm.2012.080312.100657},\n}"
   doi: 10.1109/tcomm.2012.080312.100657
   id: munari-levorato-2012-tcom
   journal: IEEE Transactions on Communications
@@ -1217,7 +1217,7 @@ references:
     \ Learning in Wireless Networks via Directed Graph Lifting Transform},\n  booktitle\
     \ = {Proceedings of the Allerton Conference on Communication, Control and Computing},\n\
     \  note = {invited paper},\n  address = {Monticello, Illinois},\n  month = oct,\n\
-    \  year = {2012},\n  doi = {10.1109/allerton.2012.6483328}\n}"
+    \  year = {2012},\n  doi = {10.1109/allerton.2012.6483328},\n}"
   booktitle: Proceedings of the Allerton Conference on Communication, Control and
     Computing
   doi: 10.1109/allerton.2012.6483328
@@ -1238,7 +1238,7 @@ references:
     \ Sina Firouzabadi and Andrea Goldsmith},\n  title = {A Learning Framework for\
     \ Cognitive Interference Networks With Partial and Noisy Observations},\n  journal\
     \ = {IEEE Transactions on Wireless Communications},\n  volume = {11},\n  number\
-    \ = {9},\n  pages = {3101--3111},\n  month = sep,\n  year = {2012},\n  doi = {10.1109/twc.2012.062012.111342}\n\
+    \ = {9},\n  pages = {3101--3111},\n  month = sep,\n  year = {2012},\n  doi = {10.1109/twc.2012.062012.111342},\n\
     }"
   doi: 10.1109/twc.2012.062012.111342
   id: levorato-firouzabadi-2012-twc
@@ -1262,7 +1262,7 @@ references:
     \ Approximation Theory},\n  booktitle = {Proceedings of the IEEE Sensor Array\
     \ and Multichannel Signal Processing Workshop (SAM)},\n  note = {invited paper},\n\
     \  address = {Stevens Institute of Technology, Hoboken, New Jersey},\n  month\
-    \ = jun,\n  year = {2012},\n  doi = {10.1109/sam.2012.6250561}\n}"
+    \ = jun,\n  year = {2012},\n  doi = {10.1109/sam.2012.6250561},\n}"
   booktitle: Proceedings of the IEEE Sensor Array and Multichannel Signal Processing
     Workshop (SAM)
   doi: 10.1109/sam.2012.6250561
@@ -1285,7 +1285,7 @@ references:
     \ Allocation in Wireless Body Area Networks for Green, Maximum Likelihood Activity\
     \ Detection},\n  booktitle = {Proceedings of the IEEE International Conference\
     \ on Communications (ICC)},\n  address = {Ottawa, Canada},\n  month = jun,\n \
-    \ year = {2012},\n  doi = {10.1109/icc.2012.6364460}\n}"
+    \ year = {2012},\n  doi = {10.1109/icc.2012.6364460},\n}"
   booktitle: Proceedings of the IEEE International Conference on Communications (ICC)
   doi: 10.1109/icc.2012.6364460
   id: zois-levorato-2012-icc
@@ -1305,7 +1305,7 @@ references:
     \ Mitra and Michele Zorzi},\n  title = {Cognitive Interference Management in Retransmission-Based\
     \ Wireless Networks},\n  journal = {IEEE Transactions on Information Theory},\n\
     \  volume = {58},\n  number = {5},\n  pages = {3023--3046},\n  month = may,\n\
-    \  year = {2012},\n  doi = {10.1109/tit.2012.2184691}\n}"
+    \  year = {2012},\n  doi = {10.1109/tit.2012.2184691},\n}"
   doi: 10.1109/tit.2012.2184691
   id: levorato-mitra-2012-tit
   journal: IEEE Transactions on Information Theory
@@ -1350,7 +1350,7 @@ references:
     \ and Marco Levorato and Donna Spruijt-Metz and Gaurav Sukhatme},\n  title = {{KNOWME}:\
     \ A Case Study in Wireless Body Area Sensor Network Design},\n  journal = {IEEE\
     \ Communications Magazine},\n  volume = {50},\n  number = {5},\n  pages = {116--125},\n\
-    \  month = may,\n  year = {2012},\n  doi = {10.1109/mcom.2012.6194391}\n}"
+    \  month = may,\n  year = {2012},\n  doi = {10.1109/mcom.2012.6194391},\n}"
   doi: 10.1109/mcom.2012.6194391
   id: mitra-emken-2012-commag
   journal: IEEE Communications Magazine
@@ -1374,7 +1374,7 @@ references:
     \ for Heterogeneous Sensor Selection in Wireless Body Area Networks},\n  booktitle\
     \ = {Proceedings of the IEEE International Conference on Computer Communications\
     \ (INFOCOM)},\n  address = {Orlando, Florida},\n  month = mar,\n  year = {2012},\n\
-    \  doi = {10.1109/infcom.2012.6195663}\n}"
+    \  doi = {10.1109/infcom.2012.6195663},\n}"
   booktitle: Proceedings of the IEEE International Conference on Computer Communications
     (INFOCOM)
   doi: 10.1109/infcom.2012.6195663
@@ -1396,7 +1396,7 @@ references:
     \ and Sina Firouzabadi and Andrea Goldsmith},\n  title = {Cognitive Interference\
     \ Networks With Partial and Noisy Observations: A Learning Framework},\n  booktitle\
     \ = {Proceedings of the IEEE Global Communications Conference (GLOBECOM)},\n \
-    \ address = {Houston, Texas},\n  month = dec,\n  year = {2011},\n  doi = {10.1109/glocom.2011.6134467}\n\
+    \ address = {Houston, Texas},\n  month = dec,\n  year = {2011},\n  doi = {10.1109/glocom.2011.6134467},\n\
     }"
   booktitle: Proceedings of the IEEE Global Communications Conference (GLOBECOM)
   doi: 10.1109/glocom.2011.6134467
@@ -1416,7 +1416,7 @@ references:
     \ and Urbashi Mitra},\n  title = {Optimal Allocation of Heterogeneous Smart Grid\
     \ Traffic to Heterogeneous Networks},\n  booktitle = {Proceedings of the IEEE\
     \ International Conference on Smart Grid Communications (SmartGridComm)},\n  address\
-    \ = {Brussels, Belgium},\n  month = oct,\n  year = {2011},\n  doi = {10.1109/smartgridcomm.2011.6102304}\n\
+    \ = {Brussels, Belgium},\n  month = oct,\n  year = {2011},\n  doi = {10.1109/smartgridcomm.2011.6102304},\n\
     }"
   booktitle: Proceedings of the IEEE International Conference on Smart Grid Communications
     (SmartGridComm)
@@ -1439,7 +1439,7 @@ references:
     \ for Cognitive Interference Networks With Partial and Noisy Observations},\n\
     \  booktitle = {Proceedings of the Allerton Conference on Communication, Control\
     \ and Computing},\n  address = {Monticello, Illinois},\n  month = sep,\n  year\
-    \ = {2011},\n  doi = {10.1109/twc.2012.062012.111342}\n}"
+    \ = {2011},\n  doi = {10.1109/twc.2012.062012.111342},\n}"
   booktitle: Proceedings of the Allerton Conference on Communication, Control and
     Computing
   doi: 10.1109/twc.2012.062012.111342
@@ -1466,7 +1466,7 @@ references:
     \ Zorzi},\n  title = {Cognitive Transmissions Under a Primary {ARQ} Process via\
     \ Backward Interference Cancellation},\n  booktitle = {Proceedings of the Allerton\
     \ Conference on Communication, Control and Computing},\n  address = {Monticello,\
-    \ Illinois},\n  month = sep,\n  year = {2011},\n  doi = {10.1109/allerton.2011.6120240}\n\
+    \ Illinois},\n  month = sep,\n  year = {2011},\n  doi = {10.1109/allerton.2011.6120240},\n\
     }"
   booktitle: Proceedings of the Allerton Conference on Communication, Control and
     Computing
@@ -1488,7 +1488,7 @@ references:
     \ Librino and Michele Zorzi},\n  title = {Integrated Cooperative Opportunistic\
     \ Packet Forwarding and Distributed Error Control in {MIMO} Ad Hoc Networks},\n\
     \  journal = {IEEE Transactions on Communications},\n  volume = {59},\n  number\
-    \ = {8},\n  pages = {2215--2227},\n  month = aug,\n  year = {2011},\n  doi = {10.1109/tcomm.2011.061311.090705}\n\
+    \ = {8},\n  pages = {2215--2227},\n  month = aug,\n  year = {2011},\n  doi = {10.1109/tcomm.2011.061311.090705},\n\
     }"
   doi: 10.1109/tcomm.2011.061311.090705
   id: levorato-librino-2011-tcom
@@ -1515,7 +1515,7 @@ references:
     \ Daniel O'Neill and Andrea Goldsmith and Urbashi Mitra},\n  title = {Optimization\
     \ of {ARQ} Protocols in Interference Networks With {QoS} Constraints},\n  booktitle\
     \ = {Proceedings of the IEEE International Conference on Communications (ICC)},\n\
-    \  address = {Kyoto, Japan},\n  month = jun,\n  year = {2011},\n  doi = {10.1109/icc.2011.5963420}\n\
+    \  address = {Kyoto, Japan},\n  month = jun,\n  year = {2011},\n  doi = {10.1109/icc.2011.5963420},\n\
     }"
   booktitle: Proceedings of the IEEE International Conference on Communications (ICC)
   doi: 10.1109/icc.2011.5963420
@@ -1539,7 +1539,7 @@ references:
     \ of Non-Cooperative and Cooperative Type {II} Hybrid {ARQ} Protocols With {AMC}\
     \ Over Correlated Fading},\n  journal = {IEEE Transactions on Wireless Communications},\n\
     \  volume = {10},\n  number = {3},\n  pages = {877--889},\n  month = mar,\n  year\
-    \ = {2011},\n  doi = {10.1109/twc.2011.010411.100328}\n}"
+    \ = {2011},\n  doi = {10.1109/twc.2011.010411.100328},\n}"
   doi: 10.1109/twc.2011.010411.100328
   id: harsini-lahouti-2011-twc
   journal: IEEE Transactions on Wireless Communications
@@ -1568,7 +1568,7 @@ references:
     \  title = {Optimal Cognitive Transmission Exploiting Redundancy in the Primary\
     \ {ARQ} Process},\n  booktitle = {Proceedings of the Information Theory and Applications\
     \ Workshop (ITA)},\n  address = {San Diego, CA},\n  month = feb,\n  year = {2011},\n\
-    \  doi = {10.1109/ita.2011.5743628}\n}"
+    \  doi = {10.1109/ita.2011.5743628},\n}"
   booktitle: Proceedings of the Information Theory and Applications Workshop (ITA)
   doi: 10.1109/ita.2011.5743628
   id: michelusi-simeone-2011-ita
@@ -1590,7 +1590,7 @@ references:
     \ and Marco Levorato and Daniel O'Neill and Andrea Goldsmith},\n  title = {Learning\
     \ Interference Strategies in Cognitive {ARQ} Networks},\n  booktitle = {Proceedings\
     \ of the IEEE Global Communications Conference (GLOBECOM)},\n  address = {Miami,\
-    \ Florida},\n  month = dec,\n  year = {2010},\n  doi = {10.1109/glocom.2010.5683502}\n\
+    \ Florida},\n  month = dec,\n  year = {2010},\n  doi = {10.1109/glocom.2010.5683502},\n\
     }"
   booktitle: Proceedings of the IEEE Global Communications Conference (GLOBECOM)
   doi: 10.1109/glocom.2010.5683502
@@ -1614,7 +1614,7 @@ references:
     \ of Cognitive Networks for Unslotted Time and Reactive Users},\n  booktitle =\
     \ {Proceedings of the IEEE International Conference on Mobile Ad Hoc and Sensor\
     \ Systems (MASS)},\n  address = {San Francisco, California},\n  month = nov,\n\
-    \  year = {2010},\n  doi = {10.1109/mass.2010.5664008}\n}"
+    \  year = {2010},\n  doi = {10.1109/mass.2010.5664008},\n}"
   booktitle: Proceedings of the IEEE International Conference on Mobile Ad Hoc and
     Sensor Systems (MASS)
   doi: 10.1109/mass.2010.5664008
@@ -1638,7 +1638,7 @@ references:
     \ = {Residential Demand Response Using Reinforcement Learning},\n  booktitle =\
     \ {Proceedings of the IEEE International Conference on Smart Grid Communications\
     \ (SmartGridComm)},\n  address = {Gaithersburg, Maryland},\n  month = oct,\n \
-    \ year = {2010},\n  doi = {10.1109/smartgrid.2010.5622078}\n}"
+    \ year = {2010},\n  doi = {10.1109/smartgrid.2010.5622078},\n}"
   booktitle: Proceedings of the IEEE International Conference on Smart Grid Communications
     (SmartGridComm)
   doi: 10.1109/smartgrid.2010.5622078
@@ -1663,7 +1663,7 @@ references:
     \ {II} Hybrid {ARQ} Protocol With Adaptive Modulation and Coding for Time-Correlated\
     \ Fading Channels: Analysis and Design},\n  booktitle = {Proceedings of the IEEE\
     \ International Conference on Communications (ICC)},\n  address = {Cape Town,\
-    \ South Africa},\n  month = may,\n  year = {2010},\n  doi = {10.1109/icc.2010.5501889}\n\
+    \ South Africa},\n  month = may,\n  year = {2010},\n  doi = {10.1109/icc.2010.5501889},\n\
     }"
   booktitle: Proceedings of the IEEE International Conference on Communications (ICC)
   doi: 10.1109/icc.2010.5501889
@@ -1687,7 +1687,7 @@ references:
     \ for Error Control Techniques Based on Selective Retransmission in Video Transmission\
     \ Over Wireless},\n  journal = {IEEE Journal on Selected Areas in Communications},\n\
     \  volume = {28},\n  number = {3},\n  pages = {488--500},\n  month = apr,\n  year\
-    \ = {2010},\n  doi = {10.1109/jsac.2010.100419}\n}"
+    \ = {2010},\n  doi = {10.1109/jsac.2010.100419},\n}"
   doi: 10.1109/jsac.2010.100419
   id: badia-baldo-2010-jsac
   journal: IEEE Journal on Selected Areas in Communications
@@ -1712,7 +1712,7 @@ references:
     \ Marco Levorato and Federico Librino and Michele Zorzi},\n  title = {Cooperation\
     \ Techniques for Wireless Systems From a Networking Perspective},\n  journal =\
     \ {IEEE Wireless Communications Magazine},\n  volume = {17},\n  number = {2},\n\
-    \  pages = {89--96},\n  month = apr,\n  year = {2010},\n  doi = {10.1109/mwc.2010.5450665}\n\
+    \  pages = {89--96},\n  month = apr,\n  year = {2010},\n  doi = {10.1109/mwc.2010.5450665},\n\
     }"
   doi: 10.1109/mwc.2010.5450665
   id: badia-levorato-2010-wirelessmag
@@ -1736,7 +1736,7 @@ references:
     \ Leonardo Badia and Michele Zorzi},\n  title = {On the Channel Statistics in\
     \ Hybrid {ARQ} Systems for Correlated Channels},\n  booktitle = {Proceedings of\
     \ the IEEE Information Theory Workshop (ITW)},\n  address = {Taormina, Italy},\n\
-    \  month = oct,\n  year = {2009},\n  doi = {10.1109/itw.2009.5351471}\n}"
+    \  month = oct,\n  year = {2009},\n  doi = {10.1109/itw.2009.5351471},\n}"
   booktitle: Proceedings of the IEEE Information Theory Workshop (ITW)
   doi: 10.1109/itw.2009.5351471
   id: levorato-badia-2009-itw
@@ -1758,7 +1758,7 @@ references:
     \ Osvaldo Simeone and Urbashi Mitra and Michele Zorzi},\n  title = {Cooperation\
     \ and Coordination in Cognitive Networks With Packet Retransmission},\n  booktitle\
     \ = {Proceedings of the IEEE Information Theory Workshop (ITW)},\n  address =\
-    \ {Taormina, Italy},\n  month = oct,\n  year = {2009},\n  doi = {10.1109/itw.2009.5351412}\n\
+    \ {Taormina, Italy},\n  month = oct,\n  year = {2009},\n  doi = {10.1109/itw.2009.5351412},\n\
     }"
   booktitle: Proceedings of the IEEE Information Theory Workshop (ITW)
   doi: 10.1109/itw.2009.5351412
@@ -1780,7 +1780,7 @@ references:
     \ via Rate Splitting and {HARQ} Over Time-Varying Fading Channels},\n  booktitle\
     \ = {Proceedings of the ACM International Conference on Mobile Computing and Networking\
     \ (MobiCom)},\n  address = {Beijing, China},\n  month = sep,\n  year = {2009},\n\
-    \  doi = {10.1145/1614235.1614242}\n}"
+    \  doi = {10.1145/1614235.1614242},\n}"
   booktitle: Proceedings of the ACM International Conference on Mobile Computing and
     Networking (MobiCom)
   doi: 10.1145/1614235.1614242
@@ -1802,7 +1802,7 @@ references:
     \ and Urbashi Mitra and Michele Zorzi},\n  title = {Cognitive Interference Management\
     \ in Retransmission-Based Wireless Networks},\n  booktitle = {Proceedings of the\
     \ Allerton Conference on Communication, Control and Computing},\n  address = {Monticello,\
-    \ Illinois},\n  month = sep # {--} # oct,\n  year = {2009},\n  doi = {10.1109/allerton.2009.5394850}\n\
+    \ Illinois},\n  month = sep # {--} # oct,\n  year = {2009},\n  doi = {10.1109/allerton.2009.5394850},\n\
     }"
   booktitle: Proceedings of the Allerton Conference on Communication, Control and
     Computing
@@ -1823,7 +1823,7 @@ references:
     \ Levorato and Michele Zorzi},\n  title = {Steady State Analysis of Coded Cooperative\
     \ Networks With {HARQ} Protocol},\n  journal = {IEEE Transactions on Communications},\n\
     \  volume = {57},\n  number = {8},\n  pages = {2391--2401},\n  month = aug,\n\
-    \  year = {2009},\n  doi = {10.1109/tcomm.2008.08.070478}\n}"
+    \  year = {2009},\n  doi = {10.1109/tcomm.2008.08.070478},\n}"
   doi: 10.1109/tcomm.2008.08.070478
   id: tomasin-levorato-2009-tcom
   journal: IEEE Transactions on Communications
@@ -1845,7 +1845,7 @@ references:
     \ Levorato and Michele Zorzi},\n  title = {A Channel Representation Method for\
     \ the Study of Hybrid Retransmission-Based Error Control},\n  journal = {IEEE\
     \ Transactions on Communications},\n  volume = {57},\n  number = {7},\n  pages\
-    \ = {1959--1971},\n  month = jul,\n  year = {2009},\n  doi = {10.1109/tcomm.2009.07.070587}\n\
+    \ = {1959--1971},\n  month = jul,\n  year = {2009},\n  doi = {10.1109/tcomm.2009.07.070587},\n\
     }"
   doi: 10.1109/tcomm.2009.07.070587
   id: badia-levorato-2009-tcom
@@ -1867,7 +1867,7 @@ references:
     \ Zorzi},\n  title = {On the Performance of Ad Hoc Networks With Multiuser Detection,\
     \ Rate Control and Hybrid {ARQ}},\n  journal = {IEEE Transactions on Wireless\
     \ Communications},\n  volume = {8},\n  number = {6},\n  pages = {2938--2949},\n\
-    \  month = jun,\n  year = {2009},\n  doi = {10.1109/twc.2009.080036}\n}"
+    \  month = jun,\n  year = {2009},\n  doi = {10.1109/twc.2009.080036},\n}"
   doi: 10.1109/twc.2009.080036
   id: levorato-zorzi-2009-twc
   journal: IEEE Transactions on Wireless Communications
@@ -1891,7 +1891,7 @@ references:
     \ Marco Levorato and Michele Zorzi},\n  title = {Analysis of Selective Retransmission\
     \ Techniques for Differentially Encoded Data},\n  booktitle = {Proceedings of\
     \ the IEEE International Conference on Communications (ICC)},\n  address = {Dresden,\
-    \ Germany},\n  month = jun,\n  year = {2009},\n  doi = {10.1109/icc.2009.5198746}\n\
+    \ Germany},\n  month = jun,\n  year = {2009},\n  doi = {10.1109/icc.2009.5198746},\n\
     }"
   booktitle: Proceedings of the IEEE International Conference on Communications (ICC)
   doi: 10.1109/icc.2009.5198746
@@ -1914,7 +1914,7 @@ references:
     \ in Carrier Sense-Based Ad Hoc Networks},\n  booktitle = {Proceedings of the\
     \ IEEE Communications Society Conference on Sensor, Mesh and Ad Hoc Communications\
     \ and Networks (SECON)},\n  address = {Rome, Italy},\n  month = jun,\n  year =\
-    \ {2009},\n  doi = {10.1109/sahcn.2009.5168953}\n}"
+    \ {2009},\n  doi = {10.1109/sahcn.2009.5168953},\n}"
   booktitle: Proceedings of the IEEE Communications Society Conference on Sensor,
     Mesh and Ad Hoc Communications and Networks (SECON)
   doi: 10.1109/sahcn.2009.5168953
@@ -1936,7 +1936,7 @@ references:
     \ Computing Circle Intersection Areas and Its Applications to Wireless Communications},\n\
     \  booktitle = {Proceedings of the IEEE International Symposium on Modeling and\
     \ Optimization in Mobile, Ad Hoc and Wireless Networks (WiOpt)},\n  address =\
-    \ {Seoul, Korea},\n  month = jun,\n  year = {2009},\n  doi = {10.1109/wiopt.2009.5291627}\n\
+    \ {Seoul, Korea},\n  month = jun,\n  year = {2009},\n  doi = {10.1109/wiopt.2009.5291627},\n\
     }"
   booktitle: Proceedings of the IEEE International Symposium on Modeling and Optimization
     in Mobile, Ad Hoc and Wireless Networks (WiOpt)
@@ -1962,7 +1962,7 @@ references:
     \ an Automatic Repeat Request Scheme Addressing Long Delay Channels},\n  booktitle\
     \ = {Proceedings of the IEEE International Conference on Advanced Information\
     \ Networking and Applications (AINA) Workshops},\n  address = {Bradford, UK},\n\
-    \  month = may,\n  year = {2009},\n  doi = {10.1109/waina.2009.172}\n}"
+    \  month = may,\n  year = {2009},\n  doi = {10.1109/waina.2009.172},\n}"
   booktitle: Proceedings of the IEEE International Conference on Advanced Information
     Networking and Applications (AINA) Workshops
   doi: 10.1109/waina.2009.172
@@ -1984,7 +1984,7 @@ references:
     \ Networks With Multiuser Detection, Hybrid {ARQ} and Distortion Constraints},\n\
     \  booktitle = {Proceedings of the IEEE International Conference on Computer Communications\
     \ (INFOCOM)},\n  address = {Rio de Janeiro, Brazil},\n  month = apr,\n  year =\
-    \ {2009},\n  doi = {10.1109/infcom.2009.5062114}\n}"
+    \ {2009},\n  doi = {10.1109/infcom.2009.5062114},\n}"
   booktitle: Proceedings of the IEEE International Conference on Computer Communications
     (INFOCOM)
   doi: 10.1109/infcom.2009.5062114
@@ -2005,7 +2005,7 @@ references:
     \ Levorato and Michele Zorzi},\n  title = {{MAC}/{PHY} Cross-Layer Design of {MIMO}\
     \ Ad Hoc Networks With Layered Multiuser Detection},\n  journal = {IEEE Transactions\
     \ on Wireless Communications},\n  volume = {7},\n  number = {11},\n  pages = {4596--4607},\n\
-    \  month = nov,\n  year = {2008},\n  doi = {10.1109/t-wc.2008.070600}\n}"
+    \  month = nov,\n  year = {2008},\n  doi = {10.1109/t-wc.2008.070600},\n}"
   doi: 10.1109/t-wc.2008.070600
   id: casari-levorato-2008-twc
   journal: IEEE Transactions on Wireless Communications
@@ -2028,7 +2028,7 @@ references:
     \ Levorato and Michele Zorzi},\n  title = {Markov Analysis of Selective Repeat\
     \ Type {II} Hybrid {ARQ} Using Block Codes},\n  journal = {IEEE Transactions on\
     \ Communications},\n  volume = {56},\n  number = {9},\n  pages = {1434--1441},\n\
-    \  month = sep,\n  year = {2008},\n  doi = {10.1109/tcomm.2008.060374}\n}"
+    \  month = sep,\n  year = {2008},\n  doi = {10.1109/tcomm.2008.060374},\n}"
   doi: 10.1109/tcomm.2008.060374
   id: badia-levorato-2008-tcom
   journal: IEEE Transactions on Communications
@@ -2050,7 +2050,7 @@ references:
     \ Tomasin and Michele Zorzi},\n  title = {Cooperative Spatial Multiplexing for\
     \ Ad Hoc Networks With Hybrid {ARQ}: Design and Performance Analysis},\n  journal\
     \ = {IEEE Transactions on Communications},\n  volume = {56},\n  number = {9},\n\
-    \  pages = {1545--1555},\n  month = sep,\n  year = {2008},\n  doi = {10.1109/tcomm.2008.060447}\n\
+    \  pages = {1545--1555},\n  month = sep,\n  year = {2008},\n  doi = {10.1109/tcomm.2008.060447},\n\
     }"
   doi: 10.1109/tcomm.2008.060447
   id: levorato-tomasin-2008-tcom
@@ -2076,7 +2076,7 @@ references:
     \ Networks: A Practical Perspective},\n  booktitle = {Proceedings of the IEEE\
     \ International Symposium on Personal, Indoor and Mobile Radio Communications\
     \ (PIMRC)},\n  note = {invited paper},\n  address = {Cannes, France},\n  month\
-    \ = sep,\n  year = {2008},\n  doi = {10.1109/pimrc.2008.4699937}\n}"
+    \ = sep,\n  year = {2008},\n  doi = {10.1109/pimrc.2008.4699937},\n}"
   booktitle: Proceedings of the IEEE International Symposium on Personal, Indoor and
     Mobile Radio Communications (PIMRC)
   doi: 10.1109/pimrc.2008.4699937
@@ -2101,7 +2101,7 @@ references:
     \ of Routing Protocols in {MIMO} Ad Hoc Networks Under Uniform and Correlated\
     \ Traffic},\n  booktitle = {Proceedings of the International Wireless Communications\
     \ and Mobile Computing Conference (IWCMC)},\n  address = {Creta, Greece},\n  month\
-    \ = aug,\n  year = {2008},\n  doi = {10.1109/iwcmc.2008.48}\n}"
+    \ = aug,\n  year = {2008},\n  doi = {10.1109/iwcmc.2008.48},\n}"
   booktitle: Proceedings of the International Wireless Communications and Mobile Computing
     Conference (IWCMC)
   doi: 10.1109/iwcmc.2008.48
@@ -2123,7 +2123,7 @@ references:
     \ and Leonardo Badia and Michele Zorzi},\n  title = {Efficient Quantization for\
     \ Feedback Controlled Networks With Type {II} Hybrid {ARQ}},\n  booktitle = {Proceedings\
     \ of the IEEE Workshop on Resource Allocation in Wireless Networks (RAWNET)},\n\
-    \  address = {Berlin, Germany},\n  month = apr,\n  year = {2008},\n  doi = {10.1109/wiopt.2008.4586038}\n\
+    \  address = {Berlin, Germany},\n  month = apr,\n  year = {2008},\n  doi = {10.1109/wiopt.2008.4586038},\n\
     }"
   booktitle: Proceedings of the IEEE Workshop on Resource Allocation in Wireless Networks
     (RAWNET)
@@ -2144,7 +2144,7 @@ references:
     \ Michele Zorzi},\n  title = {On Error Control Schemes for Ad Hoc Networks With\
     \ Multiuser Detection and Rate Control},\n  booktitle = {Proceedings of the Conference\
     \ on Information Sciences and Systems (CISS)},\n  address = {Princeton, New Jersey},\n\
-    \  month = mar,\n  year = {2008},\n  doi = {10.1109/ciss.2008.4558606}\n}"
+    \  month = mar,\n  year = {2008},\n  doi = {10.1109/ciss.2008.4558606},\n}"
   booktitle: Proceedings of the Conference on Information Sciences and Systems (CISS)
   doi: 10.1109/ciss.2008.4558606
   id: levorato-zorzi-2008-ciss
@@ -2163,7 +2163,7 @@ references:
     \ and Michele Zorzi},\n  title = {Performance Analysis of Type {II} Hybrid {ARQ}\
     \ With Low-Density Parity-Check Codes},\n  booktitle = {Proceedings of the International\
     \ Symposium on Communications, Control, and Signal Processing (ISCCSP)},\n  address\
-    \ = {St. Julians, Malta},\n  month = mar,\n  year = {2008},\n  doi = {10.1109/isccsp.2008.4537333}\n\
+    \ = {St. Julians, Malta},\n  month = mar,\n  year = {2008},\n  doi = {10.1109/isccsp.2008.4537333},\n\
     }"
   booktitle: Proceedings of the International Symposium on Communications, Control,
     and Signal Processing (ISCCSP)
@@ -2185,7 +2185,7 @@ references:
     \ Queueing, Channel Contention and Hybrid {ARQ}},\n  booktitle = {Proceedings\
     \ of the Information Theory and Applications Workshop (ITA)},\n  address = {San\
     \ Diego, California},\n  month = jan # {--} # feb,\n  year = {2008},\n  doi =\
-    \ {10.1109/ita.2008.4601098}\n}"
+    \ {10.1109/ita.2008.4601098},\n}"
   booktitle: Proceedings of the Information Theory and Applications Workshop (ITA)
   doi: 10.1109/ita.2008.4601098
   id: levorato-zorzi-2008-ita
@@ -2208,7 +2208,7 @@ references:
     \ for Cross-Layer Performance Analysis in {MIMO}-{BLAST} Ad Hoc Networks},\n \
     \ journal = {IEEE Transactions on Wireless Communications},\n  volume = {6},\n\
     \  number = {12},\n  pages = {4390--4400},\n  month = dec,\n  year = {2007},\n\
-    \  doi = {10.1109/twc.2007.060211}\n}"
+    \  doi = {10.1109/twc.2007.060211},\n}"
   doi: 10.1109/twc.2007.060211
   id: levorato-casari-2007-twc
   journal: IEEE Transactions on Wireless Communications
@@ -2232,7 +2232,8 @@ references:
     \ and Marco Levorato and Michele Zorzi},\n  title = {Distributed Cooperative Routing\
     \ and Hybrid {ARQ} in {MIMO}-{BLAST} Ad Hoc Networks},\n  booktitle = {Proceedings\
     \ of the IEEE Global Communications Conference (GLOBECOM)},\n  address = {Washington,\
-    \ DC},\n  month = nov,\n  year = {2007},\n  doi = {10.1109/glocom.2007.128}\n}"
+    \ DC},\n  month = nov,\n  year = {2007},\n  doi = {10.1109/glocom.2007.128},\n\
+    }"
   booktitle: Proceedings of the IEEE Global Communications Conference (GLOBECOM)
   doi: 10.1109/glocom.2007.128
   id: librino-levorato-2007-globecom
@@ -2253,7 +2254,7 @@ references:
     \ Method for Performance Evaluation of Incremental Redundancy {HARQ} Based on\
     \ Reliable Channel Regions},\n  booktitle = {Proceedings of the Allerton Conference\
     \ on Communication, Control and Computing},\n  address = {Monticello, Illinois},\n\
-    \  month = sep,\n  year = {2007}\n}"
+    \  month = sep,\n  year = {2007},\n}"
   booktitle: Proceedings of the Allerton Conference on Communication, Control and
     Computing
   id: badia-levorato-2007-allerton
@@ -2274,7 +2275,7 @@ references:
     \ and Marco Levorato  and Michele Zorzi},\n  title = {Coded Cooperation for Ad\
     \ Hoc Networks With Spatial Multiplexing},\n  booktitle = {Proceedings of the\
     \ IEEE International Conference on Communications (ICC)},\n  address = {Glasgow,\
-    \ UK},\n  month = jun,\n  year = {2007},\n  doi = {10.1109/icc.2007.784}\n}"
+    \ UK},\n  month = jun,\n  year = {2007},\n  doi = {10.1109/icc.2007.784},\n}"
   booktitle: Proceedings of the IEEE International Conference on Communications (ICC)
   doi: 10.1109/icc.2007.784
   id: tomasin-levorato-2007-icc
@@ -2294,7 +2295,7 @@ references:
     \ and Marco Levorato  and Michele Zorzi},\n  title = {Analysis of Outage Probability\
     \ for Cooperative Networks With {HARQ}},\n  booktitle = {Proceedings of the IEEE\
     \ International Symposium on Information Theory (ISIT)},\n  address = {Nice, France},\n\
-    \  month = jun,\n  year = {2007},\n  doi = {10.1109/isit.2007.4557629}\n}"
+    \  month = jun,\n  year = {2007},\n  doi = {10.1109/isit.2007.4557629},\n}"
   booktitle: Proceedings of the IEEE International Symposium on Information Theory
     (ISIT)
   doi: 10.1109/isit.2007.4557629
@@ -2316,7 +2317,7 @@ references:
     \ for Coded Cooperation in Wireless Networks},\n  booktitle = {Proceedings of\
     \ the IEEE International Symposium on Modeling and Optimization in Mobile, Ad\
     \ Hoc and Wireless Networks (WiOpt)},\n  address = {Limassol, Cyprus},\n  month\
-    \ = apr,\n  year = {2007},\n  doi = {10.1109/wiopt.2007.4480100}\n}"
+    \ = apr,\n  year = {2007},\n  doi = {10.1109/wiopt.2007.4480100},\n}"
   booktitle: Proceedings of the IEEE International Symposium on Modeling and Optimization
     in Mobile, Ad Hoc and Wireless Networks (WiOpt)
   doi: 10.1109/wiopt.2007.4480100
@@ -2338,7 +2339,7 @@ references:
     \ With Markov Models of Selective Repeat Truncated Type {II} Hybrid {ARQ}},\n\
     \  booktitle = {Proceedings of the IEEE Global Communications Conference (GLOBECOM)},\n\
     \  address = {San Francisco, California},\n  month = nov # {--} # dec,\n  year\
-    \ = {2006},\n  doi = {10.1109/glocom.2006.914}\n}"
+    \ = {2006},\n  doi = {10.1109/glocom.2006.914},\n}"
   booktitle: Proceedings of the IEEE Global Communications Conference (GLOBECOM)
   doi: 10.1109/glocom.2006.914
   id: badia-levorato-2006-globecom
@@ -2359,7 +2360,7 @@ references:
     \ and Paolo Casari and Michele Zorzi},\n  title = {On the Performance of Access\
     \ Strategies for {MIMO} Ad Hoc Networks},\n  booktitle = {Proceedings of the IEEE\
     \ Global Communications Conference (GLOBECOM)},\n  address = {San Francisco, California},\n\
-    \  month = nov # {--} # dec,\n  year = {2006},\n  doi = {10.1109/glocom.2006.934}\n\
+    \  month = nov # {--} # dec,\n  year = {2006},\n  doi = {10.1109/glocom.2006.934},\n\
     }"
   booktitle: Proceedings of the IEEE Global Communications Conference (GLOBECOM)
   doi: 10.1109/glocom.2006.934
@@ -2380,7 +2381,7 @@ references:
     \ Stefano Tomasin and Michele Zorzi},\n  title = {Analysis of Cooperative Spatial\
     \ Multiplexing for Ad Hoc Networks With Adaptive Hybrid {ARQ}},\n  booktitle =\
     \ {Proceedings of the IEEE Vehicular Technology Conference (VTC)},\n  address\
-    \ = {Montreal, Canada},\n  month = sep,\n  year = {2006},\n  doi = {10.1109/vtcf.2006.452}\n\
+    \ = {Montreal, Canada},\n  month = sep,\n  year = {2006},\n  doi = {10.1109/vtcf.2006.452},\n\
     }"
   booktitle: Proceedings of the IEEE Vehicular Technology Conference (VTC)
   doi: 10.1109/vtcf.2006.452
@@ -2403,7 +2404,7 @@ references:
     \ {MIMO} Ad Hoc Networks Based on Distributed Scheduling},\n  booktitle = {Proceedings\
     \ of the International Wireless Communications and Mobile Computing Conference\
     \ (IWCMC)},\n  address = {Vancouver, Canada},\n  month = jul,\n  year = {2006},\n\
-    \  doi = {10.1145/1143549.1143637}\n}"
+    \  doi = {10.1145/1143549.1143637},\n}"
   booktitle: Proceedings of the International Wireless Communications and Mobile Computing
     Conference (IWCMC)
   doi: 10.1145/1143549.1143637
@@ -2427,7 +2428,7 @@ references:
     \ Approach for Layered Space-Time Multiuser Detection Performance and Its Application\
     \ to {MIMO} Ad Hoc Networks},\n  booktitle = {Proceedings of the IEEE International\
     \ Conference on Communications (ICC)},\n  address = {Istanbul, Turkey},\n  month\
-    \ = jun,\n  year = {2006},\n  doi = {10.1109/icc.2006.255649}\n}"
+    \ = jun,\n  year = {2006},\n  doi = {10.1109/icc.2006.255649},\n}"
   booktitle: Proceedings of the IEEE International Conference on Communications (ICC)
   doi: 10.1109/icc.2006.255649
   id: levorato-casari-2006-icc
@@ -2450,7 +2451,7 @@ references:
     \ Paolo Casari and Stefano Tomasin and Michele Zorzi},\n  title = {Analysis of\
     \ Spatial Multiplexing for Cross-Layer Design of {MIMO} Ad Hoc Networks},\n  booktitle\
     \ = {Proceedings of the IEEE Vehicular Technology Conference (VTC)},\n  address\
-    \ = {Melbourne, Australia},\n  month = may,\n  year = {2006},\n  doi = {10.1109/vetecs.2006.1683014}\n\
+    \ = {Melbourne, Australia},\n  month = may,\n  year = {2006},\n  doi = {10.1109/vetecs.2006.1683014},\n\
     }"
   booktitle: Proceedings of the IEEE Vehicular Technology Conference (VTC)
   doi: 10.1109/vetecs.2006.1683014
@@ -2472,7 +2473,7 @@ references:
     \ Space-Time Multiuser Detection on the Design of {MAC} Protocols for Ad Hoc Networks},\n\
     \  booktitle = {Proceedings of the IEEE International Symposium on Personal, Indoor\
     \ and Mobile Radio Communications (PIMRC)},\n  address = {Berlin, Germany},\n\
-    \  month = sep,\n  year = {2005},\n  doi = {10.1109/pimrc.2005.1651661}\n}"
+    \  month = sep,\n  year = {2005},\n  doi = {10.1109/pimrc.2005.1651661},\n}"
   booktitle: Proceedings of the IEEE International Symposium on Personal, Indoor and
     Mobile Radio Communications (PIMRC)
   doi: 10.1109/pimrc.2005.1651661
@@ -2494,7 +2495,7 @@ references:
     \ Marco Levorato and Michele Zorzi},\n  title = {Some Issues Concerning {MAC}\
     \ Design in Ad Hoc Networks With {MIMO} Communications},\n  booktitle = {Proceedings\
     \ of the Wireless Personal Multimedia Conference (WPMC)},\n  address = {Aalborg,\
-    \ Denmark},\n  month = sep,\n  year = {2005}\n}"
+    \ Denmark},\n  month = sep,\n  year = {2005},\n}"
   booktitle: Proceedings of the Wireless Personal Multimedia Conference (WPMC)
   id: casari-levorato-2005-wpmc
   kind: inproceedings
@@ -2516,7 +2517,7 @@ references:
     \ Over {3G} Cellular Networks Through Multi-Channel Transmissions: Proposals and\
     \ Performance Evaluation},\n  booktitle = {Proceedings of the IEEE Wireless Communications\
     \ and Networking Conference (WCNC)},\n  address = {New Orleans, Louisiana},\n\
-    \  month = mar,\n  year = {2005},\n  doi = {10.1109/wcnc.2005.1424779}\n}"
+    \  month = mar,\n  year = {2005},\n  doi = {10.1109/wcnc.2005.1424779},\n}"
   booktitle: Proceedings of the IEEE Wireless Communications and Networking Conference
     (WCNC)
   doi: 10.1109/wcnc.2005.1424779
