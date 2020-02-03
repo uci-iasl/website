@@ -1,5 +1,8 @@
 ---
 bibliography:
+- title: 2020
+  items:
+  - callegaro-baidya-2020-icc
 - title: 2019
   items:
   - callegaro-baidya-2019-milcom
