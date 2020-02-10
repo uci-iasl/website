@@ -26,6 +26,7 @@ websites:
   url: http://www.ics.uci.edu/~sbaidya/
 bibliography:
 - items:
+  - callegaro-baidya-2020-icc
   - callegaro-baidya-2019-milcom
   - matsubara-baidya-2019-mobicom
   - callegaro-sbaidya-2019-magesys

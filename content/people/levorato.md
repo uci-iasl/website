@@ -30,6 +30,9 @@ address: |
   3206 Donald Bren Hall\
   Irvine, CA 92697-3435
 bibliography:
+- title: 2020
+  items:
+  - callegaro-baidya-2020-icc
 - title: 2019
   items:
   - callegaro-baidya-2019-milcom
