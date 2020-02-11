@@ -31,26 +31,24 @@ references:
     last: Levorato
   bibtex: "@inproceedings{callegaro-baidya-2020-icc,\n  author = {Davide Callegaro\
     \ and Sabur Baidya and Marco Levorato},\n  title = {Dynamic Distributed Computing\
-    \ for {Infrastructure-Assisted} Autonomous\n{UAVs}},\n  booktitle = {2020 IEEE\
-    \ International Conference on Communications (ICC): SAC Tactile\nInternet Track\
-    \ (IEEE ICC'20 - SAC-10 TI Track)},\n  address = {Dublin, Ireland},\n  month =\
-    \ jun,\n  year = {2020},\n  abstract = {The analysis of information rich signals\
-    \ is at the core of autonomy. In\nairborne devices such as Unmanned Aerial Vehicles\
-    \ (UAV), the hardware\nlimitations imposed by the weight constraints make the\
-    \ continuous execution\nof these algorithms challenging. Edge computing can mitigate\
-    \ such\nlimitations and boost the system and mission performance of the UAVs.\n\
-    However, due to the UAVs motion characteristics and complex dynamics of\nurban\
-    \ environments, remote processing-control loops can quickly degrade.\nThis paper\
-    \ presents Hydra, a framework for the dynamic selection of\ncommunication/computation\
+    \ for Infrastructure-Assisted Autonomous {UAVs}},\n  booktitle = {Proceedings\
+    \ of the IEEE International Conference on Communications (ICC)},\n  note = {SAC\
+    \ Tactile Internet Track; accepted, publication pending},\n  address = {Dublin,\
+    \ Ireland},\n  month = jun,\n  year = {2020},\n  abstract = {The analysis of information\
+    \ rich signals is at the core of autonomy. In\nairborne devices such as Unmanned\
+    \ Aerial Vehicles (UAV), the hardware\nlimitations imposed by the weight constraints\
+    \ make the continuous execution\nof these algorithms challenging. Edge computing\
+    \ can mitigate such\nlimitations and boost the system and mission performance\
+    \ of the UAVs.\nHowever, due to the UAVs motion characteristics and complex dynamics\
+    \ of\nurban environments, remote processing-control loops can quickly degrade.\n\
+    This paper presents Hydra, a framework for the dynamic selection of\ncommunication/computation\
     \ resources in this challenging environment. A full\n-- open-source -- implementation\
-    \ of Hydra is discussed and tested via\nreal-world experiments.},\n  days = {6},\n\
-    }"
-  booktitle: '2020 IEEE International Conference on Communications (ICC): SAC Tactile
-    Internet Track (IEEE ICC''20 - SAC-10 TI Track)'
-  days: '6'
+    \ of Hydra is discussed and tested via\nreal-world experiments.},\n}"
+  booktitle: Proceedings of the IEEE International Conference on Communications (ICC)
   id: callegaro-baidya-2020-icc
   kind: inproceedings
   month: June
+  note: SAC Tactile Internet Track; accepted, publication pending
   title: Dynamic Distributed Computing for Infrastructure-Assisted Autonomous UAVs
   year: '2020'
 - address: Norfolk, VA
