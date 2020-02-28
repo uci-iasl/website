@@ -19,7 +19,7 @@ params:
     email: 'levorato+www@uci.edu'
   copyright:
     title: 'IASL'
-    url: '/people/'
+    url: 'https://github.com/uci-iasl/website'
   datedayfmt: 'Jan 2, 2006'
   datedaytimefmt: 'Jan 2, 2006, 15:04 MST'
 
