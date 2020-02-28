@@ -73,6 +73,12 @@ BIBTEX_EXTRA_TEX_TAGS = {
 	'abstract',
 }
 
+# The BibTeX fields to be omitted from the output when generating
+# a snippet for a separate entry.
+BIBTEX_SNIPPET_IGNORE_TAGS = {
+	'abstract',
+}
+
 # The BibTeX fields whose values are not to undergo the expansion of
 # @string{} variables when generating a snippet for a separate entry.
 BIBTEX_SNIPPET_KEEP_VARS_TAGS = {
@@ -89,6 +95,8 @@ assert BIBTEX_NAMELIST_TAGS.issubset(BIBTEX_STANDARD_TAGS)
 assert BIBTEX_TITLECASE_TAGS.issubset(BIBTEX_STANDARD_TAGS)
 assert BIBTEX_SENTENCECASE_TAGS.issubset(BIBTEX_TITLECASE_TAGS)
 assert BIBTEX_EXTRA_TEX_TAGS.isdisjoint(BIBTEX_STANDARD_TAGS)
+assert BIBTEX_SNIPPET_IGNORE_TAGS.isdisjoint(BIBTEX_STANDARD_TAGS)
+assert BIBTEX_SNIPPET_KEEP_VARS_TAGS.isdisjoint(BIBTEX_SNIPPET_IGNORE_TAGS)
 
 class CaseChange(enum.Enum):
 	TITLE = 'title'
@@ -150,6 +158,7 @@ def format_bibtex(bib_entry):
 	db.entries = [{
 		tag: val if tag in BIBTEX_SNIPPET_KEEP_VARS_TAGS else bib_expr_as_text(val)
 		for tag, val in bib_entry.items()
+		if tag not in BIBTEX_SNIPPET_IGNORE_TAGS
 	}]
 	return bibtex_writer().write(db).rstrip('\n')
 
