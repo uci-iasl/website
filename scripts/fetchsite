@@ -57,6 +57,7 @@ if [[ -d $repodir ]]; then
 	local="$(gitd rev-parse @)" &&
 	remote="$(gitd rev-parse @{u})" &&
 	[[ "$local" != "$remote" ]] &&
+	gitd reset --hard origin/"$branch" &&
 	gitd pull origin "$branch"
 else
 	git clone -b "$branch" --single-branch "$repourl" "$repodir"
