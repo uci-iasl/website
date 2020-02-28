@@ -11,10 +11,9 @@ import yaml
 
 from bibtexparser.bibdatabase import as_text as bib_expr_as_text
 
-# The BibTeX fields recognized by the commonly used bibliography
-# styles. The values of these fields are treated as LaTeX expressions.
-# When the BibTeX source is formatted, these fields are put in front
-# in the same order as below. (Hence the tuple instead of a set.)
+# The BibTeX fields recognized by the standard bibliography styles.
+# When a BibTeX entry is formatted, these fields are put in front in
+# the same order as below. (Hence the tuple instead of a set.)
 BIBTEX_STANDARD_TAGS = (
 	'author',
 	'title',
@@ -41,7 +40,7 @@ BIBTEX_STANDARD_TAGS = (
 )
 
 # The BibTeX fields parsed as lists of names separated by the word
-# 'and' (when it is not inside of an expression protected by braces).
+# 'and' (when occurring outside of expressions protected by braces).
 BIBTEX_NAMELIST_TAGS = {
 	'author',
 	'editor',
@@ -61,7 +60,7 @@ BIBTEX_TITLECASE_TAGS = {
 	'organization',
 	'publisher',
 }
-# A subset of the fields in BIBTEX_TITLECASE_TAGS whose values are
+# A subset of the fields from BIBTEX_TITLECASE_TAGS whose values are
 # rewritten in sentence case when converted into text (if so requested
 # at invocation). Values of all other fields in BIBTEX_TITLECASE_TAGS
 # are rewritten in title case, still.
@@ -69,17 +68,27 @@ BIBTEX_SENTENCECASE_TAGS = {
 	'title',
 }
 
-# When generating a BibTeX snippet for a separate entry, expand
-# expressions using @string{} variables in the values of all fields
-# except for the following ones.
+# The nonstandard BibTeX fields whose values are formatted in LaTeX.
+BIBTEX_EXTRA_TEX_TAGS = {
+	'abstract',
+}
+
+# The BibTeX fields whose values are not to undergo the expansion of
+# @string{} variables when generating a snippet for a separate entry.
 BIBTEX_SNIPPET_KEEP_VARS_TAGS = {
 	'month',
 }
 
+# The BibTeX fields whose values are to be treated as LaTeX code.
+BIBTEX_TEX_TAGS = set().union(
+	BIBTEX_STANDARD_TAGS,
+	BIBTEX_EXTRA_TEX_TAGS,
+)
+
 assert BIBTEX_NAMELIST_TAGS.issubset(BIBTEX_STANDARD_TAGS)
 assert BIBTEX_TITLECASE_TAGS.issubset(BIBTEX_STANDARD_TAGS)
 assert BIBTEX_SENTENCECASE_TAGS.issubset(BIBTEX_TITLECASE_TAGS)
-assert BIBTEX_SNIPPET_KEEP_VARS_TAGS.issubset(BIBTEX_STANDARD_TAGS)
+assert BIBTEX_EXTRA_TEX_TAGS.isdisjoint(BIBTEX_STANDARD_TAGS)
 
 class CaseChange(enum.Enum):
 	TITLE = 'title'
@@ -189,13 +198,12 @@ def make_record(bib_entry, include_bibtex, case_change):
 		record['bibtex'] = format_bibtex(bib_entry)
 	for tag in bib_entry:
 		value = bib_expr_as_text(bib_entry[tag])
-		if tag in BIBTEX_STANDARD_TAGS:
-			if tag in BIBTEX_NAMELIST_TAGS:
-				record[tag] = break_names(tag, value, case_change)
-			elif tag in BIBTEX_TITLECASE_TAGS:
-				record[tag] = format_title(tag, value, case_change)
-			else:
-				record[tag] = detexify(value)
+		if tag in BIBTEX_NAMELIST_TAGS:
+			record[tag] = break_names(tag, value, case_change)
+		elif tag in BIBTEX_TITLECASE_TAGS:
+			record[tag] = format_title(tag, value, case_change)
+		elif tag in BIBTEX_TEX_TAGS:
+			record[tag] = detexify(value)
 		elif tag not in ('ID', 'ENTRYTYPE'):
 			record[tag] = value
 	return record
