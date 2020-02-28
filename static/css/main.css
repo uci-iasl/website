@@ -487,8 +487,11 @@ a.citation .title::after {
   font-size: calc(0.88 * var(--font-size));
   line-height: calc(0.75 * var(--line-height));
 }
-.bibliography>li .bibentry .appendix>div.abstract::before {
-  content: "Abstract—";
+.bibliography>li .bibentry .appendix>div.abstract p {
+  margin: 0.6ex 0;
+}
+.bibliography>li .bibentry .appendix>div.abstract p:first-of-type::before {
+  content: 'Abstract\200A —\200A';
   font-style: italic;
 }
 .bibliography>li .bibentry .appendix>pre.bibtex {
@@ -579,7 +582,9 @@ header>h5.meta, header>h6.meta {
   margin-top: 0.5ex;
 }
 
-p { margin: 0.8ex 0 0.8ex 0; }
+p {
+  margin: 0.8ex 0;
+}
 
 pre, code {
   font-family: Menlo, Consolas, monospace;

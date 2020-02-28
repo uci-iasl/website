@@ -256,8 +256,14 @@
   </span>
 
   <div class="appendix">
-    {{- with .entry.abstract }}<div class="item abstract">{{ . }}</div>{{ end -}}
-    {{- with .entry.bibtex }}<pre class="item bibtex"><code>{{ . }}</code></pre>{{ end -}}
+    {{- with .entry.abstract -}}
+      <div class="item abstract">
+        {{- range split . "\n\n" }}<p>{{ . }}</p>{{ end -}}
+      </div>
+    {{- end -}}
+    {{- with .entry.bibtex -}}
+      <pre class="item bibtex"><code>{{ . }}</code></pre>
+    {{- end -}}
   </div>
 
 </section></li>
