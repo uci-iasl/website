@@ -119,7 +119,14 @@ def render_tex(tex_nodes):
 	).nodelist_to_text(tex_nodes)
 
 def detexify(str):
-	return clean_ws(render_tex(parse_tex(str)))
+	text = render_tex(parse_tex(str))
+	# Keep paragraphs separated to support fields like 'abstract',
+	# and clean whitespace within each paragraph separately.
+	pars = detexify.BLANK_LINE_RE.split(text.strip())
+	return detexify.PAR_SEP.join(clean_ws(p) for p in pars)
+
+detexify.BLANK_LINE_RE = re.compile(r'\n\s*\n')
+detexify.PAR_SEP = '\n\n'
 
 def title_cased(str):
 	return titlecase.titlecase(str)
