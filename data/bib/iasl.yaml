@@ -75,19 +75,19 @@ references:
     \ and Sabur Baidya and Davide Callegaro and Marco Levorato and Sameer Singh},\n\
     \  title = {Distilled Split Deep Neural Networks for Edge-Assisted Real-Time Systems},\n\
     \  booktitle = {Proceedings of the ACM International Conference on Mobile Computing\
-    \ and Networking (MobiCom)},\n  note = {the Workshop on Hot Topics in Video Analytics\
-    \ and Intelligent Edges; accepted, publication pending},\n  address = {Los Cabos,\
-    \ Mexico},\n  month = oct,\n  year = {2019},\n  keyword = {Information Systems,\
-    \ Mobile Information Processing Systems, Multimedia Streaming},\n}"
+    \ and Networking (MobiCom)},\n  note = {Workshop on Hot Topics in Video Analytics\
+    \ and Intelligent Edges},\n  address = {Los Cabos, Mexico},\n  month = oct,\n\
+    \  year = {2019},\n  doi = {10.1145/3349614.3356022},\n  keyword = {Information\
+    \ Systems, Mobile Information Processing Systems, Multimedia Streaming},\n}"
   booktitle: Proceedings of the ACM International Conference on Mobile Computing and
     Networking (MobiCom)
+  doi: 10.1145/3349614.3356022
   id: matsubara-baidya-2019-mobicom
   keyword: Information Systems, Mobile Information Processing Systems, Multimedia
     Streaming
   kind: inproceedings
   month: October
-  note: the Workshop on Hot Topics in Video Analytics and Intelligent Edges; accepted,
-    publication pending
+  note: Workshop on Hot Topics in Video Analytics and Intelligent Edges
   title: Distilled Split Deep Neural Networks for Edge-Assisted Real-Time Systems
   year: '2019'
 - address: Beijing, China
