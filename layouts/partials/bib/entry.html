@@ -242,6 +242,11 @@
     {{- with .entry.doi -}}
       <span class="item pubref"><a href="https://doi.org/{{ . }}">Web</a></span>
     {{- end -}}
+    {{- if index .entry "abstract" -}}
+      <span class="item abstract">{{ "" -}}
+        <a role="button" onclick="bib.toggleAbstractDisplay(this)">▸Abstract</a>{{ "" -}}
+      </span>
+    {{- end -}}
     {{- if index .entry "bibtex" -}}
       <span class="item bibtex">{{ "" -}}
         <a role="button" onclick="bib.toggleBibtexDisplay(this)">▸BibTeX</a>{{ "" -}}
@@ -250,6 +255,9 @@
     <span class="item linkhere"><a href="{{ .Page.Permalink }}#{{ .entry.id | urlize }}">¶</a></span>
   </span>
 
-  {{- with .entry.bibtex }}<pre class="bibtex"><code>{{ . }}</code></pre>{{ end -}}
+  <div class="appendix">
+    {{- with .entry.abstract }}<div class="item abstract">{{ . }}</div>{{ end -}}
+    {{- with .entry.bibtex }}<pre class="item bibtex"><code>{{ . }}</code></pre>{{ end -}}
+  </div>
 
 </section></li>

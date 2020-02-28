@@ -476,13 +476,26 @@ a.citation .title::after {
 .bibliography>li .bibentry .extras a[role=button]:hover {
   color: var(--link-hover-fg-color);
 }
-.bibliography>li .bibentry pre.bibtex {
+.bibliography>li .bibentry .appendix .item {
   display: none;
-  white-space: pre-wrap;
   margin: 0.6ex 0 0 0;
   padding: 0 1.5em;
+  padding-bottom: 0.4ex;
+  color: var(--lighter-fg-color);
 }
-.bibliography>li .bibentry pre.bibtex>code {
+.bibliography>li .bibentry .appendix div.abstract {
+  font-size: calc(0.88 * var(--font-size));
+  line-height: calc(0.75 * var(--line-height));
+}
+.bibliography>li .bibentry .appendix div.abstract::before {
+  content: "Abstract—";
+  font-style: italic;
+}
+.bibliography>li .bibentry .appendix pre.bibtex {
+  white-space: pre-wrap;
+  padding-bottom: 0;
+}
+.bibliography>li .bibentry .appendix pre.bibtex>code {
   display: block;
   font-size: calc(0.65 * var(--font-size));
   line-height: calc(0.6 * var(--line-height));
