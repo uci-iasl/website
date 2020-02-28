@@ -98,7 +98,7 @@ references:
     last: Baidya
   - first: Marco
     last: Levorato
-  bibtex: "@inproceedings{callegaro-sbaidya-2019-magesys,\n  author = {Davide Callegaro\
+  bibtex: "@inproceedings{callegaro-baidya-2019-magesys,\n  author = {Davide Callegaro\
     \ and Sabur Baidya and Marco Levorato},\n  title = {A Measurement Study on Edge\
     \ Computing for Autonomous {UAVs}},\n  booktitle = {Proceedings of the Workshop\
     \ on Mobile Air-Ground Edge Computing, Systems, Networks, and Applications (MAGESys)},\n\
@@ -108,7 +108,7 @@ references:
   booktitle: Proceedings of the Workshop on Mobile Air-Ground Edge Computing, Systems,
     Networks, and Applications (MAGESys)
   doi: 10.1145/3341568.3342109
-  id: callegaro-sbaidya-2019-magesys
+  id: callegaro-baidya-2019-magesys
   kind: inproceedings
   month: August
   note: in conjunction with the ACM Special Interest Group on Data Communication (SIGCOMM)

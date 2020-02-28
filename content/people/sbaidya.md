@@ -29,7 +29,7 @@ bibliography:
   - callegaro-baidya-2020-icc
   - callegaro-baidya-2019-milcom
   - matsubara-baidya-2019-mobicom
-  - callegaro-sbaidya-2019-magesys
+  - callegaro-baidya-2019-magesys
   - baidya-shaikh-2018-mswim
   - baidya-levorato-2018-tccn
   - shaikh-baidya-2018-cpcuav
