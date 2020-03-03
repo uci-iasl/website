@@ -31,8 +31,8 @@ var bib = {
 
 	entryContentClass: "bibentry",
 	entryAppendixSelector: ".appendix",
-	entryAbstractSelector: "div.abstract",
-	entryBibtexSelector: "pre.bibtex",
+	entryAbstractSelector: ".abstract",
+	entryBibtexSelector: ".bibtex",
 	entryButtonCollapsedSign: "▸",
 	entryButtonExpandedSign: "▾",
 
