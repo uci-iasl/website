@@ -1,43 +1,43 @@
-"use strict";
+'use strict';
 
 var bib = {
-	sectionSelector: "section.bibliography",
-	sectionGroupsSelector: ".group",
-	sectionNoMatchGroupSelector: "#ctl-bib-section-no-match",
-	groupEntriesSelector: "ul.bibliography>li",
+	sectionSelector: 'section.bibliography',
+	sectionGroupsSelector: '.group',
+	sectionNoMatchGroupSelector: '#ctl-bib-section-no-match',
+	groupEntriesSelector: 'ul.bibliography>li',
 	entryFieldsSelector: [
-		".authors-index", ".editors-index",
-		".title", ".journal", ".booktitle", ".series",
-		".organization", ".institution", ".school",
-		".publisher", ".address", ".date",
-		".note", ".keywords-index",
-	].join(","),
-	sectionFilterInputSelector: "#ctl-bib-filter-input",
-	sectionFilterSelectSelector: "#ctl-bib-filter-selection",
-	filterSelectInactiveClass: "inactive",
+		'.authors-index', '.editors-index',
+		'.title', '.journal', '.booktitle', '.series',
+		'.organization', '.institution', '.school',
+		'.publisher', '.address', '.date',
+		'.note', '.keywords-index',
+	].join(','),
+	sectionFilterInputSelector: '#ctl-bib-filter-input',
+	sectionFilterSelectSelector: '#ctl-bib-filter-selection',
+	filterSelectInactiveClass: 'inactive',
 
-	entryKindAttrName: "data-bib-kind",
+	entryKindAttrName: 'data-bib-kind',
 	entryKindCategoryMap: {
-		book: "books",
-		inbook: "books",
-		incollection: "books",
-		proceedings: "conferences",
-		inproceedings: "conferences",
-		conference: "conferences",
-		article: "journals",
+		book: 'books',
+		inbook: 'books',
+		incollection: 'books',
+		proceedings: 'conferences',
+		inproceedings: 'conferences',
+		conference: 'conferences',
+		article: 'journals',
 	},
-	entryCategoryAll: "all",
-	entryCategoryOther: "other",
+	entryCategoryAll: 'all',
+	entryCategoryOther: 'other',
 
-	entryContentClass: "bibentry",
-	entryAppendixSelector: ".appendix",
-	entryAbstractSelector: ".abstract",
-	entryBibtexSelector: ".bibtex",
-	entryButtonCollapsedClass: "collapsed",
-	entryButtonExpandedClass: "expanded",
+	entryContentClass: 'bibentry',
+	entryAppendixSelector: '.appendix',
+	entryAbstractSelector: '.abstract',
+	entryBibtexSelector: '.bibtex',
+	entryButtonCollapsedClass: 'collapsed',
+	entryButtonExpandedClass: 'expanded',
 
-	entryEtAlContainerClass: "etal",
-	entryEtAlContentSelector: ".content",
+	entryEtAlContainerClass: 'etal',
+	entryEtAlContentSelector: '.content',
 
 	initEntryTextFilter: function() {
 		var sectionElem = document.querySelector(bib.sectionSelector);
@@ -108,13 +108,13 @@ var bib = {
 			var groupVisible = 0;
 			for (var entry of group.entries) {
 				var matched = bib.entryMatchesQuery(entry, query);
-				entry.element.style.display = (matched ? "list-item" : "none");
+				entry.element.style.display = (matched ? 'list-item' : 'none');
 				groupVisible += matched;
 			}
-			group.element.style.display = (groupVisible > 0 ? "block" : "none");
+			group.element.style.display = (groupVisible > 0 ? 'block' : 'none');
 			totalVisible += groupVisible;
 		}
-		bib.noMatchGroup.style.display = (totalVisible > 0 ? "none" : "block");
+		bib.noMatchGroup.style.display = (totalVisible > 0 ? 'none' : 'block');
 	},
 
 	toggleAppendixDisplay: function(button, appendixItemSelector) {
@@ -127,14 +127,14 @@ var bib = {
 		var elem = appendix.querySelector(appendixItemSelector);
 		if (!elem) return;
 
-		if (!elem.style.display || elem.style.display == "none") {
+		if (!elem.style.display || elem.style.display == 'none') {
 			button.classList.remove(bib.entryButtonCollapsedClass);
 			button.classList.add(bib.entryButtonExpandedClass);
-			elem.style.display = "block";
+			elem.style.display = 'block';
 		} else {
 			button.classList.remove(bib.entryButtonExpandedClass);
 			button.classList.add(bib.entryButtonCollapsedClass);
-			elem.style.display = "none";
+			elem.style.display = 'none';
 		}
 	},
 
@@ -151,8 +151,8 @@ var bib = {
 		if (!etal || !etal.classList.contains(bib.entryEtAlContainerClass)) return;
 		var etalContent = etal.querySelector(bib.entryEtAlContentSelector);
 		if (!etalContent) return;
-		etalContent.style.display = "inline";
-		button.style.display = "none";
+		etalContent.style.display = 'inline';
+		button.style.display = 'none';
 	},
 }
 
