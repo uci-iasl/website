@@ -33,8 +33,8 @@ var bib = {
 	entryAppendixSelector: ".appendix",
 	entryAbstractSelector: ".abstract",
 	entryBibtexSelector: ".bibtex",
-	entryButtonCollapsedSign: "▸",
-	entryButtonExpandedSign: "▾",
+	entryButtonCollapsedClass: "collapsed",
+	entryButtonExpandedClass: "expanded",
 
 	entryEtAlContainerClass: "etal",
 	entryEtAlContentSelector: ".content",
@@ -128,16 +128,12 @@ var bib = {
 		if (!elem) return;
 
 		if (!elem.style.display || elem.style.display == "none") {
-			button.textContent = button.textContent.replace(
-				bib.entryButtonCollapsedSign,
-				bib.entryButtonExpandedSign
-			);
+			button.classList.remove(bib.entryButtonCollapsedClass);
+			button.classList.add(bib.entryButtonExpandedClass);
 			elem.style.display = "block";
 		} else {
-			button.textContent = button.textContent.replace(
-				bib.entryButtonExpandedSign,
-				bib.entryButtonCollapsedSign
-			);
+			button.classList.remove(bib.entryButtonExpandedClass);
+			button.classList.add(bib.entryButtonCollapsedClass);
 			elem.style.display = "none";
 		}
 	},
