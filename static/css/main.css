@@ -147,7 +147,10 @@ body>footer .logo img {
   transition-duration: 0.33s;
   transition-timing-function: ease-out;
 }
-body>footer .logo img:hover { opacity: 1; transition: none; }
+body>footer .logo a:hover img {
+  opacity: 1;
+  transition: none;
+}
 
 ul.updates {
   list-style-type: none;
