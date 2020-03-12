@@ -46,16 +46,16 @@ references:
     \ and Sabur Baidya and Gowri Ramachandran and Bhaskar Krishnamachari and Marco\
     \ Levorato},\n  title = {Information Autonomy: Self-Adaptive Information Management\
     \ for Edge-Assisted Autonomous {UAV} Systems},\n  booktitle = {Proceedings of\
-    \ the IEEE Military Communication Conference (MILCOM)},\n  note = {System Perspectives\
-    \ track; accepted, publication pending},\n  address = {Norfolk, VA},\n  month\
-    \ = nov,\n  year = {2019},\n  keyword = {Edge computing, Object detection, Unmanned\
-    \ Aerial Vehicles, Wireless networks},\n}"
+    \ the IEEE Military Communication Conference (MILCOM)},\n  address = {Norfolk,\
+    \ VA},\n  month = nov,\n  year = {2019},\n  doi = {10.1109/milcom47813.2019.9020956},\n\
+    \  keyword = {Edge computing, Object detection, Unmanned Aerial Vehicles, Wireless\
+    \ networks},\n}"
   booktitle: Proceedings of the IEEE Military Communication Conference (MILCOM)
+  doi: 10.1109/milcom47813.2019.9020956
   id: callegaro-baidya-2019-milcom
   keyword: Edge computing, Object detection, Unmanned Aerial Vehicles, Wireless networks
   kind: inproceedings
   month: November
-  note: System Perspectives track; accepted, publication pending
   title: 'Information Autonomy: Self-Adaptive Information Management for Edge-Assisted
     Autonomous UAV Systems'
   year: '2019'
