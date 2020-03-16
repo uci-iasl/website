@@ -2,12 +2,12 @@
   {{- range $idstr := $.items }}
     {{- $starred := hasPrefix $idstr "+" }}
     {{- $id := cond $starred (substr $idstr 1) $idstr }}
-    {{- $.Page.Scratch.Set "bibitemfound" false }}
+    {{- $isfound := false }}
     {{- range $bib := $.Site.Data.bib }}
-      {{- if not ($.Page.Scratch.Get "bibitemfound") }}
+      {{- if not $isfound }}
         {{- range $entry := where $bib.references "id" "==" $id }}
-          {{- if not ($.Page.Scratch.Get "bibitemfound") }}
-            {{- $.Page.Scratch.Set "bibitemfound" true }}
+          {{- if not $isfound }}
+            {{- $isfound = true }}
             {{- partial "bib/entry.html" (dict "entry" $entry "params" $.Site.Params.bibliography "mark" (cond $starred "starred" "") "peoplepages" $.peoplepages "Page" $.Page) }}
           {{- end }}
         {{- end }}

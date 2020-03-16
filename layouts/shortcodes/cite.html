@@ -1,7 +1,7 @@
 {{- "[" -}}
 {{- range $idx, $id := .Params -}}
   {{- if gt $idx 0 }}{{ "; " }}{{ end -}}
-  <a class="citation" href="{{ partial "bib/citeref.html" (dict "id" $id "Page" $.Page "Scratch" $.Scratch) }}">
+  <a class="citation" href="{{ partial "bib/citeref.html" (dict "id" $id "Page" $.Page) }}">
     {{- range $bib := $.Site.Data.bib -}}
       {{- range $entry := where $bib.references "id" "==" $id }}
         {{- partial "bib/cite.html" (dict "entry" $entry "params" $.Site.Params.bibliography) -}}
