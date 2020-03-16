@@ -5,7 +5,7 @@
   {{- range $namesfield := (slice "author" "editor") -}}
     <span class="{{ $namesfield }}s-index">
       {{- range index $.entry $namesfield -}}
-        {{- partial "bib/getfullname.html" . }}{{ " " -}}
+        {{- partial "bib/getfullname" . }}{{ " " -}}
       {{- end -}}
     </span>
   {{- end -}}

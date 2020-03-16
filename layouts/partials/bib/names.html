@@ -5,7 +5,7 @@
 {{- $etallabel := "et&nbsp;al." | safeHTML -}}
 
 {{- range $idx, $author := .names -}}
-  {{- $fullname := partial "bib/getfullname.html" $author -}}
+  {{- $fullname := partial "bib/getfullname" $author -}}
   {{- $isothers := and (eq $author.last $fullname) (eq $fullname "others") -}}
   {{- $insideetal := and $hasetal (ge $idx $.params.etalkeep) -}}
 

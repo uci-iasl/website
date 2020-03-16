@@ -1,4 +1,4 @@
-{{- $peoplepages := partial "bib/getpeoplepages.html" . -}}
+{{- $peoplepages := partial "bib/getpeoplepages" . -}}
 <section class="bibliography">
   <header>
     {{ with .title }}<h1>{{ . }}</h1>{{ else }}<div></div>{{ end }}
