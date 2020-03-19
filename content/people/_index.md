@@ -1,5 +1,3 @@
-# Past Visitors
-
 **Postdoctoral Researchers:**
 
 - Horácio A. B. Fernandes de Oliveira  ·  *Professor, Federal University of Amazonas, Brazil*
