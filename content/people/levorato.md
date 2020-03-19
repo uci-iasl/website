@@ -176,18 +176,18 @@ bibliography:
 
 Marco Levorato joined the [Computer Science](https://www.cs.uci.edu) department at [UC Irvine](https://uci.edu) in August 2013.
 
-Between 2010 and 2012, he was a post-doctoral researcher with a joint affiliation at Stanford and the University of Southern California working with [Prof. Andrea Goldsmith](https://wsl.stanford.edu/~andrea/) and [Prof. Urbashi Mitra](https://viterbi.usc.edu/directory/faculty/Mitra/Urbashi).
+Between 2010 and 2012, he was a post-doctoral researcher with a joint affiliation at Stanford University and the University of Southern California working with [Prof. Andrea Goldsmith](https://engineering.stanford.edu/people/andrea-goldsmith) and [Prof. Urbashi Mitra](https://viterbi.usc.edu/directory/faculty/Mitra/Urbashi).
 
 From January to August 2013, he was an Access post-doctoral affiliate at the [Access Center](https://www.access.kth.se/en), [Royal Institute of Technology](https://www.kth.se/en), Stockholm.
 
-He is a member of the ACM, IEEE, and IEEE Comsoc society.
+He is a member of the ACM, IEEE, and IEEE ComSoc society.
 
 His research interests are focused on next-generation wireless networks, signal processing, cyber-physical systems, smart city and smart energy systems.
 
 He has co-authored over 75 technical articles on these topics, including the paper that has received the best paper award at IEEE GLOBECOM (2012).
 
 He completed the Ph.D. in Electrical Engineering at the University of Padova, Italy, in 2009.
-He obtained the B.S. and M.S. in Electrical Engineering summa cum laude at the University of Ferrara, Italy in 2005 and 2003, respectively.
+He obtained the B.S. and M.S. in Electrical Engineering *summa cum laude* at the University of Ferrara, Italy in 2005 and 2003, respectively.
 
 In 2016, he received the UC Hellman Foundation Award for his research on Smart City IoT infrastructures.
 
