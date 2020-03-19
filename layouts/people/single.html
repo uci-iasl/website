@@ -70,7 +70,7 @@
                   Website{{ if gt (len .Params.websites) 1 }}s{{ end }}:
                 </span>
                 {{- range $idx, $site := .Params.websites }}
-                  {{- if gt $idx 0 }}<span class="sep"></span>{{ end }}
+                  {{- if gt $idx 0 }}<span class="sep"></span>{{ end -}}
                   <a href="{{ $site.url }}" target="_blank">
                     {{- $site.title | default ($site.url | replaceRE "^https?://" "") -}}
                   </a>
