@@ -1,11 +1,4 @@
-{{- $islocal := false -}}
-{{- range $group := $.Page.Params.bibliography -}}
-  {{- if not $islocal -}}
-    {{- if in $group.items $.id -}}
-      {{- $islocal = true -}}
-    {{- end -}}
-  {{- end -}}
-{{- end -}}
+{{- $islocal := partial "bib/isentryonpage" (dict "id" .id "Page" .Page) -}}
 {{- if $islocal -}}
   {{- $.Page.RelPermalink -}}
 {{- else -}}

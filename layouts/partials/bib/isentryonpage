@@ -1,0 +1,11 @@
+{{- $isfound := false -}}
+{{- with .Page.Params.bibliography -}}
+  {{- range $group := . -}}
+    {{- if not $isfound -}}
+      {{- if in $group.items $.id -}}
+        {{- $isfound = true -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- return $isfound -}}
