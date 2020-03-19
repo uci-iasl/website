@@ -1,8 +1,9 @@
 ---
 name: Sanaz Rahimi Moosavi
 role: student-phd
-status: Ph.D. Candidate
-yearjoined: 2016
+status: Visitor Ph.D.
+yearjoined: 2014
+yeargraduated: 2019
 portrait: rahimims.jpg
 badge: rahimims-badge.jpg
 interests:
