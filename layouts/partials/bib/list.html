@@ -6,6 +6,11 @@
       {{- partial "bib/entry.html" (dict "entry" $entry "params" $.Site.Params.bibliography "mark" (cond $starred "starred" "") "peoplepages" $.peoplepages "Page" $.Page) -}}
     {{- else -}}
       {{- warnf "No data found for bibliography entry %q in file %q" $id $.Page.File.Path -}}
+      <li class="missing-content">{{ "" -}}
+        <section id="{{ $id | urlize }}" class="bibentry">
+          <code>{{ $id }}</code>
+        </section>
+      </li>
     {{- end -}}
   {{- end -}}
 </ul>

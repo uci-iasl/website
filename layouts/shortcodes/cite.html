@@ -6,6 +6,7 @@
       {{- partial "bib/cite.html" (dict "entry" $entry "params" $.Site.Params.bibliography) -}}
     {{- else -}}
       {{- warnf "No data found for citation reference %q in file %q" $id $.Page.File.Path -}}
+      <span class="missing-content">???</span>
     {{- end -}}
   </a>
 {{- end -}}
