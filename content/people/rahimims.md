@@ -1,6 +1,6 @@
 ---
 name: Sanaz Rahimi Moosavi
-role: student-phd
+role: visitor
 status: Visitor Ph.D.
 yearjoined: 2014
 yeargraduated: 2019
