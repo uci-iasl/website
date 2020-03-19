@@ -1,17 +1,9 @@
-<ul class="bibliography">{{ "\n" }}
-  {{- range $idstr := $.items }}
-    {{- $starred := hasPrefix $idstr "+" }}
-    {{- $id := cond $starred (substr $idstr 1) $idstr }}
-    {{- $isfound := false }}
-    {{- range $bib := $.Site.Data.bib }}
-      {{- if not $isfound }}
-        {{- range $entry := where $bib.references "id" "==" $id }}
-          {{- if not $isfound }}
-            {{- $isfound = true }}
-            {{- partial "bib/entry.html" (dict "entry" $entry "params" $.Site.Params.bibliography "mark" (cond $starred "starred" "") "peoplepages" $.peoplepages "Page" $.Page) }}
-          {{- end }}
-        {{- end }}
-      {{- end }}
-    {{- end }}
-  {{- end }}
+<ul class="bibliography">
+  {{- range $refstr := .items -}}
+    {{- $starred := hasPrefix $refstr "+" -}}
+    {{- $id := cond $starred (substr $refstr 1) $refstr -}}
+    {{- if $entry := partial "bib/getentrydata" (dict "id" $id "Page" $.Page "Site" $.Site) -}}
+      {{- partial "bib/entry.html" (dict "entry" $entry "params" $.Site.Params.bibliography "mark" (cond $starred "starred" "") "peoplepages" $.peoplepages "Page" $.Page) -}}
+    {{- end -}}
+  {{- end -}}
 </ul>

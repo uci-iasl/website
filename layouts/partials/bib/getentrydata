@@ -1,0 +1,22 @@
+{{- $entry := false -}}
+{{- with .Page.Params.references -}}
+  {{- range where . "id" "==" $.id -}}
+    {{- if not $entry -}}
+      {{- $entry = . -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- if not $entry -}}
+  {{- with .Site.Data.bib -}}
+    {{- range $bib := . -}}
+      {{- if not $entry -}}
+        {{- range where $bib.references "id" "==" $.id -}}
+          {{- if not $entry -}}
+            {{- $entry = . -}}
+          {{- end -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- return $entry -}}
