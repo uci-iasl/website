@@ -21,10 +21,10 @@ education:
 - degree: B.S. in Electrical Engineering
   institution: University of Ferrara, Italy
   year: 2003
-resume: levorato-cv.pdf
+resume: 'https://www.ics.uci.edu/~mlevorat/docs/Marco_Levorato_cv.pdf'
 email: levorato@uci.edu
 websites:
-- url: https://www.ics.uci.edu/~mlevorat
+- url: 'https://www.ics.uci.edu/~mlevorat/'
 address: |
   University of California, Irvine\
   3206 Donald Bren Hall\
