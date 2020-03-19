@@ -1,6 +1,6 @@
 {{- $peoplepages := partial "bib/getpeoplepages" . -}}
 <section class="bibliography">
-  <header>
+  <header id="bib">
     {{ with .title }}<h1>{{ . }}</h1>{{ else }}<div></div>{{ end }}
     <div class="controls-anchor">
       <div class="controls{{ if .shiftcontrolsup }} heading-margin-shift{{ end }}">
