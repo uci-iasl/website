@@ -1,6 +1,6 @@
 **Postdoctoral Researchers:**
 
-- Horácio A. B. Fernandes de Oliveira  ·  *Professor, Federal University of Amazonas, Brazil*
+- Horácio A. B. Fernandes de Oliveira  ·  *Associate Professor, Federal University of Amazonas, Brazil*
 - Hyun-Ho Choi  ·  *Associate Professor, Hankyong National University, South Korea*
 - Luca Bedogni  ·  *Postdoctoral Researcher, University of Bologna, Italy*
 
