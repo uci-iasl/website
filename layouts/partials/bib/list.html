@@ -4,6 +4,8 @@
     {{- $id := cond $starred (substr $refstr 1) $refstr -}}
     {{- if $entry := partial "bib/getentrydata" (dict "id" $id "Page" $.Page "Site" $.Site) -}}
       {{- partial "bib/entry.html" (dict "entry" $entry "params" $.Site.Params.bibliography "mark" (cond $starred "starred" "") "peoplepages" $.peoplepages "Page" $.Page) -}}
+    {{- else -}}
+      {{- warnf "No data found for bibliography entry %q in file %q" $id $.Page.File.Path -}}
     {{- end -}}
   {{- end -}}
 </ul>
