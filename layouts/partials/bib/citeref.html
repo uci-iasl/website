@@ -1,9 +1,9 @@
 {{- $islocal := partial "bib/isentryonpage" (dict "id" .id "Page" .Page) -}}
 {{- if not $islocal -}}
   {{- $isglobal := false -}}
-  {{- if $pubsecpage := .Site.GetPage "/publications" -}}
-    {{- if ne .Page.File.UniqueID $pubsecpage.File.UniqueID -}}
-      {{- $isglobal = partial "bib/isentryonpage" (dict "id" .id "Page" $pubsecpage) -}}
+  {{- with .Site.GetPage "/publications" -}}
+    {{- if ne .File.UniqueID $.Page.File.UniqueID -}}
+      {{- $isglobal = partial "bib/isentryonpage" (dict "id" $.id "Page" .) -}}
     {{- end -}}
   {{- end -}}
   {{- if not $isglobal -}}

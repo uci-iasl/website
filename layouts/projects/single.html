@@ -3,17 +3,15 @@
   <article class="project">
     <header>
       <h1 class="page-title">{{ .Title }}</h1>
-      {{- if isset .Params "subtitle" }}
-        <h2 class="subtitle">{{ .Params.subtitle }}</h2>
-      {{- end }}
+      {{- with .Params.subtitle }}<h2 class="subtitle">{{ . }}</h2>{{ end }}
     </header>
 
     <section class="content">
       {{ .Content }}
     </section>
 
-    {{- if isset .Params "bibliography" }}
-      {{ partial "bib/section.html" (dict "title" "Relevant Publications" "items" .Params.bibliography "Page" .Page "Site" .Site) }}
+    {{- with .Params.bibliography }}
+      {{ partial "bib/section.html" (dict "title" "Relevant Publications" "items" . "Page" $.Page "Site" $.Site) }}
     {{- end }}
   </article>
 </main>

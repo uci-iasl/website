@@ -11,10 +11,10 @@
     </section>
 
     <footer>
-      {{- if isset .Params "project" }}
-        {{- $pages := where .Site.RegularPages "Section" "updates" }}
-        {{- $pages = where $pages "Params.project" "==" .Params.project }}
-        {{- if $pages = where $pages "File.UniqueID" "!=" .File.UniqueID }}
+      {{- with .Params.project }}
+        {{- $pages := where $.Site.RegularPages "Section" "updates" }}
+        {{- $pages = where $pages "Params.project" "==" . }}
+        {{- if $pages = where $pages "File.UniqueID" "!=" $.File.UniqueID }}
           <h1>Previously in the project</h1>
           <ul class="updates">
             {{- range $pages }}

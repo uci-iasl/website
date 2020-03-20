@@ -2,8 +2,8 @@
 {{- range $idx, $id := .Params -}}
   {{- if gt $idx 0 }}{{ "; " }}{{ end -}}
   <a class="citation" href="{{ partial "bib/citeref.html" (dict "id" $id "Page" $.Page "Site" $.Site) }}">
-    {{- if $entry := partial "bib/getentrydata" (dict "id" $id "Page" $.Page "Site" $.Site) -}}
-      {{- partial "bib/cite.html" (dict "entry" $entry "params" $.Site.Params.bibliography) -}}
+    {{- with partial "bib/getentrydata" (dict "id" $id "Page" $.Page "Site" $.Site) -}}
+      {{- partial "bib/cite.html" (dict "entry" . "params" $.Site.Params.bibliography) -}}
     {{- else -}}
       {{- warnf "No data found for citation reference %q in file %q" $id $.Page.File.Path -}}
       <span class="missing-content">???</span>

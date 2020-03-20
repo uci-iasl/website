@@ -2,9 +2,9 @@
 <main class="wrap">
   <article class="person">
     <section class="profile">
-      {{- if isset .Params "portrait" }}
+      {{- with .Params.portrait }}
         <div class="portrait">
-          <img src="/img/people/{{ .Params.portrait }}" />
+          <img src="/img/people/{{ . }}" />
         </div>
       {{- end }}
       <div class="resume">
@@ -13,25 +13,25 @@
         </div>
         <section class="status">
           {{- .Params.status -}}
-          {{- if isset .Params "yearjoined" -}}
-            <span class="years">{{ partial "people/yearrange.html" .Params }}</span>
+          {{- with .Params.yearjoined -}}
+            <span class="years">{{ partial "people/yearrange.html" $.Params }}</span>
           {{- end -}}
         </section>
 
-        {{- if isset .Params "interests" }}
+        {{- with .Params.interests }}
           <section class="interests">
             <span class="label">Research Interests:</span>
             <ul class="interests">
-              {{ range .Params.interests }}<li>{{ . }}</li>{{ end }}
+              {{ range . }}<li>{{ . }}</li>{{ end }}
             </ul>
           </section>
         {{- end }}
 
-        {{- if isset .Params "education" }}
+        {{- with .Params.education }}
           <section class="education">
             <span class="label">Education:</span>
             <ul class="education">
-              {{- range .Params.education }}
+              {{- range . }}
                 <li>
                   <div class="year">{{ .year }}</div>
                   <div class="record">
@@ -41,12 +41,12 @@
                 </li>
               {{- end }}
             </ul>
-            {{ if isset .Params "resume" -}}
-              {{- if findRE `^\w+://` .Params.resume 1 -}}
-                <a class="resume" href="{{ .Params.resume }}" target="_blank" rel="noopener">Full Resume</a>
+            {{ with $.Params.resume -}}
+              {{- if findRE `^\w+://` . 1 -}}
+                <a class="resume" href="{{ . }}" target="_blank" rel="noopener">Full Resume</a>
               {{- else -}}
-                {{- $path := printf "/dl/people/%s/%s" .File.TranslationBaseName .Params.resume -}}
-                {{- if fileExists (printf "static/%s" $path) -}}
+                {{- $path := printf "/dl/people/%s/%s" $.File.TranslationBaseName . -}}
+                {{- if printf "static/%s" $path | fileExists -}}
                   <a class="resume" href="{{ $path }}">Full Resume</a>
                 {{- end -}}
               {{- end -}}
@@ -56,31 +56,29 @@
 
         {{- if or (isset .Params "email") (isset .Params "website") }}
           <section class="contacts">
-            {{- if isset .Params "email" }}
+            {{- with .Params.email }}
               <div class="email">
                 <span class="label">Email:</span>
-                <a class="email" href="mailto:{{ .Params.name }} <{{ .Params.email }}>">
-                  {{- .Params.email -}}
-                </a>
+                <a class="email" href="mailto:{{ $.Params.name }} <{{ . }}>">{{ . }}</a>
               </div>
             {{- end }}
-            {{- if isset .Params "websites" }}
+            {{- with .Params.websites }}
               <div class="websites">
                 <span class="label">
-                  Website{{ if gt (len .Params.websites) 1 }}s{{ end }}:
+                  Website{{ if gt (len .) 1 }}s{{ end }}:
                 </span>
                 <span class="list">
-                  {{- range .Params.websites -}}
+                  {{- range . -}}
                     {{- $text := .title | default (.url | replaceRE "^https?://" "") -}}
                     <span><a href="{{ .url }}" target="_blank" rel="noopener">{{ $text }}</a></span>
                   {{- end -}}
                 </span>
               </div>
             {{- end }}
-            {{- if isset .Params "address" }}
+            {{- with .Params.address }}
               <div class="address">
                 <span class="label">Mailing Address:</span>
-                <div class="value">{{ .Params.address | markdownify }}</div>
+                <div class="value">{{ . | markdownify }}</div>
               </div>
             {{- end }}
           </section>
@@ -92,8 +90,8 @@
       {{ .Content }}
     </section>
 
-    {{- if isset .Params "bibliography" }}
-      {{ partial "bib/section.html" (dict "title" "Publications" "items" .Params.bibliography "Page" .Page "Site" .Site) }}
+    {{- with .Params.bibliography }}
+      {{ partial "bib/section.html" (dict "title" "Publications" "items" . "Page" $.Page "Site" $.Site) }}
     {{- end }}
   </article>
 </main>

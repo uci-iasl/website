@@ -6,7 +6,7 @@
     {{- else -}}
       {{- $month -}}
     {{- end -}}
-    {{- if isset . "day" }}&nbsp;{{ .day }}{{ "," }}{{ end }}{{ " " -}}
+    {{- with .day }}&nbsp;{{ . }}{{ "," }}{{ end }}{{ " " -}}
   {{- end -}}
   {{- .entry.year -}}
 </span>{{ "" -}}

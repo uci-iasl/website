@@ -3,9 +3,7 @@
   <article class="single">
     <header>
       <h1 class="page-title">{{ .Title }}</h1>
-      {{- if isset .Params "subtitle" }}
-        <h2 class="subtitle">{{ .Params.subtitle }}</h2>
-      {{- end }}
+      {{- with .Params.subtitle }}<h2 class="subtitle">{{ . }}</h2>{{ end }}
     </header>
 
     <section class="content">

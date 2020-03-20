@@ -5,11 +5,11 @@
       {{ .Content }}
     </section>
 
-    {{- if $updates := where .Site.RegularPages "Section" "updates" }}
+    {{- with where .Site.RegularPages "Section" "updates" }}
       <section id="updates">
         <h1 class="page-title">Recent Activity</h1>
         <ul class="updates">
-          {{- range first 10 $updates.ByDate.Reverse }}
+          {{- range first 10 .ByDate.Reverse }}
             {{ .Render "li" }}
           {{- end }}
         </ul>

@@ -12,8 +12,8 @@
         <a class="no-visited" href="{{ .RelPermalink }}">{{ .Params.name }}</a>
       </div>
       <div class="status">{{ .Params.status }}</div>
-      {{- if isset .Params "yearjoined" }}
-        <div class="years">{{ partial "people/yearrange.html" .Params }}</div>
+      {{- with .Params.yearjoined }}
+        <div class="years">{{ partial "people/yearrange.html" $.Params }}</div>
       {{- end }}
       {{- if and (hasPrefix .Params.role "alumnus") (isset .Params "websites") }}
         {{- with index .Params.websites 0 }}
