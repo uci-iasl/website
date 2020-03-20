@@ -97,10 +97,10 @@ body>header {
 body>header .logo { float: left; }
 body>header .logo img { height: 30px; }
 body>header nav { float: right; }
-body>header nav .sep::before {
-  content: '·';
+body>header nav>span:not(:first-of-type)::before {
   color: var(--header-accent-fg-color);
-  padding: 0px 0.75ex;
+  content: '·';
+  padding: 0 0.75ex;
 }
 body>header a, body>header a:visited {
   color: var(--header-link-fg-color);
@@ -281,7 +281,7 @@ section.profile ul.education .record>.institution {
     - 4em);
 }
 section.profile a.resume { font-weight: bold; }
-section.profile .contacts .websites>.sep::before {
+section.profile .contacts .websites .list>span:not(:first-of-type)::before {
   content: '·';
   padding: 0 0.75ex;
 }
@@ -459,8 +459,8 @@ a.citation .title::after {
   font-size: calc(0.7 * var(--font-size));
 }
 .bibliography>li .bibentry .extras>.item:not(:first-of-type)::before {
-  content: '·';
   font-weight: bold;
+  content: '·';
   padding: 0 0.5ex;
 }
 .bibliography>li .bibentry .extras a {
