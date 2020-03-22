@@ -8,6 +8,10 @@ markup:
     renderer:
       unsafe: true  # For embedded HTML in content/_index.md.
 
+disableKinds:
+- taxonomy
+- taxonomyTerm
+
 params:
   author: *title
   description: >-
