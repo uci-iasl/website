@@ -31,11 +31,16 @@
 
   <base href="{{ .Site.BaseURL }}">
   <link rel="canonical" href="{{ .Permalink }}">
-  <link rel="stylesheet" href="/css/main.css">
-  <link rel="stylesheet" href="/css/fonts.css">
 
-  {{ if index .Params "bibliography" -}}
-    <script type="text/javascript" src="/js/bibliography.js"></script>
+  {{- $css := slice }}
+  {{- $css = $css | append (resources.Get "css/fonts.css") }}
+  {{- $css = $css | append (resources.Get "css/main.css") }}
+  {{- $css = $css | resources.Concat "css/all.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+
+  {{- if isset .Params "bibliography" }}
+    {{- $js := resources.Get "js/bibliography.js" | minify | fingerprint }}
+    <script type="text/javascript" src="{{ $js.RelPermalink }}"></script>
   {{- end }}
 </head>
 
