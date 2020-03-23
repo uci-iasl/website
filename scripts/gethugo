@@ -33,7 +33,9 @@ esac
 arch="$(uname -m)"
 case $arch in
 (x86_64)	archsuffix=64bit;;
-(x86)	archsuffix=32bit;;
+(i386|i686)	archsuffix=32bit;;
+(armv8*|aarch64*)	archsuffix=ARM64;;
+(arm*)	archsuffix=ARM;;
 (*)	panic "$arch: unsupported machine hardware name"
 esac
 
