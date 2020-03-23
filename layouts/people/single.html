@@ -43,7 +43,7 @@
             </ul>
             {{ if isset .Params "resume" -}}
               {{- if findRE `^\w+://` .Params.resume 1 -}}
-                <a class="resume" href="{{ .Params.resume }}" target="_blank">Full Resume</a>
+                <a class="resume" href="{{ .Params.resume }}" target="_blank" rel="noopener">Full Resume</a>
               {{- else -}}
                 {{- $path := printf "/dl/people/%s/%s" .File.TranslationBaseName .Params.resume -}}
                 {{- if fileExists (printf "static/%s" $path) -}}
@@ -72,7 +72,7 @@
                 <span class="list">
                   {{- range .Params.websites -}}
                     {{- $text := .title | default (.url | replaceRE "^https?://" "") -}}
-                    <span><a href="{{ .url }}" target="_blank">{{ $text }}</a></span>
+                    <span><a href="{{ .url }}" target="_blank" rel="noopener">{{ $text }}</a></span>
                   {{- end -}}
                 </span>
               </div>

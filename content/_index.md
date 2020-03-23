@@ -9,9 +9,9 @@
 # Intelligent and Autonomous Systems Lab
 
 <em>
-  <a class="subtle" href="https://www.cs.uci.edu" target="_blank">Computer Science Department</a>,
-  <a class="subtle" href="https://www.ics.uci.edu" target="_blank">Donald Bren School of Information and Computer Sciences</a>,
-  <a class="subtle" href="https://uci.edu" target="_blank">University of California, Irvine</a>
+  <a class="subtle" href="https://www.cs.uci.edu" target="_blank" rel="noopener">Computer Science Department</a>,
+  <a class="subtle" href="https://www.ics.uci.edu" target="_blank" rel="noopener">Donald Bren School of Information and Computer Sciences</a>,
+  <a class="subtle" href="https://uci.edu" target="_blank" rel="noopener">University of California, Irvine</a>
 </em>
 
 **Our research** focuses on fundamental computational aspects of

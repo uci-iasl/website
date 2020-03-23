@@ -18,7 +18,7 @@
       {{- if and (hasPrefix .Params.role "alumnus") (isset .Params "websites") }}
         {{- with index .Params.websites 0 }}
           <div class="website">
-            <a href="{{ .url }}" target="_blank">Website</a>
+            <a href="{{ .url }}" target="_blank" rel="noopener">Website</a>
           </div>
         {{- end }}
       {{- end }}

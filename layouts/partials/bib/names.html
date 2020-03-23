@@ -40,7 +40,7 @@
           {{- end -}}
         {{- end -}}
         {{- with $authorurl -}}
-          <a href="{{ . }}" class="subtle"{{ if not $isourown}} target="_blank"{{ end }}>
+          <a href="{{ . }}" class="subtle"{{ if not $isourown}} target="_blank" rel="noopener"{{ end }}>
         {{- end -}}
       {{- end -}}
 
