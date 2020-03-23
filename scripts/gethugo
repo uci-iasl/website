@@ -1,28 +1,35 @@
 #!/usr/bin/env bash
 #
-#	gethugo [{version | 'latest'} [install-path]]
+#	gethugo [-v version] [install-path]
 #
-# Downloads the Hugo binary of the version given in the first argument
-# and extracts it into the directory given in the second argument (or
-# the current directory, if missing). In the absence of arguments or
-# when the provided version string equals to 'latest', the version to
-# download is determined from the tag name of the latest release on
-# the official Hugo repository on GitHub.
+# Downloads the archive with the latest released version of the Hugo
+# binary (or the version given via the -v option) from the official
+# repository on GitHub, and extracts it into the directory given in
+# the only argument (or the current working directory, if missing).
 
 . "$(dirname "$0")"/libusage.bash
-usage='[{version | 'latest'} [install-path]]'
+usage='[-v version] [install-path]'
 
-version="$1"
-if [[ $# -eq 0 || $version -eq 'latest' ]]; then
+version=
+
+while getopts ':v:' opt; do
+	case $opt in
+	(v)	version="$OPTARG";;
+	(*)	usagebadopt "$opt";;
+	esac
+done
+shift $((OPTIND-1)); [[ $1 == -- ]] && shift
+
+binpath="${1:-.}"
+[[ -d $binpath ]] || panic "$binpath: directory does not exist"
+
+if [[ -z $version ]]; then
 	version="$(
 		curl -s 'https://api.github.com/repos/gohugoio/hugo/releases/latest' |
 		sed -n 's/.*"tag_name": *"v\([^"]\{1,\}\)".*/\1/p'
 	)"
 	[[ -n $version ]] || panic 'failed to determine the latest version'
 fi
-
-binpath="${2:-.}"
-[[ -d $binpath ]] || panic "$binpath: directory does not exist"
 
 case $OSTYPE in
 (linux*)	ossuffix=Linux;;
