@@ -1,16 +1,26 @@
 #!/usr/bin/env bash
 #
-#	gethugo version [install-path]
+#	gethugo [{version | 'latest'} [install-path]]
 #
 # Downloads the Hugo binary of the version given in the first argument
 # and extracts it into the directory given in the second argument (or
-# the current directory, if missing).
+# the current directory, if missing). In the absence of arguments or
+# when the provided version string equals to 'latest', the version to
+# download is determined from the tag name of the latest release on
+# the official Hugo repository on GitHub.
 
 . "$(dirname "$0")"/libusage.bash
-usage='version [install-path]'
+usage='[{version | 'latest'} [install-path]]'
 
-[[ $# -gt 0 ]] || usage 'no version to download given'
 version="$1"
+if [[ $# -eq 0 || $version -eq 'latest' ]]; then
+	version="$(
+		curl -s 'https://api.github.com/repos/gohugoio/hugo/releases/latest' |
+		sed -n 's/.*"tag_name": *"v\([^"]\{1,\}\)".*/\1/p'
+	)"
+	[[ -n $version ]] || panic 'failed to determine the latest version'
+fi
+
 binpath="${2:-.}"
 [[ -d $binpath ]] || panic "$binpath: directory does not exist"
 
@@ -35,5 +45,6 @@ cleanup() { [[ -n $archive ]] && rm "$archive"; }
 trap cleanup EXIT
 archive="$(mktemp)" || exit
 
+log "attempting to download Hugo version '$version' from '$dlurl'"
 curl -o "$archive" -L "$dlurl" &&
 tar -xzf "$archive" -C "$binpath" hugo
