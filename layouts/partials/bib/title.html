@@ -5,7 +5,7 @@
   {{- else if $id | printf "static/pub/%s.pdf" | fileExists -}}
     <a href="/pub/{{ $id }}.pdf">{{ .title }}</a>
   {{- else if isset . "url" -}}
-    <a href="{{ .url }}">{{ .title }}</a>
+    <a href="{{ .url }}"{{ if strings.HasPrefix .url "http" }} target="_blank" rel="noopener"{{ end }}>{{ .title }}</a>
   {{- else -}}
     {{- .title -}}
   {{- end -}}
