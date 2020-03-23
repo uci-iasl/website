@@ -252,7 +252,7 @@
         <a role="button" class="collapsed" onclick="bib.toggleBibtexDisplay(this)">BibTeX</a>{{ "" -}}
       </span>
     {{- end -}}
-    <span class="item linkhere"><a href="{{ .Page.Permalink }}#{{ .entry.id | urlize }}">¶</a></span>
+    <span class="item linkhere"><a href="{{ .Page.RelPermalink }}#{{ .entry.id | urlize }}">¶</a></span>
   </span>
 
   <div class="appendix">

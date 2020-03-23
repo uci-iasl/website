@@ -3,7 +3,7 @@
     <header>
       <h1 class="title">
         {{- if .Truncated -}}
-          <a href="{{ .Permalink }}">{{ .Title }}</a>
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
         {{- else -}}
           {{- .Title -}}
         {{- end -}}
@@ -13,7 +13,7 @@
     <section class="summary">
       {{ .Summary }}
       {{- if .Truncated }}
-        <!-- <div class="more"><a href="{{ .Permalink }}">Details</a></div> -->
+        <!-- <div class="more"><a href="{{ .RelPermalink }}">Details</a></div> -->
       {{- end }}
     </section>
   </section>

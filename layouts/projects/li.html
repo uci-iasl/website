@@ -1,14 +1,14 @@
 <li class="project">
   <section class="project">
     <div class="cover">
-      <a class="no-decor" href="{{ .Permalink }}">
+      <a class="no-decor" href="{{ .RelPermalink }}">
         {{- with .Params.cover }}
           <img src="/img/projects/{{ .File.TranslationBaseName }}/{{ . }}">
         {{- end }}
       </a>
     </div>
     <header>
-      <h1 class="title"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+      <h1 class="title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
       <!-- <h2 class="meta">{{ .Date.Format .Site.Params.datedayfmt }}</h2> -->
     </header>
     <section class="summary">

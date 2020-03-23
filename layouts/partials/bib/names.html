@@ -30,7 +30,7 @@
       {{- if and (not $citemode) (not $isothers) -}}
         {{- $isourown := true -}}
         {{- with index $.peoplepages $fullname -}}
-          {{- $authorurl = .Permalink -}}
+          {{- $authorurl = .RelPermalink -}}
         {{- else -}}
           {{- with $.params.collaborators -}}
             {{- with where . "name" $fullname -}}
