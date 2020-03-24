@@ -5,7 +5,13 @@
     </div>
     <nav>
       {{- range .Site.Menus.main -}}
-        <span>{{ .Pre }}<a href="{{ .URL }}">{{ .Name }}</a>{{ .Post }}</span>
+        <span>
+          {{- .Pre -}}
+          {{- $slashensuredurl := .URL | printf "%s/" | relURL -}}
+          {{- $isactive := hasPrefix $.RelPermalink $slashensuredurl -}}
+          <a href="{{ .URL }}"{{ if $isactive }} class="active"{{ end }}>{{ .Name }}</a>
+          {{- .Post -}}
+        </span>
       {{- end -}}
     </nav>
   </div>

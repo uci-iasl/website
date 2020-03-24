@@ -102,6 +102,13 @@ body>header nav>span:not(:first-of-type)::before {
   content: '·';
   padding: 0 0.75ex;
 }
+body>header nav a.active {
+  border-bottom-color: var(--header-link-hover-ul-color);
+  box-shadow: 0 1px 0 var(--header-link-hover-ul-color);
+}
+body>header nav a.active:hover {
+  box-shadow: none;
+}
 body>header a, body>header a:visited {
   color: var(--header-link-fg-color);
   border-bottom-color: var(--header-link-ul-color);
@@ -516,7 +523,7 @@ a.citation .title::after {
 a {
   color: var(--link-fg-color);
   border-bottom: 1px solid var(--link-ul-color);
-  transition-property: border-bottom,border-color,background,color,fill;
+  transition-property: box-shadow,border-bottom,border-color,background,color,fill;
   transition-duration: 0.33s;
   transition-timing-function: ease-out;
   text-decoration: none;
