@@ -154,6 +154,10 @@ var bib = {
 		etalContent.style.display = 'inline';
 		button.style.display = 'none';
 	},
-}
+};
 
-window.onload = bib.initEntryTextFilter;
+if (document.readyState == 'complete') {
+	bib.initEntryTextFilter();
+} else {
+	window.addEventListener('DOMContentLoaded', bib.initEntryTextFilter);
+}
