@@ -39,7 +39,7 @@
   <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
 
   {{- if isset .Params "bibliography" }}
-    {{- $js := resources.Get "js/bibliography.js" | minify | fingerprint }}
+    {{- $js := resources.Get "js/bib.js" | minify | fingerprint }}
     <script type="text/javascript" src="{{ $js.RelPermalink }}"></script>
   {{- end }}
 </head>
