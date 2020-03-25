@@ -3,8 +3,7 @@
 var bib = {
 	sectionSelector: 'section.bibliography',
 	sectionGroupsSelector: '.group',
-	sectionNoMatchGroupSelector: '#ctl-bib-section-no-match',
-	groupEntriesSelector: 'ul.bibliography>li',
+	groupEntriesSelector: 'ul.bibliography > li',
 	entryFieldsSelector: [
 		'.authors-index', '.editors-index',
 		'.title', '.journal', '.booktitle', '.series',
@@ -12,6 +11,15 @@ var bib = {
 		'.publisher', '.address', '.date',
 		'.note', '.keywords-index',
 	].join(','),
+
+	entryEtalButtonsSelector: [
+		'.authors .etal a[role=button]',
+		'.editors .etal a[role=button]',
+	].join(','),
+	entryAbstractButtonSelector: '.extras > .abstract a[role=button]',
+	entryBibtexButtonSelector: '.extras > .bibtex a[role=button]',
+
+	sectionNoMatchGroupSelector: '#ctl-bib-section-no-match',
 	sectionFilterInputSelector: '#ctl-bib-filter-input',
 	sectionFilterSelectSelector: '#ctl-bib-filter-selection',
 	filterSelectInactiveClass: 'inactive',
@@ -39,7 +47,7 @@ var bib = {
 	entryEtAlContainerClass: 'etal',
 	entryEtAlContentSelector: '.content',
 
-	initEntryTextFilter: function() {
+	initInteractiveFeatures: function() {
 		var sectionElem = document.querySelector(bib.sectionSelector);
 		var groupElems = sectionElem.querySelectorAll(bib.sectionGroupsSelector);
 		var groups = [];
@@ -47,6 +55,16 @@ var bib = {
 			var entryElems = groupElem.querySelectorAll(bib.groupEntriesSelector);
 			var entries = [];
 			for (var entryElem of entryElems) {
+				var etalButtons = entryElem.querySelectorAll(bib.entryEtalButtonsSelector);
+				for (var etalButton of etalButtons)
+					etalButton.onclick = bib.displayEtAlNames;
+
+				var abstractButton = entryElem.querySelector(bib.entryAbstractButtonSelector);
+				if (abstractButton) abstractButton.onclick = bib.toggleAbstractDisplay;
+
+				var bibtexButton = entryElem.querySelector(bib.entryBibtexButtonSelector);
+				if (bibtexButton) bibtexButton.onclick = bib.toggleBibtexDisplay;
+
 				var fieldElems = entryElem.querySelectorAll(bib.entryFieldsSelector);
 				var values = [];
 				for (var fieldElem of fieldElems)
@@ -138,15 +156,16 @@ var bib = {
 		}
 	},
 
-	toggleAbstractDisplay: function(button) {
-		return bib.toggleAppendixDisplay(button, bib.entryAbstractSelector);
+	toggleAbstractDisplay: function(event) {
+		return bib.toggleAppendixDisplay(event.currentTarget, bib.entryAbstractSelector);
 	},
 
-	toggleBibtexDisplay: function(button) {
-		return bib.toggleAppendixDisplay(button, bib.entryBibtexSelector);
+	toggleBibtexDisplay: function(event) {
+		return bib.toggleAppendixDisplay(event.currentTarget, bib.entryBibtexSelector);
 	},
 
-	displayEtAlNames: function(button) {
+	displayEtAlNames: function(event) {
+		var button = event.currentTarget;
 		var etal = button.parentNode;
 		if (!etal || !etal.classList.contains(bib.entryEtAlContainerClass)) return;
 		var etalContent = etal.querySelector(bib.entryEtAlContentSelector);
@@ -157,7 +176,7 @@ var bib = {
 };
 
 if (document.readyState == 'complete') {
-	bib.initEntryTextFilter();
+	bib.initInteractiveFeatures();
 } else {
-	window.addEventListener('DOMContentLoaded', bib.initEntryTextFilter);
+	window.addEventListener('DOMContentLoaded', bib.initInteractiveFeatures);
 }

@@ -21,8 +21,8 @@
     {{- end -}}
     {{- if and (not $citemode) $hasetal (eq $idx $.params.etalkeep) -}}
       <span class="etal">{{ "" -}}
-        <a role="button" onclick="bib.displayEtAlNames(this)">{{ $etallabel }}</a>{{ "" -}}
-        <span class="content">{{ " " -}}
+        <a role="button">{{ $etallabel }}</a>{{ "" -}}
+        <span class="content">
     {{- end -}}
 
     <span class="name"{{ if and (not $citemode) (not $.params.fullnames) }} title="{{ $fullname }}"{{ end }}>
