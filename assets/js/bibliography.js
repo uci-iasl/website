@@ -96,12 +96,12 @@ var bib = {
 	},
 
 	entryMatchesQuery: function(entry, query) {
-		var hasCatSel = (query.category != bib.entryCategoryAll);
-		if (hasCatSel && entry.category != query.category) return false;
+		var hasCatSel = (query.category !== bib.entryCategoryAll);
+		if (hasCatSel && entry.category !== query.category) return false;
 		for (var word of query.words) {
 			var found = false;
 			for (var value of entry.values) {
-				if (value.indexOf(word) != -1) {
+				if (value.indexOf(word) !== -1) {
 					found = true;
 					break;
 				}
@@ -116,7 +116,7 @@ var bib = {
 			words: bib.filterInputElem.value.toLowerCase().split(/\s+/),
 			category: bib.filterSelectElem.value,
 		};
-		if (query.category == bib.entryCategoryAll) {
+		if (query.category === bib.entryCategoryAll) {
 			bib.filterSelectElem.classList.add(bib.filterSelectInactiveClass);
 		} else {
 			bib.filterSelectElem.classList.remove(bib.filterSelectInactiveClass);
@@ -145,7 +145,7 @@ var bib = {
 		var elem = appendix.querySelector(appendixItemSelector);
 		if (!elem) return;
 
-		if (!elem.style.display || elem.style.display == 'none') {
+		if (!elem.style.display || elem.style.display === 'none') {
 			button.classList.remove(bib.entryButtonCollapsedClass);
 			button.classList.add(bib.entryButtonExpandedClass);
 			elem.style.display = 'block';
@@ -175,7 +175,7 @@ var bib = {
 	},
 };
 
-if (document.readyState == 'complete') {
+if (document.readyState === 'complete') {
 	bib.initInteractiveFeatures();
 } else {
 	window.addEventListener('DOMContentLoaded', bib.initInteractiveFeatures);
