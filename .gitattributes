@@ -1,0 +1,14 @@
+*	text=auto
+*.bib	text
+*.css	text
+*.htm	text
+*.html	text
+*.js	text
+*.md	text
+*.svg	text
+*.yaml	text
+*.ico	binary
+*.jpeg	binary
+*.jpg	binary
+*.pdf	binary
+*.png	binary
