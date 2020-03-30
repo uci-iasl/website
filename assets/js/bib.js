@@ -49,14 +49,33 @@ var bib = {
 
 	initEntryButtons: function(entryElem) {
 		var etalButtons = entryElem.querySelectorAll(bib.entryEtalButtonsSelector);
-		for (var etalButton of etalButtons)
+		for (var etalButton of etalButtons) {
 			etalButton.onclick = bib.displayEtAlNames;
+			var etalElem = etalButton.parentNode;
+			if (etalElem && etalElem.classList.contains(bib.entryEtAlContainerClass)) {
+				etalButton.bibEtalContentElem = etalElem.querySelector(bib.entryEtAlContentSelector);
+			}
+		}
+
+		var appendixElem = entryElem.querySelector(bib.entryAppendixSelector);
+		var abstractItemElem = null;
+		var bibtexItemElem = null;
+		if (appendixElem) {
+			abstractItemElem = appendixElem.querySelector(bib.entryAbstractSelector);
+			bibtexItemElem = appendixElem.querySelector(bib.entryBibtexSelector);
+		}
 
 		var abstractButton = entryElem.querySelector(bib.entryAbstractButtonSelector);
-		if (abstractButton) abstractButton.onclick = bib.toggleAbstractDisplay;
+		if (abstractButton) {
+			abstractButton.onclick = bib.toggleAppendixItemDisplay;
+			abstractButton.bibAppendixItemElem = abstractItemElem;
+		}
 
 		var bibtexButton = entryElem.querySelector(bib.entryBibtexButtonSelector);
-		if (bibtexButton) bibtexButton.onclick = bib.toggleBibtexDisplay;
+		if (bibtexButton) {
+			bibtexButton.onclick = bib.toggleAppendixItemDisplay;
+			bibtexButton.bibAppendixItemElem = bibtexItemElem;
+		}
 	},
 
 	collectEntryInfo: function(entryElem) {
@@ -142,42 +161,26 @@ var bib = {
 		bib.noMatchGroup.style.display = (totalVisible > 0 ? 'none' : 'block');
 	},
 
-	toggleAppendixDisplay: function(button, appendixItemSelector) {
-		var entry = button;
-		while (entry && (!entry.classList.contains(bib.entryContentClass) || !entry.id))
-			entry = entry.parentNode;
-		if (!entry) return;
-		var appendix = entry.querySelector(bib.entryAppendixSelector);
-		if (!appendix) return;
-		var elem = appendix.querySelector(appendixItemSelector);
-		if (!elem) return;
-
-		if (!elem.style.display || elem.style.display === 'none') {
+	toggleAppendixItemDisplay: function(event) {
+		var button = event.currentTarget;
+		var itemElem = button.bibAppendixItemElem;
+		if (!itemElem) return;
+		if (!itemElem.style.display || itemElem.style.display === 'none') {
 			button.classList.remove(bib.entryButtonCollapsedClass);
 			button.classList.add(bib.entryButtonExpandedClass);
-			elem.style.display = 'block';
+			itemElem.style.display = 'block';
 		} else {
 			button.classList.remove(bib.entryButtonExpandedClass);
 			button.classList.add(bib.entryButtonCollapsedClass);
-			elem.style.display = 'none';
+			itemElem.style.display = 'none';
 		}
-	},
-
-	toggleAbstractDisplay: function(event) {
-		return bib.toggleAppendixDisplay(event.currentTarget, bib.entryAbstractSelector);
-	},
-
-	toggleBibtexDisplay: function(event) {
-		return bib.toggleAppendixDisplay(event.currentTarget, bib.entryBibtexSelector);
 	},
 
 	displayEtAlNames: function(event) {
 		var button = event.currentTarget;
-		var etal = button.parentNode;
-		if (!etal || !etal.classList.contains(bib.entryEtAlContainerClass)) return;
-		var etalContent = etal.querySelector(bib.entryEtAlContentSelector);
-		if (!etalContent) return;
-		etalContent.style.display = 'inline';
+		var contentElem = button.bibEtalContentElem;
+		if (!contentElem) return;
+		contentElem.style.display = 'inline';
 		button.style.display = 'none';
 	},
 };
