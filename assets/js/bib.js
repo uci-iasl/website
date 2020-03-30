@@ -47,6 +47,36 @@ var bib = {
 	entryEtAlContainerClass: 'etal',
 	entryEtAlContentSelector: '.content',
 
+	initEntryButtons: function(entryElem) {
+		var etalButtons = entryElem.querySelectorAll(bib.entryEtalButtonsSelector);
+		for (var etalButton of etalButtons)
+			etalButton.onclick = bib.displayEtAlNames;
+
+		var abstractButton = entryElem.querySelector(bib.entryAbstractButtonSelector);
+		if (abstractButton) abstractButton.onclick = bib.toggleAbstractDisplay;
+
+		var bibtexButton = entryElem.querySelector(bib.entryBibtexButtonSelector);
+		if (bibtexButton) bibtexButton.onclick = bib.toggleBibtexDisplay;
+	},
+
+	collectEntryInfo: function(entryElem) {
+		var fieldElems = entryElem.querySelectorAll(bib.entryFieldsSelector);
+		var values = [];
+		for (var fieldElem of fieldElems)
+			values.push(fieldElem.innerText.toLowerCase());
+
+		var kind = entryElem.getAttribute(bib.entryKindAttrName);
+		var category = bib.entryCategoryOther;
+		if (kind in bib.entryKindCategoryMap)
+			category = bib.entryKindCategoryMap[kind];
+
+		return {
+			element: entryElem,
+			category: category,
+			values: values,
+		};
+	},
+
 	initInteractiveFeatures: function() {
 		var sectionElem = document.querySelector(bib.sectionSelector);
 		var groupElems = sectionElem.querySelectorAll(bib.sectionGroupsSelector);
@@ -55,31 +85,8 @@ var bib = {
 			var entryElems = groupElem.querySelectorAll(bib.groupEntriesSelector);
 			var entries = [];
 			for (var entryElem of entryElems) {
-				var etalButtons = entryElem.querySelectorAll(bib.entryEtalButtonsSelector);
-				for (var etalButton of etalButtons)
-					etalButton.onclick = bib.displayEtAlNames;
-
-				var abstractButton = entryElem.querySelector(bib.entryAbstractButtonSelector);
-				if (abstractButton) abstractButton.onclick = bib.toggleAbstractDisplay;
-
-				var bibtexButton = entryElem.querySelector(bib.entryBibtexButtonSelector);
-				if (bibtexButton) bibtexButton.onclick = bib.toggleBibtexDisplay;
-
-				var fieldElems = entryElem.querySelectorAll(bib.entryFieldsSelector);
-				var values = [];
-				for (var fieldElem of fieldElems)
-					values.push(fieldElem.innerText.toLowerCase());
-
-				var kind = entryElem.getAttribute(bib.entryKindAttrName);
-				var category = bib.entryCategoryOther;
-				if (kind in bib.entryKindCategoryMap)
-					category = bib.entryKindCategoryMap[kind];
-
-				entries.push({
-					element: entryElem,
-					category: category,
-					values: values,
-				});
+				bib.initEntryButtons(entryElem);
+				entries.push(bib.collectEntryInfo(entryElem));
 			}
 			groups.push({
 				element: groupElem,
