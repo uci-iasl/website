@@ -51,18 +51,23 @@ hugobin="$(abspath "$hugobin")"
 wwwdir="$(abspath "$wwwdir")"
 
 if [[ -d $repodir ]]; then
+	log "fetching commits in branch '$branch' from the origin"
 	gitd() { git --git-dir="$repodir"/.git --work-tree="$repodir" "$@"; }
 	gitd remote set-branches origin "$branch" &&
 	gitd fetch origin "$branch" &&
 	gitd checkout "$branch" &&
-	local="$(gitd rev-parse @)" &&
-	remote="$(gitd rev-parse @{u})" &&
-	[[ "$local" != "$remote" ]] &&
-	gitd reset --hard origin/"$branch" &&
-	gitd pull origin "$branch"
+	localhash="$(gitd rev-parse @)" &&
+	remotehash="$(gitd rev-parse @{u})" &&
+	[[ "$localhash" != "$remotehash" ]] && {
+		log "pulling changes in branch '$branch' from the origin"
+		gitd reset --hard origin/"$branch" &&
+		gitd pull origin "$branch"
+	}
 else
+	log "cloning branch '$branch' from '$repourl'"
 	git clone -b "$branch" --single-branch "$repourl" "$repodir"
 fi && (
+	log "building the website into directory '$wwwdir'"
 	cd "$repodir" &&
 	"$hugobin" -d "$wwwdir" --cleanDestinationDir -b "$baseurl" --minify
 )
