@@ -1,1 +1,5 @@
 ErrorDocument 404 /404.html
+
+<IfModule mod_deflate.c>
+	SetOutputFilter DEFLATE
+</IfModule>
