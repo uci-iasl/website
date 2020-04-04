@@ -52,8 +52,9 @@ wwwdir="$(abspath "$wwwdir")"
 
 if [[ -d $repodir ]]; then
 	gitd() { git --git-dir="$repodir"/.git --work-tree="$repodir" "$@"; }
-	gitd checkout "$branch" &&
+	gitd remote set-branches origin "$branch" &&
 	gitd fetch origin "$branch" &&
+	gitd checkout "$branch" &&
 	local="$(gitd rev-parse @)" &&
 	remote="$(gitd rev-parse @{u})" &&
 	[[ "$local" != "$remote" ]] &&
