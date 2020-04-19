@@ -20,7 +20,7 @@ repourl='git://github.com/uci-iasl/website.git'
 wwwdir='/var/www/iasl'
 baseurl='http://localhost/'
 lockfile=
-hugobin='/usr/bin/hugo'
+hugobin=hugo
 
 while getopts ':b:g:l:o:r:u:' opt; do
 	case $opt in
@@ -47,8 +47,9 @@ trap cleanup EXIT
 [[ -f $lockfile ]] && panic "$lockfile: lock file exists; another fetching process must be in progress"
 echo $$ >"$lockfile" || panic "$lockfile: writing to lock file failed"
 
-hugobin="$(abspath "$hugobin")"
-wwwdir="$(abspath "$wwwdir")"
+hugobinpath="$(which "$hugobin")" || panic "$hugobin: Hugo executable does not exist nor can be found in \$PATH"
+hugobinpath="$(abspath "$hugobinpath")"
+wwwdirpath="$(abspath "$wwwdir")"
 
 if [[ -d $repodir ]]; then
 	log "fetching commits in branch '$branch' from the origin"
@@ -67,7 +68,7 @@ else
 	log "cloning branch '$branch' from '$repourl'"
 	git clone -b "$branch" --single-branch "$repourl" "$repodir"
 fi && (
-	log "building the website into directory '$wwwdir'"
+	log "building the website into directory '$wwwdirpath' using Hugo executable '$hugobinpath'"
 	cd "$repodir" &&
-	"$hugobin" -d "$wwwdir" --cleanDestinationDir -b "$baseurl" --minify
+	"$hugobinpath" --destination "$wwwdirpath" --cleanDestinationDir --baseURL "$baseurl" --minify
 )
