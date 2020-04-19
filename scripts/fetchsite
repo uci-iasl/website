@@ -56,17 +56,17 @@ if [[ -d $repodir ]]; then
 	gitd() { git --git-dir="$repodir"/.git --work-tree="$repodir" "$@"; }
 	localhash="$(gitd rev-parse '@')" &&
 	gitd remote set-branches origin "$branch" &&
-	gitd fetch origin "$branch" &&
+	gitd fetch --depth=1 origin "$branch" &&
 	gitd checkout "$branch" &&
 	remotehash="$(gitd rev-parse '@{u}')" &&
 	[[ "$localhash" != "$remotehash" ]] && {
 		log "pulling changes in branch '$branch' from the origin"
 		gitd reset --hard origin/"$branch" &&
-		gitd pull origin "$branch"
+		gitd pull --depth=1 origin "$branch"
 	}
 else
 	log "cloning branch '$branch' from '$repourl'"
-	git clone -b "$branch" --single-branch "$repourl" "$repodir"
+	git clone --depth=1 --branch="$branch" "$repourl" "$repodir"
 fi && (
 	log "building the website into directory '$wwwdirpath' using Hugo executable '$hugobinpath'"
 	cd "$repodir" &&
