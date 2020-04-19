@@ -54,11 +54,11 @@ wwwdirpath="$(abspath "$wwwdir")"
 if [[ -d $repodir ]]; then
 	log "fetching commits in branch '$branch' from the origin"
 	gitd() { git --git-dir="$repodir"/.git --work-tree="$repodir" "$@"; }
+	localhash="$(gitd rev-parse '@')" &&
 	gitd remote set-branches origin "$branch" &&
 	gitd fetch origin "$branch" &&
 	gitd checkout "$branch" &&
-	localhash="$(gitd rev-parse @)" &&
-	remotehash="$(gitd rev-parse @{u})" &&
+	remotehash="$(gitd rev-parse '@{u}')" &&
 	[[ "$localhash" != "$remotehash" ]] && {
 		log "pulling changes in branch '$branch' from the origin"
 		gitd reset --hard origin/"$branch" &&
