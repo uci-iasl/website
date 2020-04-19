@@ -18,7 +18,7 @@ usage='[-b branch] [-g hugo-bin] [-l lock-file] [-o output-dir] [-r repo-url] [-
 branch=master
 repourl='git://github.com/uci-iasl/website.git'
 wwwdir='/var/www/iasl'
-baseurl='http://localhost/'
+baseurl=
 lockfile=
 hugobin=hugo
 
@@ -70,5 +70,5 @@ else
 fi && (
 	log "building the website into directory '$wwwdirpath' using Hugo executable '$hugobinpath'"
 	cd "$repodir" &&
-	"$hugobinpath" --destination "$wwwdirpath" --cleanDestinationDir --baseURL "$baseurl" --minify
+	"$hugobinpath" --destination="$wwwdirpath" --cleanDestinationDir "${baseurl:+--baseURL="$baseurl"}" --minify
 )
