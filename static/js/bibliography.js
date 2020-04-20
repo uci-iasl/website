@@ -30,9 +30,11 @@ var bib = {
 	entryCategoryOther: "other",
 
 	entryContentClass: "bibentry",
-	entryBibtexSelector: "pre.bibtex",
-	entryBibtexCollapsedSign: "▸",
-	entryBibtexExpandedSign: "▾",
+	entryAppendixSelector: ".appendix",
+	entryAbstractSelector: ".abstract",
+	entryBibtexSelector: ".bibtex",
+	entryButtonCollapsedSign: "▸",
+	entryButtonExpandedSign: "▾",
 
 	entryEtAlContainerClass: "etal",
 	entryEtAlContentSelector: ".content",
@@ -115,27 +117,37 @@ var bib = {
 		bib.noMatchGroup.style.display = (totalVisible > 0 ? "none" : "block");
 	},
 
-	toggleBibtexDisplay: function(button) {
+	toggleAppendixDisplay: function(button, appendixItemSelector) {
 		var entry = button;
 		while (entry && (!entry.classList.contains(bib.entryContentClass) || !entry.id))
 			entry = entry.parentNode;
 		if (!entry) return;
-		var bibtex = entry.querySelector(bib.entryBibtexSelector);
-		if (!bibtex) return;
+		var appendix = entry.querySelector(bib.entryAppendixSelector);
+		if (!appendix) return;
+		var elem = appendix.querySelector(appendixItemSelector);
+		if (!elem) return;
 
-		if (!bibtex.style.display || bibtex.style.display == "none") {
+		if (!elem.style.display || elem.style.display == "none") {
 			button.textContent = button.textContent.replace(
-				bib.entryBibtexCollapsedSign,
-				bib.entryBibtexExpandedSign
+				bib.entryButtonCollapsedSign,
+				bib.entryButtonExpandedSign
 			);
-			bibtex.style.display = "block";
+			elem.style.display = "block";
 		} else {
 			button.textContent = button.textContent.replace(
-				bib.entryBibtexExpandedSign,
-				bib.entryBibtexCollapsedSign
+				bib.entryButtonExpandedSign,
+				bib.entryButtonCollapsedSign
 			);
-			bibtex.style.display = "none";
+			elem.style.display = "none";
 		}
+	},
+
+	toggleAbstractDisplay: function(button) {
+		return bib.toggleAppendixDisplay(button, bib.entryAbstractSelector);
+	},
+
+	toggleBibtexDisplay: function(button) {
+		return bib.toggleAppendixDisplay(button, bib.entryBibtexSelector);
 	},
 
 	displayEtAlNames: function(button) {

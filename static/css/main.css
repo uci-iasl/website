@@ -458,12 +458,12 @@ a.citation .title::after {
 .bibliography>li .bibentry .extras {
   font-size: calc(0.7 * var(--font-size));
 }
-.bibliography>li .bibentry .extras .item:not(:first-of-type)::before {
+.bibliography>li .bibentry .extras>.item:not(:first-of-type)::before {
   content: '·';
   font-weight: bold;
   padding: 0 0.5ex;
 }
-.bibliography>li .bibentry .extras .item.bibtex:not(:first-of-type)::before {
+.bibliography>li .bibentry .extras>.item.bibtex:not(:first-of-type)::before {
   padding-right: 0.4ex;
 }
 .bibliography>li .bibentry .extras a {
@@ -476,21 +476,36 @@ a.citation .title::after {
 .bibliography>li .bibentry .extras a[role=button]:hover {
   color: var(--link-hover-fg-color);
 }
-.bibliography>li .bibentry pre.bibtex {
+.bibliography>li .bibentry .appendix>.item {
   display: none;
-  white-space: pre-wrap;
-  margin: 0.6ex 0 0 0;
-  padding: 0 1.5em;
+  margin: 0.6ex 0;
+  padding: 0 1em;
+  padding-bottom: 0.1ex;
+  color: var(--lighter-fg-color);
 }
-.bibliography>li .bibentry pre.bibtex>code {
+.bibliography>li .bibentry .appendix>.item:last-of-type {
+  padding-bottom: 0;
+}
+.bibliography>li .bibentry .appendix>.abstract p {
+  margin: 0.6ex 0;
+  font-size: calc(0.88 * var(--font-size));
+  line-height: calc(0.75 * var(--line-height));
+}
+.bibliography>li .bibentry .appendix>.abstract p:first-of-type::before {
+  content: 'Abstract\200A —\200A';
+  font-style: italic;
+}
+.bibliography>li .bibentry .appendix>.bibtex code {
   display: block;
+  white-space: pre-wrap;
+  font-family: monospace;
   font-size: calc(0.65 * var(--font-size));
   line-height: calc(0.6 * var(--line-height));
 }
-.bibliography>li .bibentry .extras .linkhere {
+.bibliography>li .bibentry .extras>.linkhere {
   visibility: hidden;
 }
-.bibliography>li .bibentry:hover .extras .linkhere {
+.bibliography>li .bibentry:hover .extras>.linkhere {
   visibility: visible;
 }
 
@@ -566,7 +581,9 @@ header>h5.meta, header>h6.meta {
   margin-top: 0.5ex;
 }
 
-p { margin: 0.8ex 0 0.8ex 0; }
+p {
+  margin: 0.8ex 0;
+}
 
 pre, code {
   font-family: Menlo, Consolas, monospace;
