@@ -187,11 +187,11 @@ def format_bibtex(bib_entry):
 	}]
 	return BibTexWriter().write(db).rstrip('\n')
 
-def break_names(tag, tex_str, case_change):
+def parse_names(tag, tex_str, case_change):
 	names = ['']
 	for node in parse_tex(tex_str):
 		if isinstance(node, latexwalker.LatexCharsNode):
-			first, *rest = break_names.NAME_SEP_RE.split(node.chars)
+			first, *rest = parse_names.NAME_SEP_RE.split(node.chars)
 			names[-1] += first
 			names.extend(rest)
 		else:
@@ -200,7 +200,7 @@ def break_names(tag, tex_str, case_change):
 	profiles = []
 	has_others_kw = False
 	for name in names:
-		if clean_ws(name).lower() == break_names.OTHERS_KEYWORD:
+		if clean_ws(name).lower() == parse_names.OTHERS_KEYWORD:
 			has_others_kw = True
 			continue
 		parts = bibtexparser.customization.splitname(name, strict_mode=False)
@@ -217,11 +217,11 @@ def break_names(tag, tex_str, case_change):
 			profile = {k: detexify(' '.join(v)) for k, v in profile.items() if v}
 		profiles.append(profile)
 	if has_others_kw:
-		profiles.append({'last': break_names.OTHERS_KEYWORD})
+		profiles.append({'last': parse_names.OTHERS_KEYWORD})
 	return profiles
 
-break_names.NAME_SEP_RE = re.compile(r'\sand\s', re.I)
-break_names.OTHERS_KEYWORD = 'others'
+parse_names.NAME_SEP_RE = re.compile(r'\sand\s', re.I)
+parse_names.OTHERS_KEYWORD = 'others'
 
 def make_record(bib_entry, include_bibtex, case_change):
 	record = {
@@ -233,7 +233,7 @@ def make_record(bib_entry, include_bibtex, case_change):
 	for tag in bib_entry:
 		value = bib_expr_as_text(bib_entry[tag])
 		if tag in BIBTEX_NAMELIST_TAGS:
-			record[tag] = break_names(tag, value, case_change)
+			record[tag] = parse_names(tag, value, case_change)
 		elif tag in BIBTEX_TITLECASE_TAGS:
 			record[tag] = format_title(tag, value, case_change)
 		elif tag in BIBTEX_TEX_TAGS:
