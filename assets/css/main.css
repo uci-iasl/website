@@ -506,6 +506,9 @@ a.citation .title::after {
   content: 'Abstract\200A —\200A';
   font-style: italic;
 }
+.bibliography>li .bibentry .appendix>.bibtex pre {
+  all: unset;
+}
 .bibliography>li .bibentry .appendix>.bibtex code {
   display: block;
   white-space: pre-wrap;
