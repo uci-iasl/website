@@ -1,53 +1,38 @@
 references:
-- address: Anaheim, California
-  author:
-  - first: Yoshitomo
-    last: Matsubara
-  - first: Haruhiko
-    last: Nishimura
-  - first: Toshiharu
-    last: Samura
-  - first: Hiroyuki
-    last: Yoshimoto
-  - first: Ryohei
-    last: Tanimoto
-  bibtex: "@inproceedings{matsubara-nishimura-2016-icmla,\n  author = {Yoshitomo Matsubara\
-    \ and Haruhiko Nishimura and Toshiharu Samura and Hiroyuki Yoshimoto and Ryohei\
-    \ Tanimoto},\n  title = {Screen Unlocking by Spontaneous Flick Reactions With\
-    \ One-Class Classification Approaches},\n  booktitle = {Proceedings of the IEEE\
-    \ International Conference on Machine Learning and Applications (ICMLA)},\n  pages\
-    \ = {752--757},\n  address = {Anaheim, California},\n  month = dec,\n  year =\
-    \ {2016},\n  doi = {10.1109/icmla.2016.0134},\n}"
-  booktitle: Proceedings of the IEEE International Conference on Machine Learning
-    and Applications (ICMLA)
-  doi: 10.1109/icmla.2016.0134
-  id: matsubara-nishimura-2016-icmla
-  kind: inproceedings
-  month: December
-  pages: 752–757
-  title: Screen Unlocking by Spontaneous Flick Reactions With One-Class Classification
-    Approaches
-  year: '2016'
-- address: Bangkok, Thailand
-  author:
-  - first: Yoshitomo
-    last: Matsubara
-  - first: Toshiharu
-    last: Samura
-  - first: Haruhiko
-    last: Nishimura
-  bibtex: "@inproceedings{matsubara-samura-2012-ists,\n  author = {Yoshitomo Matsubara\
-    \ and Toshiharu Samura and Haruhiko Nishimura},\n  title = {Robustness of Keystroke\
-    \ Dynamics Against Changing in Input and Recognition Conditions for Japanese Atypical\
-    \ Text},\n  booktitle = {Proceedings of the International Symposium on Technology\
-    \ for Sustainability (ISTS)},\n  pages = {103--106},\n  address = {Bangkok, Thailand},\n\
-    \  month = nov,\n  year = {2012},\n}"
-  booktitle: Proceedings of the International Symposium on Technology for Sustainability
-    (ISTS)
-  id: matsubara-samura-2012-ists
-  kind: inproceedings
-  month: November
-  pages: 103–106
-  title: Robustness of Keystroke Dynamics Against Changing in Input and Recognition
-    Conditions for Japanese Atypical Text
-  year: '2012'
+  matsubara-nishimura-2016-icmla:
+    address: Anaheim, California
+    author:
+    - first: Yoshitomo
+      last: Matsubara
+    - first: Haruhiko
+      last: Nishimura
+    - first: Toshiharu
+      last: Samura
+    - first: Hiroyuki
+      last: Yoshimoto
+    - first: Ryohei
+      last: Tanimoto
+    bibtex: "@inproceedings{matsubara-nishimura-2016-icmla,\n  author = {Yoshitomo Matsubara and Haruhiko Nishimura and Toshiharu Samura and Hiroyuki Yoshimoto and Ryohei Tanimoto},\n  title = {Screen Unlocking by Spontaneous Flick Reactions With One-Class Classification Approaches},\n  booktitle = {Proceedings of the IEEE International Conference on Machine Learning and Applications (ICMLA)},\n  pages = {752--757},\n  address = {Anaheim, California},\n  month = dec,\n  year = {2016},\n  doi = {10.1109/icmla.2016.0134},\n}"
+    booktitle: Proceedings of the IEEE International Conference on Machine Learning and Applications (ICMLA)
+    doi: 10.1109/icmla.2016.0134
+    kind: inproceedings
+    month: December
+    pages: 752–757
+    title: Screen Unlocking by Spontaneous Flick Reactions With One-Class Classification Approaches
+    year: '2016'
+  matsubara-samura-2012-ists:
+    address: Bangkok, Thailand
+    author:
+    - first: Yoshitomo
+      last: Matsubara
+    - first: Toshiharu
+      last: Samura
+    - first: Haruhiko
+      last: Nishimura
+    bibtex: "@inproceedings{matsubara-samura-2012-ists,\n  author = {Yoshitomo Matsubara and Toshiharu Samura and Haruhiko Nishimura},\n  title = {Robustness of Keystroke Dynamics Against Changing in Input and Recognition Conditions for Japanese Atypical Text},\n  booktitle = {Proceedings of the International Symposium on Technology for Sustainability (ISTS)},\n  pages = {103--106},\n  address = {Bangkok, Thailand},\n  month = nov,\n  year = {2012},\n}"
+    booktitle: Proceedings of the International Symposium on Technology for Sustainability (ISTS)
+    kind: inproceedings
+    month: November
+    pages: 103–106
+    title: Robustness of Keystroke Dynamics Against Changing in Input and Recognition Conditions for Japanese Atypical Text
+    year: '2012'

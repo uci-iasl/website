@@ -2,6 +2,7 @@
 
 import argparse
 import bibtexparser
+from collections import OrderedDict
 import enum
 from pylatexenc import latex2text, latexwalker
 import re
@@ -104,6 +105,15 @@ class CaseChange(enum.Enum):
 
 	def __str__(self):
 		return self.value
+
+class YAMLDumper(yaml.Dumper):
+	pass
+
+def yaml_represent_dict(dumper, dict):
+	tag = yaml.resolver.BaseResolver.DEFAULT_MAPPING_TAG
+	return dumper.represent_mapping(tag, dict.items())
+
+YAMLDumper.add_representer(OrderedDict, yaml_represent_dict)
 
 def clean_ws(str):
 	return clean_ws.WSPACE_RE.sub(' ', str).strip()
@@ -264,13 +274,15 @@ def load_bibtex(file):
 		interpolate_strings=False,
 	).parse_file(file, partial=True)
 
-def save_yaml(records, file):
+def save_yaml(records, file, Dumper=yaml.Dumper):
 	yaml.dump(
 		{'references': records},
 		file,
-		encoding='utf-8',
+		Dumper,
 		allow_unicode=True,
 		default_flow_style=False,
+		encoding='utf-8',
+		width=float('inf'),
 	)
 
 def bibtex_writer():
@@ -291,13 +303,25 @@ def save_bibtex(bib_db, file, id_sort_map=None, overwrite=False):
 	file.write(text)
 	file.write('\n')
 
-def convert_bibtex_file(bib_file, yaml_file, include_bibtex=False, case_change=None, reformat_source=True):
+def convert_bibtex_file(
+	bib_file,
+	yaml_file,
+	include_bibtex=False,
+	case_change=None,
+	reformat_source=True,
+	YAMLDumper=YAMLDumper,
+):
 	bib_db = load_bibtex(bib_file)
 	records = [make_record(e, include_bibtex, case_change) for e in bib_db.entries]
+
+	# The order of records in the output YAML dictionary
+	# is irrelevant but convenient for human readability.
 	records.sort(key=record_date_str, reverse=True)
-	save_yaml(records, yaml_file)
+	records = OrderedDict((r.pop('id'), r) for r in records)
+	save_yaml(records, yaml_file, Dumper=YAMLDumper)
+
 	if reformat_source and bib_file.writable():
-		id_ord = {r['id']: i for i, r in enumerate(records)}
+		id_ord = {id: n for n, id in enumerate(records)}
 		save_bibtex(bib_db, bib_file, id_sort_map=id_ord, overwrite=True)
 
 def parse_args():

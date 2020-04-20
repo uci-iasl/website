@@ -1,24 +1,23 @@
 {{- $entry := false -}}
 {{- with .Page.Params.references -}}
-  {{- range where . "id" "==" $.id -}}
-    {{- if not $entry -}}
-      {{- $entry = . -}}
-    {{- else -}}
-      {{- warnf "Multiple records found in %q page references for id %q" $.id $.Page.File.Path -}}
-    {{- end -}}
+  {{- with index . $.id -}}
+    {{- $entry = . -}}
   {{- end -}}
 {{- end -}}
 {{- if not $entry -}}
   {{- with .Site.Data.bib -}}
     {{- range $bib := . -}}
-      {{- range where $bib.references "id" "==" $.id -}}
+      {{- with index $bib.references $.id -}}
         {{- if not $entry -}}
           {{- $entry = . -}}
         {{- else -}}
-          {{- warnf "Multiple records found in bibliography data for id %q" $.id -}}
+          {{- warnf "Multiple bibliography data files have records with id %q" $.id -}}
         {{- end -}}
       {{- end -}}
     {{- end -}}
   {{- end -}}
+{{- end -}}
+{{- if $entry -}}
+  {{- $entry = merge $entry (dict "id" $.id) -}}
 {{- end -}}
 {{- return $entry -}}
