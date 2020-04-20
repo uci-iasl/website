@@ -106,6 +106,14 @@ class CaseChange(enum.Enum):
 	def __str__(self):
 		return self.value
 
+class BibTexWriter(bibtexparser.bwriter.BibTexWriter):
+	def __init__(self):
+		super().__init__()
+		self.indent = '  '
+		self.add_trailing_comma = True
+		self.display_order = BIBTEX_STANDARD_TAGS
+		self.order_entries_by = None
+
 class YAMLDumper(yaml.Dumper):
 	pass
 
@@ -177,7 +185,7 @@ def format_bibtex(bib_entry):
 		for tag, val in bib_entry.items()
 		if tag not in BIBTEX_SNIPPET_IGNORE_TAGS
 	}]
-	return bibtex_writer().write(db).rstrip('\n')
+	return BibTexWriter().write(db).rstrip('\n')
 
 def break_names(tag, tex_str, case_change):
 	names = ['']
@@ -285,18 +293,10 @@ def save_yaml(records, file, Dumper=yaml.Dumper):
 		width=float('inf'),
 	)
 
-def bibtex_writer():
-	w = bibtexparser.bwriter.BibTexWriter()
-	w.indent = '  '
-	w.add_trailing_comma = True
-	w.display_order = BIBTEX_STANDARD_TAGS
-	w.order_entries_by = None
-	return w
-
 def save_bibtex(bib_db, file, id_sort_map=None, overwrite=False):
 	if id_sort_map:
 		bib_db.entries.sort(key=lambda e: id_sort_map.get(e['ID']))
-	text = bibtex_writer().write(bib_db).rstrip('\n')
+	text = BibTexWriter().write(bib_db).rstrip('\n')
 	if overwrite:
 		file.seek(0)
 		file.truncate()
