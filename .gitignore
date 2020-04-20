@@ -1,2 +1,6 @@
 /public/
 /resources/
+
+.DS_Store
+*~
+*.sw[po]
