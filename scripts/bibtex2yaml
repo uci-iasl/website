@@ -293,9 +293,9 @@ def save_yaml(records, file, Dumper=yaml.Dumper):
 		width=float('inf'),
 	)
 
-def save_bibtex(bib_db, file, id_sort_map=None, overwrite=False):
-	if id_sort_map:
-		bib_db.entries.sort(key=lambda e: id_sort_map.get(e['ID']))
+def save_bibtex(bib_db, file, overwrite=False):
+	# Put together the entire text first, so that if an exception is
+	# raised in the process, we leave before the file is truncated.
 	text = BibTexWriter().write(bib_db).rstrip('\n')
 	if overwrite:
 		file.seek(0)
@@ -322,7 +322,8 @@ def convert_bibtex_file(
 
 	if reformat_source and bib_file.writable():
 		id_ord = {id: n for n, id in enumerate(records)}
-		save_bibtex(bib_db, bib_file, id_sort_map=id_ord, overwrite=True)
+		bib_db.entries.sort(key=lambda e: id_ord.get(e['ID']))
+		save_bibtex(bib_db, bib_file, overwrite=True)
 
 def parse_args():
 	parser = argparse.ArgumentParser()
