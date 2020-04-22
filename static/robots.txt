@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://iasl.ics.uci.edu/sitemap.xml
