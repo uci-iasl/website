@@ -1,3 +1,7 @@
+Options -Indexes
+ServerSignature Off
+
+DirectoryIndex index.html
 ErrorDocument 404 /404.html
 
 <IfModule mod_deflate.c>
