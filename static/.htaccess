@@ -1,6 +1,9 @@
 Options -Indexes
 ServerSignature Off
 
+DefaultLanguage en-US
+AddDefaultCharset UTF-8
+
 DirectoryIndex index.html
 ErrorDocument 404 /404.html
 
