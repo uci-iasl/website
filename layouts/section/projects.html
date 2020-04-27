@@ -7,7 +7,7 @@
     <section class="content">
       {{ .Content }}
       <ul class="projects">
-        {{- range .Data.Pages }}
+        {{- range .RegularPages.ByDate.Reverse }}
           {{ .Render "li" }}
         {{- end }}
       </ul>

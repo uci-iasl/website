@@ -12,7 +12,7 @@
 
     <footer>
       {{- if isset .Params "project" }}
-        {{- $pages := where .Site.Pages "Section" "updates" }}
+        {{- $pages := where .Site.RegularPages "Section" "updates" }}
         {{- $pages = where $pages "Params.project" "==" .Params.project }}
         {{- if $pages = where $pages "File.UniqueID" "!=" .File.UniqueID }}
           <h1>Previously in the project</h1>

@@ -6,8 +6,7 @@
     </header>
     <section class="content">
       {{- range $role := .Site.Params.people.roles }}
-        {{- $pages := where $.Pages "Params.role" $role.id }}
-        {{- if $pages }}
+        {{- if $pages := where $.RegularPages "Params.role" $role.id }}
           <h1>{{ $role.plural }}</h1>
           <ul class="people">
             {{- $pages = sort $pages "Params.name" }}
