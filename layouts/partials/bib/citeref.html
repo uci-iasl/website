@@ -1,9 +1,10 @@
 {{- $islocal := partial "bib/isentryonpage" (dict "id" .id "Page" .Page) -}}
 {{- if not $islocal -}}
   {{- $isglobal := false -}}
-  {{- $pubsecpage := index (where .Site.Sections "Section" "publications") 0 -}}
-  {{- if ne .Page.File.UniqueID $pubsecpage.File.UniqueID -}}
-    {{- $isglobal = partial "bib/isentryonpage" (dict "id" .id "Page" $pubsecpage) -}}
+  {{- if $pubsecpage := .Site.GetPage "/publications" -}}
+    {{- if ne .Page.File.UniqueID $pubsecpage.File.UniqueID -}}
+      {{- $isglobal = partial "bib/isentryonpage" (dict "id" .id "Page" $pubsecpage) -}}
+    {{- end -}}
   {{- end -}}
   {{- if not $isglobal -}}
     {{- warnf "Missing bibliography entry for citation reference %q in file %q" .id .Page.File.Path -}}
