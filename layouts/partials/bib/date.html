@@ -6,7 +6,7 @@
     {{- else -}}
       {{- $month -}}
     {{- end -}}
-    {{- with .day }}&nbsp;{{ . }}{{ "," }}{{ end }}{{ " " -}}
+    {{- with .entry.day }}&nbsp;{{ . }}{{ "," }}{{ end }}{{ " " -}}
   {{- end -}}
   {{- .entry.year -}}
 </span>{{ "" -}}
