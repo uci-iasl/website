@@ -129,10 +129,9 @@
     {{- with .entry.articleno }}{{ ", " }}<span class="articleno">article no.&nbsp;{{ . }}</span>{{ end -}}
     {{- with .entry.organization }}{{ ", " }}<span class="organization">{{ . }}</span>{{ end -}}
     {{- if index .entry "publisher" -}}
-      {{- ". " }}
+      {{- ". " -}}
       {{- with .entry.address }}<span class="address">{{ . }}</span>{{ ": " }}{{ end -}}
-      <span class="publisher">{{- .entry.publisher -}}</span>
-      {{- with $.entry.address }}{{ ": " }}{{ end -}}
+      <span class="publisher">{{ .entry.publisher }}</span>
     {{- else -}}
       {{- with .entry.address }}{{ ", " }}<span class="address">{{ . }}</span>{{ end -}}
     {{- end -}}
@@ -153,10 +152,9 @@
     {{- with .entry.number }}{{ ", " }}<span class="number">no.&nbsp;{{ . }}</span>{{ end -}}
     {{- with .entry.organization }}{{ ", " }}<span class="organization">{{ . }}</span>{{ end -}}
     {{- if index .entry "publisher" -}}
-      {{- ". " }}
+      {{- ". " -}}
       {{- with .entry.address }}<span class="address">{{ . }}</span>{{ ": " }}{{ end -}}
-      <span class="publisher">{{- .entry.publisher -}}</span>
-      {{- with $.entry.address }}{{ ": " }}{{ end -}}
+      <span class="publisher">{{ .entry.publisher }}</span>
     {{- else -}}
       {{- with .entry.address }}{{ ", " }}<span class="address">{{ . }}</span>{{ end -}}
     {{- end -}}
