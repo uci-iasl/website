@@ -25,8 +25,8 @@ binpath="${1:-.}"
 
 if [[ -z $version ]]; then
 	version="$(
-		curl -s 'https://api.github.com/repos/gohugoio/hugo/releases/latest' |
-		sed -n 's/.*"tag_name": *"v\([^"]\{1,\}\)".*/\1/p'
+		curl -s -N 'https://api.github.com/repos/gohugoio/hugo/releases/latest' |
+		sed -n '/.*"tag_name": *"v\([^"]\{1,\}\)".*/{s//\1/p;q;}'
 	)"
 	[[ -n $version ]] || panic 'failed to determine the latest version'
 fi
