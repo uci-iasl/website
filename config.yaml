@@ -8,6 +8,7 @@ markup:
     renderer:
       unsafe: true  # For embedded HTML in content/_index.md.
 
+enableRobotsTXT: true
 disableKinds:
 - taxonomy
 - taxonomyTerm
