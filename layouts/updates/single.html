@@ -14,13 +14,26 @@
       {{- with .Params.project }}
         {{- $pages := where $.Site.RegularPages "Section" "updates" }}
         {{- $pages = where $pages "Params.project" "==" . }}
-        {{- if $pages = where $pages "File.UniqueID" "!=" $.File.UniqueID }}
-          <h1>Previously in the project</h1>
-          <ul class="updates">
-            {{- range $pages }}
-              {{ .Render "li" }}
-            {{- end }}
-          </ul>
+        {{- $pages = where $pages "File.UniqueID" "!=" $.File.UniqueID }}
+        {{- with where $pages "Params.date" "<=" $.Params.date }}
+          <section class="updates-before">
+            <h1>Previously in This Project</h1>
+            <ul class="updates">
+              {{- range .ByDate.Reverse }}
+                {{ .Render "li" }}
+              {{- end }}
+            </ul>
+          </section>
+        {{- end }}
+        {{- with where $pages "Params.date" ">" $.Params.date }}
+          <section class="updates-after">
+            <h1>Later in This Project</h1>
+            <ul class="updates">
+              {{- range .ByDate }}
+                {{ .Render "li" }}
+              {{- end }}
+            </ul>
+          </section>
         {{- end }}
       {{- end }}
     </footer>
