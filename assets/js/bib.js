@@ -1,6 +1,6 @@
 'use strict';
 
-var bib = {
+const bib = {
 	sectionSelector: 'section.bibliography',
 	sectionGroupsSelector: '.group',
 	groupEntriesSelector: 'ul.bibliography > li',
@@ -47,47 +47,46 @@ var bib = {
 	entryEtAlContainerClass: 'etal',
 	entryEtAlContentSelector: '.content',
 
-	initEntryButtons: function(entryElem) {
-		var etalButtons = entryElem.querySelectorAll(bib.entryEtalButtonsSelector);
-		for (var etalButton of etalButtons) {
+	initEntryButtons(entryElem) {
+		let etalButtons = entryElem.querySelectorAll(bib.entryEtalButtonsSelector);
+		for (let etalButton of etalButtons) {
 			etalButton.onclick = bib.displayEtAlNames;
-			var etalElem = etalButton.parentNode;
-			if (etalElem && etalElem.classList.contains(bib.entryEtAlContainerClass)) {
+			let etalElem = etalButton.parentNode;
+			if (etalElem.classList.contains(bib.entryEtAlContainerClass)) {
 				etalButton.bibEtalContentElem = etalElem.querySelector(bib.entryEtAlContentSelector);
 			}
 		}
 
-		var appendixElem = entryElem.querySelector(bib.entryAppendixSelector);
-		var abstractItemElem = null;
-		var bibtexItemElem = null;
+		let appendixElem = entryElem.querySelector(bib.entryAppendixSelector);
+		let abstractItemElem = null;
+		let bibtexItemElem = null;
 		if (appendixElem) {
 			abstractItemElem = appendixElem.querySelector(bib.entryAbstractSelector);
 			bibtexItemElem = appendixElem.querySelector(bib.entryBibtexSelector);
 		}
 
-		var abstractButton = entryElem.querySelector(bib.entryAbstractButtonSelector);
+		let abstractButton = entryElem.querySelector(bib.entryAbstractButtonSelector);
 		if (abstractButton) {
 			abstractButton.onclick = bib.toggleAppendixItemDisplay;
 			abstractButton.bibAppendixItemElem = abstractItemElem;
 		}
 
-		var bibtexButton = entryElem.querySelector(bib.entryBibtexButtonSelector);
+		let bibtexButton = entryElem.querySelector(bib.entryBibtexButtonSelector);
 		if (bibtexButton) {
 			bibtexButton.onclick = bib.toggleAppendixItemDisplay;
 			bibtexButton.bibAppendixItemElem = bibtexItemElem;
 		}
 	},
 
-	collectEntryInfo: function(entryElem) {
-		var fieldElems = entryElem.querySelectorAll(bib.entryFieldsSelector);
-		var values = [];
-		for (var fieldElem of fieldElems)
+	collectEntryInfo(entryElem) {
+		let fieldElems = entryElem.querySelectorAll(bib.entryFieldsSelector);
+		let values = [];
+		for (let fieldElem of fieldElems) {
 			values.push(fieldElem.innerText.toLowerCase());
+		}
 
-		var kind = entryElem.getAttribute(bib.entryKindAttrName);
-		var category = bib.entryCategoryOther;
-		if (kind in bib.entryKindCategoryMap)
-			category = bib.entryKindCategoryMap[kind];
+		let kind = entryElem.getAttribute(bib.entryKindAttrName);
+		let category = bib.entryKindCategoryMap[kind] || bib.entryCategoryOther;
 
 		return {
 			element: entryElem,
@@ -96,14 +95,14 @@ var bib = {
 		};
 	},
 
-	initInteractiveFeatures: function() {
-		var sectionElem = document.querySelector(bib.sectionSelector);
-		var groupElems = sectionElem.querySelectorAll(bib.sectionGroupsSelector);
-		var groups = [];
-		for (var groupElem of groupElems) {
-			var entryElems = groupElem.querySelectorAll(bib.groupEntriesSelector);
-			var entries = [];
-			for (var entryElem of entryElems) {
+	initInteractiveFeatures() {
+		let sectionElem = document.querySelector(bib.sectionSelector);
+		let groupElems = sectionElem.querySelectorAll(bib.sectionGroupsSelector);
+		let groups = [];
+		for (let groupElem of groupElems) {
+			let entryElems = groupElem.querySelectorAll(bib.groupEntriesSelector);
+			let entries = [];
+			for (let entryElem of entryElems) {
 				bib.initEntryButtons(entryElem);
 				entries.push(bib.collectEntryInfo(entryElem));
 			}
@@ -121,12 +120,12 @@ var bib = {
 		bib.filterSelectElem.oninput = bib.filterEntries;
 	},
 
-	entryMatchesQuery: function(entry, query) {
-		var hasCatSel = (query.category !== bib.entryCategoryAll);
+	entryMatchesQuery(entry, query) {
+		let hasCatSel = (query.category !== bib.entryCategoryAll);
 		if (hasCatSel && entry.category !== query.category) return false;
-		for (var word of query.words) {
-			var found = false;
-			for (var value of entry.values) {
+		for (let word of query.words) {
+			let found = false;
+			for (let value of entry.values) {
 				if (value.indexOf(word) !== -1) {
 					found = true;
 					break;
@@ -137,8 +136,8 @@ var bib = {
 		return true;
 	},
 
-	filterEntries: function() {
-		var query = {
+	filterEntries() {
+		let query = {
 			words: bib.filterInputElem.value.toLowerCase().split(/\s+/),
 			category: bib.filterSelectElem.value,
 		};
@@ -147,11 +146,11 @@ var bib = {
 		} else {
 			bib.filterSelectElem.classList.remove(bib.filterSelectInactiveClass);
 		}
-		var totalVisible = 0;
-		for (var group of bib.entryGroups) {
-			var groupVisible = 0;
-			for (var entry of group.entries) {
-				var matched = bib.entryMatchesQuery(entry, query);
+		let totalVisible = 0;
+		for (let group of bib.entryGroups) {
+			let groupVisible = 0;
+			for (let entry of group.entries) {
+				let matched = bib.entryMatchesQuery(entry, query);
 				entry.element.style.display = (matched ? 'list-item' : 'none');
 				groupVisible += matched;
 			}
@@ -161,9 +160,9 @@ var bib = {
 		bib.noMatchGroup.style.display = (totalVisible > 0 ? 'none' : 'block');
 	},
 
-	toggleAppendixItemDisplay: function(event) {
-		var button = event.currentTarget;
-		var itemElem = button.bibAppendixItemElem;
+	toggleAppendixItemDisplay(event) {
+		let button = event.currentTarget;
+		let itemElem = button.bibAppendixItemElem;
 		if (!itemElem) return;
 		if (!itemElem.style.display || itemElem.style.display === 'none') {
 			button.classList.remove(bib.entryButtonCollapsedClass);
@@ -176,9 +175,9 @@ var bib = {
 		}
 	},
 
-	displayEtAlNames: function(event) {
-		var button = event.currentTarget;
-		var contentElem = button.bibEtalContentElem;
+	displayEtAlNames(event) {
+		let button = event.currentTarget;
+		let contentElem = button.bibEtalContentElem;
 		if (!contentElem) return;
 		contentElem.style.display = 'inline';
 		button.style.display = 'none';
