@@ -566,7 +566,6 @@ a.citation .title::after {
 .bibliography > li .bibentry .appendix > .bibtex code {
   display: block;
   white-space: pre-wrap;
-  font-family: monospace;
   font-size: calc(0.65 * var(--font-size));
   line-height: calc(0.6 * var(--line-height));
 }
