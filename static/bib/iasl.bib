@@ -50,6 +50,7 @@
   address = {Paris, France},
   month = jul,
   year = {2019},
+  abstract = {The combination of computation and communication constraints within the Internet of Things systems require intelligent allocation of decision making and learning processes across a network of sensing and computing devices. In this paper, we present the problem of observation selection for reactive on-sensor decision-making, where the most accurate decision rule cannot be used unaided neither at the sensor (due to limited computing power), nor in the cloud (due to high communication latency). To make time-sensitive adaptation possible in these conditions, we consider learning a decision rule that is computationally viable for on-sensor use and is continuously adjusted by the cloud using the optimal decision rule for supervision. We pose a constrained stochastic optimization problem for online learning of such instrumental on-sensor classifier, propose an algorithm for updating its parameters, and establish the conditions under which convergence to a local extremum is guaranteed, at least for samples of independent observations.},
   doi = {10.1109/isit.2019.8849760},
 }
 
@@ -62,6 +63,7 @@
   pages = {2959--2968},
   month = may,
   year = {2019},
+  abstract = {Battery and energy management methodologies have been proposed to address the design challenges of driving range and battery lifetime in Electric Vehicles (EV). However, the driving behavior is a major factor which has been neglected in these methodologies. In this paper, we propose a novel context-aware methodology to estimate the driving behavior in terms of future vehicle speeds and integrate this capability into EV energy management. We implement a driving behavior model using a variation of Artificial Neural Networks (ANN) called Nonlinear AutoRegressive model with eXogenous Inputs (NARX). We train our novel context-aware NARX model based on historical behavior of real drivers, their recent driving reactions, and route average speed retrieved from Google Maps in order to enable driver-specific and self-adaptive driving behavior modeling and long-term estimation. We analyze the estimation error of our methodology and its impact on a battery lifetime-aware automotive climate control, comparing to the state-of-the-art methodologies for various estimation window sizes. Our methodology shows only 12\% error for up to 30-second speed prediction which is an improvement of 27\% compared to the state-of-the-art. Therefore, the higher accuracy helps the controller to achieve up to 82\% of the maximum energy saving and battery lifetime improvement achievable in ideal methodology where the future vehicle speeds are known.},
   doi = {10.1109/tsg.2018.2815689},
 }
 
@@ -112,6 +114,7 @@
   address = {Pacific Groove, California},
   month = oct,
   year = {2018},
+  abstract = {The problem of intelligent information selection in the Internet-of-Things systems with limited computational and communication resources is studied. One distinctive property of such systems is the clash of the computational complexity of the desired selection procedure and the low throughput of the wireless links between the devices acquiring information~(sensors) and processing it~(edge and cloud computing servers). To adaptively resolve that conflict, we propose a stochastic optimization algorithm for edge-assisted online learning of the optimal on-sensor observation classification and transmission decision rules. Using the stochastic Lyapunov function method, we prove that the resulting adaptive procedure can be used to adjust the parameters of the two local decision rules to asymptotically satisfy the constraint on channel access probability and to minimize the expected classification error.},
   doi = {10.1109/acssc.2018.8645182},
 }
 
@@ -192,6 +195,7 @@
   address = {Pacific Groove, California},
   month = oct # {--} # nov,
   year = {2017},
+  abstract = {The expansion of complex autonomous sensing and control mechanisms in the Internet-of-Things systems clashes with constraints on computation and wireless communication resources. In this paper, we propose a framework to address this conflict for applications in which resolution using a centralized architecture with a general-purpose compression of observations is not appropriate. Three approaches for distributing observation detection workload between sensing and processing devices are considered for sensor systems within wireless islands. Each of the approaches is formulated for the shared configuration of a sensor-edge system, in which the network structure, observation monitoring problem, and machine learning-based detector implementing it are not modified. For every approach, a high-level strategy for realization of the detector for different assumptions on the relation between its complexity and the system's constraints is considered. In each case, the potential for the constraints' satisfaction is shown to exist and be exploitable via division, approximation, and delegation of the detector's workload to the sensing devices off the edge processor. We present examples of applications that benefit from the proposed approaches.},
   doi = {10.1109/acssc.2017.8335485},
 }
 
@@ -202,6 +206,7 @@
   address = {Seoul, Republic of Korea},
   month = oct,
   year = {2017},
+  abstract = {Battery and energy management methodologies such as automotive climate controls have been proposed to address the design challenges of driving range and battery lifetime in Electric Vehicles (EV). However, driving behavior estimation is a major factor neglected in these methodologies. In this paper, we propose a novel context-aware methodology for estimating the driving behavior in terms of future vehicle speeds that will be integrated into the EV battery optimization. We implement a driving behavior model using a variation of Artificial Neural Networks (ANN) called Nonlinear AutoRegressive model with eXogenous inputs (NARX). We train our novel context-aware NARX model based on historical behavior of real drivers, their recent driving reactions, and the route average speed retrieved from Google Maps in order to enable driver-specific and self-adaptive driving behavior modeling and long-term estimation. Our methodology shows only 12\% error for up to 30-second speed prediction which is improved by 27\% compared to the state-of-the-art. Hence, it can achieve up to 82\% of the maximum energy saving and battery lifetime improvement possible by the ideal methodology where the future vehicle speed is known.},
   doi = {10.1145/3125502.3125542},
 }
 
@@ -248,6 +253,7 @@
   address = {San Diego, California},
   month = jun,
   year = {2017},
+  abstract = {By placing processing-capable devices at the edge of local wireless access networks, Edge Computing architectures have been recently proposed to connect mobile devices to computational power through a one-hop low-latency wireless link. In this paper, we propose a new design where edge assistance is used to control local data filtering at the mobile devices in bandwidth and energy constrained systems. We focus on real-time monitoring applications, where the video input from mobile devices is processed to centrally detect and recognize objects. The edge processor controls the activation and deactivation of local classifiers implemented by the mobile devices to remove useless portions of video frames. The objective is to adapt the video stream to time-varying bandwidth constraints, while minimizing the additional energy consumption introduced by local processing. To this end, an optimization problem is formulated for a loss function embodying the balance between the risk of violating the available bandwidth and the cost of overly-conservative data filtering. The edge assists the local decision by extracting parameters of the video, such as density of objects of interest in a frame, which influence the output of the sensor. Numerical results, obtained by performing a measurement campaign based on a real implementation, illustrate the tension between energy and bandwidth use for a Haar feature-based cascade classifier.},
   doi = {10.1109/sahcn.2017.7964938},
 }
 
@@ -288,6 +294,7 @@
   address = {San Diego, California},
   month = feb,
   year = {2017},
+  abstract = {A novel semantic approach to data selection and compression is presented for the dynamic adaptation of IoT data processing and transmission within ``wireless islands'', where a set of sensing devices (sensors) are interconnected through one-hop wireless links to a computational resource via a local access point. The core of the proposed technique is a cooperative framework where local classifiers at the mobile nodes are dynamically crafted and updated based on the current state of the observed system, the global processing objective and the characteristics of the sensors and data streams. The edge processor plays a key role by establishing a link between content and operations within the distributed system. The local classifiers are designed to filter the data streams and provide only the needed information to the global classifier at the edge processor, thus minimizing bandwidth usage. However, the better the accuracy of these local classifiers, the larger the energy necessary to run them at the individual sensors. A formulation of the optimization problem for the dynamic construction of the classifiers under bandwidth and energy constraints is proposed and demonstrated on a synthetic example.},
   doi = {10.1109/ita.2017.8023457},
 }
 
@@ -375,6 +382,7 @@
   pages = {244--256},
   month = jun,
   year = {2015},
+  abstract = {An approach to parametric identification of the transmission processes of the terminals in a wireless network is proposed, presenting a trade-off between accuracy of capturing the temporal dependencies in observations of transmission processes and the time complexity of the estimation procedure. The maximum likelihood estimator is built for an approximation of the true likelihood function for the observed network activity. A complex network where terminals store packets in a finite buffer and implement a backoff-based random channel access protocol is considered. Minimal information is available for observation to the cognitive terminals, in the form of energy readings mapped to the number of transmitting nodes in each time instant. The entanglement of the transmission processes induced by interference and the filtering effect of packet buffering make this task particularly difficult. It is shown how, based on the estimated parameters, the cognitive terminals, operating in the same channel resource, can predict the transmission trajectories of the other nodes and devise smart transmission strategies controlling the interference generated to the network.},
   doi = {10.1109/tccn.2016.2517013},
 }
 
