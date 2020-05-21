@@ -99,6 +99,7 @@
   address = {Cambridge, MA},
   month = nov,
   year = {2018},
+  abstract = {Indoor positioning systems consist of identifying the physical location of devices inside buildings. They are usually based on the signal strength of a device packet received by a set of WiFi access points. Among the most precise solutions, are those based on machine learning algorithms, such as kNN (k-Nearest Neighbors). This technique is known as fingerprint positioning. Even though kNN is one of the most used classification methods due to its high precision results, it lacks scalability since an instance we need to classify must be compared to all other instances in the training base. In this work, we use a novel hierarchical navigable small world graph technique to fit the training database so that the samples can be efficiently classified in the online phase of the fingerprint positioning, allowing it to be used in large-scale scenarios and/or to be executed in resource-limited devices. We evaluated the performance of this solution using both synthetic and real-world training data and compared its performance to other known kNN variants such as kd-tree and ball-tree. Our results clearly show the performance gains of the graph-based solution, while still being able to maintain or even reduce the positioning error.},
   doi = {10.1109/nca.2018.8548076},
 }
 
@@ -146,6 +147,7 @@
   pages = {2793--2803},
   month = aug,
   year = {2018},
+  abstract = {A two-hop relay network is considered, in which an eavesdropper can overhear the relaying signal. To prevent the eavesdropper from decoding this signal, a destination transmits a jamming noise while a source transmits the data signal to the relay. At the same time, the relay can harvest energy from both the source signal and the jamming noise, and use this harvested energy to forward the received signal to the destination. In such a wireless-powered relay system with cooperative jamming, we propose two adaptive relaying schemes based on power splitting and time switching techniques. In the proposed power splitting-based relaying (PSR) and time switching-based relaying (TSR) schemes, the relay controls the power splitting ratio~($\rho$) and time switching ratio~($\alpha$), respectively, in order to achieve a balance between signal processing and energy harvesting. We find analytically the optimal values of $\rho$ and $\alpha$ in each scheme to maximize the secrecy capacity under the assumption of high signal-to-noise ratio. Interestingly, although the eavesdropper's channel state information (CSI) is used in the derivation of the optimal control parameters ($\rho$ and $\alpha$), they are shown not to be affected by the eavesdropper's CSI in a high SNR regime. This implies that the proposed schemes can be effective even for practical environments where there is no eavesdropper's CSI. Furthermore, simulation results show that they well coincide with the exact solutions in practical environments even though the closed-form solutions are obtained with a high SNR assumption. Moreover, the comparisons of PSR and TSR in various scenarios show that the two relaying schemes have complementary performances depending on the network conditions. Specifically, PSR achieves greater secrecy capacity than TSR when the channel condition is unfavourable to the eavesdropper for wiretapping.},
   doi = {10.1109/jiot.2018.2830880},
 }
 
@@ -171,6 +173,7 @@
   publisher = {Elsevier},
   month = may,
   year = {2018},
+  abstract = {In this paper, we analyze the performance of the state-of-the-art end-to-end security schemes in healthcare Internet of Things (IoT) systems. We identify that the essential requirements of robust security solutions for healthcare IoT systems comprise of (i)~low-latency secure key generation approach using patients' Electrocardiogram (ECG) signals, (ii)~secure and efficient authentication and authorization for healthcare IoT devices based on the certificate-based datagram Transport Layer Security (DTLS), and (iii)~robust and secure mobility-enabled end-to-end communication based on DTLS session resumption. The performance of the state-of-the-art security solutions including our end-to-end security scheme is tested by developing a prototype healthcare IoT system. The prototype is built of a Pandaboard, a TI SmartRF06 board and WiSMotes. The Pandaboard along with the CC2538 module acts as a smart gateway and the WisMotes act as medical sensor nodes. Based on the analysis, we found out that our solution has the most extensive set of performance features in comparison to related approaches found in the literature. The performance evaluation results show that compared to the existing approaches, the cryptographic key generation approach proposed in our end-to-end security scheme is on average 1.8 times faster than existing key generation approaches while being more energy-efficient. In addition, the scheme reduces the communication overhead by 26\% and the communication latency between smart gateways and end users by 16\%. Our scheme is also approximately 97\% faster than certificate based and 10\% faster that symmetric key-based DTLS. Certificate based DTLS requires about 2.9 times more ROM and 2.2 times more RAM resources. On the other hand, the ROM and RAM requirements of our scheme are almost as low as in symmetric key-based DTLS.},
   doi = {10.1016/j.procs.2018.04.064},
 }
 
@@ -227,6 +230,7 @@
   pages = {428--442},
   month = oct,
   year = {2017},
+  abstract = {We propose a low-latency approach for generating secure electrocardiogram (ECG) feature-based cryptographic keys. This is done by taking advantage of the uniqueness and randomness properties of ECG's main features. This approach achieves a low-latency since the key generation relies on four reference-free ECG's main features that can be acquired in short time. We call the approach several ECG features (SEF)-based cryptographic key generation. SEF consists of: 1)~detecting the arrival time of ECG's fiducial points using Daubechies wavelet transform to compute ECG's main features accordingly; 2)~using a dynamic technique to specify the optimum number of bits that can be extracted from each main ECG feature, comprising of PR, RR, PP, QT, and ST intervals; 3)~generating cryptographic keys by exploiting the above-mentioned ECG features; and 4)~consolidating and strengthening the SEF approach with cryptographically secure pseudo-random number generators. Fibonacci linear feedback shift register and advanced encryption standard algorithms are implemented as the pseudo-random number generator to enhance the security level of the generated cryptographic keys. Our approach is applied to 239 subjects' ECG signals comprising of normal sinus rhythm, arrhythmia, atrial fibrillation, and myocardial infraction. The security analyses of the proposed approach are carried out in terms of distinctiveness, test of randomness, temporal variance, and using National Institute of Standards and Technology benchmark. The analyses reveal that the normal ECG rhythms have slightly better randomness compared with the abnormal ones. The analyses also show that the strengthened SEF key generation approach provides a higher security level in comparison to existing approaches that rely only on singleton ECG features. For the normal ECG rhythms, the SEF approach has in average the entropy of about 0.98 while cryptographic keys which are generated utilizing the strengthened SEF approach offer the entropy of~$\sim$1. The execution time required to generate the cryptographic keys on different processors is also examined. The results reveal that our SEF approach is in average 1.8 times faster than existing key generation approaches which only utilize the inter pulse interval feature of ECG.},
   doi = {10.1109/access.2017.2766523},
 }
 
@@ -351,6 +355,7 @@
   address = {Barcelona, Spain},
   month = jul,
   year = {2016},
+  abstract = {Energy harvesting is arising as a key technology in wireless systems, allowing continuous and prolonged operations. However, the bursty nature of the energy arrival process associated with renewable sources and the energy usage pattern caused by wireless protocols may cause considerable stress to the battery and eventually reduce its lifetime. In fact, deep charging and discharging cycles degrade the battery State of Health, that is, the maximum amount of energy that can be stored. In this paper, a framework for the optimization of wireless nodes' transmission strategy is presented, where battery aging rate is included as a constraint. The proposed framework is based on Markov Decision Process theory, where the embedded stochastic process models energy arrival and storage, and channel fading, as well as the control variables. Numerical results unveil the tension between packet delivery rate and battery degradation.},
   doi = {10.1109/isit.2016.7541800},
 }
 
@@ -363,6 +368,7 @@
   pages = {176--179},
   month = apr,
   year = {2016},
+  abstract = {Energy harvesting is becoming a key technology in mobile wireless networks, and especially sensor systems. The bursty nature of energy arrival generated by renewable resources may apply considerable stress to the battery, and degrade its state of health (SoH) by generating deep charging and discharging cycles. In this letter, a novel random channel access scheme is proposed that tunes transmission parameters to reduce SoH degradation while preserving the network performance.},
   doi = {10.1109/lwc.2016.2515079},
 }
 
@@ -373,6 +379,7 @@
   address = {Austin, Texas},
   month = nov,
   year = {2015},
+  abstract = {Energy harvesting from environments such as solar energy are promising solutions to tackle energy sustainability in embedded systems. However, uncertainties in energy availability, non-ideal characteristics of harvesting circuits, energy storage (battery or supercapacitor), and application demand dynamics add more complexity in the system. We present a unified model based on discrete-time Finite State Markov Chain to capture the dynamicity and variations in both the energy supply from solar irradiance and the energy demand from the application. In this paper, we exploit the temporal and spatial characteristics of solar energy and propose a deterministic profile with stochastic process to reflect the fluctuation due to unexpected weather condition. Optimal policy to maximize expected total QoS is derived from the presented model using a probabilistic dynamic programming approach. Compared to a state-of-the-art deterministic energy management framework, our proposed approach outperforms in term of QoS and energy sustainability (with less shutdown time) of the system.},
   doi = {10.1109/iccad.2015.7372627},
 }
 
@@ -383,6 +390,7 @@
   address = {Miami, Florida},
   month = nov,
   year = {2015},
+  abstract = {Energy storage is a fundamental component for the development of sustainable and environment-aware technologies. One of the critical challenges that needs to be overcome is preserving the State of Health (SoH) in energy harvesting systems, where bursty arrival of energy and load may severely degrade the battery. Tools from Markov process and Dynamic Programming theory are becoming an increasingly popular choice to control dynamics of these systems due to their ability to seamlessly incorporate heterogeneous components and support a wide range of applications. Mapping aging rate measures to fit within the boundaries of these tools is non-trivial. In this paper, a framework for modeling and controlling the aging rate of batteries based on Markov process theory is presented. Numerical results illustrate the tradeoff between battery degradation and task completion delay enabled by the proposed framework.},
   doi = {10.1109/smartgridcomm.2015.7436352},
 }
 
@@ -406,6 +414,7 @@
   address = {Baltimore, Maryland},
   month = mar,
   year = {2015},
+  abstract = {The IEEE 802.15.3c standard defines physical layer and Medium Access Control (MAC) specifications for millimeter-Wave Wireless Personal Area Networks. The MAC protocol implements a combination of random channel access and time division multiple access mechanisms to exploit the sectorization granted by the directional antennas. In this work, a novel two-level stochastic model is presented to capture the complex dynamics of channel access in this network environment. Different from prior work, the finite temporal horizon of the channel contention phase is accurately modeled, and the common assumption of saturated terminals is removed. Based on the proposed modeling framework, the allocation of time resource to each sector is optimized to improve the network performance.},
   doi = {10.1109/ciss.2015.7086886},
 }
 
