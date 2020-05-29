@@ -4,7 +4,7 @@ import argparse
 import bibtexparser
 from collections import OrderedDict
 import enum
-from pylatexenc import latex2text, latexwalker
+from pylatexenc import latex2text, latexwalker, macrospec
 import re
 import sys
 import titlecase
@@ -132,12 +132,35 @@ def clean_ws(str):
 clean_ws.WSPACE_RE = re.compile(r'\s+')
 
 def parse_tex(str):
-	return latexwalker.LatexWalker(str).get_latex_nodes()[0]
+	parser = latexwalker.LatexWalker(str, latex_context=parse_tex.context)
+	return parser.get_latex_nodes()[0]
+
+parse_tex.context = latexwalker.get_default_latex_context_db()
+parse_tex.context.add_context_category(
+	'more-nonascii-specials',
+	insert_after='nonascii-specials',
+	specials=(
+		macrospec.SpecialsSpec('`'),
+		macrospec.SpecialsSpec("'"),
+	),
+)
 
 def render_tex(tex_nodes):
-	return latex2text.LatexNodes2Text(
-		strict_latex_spaces=True,
-	).nodelist_to_text(tex_nodes)
+	return render_tex.renderer.nodelist_to_text(tex_nodes)
+
+render_tex.context = latex2text.get_default_latex_context_db()
+render_tex.context.add_context_category(
+	'more-nonascii-specials',
+	insert_after='nonascii-specials',
+	specials=(
+		latex2text.SpecialsTextSpec('`', '\N{LEFT SINGLE QUOTATION MARK}'),
+		latex2text.SpecialsTextSpec("'", '\N{RIGHT SINGLE QUOTATION MARK}'),
+	),
+)
+render_tex.renderer = latex2text.LatexNodes2Text(
+	latex_context=render_tex.context,
+	strict_latex_spaces=True,
+)
 
 def detexify(str):
 	text = render_tex(parse_tex(str))
