@@ -185,7 +185,9 @@ def format_bibtex(bib_entry):
 		for tag, val in bib_entry.items()
 		if tag not in BIBTEX_SNIPPET_IGNORE_TAGS
 	}]
-	return BibTexWriter().write(db).rstrip('\n')
+	return format_bibtex.writer.write(db).rstrip('\n')
+
+format_bibtex.writer = BibTexWriter()
 
 def parse_names(tag, tex_str, case_change):
 	names = ['']
