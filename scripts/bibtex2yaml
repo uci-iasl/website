@@ -114,6 +114,9 @@ class BibTexWriter(bibtexparser.bwriter.BibTexWriter):
 		self.display_order = BIBTEX_STANDARD_TAGS
 		self.order_entries_by = None
 
+	def write(self, bib_db):
+		return super().write(bib_db).rstrip('\n')
+
 class YAMLDumper(yaml.Dumper):
 	pass
 
@@ -185,7 +188,7 @@ def format_bibtex(bib_entry):
 		for tag, val in bib_entry.items()
 		if tag not in BIBTEX_SNIPPET_IGNORE_TAGS
 	}]
-	return format_bibtex.writer.write(db).rstrip('\n')
+	return format_bibtex.writer.write(db)
 
 format_bibtex.writer = BibTexWriter()
 
@@ -298,7 +301,7 @@ def save_yaml(records, file, Dumper=yaml.Dumper):
 def save_bibtex(bib_db, file, overwrite=False):
 	# Put together the entire text first, so that if an exception is
 	# raised in the process, we leave before the file is truncated.
-	text = BibTexWriter().write(bib_db).rstrip('\n')
+	text = BibTexWriter().write(bib_db)
 	if overwrite:
 		file.seek(0)
 		file.truncate()
