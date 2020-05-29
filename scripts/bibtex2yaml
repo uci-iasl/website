@@ -129,7 +129,7 @@ YAMLDumper.add_representer(OrderedDict, yaml_represent_dict)
 def clean_ws(str):
 	return clean_ws.WSPACE_RE.sub(' ', str).strip()
 
-clean_ws.WSPACE_RE = re.compile(r'\s+')
+clean_ws.WSPACE_RE = re.compile(r'[^\S' '\N{NO-BREAK SPACE}' r']+')
 
 def parse_tex(str):
 	parser = latexwalker.LatexWalker(str, latex_context=parse_tex.context)
