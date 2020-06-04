@@ -12,6 +12,7 @@ import yaml
 
 from bibtexparser.bibdatabase import as_text as bib_expr_as_text
 
+
 # The BibTeX fields recognized by the standard bibliography styles.
 # When a BibTeX entry is formatted, these fields are put in front in
 # the same order as below. (Hence the tuple instead of a set.)
@@ -99,12 +100,14 @@ assert BIBTEX_EXTRA_TEX_TAGS.isdisjoint(BIBTEX_STANDARD_TAGS)
 assert BIBTEX_SNIPPET_IGNORE_TAGS.isdisjoint(BIBTEX_STANDARD_TAGS)
 assert BIBTEX_SNIPPET_KEEP_VARS_TAGS.isdisjoint(BIBTEX_SNIPPET_IGNORE_TAGS)
 
+
 class CaseChange(enum.Enum):
 	TITLE = 'title'
 	SENTENCE = 'sentence'
 
 	def __str__(self):
 		return self.value
+
 
 class BibTexWriter(bibtexparser.bwriter.BibTexWriter):
 	def __init__(self):
@@ -117,6 +120,7 @@ class BibTexWriter(bibtexparser.bwriter.BibTexWriter):
 	def write(self, bib_db):
 		return super().write(bib_db).rstrip('\n')
 
+
 class YAMLDumper(yaml.Dumper):
 	pass
 
@@ -126,10 +130,12 @@ def yaml_represent_dict(dumper, dict):
 
 YAMLDumper.add_representer(OrderedDict, yaml_represent_dict)
 
+
 def clean_ws(str):
 	return clean_ws.WSPACE_RE.sub(' ', str).strip()
 
 clean_ws.WSPACE_RE = re.compile(r'[^\S' '\N{NO-BREAK SPACE}' r']+')
+
 
 def parse_tex(str):
 	parser = latexwalker.LatexWalker(str, latex_context=parse_tex.context)
@@ -144,6 +150,7 @@ parse_tex.context.add_context_category(
 		macrospec.SpecialsSpec("'"),
 	),
 )
+
 
 def render_tex(tex_nodes):
 	return render_tex.renderer.nodelist_to_text(tex_nodes)
@@ -162,21 +169,26 @@ render_tex.renderer = latex2text.LatexNodes2Text(
 	strict_latex_spaces=True,
 )
 
-def detexify(str):
+
+def detexify(str, keep_pars=False):
 	text = render_tex(parse_tex(str))
-	# Keep paragraphs separated to support fields like 'abstract',
-	# and clean whitespace within each paragraph separately.
-	pars = detexify.BLANK_LINE_RE.split(text.strip())
-	return detexify.PAR_SEP.join(clean_ws(p) for p in pars)
+	if keep_pars:
+		# Keep paragraphs separated to support fields like 'abstract',
+		# and clean whitespace individually within each paragraph.
+		pars = detexify.BLANK_LINE_RE.split(text.strip())
+		return detexify.PAR_SEP.join(clean_ws(p) for p in pars)
+	return clean_ws(text)
 
 detexify.BLANK_LINE_RE = re.compile(r'\n\s*\n')
 detexify.PAR_SEP = '\n\n'
+
 
 def title_cased(str):
 	return titlecase.titlecase(str)
 
 def sentence_cased(str):
 	return titlecase.SUBPHRASE.sub(lambda m: m[1] + m[2].capitalize(), str.capitalize())
+
 
 def title_text(tex_str, title_case=True):
 	# Reserve places for the protected chunks, change the case in the
@@ -192,28 +204,31 @@ def title_text(tex_str, title_case=True):
 		else:
 			fmt_str += node_text.replace('{', '{{').replace('}', '}}')
 
-	case_transform = title_cased if title_case else sentence_cased
-	# The clean_ws() call before case transformation is due to leading
+	case_transform = (title_cased if title_case else sentence_cased)
+	# The lstrip() call before case transformation is due to leading
 	# whitespace affecting capitalization in titlecase.titlecase().
-	return clean_ws(case_transform(clean_ws(fmt_str)).format(*groups))
+	return clean_ws(case_transform(fmt_str.lstrip()).format(*groups))
+
 
 def format_title(tag, tex_str, case_change):
 	if case_change == CaseChange.TITLE:
-		return title_text(tex_str, True)
+		return title_text(tex_str, title_case=True)
 	if case_change == CaseChange.SENTENCE:
-		return title_text(tex_str, tag not in BIBTEX_SENTENCECASE_TAGS)
+		return title_text(tex_str, title_case=(tag not in BIBTEX_SENTENCECASE_TAGS))
 	return detexify(tex_str)
+
 
 def format_bibtex(bib_entry):
 	db = bibtexparser.bibdatabase.BibDatabase()
 	db.entries = [{
-		tag: val if tag in BIBTEX_SNIPPET_KEEP_VARS_TAGS else bib_expr_as_text(val)
+		tag: (val if tag in BIBTEX_SNIPPET_KEEP_VARS_TAGS else bib_expr_as_text(val))
 		for tag, val in bib_entry.items()
 		if tag not in BIBTEX_SNIPPET_IGNORE_TAGS
 	}]
 	return format_bibtex.writer.write(db)
 
 format_bibtex.writer = BibTexWriter()
+
 
 def parse_names(tag, tex_str, case_change):
 	names = ['']
@@ -228,7 +243,7 @@ def parse_names(tag, tex_str, case_change):
 	profiles = []
 	has_others_kw = False
 	for name in names:
-		if clean_ws(name).lower() == parse_names.OTHERS_KEYWORD:
+		if name.strip().lower() == parse_names.OTHERS_KEYWORD:
 			has_others_kw = True
 			continue
 		parts = bibtexparser.customization.splitname(name, strict_mode=False)
@@ -251,13 +266,9 @@ def parse_names(tag, tex_str, case_change):
 parse_names.NAME_SEP_RE = re.compile(r'\sand\s', re.I)
 parse_names.OTHERS_KEYWORD = 'others'
 
-def make_record(bib_entry, include_bibtex, case_change):
-	record = {
-		'id': bib_entry['ID'],
-		'kind': bib_entry['ENTRYTYPE'],
-	}
-	if include_bibtex:
-		record['bibtex'] = format_bibtex(bib_entry)
+
+def make_record(bib_entry, include_bibtex=False, case_change=None):
+	record = {}
 	for tag in bib_entry:
 		value = bib_expr_as_text(bib_entry[tag])
 		if tag in BIBTEX_NAMELIST_TAGS:
@@ -265,10 +276,15 @@ def make_record(bib_entry, include_bibtex, case_change):
 		elif tag in BIBTEX_TITLECASE_TAGS:
 			record[tag] = format_title(tag, value, case_change)
 		elif tag in BIBTEX_TEX_TAGS:
-			record[tag] = detexify(value)
+			record[tag] = detexify(value, keep_pars=True)
 		elif tag not in ('ID', 'ENTRYTYPE'):
 			record[tag] = value
+	record['id'] = bib_entry['ID']
+	record['kind'] = bib_entry['ENTRYTYPE']
+	if include_bibtex:
+		record['bibtex'] = format_bibtex(bib_entry)
 	return record
+
 
 def record_date_str(record):
 	# The BibLaTeX date field is already in ISO 8601 format.
@@ -291,9 +307,8 @@ def record_date_str(record):
 
 record_date_str.MONTH_PREFIXES = (
 	None,
-	'jan', 'feb', 'mar', 'apr',
-	'may', 'jun', 'jul', 'aug',
-	'sep', 'oct', 'nov', 'dec',
+	'jan', 'feb', 'mar', 'apr', 'may', 'jun',
+	'jul', 'aug', 'sep', 'oct', 'nov', 'dec',
 )
 record_date_str.MONTH_PREFIX_RE = re.compile(
 	r'\b({})'.format(
@@ -302,6 +317,7 @@ record_date_str.MONTH_PREFIX_RE = re.compile(
 	re.I,
 )
 
+
 def load_bibtex(file):
 	return bibtexparser.bparser.BibTexParser(
 		common_strings=True,
@@ -309,6 +325,7 @@ def load_bibtex(file):
 		ignore_nonstandard_types=False,
 		interpolate_strings=False,
 	).parse_file(file, partial=True)
+
 
 def save_yaml(records, file, Dumper=yaml.Dumper):
 	yaml.dump(
@@ -321,6 +338,7 @@ def save_yaml(records, file, Dumper=yaml.Dumper):
 		width=float('inf'),
 	)
 
+
 def save_bibtex(bib_db, file, overwrite=False):
 	# Put together the entire text first, so that if an exception is
 	# raised in the process, we leave before the file is truncated.
@@ -331,6 +349,7 @@ def save_bibtex(bib_db, file, overwrite=False):
 	file.write(text)
 	file.write('\n')
 
+
 def convert_bibtex_file(
 	bib_file,
 	yaml_file,
@@ -340,7 +359,14 @@ def convert_bibtex_file(
 	YAMLDumper=YAMLDumper,
 ):
 	bib_db = load_bibtex(bib_file)
-	records = [make_record(e, include_bibtex, case_change) for e in bib_db.entries]
+	records = [
+		make_record(
+			entry,
+			include_bibtex=include_bibtex,
+			case_change=case_change,
+		)
+		for entry in bib_db.entries
+	]
 
 	# The order of records in the output YAML dictionary
 	# is irrelevant but convenient for human readability.
@@ -352,6 +378,7 @@ def convert_bibtex_file(
 		id_ord = {id: n for n, id in enumerate(records)}
 		bib_db.entries.sort(key=lambda e: id_ord.get(e['ID']))
 		save_bibtex(bib_db, bib_file, overwrite=True)
+
 
 def parse_args():
 	parser = argparse.ArgumentParser()
@@ -392,6 +419,7 @@ def parse_args():
 		help='rewrite the input BibTeX file in canonical formatting',
 	)
 	return parser.parse_args()
+
 
 if __name__ == '__main__':
 	args = parse_args()
