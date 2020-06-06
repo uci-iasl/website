@@ -62,6 +62,7 @@ BIBTEX_TITLECASE_TAGS = {
 	'organization',
 	'publisher',
 }
+
 # A subset of the fields from BIBTEX_TITLECASE_TAGS whose values are
 # rewritten in sentence case when converted into text (if so requested
 # at invocation). Values of all other fields in BIBTEX_TITLECASE_TAGS
@@ -72,6 +73,12 @@ BIBTEX_SENTENCECASE_TAGS = {
 
 # The nonstandard BibTeX fields whose values are formatted in LaTeX.
 BIBTEX_EXTRA_TEX_TAGS = {
+	'abstract',
+}
+
+# A subset of the fields from BIBTEX_EXTRA_TEX_TAGS whose values may
+# consist of multiple paragraphs.
+BIBTEX_MULTIPAR_TEX_TAGS = {
 	'abstract',
 }
 
@@ -97,6 +104,7 @@ assert BIBTEX_NAMELIST_TAGS.issubset(BIBTEX_STANDARD_TAGS)
 assert BIBTEX_TITLECASE_TAGS.issubset(BIBTEX_STANDARD_TAGS)
 assert BIBTEX_SENTENCECASE_TAGS.issubset(BIBTEX_TITLECASE_TAGS)
 assert BIBTEX_EXTRA_TEX_TAGS.isdisjoint(BIBTEX_STANDARD_TAGS)
+assert BIBTEX_MULTIPAR_TEX_TAGS.issubset(BIBTEX_EXTRA_TEX_TAGS)
 assert BIBTEX_SNIPPET_IGNORE_TAGS.isdisjoint(BIBTEX_STANDARD_TAGS)
 assert BIBTEX_SNIPPET_KEEP_VARS_TAGS.isdisjoint(BIBTEX_SNIPPET_IGNORE_TAGS)
 
@@ -276,7 +284,7 @@ def make_record(bib_entry, include_bibtex=False, case_change=None):
 		elif tag in BIBTEX_TITLECASE_TAGS:
 			record[tag] = format_title(tag, value, case_change)
 		elif tag in BIBTEX_TEX_TAGS:
-			record[tag] = detexify(value, keep_pars=True)
+			record[tag] = detexify(value, keep_pars=(tag in BIBTEX_MULTIPAR_TEX_TAGS))
 		elif tag not in ('ID', 'ENTRYTYPE'):
 			record[tag] = value
 	record['id'] = bib_entry['ID']
