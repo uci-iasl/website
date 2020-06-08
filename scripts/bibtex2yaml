@@ -178,16 +178,22 @@ render_tex.renderer = latex2text.LatexNodes2Text(
 )
 
 
-def detexify(str, keep_pars=False):
-	text = render_tex(parse_tex(str))
-	if keep_pars:
-		# Keep paragraphs separated to support fields like 'abstract',
-		# and clean whitespace individually within each paragraph.
-		pars = detexify.BLANK_LINE_RE.split(text.strip())
-		return detexify.PAR_SEP.join(clean_ws(p) for p in pars)
-	return clean_ws(text)
+def detexify(tex_str, keep_pars=False):
+	if not keep_pars:
+		return clean_ws(render_tex(parse_tex(tex_str)))
 
-detexify.BLANK_LINE_RE = re.compile(r'\n\s*\n')
+	# Keep paragraphs separated to support fields like 'abstract',
+	# and clean whitespace individually within each paragraph.
+	pars = ['']
+	for node in parse_tex(tex_str):
+		is_macro = isinstance(node, latexwalker.LatexMacroNode)
+		if is_macro and node.macroname == detexify.TEX_PAR_MACRO:
+			pars.append('')
+		else:
+			pars[-1] += render_tex([node])
+	return detexify.PAR_SEP.join(filter(None, (clean_ws(p) for p in pars)))
+
+detexify.TEX_PAR_MACRO = 'par'
 detexify.PAR_SEP = '\n\n'
 
 
