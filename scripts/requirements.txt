@@ -1,0 +1,4 @@
+bibtexparser>=1.2
+pylatexenc>=2.5
+pyyaml>=5.3
+titlecase>=1.1.1
