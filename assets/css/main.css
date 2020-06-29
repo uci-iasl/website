@@ -64,8 +64,8 @@
   --profile-portrait-margin-bottom: 30px;
   --project-cover-image-size: 320px;
 
-  --icon-search-inactive: url('data:image/svg+xml,<svg width="40" height="40pt" viewBox="0 0 30 40" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><g id="b"><defs><path id="a" d="M13 12a7 7 0 110 14 7 7 0 010-14z"/></defs><use xlink:href="%23a" fill="none" stroke="%23cecece" stroke-miterlimit="10" stroke-width="2"/></g></defs><use xlink:href="%23b"/><defs><g id="d"><defs><path id="c" d="M18.478 24.478L24 30"/></defs><use xlink:href="%23c" fill="none" stroke="%23cecece" stroke-linecap="round" stroke-miterlimit="10" stroke-width="3"/></g></defs><use xlink:href="%23d"/></svg>');
-  --icon-dropdown-inactive: url('data:image/svg+xml,<svg width="25pt" height="40pt" viewBox="0 0 25 40" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><g id="b"><defs><path id="a" d="M8 18.5l4.5-4.5 4.5 4.5"/></defs><use xlink:href="%23a" fill="none" stroke="%23cecece" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2.5"/></g></defs><use xlink:href="%23b"/><defs><g id="d"><defs><path id="c" d="M17 25.5L12.5 30 8 25.5"/></defs><use xlink:href="%23c" fill="none" stroke="%23cecece" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2.5"/></g></defs><use xlink:href="%23d"/></svg>');
+  --icon-search-inactive: url('data:image/svg+xml,<svg height="40pt" viewBox="0 0 30 40" width="40" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#cdcdcd" stroke-miterlimit="10"><path d="m13 12a7 7 0 1 1 0 14 7 7 0 0 1 0-14z" stroke-width="2"/><path d="m18.478 24.478 5.522 5.522" stroke-linecap="round" stroke-width="3"/></g></svg>');
+  --icon-dropdown-inactive: url('data:image/svg+xml,<svg height="40pt" viewBox="0 0 25 40" width="25pt" xmlns="http://www.w3.org/2000/svg"><g style="fill:none;stroke:#cdcdcd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-width:2.5"><path d="m8 18.5 4.5-4.5 4.5 4.5"/><path d="m17 25.5-4.5 4.5-4.5-4.5"/></g></svg>');
 }
 
 .missing-content {
