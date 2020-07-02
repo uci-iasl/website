@@ -1,18 +1,23 @@
+{{- $bibrootkey := "references" -}}
 {{- $entry := false -}}
-{{- with .Page.Params.references -}}
+{{- with index .Page.Params $bibrootkey -}}
   {{- with index . $.id -}}
     {{- $entry = . -}}
   {{- end -}}
 {{- end -}}
 {{- if not $entry -}}
   {{- with .Site.Data.bib -}}
-    {{- range $bib := . -}}
-      {{- with index $bib.references $.id -}}
-        {{- if not $entry -}}
-          {{- $entry = . -}}
-        {{- else -}}
-          {{- warnf "Multiple bibliography data files have records with id %q" $.id -}}
+    {{- range $bibname, $bib := . -}}
+      {{- with index $bib $bibrootkey -}}
+        {{- with index . $.id -}}
+          {{- if not $entry -}}
+            {{- $entry = . -}}
+          {{- else -}}
+            {{- warnf "Multiple bibliography data files have records with id %q" $.id -}}
+          {{- end -}}
         {{- end -}}
+      {{- else -}}
+        {{- warnf "Bibliography data file %q has no root %q key" $bibname $bibrootkey -}}
       {{- end -}}
     {{- end -}}
   {{- end -}}
