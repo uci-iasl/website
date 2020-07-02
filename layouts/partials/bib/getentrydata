@@ -7,13 +7,15 @@
 {{- end -}}
 {{- if not $entry -}}
   {{- with .Site.Data.bib -}}
+    {{- $entrybibname := "" -}}
     {{- range $bibname, $bib := . -}}
       {{- with index $bib $bibrootkey -}}
         {{- with index . $.id -}}
           {{- if not $entry -}}
             {{- $entry = . -}}
+            {{- $entrybibname = $bibname -}}
           {{- else -}}
-            {{- warnf "Multiple bibliography data files have records with id %q" $.id -}}
+            {{- warnf "Bibliography data files %q and %q both have records with id %q" $entrybibname $bibname $.id -}}
           {{- end -}}
         {{- end -}}
       {{- else -}}
