@@ -1,0 +1,20 @@
+{{- with $name := $.name -}}
+  {{- $name = $name | replaceRE `\p{Zs}+` " " -}}
+  {{- $name = $name | replaceRE `\s*(-|--|–)\s*` "-" -}}
+
+  {{- $words := slice -}}
+  {{- range split $name " " -}}
+    {{- $hyph := split . "-" -}}
+    {{- $word := "" -}}
+    {{- if $.fullnames -}}
+      {{- $hyph = apply $hyph "replaceRE" `^\p{L}$` "$0." "." -}}
+      {{- $word = delimit $hyph "-" -}}
+    {{- else -}}
+      {{- $hyph = apply $hyph "substr" "." 0 1 -}}
+      {{- $word = print (delimit $hyph ".-") "." -}}
+    {{- end -}}
+    {{- $words = $words | append $word -}}
+  {{- end -}}
+
+  {{- delimit $words ($.sep | default " ") -}}
+{{- end -}}

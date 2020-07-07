@@ -1,16 +1,17 @@
-{{- $name := slice -}}
-{{- with .first -}}
-  {{- $name = $name | append . -}}
-{{- end -}}
-{{- with .middle -}}
-  {{- range split . " " -}}
-    {{- $name = $name | append (print . (cond (eq (countrunes .) 1) "." "")) -}}
+{{- $name := . -}}
+{{- $words := slice -}}
+{{- range $key := slice "first" "middle" "last" "lineage" -}}
+  {{- if $part := index $name $key -}}
+    {{- $part = $part | replaceRE `\p{Zs}+` " " -}}
+    {{- $part = $part | replaceRE `--|–` "-" -}}
+    {{- if $key | in (slice "first" "middle") -}}
+      {{- range split $part " " -}}
+        {{- $hyph := apply (split . "-") "replaceRE" `^\p{L}$` "$0." "." -}}
+        {{- $words = $words | append (delimit $hyph "-") -}}
+      {{- end -}}
+    {{- else -}}
+      {{- $words = $words | append $part -}}
+    {{- end -}}
   {{- end -}}
 {{- end -}}
-{{- with .last -}}
-  {{- $name = $name | append . -}}
-{{- end -}}
-{{- with .lineage -}}
-  {{- $name = $name | append . -}}
-{{- end -}}
-{{- return (delimit $name " " | string) -}}
+{{- return (delimit $words " " | string) -}}

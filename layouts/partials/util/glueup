@@ -1,0 +1,20 @@
+{{- $pieces := . -}}
+{{- if modBool (len $pieces) 2 -}}
+  {{- warnf "util/glueup: The length of input slice must be odd, but is even for %q" $pieces -}}
+{{- else -}}
+  {{- $isempty := true -}}
+  {{- $prefix := "" -}}
+  {{- range $i, $x := $pieces -}}
+    {{- if modBool $i 2 -}}
+      {{- if $x -}}
+        {{- if not $isempty -}}
+          {{- $prefix -}}
+        {{- end -}}
+        {{- $x -}}
+        {{- $isempty = false -}}
+      {{- end -}}
+    {{- else -}}
+      {{- $prefix = $x -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}

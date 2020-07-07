@@ -3,6 +3,7 @@
 {{- $lastidx := sub $len 1 -}}
 {{- $hasetal := gt $len .params.etalcutoff -}}
 {{- $etallabel := "et&nbsp;al." | safeHTML -}}
+{{- $midnamespace := cond $.params.fullnames " " "&nbsp;" | safeHTML -}}
 
 {{- range $idx, $author := .names -}}
   {{- $fullname := partial "bib/getfullname" $author -}}
@@ -44,33 +45,17 @@
         {{- end -}}
       {{- end -}}
 
-      {{- if and (index $author "first") (or (not $citemode) $.params.citefirstnames) -}}
-        {{- if $.params.fullnames -}}
-          {{- with $author.first }}{{ . }}{{ end -}}
-          {{- with $author.middle -}}
-            {{- range split . " " -}}
-              &nbsp;{{ . }}{{ if eq (countrunes .) 1 }}{{ "." }}{{ end -}}
-            {{- end -}}
-          {{- end -}}
-          {{- " " -}}
-        {{- else -}}
-          {{- range $i, $name := split $author.first "-" -}}
-            {{- if gt $i 0 }}{{ "-" }}{{ end -}}
-            {{- substr $name 0 1 }}{{ "." -}}
-          {{- end -}}
-          {{- with $author.middle -}}
-            {{- range split . " " -}}
-              &nbsp;{{ substr . 0 1 }}{{ "." -}}
-            {{- end -}}
-          {{- end -}}
-          &nbsp;
-        {{- end -}}
+      {{- $first := "" -}}
+      {{- $middle := "" -}}
+      {{- if and (or $author.first $author.middle) (or (not $citemode) $.params.citefirstnames) -}}
+        {{- $first = partial "bib/middlename.html" (dict "name" $author.first "fullnames" $.params.fullnames "sep" $midnamespace) -}}
+        {{- $middle = partial "bib/middlename.html" (dict "name" $author.middle "fullnames" $.params.fullnames "sep" $midnamespace) -}}
       {{- end -}}
       {{- if $isothers -}}
         {{- $etallabel -}}
       {{- else -}}
-        {{- with $author.last }}{{ . }}{{ end -}}
-        {{- with $author.lineage }}{{ ", " }}{{ . }}{{ end -}}
+        {{- $s := $midnamespace -}}
+        {{- partial "util/glueup" (slice $first $s $middle $s $author.last (print "," $s) $author.lineage) -}}
       {{- end -}}
 
       {{- if $authorurl }}</a>{{ end -}}
