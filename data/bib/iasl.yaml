@@ -106,9 +106,9 @@ references:
     - first: Marco
       last: Levorato
     - first: Mohammad
-      last: Faruque
-      middle: Al
-    bibtex: "@article{vatanparvar-faezi-2019-tsg,\n  author = {Korosh Vatanparvar and Sina Faezi and Igor Burago and Marco Levorato and Mohammad Al Faruque},\n  title = {Extended Range Electric Vehicle With Driving Behavior Estimation in Energy Management},\n  journal = {IEEE Transactions on Smart Grid},\n  volume = {10},\n  number = {3},\n  pages = {2959--2968},\n  month = may,\n  year = {2019},\n  doi = {10.1109/tsg.2018.2815689},\n}"
+      last: Al Faruque
+      middle: Abdullah
+    bibtex: "@article{vatanparvar-faezi-2019-tsg,\n  author = {Korosh Vatanparvar and Sina Faezi and Igor Burago and Marco Levorato and Mohammad Abdullah {Al~Faruque}},\n  title = {Extended Range Electric Vehicle With Driving Behavior Estimation in Energy Management},\n  journal = {IEEE Transactions on Smart Grid},\n  volume = {10},\n  number = {3},\n  pages = {2959--2968},\n  month = may,\n  year = {2019},\n  doi = {10.1109/tsg.2018.2815689},\n}"
     doi: 10.1109/tsg.2018.2815689
     journal: IEEE Transactions on Smart Grid
     kind: article
@@ -378,9 +378,9 @@ references:
     - first: Marco
       last: Levorato
     - first: Mohammad
-      last: Faruque
-      middle: Al
-    bibtex: "@inproceedings{vatanparvar-faezi-2017-codes,\n  author = {Korosh Vatanparvar and Sina Faezi and Igor Burago and Marco Levorato and Mohammad Al Faruque},\n  title = {Driving Behavior Modeling and Estimation for Battery Optimization in Electric Vehicles: Work-in-Progress},\n  booktitle = {Proceedings of the IEEE/ACM/IFIP International Conference on Hardware/Software Codesign and System Synthesis Companion (CODES)},\n  address = {Seoul, Republic of Korea},\n  month = oct,\n  year = {2017},\n  doi = {10.1145/3125502.3125542},\n}"
+      last: Al Faruque
+      middle: Abdullah
+    bibtex: "@inproceedings{vatanparvar-faezi-2017-codes,\n  author = {Korosh Vatanparvar and Sina Faezi and Igor Burago and Marco Levorato and Mohammad Abdullah {Al~Faruque}},\n  title = {Driving Behavior Modeling and Estimation for Battery Optimization in Electric Vehicles: Work-in-Progress},\n  booktitle = {Proceedings of the IEEE/ACM/IFIP International Conference on Hardware/Software Codesign and System Synthesis Companion (CODES)},\n  address = {Seoul, Republic of Korea},\n  month = oct,\n  year = {2017},\n  doi = {10.1145/3125502.3125542},\n}"
     booktitle: Proceedings of the IEEE/ACM/IFIP International Conference on Hardware/Software Codesign and System Synthesis Companion (CODES)
     doi: 10.1145/3125502.3125542
     kind: inproceedings
