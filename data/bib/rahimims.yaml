@@ -3,15 +3,14 @@ references:
     address: Las Vegas, Nevada
     author:
     - first: Sanaz
-      last: Moosavi
-      middle: Rahimi
+      last: Rahimi Moosavi
     - first: Ethiopia
       last: Nigussie
     - first: Seppo
       last: Virtanen
     - first: Jouni
       last: Isoaho
-    bibtex: "@inproceedings{moosavi-nigussie-2017-ccnc,\n  author = {Sanaz Rahimi Moosavi and Ethiopia Nigussie and Seppo Virtanen and Jouni Isoaho},\n  title = {Cryptographic Key Generation Using {ECG} Signal},\n  booktitle = {Proceedings of the IEEE Annual Consumer Communications Networking Conference (CCNC)},\n  pages = {1024--1031},\n  address = {Las Vegas, Nevada},\n  month = jan,\n  year = {2017},\n  doi = {10.1109/ccnc.2017.7983280},\n}"
+    bibtex: "@inproceedings{moosavi-nigussie-2017-ccnc,\n  author = {Sanaz {Rahimi Moosavi} and Ethiopia Nigussie and Seppo Virtanen and Jouni Isoaho},\n  title = {Cryptographic Key Generation Using {ECG} Signal},\n  booktitle = {Proceedings of the IEEE Annual Consumer Communications Networking Conference (CCNC)},\n  pages = {1024--1031},\n  address = {Las Vegas, Nevada},\n  month = jan,\n  year = {2017},\n  doi = {10.1109/ccnc.2017.7983280},\n}"
     booktitle: Proceedings of the IEEE Annual Consumer Communications Networking Conference (CCNC)
     doi: 10.1109/ccnc.2017.7983280
     kind: inproceedings
@@ -30,14 +29,13 @@ references:
     - first: Tooska
       last: Dargahi
     - first: Sanaz
-      last: Moosavi
-      middle: Rahimi
+      last: Rahimi Moosavi
     - first: Amir
       last: Rahmani
       middle: M.
     - first: Pasi
       last: Liljeberg
-    bibtex: "@article{ambrosin-anzanpour-2016-micro,\n  author = {Moreno Ambrosin and Arman Anzanpour and Mauro Conti and Tooska Dargahi and Sanaz Rahimi Moosavi and Amir M. Rahmani and Pasi Liljeberg},\n  title = {On the Feasibility of Attribute-Based Encryption on {Internet} of {Things} Devices},\n  journal = {IEEE Micro},\n  volume = {36},\n  number = {6},\n  pages = {25--35},\n  month = nov,\n  year = {2016},\n  doi = {10.1109/mm.2016.101},\n}"
+    bibtex: "@article{ambrosin-anzanpour-2016-micro,\n  author = {Moreno Ambrosin and Arman Anzanpour and Mauro Conti and Tooska Dargahi and Sanaz {Rahimi Moosavi} and Amir M. Rahmani and Pasi Liljeberg},\n  title = {On the Feasibility of Attribute-Based Encryption on {Internet} of {Things} Devices},\n  journal = {IEEE Micro},\n  volume = {36},\n  number = {6},\n  pages = {25--35},\n  month = nov,\n  year = {2016},\n  doi = {10.1109/mm.2016.101},\n}"
     doi: 10.1109/mm.2016.101
     journal: IEEE Micro
     kind: article
@@ -50,8 +48,7 @@ references:
   moosavi-gia-2016-fgcs:
     author:
     - first: Sanaz
-      last: Moosavi
-      middle: Rahimi
+      last: Rahimi Moosavi
     - first: Tuan
       last: Gia
       middle: Nguyen
@@ -66,7 +63,7 @@ references:
       last: Tenhunen
     - first: Jouni
       last: Isoaho
-    bibtex: "@article{moosavi-gia-2016-fgcs,\n  author = {Sanaz Rahimi Moosavi and Tuan Nguyen Gia and Ethiopia Nigussie and Amir M. Rahmani and Seppo Virtanen and Hannu Tenhunen and Jouni Isoaho},\n  title = {End-to-End Security Scheme for Mobility Enabled Healthcare {Internet} of {Things}},\n  journal = {Future Generation Computer Systems},\n  volume = {64},\n  pages = {108--124},\n  publisher = {Elsevier},\n  month = nov,\n  year = {2016},\n  doi = {10.1016/j.future.2016.02.020},\n}"
+    bibtex: "@article{moosavi-gia-2016-fgcs,\n  author = {Sanaz {Rahimi Moosavi} and Tuan Nguyen Gia and Ethiopia Nigussie and Amir M. Rahmani and Seppo Virtanen and Hannu Tenhunen and Jouni Isoaho},\n  title = {End-to-End Security Scheme for Mobility Enabled Healthcare {Internet} of {Things}},\n  journal = {Future Generation Computer Systems},\n  volume = {64},\n  pages = {108--124},\n  publisher = {Elsevier},\n  month = nov,\n  year = {2016},\n  doi = {10.1016/j.future.2016.02.020},\n}"
     doi: 10.1016/j.future.2016.02.020
     journal: Future Generation Computer Systems
     kind: article
@@ -81,15 +78,14 @@ references:
     - first: Antti
       last: Vikström
     - first: Sanaz
-      last: Moosavi
-      middle: Rahimi
+      last: Rahimi Moosavi
     - first: Hans
       last: Moen
     - first: Tapio
       last: Salakoski
     - first: Sanna
       last: Salanterä
-    bibtex: "@inproceedings{vikstrom-moosavi-2016-wis,\n  author = {Antti Vikstr{\\\"o}m and Sanaz Rahimi Moosavi and Hans Moen and Tapio Salakoski and Sanna Salanter{\\\"a}},\n  title = {Factors Affecting the Availability of Electronic Patient Records for Secondary Purposes -- A Case Study},\n  editor = {Hongxiu Li and Pirkko Nyk{\\\"a}nen and Reima Suomi and Nilmini Wickramasinghe and Gunilla Wid{\\'e}n and Ming Zhan},\n  booktitle = {Building Sustainable Health Ecosystems},\n  volume = {636},\n  series = {Communications in Computer and Information Science},\n  pages = {47--56},\n  note = {Proceedings of the International Conference on Well-Being in the Information Society (WIS)},\n  publisher = {Springer},\n  year = {2016},\n  doi = {10.1007/978-3-319-44672-1_5},\n}"
+    bibtex: "@inproceedings{vikstrom-moosavi-2016-wis,\n  author = {Antti Vikstr{\\\"o}m and Sanaz {Rahimi Moosavi} and Hans Moen and Tapio Salakoski and Sanna Salanter{\\\"a}},\n  title = {Factors Affecting the Availability of Electronic Patient Records for Secondary Purposes -- A Case Study},\n  editor = {Hongxiu Li and Pirkko Nyk{\\\"a}nen and Reima Suomi and Nilmini Wickramasinghe and Gunilla Wid{\\'e}n and Ming Zhan},\n  booktitle = {Building Sustainable Health Ecosystems},\n  volume = {636},\n  series = {Communications in Computer and Information Science},\n  pages = {47--56},\n  note = {Proceedings of the International Conference on Well-Being in the Information Society (WIS)},\n  publisher = {Springer},\n  year = {2016},\n  doi = {10.1007/978-3-319-44672-1_5},\n}"
     booktitle: Building Sustainable Health Ecosystems
     doi: 10.1007/978-3-319-44672-1_5
     editor:
@@ -117,8 +113,7 @@ references:
     address: Liverpool, U.K.
     author:
     - first: Sanaz
-      last: Moosavi
-      middle: Rahimi
+      last: Rahimi Moosavi
     - first: Tuan
       last: Gia
       middle: Nguyen
@@ -133,7 +128,7 @@ references:
       last: Tenhunen
     - first: Jouni
       last: Isoaho
-    bibtex: "@inproceedings{moosavi-gia-2015-cit,\n  author = {Sanaz Rahimi Moosavi and Tuan Nguyen Gia and Ethiopia Nigussie and Amir M. Rahmani and Seppo Virtanen and Hannu Tenhunen and Jouni Isoaho},\n  title = {Session Resumption-Based End-to-End Security for Healthcare {Internet}-of-{Things}},\n  booktitle = {Proceedings of the IEEE International Conference on Computer and Information Technology (CIT)},\n  pages = {581--588},\n  address = {Liverpool, U.K.},\n  month = oct,\n  year = {2015},\n  doi = {10.1109/cit/iucc/dasc/picom.2015.83},\n}"
+    bibtex: "@inproceedings{moosavi-gia-2015-cit,\n  author = {Sanaz {Rahimi Moosavi} and Tuan Nguyen Gia and Ethiopia Nigussie and Amir M. Rahmani and Seppo Virtanen and Hannu Tenhunen and Jouni Isoaho},\n  title = {Session Resumption-Based End-to-End Security for Healthcare {Internet}-of-{Things}},\n  booktitle = {Proceedings of the IEEE International Conference on Computer and Information Technology (CIT)},\n  pages = {581--588},\n  address = {Liverpool, U.K.},\n  month = oct,\n  year = {2015},\n  doi = {10.1109/cit/iucc/dasc/picom.2015.83},\n}"
     booktitle: Proceedings of the IEEE International Conference on Computer and Information Technology (CIT)
     doi: 10.1109/cit/iucc/dasc/picom.2015.83
     kind: inproceedings
@@ -144,8 +139,7 @@ references:
   moosavi-gia-2015-ant:
     author:
     - first: Sanaz
-      last: Moosavi
-      middle: Rahimi
+      last: Rahimi Moosavi
     - first: Tuan
       last: Gia
       middle: Nguyen
@@ -160,7 +154,7 @@ references:
       last: Isoaho
     - first: Hannu
       last: Tenhunen
-    bibtex: "@article{moosavi-gia-2015-ant,\n  author = {Sanaz Rahimi Moosavi and Tuan Nguyen Gia and Amir M. Rahmani and Ethiopia Nigussie and Seppo Virtanen and Jouni Isoaho and Hannu Tenhunen},\n  title = {{SEA}: A Secure and Efficient Authentication and Authorization Architecture for {IoT}-Based Healthcare Using Smart Gateways},\n  journal = {Procedia Computer Science},\n  volume = {52},\n  pages = {452--459},\n  note = {Proceedings of the International Conference on Ambient Systems, Networks and Technologies (ANT)},\n  publisher = {Elsevier},\n  month = jun,\n  year = {2015},\n  doi = {10.1016/j.procs.2015.05.013},\n}"
+    bibtex: "@article{moosavi-gia-2015-ant,\n  author = {Sanaz {Rahimi Moosavi} and Tuan Nguyen Gia and Amir M. Rahmani and Ethiopia Nigussie and Seppo Virtanen and Jouni Isoaho and Hannu Tenhunen},\n  title = {{SEA}: A Secure and Efficient Authentication and Authorization Architecture for {IoT}-Based Healthcare Using Smart Gateways},\n  journal = {Procedia Computer Science},\n  volume = {52},\n  pages = {452--459},\n  note = {Proceedings of the International Conference on Ambient Systems, Networks and Technologies (ANT)},\n  publisher = {Elsevier},\n  month = jun,\n  year = {2015},\n  doi = {10.1016/j.procs.2015.05.013},\n}"
     doi: 10.1016/j.procs.2015.05.013
     journal: Procedia Computer Science
     kind: article
@@ -176,8 +170,7 @@ references:
     author:
     - last: Anurag
     - first: Sanaz
-      last: Moosavi
-      middle: Rahimi
+      last: Rahimi Moosavi
     - first: Amir
       last: Rahmani
       middle: M.
@@ -189,7 +182,7 @@ references:
       last: Liljeberg
     - first: Hannu
       last: Tenhunen
-    bibtex: "@inproceedings{moosavi-rahmani-2014-mobihealth,\n  author = {Anurag and Sanaz Rahimi Moosavi and Amir M. Rahmani and Tomi Westerlund and Geng Yang and Pasi Liljeberg and Hannu Tenhunen},\n  title = {Pervasive Health Monitoring Based on {Internet} of {Things}: Two Case Studies},\n  booktitle = {Proceedings of the International Conference on Wireless Mobile Communication and Healthcare (MOBIHEALTH)},\n  pages = {275--278},\n  address = {Athens, Greece},\n  month = nov,\n  year = {2014},\n  doi = {10.1109/mobihealth.2014.7015964},\n}"
+    bibtex: "@inproceedings{moosavi-rahmani-2014-mobihealth,\n  author = {Anurag and Sanaz {Rahimi Moosavi} and Amir M. Rahmani and Tomi Westerlund and Geng Yang and Pasi Liljeberg and Hannu Tenhunen},\n  title = {Pervasive Health Monitoring Based on {Internet} of {Things}: Two Case Studies},\n  booktitle = {Proceedings of the International Conference on Wireless Mobile Communication and Healthcare (MOBIHEALTH)},\n  pages = {275--278},\n  address = {Athens, Greece},\n  month = nov,\n  year = {2014},\n  doi = {10.1109/mobihealth.2014.7015964},\n}"
     booktitle: Proceedings of the International Conference on Wireless Mobile Communication and Healthcare (MOBIHEALTH)
     doi: 10.1109/mobihealth.2014.7015964
     kind: inproceedings
@@ -200,15 +193,14 @@ references:
   moosavi-nigussie-2014-ant:
     author:
     - first: Sanaz
-      last: Moosavi
-      middle: Rahimi
+      last: Rahimi Moosavi
     - first: Ethiopia
       last: Nigussie
     - first: Seppo
       last: Virtanen
     - first: Jouni
       last: Isoaho
-    bibtex: "@article{moosavi-nigussie-2014-ant,\n  author = {Sanaz Rahimi Moosavi and Ethiopia Nigussie and Seppo Virtanen and Jouni Isoaho},\n  title = {An Elliptic Curve-Based Mutual Authentication Scheme for {RFID} Implant Systems},\n  journal = {Procedia Computer Science},\n  volume = {32},\n  pages = {198--206},\n  note = {Proceedings of the International Conference on Ambient Systems, Networks and Technologies (ANT)},\n  publisher = {Elsevier},\n  month = jun,\n  year = {2014},\n  doi = {10.1016/j.procs.2014.05.415},\n}"
+    bibtex: "@article{moosavi-nigussie-2014-ant,\n  author = {Sanaz {Rahimi Moosavi} and Ethiopia Nigussie and Seppo Virtanen and Jouni Isoaho},\n  title = {An Elliptic Curve-Based Mutual Authentication Scheme for {RFID} Implant Systems},\n  journal = {Procedia Computer Science},\n  volume = {32},\n  pages = {198--206},\n  note = {Proceedings of the International Conference on Ambient Systems, Networks and Technologies (ANT)},\n  publisher = {Elsevier},\n  month = jun,\n  year = {2014},\n  doi = {10.1016/j.procs.2014.05.415},\n}"
     doi: 10.1016/j.procs.2014.05.415
     journal: Procedia Computer Science
     kind: article
@@ -222,8 +214,7 @@ references:
   moosavi-hakkala-2014-ijcte:
     author:
     - first: Sanaz
-      last: Moosavi
-      middle: Rahimi
+      last: Rahimi Moosavi
     - first: Antti
       last: Hakkala
     - first: Jouni
@@ -232,7 +223,7 @@ references:
       last: Virtanen
     - first: Jouni
       last: Isoaho
-    bibtex: "@article{moosavi-hakkala-2014-ijcte,\n  author = {Sanaz Rahimi Moosavi and Antti Hakkala and Jouni Isoaho and Seppo Virtanen and Jouni Isoaho},\n  title = {Specification Analysis for Secure {RFID} Implant Systems},\n  journal = {International Journal of Computer Theory and Engineering (IJCTE)},\n  volume = {6},\n  number = {2},\n  pages = {177--188},\n  month = apr,\n  year = {2014},\n  doi = {10.7763/ijcte.2014.v6.858},\n}"
+    bibtex: "@article{moosavi-hakkala-2014-ijcte,\n  author = {Sanaz {Rahimi Moosavi} and Antti Hakkala and Jouni Isoaho and Seppo Virtanen and Jouni Isoaho},\n  title = {Specification Analysis for Secure {RFID} Implant Systems},\n  journal = {International Journal of Computer Theory and Engineering (IJCTE)},\n  volume = {6},\n  number = {2},\n  pages = {177--188},\n  month = apr,\n  year = {2014},\n  doi = {10.7763/ijcte.2014.v6.858},\n}"
     doi: 10.7763/ijcte.2014.v6.858
     journal: International Journal of Computer Theory and Engineering (IJCTE)
     kind: article
@@ -246,8 +237,7 @@ references:
     address: Belfast, U.K.
     author:
     - first: Sanaz
-      last: Moosavi
-      middle: Rahimi
+      last: Rahimi Moosavi
     - first: Amir
       last: Rahmani
       middle: M.
@@ -257,7 +247,7 @@ references:
       last: Plosila
     - first: Hannu
       last: Tenhunen
-    bibtex: "@inproceedings{moosavi-rahmani-2013-euromicro,\n  author = {Sanaz Rahimi Moosavi and Amir M. Rahmani and Pasi Liljeberg and Juha Plosila and Hannu Tenhunen},\n  title = {Enhancing Performance of {3D} Interconnection Networks Using Efficient Multicast Communication Protocol},\n  booktitle = {Proceedings of the Euromicro International Conference on Parallel, Distributed, and Network-Based Processing},\n  pages = {294--301},\n  address = {Belfast, U.K.},\n  month = feb,\n  year = {2013},\n  doi = {10.1109/pdp.2013.50},\n}"
+    bibtex: "@inproceedings{moosavi-rahmani-2013-euromicro,\n  author = {Sanaz {Rahimi Moosavi} and Amir M. Rahmani and Pasi Liljeberg and Juha Plosila and Hannu Tenhunen},\n  title = {Enhancing Performance of {3D} Interconnection Networks Using Efficient Multicast Communication Protocol},\n  booktitle = {Proceedings of the Euromicro International Conference on Parallel, Distributed, and Network-Based Processing},\n  pages = {294--301},\n  address = {Belfast, U.K.},\n  month = feb,\n  year = {2013},\n  doi = {10.1109/pdp.2013.50},\n}"
     booktitle: Proceedings of the Euromicro International Conference on Parallel, Distributed, and Network-Based Processing
     doi: 10.1109/pdp.2013.50
     kind: inproceedings
@@ -269,8 +259,7 @@ references:
     address: Jeju Island, South Korea
     author:
     - first: Sanaz
-      last: Moosavi
-      middle: Rahimi
+      last: Rahimi Moosavi
     - first: Chia-Yuan
       last: Chang
     - first: Amir
@@ -287,7 +276,7 @@ references:
     - first: Eng
       last: Lim
       middle: Gee
-    bibtex: "@inproceedings{moosavi-chang-2012-isocc,\n  author = {Sanaz Rahimi Moosavi and Chia-Yuan Chang and Amir M. Rahmani and Juha Plosila and Ka Lok Man and Taikyeong T. Jeong and Eng Gee Lim},\n  title = {An Efficient History-Based Routing Algorithm for Interconnection Networks},\n  booktitle = {International SoC Design Conference (ISOCC)},\n  pages = {277--280},\n  address = {Jeju Island, South Korea},\n  month = nov,\n  year = {2012},\n  doi = {10.1109/isocc.2012.6407094},\n}"
+    bibtex: "@inproceedings{moosavi-chang-2012-isocc,\n  author = {Sanaz {Rahimi Moosavi} and Chia-Yuan Chang and Amir M. Rahmani and Juha Plosila and Ka Lok Man and Taikyeong T. Jeong and Eng Gee Lim},\n  title = {An Efficient History-Based Routing Algorithm for Interconnection Networks},\n  booktitle = {International SoC Design Conference (ISOCC)},\n  pages = {277--280},\n  address = {Jeju Island, South Korea},\n  month = nov,\n  year = {2012},\n  doi = {10.1109/isocc.2012.6407094},\n}"
     booktitle: International SoC Design Conference (ISOCC)
     doi: 10.1109/isocc.2012.6407094
     kind: inproceedings

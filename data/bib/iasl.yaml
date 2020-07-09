@@ -279,8 +279,7 @@ references:
     abstract: In this paper, we analyze the performance of the state-of-the-art end-to-end security schemes in healthcare Internet of Things (IoT) systems. We identify that the essential requirements of robust security solutions for healthcare IoT systems comprise of (i) low-latency secure key generation approach using patients’ Electrocardiogram (ECG) signals, (ii) secure and efficient authentication and authorization for healthcare IoT devices based on the certificate-based datagram Transport Layer Security (DTLS), and (iii) robust and secure mobility-enabled end-to-end communication based on DTLS session resumption. The performance of the state-of-the-art security solutions including our end-to-end security scheme is tested by developing a prototype healthcare IoT system. The prototype is built of a Pandaboard, a TI SmartRF06 board and WiSMotes. The Pandaboard along with the CC2538 module acts as a smart gateway and the WisMotes act as medical sensor nodes. Based on the analysis, we found out that our solution has the most extensive set of performance features in comparison to related approaches found in the literature. The performance evaluation results show that compared to the existing approaches, the cryptographic key generation approach proposed in our end-to-end security scheme is on average 1.8 times faster than existing key generation approaches while being more energy-efficient. In addition, the scheme reduces the communication overhead by 26% and the communication latency between smart gateways and end users by 16%. Our scheme is also approximately 97% faster than certificate based and 10% faster that symmetric key-based DTLS. Certificate based DTLS requires about 2.9 times more ROM and 2.2 times more RAM resources. On the other hand, the ROM and RAM requirements of our scheme are almost as low as in symmetric key-based DTLS.
     author:
     - first: Sanaz
-      last: Moosavi
-      middle: Rahimi
+      last: Rahimi Moosavi
     - first: Ethiopia
       last: Nigussie
     - first: Marco
@@ -289,7 +288,7 @@ references:
       last: Virtanen
     - first: Jouni
       last: Isoaho
-    bibtex: "@article{moosavi-nigussie-2018-ant,\n  author = {Sanaz Rahimi Moosavi and Ethiopia Nigussie and Marco Levorato and Seppo Virtanen and Jouni Isoaho},\n  title = {Performance Analysis of End-to-End Security Schemes in Healthcare {IoT}},\n  journal = {Procedia Computer Science},\n  volume = {130},\n  pages = {432--439},\n  note = {Proceedings of the International Conference on Ambient Systems, Networks and Technologies (ANT)},\n  publisher = {Elsevier},\n  month = may,\n  year = {2018},\n  doi = {10.1016/j.procs.2018.04.064},\n}"
+    bibtex: "@article{moosavi-nigussie-2018-ant,\n  author = {Sanaz {Rahimi Moosavi} and Ethiopia Nigussie and Marco Levorato and Seppo Virtanen and Jouni Isoaho},\n  title = {Performance Analysis of End-to-End Security Schemes in Healthcare {IoT}},\n  journal = {Procedia Computer Science},\n  volume = {130},\n  pages = {432--439},\n  note = {Proceedings of the International Conference on Ambient Systems, Networks and Technologies (ANT)},\n  publisher = {Elsevier},\n  month = may,\n  year = {2018},\n  doi = {10.1016/j.procs.2018.04.064},\n}"
     doi: 10.1016/j.procs.2018.04.064
     journal: Procedia Computer Science
     kind: article
@@ -391,8 +390,7 @@ references:
     abstract: 'We propose a low-latency approach for generating secure electrocardiogram (ECG) feature-based cryptographic keys. This is done by taking advantage of the uniqueness and randomness properties of ECG’s main features. This approach achieves a low-latency since the key generation relies on four reference-free ECG’s main features that can be acquired in short time. We call the approach several ECG features (SEF)-based cryptographic key generation. SEF consists of: 1) detecting the arrival time of ECG’s fiducial points using Daubechies wavelet transform to compute ECG’s main features accordingly; 2) using a dynamic technique to specify the optimum number of bits that can be extracted from each main ECG feature, comprising of PR, RR, PP, QT, and ST intervals; 3) generating cryptographic keys by exploiting the above-mentioned ECG features; and 4) consolidating and strengthening the SEF approach with cryptographically secure pseudo-random number generators. Fibonacci linear feedback shift register and advanced encryption standard algorithms are implemented as the pseudo-random number generator to enhance the security level of the generated cryptographic keys. Our approach is applied to 239 subjects’ ECG signals comprising of normal sinus rhythm, arrhythmia, atrial fibrillation, and myocardial infraction. The security analyses of the proposed approach are carried out in terms of distinctiveness, test of randomness, temporal variance, and using National Institute of Standards and Technology benchmark. The analyses reveal that the normal ECG rhythms have slightly better randomness compared with the abnormal ones. The analyses also show that the strengthened SEF key generation approach provides a higher security level in comparison to existing approaches that rely only on singleton ECG features. For the normal ECG rhythms, the SEF approach has in average the entropy of about 0.98 while cryptographic keys which are generated utilizing the strengthened SEF approach offer the entropy of ∼1. The execution time required to generate the cryptographic keys on different processors is also examined. The results reveal that our SEF approach is in average 1.8 times faster than existing key generation approaches which only utilize the inter pulse interval feature of ECG.'
     author:
     - first: Sanaz
-      last: Moosavi
-      middle: Rahimi
+      last: Rahimi Moosavi
     - first: Ethiopia
       last: Nigussie
     - first: Marco
@@ -401,7 +399,7 @@ references:
       last: Virtanen
     - first: Jouni
       last: Isoaho
-    bibtex: "@article{moosavi-nigussie-2017-access,\n  author = {Sanaz Rahimi Moosavi and Ethiopia Nigussie and Marco Levorato and Seppo Virtanen and Jouni Isoaho},\n  title = {Low-Latency Approach for Secure {ECG} Feature Based Cryptographic Key Generation},\n  journal = {IEEE Access},\n  volume = {6},\n  pages = {428--442},\n  month = oct,\n  year = {2017},\n  doi = {10.1109/access.2017.2766523},\n}"
+    bibtex: "@article{moosavi-nigussie-2017-access,\n  author = {Sanaz {Rahimi Moosavi} and Ethiopia Nigussie and Marco Levorato and Seppo Virtanen and Jouni Isoaho},\n  title = {Low-Latency Approach for Secure {ECG} Feature Based Cryptographic Key Generation},\n  journal = {IEEE Access},\n  volume = {6},\n  pages = {428--442},\n  month = oct,\n  year = {2017},\n  doi = {10.1109/access.2017.2766523},\n}"
     doi: 10.1109/access.2017.2766523
     journal: IEEE Access
     kind: article
