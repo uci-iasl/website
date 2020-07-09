@@ -19,6 +19,14 @@
 # optional. Each component may consist of multiple (hyphenated) words.
 # Compose it the way you usually write your full name publicly.
 name:
+  first: Fred
+  middle: P.
+  last: Brooks
+  lineage: Jr.
+# Optional full name in the same format as above, for linking the
+# names in BibTeX 'author' and 'editor' fields to this personal page.
+# If omitted, the above 'name' entries are used, by default.
+bibname:
   first: Frederick
   middle: Phillips
   last: Brooks
