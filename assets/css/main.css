@@ -216,7 +216,6 @@ li.person {
   margin: 0;
 }
 section.vcard {
-  /*width: 320px;*/
   display: inline-block;
   border-radius: 6px;
   padding: 10px;
@@ -240,6 +239,7 @@ section.vcard .portrait img {
 section.vcard .record {
   display: inline-block;
   min-height: 100px;
+  width: 220px;
 }
 section.vcard .record > .name {
   display: inline-block;
