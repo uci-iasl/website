@@ -1,5 +1,7 @@
 ---
-name: Sabur Baidya
+name:
+  first: Sabur
+  last: Baidya
 role: alumnus-phd
 status: Ph.D.
 yearjoined: 2014

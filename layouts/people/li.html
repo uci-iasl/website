@@ -8,10 +8,14 @@
       </div>
     {{- end }}
     <div class="record">
-      <div class="name">
-        <a class="no-visited" href="{{ .RelPermalink }}">{{ .Params.name }}</a>
-      </div>
-      <div class="status">{{ .Params.status }}</div>
+      {{- with .Params.name }}
+        <div class="name">
+          <a class="no-visited" href="{{ $.RelPermalink }}">
+            {{- partial "people/displayname.html" (dict "name" .) -}}
+          </a>
+        </div>
+      {{- end }}
+      {{- with .Params.status }}<div class="status">{{ . }}</div>{{ end }}
       {{- with .Params.yearjoined }}
         <div class="years">{{ partial "people/yearrange.html" $.Params }}</div>
       {{- end }}

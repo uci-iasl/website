@@ -1,5 +1,9 @@
 ---
-name: Full Name
+name:
+  first: First Names
+  middle: Middle Names  # Remove if unnecessary.
+  last: Last Name
+  lineage: Lineage Suffix  # Remove if unnecessary.
 role: student-phd
 status: Ph.D. Candidate
 yearjoined: {{ dateFormat "2006" .Date }}

@@ -1,5 +1,7 @@
 ---
-name: Peyman Tehrani
+name:
+  first: Peyman
+  last: Tehrani
 role: student-phd
 status: Ph.D. Student
 yearjoined: 2017

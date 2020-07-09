@@ -3,6 +3,7 @@
 {{- range $key := slice "first" "middle" "last" "lineage" -}}
   {{- if $part := index $name $key -}}
     {{- $part = $part | replaceRE `\p{Zs}+` " " -}}
+    {{- $part = trim $part " " -}}
     {{- $part = $part | replaceRE `--|–` "-" -}}
     {{- if $key | in (slice "first" "middle") -}}
       {{- range split $part " " -}}

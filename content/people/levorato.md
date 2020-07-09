@@ -1,5 +1,7 @@
 ---
-name: Marco Levorato
+name:
+  first: Marco
+  last: Levorato
 role: faculty
 status: Associate Professor
 yearjoined: 2013

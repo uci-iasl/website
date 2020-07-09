@@ -1,5 +1,7 @@
 ---
-name: Sanaz Rahimi Moosavi
+name:
+  first: Sanaz
+  last: Rahimi Moosavi
 role: visitor
 status: Visitor Ph.D.
 yearjoined: 2014

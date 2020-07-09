@@ -1,5 +1,7 @@
 ---
-name: Igor Burago
+name:
+  first: Igor
+  last: Burago
 role: student-phd
 status: Ph.D. Candidate
 yearjoined: 2014

@@ -1,5 +1,7 @@
 ---
-name: Delaram Amiri
+name:
+  first: Delaram
+  last: Amiri
 role: student-phd
 status: Ph.D. Candidate
 yearjoined: 2015

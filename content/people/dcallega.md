@@ -1,5 +1,7 @@
 ---
-name: Davide Callegaro
+name:
+  first: Davide
+  last: Callegaro
 role: student-phd
 status: Ph.D. Candidate
 yearjoined: 2016

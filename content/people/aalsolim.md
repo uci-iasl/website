@@ -1,5 +1,7 @@
 ---
-name: Anas Alsoliman
+name:
+  first: Anas
+  last: Alsoliman
 role: student-phd
 status: Ph.D. Student
 yearjoined: 2017

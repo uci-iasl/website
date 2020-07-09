@@ -1,16 +1,24 @@
 {{ partial "header.html" . }}
 <main class="wrap">
   <article class="person">
+    {{- $displayname := "" -}}
+    {{- with .Params.name -}}
+      {{- $displayname = partial "people/displayname.html" (dict "name" .) -}}
+    {{- end -}}
+
     <section class="profile">
       {{- with .Params.portrait }}
         <div class="portrait">
-          <img src="/img/people/{{ . }}" />
+          <img src="/img/people/{{ . }}"{{ with $displayname }} alt="Photo of {{ . }}"{{ end }}>
         </div>
       {{- end }}
       <div class="resume">
-        <div class="name">
-          <h1 class="page-title">{{ .Params.name }}</h1>
-        </div>
+        {{- with .Params.name -}}
+          <div class="name">
+            <h1 class="page-title">{{ $displayname }}</h1>
+          </div>
+        {{- end -}}
+
         <section class="status">
           {{- .Params.status -}}
           {{- with .Params.yearjoined -}}
@@ -59,7 +67,7 @@
             {{- with .Params.email }}
               <div class="email">
                 <span class="label">Email:</span>
-                <a class="email" href="mailto:{{ $.Params.name }} <{{ . }}>">{{ . }}</a>
+                <a class="email" href="mailto:{{ $displayname }} <{{ . }}>">{{ . }}</a>
               </div>
             {{- end }}
             {{- with .Params.websites }}

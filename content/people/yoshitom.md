@@ -1,5 +1,7 @@
 ---
-name: Yoshitomo Matsubara
+name:
+  first: Yoshitomo
+  last: Matsubara
 role: student-phd
 status: Ph.D. Candidate
 yearjoined: 2018

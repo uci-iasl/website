@@ -1,5 +1,7 @@
 ---
-name: Nadia Ahmed
+name:
+  first: Nadia
+  last: Ahmed
 role: alumnus-phd
 status: Ph.D.
 yearjoined: 2013

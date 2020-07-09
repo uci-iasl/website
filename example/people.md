@@ -13,9 +13,16 @@
 # Do not copy the lines starting with '#' (like this one) into your
 # file; those are just comments.
 #
-# Full name, e.g., 'Firstname Lastname' or 'Firstname M. Lastname'.
-# Write it the same way you would in a paper.
-name: Full Name
+# Full name to be associated with the page, given in (up to) four
+# components: 'first', 'middle', 'last', and 'lineage'. The first and
+# last names are mandatory; the middle name and the lineage suffix are
+# optional. Each component may consist of multiple (hyphenated) words.
+# Compose it the way you usually write your full name publicly.
+name:
+  first: Frederick
+  middle: Phillips
+  last: Brooks
+  lineage: Jr.
 # Formal status, e.g., 'student-phd' or 'student-masters'.
 # (See people.roles in ../config.yaml for the full list of roles.)
 role: student-phd
