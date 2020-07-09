@@ -9,10 +9,12 @@
         {{- if $pages := where $.RegularPages "Params.role" $role.id }}
           <h1>{{ $role.plural }}</h1>
           <ul class="people">
-            {{- $pages = sort $pages "Params.name" }}
-            {{- $pages = sort $pages "Params.yearjoined" }}
+            {{- range $namekey := slice "middle" "first" "lineage" "last" }}
+              {{- $pages = $pages.ByParam (print "name." $namekey) }}
+            {{- end }}
+            {{- $pages = $pages.ByParam "yearjoined" }}
             {{- if hasPrefix $role.id "alumnus" }}
-              {{- $pages = sort $pages "Params.yeargraduated" "desc" }}
+              {{- $pages = ($pages.ByParam "yeargraduated").Reverse }}
             {{- end }}
             {{- range $pages }}
               {{ .Render "li" }}
