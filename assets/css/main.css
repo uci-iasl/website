@@ -274,7 +274,11 @@ section.profile .label {
   font-weight: bold;
 }
 section.profile .name {
-  margin-bottom: 16px;
+  margin-bottom: 10px;
+}
+section.profile .name h1 {
+  line-height: 110%;
+  margin: 0;
 }
 section.profile .status .years {
   font-size: calc(0.9 * var(--font-size));
