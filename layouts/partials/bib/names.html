@@ -30,22 +30,17 @@
     <span class="name"{{ if and (not $citemode) (not $.params.fullnames) }} title="{{ $fullname }}"{{ end }}>
       {{- $authorurl := "" -}}
       {{- if and (not $citemode) (not $isothers) -}}
-        {{- $isourown := true -}}
-        {{- with index $.peoplepages $nameid -}}
+        {{- $isexternal := false -}}
+        {{- with index $.peopleindex.internal $nameid -}}
           {{- $authorurl = .RelPermalink -}}
         {{- else -}}
-          {{- range $.params.collaborators -}}
-            {{- if $isourown -}}
-              {{- $collnameid := partial "bib/getnameid" (dict "name" .name "params" $.params) -}}
-              {{- if eq $collnameid $nameid -}}
-                {{- $authorurl = .url -}}
-                {{- $isourown = false -}}
-              {{- end -}}
-            {{- end -}}
+          {{- with index $.peopleindex.external $nameid -}}
+            {{- $authorurl = .url -}}
+            {{- $isexternal = true -}}
           {{- end -}}
         {{- end -}}
         {{- with $authorurl -}}
-          <a href="{{ . }}" class="subtle"{{ if not $isourown}} target="_blank" rel="noopener"{{ end }}>
+          <a href="{{ . }}" class="subtle"{{ if $isexternal }} target="_blank" rel="noopener"{{ end }}>
         {{- end -}}
       {{- end -}}
 

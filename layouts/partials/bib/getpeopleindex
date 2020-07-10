@@ -1,0 +1,17 @@
+{{- $bibparams := .Site.Params.bibliography -}}
+
+{{- $pagesbynameid := dict -}}
+{{- range where .Site.RegularPages "Section" "people" -}}
+  {{- $name := .Params.bibname | default .Params.name -}}
+  {{- $nameid := partial "bib/getnameid" (dict "name" $name "params" $bibparams) -}}
+  {{- $pagesbynameid = merge $pagesbynameid (dict $nameid .) -}}
+{{- end -}}
+
+{{- $collabsbynameid := dict -}}
+{{- range $bibparams.collaborators -}}
+  {{- $name := .bibname | default .name -}}
+  {{- $nameid := partial "bib/getnameid" (dict "name" $name "params" $bibparams) -}}
+  {{- $collabsbynameid = merge $collabsbynameid (dict $nameid .) -}}
+{{- end -}}
+
+{{- return (dict "internal" $pagesbynameid "external" $collabsbynameid) -}}
