@@ -6,7 +6,8 @@
 {{- $midnamespace := cond $.params.fullnames " " "&nbsp;" | safeHTML -}}
 
 {{- range $idx, $author := .names -}}
-  {{- $fullname := partial "bib/getfullname" $author -}}
+  {{- $nameid := partial "bib/getnameid" (dict "name" $author "params" $.params) -}}
+  {{- $fullname := partial "bib/getfullname" (dict "name" $author "params" $.params) -}}
   {{- $isothers := and (eq $author.last $fullname) (eq $fullname "others") -}}
   {{- $insideetal := and $hasetal (ge $idx $.params.etalkeep) -}}
 
@@ -30,13 +31,16 @@
       {{- $authorurl := "" -}}
       {{- if and (not $citemode) (not $isothers) -}}
         {{- $isourown := true -}}
-        {{- with index $.peoplepages $fullname -}}
+        {{- with index $.peoplepages $nameid -}}
           {{- $authorurl = .RelPermalink -}}
         {{- else -}}
-          {{- with $.params.collaborators -}}
-            {{- with where . "name" $fullname -}}
-              {{- $authorurl = (index . 0).url -}}
-              {{- $isourown = false -}}
+          {{- range $.params.collaborators -}}
+            {{- if $isourown -}}
+              {{- $collnameid := partial "bib/getnameid" (dict "name" .name "params" $.params) -}}
+              {{- if eq $collnameid $nameid -}}
+                {{- $authorurl = .url -}}
+                {{- $isourown = false -}}
+              {{- end -}}
             {{- end -}}
           {{- end -}}
         {{- end -}}

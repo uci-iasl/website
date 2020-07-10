@@ -5,12 +5,13 @@
       <h1 class="page-title">People</h1>
     </header>
     <section class="content">
+      {{- $nameparts := sort .Site.Params.bibliography.nameparts "priority" "desc" -}}
       {{- range $role := .Site.Params.people.roles }}
         {{- if $pages := where $.RegularPages "Params.role" $role.id }}
           <h1>{{ $role.plural }}</h1>
           <ul class="people">
-            {{- range $namekey := slice "middle" "first" "lineage" "last" }}
-              {{- $pages = $pages.ByParam (print "name." $namekey) }}
+            {{- range $nameparts }}
+              {{- $pages = $pages.ByParam (print "name." .key) }}
             {{- end }}
             {{- $pages = $pages.ByParam "yearjoined" }}
             {{- if hasPrefix $role.id "alumnus" }}

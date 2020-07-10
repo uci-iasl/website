@@ -1,0 +1,16 @@
+{{- $initialscleanupkeys := slice "first" "middle" -}}
+{{- $name := dict -}}
+{{- range $key, $part := . -}}
+  {{- $part = $part | replaceRE `\p{Zs}+` " " -}}
+  {{- $part = trim $part " " -}}
+  {{- $part = $part | replaceRE `\s*(-|--|–)\s*` "-" -}}
+  {{- if $key | in $initialscleanupkeys -}}
+    {{- range $word := split $part " " -}}
+      {{- $hyphwords := split $word "-" -}}
+      {{- $hyphwords = apply $hyphwords "replaceRE" `^\p{L}$` "$0." "." -}}
+      {{- $part = delimit $hyphwords "-" -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $name = merge $name (dict $key $part) -}}
+{{- end -}}
+{{- return $name -}}

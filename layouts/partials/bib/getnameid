@@ -1,0 +1,6 @@
+{{- $name := partial "bib/getcanonicalname" .name -}}
+{{- $parts := slice -}}
+{{- range sort $.params.nameparts "priority" -}}
+  {{- $parts = $parts | append (index $name .key | default "") -}}
+{{- end -}}
+{{- return (delimit $parts "\x00" | string) -}}

@@ -1,18 +1,8 @@
-{{- $name := . -}}
-{{- $words := slice -}}
-{{- range $key := slice "first" "middle" "last" "lineage" -}}
-  {{- if $part := index $name $key -}}
-    {{- $part = $part | replaceRE `\p{Zs}+` " " -}}
-    {{- $part = trim $part " " -}}
-    {{- $part = $part | replaceRE `--|–` "-" -}}
-    {{- if $key | in (slice "first" "middle") -}}
-      {{- range split $part " " -}}
-        {{- $hyph := apply (split . "-") "replaceRE" `^\p{L}$` "$0." "." -}}
-        {{- $words = $words | append (delimit $hyph "-") -}}
-      {{- end -}}
-    {{- else -}}
-      {{- $words = $words | append $part -}}
-    {{- end -}}
+{{- $name := partial "bib/getcanonicalname" .name -}}
+{{- $parts := slice -}}
+{{- range $.params.nameparts -}}
+  {{- with index $name .key -}}
+    {{- $parts = $parts | append . -}}
   {{- end -}}
 {{- end -}}
-{{- return (delimit $words " " | string) -}}
+{{- return (delimit $parts " " | string) -}}
