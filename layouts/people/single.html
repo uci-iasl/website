@@ -77,8 +77,11 @@
                 </span>
                 <span class="list">
                   {{- range . -}}
-                    {{- $text := .title | default (.url | replaceRE "^https?://" "") -}}
-                    <span><a href="{{ .url }}" target="_blank" rel="noopener">{{ $text }}</a></span>
+                    {{- $label := .title -}}
+                    {{- if not $label -}}
+                      {{- $label = .url | replaceRE `^[[:alpha:]][[:alnum:].\-+]*://` "" -}}
+                    {{- end -}}
+                    <span><a href="{{ .url }}" target="_blank" rel="noopener">{{ $label }}</a></span>
                   {{- end -}}
                 </span>
               </div>
