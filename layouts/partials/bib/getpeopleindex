@@ -1,17 +1,26 @@
 {{- $bibparams := .Site.Params.bibliography -}}
 
 {{- $pagesbynameid := dict -}}
-{{- range where .Site.RegularPages "Section" "people" -}}
-  {{- $name := .Params.bibname | default .Params.name -}}
+{{- range $page := where .Site.RegularPages "Section" "people" -}}
+  {{- $name := $page.Params.bibname | default $page.Params.name -}}
   {{- $nameid := partial "bib/getnameid" (dict "name" $name "params" $bibparams) -}}
-  {{- $pagesbynameid = merge $pagesbynameid (dict $nameid .) -}}
+  {{- with index $pagesbynameid $nameid -}}
+    {{- warnf "Personal pages %q and %q have identical bibliography lookup names" .File.Path $page.File.Path -}}
+  {{- end -}}
+  {{- $pagesbynameid = $pagesbynameid | merge (dict $nameid $page) -}}
 {{- end -}}
 
 {{- $collabsbynameid := dict -}}
-{{- range $bibparams.collaborators -}}
-  {{- $name := .bibname | default .name -}}
+{{- range $collab := $bibparams.collaborators -}}
+  {{- $name := $collab.bibname | default $collab.name -}}
   {{- $nameid := partial "bib/getnameid" (dict "name" $name "params" $bibparams) -}}
-  {{- $collabsbynameid = merge $collabsbynameid (dict $nameid .) -}}
+  {{- with index $collabsbynameid $nameid -}}
+    {{- warnf "More than one collaborator has bibliography lookup name id %q" $nameid -}}
+  {{- end -}}
+  {{- with index $pagesbynameid $nameid -}}
+    {{- warnf "Collaborator with bibliography lookup name id %q collides with personal page %q" $nameid .File.Path -}}
+  {{- end -}}
+  {{- $collabsbynameid = $collabsbynameid | merge (dict $nameid $collab) -}}
 {{- end -}}
 
 {{- return (dict "internal" $pagesbynameid "external" $collabsbynameid) -}}
