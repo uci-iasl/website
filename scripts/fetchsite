@@ -5,7 +5,7 @@
 # Fetches the latest version of the website source from the GitHub
 # remote (or the Git URL given in the -r option) to the directory
 # given in the only argument, checks out the latest state of the
-# 'master' branch (or the branch given by the -b option) from the
+# 'release' branch (or the branch given by the -b option) from the
 # origin, builds the site with the base URL from its configuration
 # file (or the URL given by the -u option), using the first Hugo
 # executable found in $PATH (or using the executable given by the
@@ -16,7 +16,7 @@
 . "$(dirname "$0")"/libusage.bash
 usage='[-b branch] [-g hugo-bin] [-l lock-file] [-o output-dir] [-r repo-url] [-u base-url] repo-dir'
 
-branch=master
+branch=release
 repourl='git://github.com/uci-iasl/website.git'
 wwwdir='/var/www/iasl'
 baseurl=
