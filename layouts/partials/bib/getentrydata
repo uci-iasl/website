@@ -15,7 +15,7 @@
             {{- $entry = . -}}
             {{- $entrybibname = $bibname -}}
           {{- else -}}
-            {{- warnf "Bibliography data files %q and %q both have records with id %q" $entrybibname $bibname $.id -}}
+            {{- warnf "Bibliography data files %q and %q both have entries with ID %q" $entrybibname $bibname $.id -}}
           {{- end -}}
         {{- end -}}
       {{- else -}}

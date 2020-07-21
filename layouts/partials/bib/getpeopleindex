@@ -15,10 +15,10 @@
   {{- $name := $collab.bibname | default $collab.name -}}
   {{- $nameid := partial "bib/getnameid" (dict "name" $name "params" $bibparams) -}}
   {{- with index $collabsbynameid $nameid -}}
-    {{- warnf "More than one collaborator has bibliography lookup name id %q" $nameid -}}
+    {{- warnf "More than one collaborator has bibliography lookup name ID %q" $nameid -}}
   {{- end -}}
   {{- with index $pagesbynameid $nameid -}}
-    {{- warnf "Collaborator with bibliography lookup name id %q collides with personal page %q" $nameid .File.Path -}}
+    {{- warnf "Collaborator with bibliography lookup name ID %q collides with personal page %q" $nameid .File.Path -}}
   {{- end -}}
   {{- $collabsbynameid = $collabsbynameid | merge (dict $nameid $collab) -}}
 {{- end -}}
