@@ -14,8 +14,8 @@
   {{- if false -}}
 
   {{- else if eq .entry.kind "book" -}}
-    {{- $hasauthor := index .entry "author" | default slice -}}
-    {{- $haseditor := index .entry "editor" | default slice -}}
+    {{- $hasauthor := index .entry "author" | not | not -}}
+    {{- $haseditor := index .entry "editor" | not | not -}}
     {{- if $hasauthor -}}
       <span class="authors">
         {{- partial "bib/names.html" (dict "names" .entry.author "params" $.params "peoplepages" $.peoplepages) -}}
@@ -43,8 +43,8 @@
     {{- with .entry.number }}{{ ", " }}<span class="number">no.&nbsp;{{ . }}</span>{{ end -}}
 
   {{- else if eq .entry.kind "inbook" -}}
-    {{- $hasauthor := index .entry "author" | default slice -}}
-    {{- $haseditor := index .entry "editor" | default slice -}}
+    {{- $hasauthor := index .entry "author" | not | not -}}
+    {{- $haseditor := index .entry "editor" | not | not -}}
     {{- if $hasauthor -}}
       <span class="authors">
         {{- partial "bib/names.html" (dict "names" .entry.author "params" $.params "peoplepages" $.peoplepages) -}}
