@@ -21,9 +21,9 @@ below, so you can be made a member.
 
 ### Workflow
 
-The `master` branch is reserved to always represent the current state
+The `release` branch is reserved to always represent the current state
 of the website as [publicly hosted][iasl].
-Committing or pushing directly to `master` is prohibited.
+Committing or pushing directly to `release` is prohibited.
 
 When working on a change, create a separate branch based on the
 `draft` branch, make one or more commits constituting the change and
@@ -40,8 +40,8 @@ before merging them into `draft`, where they are subject to discussion
 and proposals of further edits.
 The code in `draft` should always compile to a working website without
 errors.
-From there, whenever ready, the changes are merged into `master`
-for deployment.
+From there, whenever ready, the changes are merged into `release` for
+deployment.
 
 ### Content
 
@@ -96,7 +96,7 @@ names, respectively.
 If none of that works for you, something else is fine, too, but please
 keep it more or less formal and do not make it too short or too long.
 
-[personal-template]: https://raw.githubusercontent.com/uci-iasl/website/master/example/people.md
+[personal-template]: https://raw.githubusercontent.com/uci-iasl/website/release/example/people.md
 
 #### Project Pages
 
@@ -124,7 +124,7 @@ the project that is preferably short and consists of lowercase
 letters, digits, and hyphens, e.g., `autonomous-uav-iot` or
 `edge-sensing-ehealth`.
 
-[project-template]: https://raw.githubusercontent.com/uci-iasl/website/master/example/projects.md
+[project-template]: https://raw.githubusercontent.com/uci-iasl/website/release/example/projects.md
 
 ### Preview While Editing
 
