@@ -1,8 +1,8 @@
 <span class="title">
   {{- $id := .id | urlize -}}
-  {{- if $id | printf "content/publications/%s.md" | fileExists -}}
+  {{- if printf "content/publications/%s.md" $id | fileExists -}}
     <a href="/publications/{{ $id }}/">{{ .title }}</a>
-  {{- else if $id | printf "static/pub/%s.pdf" | fileExists -}}
+  {{- else if printf "static/pub/%s.pdf" $id | fileExists -}}
     <a href="/pub/{{ $id }}.pdf">{{ .title }}</a>
   {{- else if isset . "url" -}}
     <a href="{{ .url }}"{{ if strings.HasPrefix .url "http" }} target="_blank" rel="noopener"{{ end }}>{{ .title }}</a>

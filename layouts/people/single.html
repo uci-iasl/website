@@ -53,9 +53,9 @@
               {{- if findRE `^\w+://` . 1 -}}
                 <a class="resume" href="{{ . }}" target="_blank" rel="noopener">Full Resume</a>
               {{- else -}}
-                {{- $path := printf "/dl/people/%s/%s" $.File.TranslationBaseName . -}}
-                {{- if printf "static/%s" $path | fileExists -}}
-                  <a class="resume" href="{{ $path }}">Full Resume</a>
+                {{- $relurl := printf "/dl/people/%s/%s" $.File.TranslationBaseName . -}}
+                {{- if printf "static/%s" $relurl | fileExists -}}
+                  <a class="resume" href="{{ $relurl }}">Full Resume</a>
                 {{- end -}}
               {{- end -}}
             {{- end }}
