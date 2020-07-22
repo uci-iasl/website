@@ -26,7 +26,7 @@
       </span>{{ ", " -}}
       {{- if gt (len .entry.editor) 1 }}{{ "Eds" }}{{ else }}{{ "Ed" }}{{ end }}{{ "., " -}}
     {{- end -}}
-    {{- with .entry.title }}{{ partial "bib/title.html" $.entry }}{{ end -}}
+    {{- with .entry.title }}{{ partial "bib/title.html" (dict "entry" $.entry "Page" $.Page) }}{{ end -}}
     {{- with .entry.edition }}{{ ", " }}<span class="edition">{{ humanize . }}&nbsp;ed.</span>{{ end -}}
     {{- with .entry.series }}{{ ", " }}<span class="series">ser.&nbsp;{{ . }}</span>{{ end -}}
     {{- if and $hasauthor $haseditor -}}
@@ -55,7 +55,7 @@
       </span>{{ ", " -}}
       {{- if gt (len .entry.editor) 1 }}{{ "Eds" }}{{ else }}{{ "Ed" }}{{ end }}{{ "., " -}}
     {{- end -}}
-    {{- with .entry.title }}{{ partial "bib/title.html" $.entry }}{{ end -}}
+    {{- with .entry.title }}{{ partial "bib/title.html" (dict "entry" $.entry "Page" $.Page) }}{{ end -}}
     {{- with .entry.edition }}{{ ", " }}<span class="edition">{{ humanize . }}&nbsp;ed.</span>{{ end -}}
     {{- with .entry.series }}{{ ", " }}<span class="series">ser.&nbsp;{{ . }}</span>{{ end -}}
     {{- ". " -}}
@@ -73,7 +73,7 @@
         {{- partial "bib/names.html" (dict "names" . "params" $.params "peopleindex" $.peopleindex) -}}
       </span>{{ ", " -}}
     {{- end -}}
-    {{- with .entry.title }}{{ partial "bib/title.html" $.entry }}{{ end -}}
+    {{- with .entry.title }}{{ partial "bib/title.html" (dict "entry" $.entry "Page" $.Page) }}{{ end -}}
     {{- with .entry.booktitle }}{{ ", in "}}<span class="booktitle">{{ . }}</span>{{ end -}}
     {{- with .entry.edition }}{{ ", " }}<span class="edition">{{ humanize . }}&nbsp;ed.</span>{{ end -}}
     {{- with .entry.series }}{{ ", " }}<span class="series">ser.&nbsp;{{ . }}</span>{{ end -}}
@@ -98,7 +98,7 @@
         {{- partial "bib/names.html" (dict "names" . "params" $.params "peopleindex" $.peopleindex) -}}
       </span>{{ ", " -}}
     {{- end -}}
-    {{- with .entry.title }}{{ partial "bib/title.html" $.entry }}{{ end -}}
+    {{- with .entry.title }}{{ partial "bib/title.html" (dict "entry" $.entry "Page" $.Page) }}{{ end -}}
     {{- with .entry.journal }}{{ ", " }}<span class="journal">{{ . }}</span>{{ end -}}
     {{- with .entry.volume }}{{ ", " }}<span class="volume">vol.&nbsp;{{ . }}</span>{{ end -}}
     {{- with .entry.number }}{{ ", " }}<span class="number">no.&nbsp;{{ . }}</span>{{ end -}}
@@ -112,7 +112,7 @@
         {{- partial "bib/names.html" (dict "names" . "params" $.params "peopleindex" $.peopleindex) -}}
       </span>{{ ", " -}}
     {{- end -}}
-    {{- with .entry.title }}{{ partial "bib/title.html" $.entry }}{{ end -}}
+    {{- with .entry.title }}{{ partial "bib/title.html" (dict "entry" $.entry "Page" $.Page) }}{{ end -}}
     {{- with .entry.booktitle -}}
       {{- ", "}}{{- with index $.entry "intype" | default "in" }}{{ . }}{{ " " }}{{ end -}}
       <span class="booktitle">{{ . }}</span>
@@ -146,7 +146,7 @@
       </span>{{ ", " -}}
       {{- if gt (len .) 1 }}{{ "Eds." }}{{ else }}{{ "Ed." }}{{ end -}}
     {{- end -}}
-    {{- with .entry.title }}{{ partial "bib/title.html" $.entry }}{{ end -}}
+    {{- with .entry.title }}{{ partial "bib/title.html" (dict "entry" $.entry "Page" $.Page) }}{{ end -}}
     {{- with .entry.series }}{{ ", " }}<span class="series">ser.&nbsp;{{ . }}</span>{{ end -}}
     {{- with .entry.volume }}{{ ", " }}<span class="volume">vol.&nbsp;{{ . }}</span>{{ end -}}
     {{- with .entry.number }}{{ ", " }}<span class="number">no.&nbsp;{{ . }}</span>{{ end -}}
@@ -166,7 +166,7 @@
         {{- partial "bib/names.html" (dict "names" . "params" $.params "peopleindex" $.peopleindex) -}}
       </span>{{ ", " -}}
     {{- end -}}
-    {{- with .entry.title }}{{ partial "bib/title.html" $.entry }}{{ end -}}
+    {{- with .entry.title }}{{ partial "bib/title.html" (dict "entry" $.entry "Page" $.Page) }}{{ end -}}
     {{- with .entry.howpublished }}{{ ", " }}<span class="howpublished">{{ . }}</span>{{ end -}}
     {{- with .entry.institution }}{{ ", " }}<span class="institution">{{ . }}</span>{{ end -}}
     {{- with .entry.address }}{{ ", " }}<span class="address">{{ . }}</span>{{ end -}}
@@ -180,7 +180,7 @@
         {{- partial "bib/names.html" (dict "names" . "params" $.params "peopleindex" $.peopleindex) -}}
       </span>{{ ", " -}}
     {{- end -}}
-    {{- with .entry.title }}{{ partial "bib/title.html" $.entry }}{{ end -}}
+    {{- with .entry.title }}{{ partial "bib/title.html" (dict "entry" $.entry "Page" $.Page) }}{{ end -}}
     {{- ", " }}{{- if $isphd }}Ph.D. dissertation{{ else }}Master’s thesis{{ end -}}
     {{- with .entry.school }}{{ ", " }}<span class="school">{{ . }}</span>{{ end -}}
     {{- with .entry.address }}{{ ", " }}<span class="address">{{ . }}</span>{{ end -}}
@@ -192,7 +192,7 @@
         {{- partial "bib/names.html" (dict "names" . "params" $.params "peopleindex" $.peopleindex) -}}
       </span>{{ ", " -}}
     {{- end -}}
-    {{- with .entry.title }}{{ partial "bib/title.html" $.entry }}{{ end -}}
+    {{- with .entry.title }}{{ partial "bib/title.html" (dict "entry" $.entry "Page" $.Page) }}{{ end -}}
     {{- if eq .entry.kind "manual" -}}
       {{- with .entry.edition }}{{ ", " }}<span class="edition">{{ humanize . }}&nbsp;ed.</span>{{ end -}}
     {{- end -}}
@@ -210,7 +210,7 @@
         {{- partial "bib/names.html" (dict "names" . "params" $.params "peopleindex" $.peopleindex) -}}
       </span>{{ ", " -}}
     {{- end -}}
-    {{- with .entry.title }}{{ partial "bib/title.html" $.entry }}{{ end -}}
+    {{- with .entry.title }}{{ partial "bib/title.html" (dict "entry" $.entry "Page" $.Page) }}{{ end -}}
     {{- with .entry.year }}{{ ", " }}{{ partial "bib/date.html" (dict "entry" $.entry "params" $.params) }}{{ end -}}
 
   {{- end -}}
@@ -227,7 +227,7 @@
   <span class="extras">
     {{- with .entry.id | urlize -}}
       {{/* Add a link to the PDF file, unless the title already links to it (see the title.html partial). */}}
-      {{- if and (printf "content/publications/%s.md" . | fileExists) (printf "static/pub/%s.pdf" . | fileExists) -}}
+      {{- if and (printf "/publications/%s" . | $.Page.Site.GetPage) (printf "static/pub/%s.pdf" . | fileExists) -}}
         <span class="item paper"><a href="/pub/{{ . }}.pdf">PDF</a></span>
       {{- end -}}
       {{- if printf "static/pub/%s-poster.pdf" . | fileExists -}}
