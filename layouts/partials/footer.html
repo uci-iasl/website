@@ -7,7 +7,7 @@
     {{- with .Site.Params.copyright -}}
       {{- " " -}}
       {{- if isset . "url" -}}
-        <a href="{{ .url }}"{{ if strings.HasPrefix .url "http" }} target="_blank" rel="noopener"{{ end }}>{{ .title }}</a>
+        <a href="{{ .url }}"{{ if (urls.Parse .url).Scheme }} target="_blank" rel="noopener"{{ end }}>{{ .title }}</a>
       {{- else -}}
         {{- .title -}}
       {{- end -}}
