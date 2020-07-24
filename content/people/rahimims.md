@@ -2,6 +2,11 @@
 name:
   first: Sanaz
   last: Rahimi Moosavi
+bibnames:
+- first: Sanaz
+  last: Rahimi Moosavi
+- first: Sanaz
+  last: Rahimi-Moosavi
 role: visitor
 status: Visitor Ph.D.
 yearjoined: 2014
