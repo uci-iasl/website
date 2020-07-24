@@ -14,7 +14,7 @@
   {{- end -}}
 
   {{- range $name := $bibnames -}}
-    {{- $nameid := partial "bib/getnameid" (dict "name" $name "params" $bibparams) -}}
+    {{- $nameid := partial "bib/name/getnameid" (dict "name" $name "params" $bibparams) -}}
     {{- with index $pagesbynameid $nameid -}}
       {{- if eq .File.UniqueID $page.File.UniqueID -}}
         {{- warnf "Personal page %q has some identical bibliography lookup names" .File.Path -}}
@@ -40,7 +40,7 @@
   {{- end -}}
 
   {{- range $name := $bibnames -}}
-    {{- $nameid := partial "bib/getnameid" (dict "name" $name "params" $bibparams) -}}
+    {{- $nameid := partial "bib/name/getnameid" (dict "name" $name "params" $bibparams) -}}
     {{- with index $collabsbynameid $nameid -}}
       {{- warnf "Collaborator bibliography lookup name ID %q occurs more than once" $nameid -}}
     {{- end -}}

@@ -1,4 +1,4 @@
-{{- $name := partial "bib/getcanonicalname" .name -}}
+{{- $name := partial "bib/name/canonicalize" .name -}}
 {{- $parts := slice -}}
 {{- range $.params.nameparts -}}
   {{- with index $name .key -}}

@@ -6,8 +6,8 @@
 {{- $midnamespace := cond $.params.fullnames " " "&nbsp;" | safeHTML -}}
 
 {{- range $idx, $author := .names -}}
-  {{- $nameid := partial "bib/getnameid" (dict "name" $author "params" $.params) -}}
-  {{- $fullname := partial "bib/getfullname" (dict "name" $author "params" $.params) -}}
+  {{- $nameid := partial "bib/name/getnameid" (dict "name" $author "params" $.params) -}}
+  {{- $fullname := partial "bib/name/getfullname" (dict "name" $author "params" $.params) -}}
   {{- $isothers := and (eq $author.last $fullname) (eq $fullname "others") -}}
   {{- $insideetal := and $hasetal (ge $idx $.params.etalkeep) -}}
 
@@ -47,8 +47,8 @@
       {{- $first := "" -}}
       {{- $middle := "" -}}
       {{- if and (or $author.first $author.middle) (or (not $citemode) $.params.citefirstnames) -}}
-        {{- $first = partial "bib/middlename.html" (dict "name" $author.first "fullnames" $.params.fullnames "sep" $midnamespace) -}}
-        {{- $middle = partial "bib/middlename.html" (dict "name" $author.middle "fullnames" $.params.fullnames "sep" $midnamespace) -}}
+        {{- $first = partial "bib/name/firstormiddle.html" (dict "name" $author.first "fullnames" $.params.fullnames "sep" $midnamespace) -}}
+        {{- $middle = partial "bib/name/firstormiddle.html" (dict "name" $author.middle "fullnames" $.params.fullnames "sep" $midnamespace) -}}
       {{- end -}}
       {{- if $isothers -}}
         {{- $etallabel -}}

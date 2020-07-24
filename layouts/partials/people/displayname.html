@@ -1,7 +1,7 @@
 {{- $fullnames := .fullnames | default true -}}
 {{- with .name -}}
   {{- $s := cond $fullnames " " "&nbsp;" | safeHTML -}}
-  {{- $first := partial "bib/middlename.html" (dict "name" .first "fullnames" $fullnames "sep" $s) -}}
-  {{- $middle := partial "bib/middlename.html" (dict "name" .middle "fullnames" $fullnames "sep" $s) -}}
+  {{- $first := partial "bib/name/firstormiddle.html" (dict "name" .first "fullnames" $fullnames "sep" $s) -}}
+  {{- $middle := partial "bib/name/firstormiddle.html" (dict "name" .middle "fullnames" $fullnames "sep" $s) -}}
   {{- partial "util/glueup" (slice $first $s $middle $s .last (print "," $s) .lineage) -}}
 {{- end -}}

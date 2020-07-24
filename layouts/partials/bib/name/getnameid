@@ -1,4 +1,4 @@
-{{- $name := partial "bib/getcanonicalname" .name -}}
+{{- $name := partial "bib/name/canonicalize" .name -}}
 {{- $parts := slice -}}
 {{- range sort $.params.nameparts "priority" -}}
   {{- $parts = $parts | append (index $name .key | default "") -}}
