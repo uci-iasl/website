@@ -40,7 +40,7 @@
 
   {{- if isset .Params "bibliography" }}
     {{- $js := resources.Get "js/bib.js" | minify | fingerprint }}
-    <script type="text/javascript" src="{{ $js.RelPermalink }}"></script>
+    <script defer src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
   {{- end }}
 </head>
 
