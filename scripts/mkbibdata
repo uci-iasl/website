@@ -15,19 +15,20 @@ usage='[bib-file ...]'
 
 bibdir='static/bib'
 yamldir='data/bib'
-[[ -d $yamldir ]] || panic "$yamldir: directory does not exist"
-
 bibtex2yaml="$argv0dir/bibtex2yaml"
-[[ -x $bibtex2yaml ]] || panic "$bibtex2yaml: not an executable file"
 
 bibfiles=("$@")
 if [[ $# -eq 0 ]]; then
+	[[ -d $bibdir ]] || panic "$bibdir: directory does not exist"
 	i=0
 	while IFS= read -r -d $'\0' file; do
 		bibfiles[i++]="$file"
 	done < <(find "$bibdir" -type f -name '*.bib' -print0)
 	[[ ${#bibfiles[@]} -gt 0 ]] || panic "$bibdir: directory has no *.bib files"
 fi
+
+[[ -d $yamldir ]] || panic "$yamldir: directory does not exist"
+[[ -x $bibtex2yaml ]] || panic "$bibtex2yaml: not an executable file"
 
 rc=0
 logerr() { log "$@"; rc=1; }
