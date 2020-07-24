@@ -1,6 +1,6 @@
 {{- $class := .class | default "" -}}
 {{- with .entry.id | urlize -}}
-  {{/* Add a link to the PDF file, unless the title already links to it (see the title.html partial). */}}
+  {{/* Add a link to the PDF file, unless the title already links to it (see the bib/entry/title.html partial). */}}
   {{- if and (printf "/publications/%s" . | $.Site.GetPage) (printf "static/pub/%s.pdf" . | fileExists) -}}
     <span class="{{ $class }} paper"><a href="/pub/{{ . }}.pdf">PDF</a></span>
   {{- end -}}

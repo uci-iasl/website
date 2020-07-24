@@ -1,11 +1,11 @@
 {{- with .entry.author -}}
   <span class="authors">
-    {{- partial "bib/names.html" (dict "names" . "mode" "citation" "params" $.params) -}}
+    {{- partial "bib/entry/names.html" (dict "names" . "mode" "citation" "params" $.params) -}}
   </span>
 {{- else -}}
   {{- with .entry.editor -}}
     <span class="editors">
-      {{- partial "bib/names.html" (dict "names" . "mode" "citation" "params" $.params) -}}
+      {{- partial "bib/entry/names.html" (dict "names" . "mode" "citation" "params" $.params) -}}
     </span>
     {{- ", " }}{{ if gt (len .) 1 }}{{ "Eds." }}{{ else }}{{ "Ed." }}{{ end -}}
   {{- else -}}
