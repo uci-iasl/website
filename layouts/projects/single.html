@@ -11,7 +11,7 @@
     </section>
 
     {{- with .Params.bibliography }}
-      {{ partial "bib/section.html" (dict "title" "Relevant Publications" "items" . "Page" $.Page "Site" $.Site) }}
+      {{ partial "bib/section.html" (dict "title" "Relevant Publications" "items" . "Page" $.Page) }}
     {{- end }}
   </article>
 </main>

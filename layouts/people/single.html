@@ -102,7 +102,7 @@
     </section>
 
     {{- with .Params.bibliography }}
-      {{ partial "bib/section.html" (dict "title" "Publications" "items" . "Page" $.Page "Site" $.Site) }}
+      {{ partial "bib/section.html" (dict "title" "Publications" "items" . "Page" $.Page) }}
     {{- end }}
   </article>
 </main>

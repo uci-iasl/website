@@ -1,8 +1,8 @@
 {{- "[" -}}
 {{- range $idx, $id := .Params -}}
   {{- if gt $idx 0 }}{{ "; " }}{{ end -}}
-  <a class="citation" href="{{ partial "bib/citeref.html" (dict "id" $id "Page" $.Page "Site" $.Site) }}">
-    {{- with partial "bib/getentrydata" (dict "id" $id "Page" $.Page "Site" $.Site) -}}
+  <a class="citation" href="{{ partial "bib/citeref.html" (dict "id" $id "Page" $.Page) }}">
+    {{- with partial "bib/getentrydata" (dict "id" $id "Page" $.Page) -}}
       {{- partial "bib/cite.html" (dict "entry" . "params" $.Site.Params.bibliography) -}}
     {{- else -}}
       {{- warnf "No data found for citation reference %q in file %q" $id $.Page.File.Path -}}

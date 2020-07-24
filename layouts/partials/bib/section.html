@@ -1,4 +1,4 @@
-{{- $peopleindex := partial "bib/getpeopleindex" . -}}
+{{- $peopleindex := partial "bib/getpeopleindex" (dict "Site" .Page.Site) -}}
 <section class="bibliography">
   <header id="bib">
     {{ with .title }}<h1>{{ . }}</h1>{{ else }}<div></div>{{ end }}
@@ -24,7 +24,7 @@
       {{ with $group.foreword -}}
         <div class="foreword">{{ markdownify . }}</div>
       {{- end }}
-      {{ partial "bib/list.html" (dict "items" $group.items "peopleindex" $peopleindex "Page" $.Page "Site" $.Site) }}
+      {{ partial "bib/list.html" (dict "items" $group.items "peopleindex" $peopleindex "Page" $.Page) }}
     </div>
   {{- end }}
 </section>

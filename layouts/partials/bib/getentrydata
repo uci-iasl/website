@@ -6,7 +6,7 @@
   {{- end -}}
 {{- end -}}
 {{- if not $entry -}}
-  {{- with .Site.Data.bib -}}
+  {{- with .Page.Site.Data.bib -}}
     {{- $entrybibname := "" -}}
     {{- range $bibname, $bib := . -}}
       {{- with index $bib $bibrootkey -}}
