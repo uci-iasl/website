@@ -1,4 +1,4 @@
-{{- $peopleindex := partial "bib/getpeopleindex" (dict "Site" .Page.Site) -}}
+{{- $peopleindex := partialCached "bib/getpeopleindex" (dict "Site" .Page.Site) -}}
 <section class="bibliography">
   <header id="bib">
     {{ with .title }}<h1>{{ . }}</h1>{{ else }}<div></div>{{ end }}
