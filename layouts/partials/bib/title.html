@@ -1,7 +1,7 @@
 {{- with .entry -}}
   <span class="title">
     {{- $id := .id | urlize -}}
-    {{- if printf "/publications/%s" $id | $.Page.Site.GetPage -}}
+    {{- if printf "/publications/%s" $id | $.Site.GetPage -}}
       <a href="/publications/{{ $id }}/">{{ .title }}</a>
     {{- else if printf "static/pub/%s.pdf" $id | fileExists -}}
       <a href="/pub/{{ $id }}.pdf">{{ .title }}</a>

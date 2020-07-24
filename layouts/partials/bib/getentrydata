@@ -1,13 +1,16 @@
 {{- $bibrootkey := "references" -}}
+
 {{- $entry := false -}}
+{{- $entrybibname := "" -}}
+
 {{- with index .Page.Params $bibrootkey -}}
   {{- with index . $.id -}}
     {{- $entry = . -}}
   {{- end -}}
 {{- end -}}
+
 {{- if not $entry -}}
   {{- with .Page.Site.Data.bib -}}
-    {{- $entrybibname := "" -}}
     {{- range $bibname, $bib := . -}}
       {{- with index $bib $bibrootkey -}}
         {{- with index . $.id -}}
@@ -24,7 +27,15 @@
     {{- end -}}
   {{- end -}}
 {{- end -}}
+
 {{- if $entry -}}
-  {{- $entry = merge $entry (dict "id" $.id) -}}
+  {{- $cacheid := print "\x00" $.id -}}
+  {{- if $entrybibname -}}
+    {{- $cacheid = print "data\x00" $entrybibname $cacheid -}}
+  {{- else -}}
+    {{- $cacheid = print "page\x00" .Page.File.Path $cacheid -}}
+  {{- end -}}
+
+  {{- $entry = merge $entry (dict "id" $.id "cacheid" $cacheid) -}}
 {{- end -}}
 {{- return $entry -}}

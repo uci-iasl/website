@@ -1,0 +1,22 @@
+{{- $class := .class | default "" -}}
+{{- with .entry.id | urlize -}}
+  {{/* Add a link to the PDF file, unless the title already links to it (see the title.html partial). */}}
+  {{- if and (printf "/publications/%s" . | $.Site.GetPage) (printf "static/pub/%s.pdf" . | fileExists) -}}
+    <span class="{{ $class }} paper"><a href="/pub/{{ . }}.pdf">PDF</a></span>
+  {{- end -}}
+  {{- if printf "static/pub/%s-poster.pdf" . | fileExists -}}
+    <span class="{{ $class }} poster"><a href="/pub/{{ . }}-poster.pdf">Poster</a></span>
+  {{- end -}}
+  {{- if printf "static/pub/%s-slidedeck.pdf" . | fileExists -}}
+    <span class="{{ $class }} slidedeck"><a href="/pub/{{ . }}-slidedeck.pdf">Slide&nbsp;Deck</a></span>
+  {{- end -}}
+{{- end -}}
+{{- with .entry.doi -}}
+  <span class="{{ $class }} pubref"><a href="https://doi.org/{{ . }}" target="_blank" rel="noopener">Release</a></span>
+{{- end -}}
+{{- with .entry.abstract -}}
+  <span class="{{ $class }} abstract"><a role="button" class="collapsed">Abstract</a></span>
+{{- end -}}
+{{- with .entry.bibtex -}}
+  <span class="{{ $class }} bibtex"><a role="button" class="collapsed">BibTeX</a></span>
+{{- end -}}

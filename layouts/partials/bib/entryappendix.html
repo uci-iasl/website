@@ -1,0 +1,9 @@
+{{- $class := .class | default "" -}}
+{{- with .entry.abstract -}}
+  <div class="{{ $class }} abstract">
+    {{- range split . "\n\n" }}<p>{{ . }}</p>{{ end -}}
+  </div>
+{{- end -}}
+{{- with .entry.bibtex -}}
+  <div class="{{ $class }} bibtex"><pre><code>{{ . }}</code></pre></div>
+{{- end -}}
