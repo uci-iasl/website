@@ -23,11 +23,13 @@ name:
   middle: P.
   last: Brooks
   lineage: Jr.
-# Optional full name in the same format as above, for linking the
-# names in BibTeX 'author' and 'editor' fields to this personal page.
-# If omitted, the above 'name' entries are used, by default.
-bibname:
-  first: Frederick
+# A list of full names for linking from BibTeX 'author' and 'editor'
+# fields to this page, in the same format as above. If omitted, the
+# 'name' field is used for that purpose, so if your full bibliography
+# name is the same as in 'name', do not provide any 'bibnames'.
+# In case you ever changed your name, multiple entries are allowed.
+bibnames:
+- first: Frederick
   middle: Phillips
   last: Brooks
   lineage: Jr.
