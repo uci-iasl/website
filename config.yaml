@@ -9,6 +9,11 @@ markup:
       unsafe: true  # For embedded HTML in content/_index.md.
 
 enableRobotsTXT: true
+outputs:
+  home: [HTML]
+  section: [HTML]
+  taxonomy: [HTML]
+  term: [HTML]
 disableKinds:
 - taxonomy
 - taxonomyTerm
