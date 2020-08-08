@@ -7,6 +7,65 @@ Built using the [Hugo][hugo] static website generator.
 [iasl]: https://iasl.ics.uci.edu
 [hugo]: https://gohugo.io
 
+
+## Building
+
+In order to build the website, it is necessary to have a recent Hugo
+binary installed.
+Currently, the minimal required version is 0.62.
+Whenever possible, however, it is recommended to install the latest
+version.
+
+For different methods of installation available on your platform,
+see the [Install Hugo][hugo-install] page
+in the [Get Started][hugo-getstarted] section
+on the [Hugo][hugo] website.
+If you cannot use your platform’s package manager to install Hugo
+(e.g., due to the lack of permissions), or if the version available in
+the package is older than the minimal required one (as it is often the
+case with, e.g., Debian-based Linux distributions), you will have to
+install Hugo manually.
+
+Luckily, it is easy to do, as Hugo does not require installation per se:
+All you need is to have a copy of its binary available somewhere on
+the machine.
+The easiest way to obtain it is to use our own
+[`gethugo` script][iasl-gethugo].
+Just run it from any directory you have permissions to write in, and
+it will download the binary from the [latest release][hugo-releases-latest]
+of Hugo to that directory.
+Then, use that binary as usual; there is no need to put it in any
+specific directory—Hugo does not have any dependencies and runs
+fine from anywhere.
+
+Of course, you can also manually download the same binary (or any
+of its previous versions) for any of the supported platforms from
+the [Hugo Releases][hugo-releases] page on GitHub.
+
+To build the website, just run the Hugo binary without any arguments
+from the root directory of the repository:
+
+    $ hugo
+
+(Do not forget to specify the full path to the `hugo` binary, if you are
+using one installed manually outside of the directories listed in your
+`$PATH` environment variable.)
+
+The generated website pages ready to be served will be put under
+the `public` subdirectory, by default.
+
+For the exact list of command-line options used to invoke Hugo
+for building the release version of the website during deployment,
+see the [`fetchsite` script][iasl-fetchsite].
+
+[hugo-install]: https://gohugo.io/getting-started/installing
+[hugo-getstarted]: https://gohugo.io/getting-started/
+[hugo-releases]: https://github.com/gohugoio/hugo/releases
+[hugo-releases-latest]: https://github.com/gohugoio/hugo/releases/latest
+[iasl-gethugo]: https://github.com/uci-iasl/website/blob/release/scripts/gethugo
+[iasl-fetchsite]: https://github.com/uci-iasl/website/blob/release/scripts/fetchsite
+
+
 ## Contributing
 
 Contributions are accepted from the current and past full-time members
@@ -128,8 +187,8 @@ letters, digits, and hyphens, e.g., `autonomous-uav-iot` or
 
 ### Preview While Editing
 
-If you have [Hugo][hugo] installed, you can preview the pages you
-are editing in browser.
+If you [have Hugo installed](#building), you can preview the pages
+you are editing in browser.
 For that, you can run
 
     $ hugo server
