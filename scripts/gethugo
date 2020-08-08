@@ -34,6 +34,11 @@ fi
 case $OSTYPE in
 (linux*)	ossuffix=Linux;;
 (darwin*)	ossuffix=macOS;;
+(openbsd*)	ossuffix=OpenBSD;;
+(FreeBSD)	ossuffix=FreeBSD;;
+(netbsd)	ossuffix=NetBSD;;
+(DragonFly)	ossuffix=DragonFlyBSD;;
+(cygwin|msys)	ossuffix=Windows;;
 (*)	panic "$OSTYPE: unsupported platform"
 esac
 
