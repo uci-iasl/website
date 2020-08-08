@@ -9,11 +9,12 @@ references:
       last: Baidya
     - first: Marco
       last: Levorato
-    bibtex: "@inproceedings{callegaro-baidya-2020-icc,\n  author = {Davide Callegaro and Sabur Baidya and Marco Levorato},\n  title = {Dynamic Distributed Computing for Infrastructure-Assisted Autonomous {UAVs}},\n  booktitle = {Proceedings of the IEEE International Conference on Communications (ICC)},\n  note = {SAC Tactile Internet Track; accepted, publication pending},\n  address = {Dublin, Ireland},\n  month = jun,\n  year = {2020},\n}"
+    bibtex: "@inproceedings{callegaro-baidya-2020-icc,\n  author = {Davide Callegaro and Sabur Baidya and Marco Levorato},\n  title = {Dynamic Distributed Computing for Infrastructure-Assisted Autonomous {UAVs}},\n  booktitle = {Proceedings of the IEEE International Conference on Communications (ICC)},\n  note = {SAC Tactile Internet Track},\n  address = {Dublin, Ireland},\n  month = jun,\n  year = {2020},\n  doi = {10.1109/icc40277.2020.9148986},\n}"
     booktitle: Proceedings of the IEEE International Conference on Communications (ICC)
+    doi: 10.1109/icc40277.2020.9148986
     kind: inproceedings
     month: June
-    note: SAC Tactile Internet Track; accepted, publication pending
+    note: SAC Tactile Internet Track
     title: Dynamic Distributed Computing for Infrastructure-Assisted Autonomous UAVs
     year: '2020'
   callegaro-baidya-2019-milcom:
