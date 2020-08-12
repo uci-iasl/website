@@ -38,7 +38,6 @@ case $OSTYPE in
 (FreeBSD)	ossuffix=FreeBSD;;
 (netbsd)	ossuffix=NetBSD;;
 (DragonFly)	ossuffix=DragonFlyBSD;;
-(cygwin|msys)	ossuffix=Windows;;
 (*)	panic "$OSTYPE: unsupported platform"
 esac
 
