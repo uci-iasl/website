@@ -24,6 +24,9 @@ websites:
   url: http://labusers.net/~ymatsubara
 bibliography:
 - items:
+  - matsubara-vu-2020-sigir
+  - matsubara-levorato-2020-emdl
+  - matsubara-levorato-2020-icpr
   - matsubara-baidya-2019-mobicom
   - matsubara-nishimura-2016-icmla
   - matsubara-samura-2012-ists

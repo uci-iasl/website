@@ -1,4 +1,21 @@
 references:
+  matsubara-vu-2020-sigir:
+    abstract: IR-based Question Answering (QA) systems typically use a sentence selector to extract the answer from retrieved documents. Recent studies have shown that powerful neural models based on the Transformer can provide an accurate solution to Answer Sentence Selection (AS2). Unfortunately, their computation cost prevents their use in real-world applications. In this paper, we show that standard and efficient neural rerankers can be used to reduce the amount of sentence candidates fed to Transformer models without hurting Accuracy, thus improving efficiency up to four times. This is an important finding as the internal representation of shallower neural models is dramatically different from the one used by a Transformer model, e.g., word vs. contextual embeddings.
+    author:
+    - first: Yoshitomo
+      last: Matsubara
+    - first: Thuy
+      last: Vu
+    - first: Alessandro
+      last: Moschitti
+    bibtex: "@inproceedings{matsubara-vu-2020-sigir,\n  author = {Yoshitomo Matsubara and Thuy Vu and Alessandro Moschitti},\n  title = {Reranking for Efficient Transformer-Based Answer Selection},\n  booktitle = {Proceedings of the 43rd International ACM SIGIR Conference on Research and Development in Information Retrieval},\n  pages = {1577--1580},\n  month = jul,\n  year = {2020},\n  doi = {10.1145/3397271.3401266},\n}"
+    booktitle: Proceedings of the 43rd International ACM SIGIR Conference on Research and Development in Information Retrieval
+    doi: 10.1145/3397271.3401266
+    kind: inproceedings
+    month: July
+    pages: 1577–1580
+    title: Reranking for Efficient Transformer-Based Answer Selection
+    year: '2020'
   matsubara-nishimura-2016-icmla:
     address: Anaheim, California
     author:

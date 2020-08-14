@@ -34,6 +34,8 @@ address: |
 bibliography:
 - title: 2020
   items:
+  - matsubara-levorato-2020-emdl
+  - matsubara-levorato-2020-icpr
   - callegaro-baidya-2020-icc
 - title: 2019
   items:
