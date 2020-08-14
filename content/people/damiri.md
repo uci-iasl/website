@@ -2,9 +2,10 @@
 name:
   first: Delaram
   last: Amiri
-role: student-phd
-status: Ph.D. Candidate
+role: alumnus-phd
+status: Ph.D.
 yearjoined: 2015
+yeargraduated: 2020
 portrait: damiri.jpg
 badge: damiri-badge.jpg
 interests:
@@ -13,6 +14,9 @@ interests:
 - Optimization
 - Edge Computing
 education:
+- degree: Ph.D. in Computer Science
+  institution: University of California, Irvine, U.S.
+  year: 2020
 - degree: M.S. in Electrical Engineering, Communications
   institution: Indiana University–Purdue University Indianapolis, U.S.
   year: 2015
