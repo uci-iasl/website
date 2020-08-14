@@ -11,6 +11,9 @@
     <span class="{{ $class }} slidedeck"><a href="/pub/{{ . }}-slidedeck.pdf">Slide&nbsp;Deck</a></span>
   {{- end -}}
 {{- end -}}
+{{- with .entry.code -}}
+  <span class="{{ $class }} coderef"><a href="{{ . }}" target="_blank" rel="noopener">Code</a></span>
+{{- end -}}
 {{- with .entry.doi -}}
   <span class="{{ $class }} pubref"><a href="https://doi.org/{{ . }}" target="_blank" rel="noopener">Release</a></span>
 {{- end -}}
