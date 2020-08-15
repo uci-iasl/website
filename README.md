@@ -57,9 +57,12 @@ the `public` subdirectory, by default.
 For the exact list of command-line options used to invoke Hugo
 for building the release version of the website during deployment,
 see the [`fetchsite` script][iasl-fetchsite].
+For the help on using the `hugo` command in general, refer to the
+[corresponding page][hugo-command] in Hugo documentation.
 
 [hugo-install]: https://gohugo.io/getting-started/installing
 [hugo-getstarted]: https://gohugo.io/getting-started/
+[hugo-command]: https://gohugo.io/commands/hugo/
 [hugo-releases]: https://github.com/gohugoio/hugo/releases
 [hugo-releases-latest]: https://github.com/gohugoio/hugo/releases/latest
 [iasl-gethugo]: https://github.com/uci-iasl/website/blob/release/scripts/gethugo
