@@ -8,7 +8,7 @@
 
   {{- " " -}}
   <span class="extras">
-    {{- partialCached "bib/entry/extras.html" (dict "entry" .entry "class" "item" "Site" $.Page.Site) .entry.cacheid -}}
+    {{- partialCached "bib/entry/extras.html" (dict "entry" .entry "class" "item" "params" $.Page.Site.Params.bibliography "Site" $.Page.Site) .entry.cacheid -}}
     <span class="item linkhere"><a href="{{ .Page.RelPermalink }}#{{ .entry.id | urlize }}">¶</a></span>
   </span>{{ "" -}}
 

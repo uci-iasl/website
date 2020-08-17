@@ -40,6 +40,7 @@ params:
     etalkeep: 2
     citefirstnames: false
     citetitlecutoff: 30
+
     nameparts:
     - key: 'first'
       priority: 3
@@ -49,6 +50,14 @@ params:
       priority: 1
     - key: 'lineage'
       priority: 2
+
+    urltemplates:
+      doi: 'https://doi.org/%s'
+      eprint:
+        arxiv: 'https://arxiv.org/abs/%s'
+        hdl: 'https://hdl.handle.net/%s'
+        jstor: 'https://www.jstor.org/stable/%s'
+        pubmed: 'https://www.ncbi.nlm.nih.gov/pubmed/%s'
 
   people:
     roles:

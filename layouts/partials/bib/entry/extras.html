@@ -1,6 +1,7 @@
 {{- $class := .class | default "" -}}
+
 {{- with .entry.id | urlize -}}
-  {{/* Add a link to the PDF file, unless the title already links to it (see the bib/entry/title.html partial). */}}
+  {{- /* Add a link to the PDF file, unless the title already links to it (see the bib/entry/title.html partial). */ -}}
   {{- if and (printf "/publications/%s" . | $.Site.GetPage) (printf "static/pub/%s.pdf" . | fileExists) -}}
     <span class="{{ $class }} paper"><a href="/pub/{{ . }}.pdf">PDF</a></span>
   {{- end -}}
@@ -11,15 +12,31 @@
     <span class="{{ $class }} slidedeck"><a href="/pub/{{ . }}-slidedeck.pdf">Slide&nbsp;Deck</a></span>
   {{- end -}}
 {{- end -}}
+
 {{- with .entry.codeurl -}}
   <span class="{{ $class }} coderef"><a href="{{ . }}" target="_blank" rel="noopener">Code</a></span>
 {{- end -}}
-{{- with .entry.doi -}}
-  <span class="{{ $class }} pubref"><a href="https://doi.org/{{ . }}" target="_blank" rel="noopener">Release</a></span>
+
+{{- $puburl := "" -}}
+{{- if $pubid := .entry.doi | urlize -}}
+  {{- with $.params.urltemplates.doi -}}
+    {{- $puburl = printf . $pubid -}}
+  {{- end -}}
+{{- else if $pubid := .entry.eprint | urlize -}}
+  {{- /* For arXiv compatibility, allow the "archiveprefix" alias for "eprinttype". */ -}}
+  {{- $eprinttype := $.entry.eprinttype | default $.entry.archiveprefix | lower -}}
+  {{- with index $.params "urltemplates" "eprint" $eprinttype -}}
+    {{- $puburl = printf . $pubid -}}
+  {{- end -}}
 {{- end -}}
+{{- with $puburl -}}
+  <span class="{{ $class }} pubref"><a href="{{ . }}" target="_blank" rel="noopener">Release</a></span>
+{{- end -}}
+
 {{- with .entry.abstract -}}
   <span class="{{ $class }} abstract"><a role="button" class="collapsed">Abstract</a></span>
 {{- end -}}
+
 {{- with .entry.bibtex -}}
   <span class="{{ $class }} bibtex"><a role="button" class="collapsed">BibTeX</a></span>
 {{- end -}}
