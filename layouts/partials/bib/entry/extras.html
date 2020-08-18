@@ -11,7 +11,7 @@
     <span class="{{ $class }} slidedeck"><a href="/pub/{{ . }}-slidedeck.pdf">Slide&nbsp;Deck</a></span>
   {{- end -}}
 {{- end -}}
-{{- with .entry.code -}}
+{{- with .entry.codeurl -}}
   <span class="{{ $class }} coderef"><a href="{{ . }}" target="_blank" rel="noopener">Code</a></span>
 {{- end -}}
 {{- with .entry.doi -}}
