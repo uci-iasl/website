@@ -86,6 +86,7 @@ BIBTEX_MULTIPAR_TEX_TAGS = {
 # a snippet for a separate entry.
 BIBTEX_SNIPPET_IGNORE_TAGS = {
 	'abstract',
+	'code',
 }
 
 # The BibTeX fields whose values are not to undergo the expansion of
