@@ -1,15 +1,18 @@
-{{- $entrykindattr := .entry.kind | htmlEscape -}}
-<li class="{{ $entrykindattr }}{{ with .mark }} {{ . }}{{ end }}" data-bib-kind="{{ $entrykindattr }}">{{ "" -}}
-<section id="{{ .entry.id | urlize }}" class="bibentry {{ $entrykindattr }}">
+{{- $id := .entry.id | urlize -}}
+{{- $kind := .entry.kind | htmlEscape -}}
+{{- $params := $.Page.Site.Params.bibliography -}}
 
-  {{- partialCached "bib/entry/index.html" (dict "entry" .entry "params" $.Page.Site.Params.bibliography) .entry.cacheid -}}
+<li class="{{ $kind }}{{ with .mark }} {{ htmlEscape . }}{{ end }}" data-bib-kind="{{ $kind }}">{{ "" -}}
+<section id="{{ $id }}" class="bibentry {{ $kind }}">
 
-  {{- partialCached "bib/entry/citation.html" (dict "entry" .entry "params" $.Page.Site.Params.bibliography "peopleindex" $.peopleindex "Site" $.Page.Site) .entry.cacheid -}}
+  {{- partialCached "bib/entry/index.html" (dict "entry" .entry "params" $params) .entry.cacheid -}}
+
+  {{- partialCached "bib/entry/citation.html" (dict "entry" .entry "params" $params "peopleindex" $.peopleindex "Site" $.Page.Site) .entry.cacheid -}}
 
   {{- " " -}}
   <span class="extras">
-    {{- partialCached "bib/entry/extras.html" (dict "entry" .entry "class" "item" "params" $.Page.Site.Params.bibliography "Site" $.Page.Site) .entry.cacheid -}}
-    <span class="item linkhere"><a href="{{ .Page.RelPermalink }}#{{ .entry.id | urlize }}">¶</a></span>
+    {{- partialCached "bib/entry/extras.html" (dict "entry" .entry "class" "item" "params" $params "Site" $.Page.Site) .entry.cacheid -}}
+    <span class="item linkhere"><a href="{{ .Page.RelPermalink }}#{{ $id }}">¶</a></span>
   </span>{{ "" -}}
 
   <div class="appendix">
