@@ -1,9 +1,9 @@
 <ul class="bibliography">
-  {{- range $refstr := .items -}}
-    {{- $starred := hasPrefix $refstr "+" -}}
-    {{- $id := cond $starred (substr $refstr 1) $refstr -}}
+  {{- range $ref := .items -}}
+    {{- $isstarred := strings.HasSuffix $ref "*" -}}
+    {{- $id := strings.TrimSuffix "*" $ref -}}
     {{- with partial "bib/getentrydata" (dict "id" $id "Page" $.Page) -}}
-      {{- partial "bib/entry.html" (dict "entry" . "params" $.Page.Site.Params.bibliography "mark" (cond $starred "starred" "") "peopleindex" $.peopleindex "Page" $.Page) -}}
+      {{- partial "bib/entry.html" (dict "entry" . "params" $.Page.Site.Params.bibliography "mark" (cond $isstarred "starred" "") "peopleindex" $.peopleindex "Page" $.Page) -}}
     {{- else -}}
       {{- warnf "No data found for bibliography entry %q in file %q" $id $.Page.File.Path -}}
       <li class="missing-content">{{ "" -}}
