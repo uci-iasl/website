@@ -51,7 +51,7 @@ case $arch in
 esac
 
 build="hugo_${version}_${ossuffix}-${archsuffix}"
-dlurl="https://github.com/gohugoio/hugo/releases/download/v$version/$build.tar.gz"
+dlurl="https://github.com/gohugoio/hugo/releases/download/v${version}/${build}.tar.gz"
 
 archive=
 cleanup() { [[ -n $archive ]] && rm "$archive"; }
