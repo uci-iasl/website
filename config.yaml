@@ -51,6 +51,32 @@ params:
     - key: 'lineage'
       priority: 2
 
+    attachments:
+      manuscript:
+        label: 'Manuscript'
+        paths:
+        - 'pub/%s.pdf'
+        weight: 1
+      supplement:
+        label: 'Supplement'
+        paths:
+        - 'pub/%s-supplement.pdf'
+        weight: 2
+      poster:
+        label: 'Poster'
+        paths:
+        - 'pub/%s-poster.pdf'
+        weight: 3
+      slidedeck:
+        label: "Slide\u00A0Deck"
+        paths:
+        - 'pub/%s-slidedeck.pdf'
+        - 'pub/%s-slidedeck.pptx'
+        - 'pub/%s-slidedeck.ppt'
+        - 'pub/%s-slidedeck.key'
+        - 'pub/%s-slidedeck.odp'
+        weight: 4
+
     urltemplates:
       doi: 'https://doi.org/%s'
       eprint:

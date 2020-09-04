@@ -1,15 +1,20 @@
 {{- $class := .class | default "" -}}
 
-{{- with .entry.id | urlize -}}
-  {{- /* Add a link to the PDF file, unless the title already links to it (see the bib/entry/title.html partial). */ -}}
-  {{- if and (printf "/publications/%s" . | $.Site.GetPage) (printf "static/pub/%s.pdf" . | fileExists) -}}
-    <span class="{{ $class }} paper"><a href="/pub/{{ . }}.pdf">PDF</a></span>
+{{- if $bibid := .entry.id | urlize -}}
+  {{- $attachments := index $.params "attachments" | partial "util/itemize" -}}
+  {{- /* Skip the link to the manuscript if the title already links to it (see the bib/entry/title.html partial). */ -}}
+  {{- if not (printf "/publications/%s" $bibid | $.Site.GetPage) -}}
+    {{- $attachments = where $attachments "index" "!=" "manuscript" -}}
   {{- end -}}
-  {{- if printf "static/pub/%s-poster.pdf" . | fileExists -}}
-    <span class="{{ $class }} poster"><a href="/pub/{{ . }}-poster.pdf">Poster</a></span>
-  {{- end -}}
-  {{- if printf "static/pub/%s-slidedeck.pdf" . | fileExists -}}
-    <span class="{{ $class }} slidedeck"><a href="/pub/{{ . }}-slidedeck.pdf">Slide&nbsp;Deck</a></span>
+
+  {{- range $att := sort $attachments "item.weight" -}}
+    {{- if $path := partial "bib/entry/getattachmentpath" (dict "key" $bibid "attachment" $att.index "params" $.params) -}}
+      <span class="{{ $class }} {{ $att.index | htmlEscape }}">{{ "" -}}
+        <a href="{{ $path | relURL }}">
+          {{- with $att.item.label }}{{ . }}{{ else }}{{ $att.index | humanize | title }}{{ end -}}
+        </a>{{ "" -}}
+      </span>
+    {{- end -}}
   {{- end -}}
 {{- end -}}
 

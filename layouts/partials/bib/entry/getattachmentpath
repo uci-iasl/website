@@ -1,0 +1,11 @@
+{{- $path := "" -}}
+{{- range index $.params "attachments" $.attachment "paths" -}}
+  {{- if not $path -}}
+    {{- if $p := printf . $.key -}}
+      {{- if print "static/" $p | fileExists -}}
+        {{- $path = $p -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- return $path -}}

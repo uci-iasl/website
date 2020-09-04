@@ -1,0 +1,5 @@
+{{- $items := slice -}}
+{{- range $index, $item := . -}}
+  {{- $items = $items | append (dict "index" $index "item" $item) -}}
+{{- end -}}
+{{- return $items -}}
