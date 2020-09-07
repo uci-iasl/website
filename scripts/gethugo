@@ -7,7 +7,7 @@
 # repository on GitHub, and extracts it into the directory given in
 # the only argument (or the current working directory, if missing).
 
-. "$(dirname "$0")"/libusage.bash
+. "$(dirname -- "$0")"/libusage.bash
 usage='[-v version] [install-path]'
 
 version=
@@ -54,7 +54,7 @@ build="hugo_${version}_${ossuffix}-${archsuffix}"
 dlurl="https://github.com/gohugoio/hugo/releases/download/v${version}/${build}.tar.gz"
 
 archive=
-cleanup() { [[ -n $archive ]] && rm "$archive"; }
+cleanup() { [[ -n $archive ]] && rm -- "$archive"; }
 trap cleanup EXIT
 archive="$(mktemp)" || exit
 

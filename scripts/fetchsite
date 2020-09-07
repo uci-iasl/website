@@ -13,7 +13,7 @@
 # directory (or the directory given by the -o option). The -l option
 # specifies the path to use for the lock file.
 
-. "$(dirname "$0")"/libusage.bash
+. "$(dirname -- "$0")"/libusage.bash
 usage='[-b branch] [-g hugo-bin] [-l lock-file] [-o output-dir] [-r repo-url] [-u base-url] repo-dir'
 
 branch=release
@@ -41,14 +41,14 @@ repodir="$1"
 [[ ! -e $repodir || -d $repodir ]] || panic "$repodir: file exists and is not a directory"
 
 lockfile=
-cleanup() { [[ -n $lockfile ]] && rm "$lockfile"; }
+cleanup() { [[ -n $lockfile ]] && rm -- "$lockfile"; }
 trap cleanup EXIT
 
 [[ -n $lockfile ]] || lockfile="$HOME/.$argv0.lock"
 [[ -f $lockfile ]] && panic "$lockfile: lock file exists; another fetching process must be in progress"
 echo $$ >"$lockfile" || panic "$lockfile: writing to lock file failed"
 
-hugobinpath="$(which "$hugobin")" || panic "$hugobin: Hugo executable does not exist nor can be found in \$PATH"
+hugobinpath="$(which -- "$hugobin")" || panic "$hugobin: Hugo executable does not exist nor can be found in \$PATH"
 hugobinpath="$(abspath "$hugobinpath")"
 wwwdirpath="$(abspath "$wwwdir")"
 

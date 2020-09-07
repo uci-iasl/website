@@ -1,6 +1,6 @@
 # bash(1) helper functions for scripting minutiae.
 
-argv0="$(basename "$0")"
+argv0="${0##*/}"
 
 log() { printf '%s: %s\n' "$argv0" "$*" >&2; }
 panic() { log "$@"; exit 1; }
@@ -17,10 +17,11 @@ usagebadopt() {
 }
 
 abspath() {
-	local dir="$1" file
+	local dir="$1" file path
 	if [[ ! -d $dir ]]; then
-		file="$(basename "$dir")"
-		dir="$(dirname "$dir")"
+		file="$(basename -- "$dir")"
+		dir="$(dirname -- "$dir")"
 	fi
-	printf %s "$(cd "$dir"; pwd)/$file"
+	path="$(cd -- "$dir" && pwd)" &&
+	printf %s "$path/$file"
 }
