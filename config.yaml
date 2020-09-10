@@ -88,20 +88,27 @@ params:
 
   people:
     roles:
-    - id: 'faculty'
-      plural: 'Faculty'
-    - id: 'postdoc'
-      plural: 'Postdocs'
-    - id: 'student-phd'
-      plural: 'Ph.D. Students'
-    - id: 'student-masters'
-      plural: 'Master’s Students'
-    - id: 'alumnus-phd'
-      plural: 'Ph.D. Alumni'
-    - id: 'alumnus-masters'
-      plural: 'Master’s Alumni'
-    - id: 'visitor'
-      plural: 'Visitors'
+      faculty:
+        title: 'Faculty'
+        weight: 1
+      postdoc:
+        title: 'Postdocs'
+        weight: 2
+      student-phd:
+        title: 'Ph.D. Students'
+        weight: 3
+      student-masters:
+        title: 'Master’s Students'
+        weight: 4
+      alumnus-phd:
+        title: 'Ph.D. Alumni'
+        weight: 5
+      alumnus-masters:
+        title: 'Master’s Alumni'
+        weight: 6
+      visitor:
+        title: 'Visitors'
+        weight: 7
 
 menu:
   main:

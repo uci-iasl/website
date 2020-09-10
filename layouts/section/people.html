@@ -6,15 +6,16 @@
     </header>
     <section class="content">
       {{- $nameparts := sort .Site.Params.bibliography.nameparts "priority" "desc" -}}
-      {{- range $role := .Site.Params.people.roles }}
-        {{- if $pages := where $.RegularPages "Params.role" $role.id }}
-          <h1>{{ $role.plural }}</h1>
+      {{- $roles := index .Site.Params "people" "roles" | partial "util/itemize" -}}
+      {{- range $role := sort $roles "item.weight" }}
+        {{- if $pages := where $.RegularPages "Params.role" $role.index }}
+          <h1 id="{{ $role.index | urlize }}">{{ $role.item.title }}</h1>
           <ul class="people">
             {{- range $nameparts }}
               {{- $pages = $pages.ByParam (print "name." .key) }}
             {{- end }}
             {{- $pages = $pages.ByParam "yearjoined" }}
-            {{- if hasPrefix $role.id "alumnus" }}
+            {{- if hasPrefix $role.index "alumnus" }}
               {{- $pages = ($pages.ByParam "yeargraduated").Reverse }}
             {{- end }}
             {{- range $pages }}
