@@ -1,0 +1,6 @@
+{{- $input := . -}}
+{{- $output := slice -}}
+{{- range seq (sub (len $input) 1) -1 0 -}}
+  {{- $output = $output | append (index $input .) -}}
+{{- end -}}
+{{- return $output -}}

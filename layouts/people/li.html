@@ -17,9 +17,11 @@
       {{- end }}
       {{- with .Params.status }}<div class="status">{{ . }}</div>{{ end }}
       {{- with .Params.yearjoined }}
-        <div class="years">{{ partial "people/yearrange.html" $.Params }}</div>
+        <div class="years">
+          {{- partial "people/yearrange.html" (dict "person" $.Params "params" $.Site.Params.people) -}}
+        </div>
       {{- end }}
-      {{- if or (hasPrefix .Params.role "alumnus") (hasPrefix .Params.role "visitor") }}
+      {{- if index $.Site.Params "people" "roles" .Params.role "featurewebsite" }}
         {{- with .Params.websites }}
           {{- with index . 0 }}
             <div class="website">

@@ -22,7 +22,9 @@
         <section class="status">
           {{- .Params.status -}}
           {{- with .Params.yearjoined -}}
-            <span class="years">{{ partial "people/yearrange.html" $.Params }}</span>
+            <span class="years">
+              {{- partial "people/yearrange.html" (dict "person" $.Params "params" $.Site.Params.people) -}}
+            </span>
           {{- end -}}
         </section>
 

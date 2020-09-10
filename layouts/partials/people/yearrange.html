@@ -1,12 +1,21 @@
-{{- .yearjoined }}&hairsp;–&hairsp;
-{{- with .yeargraduated -}}
-  {{ . }}
-{{- else -}}
-  {{- if hasPrefix .role "student" -}}
-    {{- $t0 := .yearjoined | printf "%d-09-30T12:00:00-0700" | time -}}
-    {{- $years := div (sub now.Unix $t0.Unix) 31104000 -}}
-    <span title="{{ $years | add 1 | humanize }} academic year">now</span>
-  {{- else -}}
-    now
+{{- with $.person -}}
+  {{- if .yearjoined -}}
+    {{- .yearjoined }}&hairsp;–&hairsp;
+    {{- with .yeargraduated -}}
+      {{ . }}
+    {{- else -}}
+      {{- $years := -1 -}}
+      {{- if $transitdatetemplate := $.params.academicyeartransitdate -}}
+        {{- if index $.params "roles" .role "academicyearhint" -}}
+          {{- $transitdate := printf $transitdatetemplate now.Year | time -}}
+          {{- $years = sub (sub now.Year .yearjoined) (cond (now.Before $transitdate) 1 0) -}}
+        {{- end -}}
+      {{- end -}}
+      {{- if ge $years 0 -}}
+        <span title="{{ $years | add 1 | humanize }} academic year">now</span>
+      {{- else -}}
+        now
+      {{- end -}}
+    {{- end -}}
   {{- end -}}
 {{- end -}}

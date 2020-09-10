@@ -90,25 +90,41 @@ params:
     roles:
       faculty:
         title: 'Faculty'
+        sortby: [↑yearjoined, ↑name]
         weight: 1
       postdoc:
         title: 'Postdocs'
+        sortby: [↑yearjoined, ↑name]
         weight: 2
       student-phd:
         title: 'Ph.D. Students'
+        sortby: [↑yearjoined, ↑name]
+        academicyearhint: true
         weight: 3
       student-masters:
         title: 'Master’s Students'
+        sortby: [↑yearjoined, ↑name]
+        academicyearhint: true
         weight: 4
       alumnus-phd:
         title: 'Ph.D. Alumni'
+        sortby: [↓yeargraduated, ↑yearjoined, ↑name]
+        featurewebsite: true
         weight: 5
       alumnus-masters:
         title: 'Master’s Alumni'
+        sortby: [↓yeargraduated, ↑yearjoined, ↑name]
+        featurewebsite: true
         weight: 6
       visitor:
         title: 'Visitors'
+        sortby: [↑yearjoined, ↑name]
+        featurewebsite: true
         weight: 7
+
+    # The earliest date by which the Fall quarter is guaranteed to
+    # have started. Used for academic-year hints in year ranges.
+    academicyeartransitdate: '%d-10-01T00:00:00-0700'
 
 menu:
   main:

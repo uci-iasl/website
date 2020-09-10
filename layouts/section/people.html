@@ -7,23 +7,35 @@
     <section class="content">
       {{- $nameparts := sort .Site.Params.bibliography.nameparts "priority" "desc" -}}
       {{- $roles := index .Site.Params "people" "roles" | partial "util/itemize" -}}
-      {{- range $role := sort $roles "item.weight" }}
-        {{- if $pages := where $.RegularPages "Params.role" $role.index }}
+      {{- range $role := sort $roles "item.weight" -}}
+        {{- if $pages := where $.RegularPages "Params.role" $role.index -}}
+          {{- range $sortspec := partial "util/reverse" $role.item.sortby -}}
+            {{- $sortdesc := strings.HasPrefix $sortspec "↓" -}}
+            {{- $sortkey := strings.TrimPrefix (cond $sortdesc "↓" "↑") $sortspec -}}
+            {{- if $sortdesc -}}
+              {{- $pages = $pages.Reverse -}}
+            {{- end -}}
+            {{- if eq $sortkey "name" -}}
+              {{- range $nameparts -}}
+                {{- $pages = $pages.ByParam (print "name." .key) -}}
+              {{- end -}}
+            {{- else -}}
+              {{- $pages = $pages.ByParam $sortkey -}}
+            {{- end -}}
+            {{- if $sortdesc -}}
+              {{- $pages = $pages.Reverse -}}
+            {{- end -}}
+          {{- end -}}
+
           <h1 id="{{ $role.index | urlize }}">{{ $role.item.title }}</h1>
           <ul class="people">
-            {{- range $nameparts }}
-              {{- $pages = $pages.ByParam (print "name." .key) }}
-            {{- end }}
-            {{- $pages = $pages.ByParam "yearjoined" }}
-            {{- if hasPrefix $role.index "alumnus" }}
-              {{- $pages = ($pages.ByParam "yeargraduated").Reverse }}
-            {{- end }}
             {{- range $pages }}
               {{ .Render "li" }}
             {{- end }}
           </ul>
         {{- end }}
       {{- end }}
+
       {{ .Content }}
     </section>
   </article>
