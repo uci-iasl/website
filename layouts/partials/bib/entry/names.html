@@ -31,10 +31,10 @@
       {{- $authorurl := "" -}}
       {{- if and (not $citemode) (not $isothers) -}}
         {{- $isexternal := false -}}
-        {{- with index $.peopleindex.internal $nameid -}}
+        {{- with index $.peopleindex "internal" $nameid -}}
           {{- $authorurl = .RelPermalink -}}
         {{- else -}}
-          {{- with index $.peopleindex.external $nameid -}}
+          {{- with index $.peopleindex "external" $nameid -}}
             {{- $authorurl = .url -}}
             {{- $isexternal = true -}}
           {{- end -}}
