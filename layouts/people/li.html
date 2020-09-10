@@ -19,11 +19,13 @@
       {{- with .Params.yearjoined }}
         <div class="years">{{ partial "people/yearrange.html" $.Params }}</div>
       {{- end }}
-      {{- if and (hasPrefix .Params.role "alumnus") (isset .Params "websites") }}
-        {{- with index .Params.websites 0 }}
-          <div class="website">
-            <a href="{{ .url }}" target="_blank" rel="noopener">Website</a>
-          </div>
+      {{- if or (hasPrefix .Params.role "alumnus") (hasPrefix .Params.role "visitor") }}
+        {{- with .Params.websites }}
+          {{- with index . 0 }}
+            <div class="website">
+              <a href="{{ .url }}" target="_blank" rel="noopener">Website</a>
+            </div>
+          {{- end }}
         {{- end }}
       {{- end }}
     </div>
