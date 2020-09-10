@@ -1,5 +1,5 @@
 <span class="date">
-  {{- if index .entry "month" -}}
+  {{- if .entry.month -}}
     {{- $month := replaceRE `\s*(-+|–|—)\s*` "–" .entry.month -}}
     {{- if $.params.abbrevmonths -}}
       {{- $month | replaceRE `(\w\w\w)\w+` "$1." -}}

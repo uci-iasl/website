@@ -1,7 +1,7 @@
 {{- $class := .class | default "" -}}
 
 {{- if $bibid := .entry.id | urlize -}}
-  {{- $attachments := index $.params "attachments" | partial "util/itemize" -}}
+  {{- $attachments := partial "util/itemize" $.params.attachments -}}
   {{- /* Skip the link to the manuscript if the title already links to it (see the bib/entry/title.html partial). */ -}}
   {{- if not (printf "/publications/%s" $bibid | $.Site.GetPage) -}}
     {{- $attachments = where $attachments "index" "!=" "manuscript" -}}

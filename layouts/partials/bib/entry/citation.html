@@ -1,13 +1,11 @@
 {{- if false -}}
 
 {{- else if eq .entry.kind "book" -}}
-  {{- $hasauthor := index .entry "author" | not | not -}}
-  {{- $haseditor := index .entry "editor" | not | not -}}
-  {{- if $hasauthor -}}
+  {{- if .entry.author -}}
     <span class="authors">
       {{- partial "bib/entry/names.html" (dict "names" .entry.author "params" $.params "peopleindex" $.peopleindex) -}}
     </span>{{ ", " -}}
-  {{- else if $haseditor -}}
+  {{- else if .entry.editor -}}
     <span class="editors">
       {{- partial "bib/entry/names.html" (dict "names" .entry.editor "params" $.params "peopleindex" $.peopleindex) -}}
     </span>{{ ", " -}}
@@ -16,7 +14,7 @@
   {{- with .entry.title }}{{ partial "bib/entry/title.html" (dict "entry" $.entry "params" $.params "Site" $.Site) }}{{ end -}}
   {{- with .entry.edition }}{{ ", " }}<span class="edition">{{ humanize . }}&nbsp;ed.</span>{{ end -}}
   {{- with .entry.series }}{{ ", " }}<span class="series">ser.&nbsp;{{ . }}</span>{{ end -}}
-  {{- if and $hasauthor $haseditor -}}
+  {{- if and .entry.author .entry.editor -}}
     {{ ", " }}<span class="editors">
       {{- partial "bib/entry/names.html" (dict "names" .entry.editor "params" $.params "peopleindex" $.peopleindex) -}}
     </span>{{ ", " -}}
@@ -30,13 +28,11 @@
   {{- with .entry.number }}{{ ", " }}<span class="number">no.&nbsp;{{ . }}</span>{{ end -}}
 
 {{- else if eq .entry.kind "inbook" -}}
-  {{- $hasauthor := index .entry "author" | not | not -}}
-  {{- $haseditor := index .entry "editor" | not | not -}}
-  {{- if $hasauthor -}}
+  {{- if .entry.author -}}
     <span class="authors">
       {{- partial "bib/entry/names.html" (dict "names" .entry.author "params" $.params "peopleindex" $.peopleindex) -}}
     </span>{{ ", " -}}
-  {{- else if $haseditor -}}
+  {{- else if .entry.editor -}}
     <span class="editors">
       {{- partial "bib/entry/names.html" (dict "names" .entry.editor "params" $.params "peopleindex" $.peopleindex) -}}
     </span>{{ ", " -}}
@@ -101,7 +97,7 @@
   {{- end -}}
   {{- with .entry.title }}{{ partial "bib/entry/title.html" (dict "entry" $.entry "params" $.params "Site" $.Site) }}{{ end -}}
   {{- with .entry.booktitle -}}
-    {{- ", "}}{{- with index $.entry "intype" | default "in" }}{{ . }}{{ " " }}{{ end -}}
+    {{- ", "}}{{- with $.entry.intype | default "in" }}{{ . }}{{ " " }}{{ end -}}
     <span class="booktitle">{{ . }}</span>
   {{- end -}}
   {{- with .entry.series }}{{ ", " }}<span class="series">ser.&nbsp;{{ . }}</span>{{ end -}}
@@ -115,7 +111,7 @@
   {{- with .entry.number }}{{ ", " }}<span class="number">no.&nbsp;{{ . }}</span>{{ end -}}
   {{- with .entry.articleno }}{{ ", " }}<span class="articleno">article no.&nbsp;{{ . }}</span>{{ end -}}
   {{- with .entry.organization }}{{ ", " }}<span class="organization">{{ . }}</span>{{ end -}}
-  {{- if index .entry "publisher" -}}
+  {{- if .entry.publisher -}}
     {{- ". " -}}
     {{- with .entry.address }}<span class="address">{{ . }}</span>{{ ": " }}{{ end -}}
     <span class="publisher">{{ .entry.publisher }}</span>
@@ -138,7 +134,7 @@
   {{- with .entry.volume }}{{ ", " }}<span class="volume">vol.&nbsp;{{ . }}</span>{{ end -}}
   {{- with .entry.number }}{{ ", " }}<span class="number">no.&nbsp;{{ . }}</span>{{ end -}}
   {{- with .entry.organization }}{{ ", " }}<span class="organization">{{ . }}</span>{{ end -}}
-  {{- if index .entry "publisher" -}}
+  {{- if .entry.publisher -}}
     {{- ". " -}}
     {{- with .entry.address }}<span class="address">{{ . }}</span>{{ ": " }}{{ end -}}
     <span class="publisher">{{ .entry.publisher }}</span>
