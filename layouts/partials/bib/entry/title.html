@@ -5,7 +5,7 @@
       <a href="/publications/{{ $id }}/">{{ .title }}</a>
     {{- else if $path := partial "bib/entry/getattachmentpath" (dict "key" $id "attachment" "manuscript" "params" $.params) -}}
       <a href="{{ $path | relURL }}">{{ .title }}</a>
-    {{- else if isset . "url" -}}
+    {{- else if .url -}}
       <a href="{{ .url }}"{{ if (urls.Parse .url).Scheme }} target="_blank" rel="noopener"{{ end }}>{{ .title }}</a>
     {{- else -}}
       {{- .title -}}

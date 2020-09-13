@@ -6,7 +6,7 @@
     </span>
     {{- with .Site.Params.copyright -}}
       {{- " " -}}
-      {{- if isset . "url" -}}
+      {{- if .url -}}
         <a href="{{ .url }}"{{ if (urls.Parse .url).Scheme }} target="_blank" rel="noopener"{{ end }}>{{ .title }}</a>
       {{- else -}}
         {{- .title -}}
