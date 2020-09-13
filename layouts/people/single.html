@@ -53,9 +53,9 @@
               {{- if (urls.Parse .).Scheme -}}
                 <a class="resume" href="{{ . }}" target="_blank" rel="noopener">Full Resume</a>
               {{- else -}}
-                {{- $relurl := printf "/dl/people/%s/%s" $.File.TranslationBaseName . -}}
-                {{- if printf "static/%s" $relurl | fileExists -}}
-                  <a class="resume" href="{{ $relurl }}">Full Resume</a>
+                {{- $path := printf "dl/people/%s/%s" $.File.TranslationBaseName . -}}
+                {{- if printf "static/%s" $path | fileExists -}}
+                  <a class="resume" href="{{ $path | relURL }}">Full Resume</a>
                 {{- end -}}
               {{- end -}}
             {{- end }}
