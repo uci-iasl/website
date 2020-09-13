@@ -1,4 +1,4 @@
-{{- $dash := "–" -}}
+{{- $dash := "\u200A–\u200A" -}}
 {{- $text := . | replaceRE `\s*(-+|–|—)\s*` $dash -}}
 <span class="pages">
   {{- if $dash | in $text }}p{{ end }}p.&nbsp;{{ $text -}}
