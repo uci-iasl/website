@@ -1,12 +1,12 @@
 <span class="date">
   {{- if .entry.month -}}
-    {{- $month := replaceRE `\s*(-+|–|—)\s*` "–" .entry.month -}}
+    {{- $month := .entry.month | replaceRE `\s*(-+|–|—)\s*` "–" -}}
     {{- if $.params.abbrevmonths -}}
-      {{- $month | replaceRE `(\w\w\w)\w+` "$1." -}}
-    {{- else -}}
-      {{- $month -}}
+      {{- $month = $month | replaceRE `(\w\w\w)\w+` "$1." -}}
     {{- end -}}
-    {{- with .entry.day }}&nbsp;{{ . }}{{ "," }}{{ end }}{{ " " -}}
+    {{- $month -}}
+    {{- with .entry.day }}&nbsp;{{ . }}{{ "," }}{{ end -}}
+    {{- " " -}}
   {{- end -}}
   {{- .entry.year -}}
 </span>{{ "" -}}
