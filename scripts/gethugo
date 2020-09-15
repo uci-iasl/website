@@ -1,19 +1,26 @@
 #!/usr/bin/env bash
 #
-#	gethugo [-v version] [install-path]
+#	gethugo [-p] [-v version] [install-path]
 #
 # Downloads the archive with the latest released version of the Hugo
 # binary (or the version given via the -v option) from the official
 # repository on GitHub, and extracts it into the directory given in
 # the only argument (or the current working directory, if missing).
+#
+# If the -p option is given and the 'hugo' file is already present in
+# the target directory, attempts to execute it to obtain its version,
+# assuming it is a Hugo binary. If the reported version is identical
+# to the one to be downloaded, cancels the download.
 
 . "$(dirname -- "$0")"/libusage.bash
-usage='[-v version] [install-path]'
+usage='[-p] [-v version] [install-path]'
 
 version=
+probeexisting=
 
-while getopts ':v:' opt; do
+while getopts ':pv:' opt; do
 	case $opt in
+	(p)	probeexisting=1;;
 	(v)	version="$OPTARG";;
 	(*)	usagebadopt "$opt";;
 	esac
@@ -21,6 +28,7 @@ done
 shift $((OPTIND-1)); [[ $1 == -- ]] && shift
 
 binpath="${1:-.}"
+target="$binpath/hugo"
 [[ -d $binpath ]] || panic "$binpath: directory does not exist"
 
 if [[ -z $version ]]; then
@@ -29,6 +37,14 @@ if [[ -z $version ]]; then
 		sed -n '/.*"tag_name": *"v\([^"]\{1,\}\)".*/{s//\1/p;q;}'
 	)"
 	[[ -n $version ]] || panic 'failed to determine the latest version'
+fi
+
+if [[ -n $probeexisting && -x $target ]]; then
+	presentversion="$("$target" version | sed -n 's/.* v\([0-9.]\{1,\}\).*/\1/p')"
+	if [[ $presentversion == $version ]]; then
+		log "'$target' is already of version '$version'; no download is necessary"
+		exit
+	fi
 fi
 
 case $OSTYPE in
@@ -58,6 +74,6 @@ cleanup() { [[ -n $archive ]] && rm -- "$archive"; }
 trap cleanup EXIT
 archive="$(mktemp)" || exit
 
-log "attempting to download Hugo version '$version' from '$dlurl'"
+log "attempting to download Hugo version '$version' from '$dlurl' to '$target'"
 curl -o "$archive" -L "$dlurl" &&
 tar -xzf "$archive" -C "$binpath" hugo
