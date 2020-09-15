@@ -9,7 +9,7 @@
           {{- .Pre -}}
           {{- $slashensuredurl := .URL | printf "%s/" | relURL -}}
           {{- $isactive := hasPrefix $.RelPermalink $slashensuredurl -}}
-          <a href="{{ .URL }}"{{ if $isactive }} class="active"{{ end }}>{{ .Name }}</a>
+          <a href="{{ .URL }}"{{ if $isactive }} class="active"{{ end }}{{ if (urls.Parse .URL).Scheme }} target="_blank" rel="noopener"{{ end }}>{{ .Name }}</a>
           {{- .Post -}}
         </span>
       {{- end -}}
