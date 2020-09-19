@@ -15,19 +15,23 @@
       {{- end -}}
     </div>
   {{- end -}}
+
   <div class="logo">
     <a href="https://www.ics.uci.edu" target="_blank" rel="noopener">
       <img src="/img/logo/anteater.png" alt="UCI ICS">
     </a>
   </div>
-  {{- with .Site.Params.contact }}
-    <div class="contact">
-      Contact:
-      {{- " " -}}
-      {{- if .url -}}
-        <a href="{{ .url }}"{{ if (urls.Parse .url).Scheme }} target="_blank" rel="noopener"{{ end }}>{{ .label }}</a>
-      {{- else -}}
-        {{- .label -}}
+
+  {{- with .Site.Params.contacts }}
+    <div class="contacts">
+      {{- range . -}}
+        <span class="item">
+          {{- if .url -}}
+            <a href="{{ .url }}"{{ if (urls.Parse .url).Scheme }} target="_blank" rel="noopener"{{ end }}>{{ .label }}</a>
+          {{- else -}}
+            {{- .label -}}
+          {{- end -}}
+        </span>
       {{- end -}}
     </div>
   {{- end }}

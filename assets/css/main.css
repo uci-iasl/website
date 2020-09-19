@@ -163,8 +163,14 @@ body > footer .copyright {
 body > footer .copyright > .years::before {
   content: '© ';
 }
-body > footer .contact {
+body > footer .contacts {
   float: right;
+}
+body > footer .contacts > .item:first-of-type::before {
+  content: 'Contact: ';
+}
+body > footer .contacts > .item:not(:first-of-type)::before {
+  content: ', ';
 }
 body > footer .logo {
   position: absolute;
