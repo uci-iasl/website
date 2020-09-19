@@ -160,6 +160,9 @@ body > footer > div {
 body > footer .copyright {
   float: left;
 }
+body > footer .copyright > .years::before {
+  content: '© ';
+}
 body > footer .contact {
   float: right;
 }

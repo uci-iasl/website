@@ -1,18 +1,20 @@
 <footer class="wrap">
-  <div class="copyright">
-    &copy;&nbsp;2014&hairsp;–&hairsp;{{ "" -}}
-    <span title="{{ now.Format .Site.Params.datetimeformat }}">
-      {{- now.Format "2006" -}}
-    </span>
-    {{- with .Site.Params.copyright -}}
+  {{- with .Site.Params.copyright -}}
+    <div class="copyright">
+      <span class="years">
+        {{- with .startyear }}{{ . }}&hairsp;–&hairsp;{{ end -}}
+        <span title="{{ now.Format $.Site.Params.datetimeformat }}">
+          {{- with .endyear }}{{ . }}{{ else }}{{ now.Format "2006" }}{{ end -}}
+        </span>
+      </span>
       {{- " " -}}
       {{- if .url -}}
         <a href="{{ .url }}"{{ if (urls.Parse .url).Scheme }} target="_blank" rel="noopener"{{ end }}>{{ .label }}</a>
       {{- else -}}
         {{- .label -}}
       {{- end -}}
-    {{- end -}}
-  </div>
+    </div>
+  {{- end -}}
   <div class="logo">
     <a href="https://www.ics.uci.edu" target="_blank" rel="noopener">
       <img src="/img/logo/anteater.png" alt="UCI ICS">

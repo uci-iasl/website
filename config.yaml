@@ -28,6 +28,7 @@ params:
     label: 'Marco Levorato'
     url: 'mailto:Marco Levorato <levorato+www@uci.edu>'
   copyright:
+    startyear: 2014
     label: 'IASL'
     url: 'https://github.com/uci-iasl/website'
   dateformat: 'Jan 2, 2006'
