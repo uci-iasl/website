@@ -30,8 +30,8 @@ params:
   copyright:
     title: 'IASL'
     url: 'https://github.com/uci-iasl/website'
-  datedayfmt: 'Jan 2, 2006'
-  datedaytimefmt: 'Jan 2, 2006, 15:04 MST'
+  dateformat: 'Jan 2, 2006'
+  datetimeformat: 'Jan 2, 2006, 15:04 MST'
 
   bibliography:
     abbrevmonths: true

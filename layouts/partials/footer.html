@@ -1,8 +1,8 @@
 <footer class="wrap">
   <div class="copyright">
     &copy;&nbsp;2014&hairsp;–&hairsp;{{ "" -}}
-    <span title="{{ now | dateFormat .Site.Params.datedaytimefmt }}">
-      {{- now | dateFormat "2006" -}}
+    <span title="{{ now.Format .Site.Params.datetimeformat }}">
+      {{- now.Format "2006" -}}
     </span>
     {{- with .Site.Params.copyright -}}
       {{- " " -}}
