@@ -25,10 +25,10 @@ params:
     by the Intelligent and Autonomous Systems Lab
     at University of California, Irvine
   contact:
-    name: 'Marco Levorato'
-    email: 'levorato+www@uci.edu'
+    label: 'Marco Levorato'
+    url: 'mailto:Marco Levorato <levorato+www@uci.edu>'
   copyright:
-    title: 'IASL'
+    label: 'IASL'
     url: 'https://github.com/uci-iasl/website'
   dateformat: 'Jan 2, 2006'
   datetimeformat: 'Jan 2, 2006, 15:04 MST'

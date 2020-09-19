@@ -7,9 +7,9 @@
     {{- with .Site.Params.copyright -}}
       {{- " " -}}
       {{- if .url -}}
-        <a href="{{ .url }}"{{ if (urls.Parse .url).Scheme }} target="_blank" rel="noopener"{{ end }}>{{ .title }}</a>
+        <a href="{{ .url }}"{{ if (urls.Parse .url).Scheme }} target="_blank" rel="noopener"{{ end }}>{{ .label }}</a>
       {{- else -}}
-        {{- .title -}}
+        {{- .label -}}
       {{- end -}}
     {{- end -}}
   </div>
@@ -21,9 +21,12 @@
   {{- with .Site.Params.contact }}
     <div class="contact">
       Contact:
-      <a class="email" href="mailto:{{ .name }} <{{ .email }}>">
-        {{- .name | default .email -}}
-      </a>
+      {{- " " -}}
+      {{- if .url -}}
+        <a href="{{ .url }}"{{ if (urls.Parse .url).Scheme }} target="_blank" rel="noopener"{{ end }}>{{ .label }}</a>
+      {{- else -}}
+        {{- .label -}}
+      {{- end -}}
     </div>
   {{- end }}
 </footer>
