@@ -9,9 +9,11 @@
 <span class="keywords-index">
   {{- if $kwstr := .entry.keyword -}}
     {{- $keywords := slice $kwstr -}}
-    {{- range $sep := slice ";" "," -}}
-      {{- if le (len $keywords) 1 -}}
-        {{- $keywords = split $kwstr $sep -}}
+    {{- with index $.params "format" "keywordseparators" -}}
+      {{- range $sep := . -}}
+        {{- if le (len $keywords) 1 -}}
+          {{- $keywords = split $kwstr $sep -}}
+        {{- end -}}
       {{- end -}}
     {{- end -}}
     {{- range $keywords -}}

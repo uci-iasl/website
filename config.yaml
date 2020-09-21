@@ -42,6 +42,9 @@ params:
     citefirstnames: false
     citetitlecutoff: 30
 
+    format:
+      keywordseparators: [';', ',']
+
     nameparts:
     - key: 'first'
       priority: 3
