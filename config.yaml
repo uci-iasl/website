@@ -43,17 +43,16 @@ params:
     citetitlecutoff: 30
 
     format:
+      nameparts:
+      - key: 'first'
+        priority: 3
+      - key: 'middle'
+        priority: 4
+      - key: 'last'
+        priority: 1
+      - key: 'lineage'
+        priority: 2
       keywordseparators: [';', ',']
-
-    nameparts:
-    - key: 'first'
-      priority: 3
-    - key: 'middle'
-      priority: 4
-    - key: 'last'
-      priority: 1
-    - key: 'lineage'
-      priority: 2
 
     attachments:
       manuscript:

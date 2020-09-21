@@ -5,7 +5,8 @@
       <h1 class="page-title">People</h1>
     </header>
     <section class="content">
-      {{- $nameparts := sort .Site.Params.bibliography.nameparts "priority" "desc" -}}
+      {{- $nameparts := index .Site.Params "bibliography" "format" "nameparts" -}}
+      {{- $nameparts = sort $nameparts "priority" "desc" -}}
       {{- $roles := index .Site.Params "people" "roles" | partial "util/itemize" -}}
       {{- range $role := sort $roles "item.weight" -}}
         {{- if $pages := where $.RegularPages "Params.role" $role.index -}}

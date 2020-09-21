@@ -1,8 +1,10 @@
 {{- $name := partial "bib/name/canonicalize" .name -}}
 {{- $parts := slice -}}
-{{- range $.params.nameparts -}}
-  {{- with index $name .key -}}
-    {{- $parts = $parts | append . -}}
+{{- with index $.params "format" "nameparts" -}}
+  {{- range . -}}
+    {{- with index $name .key -}}
+      {{- $parts = $parts | append . -}}
+    {{- end -}}
   {{- end -}}
 {{- end -}}
 {{- return (delimit $parts " " | string) -}}
