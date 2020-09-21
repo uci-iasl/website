@@ -35,13 +35,6 @@ params:
   datetimeformat: 'Jan 2, 2006, 15:04 MST'
 
   bibliography:
-    abbrevmonths: true
-    fullnames: false
-    etalcutoff: 5
-    etalkeep: 2
-    citefirstnames: false
-    citetitlecutoff: 30
-
     format:
       nameparts:
       - key: 'first'
@@ -53,6 +46,14 @@ params:
       - key: 'lineage'
         priority: 2
       keywordseparators: [';', ',']
+
+    display:
+      abbrevmonths: true
+      fullnames: false
+      etalcutoff: 5
+      etalkeep: 2
+      citefirstnames: false
+      citetitlecutoff: 30
 
     attachments:
       manuscript:

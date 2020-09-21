@@ -10,7 +10,11 @@
     {{- ", " }}{{ if gt (len .) 1 }}{{ "Eds." }}{{ else }}{{ "Ed." }}{{ end -}}
   {{- else -}}
     <span class="title">
-      {{- .entry.title | truncate $.params.citetitlecutoff "…" -}}
+      {{- $title := .entry.title -}}
+      {{- with index $.params "display" "citetitlecutoff" -}}
+        {{- $title = $title | truncate . "…" -}}
+      {{- end -}}
+      {{- $title -}}
     </span>
   {{- end -}}
 {{- end -}}

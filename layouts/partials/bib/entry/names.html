@@ -1,15 +1,24 @@
-{{- $citemode := eq .mode "citation" -}}
 {{- $len := len .names -}}
 {{- $lastidx := sub $len 1 -}}
-{{- $hasetal := gt $len .params.etalcutoff -}}
+
+{{- $hasetal := false -}}
+{{- with index .params "display" "etalcutoff" -}}
+  {{- $hasetal = gt $len . -}}
+{{- end -}}
+{{- $etalkeep := index .params "display" "etalkeep" -}}
 {{- $etallabel := "et&nbsp;al." | safeHTML -}}
-{{- $midnamespace := cond $.params.fullnames " " "&nbsp;" | safeHTML -}}
+
+{{- $showfullnames := index .params "display" "fullnames" -}}
+{{- $midnamespace := cond $showfullnames " " "&nbsp;" | safeHTML -}}
+
+{{- $citemode := eq .mode "citation" -}}
+{{- $citefirstnames := index .params "display" "citefirstnames" -}}
 
 {{- range $idx, $author := .names -}}
   {{- $nameid := partial "bib/name/getnameid" (dict "name" $author "params" $.params) -}}
   {{- $fullname := partial "bib/name/getfullname" (dict "name" $author "params" $.params) -}}
   {{- $isothers := and (eq $author.last $fullname) (eq $fullname "others") -}}
-  {{- $insideetal := and $hasetal (ge $idx $.params.etalkeep) -}}
+  {{- $insideetal := and $hasetal (ge $idx $etalkeep) -}}
 
   {{- if or (not $insideetal) (and $insideetal (not $citemode)) -}}
     {{- if gt $idx 0 -}}
@@ -21,13 +30,13 @@
       {{- end -}}
       {{- " " -}}
     {{- end -}}
-    {{- if and (not $citemode) $hasetal (eq $idx $.params.etalkeep) -}}
+    {{- if and (not $citemode) $hasetal (eq $idx $etalkeep) -}}
       <span class="etal">{{ "" -}}
         <a role="button">{{ $etallabel }}</a>{{ "" -}}
         <span class="content">
     {{- end -}}
 
-    <span class="name"{{ if and (not $citemode) (not $.params.fullnames) }} title="{{ $fullname }}"{{ end }}>
+    <span class="name"{{ if and (not $citemode) (not $showfullnames) }} title="{{ $fullname }}"{{ end }}>
       {{- $authorurl := "" -}}
       {{- if and (not $citemode) (not $isothers) -}}
         {{- $isexternal := false -}}
@@ -46,9 +55,9 @@
 
       {{- $first := "" -}}
       {{- $middle := "" -}}
-      {{- if and (or $author.first $author.middle) (or (not $citemode) $.params.citefirstnames) -}}
-        {{- $first = partial "bib/name/firstormiddle.html" (dict "name" $author.first "fullnames" $.params.fullnames "sep" $midnamespace) -}}
-        {{- $middle = partial "bib/name/firstormiddle.html" (dict "name" $author.middle "fullnames" $.params.fullnames "sep" $midnamespace) -}}
+      {{- if and (or $author.first $author.middle) (or (not $citemode) $citefirstnames) -}}
+        {{- $first = partial "bib/name/firstormiddle.html" (dict "name" $author.first "fullnames" $showfullnames "sep" $midnamespace) -}}
+        {{- $middle = partial "bib/name/firstormiddle.html" (dict "name" $author.middle "fullnames" $showfullnames "sep" $midnamespace) -}}
       {{- end -}}
       {{- if $isothers -}}
         {{- $etallabel -}}
