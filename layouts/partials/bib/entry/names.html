@@ -2,13 +2,13 @@
 {{- $lastidx := sub $len 1 -}}
 
 {{- $hasetal := false -}}
-{{- with index .params "display" "etalcutoff" -}}
-  {{- $hasetal = gt $len . -}}
+{{- with index .params "display" "etalupwardsof" -}}
+  {{- $hasetal = ge $len . -}}
 {{- end -}}
-{{- $etalkeep := index .params "display" "etalkeep" -}}
+{{- $etalkeep := index .params "display" "etalretainfirst" -}}
 {{- $etallabel := "et&nbsp;al." | safeHTML -}}
 
-{{- $showfullnames := index .params "display" "fullnames" -}}
+{{- $showfullnames := index .params "display" "showfullnames" -}}
 {{- $midnamespace := cond $showfullnames " " "&nbsp;" | safeHTML -}}
 
 {{- $citemode := eq .mode "citation" -}}

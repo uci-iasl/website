@@ -48,10 +48,10 @@ params:
       keywordseparators: [';', ',']
 
     display:
-      abbrevmonths: true
-      fullnames: false
-      etalcutoff: 5
-      etalkeep: 2
+      showfullnames: false
+      etalupwardsof: 6
+      etalretainfirst: 2
+      abbreviatemonths: true
       citefirstnames: false
       citetitlecutoff: 30
 
