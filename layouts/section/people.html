@@ -6,7 +6,12 @@
     </header>
     <section class="content">
       {{- $nameparts := index .Site.Params "bibliography" "format" "nameparts" -}}
-      {{- $nameparts = sort $nameparts "priority" "desc" -}}
+      {{- if $nameparts -}}
+        {{- $nameparts = sort $nameparts "priority" "desc" -}}
+      {{- else -}}
+        {{- warnf "Unable to compare full names due to missing bibliography.format.nameparts parameters" -}}
+      {{- end -}}
+
       {{- $roles := index .Site.Params "people" "roles" | partial "util/itemize" -}}
       {{- range $role := sort $roles "item.weight" -}}
         {{- if $pages := where $.RegularPages "Params.role" $role.index -}}
