@@ -2,7 +2,10 @@
   <header>
     <div class="wrap">
       {{- with .title -}}
-        <div class="title"><a href="/">{{ . }}</a></div>
+        <div class="title">
+          {{- with .long }}<span class="long"><a href="/">{{ . }}</a></span>{{ end -}}
+          {{- with .short }}<span class="short"><a href="/">{{ . }}</a></span>{{ end -}}
+        </div>
       {{- end -}}
       {{- if .menu -}}
         <nav>

@@ -102,6 +102,9 @@ body > header {
 body > header .title {
   float: left;
 }
+body > header .title > .short {
+  display: none;
+}
 body > header nav {
   float: right;
 }

@@ -1,4 +1,4 @@
-title: &title 'Intelligent and Autonomous Systems Lab'
+title: &titlelong 'Intelligent and Autonomous Systems Lab'
 baseurl: 'https://iasl.ics.uci.edu/'
 languagecode: 'en-US'
 pluralizelisttitles: false
@@ -20,7 +20,7 @@ disableKinds:
 
 params:
   metadata:
-    author: *title
+    author: *titlelong
     description: >-
       Latest updates, results, and publications
       by the Intelligent and Autonomous Systems Lab
@@ -30,12 +30,14 @@ params:
       url: '/img/logo/icon-192.png'
       size: 192
   header:
-    title: *title
+    title:
+      long: *titlelong
+      short: &titleshort 'IASL'
     menu: main
   footer:
     copyright:
       startyear: 2014
-      label: 'IASL'
+      label: *titleshort
       url: 'https://github.com/uci-iasl/website'
     contacts:
     - label: 'Marco Levorato'
