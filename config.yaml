@@ -24,13 +24,14 @@ params:
     Latest updates, results, and publications
     by the Intelligent and Autonomous Systems Lab
     at University of California, Irvine
-  copyright:
-    startyear: 2014
-    label: 'IASL'
-    url: 'https://github.com/uci-iasl/website'
-  contacts:
-  - label: 'Marco Levorato'
-    url: 'mailto:Marco Levorato <levorato+www@uci.edu>'
+  footer:
+    copyright:
+      startyear: 2014
+      label: 'IASL'
+      url: 'https://github.com/uci-iasl/website'
+    contacts:
+    - label: 'Marco Levorato'
+      url: 'mailto:Marco Levorato <levorato+www@uci.edu>'
   dateformat: 'Jan 2, 2006'
   datetimeformat: 'Jan 2, 2006, 15:04 MST'
 

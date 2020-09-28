@@ -1,41 +1,43 @@
-<footer class="wrap">
-  {{- with .Site.Params.copyright -}}
-    <div class="copyright">
-      <span class="years">
-        {{- with .startyear }}{{ . }}&hairsp;–&hairsp;{{ end -}}
-        <span title="{{ now.Format $.Site.Params.datetimeformat }}">
-          {{- with .endyear }}{{ . }}{{ else }}{{ now.Format "2006" }}{{ end -}}
+{{- with .Site.Params.footer -}}
+  <footer class="wrap">
+    {{- with .copyright -}}
+      <div class="copyright">
+        <span class="years">
+          {{- with .startyear }}{{ . }}&hairsp;–&hairsp;{{ end -}}
+          <span title="{{ now.Format $.Site.Params.datetimeformat }}">
+            {{- with .endyear }}{{ . }}{{ else }}{{ now.Format "2006" }}{{ end -}}
+          </span>
         </span>
-      </span>
-      {{- " " -}}
-      {{- if .url -}}
-        <a href="{{ .url }}"{{ if (urls.Parse .url).Scheme }} target="_blank" rel="noopener"{{ end }}>{{ .label }}</a>
-      {{- else -}}
-        {{- .label -}}
-      {{- end -}}
-    </div>
-  {{- end -}}
+        {{- " " -}}
+        {{- if .url -}}
+          <a href="{{ .url }}"{{ if (urls.Parse .url).Scheme }} target="_blank" rel="noopener"{{ end }}>{{ .label }}</a>
+        {{- else -}}
+          {{- .label -}}
+        {{- end -}}
+      </div>
+    {{- end -}}
 
-  <div class="logo">
-    <a href="https://www.ics.uci.edu" target="_blank" rel="noopener">
-      <img src="/img/logo/anteater.png" alt="UCI ICS">
-    </a>
-  </div>
-
-  {{- with .Site.Params.contacts }}
-    <div class="contacts">
-      {{- range . -}}
-        <span class="item">
-          {{- if .url -}}
-            <a href="{{ .url }}"{{ if (urls.Parse .url).Scheme }} target="_blank" rel="noopener"{{ end }}>{{ .label }}</a>
-          {{- else -}}
-            {{- .label -}}
-          {{- end -}}
-        </span>
-      {{- end -}}
+    <div class="logo">
+      <a href="https://www.ics.uci.edu" target="_blank" rel="noopener">
+        <img src="/img/logo/anteater.png" alt="UCI ICS">
+      </a>
     </div>
-  {{- end }}
-</footer>
+
+    {{- with .contacts -}}
+      <div class="contacts">
+        {{- range . -}}
+          <span class="item">
+            {{- if .url -}}
+              <a href="{{ .url }}"{{ if (urls.Parse .url).Scheme }} target="_blank" rel="noopener"{{ end }}>{{ .label }}</a>
+            {{- else -}}
+              {{- .label -}}
+            {{- end -}}
+          </span>
+        {{- end -}}
+      </div>
+    {{- end -}}
+  </footer>
+{{- end -}}
 
 </body>
 </html>
