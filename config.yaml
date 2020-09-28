@@ -25,6 +25,10 @@ params:
       Latest updates, results, and publications
       by the Intelligent and Autonomous Systems Lab
       at University of California, Irvine
+    themecolor: '#404040'
+    icon:
+      url: '/img/logo/icon-192.png'
+      size: 192
   footer:
     copyright:
       startyear: 2014
