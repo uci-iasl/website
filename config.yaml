@@ -19,6 +19,9 @@ disableKinds:
 - taxonomyTerm
 
 params:
+  dateformat: 'Jan 2, 2006'
+  datetimeformat: 'Jan 2, 2006, 3:04 PM MST'
+
   metadata:
     author: *titlelong
     description: >-
@@ -29,11 +32,13 @@ params:
     icon:
       url: '/img/logo/icon-192.png'
       size: 192
+
   header:
     title:
       long: *titlelong
       short: &titleshort 'IASL'
     menu: main
+
   footer:
     copyright:
       startyear: 2014
@@ -47,8 +52,6 @@ params:
       image:
         url: '/img/logo/anteater.png'
         alttext: 'UCI ICS'
-  dateformat: 'Jan 2, 2006'
-  datetimeformat: 'Jan 2, 2006, 15:04 MST'
 
   bibliography:
     format:
