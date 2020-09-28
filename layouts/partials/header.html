@@ -10,8 +10,11 @@
   <link rel="icon" sizes="192x192" href="/img/logo/icon-192.png">
   <link rel="apple-touch-icon" href="/img/logo/icon-192.png">
 
-  {{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
-  {{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
+  {{- with .Site.Params.metadata }}
+    {{ with .author }}<meta name="author" content="{{ . }}">{{ end }}
+    {{ with .description }}<meta name="description" content="{{ . }}">{{ end }}
+  {{- end }}
+
   <title>
     {{- if not .IsHome -}}
       {{- if eq .Kind "section" -}}

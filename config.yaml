@@ -19,11 +19,12 @@ disableKinds:
 - taxonomyTerm
 
 params:
-  author: *title
-  description: >-
-    Latest updates, results, and publications
-    by the Intelligent and Autonomous Systems Lab
-    at University of California, Irvine
+  metadata:
+    author: *title
+    description: >-
+      Latest updates, results, and publications
+      by the Intelligent and Autonomous Systems Lab
+      at University of California, Irvine
   footer:
     copyright:
       startyear: 2014
