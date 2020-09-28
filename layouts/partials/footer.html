@@ -17,11 +17,18 @@
       </div>
     {{- end -}}
 
-    <div class="logo">
-      <a href="https://www.ics.uci.edu" target="_blank" rel="noopener">
-        <img src="/img/logo/anteater.png" alt="UCI ICS">
-      </a>
-    </div>
+    {{- with .logotype -}}
+      <div class="logo">
+        {{- with .url -}}
+          <a href="{{ . }}"{{ if (urls.Parse .).Scheme }} target="_blank" rel="noopener"{{ end }}>
+        {{- end -}}
+        {{- with .image -}}
+          <img src="{{ .url | relURL }}"{{ with .alttext }} alt="{{ . }}"{{ end }}>{{ " " }}
+        {{- end -}}
+        {{- with .label }}{{ . }}{{ end -}}
+        {{- with .url }}</a>{{ end -}}
+      </div>
+    {{- end -}}
 
     {{- with .contacts -}}
       <div class="contacts">

@@ -32,6 +32,11 @@ params:
     contacts:
     - label: 'Marco Levorato'
       url: 'mailto:Marco Levorato <levorato+www@uci.edu>'
+    logotype:
+      url: 'https://www.ics.uci.edu'
+      image:
+        url: '/img/logo/anteater.png'
+        alttext: 'UCI ICS'
   dateformat: 'Jan 2, 2006'
   datetimeformat: 'Jan 2, 2006, 15:04 MST'
 
