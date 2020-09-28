@@ -29,6 +29,9 @@ params:
     icon:
       url: '/img/logo/icon-192.png'
       size: 192
+  header:
+    title: *title
+    menu: main
   footer:
     copyright:
       startyear: 2014

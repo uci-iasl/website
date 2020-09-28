@@ -99,11 +99,8 @@ body > header {
   border-bottom: 1px solid var(--header-border-color);
   min-width: calc(var(--body-wrap-width) + 2 * var(--body-wrap-padding));
 }
-body > header .logo {
+body > header .title {
   float: left;
-}
-body > header .logo img {
-  height: 30px;
 }
 body > header nav {
   float: right;
