@@ -74,6 +74,20 @@ params:
       citefirstnames: false
       citetitlecutoff: 30
 
+      # Categories should be modified conjointly with the values of
+      # the bib.entryKindCategoryMap dictionary in assets/js/bib.js.
+      categories:
+      - value: 'all'
+        label: 'everything'
+      - value: 'conferences'
+        label: 'conferences'
+      - value: 'journals'
+        label: 'journals'
+      - value: 'books'
+        label: 'books'
+      - value: 'other'
+        label: 'other'
+
     attachments:
       manuscript:
         label: 'Manuscript'

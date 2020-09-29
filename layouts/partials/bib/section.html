@@ -1,29 +1,31 @@
 {{- $peopleindex := partialCached "bib/getpeopleindex" (dict "Site" .Page.Site) -}}
+
 <section class="bibliography">
   <header id="bib">
     {{ with .title }}<h1>{{ . }}</h1>{{ else }}<div></div>{{ end }}
+
     <div class="controls-anchor">
       <div class="controls{{ if .shiftcontrolsup }} heading-margin-shift{{ end }}">
-        <input id="ctl-bib-filter-input" class="filter" type="search" placeholder="Filter…" />
+        <input id="ctl-bib-filter-input" class="filter" type="search" placeholder="Filter…">
         <select id="ctl-bib-filter-selection" class="inactive">
-          <option value="all" selected>everything</option>
-          <option value="conferences">conferences</option>
-          <option value="journals">journals</option>
-          <option value="books">books</option>
-          <option value="other">other</option>
+          {{- range index $.Page.Site.Params "bibliography" "display" "categories" -}}
+            <option value="{{ .value }}"{{ if .selected }} selected{{ end }}>
+              {{- with .label }}{{ . }}{{ else }}{{ .value }}{{ end -}}
+            </option>
+          {{- end -}}
         </select>
       </div>
     </div>
   </header>
+
   <div class="group" id="ctl-bib-section-no-match">
     <h2>No matches</h2>
   </div>
+
   {{- range $idx, $group := .items }}
     <div class="group" id="bib-{{ with $group.title }}{{ anchorize . }}{{ else }}section-{{ add $idx 1 }}{{ end }}">
       {{ with $group.title }}<h2>{{ . }}</h2>{{ end }}
-      {{ with $group.foreword -}}
-        <div class="foreword">{{ markdownify . }}</div>
-      {{- end }}
+      {{ with $group.foreword }}<div class="foreword">{{ . | markdownify }}</div>{{ end }}
       {{ partial "bib/list.html" (dict "items" $group.items "peopleindex" $peopleindex "Page" $.Page) }}
     </div>
   {{- end }}
