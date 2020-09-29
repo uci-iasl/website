@@ -163,6 +163,9 @@ body > footer .copyright {
 body > footer .copyright > .years::before {
   content: '© ';
 }
+body > footer .copyright > .label::before {
+  content: ' ';
+}
 body > footer .contacts {
   float: right;
 }
@@ -187,6 +190,9 @@ body > footer .logo img {
 body > footer .logo a:hover img {
   opacity: 1;
   transition: none;
+}
+body > footer .logo .label::before {
+  content: ' ';
 }
 
 ul.updates {
