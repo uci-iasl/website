@@ -416,6 +416,7 @@ section.bibliography > header .controls select:focus {
   margin-bottom: var(--controls-active-underline-size);
 }
 section.bibliography > header .controls select:focus {
+  color: var(--controls-active-fg-color);
   border-bottom-style: dotted;
 }
 section.bibliography > header .controls input.filter {
