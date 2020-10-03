@@ -5,8 +5,8 @@
   --lighter-bg-color: white;
   --highlighted-bg-color: #dee6ee;
 
-  --controls-fg-color: #aaaaaa;
-  --controls-border-color: #e0e0e0;
+  --controls-inactive-fg-color: #aaaaaa;
+  --controls-inactive-border-color: #e0e0e0;
   --controls-active-fg-color: var(--fg-color);
   --controls-active-bg-color: var(--lighter-bg-color);
   --controls-active-border-color: var(--controls-active-fg-color);
@@ -51,7 +51,7 @@
 
   --controls-font-size: 0.9em;
   --controls-height: 1.8em;
-  --controls-underline-size: 2px;
+  --controls-inactive-underline-size: 2px;
   --controls-active-underline-size: 1px;
   --controls-vertical-padding: 1px;
 
@@ -376,13 +376,13 @@ section.bibliography > header > .controls-anchor > .controls {
 section.bibliography > header .controls.heading-margin-shift {
   padding-bottom: calc(
     var(--heading-top-margin)
-    - var(--controls-underline-size)
+    - var(--controls-inactive-underline-size)
     - var(--controls-vertical-padding)
   );
 }
 
 section.bibliography > header .controls .inactive {
-  color: var(--controls-fg-color);
+  color: var(--controls-inactive-fg-color);
 }
 section.bibliography > header .controls input,
 section.bibliography > header .controls select {
@@ -394,7 +394,7 @@ section.bibliography > header .controls select {
   outline: none;
   border: none;
   border-radius: 0.4ex 0.4ex 0 0;
-  border-bottom: var(--controls-underline-size) solid var(--controls-border-color);
+  border-bottom: var(--controls-inactive-underline-size) solid var(--controls-inactive-border-color);
   padding: var(--controls-vertical-padding) 0.5ex;
   margin: 0;
   color: var(--controls-active-fg-color);
@@ -405,7 +405,7 @@ section.bibliography > header .controls input::-webkit-search-decoration {
   -moz-appearance: none;
 }
 section.bibliography > header .controls input::placeholder {
-  color: var(--controls-fg-color);
+  color: var(--controls-inactive-fg-color);
   opacity: 1;
 }
 section.bibliography > header .controls input:hover,
@@ -440,7 +440,7 @@ section.bibliography > header .controls select:focus {
 }
 section.bibliography > header .controls select:focus {
   border-bottom-style: dotted;
-  border-bottom-width: var(--controls-underline-size);
+  border-bottom-width: var(--controls-inactive-underline-size);
   height: var(--controls-height);
   margin-bottom: 0;
 }
@@ -449,7 +449,7 @@ section.bibliography > #ctl-bib-section-no-match {
   margin-bottom: var(--heading-top-margin);
 }
 section.bibliography > #ctl-bib-section-no-match h2 {
-  color: var(--controls-fg-color);
+  color: var(--controls-inactive-fg-color);
 }
 
 section.bibliography .group {
