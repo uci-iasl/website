@@ -44,6 +44,13 @@ references:
     - first: Alessandro
       last: Moschitti
     bibtex: "@inproceedings{matsubara-vu-2020-sigir,\n  author = {Yoshitomo Matsubara and Thuy Vu and Alessandro Moschitti},\n  title = {Reranking for Efficient Transformer-Based Answer Selection},\n  booktitle = {Proceedings of the 43rd International ACM SIGIR Conference on Research and Development in Information Retrieval},\n  pages = {1577--1580},\n  month = jul,\n  year = {2020},\n  doi = {10.1145/3397271.3401266},\n}"
+    booktitle: Proceedings of the 43rd International ACM SIGIR Conference on Research and Development in Information Retrieval
+    doi: 10.1145/3397271.3401266
+    kind: inproceedings
+    month: July
+    pages: 1577–1580
+    title: Reranking for Efficient Transformer-Based Answer Selection
+    year: '2020'
   matsubara-nishimura-2016-icmla:
     address: Anaheim, California
     author:
