@@ -1,4 +1,25 @@
 references:
+  hossain-logan-2020-nlpcovid19:
+    author:
+    - first: Tamanna
+      last: Hossain
+    - first: Robert
+      last: IV
+      middle: L. Logan
+    - first: Arjuna
+      last: Ugarte
+    - first: Yoshitomo
+      last: Matsubara
+    - first: Sean
+      last: Young
+    - first: Sameer
+      last: Singh
+    bibtex: "@inproceedings{hossain-logan-2020-nlpcovid19,\n  author = {Tamanna Hossain and Robert L. Logan IV and Arjuna Ugarte and Yoshitomo Matsubara and Sean Young and Sameer Singh},\n  title = {COVIDLies: Detecting COVID-19 Misinformation on Social Media},\n  booktitle = {EMNLP 2020 NLP COVID-19 Workshop},\n  month = oct,\n  year = {2020},\n}"
+    booktitle: EMNLP 2020 NLP COVID-19 Workshop
+    kind: inproceedings
+    month: October
+    title: 'COVIDLies: Detecting COVID-19 Misinformation on Social Media'
+    year: '2020'
   matsubara-singh-2020-wosp:
     author:
     - first: Yoshitomo
