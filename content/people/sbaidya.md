@@ -4,6 +4,7 @@ name:
   last: Baidya
 role: alumnus-phd
 status: Ph.D.
+current_occupation: Assistant Professor at University of Louisville
 yearjoined: 2014
 yeargraduated: 2018
 portrait: sbaidya.jpg
@@ -28,6 +29,7 @@ websites:
   url: http://www.ics.uci.edu/~sbaidya/
 bibliography:
 - items:
+  - matsubara-callegaro-2020-access
   - callegaro-baidya-2020-icc
   - callegaro-baidya-2019-milcom
   - matsubara-baidya-2019-mobicom

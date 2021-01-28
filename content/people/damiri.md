@@ -6,6 +6,7 @@ role: alumnus-phd
 status: Ph.D.
 yearjoined: 2015
 yeargraduated: 2020
+current_occupation: Software Engineer at Microsoft
 portrait: damiri.jpg
 badge: damiri-badge.jpg
 interests:

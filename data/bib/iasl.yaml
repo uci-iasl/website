@@ -1,6 +1,40 @@
 references:
+  callegaro-levorato-2021-tvt:
+    author:
+    - first: D.
+      last: Callegaro
+    - first: M.
+      last: Levorato
+    bibtex: "@article{callegaro-levorato-2021-tvt,\n  author = {D. {Callegaro} and M. {Levorato}},\n  title = {Optimal Edge Computing for Infrastructure-Assisted UAV Systems},\n  journal = {IEEE Transactions on Vehicular Technology},\n  volume = {},\n  number = {},\n  pages = {1-1},\n  year = {2021},\n  doi = {10.1109/TVT.2021.3051378},\n}"
+    doi: 10.1109/TVT.2021.3051378
+    journal: IEEE Transactions on Vehicular Technology
+    kind: article
+    number: ''
+    pages: 1-1
+    title: Optimal Edge Computing for Infrastructure-Assisted UAV Systems
+    volume: ''
+    year: '2021'
+  callegaro-matsubara-2020-globecom:
+    address: Taipei, Taiwan
+    author:
+    - first: Davide
+      last: Callegaro
+    - first: Yoshitomo
+      last: Matsubara
+    - first: Marco
+      last: Levorato
+    bibtex: "@inproceedings{callegaro-matsubara-2020-globecom,\n  author = {Davide Callegaro and Yoshitomo Matsubara and Marco Levorato},\n  title = {Optimal Task Allocation for {Time-Varying} Edge Computing Systems with\nSplit {DNNs}},\n  booktitle = {2020 IEEE Global Communications Conference: Selected Areas in\nCommunications: Internet of Things and Smart Connected Communities\n(Globecom2020 SAC IoTSCC)},\n  address = {Taipei, Taiwan},\n  month = dec,\n  year = {2020},\n  days = {6},\n  keyword = {Edge Computing; Split Computing; Deep Neural Network; Markov Decision\nProcesses},\n}"
+    booktitle: '2020 IEEE Global Communications Conference: Selected Areas in Communications: Internet of Things and Smart Connected Communities (Globecom2020 SAC IoTSCC)'
+    days: '6'
+    keyword: 'Edge Computing; Split Computing; Deep Neural Network; Markov Decision
+
+      Processes'
+    kind: inproceedings
+    month: December
+    title: Optimal Task Allocation for Time-Varying Edge Computing Systems with Split DNNs
+    year: '2020'
   matsubara-levorato-2020-icpr:
-    abstract: 'The edge computing paradigm places compute-capable devices - edge servers - at the network edge to assist mobile devices in executing data analysis tasks. Intuitively, offloading compute-intense tasks to edge servers can reduce their execution time. However, poor conditions of the wireless channel connecting the mobile devices to the edge servers may degrade the overall capture-to-output delay achieved by edge offloading. Herein, we focus on edge computing supporting remote object detection by means of Deep Neural Networks (DNNs), and develop a framework to reduce the amount of data transmitted over the wireless link. The core idea we propose builds on recent approaches splitting DNNs into sections - namely head and tail models - executed by the mobile device and edge server, respectively. The wireless link, then, is used to transport the output of the last layer of the head model to the edge server, instead of the DNN input. Most prior work focuses on classification tasks and leaves the DNN structure unaltered. Herein, our focus is on DNNs for three different object detection tasks, which present a much more convoluted structure, and modify the architecture of the network to: (i) achieve in-network compression by introducing a bottleneck layer in the early layers on the head model, and (ii) prefilter pictures that do not contain objects of interest using a convolutional neural network. Results show that the proposed technique represents an effective intermediate option between local and edge computing in a parameter region where these extreme point solutions fail to provide satisfactory performance. The code and trained models are available at https://github.com/yoshitomo-matsubara/hnd-ghnd-object-detectors .'
+    abstract: 'The edge computing paradigm places compute-capable devices — edge servers — at the network edge to assist mobile devices in executing data analysis tasks. Intuitively, offloading compute-intense tasks to edge servers can reduce their execution time. However, poor conditions of the wireless channel connecting the mobile devices to the edge servers may degrade the overall capture-to-output delay achieved by edge offloading. Herein, we focus on edge computing supporting remote object detection by means of Deep Neural Networks (DNNs), and develop a framework to reduce the amount of data transmitted over the wireless link. The core idea we propose builds on recent approaches splitting DNNs into sections — namely head and tail models — executed by the mobile device and edge server, respectively. The wireless link, then, is used to transport the output of the last layer of the head model to the edge server, instead of the DNN input. Most prior work focuses on classification tasks and leaves the DNN structure unaltered. Herein, our focus is on DNNs for three different object detection tasks, which present a much more convoluted structure, and modify the architecture of the network to: (i) achieve in-network compression by introducing a bottleneck layer in the early layers on the head model, and (ii) prefilter pictures that do not contain objects of interest using a convolutional neural network. Results show that the proposed technique represents an effective intermediate option between local and edge computing in a parameter region where these extreme point solutions fail to provide satisfactory performance.'
     archiveprefix: arXiv
     author:
     - first: Yoshitomo
@@ -17,17 +51,20 @@ references:
     title: Neural Compression and Filtering for Edge-Assisted Real-Time Object Detection in Challenged Networks
     year: '2020'
   matsubara-levorato-2020-emdl:
-    abstract: 'Following the trends of mobile and edge computing for DNN models, an intermediate option, split computing, has been attracting attentions from the research community. Previous studies empirically showed that while mobile and edge computing often would be the best options in terms of total inference time, there are some scenarios where split computing methods can achieve shorter inference time. All the proposed split computing approaches, however, focus on image classification tasks, and most are assessed with small datasets that are far from the practical scenarios. In this paper, we discuss the challenges in developing split computing methods for powerful R-CNN object detectors trained on a large dataset, COCO 2017. We extensively analyze the object detectors in terms of layer-wise tensor size and model size, and show that naive split computing methods would not reduce inference time. To the best of our knowledge, this is the first study to inject small bottlenecks to such object detectors and unveil the potential of a split computing approach.'
+    abstract: Following the trends of mobile and edge computing for DNN models, an intermediate option, split computing, has been attracting attentions from the research community. Previous studies empirically showed that while mobile and edge computing often would be the best options in terms of total inference time, there are some scenarios where split computing methods can achieve shorter inference time. All the proposed split computing approaches, however, focus on image classification tasks, and most are assessed with small datasets that are far from the practical scenarios. In this paper, we discuss the challenges in developing split computing methods for powerful R-CNN object detectors trained on a large dataset, COCO 2017. We extensively analyze the object detectors in terms of layer-wise tensor size and model size, and show that naive split computing methods would not reduce inference time. To the best of our knowledge, this is the first study to inject small bottlenecks to such object detectors and unveil the potential of a split computing approach.
+    archiveprefix: arXiv
     author:
     - first: Yoshitomo
       last: Matsubara
     - first: Marco
       last: Levorato
-    bibtex: "@article{matsubara-levorato-2020-emdl,\n  author = {Yoshitomo Matsubara and Marco Levorato},\n  title = {Split Computing for Complex Object Detectors: Challenges and Preliminary Results},\n  booktitle = {Proceedings of the 4th International Workshop on Embedded and Mobile Deep Learning},\n pages = {9 -- 20},\n  month = sep,\n  year = {2020},\n}"
+    bibtex: "@article{matsubara-levorato-2020-emdl,\n  author = {Yoshitomo Matsubara and Marco Levorato},\n  title = {Split Computing for Complex Object Detectors: Challenges and Preliminary Results},\n  journal = {arXiv.org e-Print Archive},\n  month = jul,\n  year = {2020},\n  archiveprefix = {arXiv},\n  eprint = {2007.13312},\n  primaryclass = {cs.CV},\n}"
     codeurl: https://github.com/yoshitomo-matsubara/hnd-ghnd-object-detectors
-    booktitle: Proceedings of the 4th International Workshop on Embedded and Mobile Deep Learning
+    eprint: '2007.13312'
+    journal: arXiv.org e-Print Archive
     kind: article
-    month: September
+    month: July
+    primaryclass: cs.CV
     title: 'Split Computing for Complex Object Detectors: Challenges and Preliminary Results'
     year: '2020'
   callegaro-baidya-2020-icc:
@@ -47,6 +84,27 @@ references:
     month: June
     note: SAC Tactile Internet Track
     title: Dynamic Distributed Computing for Infrastructure-Assisted Autonomous UAVs
+    year: '2020'
+  matsubara-callegaro-2020-access:
+    author:
+    - first: Y.
+      last: Matsubara
+    - first: D.
+      last: Callegaro
+    - first: S.
+      last: Baidya
+    - first: M.
+      last: Levorato
+    - first: S.
+      last: Singh
+    bibtex: "@article{matsubara-callegaro-2020-access,\n  author = {Y. {Matsubara} and D. {Callegaro} and S. {Baidya} and M. {Levorato} and S. {Singh}},\n  title = {Head Network Distillation: Splitting Distilled Deep Neural Networks for Resource-Constrained Edge Computing Systems},\n  journal = {IEEE Access},\n  volume = {8},\n  number = {},\n  pages = {212177-212193},\n  year = {2020},\n  doi = {10.1109/ACCESS.2020.3039714},\n}"
+    doi: 10.1109/ACCESS.2020.3039714
+    journal: IEEE Access
+    kind: article
+    number: ''
+    pages: 212177-212193
+    title: 'Head Network Distillation: Splitting Distilled Deep Neural Networks for Resource-Constrained Edge Computing Systems'
+    volume: '8'
     year: '2020'
   callegaro-baidya-2019-milcom:
     abstract: Making Unmanned Aerial Vehicles (UAV) fully autonomous faces many challenges, some of which are connected to the inherent limitations of their on-board resources, such as energy supply, sensing capabilities, wireless characteristics, and computational power. The sensing, communication, and computation Internet of Things (IoT) infrastructure surrounding the UAVs can mitigate such limitations. However, external traffic dynamics, signal propagation, and other poignant characteristics of the IoT infrastructure make it an extremely dynamic and incoherent environment, especially in urban scenarios, thus challenging the use of IoT resources for mission-critical UAV applications. Herein, the concept of information autonomy is introduced to extend autonomy to encompass how information-related tasks are handled in this challenging scenario. In this paper, we motivate the need for “Information Autonomy” based on our observations from real-world experiments and present a self-adaptive framework for edge-assisted UAV applications. Through our preliminary evaluation, we show that our “Information Autonomy” framework is capable of handling uncertainties autonomously during run-time.

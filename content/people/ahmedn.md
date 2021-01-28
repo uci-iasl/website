@@ -4,6 +4,7 @@ name:
   last: Ahmed
 role: alumnus-phd
 status: Ph.D.
+current_occupation: Machine Learning Researcher at Frontier Development Lab.
 yearjoined: 2013
 yeargraduated: 2017
 portrait: ahmedn.jpg
