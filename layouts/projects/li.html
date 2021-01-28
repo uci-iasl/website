@@ -2,7 +2,9 @@
   <section class="project">
     <div class="cover">
       <a class="no-decor" href="{{ .RelPermalink }}">
-          <img src="/img/projects/{{ .File.TranslationBaseName }}/{{ .Params.cover }}">
+        {{- with .Params.cover }}
+          <img src="/img/projects/{{ .File.TranslationBaseName }}/{{ . }}">
+        {{- end }}      
       </a>
     </div>
     <header>

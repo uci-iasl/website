@@ -24,8 +24,8 @@ websites:
 - title: LinkedIn
   url: https://www.linkedin.com/in/ali-tazarv/
 bibliography:
-- items:
-  - my-paper
+<!-- - items: -->
+
 ---
 About me:
 I am a PhD Candidate at University of California, Irvine (UCI), working on
