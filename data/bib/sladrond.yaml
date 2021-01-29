@@ -1,0 +1,20 @@
+references:
+  ramachandran-contreras-usenix18:
+    address: Renton, WA
+    author:
+    - first: Gowri
+      last: Ramachandran
+      middle: Sankar
+    - first: Sharon
+      last: Contreras
+      middle: L.G
+    - first: Bhaskar
+      last: Krishnamachari
+    bibtex: "@inproceedings{ramachandran-contreras-usenix18,\n  author = {Gowri Sankar Ramachandran and Sharon L.G Contreras and Bhaskar Krishnamachari},\n  title = {Publish-Pay-Subscribe Protocol for Payment-driven Edge Computing},\n  booktitle = {2nd {USENIX} Workshop on Hot Topics in Edge Computing (HotEdge 19)},\n  publisher = {{USENIX} Association},\n  address = {Renton, WA},\n  month = jul,\n  year = {2019},\n  url = {https://www.usenix.org/conference/hotedge19/presentation/ramachandran},\n}"
+    booktitle: 2nd USENIX Workshop on Hot Topics in Edge Computing (HotEdge 19)
+    kind: inproceedings
+    month: July
+    publisher: USENIX Association
+    title: Publish-Pay-Subscribe Protocol for Payment-driven Edge Computing
+    url: https://www.usenix.org/conference/hotedge19/presentation/ramachandran
+    year: '2019'
