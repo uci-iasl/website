@@ -16,6 +16,7 @@
         </div>
       {{- end }}
       {{- with .Params.status }}<div class="status">{{ . }}</div>{{ end }}
+      {{- with .Params.current_occupation }}<div class="current_occupation">{{ . }}</div>{{ end }}
       {{- with .Params.yearjoined }}
         <div class="years">
           {{- partial "people/yearrange.html" (dict "person" $.Params "params" $.Site.Params.people) -}}

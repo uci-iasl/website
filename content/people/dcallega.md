@@ -25,6 +25,9 @@ websites:
   url: https://www.linkedin.com/in/davide-callegaro/
 bibliography:
 - items:
+  - callegaro-levorato-2021-tvt
+  - matsubara-callegaro-2020-access
+  - callegaro-matsubara-2020-globecom
   - callegaro-baidya-2020-icc
   - callegaro-baidya-2019-milcom
   - matsubara-baidya-2019-mobicom

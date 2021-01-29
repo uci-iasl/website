@@ -1,13 +1,10 @@
-**Postdoctoral Researchers:**
+**Past Visitors:**
 
 - Horácio A. B. Fernandes de Oliveira  ·  *Associate Professor, Federal University of Amazonas, Brazil*
 - Hyun-Ho Choi  ·  *Associate Professor, Hankyong National University, South Korea*
 - Luca Bedogni  ·  *Postdoctoral Researcher, University of Bologna, Italy*
-
-**Graduate Students:**
-
-- Anna Valeria Guglielmi  ·  *Ph.D. Student, University of Padova, Italy*
 - Roberto Valentini  ·  *Ph.D. Student, University of L’Aquila, Italy*
+- Anna Valeria Guglielmi  ·  *Ph.D. Student, University of Padova, Italy*
 
 **Undergraduate Students:**
 

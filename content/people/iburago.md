@@ -2,9 +2,10 @@
 name:
   first: Igor
   last: Burago
-role: student-phd
-status: Ph.D. Candidate
+role: alumnus-phd
+status: 
 yearjoined: 2014
+yeargraduated: 2019
 portrait: iburago.jpg
 badge: iburago-badge.jpg
 interests:

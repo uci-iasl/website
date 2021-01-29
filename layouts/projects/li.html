@@ -4,7 +4,7 @@
       <a class="no-decor" href="{{ .RelPermalink }}">
         {{- with .Params.cover }}
           <img src="/img/projects/{{ .File.TranslationBaseName }}/{{ . }}">
-        {{- end }}
+        {{- end }}      
       </a>
     </div>
     <header>
@@ -12,7 +12,7 @@
       <!-- <h2 class="meta">{{ .Date.Format .Site.Params.dateformat }}</h2> -->
     </header>
     <section class="summary">
-      {{ .Summary }}
+      {{- with .Params.summary }}<div class="summary">{{ . }}</div>{{ end }}
     </section>
   </section>
 </li>

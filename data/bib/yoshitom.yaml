@@ -1,11 +1,11 @@
 references:
   hossain-logan-2020-nlpcovid19:
-    abstract: 'The ongoing pandemic has heightened the need for developing tools to flag COVID-19-related misinformation on the internet, specifically on social media such as Twitter. However, due to novel language and the rapid change of information, existing misinformation detection datasets are not effective for evaluating systems designed to detect misinformation on this topic. Misinformation detection can be divided into two sub-tasks: (i) retrieval of misconceptions relevant to posts being checked for veracity, and (ii) stance detection to identify whether the posts Agree, Disagree, or express No Stance towards the retrieved misconceptions. To facilitate research on this task, we release COVIDLies (https://ucinlp.github.io/covid19 ), a dataset of 6761 expert-annotated tweets to evaluate the performance of misinformation detection systems on 86 different pieces of COVID-19 related misinformation. We evaluate existing NLP systems on this dataset, providing initial benchmarks and identifying key challenges for future models to improve upon.' 
     author:
     - first: Tamanna
       last: Hossain
     - first: Robert
-      last: L. Logan IV
+      last: IV
+      middle: L. Logan
     - first: Arjuna
       last: Ugarte
     - first: Yoshitomo
@@ -21,7 +21,6 @@ references:
     title: 'COVIDLies: Detecting COVID-19 Misinformation on Social Media'
     year: '2020'
   matsubara-singh-2020-wosp:
-    abstract: The question of the utility of the blind peer-review system is fundamental to scientific research. Some studies investigate exactly how “blind” the papers are in the double-blind review system by manually or automatically identifying the true authors, mainly suggesting the number of self-citations in the submitted manuscripts as the primary signal for identity. However, related work on the automated approaches are limited by the sizes of their datasets and the restricted experimental setup, thus they lack practical insights into the blind review process. In this work, we train models that identify the authors, their affiliations, and their nationalities through real-world, large-scale experiments on the Microsoft Academic Graph, including the cold start scenario. Our models are accurate; we identify at least one of authors, affiliations, and nationalities of held-out papers with 40.3%, 47.9% and 86.0% accuracy respectively, from the top-10 guesses of our models. However, through insights from the model, we demonstrate that these entities are identifiable with a small number of guesses primarily by using a combination of self-citations, social, and common citations. Moreover, our further analysis on the results leads to interesting findings, such as that prominent affiliations are easily identifiable (e.g. 93.8% of test papers written by Microsoft are identified with top-10 guesses). The experimental results show, against conventional belief, that the self-citations are no more informative than looking at the common citations, thus suggesting that removing self-citations is not sufficient for authors to maintain their anonymity.
     author:
     - first: Yoshitomo
       last: Matsubara
