@@ -3,14 +3,15 @@ name:
   first: Anas
   last: Alsoliman
 role: student-phd
-status: Ph.D. Student
-yearjoined: 2017
+status: Ph.D. Candidate
+yearjoined: 2016
 portrait: aalsolim.jpg
 badge: aalsolim-badge.jpg
 interests:
 - Vehicular Networks
-- Connected-Cars/Autonomous Vehicles networking applications
-- Infrastructure support of smart cities and Intelligent Transportation Systems (ITS)
+- Security & Privacy of Connected and Autonomous Vehicles
+- Optical Camera Communication via Computer-Vision
+- Software-Defined Radios
 education:
 - degree: M.S. in Network Engineering and Security
   institution: DePaul University, Illinois, U.S.
@@ -19,10 +20,14 @@ education:
   institution: King Saud University, Saudi Arabia.
   year: 2012
 email: aalsolim@uci.edu
+bibliography:
+- items:
+  - alsoliman-rigoni-2021-icdcn
+  - alsoliman-rabiah-2020-csnet
 ---
 
-During my Master studies, I've got the opportunity to design data networks using real Cisco equipments at DePaul University networking lab. In my Master's final project, I have designed a comprehensive network architecture for delay-sensitive applications with dual-homed data centers. In my design, I was able to prove (by experiment in the lab) how my fault-tolerance strategies can keep the network stable even when multiple parts of the network fail at the same time. My experience at the lab gave me a good insight on how ISPs design and operate their networks.
+I obtained my Master's degree in Network Engineering and Security from DePaul University. In my Master's final project, I designed a network architecture with multiple fault-tolerance strategies for delay-sensitive applications that require dual-homed data centers. I was able to prove (using real enterprise-grade networking equipments) how my design can keep the network stable even when multiple parts of the network fail at the same time.
 
-Prior to attending UCI, I worked at STC, a major telecommunications company located in Saudi Arabia. I was assigned to the Packet-Core Network Section under Network Control & Architecture department where we (as a team) evaluate, design, and propose technical solutions to the ISP's core level of the PS network, as well as oversee all ongoing projects in the PS network.
+I worked at STC (one of the largest telecommunications companies in the Middle East) as a network engineer in the Packet-Core Network division under Network Control & Architecture department that evaluates, designs, and proposes technical solutions to the most critical part of ISP; the core level of the PS network.
 
-Currently at UCI, I am investigating the communication scenarios between vehicles cruising down the road. There are different possible applications for vehicular networks, ranging from entertainment applications to collaborative driving of autonomous vehicles. Ultimately, road conditions are not always optimal for exchanging messages between speedy vehicles. For example, wireless signal fading due to high-rise buildings and congestion in the wireless spectrum would pose a great challenge on many vehicular applications, especially the safety-critical ones. Therefore, my current research focuses on evaluating and proposing possible solutions for enabling a reliable Vehicular Ad-Hoc Network (VANET). My current work include researching V2V and V2I limitations, ITS infrastructure support, message caching via Named-Data Network, and multi-path message delivery via multiple network interfaces (802.11p, WiFi, LTE/5G).
+At UCI, I am a Networked System Ph.D. Candidate and my research focus on the communication networks of Connected and Autonomous Vehicles, whether the vehicles are ground (i.e. cars and trucks) or aerial (i.e. Unmanned Aerial Vehicles, A.K.A drones). In particular, I investigate the security and privacy aspects of such networks. Currently I am researching the methodologies for authenticating the identities of legitimate vehicles while detecting the presence of illegitimate ones via different approaches such as drone First-Person View (FPV) video analysis and optical authentication & localization. 
