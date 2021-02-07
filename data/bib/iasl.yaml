@@ -14,6 +14,27 @@ references:
     title: Optimal Edge Computing for Infrastructure-Assisted UAV Systems
     volume: ''
     year: '2021'
+  alsoliman-rigoni-2021-icdcn:
+    author:
+    - first: Anas
+      last: Alsoliman
+    - first: Giulio
+      last: Rigoni
+    - first: Marco
+      last: Levorato
+    - first: Cristina
+      last: Pinotti
+    - first: Nils
+      last: Tippenhauer
+      middle: Ole
+    - first: Mauro
+      last: Conti
+    bibtex: "@inproceedings{alsoliman-rigoni-2021-icdcn,\n  author = {Alsoliman, Anas and Rigoni, Giulio and Levorato, Marco and Pinotti, Cristina and Tippenhauer, Nils Ole and Conti, Mauro},\n  title = {COTS Drone Detection using Video Streaming Characteristics},\n  booktitle = {International Conference on Distributed Computing and Networking 2021},\n  pages = {166--175},\n  year = {2021},\n}"
+    booktitle: International Conference on Distributed Computing and Networking 2021
+    kind: inproceedings
+    pages: 166–175
+    title: COTS Drone Detection using Video Streaming Characteristics
+    year: '2021'
   callegaro-matsubara-2020-globecom:
     address: Taipei, Taiwan
     author:
@@ -84,6 +105,22 @@ references:
     month: June
     note: SAC Tactile Internet Track
     title: Dynamic Distributed Computing for Infrastructure-Assisted Autonomous UAVs
+    year: '2020'
+  alsoliman-rabiah-2020-csnet:
+    author:
+    - first: Anas
+      last: Alsoliman
+    - first: Abdulrahman
+      last: Rabiah
+      middle: Bin
+    - first: Marco
+      last: Levorato
+    bibtex: "@inproceedings{alsoliman-rabiah-2020-csnet,\n  author = {Alsoliman, Anas and Rabiah, Abdulrahman Bin and Levorato, Marco},\n  title = {Privacy-Preserving Authentication Framework for UAS Traffic Management Systems},\n  booktitle = {2020 4th Cyber Security in Networking Conference (CSNet)},\n  pages = {1--8},\n  organization = {IEEE},\n  year = {2020},\n}"
+    booktitle: 2020 4th Cyber Security in Networking Conference (CSNet)
+    kind: inproceedings
+    organization: IEEE
+    pages: 1–8
+    title: Privacy-Preserving Authentication Framework for UAS Traffic Management Systems
     year: '2020'
   matsubara-callegaro-2020-access:
     author:

@@ -3,6 +3,7 @@ bibliography:
 - title: 2021
   items:
   - callegaro-levorato-2021-tvt
+  - alsoliman-rigoni-2021-icdcn
 - title: 2020
   items:
   - matsubara-callegaro-2020-access
@@ -10,6 +11,7 @@ bibliography:
   - matsubara-levorato-2020-icpr
   - matsubara-levorato-2020-emdl
   - callegaro-baidya-2020-icc
+  - alsoliman-rabiah-2020-csnet
 - title: 2019
   items:
   - callegaro-baidya-2019-milcom
