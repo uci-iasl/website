@@ -1,4 +1,34 @@
 references:
+  alsoliman-levorato-autosec2021:
+    author:
+    - first: Anas
+      last: Alsoliman
+    - first: Marco
+      last: Levorato
+    - first: Qi
+      last: Chen
+      middle: Alfred
+    bibtex: "@article{alsoliman-levorato-autosec2021,\n  author = {Alsoliman, Anas and Levorato, Marco and Chen, Qi Alfred},\n  title = {Vision-Based Two-Factor Authentication and Localization Scheme for Autonomous Vehicles},\n  journal = {Third International Workshop on Automotive and Autonomous Vehicle Security (part of NDSS)},\n  year = {2021},\n}"
+    journal: Third International Workshop on Automotive and Autonomous Vehicle Security (part of NDSS)
+    kind: article
+    title: Vision-Based Two-Factor Authentication and Localization Scheme for Autonomous Vehicles
+    year: '2021'
+  vega-alper-springer21:
+    author:
+    - first: Augusto
+      last: Vega
+    - first: Alper
+      last: Buyuktosunoglu
+    - last: Davide Callegaro
+    - first: Marco
+      last: Levorato
+    - first: Pradip
+      last: Bose
+    bibtex: "@article{vega-alper-springer21,\n  author = {Augusto Vega and Alper Buyuktosunoglu and \\textbf{Davide Callegaro} and Marco Levorato and Pradip Bose},\n  title = {Cloud-Backed Mobile CognitionPower-Efficient Deep Learningin the Autonomous Vehicle Era},\n  journal = {Springer Computing},\n  year = {2021},\n}"
+    journal: Springer Computing
+    kind: article
+    title: Cloud-Backed Mobile CognitionPower-Efficient Deep Learningin the Autonomous Vehicle Era
+    year: '2021'
   callegaro-levorato-2021-tvt:
     author:
     - first: D.
@@ -54,6 +84,41 @@ references:
     month: December
     title: Optimal Task Allocation for Time-Varying Edge Computing Systems with Split DNNs
     year: '2020'
+  anzanpour-amiri-acmiot20:
+    abstract: Recent advances in pervasive Internet of Things technologies and edge computing have opened new avenues for development of ubiquitous health monitoring applications. Delivering an acceptable level of usability and accuracy for these healthcare Internet of Things applications requires optimization of both system-driven and data-driven aspects, which are typically done in a disjoint manner. Although decoupled optimization of these processes yields local optima at each level, synergistic coupling of the system and data levels can lead to a holistic solution opening new opportunities for optimization. In this article, we present an edge-assisted resource manager that dynamically controls the fidelity and duration of sensing w.r.t. changes in the patient’s activity and health state, thus fine-tuning the trade-off between energy efficiency and measurement accuracy. The cornerstone of our proposed solution is an intelligent low-latency real-time controller implemented at the edge layer that detects abnormalities in the patient’s condition and accordingly adjusts the sensing parameters of a reconfigurable wireless sensor node. We assess the efficiency of our proposed system via a case study of the photoplethysmography-based medical early warning score system. Our experiments on a real full hardware-software early warning score system reveal up to 49
+    address: New York, NY, USA
+    articleno: '1'
+    author:
+    - first: Arman
+      last: Anzanpour
+    - first: Delaram
+      last: Amiri
+    - first: Iman
+      last: Azimi
+    - first: Marco
+      last: Levorato
+    - first: Nikil
+      last: Dutt
+    - first: Pasi
+      last: Liljeberg
+    - first: Amir
+      last: Rahmani
+      middle: M.
+    bibtex: "@article{anzanpour-amiri-acmiot20,\n  author = {Anzanpour, Arman and Amiri, Delaram and Azimi, Iman and Levorato, Marco and Dutt, Nikil and Liljeberg, Pasi and Rahmani, Amir M.},\n  title = {Edge-Assisted Control for Healthcare Internet of Things: A Case Study on PPG-Based Early Warning Score},\n  journal = {ACM Trans. Internet Things},\n  volume = {2},\n  number = {1},\n  publisher = {Association for Computing Machinery},\n  address = {New York, NY, USA},\n  month = oct,\n  year = {2020},\n  articleno = {1},\n  doi = {10.1145/3407091},\n  issn = {2691-1914},\n  issue_date = {February 2021},\n  keyword = {edge computing, Internet of Things, wearable electronics, Health monitoring, early warning score, edge-assisted control},\n  numpages = {21},\n  url = {https://doi.org/10.1145/3407091},\n}"
+    doi: 10.1145/3407091
+    issn: 2691-1914
+    issue_date: February 2021
+    journal: ACM Trans. Internet Things
+    keyword: edge computing, Internet of Things, wearable electronics, Health monitoring, early warning score, edge-assisted control
+    kind: article
+    month: October
+    number: '1'
+    numpages: '21'
+    publisher: Association for Computing Machinery
+    title: 'Edge-Assisted Control for Healthcare Internet of Things: A Case Study on PPG-Based Early Warning Score'
+    url: https://doi.org/10.1145/3407091
+    volume: '2'
+    year: '2020'
   matsubara-levorato-2020-icpr:
     abstract: 'The edge computing paradigm places compute-capable devices — edge servers — at the network edge to assist mobile devices in executing data analysis tasks. Intuitively, offloading compute-intense tasks to edge servers can reduce their execution time. However, poor conditions of the wireless channel connecting the mobile devices to the edge servers may degrade the overall capture-to-output delay achieved by edge offloading. Herein, we focus on edge computing supporting remote object detection by means of Deep Neural Networks (DNNs), and develop a framework to reduce the amount of data transmitted over the wireless link. The core idea we propose builds on recent approaches splitting DNNs into sections — namely head and tail models — executed by the mobile device and edge server, respectively. The wireless link, then, is used to transport the output of the last layer of the head model to the edge server, instead of the DNN input. Most prior work focuses on classification tasks and leaves the DNN structure unaltered. Herein, our focus is on DNNs for three different object detection tasks, which present a much more convoluted structure, and modify the architecture of the network to: (i) achieve in-network compression by introducing a bottleneck layer in the early layers on the head model, and (ii) prefilter pictures that do not contain objects of interest using a convolutional neural network. Results show that the proposed technique represents an effective intermediate option between local and edge computing in a parameter region where these extreme point solutions fail to provide satisfactory performance.'
     archiveprefix: arXiv
@@ -105,6 +170,95 @@ references:
     month: June
     note: SAC Tactile Internet Track
     title: Dynamic Distributed Computing for Infrastructure-Assisted Autonomous UAVs
+    year: '2020'
+  amiri-azimi-acmhealth20:
+    abstract: 'Healthcare applications supported by the Internet of Things enable personalized monitoring of a patient in everyday settings. Such applications often consist of battery-powered sensors coupled to smart gateways at the edge layer. Smart gateways offer several local computing and storage services (e.g., data aggregation, compression, local decision making), and also provide an opportunity for implementing local closed-loop optimization of different parameters of the sensor layer, particularly energy consumption. To implement efficient optimization methods, information regarding the context and state of patients need to be considered to find opportunities to adjust energy to demanded accuracy. Edge-assisted optimization can manage energy consumption of the sensor layer but may also adversely affect the quality of sensed data, which could compromise the reliable detection of health deterioration risk factors. In this article, we propose two approaches: myopic and Markov decision processes (MDPs)—to consider both energy constraints and risk factor requirements for achieving a twofold goal: energy savings while satisfying accuracy requirements of abnormality detection in a patient’s vital signs. Vital signs, including heart rate, respiration rate, and oxygen saturation, are extracted from a photoplethysmogram signal and errors of extracted features are compared to a ground truth that is modeled as a Gaussian distribution. We control the sensor’s sensing energy to minimize the power consumption while meeting a desired level of satisfactory detection performance. We present experimental results on realistic case studies using a reconfigurable photoplethysmogram sensor in an IoT system, and show that compared to nonadaptive methods, myopic reduces an average of 16.9'
+    address: New York, NY, USA
+    articleno: '7'
+    author:
+    - first: Delaram
+      last: Amiri
+    - first: Arman
+      last: Anzanpour
+    - first: Iman
+      last: Azimi
+    - first: Marco
+      last: Levorato
+    - first: Pasi
+      last: Liljeberg
+    - first: Nikil
+      last: Dutt
+    - first: Amir
+      last: Rahmani
+      middle: M.
+    bibtex: "@article{amiri-azimi-acmhealth20,\n  author = {Amiri, Delaram and Anzanpour, Arman and Azimi, Iman and Levorato, Marco and Liljeberg, Pasi and Dutt, Nikil and Rahmani, Amir M.},\n  title = {Context-Aware Sensing via Dynamic Programming for Edge-Assisted Wearable Systems},\n  journal = {ACM Trans. Comput. Healthcare},\n  volume = {1},\n  number = {2},\n  publisher = {Association for Computing Machinery},\n  address = {New York, NY, USA},\n  month = mar,\n  year = {2020},\n  articleno = {7},\n  doi = {10.1145/3351286},\n  issn = {2691-1957},\n  issue_date = {April 2020},\n  keyword = {abnormality detection, wearable electronics, Internet of Things, Health monitoring, energy efficiency, edge/fog computing, edge-assisted control, context awareness},\n  numpages = {25},\n  url = {https://doi.org/10.1145/3351286},\n}"
+    doi: 10.1145/3351286
+    issn: 2691-1957
+    issue_date: April 2020
+    journal: ACM Trans. Comput. Healthcare
+    keyword: abnormality detection, wearable electronics, Internet of Things, Health monitoring, energy efficiency, edge/fog computing, edge-assisted control, context awareness
+    kind: article
+    month: March
+    number: '2'
+    numpages: '25'
+    publisher: Association for Computing Machinery
+    title: Context-Aware Sensing via Dynamic Programming for Edge-Assisted Wearable Systems
+    url: https://doi.org/10.1145/3351286
+    volume: '1'
+    year: '2020'
+  tehrani-levorato-smartgrid-2020:
+    author:
+    - first: P.
+      last: Tehrani
+    - first: M.
+      last: Levorato
+    bibtex: "@inproceedings{tehrani-levorato-smartgrid-2020,\n  author = {P. {Tehrani} and M. {Levorato}},\n  title = {Frequency-based Multi Task learning With Attention Mechanism for Fault Detection In Power Systems},\n  booktitle = {2020 IEEE International Conference on Communications, Control, and Computing Technologies for Smart Grids (SmartGridComm)},\n  volume = {},\n  number = {},\n  pages = {1-6},\n  year = {2020},\n  doi = {10.1109/SmartGridComm47815.2020.9302968},\n}"
+    booktitle: 2020 IEEE International Conference on Communications, Control, and Computing Technologies for Smart Grids (SmartGridComm)
+    doi: 10.1109/SmartGridComm47815.2020.9302968
+    kind: inproceedings
+    number: ''
+    pages: 1-6
+    title: Frequency-based Multi Task learning With Attention Mechanism for Fault Detection In Power Systems
+    volume: ''
+    year: '2020'
+  choi-bedogni-globecom-2020:
+    author:
+    - first: Kevin
+      last: Choi
+    - first: Luca
+      last: Bedogni
+    - first: Marco
+      last: Levorato
+    bibtex: "@inproceedings{choi-bedogni-globecom-2020,\n  author = {Choi, Kevin and Bedogni, Luca and Levorato, Marco},\n  title = {Towards Green Crowdsourced Social Delivery Networks: A Feasibility Study},\n  booktitle = {GLOBECOM 2020-2020 IEEE Global Communications Conference},\n  pages = {1--6},\n  organization = {IEEE},\n  year = {2020},\n}"
+    booktitle: GLOBECOM 2020-2020 IEEE Global Communications Conference
+    kind: inproceedings
+    organization: IEEE
+    pages: 1–6
+    title: 'Towards Green Crowdsourced Social Delivery Networks: A Feasibility Study'
+    year: '2020'
+  amiri-anzanpour-fog20:
+    author:
+    - first: Delaram
+      last: Amiri
+    - first: Arman
+      last: Anzanpour
+    - first: Iman
+      last: Azimi
+    - first: Amir
+      last: Rahmani
+      middle: M
+    - first: Pasi
+      last: Liljeberg
+    - first: Nikil
+      last: Dutt
+    - first: Marco
+      last: Levorato
+    bibtex: "@article{amiri-anzanpour-fog20,\n  author = {Amiri, Delaram and Anzanpour, Arman and Azimi, Iman and Rahmani, Amir M and Liljeberg, Pasi and Dutt, Nikil and Levorato, Marco},\n  title = {Optimizing Energy Efficiency of Wearable Sensors Using Fog-assisted Control},\n  journal = {Fog Computing: Theory and Practice},\n  pages = {245--268},\n  publisher = {Wiley Online Library},\n  year = {2020},\n}"
+    journal: 'Fog Computing: Theory and Practice'
+    kind: article
+    pages: 245–268
+    publisher: Wiley Online Library
+    title: Optimizing Energy Efficiency of Wearable Sensors Using Fog-assisted Control
     year: '2020'
   alsoliman-rabiah-2020-csnet:
     author:
@@ -244,6 +398,83 @@ references:
     pages: 2959–2968
     title: Extended Range Electric Vehicle With Driving Behavior Estimation in Energy Management
     volume: '10'
+    year: '2019'
+  choi-shin-tvt2019:
+    author:
+    - first: H.
+      last: Choi
+    - first: W.
+      last: Shin
+    - first: M.
+      last: Levorato
+    - first: H.
+      last: Poor
+      middle: V.
+    bibtex: "@article{choi-shin-tvt2019,\n  author = {H. {Choi} and W. {Shin} and M. {Levorato} and H. V. {Poor}},\n  title = {Harvest-Or-Access: Slotted ALOHA for Wireless Powered Communication Networks},\n  journal = {IEEE Transactions on Vehicular Technology},\n  volume = {68},\n  number = {11},\n  pages = {11394-11398},\n  year = {2019},\n  doi = {10.1109/TVT.2019.2934439},\n}"
+    doi: 10.1109/TVT.2019.2934439
+    journal: IEEE Transactions on Vehicular Technology
+    kind: article
+    number: '11'
+    pages: 11394-11398
+    title: 'Harvest-Or-Access: Slotted ALOHA for Wireless Powered Communication Networks'
+    volume: '68'
+    year: '2019'
+  shin-kim-tvt2019:
+    author:
+    - first: MyungJae
+      last: Shin
+    - first: Joongheon
+      last: Kim
+    - first: Marco
+      last: Levorato
+    bibtex: "@article{shin-kim-tvt2019,\n  author = {Shin, MyungJae and Kim, Joongheon and Levorato, Marco},\n  title = {Auction-based charging scheduling with deep learning framework for multi-drone networks},\n  journal = {IEEE Transactions on Vehicular Technology},\n  volume = {68},\n  number = {5},\n  pages = {4235--4248},\n  publisher = {IEEE},\n  year = {2019},\n}"
+    journal: IEEE Transactions on Vehicular Technology
+    kind: article
+    number: '5'
+    pages: 4235–4248
+    publisher: IEEE
+    title: Auction-based charging scheduling with deep learning framework for multi-drone networks
+    volume: '68'
+    year: '2019'
+  bisio-garibotto-globecom-2019:
+    author:
+    - first: I.
+      last: Bisio
+    - first: C.
+      last: Garibotto
+    - first: F.
+      last: Lavagetto
+    - first: M.
+      last: Levorato
+    - first: A.
+      last: Sciarrone
+    bibtex: "@inproceedings{bisio-garibotto-globecom-2019,\n  author = {I. {Bisio} and C. {Garibotto} and F. {Lavagetto} and M. {Levorato} and A. {Sciarrone}},\n  title = {Statistical Analysis of Wireless Traffic: An Adversarial Approach to Drone Surveillance},\n  booktitle = {2019 IEEE Global Communications Conference (GLOBECOM)},\n  volume = {},\n  number = {},\n  pages = {1-6},\n  year = {2019},\n  doi = {10.1109/GLOBECOM38437.2019.9013562},\n}"
+    booktitle: 2019 IEEE Global Communications Conference (GLOBECOM)
+    doi: 10.1109/GLOBECOM38437.2019.9013562
+    kind: inproceedings
+    number: ''
+    pages: 1-6
+    title: 'Statistical Analysis of Wireless Traffic: An Adversarial Approach to Drone Surveillance'
+    volume: ''
+    year: '2019'
+  valentini-alesii-icc-2019:
+    author:
+    - first: R.
+      last: Valentini
+    - first: R.
+      last: Alesii
+    - first: M.
+      last: Levorato
+    - first: F.
+      last: Santucci
+    bibtex: "@inproceedings{valentini-alesii-icc-2019,\n  author = {R. {Valentini} and R. {Alesii} and M. {Levorato} and F. {Santucci}},\n  title = {Cross-Layer Analysis of RFID Systems with Correlated Shadowing and Random Radiation Efficiency},\n  booktitle = {ICC 2019 - 2019 IEEE International Conference on Communications (ICC)},\n  volume = {},\n  number = {},\n  pages = {1-7},\n  year = {2019},\n  doi = {10.1109/ICC.2019.8761060},\n}"
+    booktitle: ICC 2019 - 2019 IEEE International Conference on Communications (ICC)
+    doi: 10.1109/ICC.2019.8761060
+    kind: inproceedings
+    number: ''
+    pages: 1-7
+    title: Cross-Layer Analysis of RFID Systems with Correlated Shadowing and Random Radiation Efficiency
+    volume: ''
     year: '2019'
   amiri-anzanpour-2018-globecom:
     abstract: The Internet of Things is a key enabler of mobile health-care applications. However, the inherent constraints of mobile devices, such as limited availability of energy, can impair their ability to produce accurate data and, in turn, degrade the output of algorithms processing them in real-time to evaluate the patient’s state. This paper presents an edge-assisted framework, where models and control generated by an edge server inform the sensing parameters of mobile sensors. The objective is to maximize the probability that anomalies in the collected signals are detected over extensive periods of time under battery-imposed constraints. Although the proposed concept is general, the control framework is made specific to a use-case where vital signs — heart rate, respiration rate and oxygen saturation — are extracted from a Photoplethysmogram (PPG) signal to detect anomalies in real-time. Experimental results show a 16.9% reduction in sensing energy consumption in comparison to a constant energy consumption with the maximum misdetection probability of 0.17 in a 24-hour health monitoring system.
@@ -442,6 +673,23 @@ references:
     kind: inproceedings
     month: April
     title: eBPF-Based Content and Computation-Aware Communication for Real-Time Edge Computing
+    year: '2018'
+  valentini-levorato-tcomm2018:
+    author:
+    - first: Roberto
+      last: Valentini
+    - first: Marco
+      last: Levorato
+    - first: Fortunato
+      last: Santucci
+    bibtex: "@article{valentini-levorato-tcomm2018,\n  author = {Valentini, Roberto and Levorato, Marco and Santucci, Fortunato},\n  title = {Optimal aging--aware channel access and power allocation for battery--powered devices with radio frequency energy harvesting},\n  journal = {IEEE Transactions on Communications},\n  volume = {66},\n  number = {11},\n  pages = {5773--5787},\n  publisher = {IEEE},\n  year = {2018},\n}"
+    journal: IEEE Transactions on Communications
+    kind: article
+    number: '11'
+    pages: 5773–5787
+    publisher: IEEE
+    title: Optimal aging–aware channel access and power allocation for battery–powered devices with radio frequency energy harvesting
+    volume: '66'
     year: '2018'
   chowdhery-levorato-2018-fogiot:
     author:

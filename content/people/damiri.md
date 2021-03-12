@@ -6,7 +6,6 @@ role: alumnus-phd
 status: Ph.D.
 yearjoined: 2015
 yeargraduated: 2020
-current_occupation: Software Engineer at Microsoft
 portrait: damiri.jpg
 badge: damiri-badge.jpg
 interests:
@@ -29,8 +28,13 @@ websites:
 - title: LinkedIn
   url: https://www.linkedin.com/in/delaramamiri
 bibliography:
+- title: Book Chapters
+  items:
+  - amiri-anzanpour-fog20
 - title: Journal Articles
   items:
+  - amiri-azimi-acmhealth20
+  - anzanpour-amiri-acmiot20
   - keshavarzi-amiri-2014-tfeccs
   - keshavarzi-pezeshk-2013-tfeccs
   - amiri-keshavarzi-2013-asl

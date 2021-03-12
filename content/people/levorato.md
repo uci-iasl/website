@@ -34,20 +34,30 @@ address: |
 bibliography:
 - title: 2021
   items:
+  - vega-alper-springer21
+  - alsoliman-levorato-autosec2021
   - callegaro-levorato-2021-tvt
   - alsoliman-rigoni-2021-icdcn
 - title: 2020
   items:
   - callegaro-matsubara-2020-globecom
   - matsubara-callegaro-2020-access
+  - tehrani-levorato-smartgrid-2020
+  - choi-bedogni-globecom-2020
+  - amiri-azimi-acmhealth20
+  - anzanpour-amiri-acmiot20
   - matsubara-levorato-2020-emdl
   - matsubara-levorato-2020-icpr
   - callegaro-baidya-2020-icc
   - alsoliman-rabiah-2020-csnet
 - title: 2019
   items:
+  - choi-shin-tvt2019
   - callegaro-baidya-2019-milcom
   - matsubara-baidya-2019-mobicom
+  - shin-kim-tvt2019
+  - bisio-garibotto-globecom-2019
+  - valentini-alesii-icc-2019
   - callegaro-baidya-2019-magesys
   - burago-levorato-2019-isit
   - vatanparvar-faezi-2019-tsg
@@ -57,6 +67,7 @@ bibliography:
   - callegaro-levorato-2018-globecom
   - lima-oliveira-2018-nca
   - baidya-shaikh-2018-mswim
+  - valentini-levorato-tcomm2018
   - burago-levorato-2018-acssc
   - baidya-levorato-2018-tccn
   - lee-hong-2018-iotj
