@@ -206,6 +206,23 @@ references:
     url: https://doi.org/10.1145/3351286
     volume: '1'
     year: '2020'
+  baidya-tehrani-2020-icc:
+    author:
+    - first: S.
+      last: Baidya
+    - first: P.
+      last: Tehrani
+    - first: M.
+      last: Levorato
+    bibtex: "@inproceedings{baidya-tehrani-2020-icc,\n  author = {S. {Baidya} and P. {Tehrani} and M. {Levorato}},\n  title = {Data-Driven Path Selection for Real-Time Video Streaming at the Network Edge},\n  booktitle = {2020 IEEE International Conference on Communications Workshops (ICC Workshops)},\n  volume = {},\n  number = {},\n  pages = {1-6},\n  year = {2020},\n  doi = {10.1109/ICCWorkshops49005.2020.9145158},\n}"
+    booktitle: 2020 IEEE International Conference on Communications Workshops (ICC Workshops)
+    doi: 10.1109/ICCWorkshops49005.2020.9145158
+    kind: inproceedings
+    number: ''
+    pages: 1-6
+    title: Data-Driven Path Selection for Real-Time Video Streaming at the Network Edge
+    volume: ''
+    year: '2020'
   tehrani-levorato-smartgrid-2020:
     author:
     - first: P.

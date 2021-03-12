@@ -48,6 +48,7 @@ bibliography:
   - anzanpour-amiri-acmiot20
   - matsubara-levorato-2020-emdl
   - matsubara-levorato-2020-icpr
+  - baidya-tehrani-2020-icc
   - callegaro-baidya-2020-icc
   - alsoliman-rabiah-2020-csnet
 - title: 2019

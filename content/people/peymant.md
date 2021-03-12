@@ -28,6 +28,8 @@ websites:
   url: https://scholar.google.com/citations?user=1hbKmhYAAAAJ&hl=en
 bibliography:
 - items:
+  - tehrani-levorato-smartgrid-2020
+  - baidya-tehrani-2020-icc
   - mili-tehrani-2016-wcl
   - tehrani-lahouti-2016-icc
 ---

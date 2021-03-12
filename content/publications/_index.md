@@ -17,6 +17,7 @@ bibliography:
   - matsubara-levorato-2020-emdl
   - matsubara-levorato-2020-icpr
   - callegaro-baidya-2020-icc
+  - baidya-tehrani-2020-icc
   - alsoliman-rabiah-2020-csnet
 - title: 2019
   items:
