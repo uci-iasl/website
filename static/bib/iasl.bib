@@ -1,3 +1,17 @@
+@article{alsoliman-levorato-autosec2021,
+  author = {Alsoliman, Anas and Levorato, Marco and Chen, Qi Alfred},
+  title = {Vision-Based Two-Factor Authentication and Localization Scheme for Autonomous Vehicles},
+  journal = {Third International Workshop on Automotive and Autonomous Vehicle Security (part of NDSS)},
+  year = {2021},
+}
+
+@article{vega-alper-springer21,
+  author = {Augusto Vega and Alper Buyuktosunoglu and \textbf{Davide Callegaro} and Marco Levorato and Pradip Bose},
+  title = {Cloud-Backed Mobile CognitionPower-Efficient Deep Learningin the Autonomous Vehicle Era},
+  journal = {Springer Computing},
+  year = {2021},
+}
+
 @article{callegaro-levorato-2021-tvt,
   author = {D. {Callegaro} and M. {Levorato}},
   title = {Optimal Edge Computing for Infrastructure-Assisted UAV Systems},
@@ -30,6 +44,26 @@ Communications: Internet of Things and Smart Connected Communities
   days = {6},
   keyword = {Edge Computing; Split Computing; Deep Neural Network; Markov Decision
 Processes},
+}
+
+@article{anzanpour-amiri-acmiot20,
+  author = {Anzanpour, Arman and Amiri, Delaram and Azimi, Iman and Levorato, Marco and Dutt, Nikil and Liljeberg, Pasi and Rahmani, Amir M.},
+  title = {Edge-Assisted Control for Healthcare Internet of Things: A Case Study on PPG-Based Early Warning Score},
+  journal = {ACM Trans. Internet Things},
+  volume = {2},
+  number = {1},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  month = oct,
+  year = {2020},
+  abstract = {Recent advances in pervasive Internet of Things technologies and edge computing have opened new avenues for development of ubiquitous health monitoring applications. Delivering an acceptable level of usability and accuracy for these healthcare Internet of Things applications requires optimization of both system-driven and data-driven aspects, which are typically done in a disjoint manner. Although decoupled optimization of these processes yields local optima at each level, synergistic coupling of the system and data levels can lead to a holistic solution opening new opportunities for optimization. In this article, we present an edge-assisted resource manager that dynamically controls the fidelity and duration of sensing w.r.t. changes in the patient’s activity and health state, thus fine-tuning the trade-off between energy efficiency and measurement accuracy. The cornerstone of our proposed solution is an intelligent low-latency real-time controller implemented at the edge layer that detects abnormalities in the patient’s condition and accordingly adjusts the sensing parameters of a reconfigurable wireless sensor node. We assess the efficiency of our proposed system via a case study of the photoplethysmography-based medical early warning score system. Our experiments on a real full hardware-software early warning score system reveal up to 49% power savings while maintaining the accuracy of the sensory data.},
+  articleno = {1},
+  doi = {10.1145/3407091},
+  issn = {2691-1914},
+  issue_date = {February 2021},
+  keyword = {edge computing, Internet of Things, wearable electronics, Health monitoring, early warning score, edge-assisted control},
+  numpages = {21},
+  url = {https://doi.org/10.1145/3407091},
 }
 
 @article{matsubara-levorato-2020-icpr,
@@ -68,6 +102,55 @@ Processes},
   year = {2020},
   abstract = {The analysis of information rich signals is at the core of autonomy. In airborne devices such as Unmanned Aerial Vehicles (UAV), the hardware limitations imposed by the weight constraints make the continuous execution of these algorithms challenging. Edge computing can mitigate such limitations and boost the system and mission performance of the UAVs. However, due to the UAVs motion characteristics and complex dynamics of urban environments, remote processing-control loops can quickly degrade. This paper presents Hydra, a framework for the dynamic selection of communication/computation resources in this challenging environment. A full~--- open-source~--- implementation of Hydra is discussed and tested via real-world experiments.},
   doi = {10.1109/icc40277.2020.9148986},
+}
+
+@article{amiri-azimi-acmhealth20,
+  author = {Amiri, Delaram and Anzanpour, Arman and Azimi, Iman and Levorato, Marco and Liljeberg, Pasi and Dutt, Nikil and Rahmani, Amir M.},
+  title = {Context-Aware Sensing via Dynamic Programming for Edge-Assisted Wearable Systems},
+  journal = {ACM Trans. Comput. Healthcare},
+  volume = {1},
+  number = {2},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  month = mar,
+  year = {2020},
+  abstract = {Healthcare applications supported by the Internet of Things enable personalized monitoring of a patient in everyday settings. Such applications often consist of battery-powered sensors coupled to smart gateways at the edge layer. Smart gateways offer several local computing and storage services (e.g., data aggregation, compression, local decision making), and also provide an opportunity for implementing local closed-loop optimization of different parameters of the sensor layer, particularly energy consumption. To implement efficient optimization methods, information regarding the context and state of patients need to be considered to find opportunities to adjust energy to demanded accuracy. Edge-assisted optimization can manage energy consumption of the sensor layer but may also adversely affect the quality of sensed data, which could compromise the reliable detection of health deterioration risk factors. In this article, we propose two approaches: myopic and Markov decision processes (MDPs)—to consider both energy constraints and risk factor requirements for achieving a twofold goal: energy savings while satisfying accuracy requirements of abnormality detection in a patient’s vital signs. Vital signs, including heart rate, respiration rate, and oxygen saturation, are extracted from a photoplethysmogram signal and errors of extracted features are compared to a ground truth that is modeled as a Gaussian distribution. We control the sensor’s sensing energy to minimize the power consumption while meeting a desired level of satisfactory detection performance. We present experimental results on realistic case studies using a reconfigurable photoplethysmogram sensor in an IoT system, and show that compared to nonadaptive methods, myopic reduces an average of 16.9% in sensing energy consumption with the maximum probability of abnormality misdetection on the order of 0.17 in a 24-hour health monitoring system. In addition, over 4 weeks of monitoring, we demonstrate that our MDP policy can extend the battery life on average of more than 2x while fulfilling the same average probability of misdetection compared to the myopic method. We illustrate results comparing myopic, MDP, and nonadaptive methods to monitor 14 subjects over 1 month.},
+  articleno = {7},
+  doi = {10.1145/3351286},
+  issn = {2691-1957},
+  issue_date = {April 2020},
+  keyword = {abnormality detection, wearable electronics, Internet of Things, Health monitoring, energy efficiency, edge/fog computing, edge-assisted control, context awareness},
+  numpages = {25},
+  url = {https://doi.org/10.1145/3351286},
+}
+
+@inproceedings{tehrani-levorato-smartgrid-2020,
+  author = {P. {Tehrani} and M. {Levorato}},
+  title = {Frequency-based Multi Task learning With Attention Mechanism for Fault Detection In Power Systems},
+  booktitle = {2020 IEEE International Conference on Communications, Control, and Computing Technologies for Smart Grids (SmartGridComm)},
+  volume = {},
+  number = {},
+  pages = {1-6},
+  year = {2020},
+  doi = {10.1109/SmartGridComm47815.2020.9302968},
+}
+
+@inproceedings{choi-bedogni-globecom-2020,
+  author = {Choi, Kevin and Bedogni, Luca and Levorato, Marco},
+  title = {Towards Green Crowdsourced Social Delivery Networks: A Feasibility Study},
+  booktitle = {GLOBECOM 2020-2020 IEEE Global Communications Conference},
+  pages = {1--6},
+  organization = {IEEE},
+  year = {2020},
+}
+
+@article{amiri-anzanpour-fog20,
+  author = {Amiri, Delaram and Anzanpour, Arman and Azimi, Iman and Rahmani, Amir M and Liljeberg, Pasi and Dutt, Nikil and Levorato, Marco},
+  title = {Optimizing Energy Efficiency of Wearable Sensors Using Fog-assisted Control},
+  journal = {Fog Computing: Theory and Practice},
+  pages = {245--268},
+  publisher = {Wiley Online Library},
+  year = {2020},
 }
 
 @inproceedings{alsoliman-rabiah-2020-csnet,
@@ -149,6 +232,50 @@ Processes},
   year = {2019},
   abstract = {Battery and energy management methodologies have been proposed to address the design challenges of driving range and battery lifetime in Electric Vehicles (EV). However, the driving behavior is a major factor which has been neglected in these methodologies. In this paper, we propose a novel context-aware methodology to estimate the driving behavior in terms of future vehicle speeds and integrate this capability into EV energy management. We implement a driving behavior model using a variation of Artificial Neural Networks (ANN) called Nonlinear AutoRegressive model with eXogenous Inputs (NARX). We train our novel context-aware NARX model based on historical behavior of real drivers, their recent driving reactions, and route average speed retrieved from Google Maps in order to enable driver-specific and self-adaptive driving behavior modeling and long-term estimation. We analyze the estimation error of our methodology and its impact on a battery lifetime-aware automotive climate control, comparing to the state-of-the-art methodologies for various estimation window sizes. Our methodology shows only 12\%~error for up to 30-second speed prediction which is an improvement of~27\% compared to the state-of-the-art. Therefore, the higher accuracy helps the controller to achieve up to 82\%~of the maximum energy saving and battery lifetime improvement achievable in ideal methodology where the future vehicle speeds are known.},
   doi = {10.1109/tsg.2018.2815689},
+}
+
+@article{choi-shin-tvt2019,
+  author = {H. {Choi} and W. {Shin} and M. {Levorato} and H. V. {Poor}},
+  title = {Harvest-Or-Access: Slotted ALOHA for Wireless Powered Communication Networks},
+  journal = {IEEE Transactions on Vehicular Technology},
+  volume = {68},
+  number = {11},
+  pages = {11394-11398},
+  year = {2019},
+  doi = {10.1109/TVT.2019.2934439},
+}
+
+@article{shin-kim-tvt2019,
+  author = {Shin, MyungJae and Kim, Joongheon and Levorato, Marco},
+  title = {Auction-based charging scheduling with deep learning framework for multi-drone networks},
+  journal = {IEEE Transactions on Vehicular Technology},
+  volume = {68},
+  number = {5},
+  pages = {4235--4248},
+  publisher = {IEEE},
+  year = {2019},
+}
+
+@inproceedings{bisio-garibotto-globecom-2019,
+  author = {I. {Bisio} and C. {Garibotto} and F. {Lavagetto} and M. {Levorato} and A. {Sciarrone}},
+  title = {Statistical Analysis of Wireless Traffic: An Adversarial Approach to Drone Surveillance},
+  booktitle = {2019 IEEE Global Communications Conference (GLOBECOM)},
+  volume = {},
+  number = {},
+  pages = {1-6},
+  year = {2019},
+  doi = {10.1109/GLOBECOM38437.2019.9013562},
+}
+
+@inproceedings{valentini-alesii-icc-2019,
+  author = {R. {Valentini} and R. {Alesii} and M. {Levorato} and F. {Santucci}},
+  title = {Cross-Layer Analysis of RFID Systems with Correlated Shadowing and Random Radiation Efficiency},
+  booktitle = {ICC 2019 - 2019 IEEE International Conference on Communications (ICC)},
+  volume = {},
+  number = {},
+  pages = {1-7},
+  year = {2019},
+  doi = {10.1109/ICC.2019.8761060},
 }
 
 @inproceedings{amiri-anzanpour-2018-globecom,
@@ -267,6 +394,17 @@ Processes},
   year = {2018},
   abstract = {By placing computation resources within a one-hop wireless topology, the recent edge computing paradigm is a key enabler of real-time Internet of Things (IoT) applications. In the context of IoT scenarios where the same information from a sensor is used by multiple applications at different locations, the data stream needs to be replicated. However, the transportation of parallel streams might not be feasible due to limitations in the capacity of the network transporting the data. To address this issue, a content and computation-aware communication control framework is proposed based on the Software Defined Network (SDN) paradigm. The framework supports multi-streaming using the extended Berkeley Packet Filter (eBPF), where the traffic flow and packet replication for each specific computation process is controlled by a program running inside an in-kernel Virtual Machine (VM). The proposed framework is instantiated to address a case-study scenario where video streams from multiple cameras are transmitted to the edge processor for real-time analysis. Numerical results demonstrate the advantage of the proposed framework in terms of programmability, network bandwidth and system resource savings.},
   doi = {10.1109/infcomw.2018.8407006},
+}
+
+@article{valentini-levorato-tcomm2018,
+  author = {Valentini, Roberto and Levorato, Marco and Santucci, Fortunato},
+  title = {Optimal aging--aware channel access and power allocation for battery--powered devices with radio frequency energy harvesting},
+  journal = {IEEE Transactions on Communications},
+  volume = {66},
+  number = {11},
+  pages = {5773--5787},
+  publisher = {IEEE},
+  year = {2018},
 }
 
 @incollection{chowdhery-levorato-2018-fogiot,

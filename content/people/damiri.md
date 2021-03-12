@@ -28,8 +28,13 @@ websites:
 - title: LinkedIn
   url: https://www.linkedin.com/in/delaramamiri
 bibliography:
+- title: Book Chapters
+  items:
+  - amiri-anzanpour-fog20
 - title: Journal Articles
   items:
+  - amiri-azimi-acmhealth20
+  - anzanpour-amiri-acmiot20
   - keshavarzi-amiri-2014-tfeccs
   - keshavarzi-pezeshk-2013-tfeccs
   - amiri-keshavarzi-2013-asl

@@ -24,9 +24,13 @@ websites:
 - title: LinkedIn
   url: https://www.linkedin.com/in/davide-callegaro/
 bibliography:
-- items:
+- title: Journal Papers
+  items:
+  - vega-alper-springer21
   - callegaro-levorato-2021-tvt
   - matsubara-callegaro-2020-access
+- title: Conference Proceedings
+  items:
   - callegaro-matsubara-2020-globecom
   - callegaro-baidya-2020-icc
   - callegaro-baidya-2019-milcom
