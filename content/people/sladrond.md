@@ -9,18 +9,19 @@ portrait: sladrond.jpg
 badge: sladrond-badge.jpg
 interests:
 - Edge Computing 
-- Optimization of resource allocation in Heterogeneous Networks 
-- 5G NR networks 
+- Wireless Networks  
+- Internet of Things 
+- Real-time Systems 
 education:
 - degree: M.S. in Electrical Engineering
   institution: University of Southern California (USC)
-  year: 2018
+  year: 2020
 - degree: B.S. in Telematics Engineering
   institution: Instituto Tecnologico Autonomo de Mexico (ITAM)
-  year: 2010
+  year: 2017
 - degree: B.S. in Computer Engineering 
   institution: Instituto Tecnologico Autonomo de Mexico (ITAM)
-  year: 2009
+  year: 2016
 email: sladrond@uci.edu
 websites:
 - title: LinkedIn
@@ -30,5 +31,4 @@ bibliography:
   - ramachandran-contreras-usenix18
 ---
 
-I earned my dual bachelor's degrees in Telematics and Computer Engineering at Instituto Tecnologico Autonomo de Mexico (ITAM). I obtained my M.S.in Electrical Engineering at the University of Southern California (USC). I am currently a Networked Systems Ph.D. student at the University of California, Irvine. My research interest focuses on edge computing, 5G NR networks, control and reinforcement learning applies to the optimization of resouce allocation in heterogeneous networks. 
-
+I hold a B.S in Telematics Engineering and a B.S. in Computer Engineering from Instituto Tecnologico Autonomo de Mexico (ITAM). I obtained my M.S.in Electrical Engineering at the University of Southern California (USC). I am currently a Networked Systems Ph.D. student at the University of California, Irvine. My research interests are edge computing, wireless networks, Internet of Things, and real-time systems.
