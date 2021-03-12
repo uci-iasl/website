@@ -22,6 +22,7 @@ education:
 email: aalsolim@uci.edu
 bibliography:
 - items:
+  - alsoliman-levorato-autosec2021
   - alsoliman-rigoni-2021-icdcn
   - alsoliman-rabiah-2020-csnet
 ---
