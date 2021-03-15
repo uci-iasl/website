@@ -263,19 +263,25 @@ references:
       last: Azimi
     - first: Amir
       last: Rahmani
-      middle: M
+      middle: M.
     - first: Pasi
       last: Liljeberg
     - first: Nikil
       last: Dutt
     - first: Marco
       last: Levorato
-    bibtex: "@article{amiri-anzanpour-fog20,\n  author = {Amiri, Delaram and Anzanpour, Arman and Azimi, Iman and Rahmani, Amir M and Liljeberg, Pasi and Dutt, Nikil and Levorato, Marco},\n  title = {Optimizing Energy Efficiency of Wearable Sensors Using Fog-assisted Control},\n  journal = {Fog Computing: Theory and Practice},\n  pages = {245--268},\n  publisher = {Wiley Online Library},\n  year = {2020},\n}"
-    journal: 'Fog Computing: Theory and Practice'
+    bibtex: "@article{amiri-anzanpour-fog20,\n  author = {Amiri, Delaram and Anzanpour, Arman and Azimi, Iman and Rahmani, Amir M. and Liljeberg, Pasi and Dutt, Nikil and Levorato, Marco},\n  title = {Optimizing Energy Efficiency of Wearable Sensors Using Fog-assisted Control},\n  booktitle = {Fog Computing},\n  chapter = {9},\n  pages = {245-268},\n  publisher = {John Wiley & Sons, Ltd},\n  year = {2020},\n  doi = {10.1002/9781119551713.ch9},\n  eprint = {https://onlinelibrary.wiley.com/doi/pdf/10.1002/9781119551713.ch9},\n  isbn = {9781119551713},\n  keyword = {energy-efficient fog computing, energy-efficient sensor control, healthcare Internet-of-Things, Markov decision process, myopic strategy, wearable sensors},\n  url = {https://onlinelibrary.wiley.com/doi/abs/10.1002/9781119551713.ch9},\n}"
+    booktitle: Fog Computing
+    chapter: '9'
+    doi: 10.1002/9781119551713.ch9
+    eprint: https://onlinelibrary.wiley.com/doi/pdf/10.1002/9781119551713.ch9
+    isbn: '9781119551713'
+    keyword: energy-efficient fog computing, energy-efficient sensor control, healthcare Internet-of-Things, Markov decision process, myopic strategy, wearable sensors
     kind: article
-    pages: 245–268
-    publisher: Wiley Online Library
+    pages: 245-268
+    publisher: John Wiley Sons, Ltd
     title: Optimizing Energy Efficiency of Wearable Sensors Using Fog-assisted Control
+    url: https://onlinelibrary.wiley.com/doi/abs/10.1002/9781119551713.ch9
     year: '2020'
   alsoliman-rabiah-2020-csnet:
     author:
