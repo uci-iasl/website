@@ -26,7 +26,7 @@ websites:
 bibliography:
 - title: Journal Papers
   items:
-  - vega-alper-springer21
+  <!-- - vega-alper-springer21 -->
   - callegaro-levorato-2021-tvt
   - matsubara-callegaro-2020-access
 - title: Conference Proceedings
