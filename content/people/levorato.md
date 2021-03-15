@@ -34,7 +34,6 @@ address: |
 bibliography:
 - title: 2021
   items:
-  - vega-alper-springer21
   - alsoliman-levorato-autosec2021
   - callegaro-levorato-2021-tvt
   - alsoliman-rigoni-2021-icdcn
