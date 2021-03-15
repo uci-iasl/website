@@ -35,14 +35,14 @@ references:
       last: Callegaro
     - first: M.
       last: Levorato
-    bibtex: "@article{callegaro-levorato-2021-tvt,\n  author = {D. {Callegaro} and M. {Levorato}},\n  title = {Optimal Edge Computing for Infrastructure-Assisted UAV Systems},\n  journal = {IEEE Transactions on Vehicular Technology},\n  volume = {},\n  number = {},\n  pages = {1-1},\n  year = {2021},\n  doi = {10.1109/TVT.2021.3051378},\n}"
+    bibtex: "@article{callegaro-levorato-2021-tvt,\n  author = {D. {Callegaro} and M. {Levorato}},\n  title = {Optimal Edge Computing for Infrastructure-Assisted UAV Systems},\n  journal = {IEEE Transactions on Vehicular Technology},\n  volume = {70},\n  number = {2},\n  pages = {1782-1792},\n  year = {2021},\n  doi = {10.1109/TVT.2021.3051378},\n}"
     doi: 10.1109/TVT.2021.3051378
     journal: IEEE Transactions on Vehicular Technology
     kind: article
-    number: ''
-    pages: 1-1
+    number: '2'
+    pages: 1782-1792
     title: Optimal Edge Computing for Infrastructure-Assisted UAV Systems
-    volume: ''
+    volume: '70'
     year: '2021'
   alsoliman-rigoni-2021-icdcn:
     author:
