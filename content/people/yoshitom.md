@@ -11,6 +11,7 @@ interests:
 - Machine learning
 - Computer vision
 - Natural language processing
+- Information retrieval
 education:
 - degree: Master of Applied Informatics
   institution: University of Hyogo, Kobe, Japan
@@ -36,4 +37,4 @@ bibliography:
   - matsubara-samura-2012-ists
 ---
 
-He is a Ph.D. Candidate in Computer Science at the University of California, Irvine (UCI), working on Machine Learning and its applications with Profs. Sameer Singh and Marco Levorato. Before UCI, he has obtained his Master’s and Bachelor’s degrees from the University of Hyogo and the National Institute of Technology, Akashi College, respectively. His Master’s and Bachelor’s theses’ topics were behavioral biometrics, such as keystroke dynamics, and flick authentication. He has also worked as a data scientist at leading IT companies in Japan. The machine learning models he had developed were used in image recommendation systems and online advertisement products, outperforming the models existing at that time.
+He is a Ph.D. Candidate in Computer Science at the University of California, Irvine (UCI), working on computer vision and NLP projects with Profs. Marco Levorato, Sameer Singh, and Stephan Mandt. Before UCI, he has obtained his Master’s and Bachelor’s degrees from the University of Hyogo and the National Institute of Technology, Akashi College, respectively. His Master’s and Bachelor’s theses’ topics were behavioral biometrics, such as keystroke dynamics, and flick authentication. He also has work experience at industry such as Amazon.com Services, Inc., Slice Technologies, Yahoo Japan Corporation, and Recruit Holdings Co., Ltd. for research projects in various domains: NLP, information retrieval, computer vision, and recommender systems.
