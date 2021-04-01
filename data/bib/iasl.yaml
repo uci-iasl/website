@@ -138,19 +138,17 @@ references:
     year: '2020'
   matsubara-levorato-2020-emdl:
     abstract: Following the trends of mobile and edge computing for DNN models, an intermediate option, split computing, has been attracting attentions from the research community. Previous studies empirically showed that while mobile and edge computing often would be the best options in terms of total inference time, there are some scenarios where split computing methods can achieve shorter inference time. All the proposed split computing approaches, however, focus on image classification tasks, and most are assessed with small datasets that are far from the practical scenarios. In this paper, we discuss the challenges in developing split computing methods for powerful R-CNN object detectors trained on a large dataset, COCO 2017. We extensively analyze the object detectors in terms of layer-wise tensor size and model size, and show that naive split computing methods would not reduce inference time. To the best of our knowledge, this is the first study to inject small bottlenecks to such object detectors and unveil the potential of a split computing approach.
-    archiveprefix: arXiv
+    address: London, United Kingdom
     author:
     - first: Yoshitomo
       last: Matsubara
     - first: Marco
       last: Levorato
-    bibtex: "@article{matsubara-levorato-2020-emdl,\n  author = {Yoshitomo Matsubara and Marco Levorato},\n  title = {Split Computing for Complex Object Detectors: Challenges and Preliminary Results},\n  journal = {arXiv.org e-Print Archive},\n  month = jul,\n  year = {2020},\n  archiveprefix = {arXiv},\n  eprint = {2007.13312},\n  primaryclass = {cs.CV},\n}"
+    bibtex: "@inproceedings{matsubara-levorato-2020-emdl,\n  author = {Yoshitomo Matsubara and Marco Levorato},\n  title = {Split Computing for Complex Object Detectors: Challenges and Preliminary Results},\n  booktitle = {Proceedings of the 4th International Workshop on Embedded and Mobile Deep Learning},\n  pages={7--12}\n  month = jul,\n  year = {2020},\n}"
     codeurl: https://github.com/yoshitomo-matsubara/hnd-ghnd-object-detectors
-    eprint: '2007.13312'
-    journal: arXiv.org e-Print Archive
-    kind: article
-    month: July
-    primaryclass: cs.CV
+    booktitle: Proceedings of the 4th International Workshop on Embedded and Mobile Deep Learning
+    kind: inproceedings
+    month: September
     title: 'Split Computing for Complex Object Detectors: Challenges and Preliminary Results'
     year: '2020'
   callegaro-baidya-2020-icc:
@@ -312,6 +310,7 @@ references:
     - first: S.
       last: Singh
     bibtex: "@article{matsubara-callegaro-2020-access,\n  author = {Y. {Matsubara} and D. {Callegaro} and S. {Baidya} and M. {Levorato} and S. {Singh}},\n  title = {Head Network Distillation: Splitting Distilled Deep Neural Networks for Resource-Constrained Edge Computing Systems},\n  journal = {IEEE Access},\n  volume = {8},\n  number = {},\n  pages = {212177-212193},\n  year = {2020},\n  doi = {10.1109/ACCESS.2020.3039714},\n}"
+    codeurl: https://github.com/yoshitomo-matsubara/head-network-distillation
     doi: 10.1109/ACCESS.2020.3039714
     journal: IEEE Access
     kind: article
@@ -358,6 +357,7 @@ references:
       last: Singh
     bibtex: "@inproceedings{matsubara-baidya-2019-mobicom,\n  author = {Yoshitomo Matsubara and Sabur Baidya and Davide Callegaro and Marco Levorato and Sameer Singh},\n  title = {Distilled Split Deep Neural Networks for Edge-Assisted Real-Time Systems},\n  booktitle = {Proceedings of the ACM International Conference on Mobile Computing and Networking (MobiCom)},\n  note = {Workshop on Hot Topics in Video Analytics and Intelligent Edges},\n  address = {Los Cabos, Mexico},\n  month = oct,\n  year = {2019},\n  doi = {10.1145/3349614.3356022},\n  keyword = {Information Systems, Mobile Information Processing Systems, Multimedia Streaming},\n}"
     booktitle: Proceedings of the ACM International Conference on Mobile Computing and Networking (MobiCom)
+    codeurl: https://github.com/yoshitomo-matsubara/head-network-distillation
     doi: 10.1145/3349614.3356022
     keyword: Information Systems, Mobile Information Processing Systems, Multimedia Streaming
     kind: inproceedings
