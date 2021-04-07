@@ -28,7 +28,6 @@ references:
       last: Singh
     bibtex: "@inproceedings{matsubara-singh-2020-wosp,\n  author = {Yoshitomo Matsubara and Sameer Singh},\n  title = {Citations Beyond Self Citations: Identifying Authors, Affiliations, and Nationalities in Scientific Papers},\n  booktitle = {Proceedings of the 8th International Workshop on Mining Scientific Publications},\n  pages = {9--20},\n  month = aug,\n  year = {2020},\n}"
     booktitle: Proceedings of the 8th International Workshop on Mining Scientific Publications
-    codeurl: https://github.com/yoshitomo-matsubara/guess-blind-entities
     kind: inproceedings
     month: August
     pages: 9–20

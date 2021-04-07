@@ -80,13 +80,13 @@ Processes},
 }
 
 @inproceedings{matsubara-levorato-2020-emdl,
-  title = {Split Computing for Complex Object Detectors: Challenges and Preliminary Results},
   author = {Yoshitomo Matsubara and Marco Levorato},
+  title = {Split Computing for Complex Object Detectors: Challenges and Preliminary Results},
   booktitle = {Proceedings of the 4th International Workshop on Embedded and Mobile Deep Learning},
   pages = {7--12},
   month = jul,
   year = {2020},
-  abstract = {Following the trends of mobile and edge computing for DNN models, an intermediate option, split computing, has been attracting attentions from the research community. Previous studies empirically showed that while mobile and edge computing often would be the best options in terms of total inference time, there are some scenarios where split computing methods can achieve shorter inference time. All the proposed split computing approaches, however, focus on image classification tasks, and most are assessed with small datasets that are far from the practical scenarios. In this paper, we discuss the challenges in developing split computing methods for powerful R-CNN object detectors trained on a large dataset, COCO 2017. We extensively analyze the object detectors in terms of layer-wise tensor size and model size, and show that naive split computing methods would not reduce inference time. To the best of our knowledge, this is the first study to inject small bottlenecks to such object detectors and unveil the potential of a split computing approach.}
+  abstract = {Following the trends of mobile and edge computing for DNN models, an intermediate option, split computing, has been attracting attentions from the research community. Previous studies empirically showed that while mobile and edge computing often would be the best options in terms of total inference time, there are some scenarios where split computing methods can achieve shorter inference time. All the proposed split computing approaches, however, focus on image classification tasks, and most are assessed with small datasets that are far from the practical scenarios. In this paper, we discuss the challenges in developing split computing methods for powerful R-CNN object detectors trained on a large dataset, COCO 2017. We extensively analyze the object detectors in terms of layer-wise tensor size and model size, and show that naive split computing methods would not reduce inference time. To the best of our knowledge, this is the first study to inject small bottlenecks to such object detectors and unveil the potential of a split computing approach.},
 }
 
 @inproceedings{callegaro-baidya-2020-icc,
@@ -184,8 +184,8 @@ Processes},
   number = {},
   pages = {212177-212193},
   year = {2020},
+  codeurl = {https://github.com/yoshitomo-matsubara/head-network-distillation},
   doi = {10.1109/ACCESS.2020.3039714},
-  codeurl = {https://github.com/yoshitomo-matsubara/head-network-distillation}
 }
 
 @inproceedings{callegaro-baidya-2019-milcom,
@@ -209,9 +209,9 @@ Processes},
   month = oct,
   year = {2019},
   abstract = {Offloading the execution of complex Deep Neural Networks (DNNs) models to compute-capable devices at the network edge, that is, edge servers, can significantly reduce capture-to-output delay. However, the communication link between the mobile devices and edge servers can become the bottleneck when channel conditions are poor. We propose a framework to split DNNs for image processing and minimize capture-to-output delay in a wide range of network conditions and computing parameters. The core idea is to split the DNN models into head and tail models, where the two sections are deployed at the mobile device and edge server, respectively. Different from prior literature presenting DNN splitting frameworks, we distill the architecture of the head DNN to reduce its computational complexity and introduce a bottleneck, thus minimizing processing load at the mobile device as well as the amount of wirelessly transferred data. Our results show 98\%~reduction in used bandwidth and 85\%~in computation load compared to straightforward splitting.},
+  codeurl = {https://github.com/yoshitomo-matsubara/head-network-distillation},
   doi = {10.1145/3349614.3356022},
   keyword = {Information Systems, Mobile Information Processing Systems, Multimedia Streaming},
-  codeurl = {https://github.com/yoshitomo-matsubara/head-network-distillation}
 }
 
 @inproceedings{callegaro-baidya-2019-magesys,

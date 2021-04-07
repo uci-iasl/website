@@ -138,17 +138,16 @@ references:
     year: '2020'
   matsubara-levorato-2020-emdl:
     abstract: Following the trends of mobile and edge computing for DNN models, an intermediate option, split computing, has been attracting attentions from the research community. Previous studies empirically showed that while mobile and edge computing often would be the best options in terms of total inference time, there are some scenarios where split computing methods can achieve shorter inference time. All the proposed split computing approaches, however, focus on image classification tasks, and most are assessed with small datasets that are far from the practical scenarios. In this paper, we discuss the challenges in developing split computing methods for powerful R-CNN object detectors trained on a large dataset, COCO 2017. We extensively analyze the object detectors in terms of layer-wise tensor size and model size, and show that naive split computing methods would not reduce inference time. To the best of our knowledge, this is the first study to inject small bottlenecks to such object detectors and unveil the potential of a split computing approach.
-    address: London, United Kingdom
     author:
     - first: Yoshitomo
       last: Matsubara
     - first: Marco
       last: Levorato
-    bibtex: "@inproceedings{matsubara-levorato-2020-emdl,\n  author = {Yoshitomo Matsubara and Marco Levorato},\n  title = {Split Computing for Complex Object Detectors: Challenges and Preliminary Results},\n  booktitle = {Proceedings of the 4th International Workshop on Embedded and Mobile Deep Learning},\n  pages={7--12}\n  month = jul,\n  year = {2020},\n}"
-    codeurl: https://github.com/yoshitomo-matsubara/hnd-ghnd-object-detectors
+    bibtex: "@inproceedings{matsubara-levorato-2020-emdl,\n  author = {Yoshitomo Matsubara and Marco Levorato},\n  title = {Split Computing for Complex Object Detectors: Challenges and Preliminary Results},\n  booktitle = {Proceedings of the 4th International Workshop on Embedded and Mobile Deep Learning},\n  pages = {7--12},\n  month = jul,\n  year = {2020},\n}"
     booktitle: Proceedings of the 4th International Workshop on Embedded and Mobile Deep Learning
     kind: inproceedings
-    month: September
+    month: July
+    pages: 7–12
     title: 'Split Computing for Complex Object Detectors: Challenges and Preliminary Results'
     year: '2020'
   callegaro-baidya-2020-icc:
