@@ -34,6 +34,7 @@ address: |
 bibliography:
 - title: 2021
   items:
+  - callegaro-levorato-2021-secon
   - alsoliman-levorato-autosec2021
   - callegaro-levorato-2021-tvt
   - alsoliman-rigoni-2021-icdcn

@@ -1,4 +1,21 @@
 references:
+  callegaro-levorato-2021-secon:
+    author:
+    - first: Davide
+      last: Callegaro
+    - first: Marco
+      last: Levorato
+    - first: Francesco
+      last: Restuccia
+    bibtex: "@inproceedings{callegaro-levorato-2021-secon,\n  author = {Davide Callegaro and Marco Levorato and Francesco Restuccia},\n  title = {SeReMAS: Self-Resilient Mobile Autonomous Systems Through Predictive Edge Computing},\n  booktitle = {2021 18th Annual IEEE International Conference on Sensing, Communication, and Networking (SECON)},\n  volume = {},\n  number = {},\n  pages = {},\n  year = {2021},\n  doi = {},\n}"
+    booktitle: 2021 18th Annual IEEE International Conference on Sensing, Communication, and Networking (SECON)
+    doi: ''
+    kind: inproceedings
+    number: ''
+    pages: ''
+    title: 'SeReMAS: Self-Resilient Mobile Autonomous Systems Through Predictive Edge Computing'
+    volume: ''
+    year: '2021'
   alsoliman-levorato-autosec2021:
     author:
     - first: Anas

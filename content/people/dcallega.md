@@ -30,6 +30,7 @@ bibliography:
   - matsubara-callegaro-2020-access
 - title: Conference Proceedings
   items:
+  - callegaro-levorato-2021-secon
   - callegaro-matsubara-2020-globecom
   - callegaro-baidya-2020-icc
   - callegaro-baidya-2019-milcom
