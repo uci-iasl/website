@@ -1,4 +1,21 @@
 references:
+  callegaro-levorato-2021-secon:
+    author:
+    - first: Davide
+      last: Callegaro
+    - first: Marco
+      last: Levorato
+    - first: Francesco
+      last: Restuccia
+    bibtex: "@inproceedings{callegaro-levorato-2021-secon,\n  author = {Davide Callegaro and Marco Levorato and Francesco Restuccia},\n  title = {SeReMAS: Self-Resilient Mobile Autonomous Systems Through Predictive Edge Computing},\n  booktitle = {2021 18th Annual IEEE International Conference on Sensing, Communication, and Networking (SECON)},\n  volume = {},\n  number = {},\n  pages = {},\n  year = {2021},\n  doi = {},\n}"
+    booktitle: 2021 18th Annual IEEE International Conference on Sensing, Communication, and Networking (SECON)
+    doi: ''
+    kind: inproceedings
+    number: ''
+    pages: ''
+    title: 'SeReMAS: Self-Resilient Mobile Autonomous Systems Through Predictive Edge Computing'
+    volume: ''
+    year: '2021'
   alsoliman-levorato-autosec2021:
     author:
     - first: Anas
@@ -13,7 +30,7 @@ references:
     kind: article
     title: Vision-Based Two-Factor Authentication and Localization Scheme for Autonomous Vehicles
     year: '2021'
-  vega-alper-springer21:
+  vega-alper-2021-springer:
     author:
     - first: Augusto
       last: Vega
@@ -24,7 +41,7 @@ references:
       last: Levorato
     - first: Pradip
       last: Bose
-    bibtex: "@article{vega-alper-springer21,\n  author = {Augusto Vega and Alper Buyuktosunoglu and \\textbf{Davide Callegaro} and Marco Levorato and Pradip Bose},\n  title = {Cloud-Backed Mobile CognitionPower-Efficient Deep Learningin the Autonomous Vehicle Era},\n  journal = {Springer Computing},\n  year = {2021},\n}"
+    bibtex: "@article{vega-alper-2021-springer,\n  author = {Augusto Vega and Alper Buyuktosunoglu and \\textbf{Davide Callegaro} and Marco Levorato and Pradip Bose},\n  title = {Cloud-Backed Mobile CognitionPower-Efficient Deep Learningin the Autonomous Vehicle Era},\n  journal = {Springer Computing},\n  year = {2021},\n}"
     journal: Springer Computing
     kind: article
     title: Cloud-Backed Mobile CognitionPower-Efficient Deep Learningin the Autonomous Vehicle Era
@@ -144,11 +161,12 @@ references:
       last: Matsubara
     - first: Marco
       last: Levorato
-    bibtex: "@inproceedings{matsubara-levorato-2020-emdl,\n  author = {Yoshitomo Matsubara and Marco Levorato},\n  title = {Split Computing for Complex Object Detectors: Challenges and Preliminary Results},\n  booktitle = {Proceedings of the 4th International Workshop on Embedded and Mobile Deep Learning},\n  pages={7--12}\n  month = jul,\n  year = {2020},\n}"
+    bibtex: "@inproceedings{matsubara-levorato-2020-emdl,\n  author = {Yoshitomo Matsubara and Marco Levorato},\n  title = {Split Computing for Complex Object Detectors: Challenges and Preliminary Results},\n  booktitle = {Proceedings of the 4th International Workshop on Embedded and Mobile Deep Learning},\n  pages={7--12}\n  month = sep,\n  year = {2020},\n}"
     codeurl: https://github.com/yoshitomo-matsubara/hnd-ghnd-object-detectors
     booktitle: Proceedings of the 4th International Workshop on Embedded and Mobile Deep Learning
     kind: inproceedings
     month: September
+    pages: 7–12
     title: 'Split Computing for Complex Object Detectors: Challenges and Preliminary Results'
     year: '2020'
   callegaro-baidya-2020-icc:
