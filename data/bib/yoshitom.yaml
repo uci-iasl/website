@@ -1,4 +1,16 @@
 references:
+  matsubara-2021-rrpr:
+    author:
+    - first: Yoshitomo
+      last: Matsubara
+    bibtex: "@inproceedings{matsubara-2021-rrpr,\n  author = {Yoshitomo Matsubara},\n  title = {torchdistill: A Modular, Configuration-Driven Framework for Knowledge Distillation},\n  booktitle = {International Workshop on Reproducible Research in Pattern Recognition},\n  pages = {24--44},\n  month = may,\n  year = {2021},\n}"
+    booktitle: International Workshop on Reproducible Research in Pattern Recognition
+    codeurl: https://github.com/yoshitomo-matsubara/torchdistill
+    kind: inproceedings
+    month: May
+    pages: 24–44
+    title: 'torchdistill: A Modular, Configuration-Driven Framework for Knowledge Distillation'
+    year: '2021'
   hossain-logan-2020-nlpcovid19:
     author:
     - first: Tamanna
