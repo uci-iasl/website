@@ -3,11 +3,11 @@ references:
     author:
     - first: Yoshitomo
       last: Matsubara
-    bibtex: "@inproceedings{matsubara-2021-rrpr,\n  author = {Yoshitomo Matsubara},\n  title = {torchdistill: A Modular, Configuration-Driven Framework for Knowledge Distillation},\n  booktitle = {International Workshop on Reproducible Research in Pattern Recognition},\n  pages = {24--44},\n  month = may,\n  year = {2021},\n}"
+    bibtex: "@inproceedings{matsubara-2021-rrpr,\n  author = {Matsubara, Yoshitomo},\n  title = {torchdistill: A Modular, Configuration-Driven Framework for Knowledge Distillation},\n  booktitle = {International Workshop on Reproducible Research in Pattern Recognition},\n  pages = {24--44},\n  organization = {Springer},\n  month = may,\n  year = {2021},\n}"
     booktitle: International Workshop on Reproducible Research in Pattern Recognition
-    codeurl: https://github.com/yoshitomo-matsubara/torchdistill
     kind: inproceedings
     month: May
+    organization: Springer
     pages: 24–44
     title: 'torchdistill: A Modular, Configuration-Driven Framework for Knowledge Distillation'
     year: '2021'
@@ -40,7 +40,6 @@ references:
       last: Singh
     bibtex: "@inproceedings{matsubara-singh-2020-wosp,\n  author = {Yoshitomo Matsubara and Sameer Singh},\n  title = {Citations Beyond Self Citations: Identifying Authors, Affiliations, and Nationalities in Scientific Papers},\n  booktitle = {Proceedings of the 8th International Workshop on Mining Scientific Publications},\n  pages = {9--20},\n  month = aug,\n  year = {2020},\n}"
     booktitle: Proceedings of the 8th International Workshop on Mining Scientific Publications
-    codeurl: https://github.com/yoshitomo-matsubara/guess-blind-entities
     kind: inproceedings
     month: August
     pages: 9–20
