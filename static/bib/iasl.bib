@@ -77,17 +77,15 @@ Processes},
   url = {https://doi.org/10.1145/3407091},
 }
 
-@article{matsubara-levorato-2020-icpr,
+@inproceedings{matsubara-levorato-2020-icpr,
   author = {Yoshitomo Matsubara and Marco Levorato},
   title = {Neural Compression and Filtering for Edge-Assisted Real-Time Object Detection in Challenged Networks},
-  journal = {arXiv.org e-Print Archive},
-  month = jul,
-  year = {2020},
+  booktitle = {2020 25th International Conference on Pattern Recognition (ICPR)},
+  pages = {2272--2279},
+  month = may,
+  year = {2021},
   abstract = {The edge computing paradigm places compute-capable devices~--- edge servers~--- at the network edge to assist mobile devices in executing data analysis tasks. Intuitively, offloading compute-intense tasks to edge servers can reduce their execution time. However, poor conditions of the wireless channel connecting the mobile devices to the edge servers may degrade the overall capture-to-output delay achieved by edge offloading. Herein, we focus on edge computing supporting remote object detection by means of Deep Neural Networks (DNNs), and develop a framework to reduce the amount of data transmitted over the wireless link. The core idea we propose builds on recent approaches splitting DNNs into sections~--- namely head and tail models~--- executed by the mobile device and edge server, respectively. The wireless link, then, is used to transport the output of the last layer of the head model to the edge server, instead of the DNN input. Most prior work focuses on classification tasks and leaves the DNN structure unaltered. Herein, our focus is on DNNs for three different object detection tasks, which present a much more convoluted structure, and modify the architecture of the network to: (i)~achieve in-network compression by introducing a bottleneck layer in the early layers on the head model, and (ii)~prefilter pictures that do not contain objects of interest using a convolutional neural network. Results show that the proposed technique represents an effective intermediate option between local and edge computing in a parameter region where these extreme point solutions fail to provide satisfactory performance.},
-  archiveprefix = {arXiv},
   codeurl = {https://github.com/yoshitomo-matsubara/hnd-ghnd-object-detectors},
-  eprint = {2007.15818},
-  primaryclass = {cs.CV},
 }
 
 @inproceedings{matsubara-levorato-2020-emdl,
