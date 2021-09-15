@@ -6,7 +6,7 @@ role: alumnus-phd
 status: Ph.D.
 current_occupation: Assistant Professor at University of Louisville
 yearjoined: 2014
-yeargraduated: 2018
+yeargraduated: 2019
 portrait: sbaidya.jpg
 badge: sbaidya-badge.jpg
 interests:

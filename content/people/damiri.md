@@ -8,7 +8,7 @@ yearjoined: 2015
 yeargraduated: 2020
 portrait: damiri.jpg
 badge: damiri-badge.jpg
-current_occupation: Software Engineer at Microsoft 
+current_occupation: Software Engineer at MSF 
 interests:
 - Healthcare IoT
 - Sensor Control

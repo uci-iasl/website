@@ -2,9 +2,11 @@
 name:
   first: Davide
   last: Callegaro
-role: student-phd
-status: Ph.D. Candidate
+role: alumnus-phd
+status: Ph.D.
 yearjoined: 2016
+yeargraduated: 2021
+current_occupation: Software Engineer at Zoox
 portrait: dcallega.jpg
 badge: dcallega-badge.jpg
 interests:
